@@ -1,0 +1,21 @@
+---
+description: L’implémentation des références explique comment configurer le lecteur pour les publicités, ce qui inclut la configuration des métadonnées vidéo pour l’insertion des publicités et la résolution des publicités preroll, mid et post-roll dans des flux vidéo VOD ou des flux vidéo linéaire/en direct. Il illustre également comment gérer les publicités cliquables.
+seo-description: L’implémentation des références explique comment configurer le lecteur pour les publicités, ce qui inclut la configuration des métadonnées vidéo pour l’insertion des publicités et la résolution des publicités preroll, mid et post-roll dans des flux vidéo VOD ou des flux vidéo linéaire/en direct. Il illustre également comment gérer les publicités cliquables.
+seo-title: Insertion d’une publicité
+title: Insertion d’une publicité
+uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
+translation-type: tm+mt
+source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+
+---
+
+
+# Insertion d’une publicité {#ad-insertion}
+
+L’implémentation des références explique comment configurer le lecteur pour les publicités, ce qui inclut la configuration des métadonnées vidéo pour l’insertion des publicités et la résolution des publicités preroll, mid et post-roll dans des flux vidéo VOD ou des flux vidéo linéaire/en direct. Il illustre également comment gérer les publicités cliquables.
+
+Le processus de configuration d’un lecteur pour l’insertion d’une publicité comprend :
+
+* **Flux d’entrée :** Renseigner un flux d’entrée avec des métadonnées publicitaires. Voir Format [du](../set-up-dev-environment/exploring-code/catalog-format.md)catalogue.
+* **Adaptateur de flux de mise en oeuvre de référence :** Analyse du flux d’entrée pour remplir un objet de métadonnées publicitaires.
+* **AdsManager :** Utilisation d’AdsManager pour récupérer les métadonnées publicitaires et créer le AdProvider correspondant.
