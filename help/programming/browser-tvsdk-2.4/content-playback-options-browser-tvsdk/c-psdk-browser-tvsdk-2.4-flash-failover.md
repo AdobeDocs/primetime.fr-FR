@@ -1,0 +1,53 @@
+---
+description: Le navigateur TVSDK fournit des outils pour la création d’une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
+seo-description: Le navigateur TVSDK fournit des outils pour la création d’une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
+seo-title: 'null'
+title: 'null'
+uuid: 57b35a5f-87f8-41a2-ad85-300b999dc30b
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Basculement Flash {#flash-failover}
+
+Le navigateur TVSDK fournit des outils pour la création d’une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
+
+Utilisez les outils de votre plate-forme pour créer un lecteur et le connecter au du lecteur multimédia dans le navigateur TVSDK, qui propose des méthodes pour lire et gérer les vidéos. Par exemple, le navigateur TVSDK fournit des méthodes de lecture et de mise en pause. Vous pouvez créer des boutons d’interface utilisateur sur votre plate-forme et définir les boutons pour appeler ces méthodes du navigateur TVSDK.
+
+## Abandon Flash {#section_92D3884A13A6431F9A9CC5C79715D888}
+
+Dans le SDK du navigateur, votre application interagit uniquement avec l’ `Primetime.js` API. L’implémentation sous-jacente du navigateur TVSDK détermine la technologie du lecteur à utiliser en fonction de la plate-forme actuelle et du type de ressource du média à lire.
+
+La décision concernant la technologie du lecteur n&#39;est prise qu&#39;après avoir appelé `MediaPlayer.replaceCurrentResource` pour jouer une ressource spécifique.
+
+Par exemple :
+
+```js
+var player = new AdobePSDK.MediaPlayer(), 
+              mediaResource = new AdobePSDK.MediaResource(url, 
+              AdobePSDK.MediaResource.Type.TYPE_HLS); 
+              ... 
+              player.replaceCurrentResource(mediaResource);
+```
+
+## Détermination du lecteur de médias à utiliser {#section_D844E386AF5848688D204DEE258ECEE6}
+
+Cet exemple de procédure illustre le processus de détermination de la technologie du lecteur :
+
+>[!TIP]
+>
+>Le processus peut varier en fonction de l’URL et de votre  .
+
+1. Si Media Source Extensions est pris en charge, utilisez-le sans limites connues.
+1. Si cette option est prise en charge, utilisez la `<video>` balise directement sans MSE.
+1. Vérifiez que vous utilisez au moins Adobe Flash Player version 23.0.
+1. Si aucune technologie de lecture appropriée n’est trouvée, `replaceCurrentResource` renvoie une erreur.
+
+Un `replaceCurrentResource` appel suivant sur la même `MediaPlayer` instance suit le même processus. Cela vous permet de lire divers types de ressources en utilisant la même `MediaPlayer` instance dans la même `<DIV>` balise parente que celle que vous avez spécifiée lors de la création de l’ `MediaPlayerView` instance.
+
+>[!TIP]
+>
+>L’objet SWF et la `<video>` balise sont imbriqués dans la `<DIV>` balise parente.
+
