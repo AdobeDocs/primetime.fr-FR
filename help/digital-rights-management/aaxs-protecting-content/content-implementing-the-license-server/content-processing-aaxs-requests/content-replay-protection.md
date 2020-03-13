@@ -1,0 +1,13 @@
+---
+seo-title: Protection de relecture
+title: Protection de relecture
+uuid: 75f2be65-b2fc-428a-b853-34a4b30960ce
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Protection de relecture{#replay-protection}
+
+Pour la protection de la relecture, il peut être prudent de vérifier si l’identifiant du message a été vu récemment en appelant `RequestMessageBase.getMessageId()`. Si tel est le cas, un attaquant peut essayer de relayer la requête, ce qui doit être refusé. Pour détecter les tentatives de relecture, le serveur peut stocker un  d’identifiants de message récemment affichés et vérifier chaque requête entrante par rapport au mis en cache . Pour limiter la durée de stockage des identifiants de message, appelez `HandlerConfiguration.setTimestampTolerance()`. Si cette propriété est définie, le kit SDK refuse toute requête dont l’horodatage est plus long que le nombre de secondes spécifié par rapport à l’heure du serveur.
