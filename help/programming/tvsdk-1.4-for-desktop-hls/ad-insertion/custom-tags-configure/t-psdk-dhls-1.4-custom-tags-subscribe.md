@@ -1,0 +1,83 @@
+---
+description: TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+seo-description: TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+seo-title: S’abonner à des balises personnalisées
+title: S’abonner à des balises personnalisées
+uuid: 43480265-4951-466a-a347-6debfb6935ee
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# S’abonner à des balises personnalisées{#subscribe-to-custom-tags}
+
+TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+
+Avant de  la lecture, vous devez vous abonner aux balises.
+Pour vous abonner à des balises, affectez à la `subscribedTags` propriété un vecteur contenant les noms de balise personnalisés. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété.
+
+Pour être averti des balises personnalisées dans les manifestes HLS :
+
+1. Définissez les noms des balises publicitaires personnalisées globalement en attribuant un vecteur contenant les balises personnalisées à `subscribeTags` dans `MediaPlayerItemConfig`.
+
+   >[!IMPORTANT]
+   >
+   >Vous devez inclure le `#` préfixe lors de l’utilisation de flux HLS.
+
+   Par exemple :
+
+   ```
+   var subscribedTags:Vector.<String> = new Vector.<String>(); 
+   subscribedTags.push("#EXT-X-ASSET"); 
+   subscribedTags.push("#EXT-X-AD"); 
+   PSDKConfig.subscribedTags = subscribedTags;
+   ```
+
+1. Pour modifier globalement les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété dans `PSDKConfig`.
+
+   ```
+   var adTags:Vector.<String> = new Vector.<String>(); 
+   adTags.push("#EXT-X-AD"); 
+   PSDKConfig.adTags = adTags; 
+   ```
+
+1. Pour que tous les paramètres globaux prennent effet, remplacez la ressource actuelle.
+
+   ```
+   player.replaceCurrentResource(mediaResource);
+   ```
+
+1. Pour définir le nom des balises abonnées pour un flux, le cas échéant :
+   1. Créez une configuration d’élément du lecteur multimédia.
+
+      >[!TIP]
+      >
+      >La méthode la plus simple consiste à créer une configuration d’élément par défaut du lecteur multimédia.
+
+   1. Affectez un vecteur contenant les balises personnalisées à `subscribeTags` in `MediaPlayerItemConfig`.
+
+   ```
+   var mediaPlayerItemConfig:MediaPlayerItemConfig =  
+     new DefaultMediaPlayerItemConfig(); 
+   
+   var subscribedTags:Vector.<String> = new Vector.<String>(); 
+   subscribedTags.push("#EXT-X-ASSET"); 
+   subscribedTags.push("#EXT-X-AD"); 
+   mediaPlayerItemConfig.subscribeTags = subscribedTags;
+   ```
+
+1. Pour modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut dans le flux spécifié, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété dans `mediaPlayerItemConfig`
+
+   ```
+   var adTags:Vector.<String> = new Vector.<String>(); 
+   adTags.push("#EXT-X-AD"); 
+   mediaPlayerItemConfig.adTags = adTags;
+   ```
+
+1. Pour que les modifications du flux prennent effet, utilisez la configuration d’élément du lecteur multimédia lors du chargement du flux média.
+
+   ```
+   player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
+   ```
+
