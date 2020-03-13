@@ -1,0 +1,54 @@
+---
+cloud: experience-cloud
+product: adobe primetime
+audience: end-user
+user-guide-title: Primetime Dynamic Ad Insertion Help
+translation-type: tm+mt
+source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+
+---
+
+
+# Aide sur l&#39;insertion d&#39;annonces dynamiques {#ad-insertion}
+
++ [Présentation de l&#39;insertion dynamique d&#39;une publicité](home.md)
++ [Notes de mise à jour sur l’insertion d’annonces dynamiques](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [Outil de débogage du serveur Manifest](manifest-server-debugging-tool.md)
+<!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
++ API du serveur de manifeste pour l&#39;insertion d&#39;annonces publicitaires {#manifest-server}
+   + [Présentation des interactions du serveur de manifeste](msapi-topics/ms-overview.md)
+   + Commencer avec Manifest Server {#get-started}
+      + [Envoyer une commande au serveur de manifeste](msapi-topics/ms-getting-started/ms-sending-cmd.md)
+      + [Paramètres  du du serveur de manifeste](msapi-topics/ms-getting-started/ms-api-query-params.md)
+   + Requêtes d’insertion publicitaire {#ad-insert}
+      + [Demandes d’insertion de publicités](msapi-topics/ms-insert-ads/ms-ad-insert.md)
+      + [Paramètres de  facultatifs par client et par situation](msapi-topics/ms-insert-ads/ms-api-query-param-situation.md)
+      + [Faciliter le passage du lecteur HLS aux flux de basculement/sauvegarde](msapi-topics/ms-insert-ads/hls-switching-to-failover.md)
+      + [Flux de débit binaire multiples](msapi-topics/ms-insert-ads/ms-api-mbr-streams.md)
+      + [Insertion partielle de saut de publicité](msapi-topics/ms-insert-ads/partial-ad-break-insetion.md)
+      + [Prise en charge de CDN multiples pour CRS et les  de](msapi-topics/ms-insert-ads/ms-api-multi-cdns-for-crs.md)
+   + Remplacer les calendriers VOD {#replace-vod}
+      + [Changements dans VOD](msapi-topics/ms-changes-vod-timeline/ms-replace-vod-timeline.md)
+      + [Format de la chronologie VOD](msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)
+      + [Remplacement d’une chronologie VOD](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
+   + Suivi de l’efficacité des publicités {#ad}
+      + [Suivi des publicités](msapi-topics/ms-at-effectiveness/ms-at-overview.md)
+      + [Activation du suivi des publicités côté client](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
+      + [Présentation du suivi côté client non TVSDK](msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md)
+      + [API permettant aux lecteurs d’interagir avec le serveur de manifeste](msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)
+      + [Directive EXT-X-MARKER](msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
+   + [Cookies](msapi-topics/ms-cookies.md)
+   + [Prise en charge des légendes WebVTT](msapi-topics/ms-webvtt-captions.md)
+   +  de formats de fichier {#list}
+      + [Formats de fichier](msapi-topics/ms-list-file-formats/ms-api-file-formats.md)
+      + [Format JSON pour l’URL de demande de liste de lecture du manifeste de variante](msapi-topics/ms-list-file-formats/ms-json-m3u8.md)
+      + [Formats JSON pour le suivi des URL](msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)
+      + [Format VMAP pour les URL de suivi](msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md)
+   + [Configuration requise pour le lecteur vidéo](msapi-topics/ms-player-req.md)
++ Service de reconditionnement créatif Primetime {#crs}
+   + [Aperçu du CS Ex](creative-repackaging-service/crs-overview.md)
+   + [Principales utilisations des SIR](creative-repackaging-service/jit-async-hls-conv.md)
+   + [Prise en charge multi-CDN](creative-repackaging-service/multi-cdn-supportt.md)
+   + [détaillé pour le reconditionnement JIT](creative-repackaging-service/jit-repackage.md)
+   + [Utilisation de CRS pour injecter des balises de métadonnées minutées ID3](creative-repackaging-service/inject-id3.md)
+   + [API de reconditionnement](creative-repackaging-service/api-repackage.md)
