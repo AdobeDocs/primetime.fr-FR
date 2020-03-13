@@ -1,0 +1,33 @@
+---
+description: TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+seo-description: TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+seo-title: S’abonner à des balises personnalisées
+title: S’abonner à des balises personnalisées
+uuid: f1a934bd-772e-435f-84b5-cb48db23c06e
+translation-type: tm+mt
+source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+
+---
+
+
+# S’abonner à des balises personnalisées {#subscribe-to-custom-tags}
+
+TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
+
+Avant de  la lecture, vous devez vous abonner aux balises. Pour être averti des balises personnalisées dans les manifestes HLS :
+
+1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` in `MediaPlayerItemConfig`.
+
+   >[!IMPORTANT]
+   >
+   >Vous devez inclure le `#` préfixe lors de l’utilisation de flux HLS.
+
+   Par exemple :
+
+   ```java
+   String[] array = new String[3]; 
+   array[0] = "#EXT-X-ASSET"; 
+   array[1] = "#EXT-X-BLACKOUT"; 
+   array[2] = "#EXT-OATCLS-SCTE35"; 
+   MediaPlayerItemConfig.setSubscribedTags(array);
+   ```
