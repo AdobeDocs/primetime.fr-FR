@@ -1,29 +1,33 @@
 ---
-title: Notes de mise à jour de TVSDK 3.10 pour iOS
-description: Les Notes de mise à jour de TVSDK 3.10 pour iOS décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.10.
+title: Notes de mise à jour de TVSDK 3.11 pour iOS
+description: Les Notes de mise à jour de TVSDK 3.11 pour iOS décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: c6036a6777e9158861850b60dd1e0749c30fa280
+source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.10 pour iOS {#tvsdk-for-ios-release-notes}
+# Notes de mise à jour de TVSDK 3.11 pour iOS {#tvsdk-for-ios-release-notes}
 
-Les Notes de mise à jour de TVSDK 3.10 pour iOS décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.10.
+Les Notes de mise à jour de TVSDK 3.11 pour iOS décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.11.
 
 ## Configuration système et logiciel requise {#system-software-requirements}
 
-Avant de télécharger iOS 3.10, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de vos applications répondent aux exigences suivantes :
+Avant de télécharger iOS 3.11, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de vos applications répondent aux exigences suivantes :
 
 Système d’exploitation : iOS 8.0 ou version ultérieure.
 
-## iOS TVSDK 3.10
+## iOS TVSDK 3.11
 
-Correction d’un problème en raison duquel le lecteur TVSDK ne déclenchait pas la notification PTMediaPlayerStatusError lorsque le réseau n’était pas disponible.
+Correctifs pour les problèmes client qui provoquent le blocage de l’application `isFallbackOnInvalidCreativeEnabled` et `customParams` provoquent le blocage de la méthode et de l’application.
 
 Pour les correctifs de la version actuelle, reportez-vous à la section Problèmes [client résolus](#resolved-issues) et pour les limitations, reportez-vous à la section Problèmes [connus et limites](#known-issues-and-limitations) .
 
 ### Nouvelles fonctionnalités et correctifs des versions précédentes {#whats-new-previous}
+
+**iOS TVSDK 3.10**
+
+* Correction d’un problème en raison duquel le lecteur TVSDK ne déclenchait pas `PTMediaPlayerStatusError` de notification lorsque le réseau n’était pas disponible.
 
 **iOS TVSDK 3.9**
 
@@ -290,11 +294,17 @@ Comment Type: draft
 </note>
  -->
 
+**iOS TVSDK 3.11**
+
+* (ZD#40998) - L’application `isFallbackOnInvalidCreativeEnabled` se bloque.
+
+* (ZD#41289) - `NSInvalidArgumentException` est observé avec la méthode `customParams` conduisant au blocage de l’application.
+
+### Problèmes résolus dans les versions précédentes {#resolved-issues-previous}
+
 **iOS TVSDK 3.10**
 
 (ZD#40943) - Le lecteur TVSDK ne déclenche pas la notification PTMediaPlayerStatusError lorsque le réseau n’est pas disponible.
-
-### Problèmes résolus dans les versions précédentes {#resolved-issues-previous}
 
 **iOS TVSDK 3.9**
 
@@ -310,94 +320,81 @@ Comment Type: draft
 
 **iOS TVSDK 3.7**
 
-* (ZD#38961) - La lecture du contenu échoue dans la fenêtre Image dans l’image (PiP) une fois qu’un contenu a terminé sa lecture, lorsque plusieurs contenus sont configurés pour être lus dans le PiP.
+(ZD#38961) - La lecture du contenu échoue dans la fenêtre Image dans l’image (PiP) une fois qu’un contenu a terminé sa lecture, lorsque plusieurs contenus sont configurés pour être lus dans le PiP.
 
 **iOS TVSDK 3.6**
 
-* Aucun nouveau problème dans cette version.
+Aucun nouveau problème dans cette version.
 
 **iOS TVSDK 3.5**
 
-* Aucun nouveau problème dans cette version.
+Aucun nouveau problème dans cette version.
 
 **Version 3.3**
 
-* (ZD#37820) - Ajout d’une liste blanche pour l’en-tête personnalisé HS-Id, HS-SSAI-TAG.
+(ZD#37820) - Ajout d’une liste blanche pour l’en-tête personnalisé HS-Id, HS-SSAI-TAG.
 
 **Version 3.2**
 
-**Billet #36588** - Le blocage du lecteur est observé lorsque la méthode STOP de MediaPlayer est appelée.
-
+* **Billet #36588** - Le blocage du lecteur est observé lorsque la méthode STOP de MediaPlayer est appelée.
 Correction d’un blocage intermittent observé lorsque la méthode STOP est appelée pour quelques flux avec sous-titres.
 
-**Ticket#37080** - Demandes de  affichées pour les appels Manifest.
-
+* **Ticket#37080** - Demandes de  affichées pour les appels Manifest.
 Correction des demandes de  de effectuées pour les URL de manifeste pendant la lecture. TVSDK effectue désormais un appel par manifeste.
 
-**Billet #37** - La règle de normalisation CRS échoue avec le type de correspondance équivoque
-
-Correction d’un cas où le lecteur se bloquait lorsqu’il était rencontré avec la dernière règle de normalisation définie pour les noms d’hôtes avec un type de correspondance &quot;eq&quot;.
+* **Ticket#37** - Échec de la règle de normalisation CRS avec le type de correspondance équipCorrection d’un cas où le lecteur se bloquait lorsqu’il était rencontré avec la dernière règle de normalisation définie pour les noms d’hôtes avec un type de correspondance équipÉe.
 
 **Version 3.1**
 
-**Billet #36313** - Résultats intermittents imprévisibles pendant les pauses publicitaires linéaires
-
-Correction de la lecture intermittente pendant les coupures publicitaires linéaires dans le flux en direct.
+**Billet #36313** - Résultats intermittents imprévisibles pendant les pauses publicitaires linéairesCorrection de la lecture intermittente pendant les pauses publicitaires linéaires dans le flux continu en direct.
 
 **Version 3.0.1**
 
-**Billet36948** - CRS - Ordre de sélection des ressources incohérent sur iOS 12
-
-La ressource sélectionnée pour CRS n’est pas toujours la variante de qualité la plus élevée renvoyée dans une réponse VAST ou VMAP.
+**Billet36948** - CRS - Ordre de sélection des ressources incohérent sur iOS 12 La ressource sélectionnée pour CRS n’est pas toujours la variante de qualité la plus élevée renvoyée dans une réponse VAST ou VMAP.
 
 **Version 3.0**
 
-**Ticket35311** - L’état du lecteur n’est pas PAUSÉ lors d’une interruption d’appel téléphonique.
+* **Ticket35311** - L&#39;état du lecteur n&#39;est pas ENDOMMAGÉ lors d&#39;une interruption d&#39;appel téléphoniqueAjout d&#39;un gestionnaire d&#39;interruption pour empêcher l&#39;interruption du lecteur. En cas d’interruption, l’état du lecteur devient PAUSED, puis la lecture reprend en cliquant sur le bouton de lecture.
 
-Ajout d’un gestionnaire d’interruption pour empêcher le lecteur d’interrompre le lecteur. En cas d’interruption, l’état du lecteur devient PAUSED, puis la lecture reprend en cliquant sur le bouton de lecture.
+* **Ticket36685** - Ressources en direct - Incohérence temporelle avec la progression du temps du lecteur et temps du marqueur SCTELe temps correct est calculé pour les marqueurs SCTE qui sont en avance sur le point réel.
 
-**Ticket36685** - Ressources en direct - Incohérence temporelle avec la progression du temps du lecteur et temps du marqueur SCTE
-
-Le temps correct est calculé pour les marqueurs SCTE qui sont en avance sur le point de production.
-
-**Ticket36492** - `currentTime` `localTime` et ne sont pas mis à jour lors de la recherche d&#39;une nouvelle position pendant l&#39;état en pause.
-
-L’heure actuelle du lecteur peut désormais être réglée sur zéro au cas où le lecteur serait en pause ; plus tôt, l’heure actuelle était définie sur zéro uniquement à l’état actif.
+* **Ticket36492** - `currentTime` et `localTime` ne sont pas mis à jour lors de la recherche d&#39;une nouvelle position pendant l&#39;heure de mise en pause, le lecteur peut désormais être défini sur zéro au cas où l&#39;état du lecteur serait en pause ; plus tôt, l’heure actuelle était définie sur zéro uniquement à l’état actif.
 
 **Version 1.4.45**
 
-**Ticket36294** - Le SDK iOS TVSDK ne fonctionne pas avec Xcode 10
+* **Ticket36294** - Le TVSDK iOS ne fonctionne pas avec Xcode 10. Correction des problèmes de compilation avec TVSDK sur XCode 10. En raison de la configuration requise pour XCode 10, les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent un de déploiement minimum  sous iOS 7.0
 
-Correction des problèmes de compilation avec TVSDK sur XCode 10. En raison de la configuration requise pour XCode 10, les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent un de déploiement minimum  sous iOS 7.0
+* **Ticket36321** - Écart observé dans la plage recherchable entre `PTMediaPlayer` et `AVPlayer` l’instance dans l’état &quot;Lecture&quot;.
 
-**Ticket36321** - Écart observé dans la plage recherchable entre `PTMediaPlayer` et `AVPlayer` l’instance dans l’état &quot;Lecture&quot;.
-**Billet36493** - `libstdc++` prise en charge sous iOS 12
-
-Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent un de déploiement minimum sous iOS 7.0
+* **Ticket36493** - `libstdc++` Prise en charge sur iOS 12 Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent un de déploiement minimum sous iOS 7.0
 
 **Version 1.4.44**
 
-**Ticket34683** - Le Temps De Progression De La Lecture De La Publicité Est Négatif
+* **Ticket34683** - Le Temps De Progression De La Lecture De La Publicité Est Négatif
 
 D’autres vérifications sont effectuées pour gérer le cas en cas de discordance entre la durée rapportée par le serveur d’annonces et le contenu de la publicité réel.
 
-**Ticket34801** - currentTime et localTime n’étaient pas mis à jour lors de la recherche d’une nouvelle position pendant l’état en pause.
+* **Ticket34801** - currentTime et localTime n’étaient pas mis à jour lorsque la recherche d’une nouvelle position pendant l’heure en pause statusPlayer peut désormais être réglée sur zéro au cas où le lecteur serait en pause ; plus tôt, l’heure actuelle était définie sur zéro uniquement à l’état actif.
 
-L’heure actuelle du lecteur peut désormais être réglée sur zéro au cas où le lecteur serait en pause ; plus tôt, l’heure actuelle était définie sur zéro uniquement à l’état actif.
-
-**Ticket35037** - Les étals de lecture avec une URL incorrecte lors du retour d’une insertion d’annonce basée sur un signal.
-
+* **Ticket35037** - Les étals de lecture avec une URL incorrecte lors du retour d’une insertion d’annonce basée sur un signal.
 Correctif fourni pour le numéro fermé 34385 dans la version 1.4.42. Ajout du code de contrôle et de gestion des exceptions estAnnulé pour rendre la file d’attente des opérations plus robuste.
 
 **Version 1.4.43**
 
 * (ZD#32990) - iOS : Contenu lu au lieu de publicités sur certains indices. `selectedMediaOptionInMediaSelectionGroup` L’API qui faisait partie de l’interface AVPlayerItem a maintenant été déplacée sous AVMediaSelection dans iOS 11. Le problème a été résolu à l’aide de cette nouvelle API.
+
 * (ZD#33683) Le SDK TVSDK a été supprimé du suffixe == des chaînes de métadonnées. Le problème est corrigé dans la logique d’analyse.
+
 * (ZD#33905) - Le kit TVSDK iOS appelle les fichiers de manifeste avec deux agents utilisateur. Le problème de l’agent utilisateur a été résolu dans le premier appel m3u8 (cas d’installation Fresh). Les M3u8 ont les mêmes agents utilisateur pour tous les appels maintenant.
+
 * (ZD#34293) - Les pré-rouleaux insérés dans les flux LINEAR ne sont pas lus correctement sous iOS11. Le problème est corrigé pour les publicités preroll.
+
 * (ZD#34684) - Lorsque la stratégie de saut d’annonce est appliquée, les trames publicitaires preroll s’affichent pendant quelques secondes. Une nouvelle API, enableVodPreroll, a été introduite pour désactiver la lecture preroll dans la lecture de vod. La valeur par défaut de cette API est &quot;Yes&quot;. L’API permet d’ignorer le raccordement du contenu publicitaire dans le contenu principal.
+
 * (ZD#34765) - Après avoir appelé stop(), peu de segments de flux de transport sont toujours téléchargés. Amélioration de l’API Stop() afin d’éviter le téléchargement des segments supplémentaires.
+
 * (ZD#34865) - Les publicités preroll pour le flux continu sont tronquées sur iOS. En rapport avec iOS11 et l’ajout d’une vérification supplémentaire pour vérifier si le flux est pré-roll ou de contenu principal, résout ce problème.
+
 * (ZD#35093) - Correction d’un scénario de basculement dans lequel, si la variante principale du flux échoue au démarrage (renvoie 404), la lecture ne passe pas au flux de sauvegarde.
 
 **1.4.42 (1.4.42.118)**
@@ -405,10 +402,13 @@ Correctif fourni pour le numéro fermé 34385 dans la version 1.4.42. Ajout du c
 * (ZD#34385) - La lecture bloque les URL incorrectes lors du retour d’une insertion d’annonce basée sur un signal.
 
    Augmentez le nombre maximal de répétitions pour `CustomAVAssetLoaderOperations`que les lectures du manifeste puissent continuer à s&#39;exécuter.
+
 * (ZD#34373) - Les utilisateurs finaux ne peuvent pas diffuser sur des périphériques connectés au HDMI, lorsque l’enregistrement du flux est interdit.
+
 * (ZD#32678) - TVSDK ne collecte pas les ID publicitaires corrects sur iOS.
 
    L’identifiant de publicité du créatif publicitaire final est maintenant sélectionné dans les pings VHL en cas de redirections VAST/VMAP.
+
 * (ZD#33904) - Le SDK TVSDK n’est pas enregistré pour les notifications AVFoundation `AVAudioSessionMediaServicesWereLostNotification` et `AVAudioSessionMediaServicesWereResetNotification`.
 
    `PTMediaServicesWereLostNotification` et `PTMediaServicesWereResetNotification` peuvent désormais être enregistrés dans l’application du lecteur pour obtenir les notifications lorsque les services de médias sont réinitialisés ou perdus.
