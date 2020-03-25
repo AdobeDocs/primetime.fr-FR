@@ -4,7 +4,7 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -25,9 +25,9 @@ Cette version était axée sur la résolution des principaux problèmes des clie
 
 Pour plus d’informations sur la version actuelle d’ [Android](../release-notes/tvsdk-3x-android.md), reportez-vous à la section.
 
-## Améliorations et correctifs de PTAI 19.11.1
+## Améliorations et correctifs de l’API 20.3.3
 
-Concentrez-vous sur les mises à jour de maintenance.
+Concentré sur les correctifs pour les clients.
 
 Pour plus d’informations sur la version actuelle de l’insertion d’annonces dynamiques, voir Notes [de mise à jour de l’](ptai-19x-release-notes.md)API.
 
