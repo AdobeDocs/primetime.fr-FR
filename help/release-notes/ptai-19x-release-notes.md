@@ -2,7 +2,7 @@
 title: Notes de mise à jour de PTAI 19.11.1
 description: Les notes de mise à jour de la version 19.11.1 de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’insertion d’annonces dynamiques Primetime en 2019.
 translation-type: tm+mt
-source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -200,4 +200,3 @@ ZD#37503 - Les réponses Json pour les règles CRS sont mises en cache afin d’
 **PTAI 19.7.1**
 
 Aucune nouvelle limitation n’a été ajoutée.
-
