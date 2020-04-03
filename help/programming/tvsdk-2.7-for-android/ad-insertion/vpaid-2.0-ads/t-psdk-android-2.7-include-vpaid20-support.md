@@ -45,24 +45,18 @@ Pour ajouter la prise en charge de VPAID 2.0 :
    >
    >Ne supprimez les  publicitaires personnalisées que lors de l’appel de la réinitialisation. Par exemple:    >
    >
-   >
-   ```>
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
    >
+   >```
    >
-   ```   >
-   >
-
-
-
    >Enfin, avant de disposer de vos  publicitaires personnalisées, vous devez les supprimer du `FrameLayout`. Par exemple:    >
    >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
-   ```
+   >```
+   >if (_playerFrame != null) 
+   >   _playerFrame.removeAllViews(); 
+   >```
