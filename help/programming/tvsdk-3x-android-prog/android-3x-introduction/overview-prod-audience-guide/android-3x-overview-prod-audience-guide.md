@@ -24,7 +24,7 @@ Ce guide explique comment développer des applications de lecteur vidéo à l’
 
 TVSDK inclut des descriptions d’API et des exemples de code pour vous aider à intégrer des fonctionnalités vidéo avancées, la protection du contenu et les fonctionnalités publicitaires dans votre lecteur. Vous utilisez Java pour créer une interface utilisateur de lecteur vidéo. TVSDK vous aide à connecter cette interface utilisateur à son lecteur multimédia. Cela vous permet de lire des vidéos et des publicités basées sur des manifestes médiatiques. Vous pouvez également utiliser TVSDK pour récupérer des informations sur la vidéo, gérer la sécurité et contrôler et surveiller la lecture.
 
-##  {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audience {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de Java. Vous mettez en oeuvre votre interface utilisateur du lecteur vidéo en Java et incorporez les fonctionnalités TVSDK dont vous avez besoin.
 
