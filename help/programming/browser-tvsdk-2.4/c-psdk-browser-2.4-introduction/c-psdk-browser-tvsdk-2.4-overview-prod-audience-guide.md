@@ -36,6 +36,6 @@ Pour accélérer le développement de l’interface utilisateur pour les applica
 
 Pour plus d’informations sur les API pour la structure de l’interface utilisateur, voir [Interface utilisateur pour le navigateur TVSDK 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html).
 
-##  {#section_DFC9DECC2E30426DBBDDEA4E288E666C}
+## Audience {#section_DFC9DECC2E30426DBBDDEA4E288E666C}
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de JavaScript. Vous pouvez mettre en oeuvre un lecteur vidéo et incorporer des fonctionnalités Browser TVSDK.
