@@ -23,7 +23,7 @@ TVSDK inclut des descriptions d’API et des exemples de code pour vous aider à
 
 Pour connaître la configuration matérielle et logicielle requise pour l’utilisation de TVSDK, voir Configuration requise
 
-##  {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Audience {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de Objective-C. Vous implémentez une interface utilisateur de lecteur vidéo à l’aide de ce langage et incorporez des fonctionnalités TVSDK.
 
