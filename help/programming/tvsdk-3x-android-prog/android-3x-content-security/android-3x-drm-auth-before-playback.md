@@ -48,26 +48,26 @@ Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour téléchar
 
 1. Implémentez les rappels dans le `DRMLoadMetadataListener`.
 
-       Le paramètre &quot;loadDRMMetadata&quot; appelle ces gestionnaires de  de.
-       
- &quot;     java
- interface     publique DRMLoadMetadataListener {
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
- *     * @param authNeeded
-     * si l&#39;authentification DRM est nécessaire.
-       * @param drmMetadata
- * les métadonnées DRMMetadata analysées obtenues     .    */
-     public void onLoadMetadataUrlComplete(booléen authNeeded, DRMMetadata drmMetadata);
-   void     public onLoadMetadataUrlError();
-       }
-     
-     &quot;
-     
-     Voici des informations supplémentaires sur les gestionnaires :
+   Le paramètre &quot;loadDRMMetadata&quot; appelle ces gestionnaires de de.
+
+   ```java    
+   public interface DRMLoadMetadataListener { 
+    
+       public void onLoadMetadataUrlStart(); 
+    
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
    
+   ```
+
+   Voici des informations supplémentaires sur les gestionnaires :
+
    * `onLoadMetadataUrlStart` détecte le début du chargement de l’URL de métadonnées.
    * `onLoadMetadataUrlComplete` détecte la fin du chargement de l’URL de métadonnées.
    * `onLoadMetadataUrlError` indique que le chargement des métadonnées a échoué.
