@@ -5,7 +5,7 @@ seo-title: Utilisation des cookies
 title: Utilisation des cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -64,8 +64,9 @@ Pour utiliser les cookies :
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   Après avoir défini cet &#39;setReadSetCookieHeader&#39; sur false, définissez les cookies pour les requêtes de clés à l’aide du gestionnaire de cookies JAVA.
    >
+   >Après avoir défini cet &#39;setReadSetCookieHeader&#39; sur false, définissez les cookies pour les requêtes de clés à l’aide du gestionnaire de cookies JAVA.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Cette API de rappel est déclenchée chaque fois qu’il existe une mise à jour dans les cookies C++ (cookies provenant d’une réponse http). L’application doit écouter ce rappel et peut mettre à jour son magasin de cookies JAVA en conséquence afin que ses appels réseau dans JAVA puissent utiliser les cookies comme suit :
 
