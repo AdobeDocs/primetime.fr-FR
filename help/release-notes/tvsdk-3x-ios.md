@@ -2,7 +2,7 @@
 title: Notes de mise à jour de TVSDK 3.11 pour iOS
 description: Les Notes de mise à jour de TVSDK 3.11 pour iOS décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -183,7 +183,6 @@ Dans la `PTSDKConfig` classe, l’API forceHTTPS a été ajoutée.
 La `PTSDKConfig` classe fournit des méthodes pour appliquer SSL sur les requêtes effectuées sur les serveurs Adobe Primetime et de prise de décision publicitaire, DRM et Video Analytics. Pour plus d’informations, voir les méthodes `forceHTTPS` et `isForcingHTTPS` les méthodes de cette classe. Si un manifeste est chargé via HTTPS, TVSDK conserve l’utilisation du contenu HTTPS et respecte cette utilisation lors du chargement d’URL relatives à partir de ce manifeste.
 
 >[!NOTE] Les requêtes envoyées aux domaines tiers, tels que les pixels du suivi des publicités, les URL de contenu et d’annonce et les requêtes similaires, ne sont pas modifiées. Il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir les URL prises en charge par le biais du protocole HTTPS.
-> 
 
 **Version 1.4.18**
 
@@ -218,7 +217,6 @@ Primetime iOS TVSDK prend désormais en charge les éléments créatifs JavaScri
 **Version 1.4.13**
 
 >[!NOTE] Le module Nielsen a été supprimé de la version TVSDK, le module TVSDK sera mis à jour prochainement avec un nouveau module d’intégration Nielsen.
-
 
 **Abandon de publicité, chaînement de la marguerite dans la logique de sélection de publicité (Zendesk n° 3103)**
 
@@ -1108,9 +1106,11 @@ Prise en charge de la sonnerie des URL de suivi des coupures publicitaires vides
 ## Certification et prise en charge des périphériques {#device-certification-and-support}
 
 >[!NOTE]
-Les fonctionnalités suivantes **ne sont pas** prises en charge dans TVSDK :
-* Mouvement lent, sur n’importe quelle plateforme ou version.
-* Jeu de l&#39;astuce en direct.
+>
+>Les fonctionnalités suivantes **ne sont pas** prises en charge dans TVSDK :
+>
+>* Mouvement lent, sur n’importe quelle plateforme ou version.
+>* Jeu de l&#39;astuce en direct.
 
 
 **Version 1.4.43**
