@@ -5,7 +5,7 @@ seo-title: Authentification DRM avant lecture
 title: Authentification DRM avant lecture
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
 
 ---
 
@@ -48,13 +48,13 @@ Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour téléchar
 
 1. Implémentez les rappels dans le `DRMLoadMetadataListener`.
 
-   Le paramètre &quot;loadDRMMetadata&quot; appelle ces gestionnaires de de.
+   Ils `loadDRMMetadata` appellent ces gestionnaires de .
 
-   ```java    
+   ```java
    public interface DRMLoadMetadataListener { 
-    
+   
        public void onLoadMetadataUrlStart(); 
-    
+   
        /** 
        * @param authNeeded 
        * whether DRM authentication is needed. 
@@ -63,10 +63,9 @@ Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour téléchar
        public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
        public void onLoadMetadataUrlError(); 
    } 
-   
    ```
 
-   Voici des informations supplémentaires sur les gestionnaires :
+   Vous trouverez ci-dessous des informations supplémentaires sur les gestionnaires :
 
    * `onLoadMetadataUrlStart` détecte le début du chargement de l’URL de métadonnées.
    * `onLoadMetadataUrlComplete` détecte la fin du chargement de l’URL de métadonnées.
