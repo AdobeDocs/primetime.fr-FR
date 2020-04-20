@@ -5,7 +5,7 @@ seo-title: Mise en oeuvre de l’intégration VPAID 2.0
 title: Mise en oeuvre de l’intégration VPAID 2.0
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
 
 ---
 
@@ -41,10 +41,10 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnali
    >En outre, vous ne devez créer vos  publicitaires personnalisées que lorsque votre lecteur est à l’état PRÉPARÉ,
    >
    >
-   >Ne supprimez les  publicitaires personnalisées que lors de l’appel de la réinitialisation. Par exemple:    >
+   >Ne supprimez les  publicitaires personnalisées que lors de l’appel de la réinitialisation. Par exemple :
    >
    >
-   ```>
+   ```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -52,9 +52,11 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnali
    >} 
    >
    >```
-
-   Enfin, avant de disposer de vos  publicitaires personnalisées, vous devez les supprimer du `FrameLayout`. Par exemple :
-   >```
-   >if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
+   >
+   >Enfin, avant de disposer de vos  publicitaires personnalisées, vous devez les supprimer du `FrameLayout`. Par exemple :
+   >
+   >
    ```
+   >if (_playerFrame != null) 
+   >       _playerFrame.removeAllViews(); 
+   >```
