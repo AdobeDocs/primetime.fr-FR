@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -290,20 +290,16 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **SizeAvaliableEventListener**
 
-   * Les méthodes getHeight() et getWidth() de SizeAvailableEvent renvoient désormais respectivement la sortie en hauteur et en largeur. Le format d’affichage peut être calculé comme suit :
+   * `getHeight()` et `getWidth()` les méthodes de `SizeAvailableEvent` renvoyer la sortie respectivement en hauteur et en largeur. Le format d’affichage peut être calculé comme suit :
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;
+DAR = e.getWidth()/ e.getHeight();
 
-    rapport L/H  du en termes de largeur et de hauteur de l’Ear peuvent également être utilisés pour calculer la largeur et la hauteur de l’image :
+       rapport L/H  du en termes de largeur et de hauteur de l’Ear peuvent également être utilisés pour calculer la largeur et la hauteur de l’image :
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();
+frameHeight = e.getHeight();
+frameWidth = e.getWidth()/SAR;
 
 * **Cookies**
 
