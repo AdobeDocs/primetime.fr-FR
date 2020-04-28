@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
+source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
 
 ---
 
@@ -396,7 +396,7 @@ Lorsque la résolution est associée à un problème signalé, une référence Z
 
 Cette section présente un résumé du problème résolu dans la version Android 3.11 de TVSDK.
 
-* ZD# - Les caractères coréens sont affichés comme symboles de glyphe manquants pour les manifestes HLS avec WebVTT dans l’application de référence Android TVSDK.
+* Les caractères coréens sont affichés comme symboles de glyphe manquants pour les manifestes HLS avec WebVTT dans l’application de référence TVSDK Android.
 
 ### Problèmes résolus dans les versions précédentes
 
