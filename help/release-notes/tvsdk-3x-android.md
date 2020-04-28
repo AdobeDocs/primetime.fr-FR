@@ -1,5 +1,5 @@
 ---
-title: Notes de mise à jour de TVSDK 3.11 pour Android
+title: Notes de mise à jour de TVSDK 3.10 pour Android
 seo-title: Notes de mise à jour de TVSDK 3.11 pour Android
 description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.10
 seo-description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11
@@ -8,14 +8,14 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
+source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.11 pour Android {#tvsdk-for-android-release-notes}
+# Notes de mise à jour de TVSDK 3.10 pour Android {#tvsdk-for-android-release-notes}
 
-Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11.
+Les Notes de mise à jour de TVSDK 3.10 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.10.
 
 Le lecteur de référence Android est inclus avec le SDK TVSDK Android dans le répertoire samples/ de votre distribution. Le fichier README.md qui l’accompagne explique comment créer le lecteur de référence.
 
@@ -33,22 +33,20 @@ TVSDK pour Android offre de nombreuses améliorations de performances par rappor
 
 L’ensemble complet des fonctionnalités prises en charge et non prises en charge est présenté dans la section Matrice [des](#feature-matrix) fonctionnalités des notes de mise à jour.
 
-<!-- ## New features {#new-features} -->
-
-## Android TVSDK 3.11
-
-**Extraire la zone PSSH (en-tête spécifique au système de protection) autorisée**
-
-TVSDK permet désormais de récupérer la zone d’en-tête spécifique au système de protection associée à la ressource média chargée en cours. Une nouvelle API `getPSSH()` a été ajoutée à `com.adobe.mediacore.drm.DRMManager`.
-Pour plus d’informations, voir [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
-
-Les principaux problèmes des clients résolus dans la version actuelle sont mentionnés dans la section Problèmes [](#resolved-issues) résolus.
-
-### Nouvelles fonctionnalités et améliorations des versions précédentes
-
 **Android TVSDK 3.10**
 
 Cette version s’est concentrée sur la résolution des principaux problèmes des clients, comme indiqué dans la section Problèmes [](#resolved-issues) résolus.
+
+<!-- ## New features {#new-features} -->
+
+<!--
+## Android TVSDK 3.11
+**Protection System Specific Header (PSSH) Box fetching allowed**
+TVSDK now allows fetching of Protection System Specific Header Box associated with current loaded Media Resource. New API `getPSSH()` has been added to `com.adobe.mediacore.drm.DRMManager`.
+For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
+
+### Nouvelles fonctionnalités et améliorations des versions précédentes
 
 **Android TVSDK 3.9**
 
@@ -265,7 +263,7 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
       * Sélection adaptative de la vitesse de transmission et de la fréquence d’images lors de la lecture de l’astuce, en fonction de la bande passante et des  de mémoire tampon
 
-      * Utilisez le flux principal au lieu du flux IDR pour obtenir une lecture rapide jusqu’à 30 ips.
+      * Utilisez le flux principal plutôt que le flux IDR pour obtenir une lecture rapide jusqu’à 30 ips.
 
 * **Protection du contenu**
 
@@ -393,17 +391,15 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 
 Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche, par exemple ZD#xxxxx.
 
-**Android TVSDK 3.11**
-
-Cette section présente un résumé du problème résolu dans la version Android 3.11 de TVSDK.
-
-* ZD#41252 - Les caractères coréens sont affichés comme symboles de glyphe manquants pour les manifestes HLS avec WebVTT dans l’application de référence TVSDK Android.
-
-### Problèmes résolus dans les versions précédentes
-
 **Android TVSDK 3.10**
 
 * ZD#40340 - L’application se bloque avec l’erreur &quot;App Not Responding&quot; lors de la tentative de lecture après la mise en liste noire de tous les fichiers TS (TypeScript).
+
+<!-- **Android TVSDK 3.11**
+This section provides a summary of the issue resolved in TVSDK 3.11 Android release.
+* ZD#41252 - Korean characters are displayed as missing glyph symbols for HLS manifests with WebVTT in Android TVSDK reference app. -->
+
+### Problèmes résolus dans les versions précédentes
 
 **Android TVSDK 3.8**
 
