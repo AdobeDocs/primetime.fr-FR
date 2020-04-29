@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -333,7 +333,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 |---|---|---|
 | Lecture générale (Lecture, Pause, Recherche) | VOD + Live | Y |
 | FER - Lecture générale (Lecture, Pause, Recherche) | FER VOD | Y |
-| Rechercher quand une publicité est en cours de lecture | Live | Non pris en charge |
+| Rechercher quand une publicité est en cours de lecture | VOD + Live | Non pris en charge |
 | AC3 | VOD + Live | Non pris en charge |
 | MP3 | VOD | Non pris en charge |
 | Lecture de contenu MP4 | VOD | Y |
@@ -399,7 +399,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | DRM | VOD + Live | Primetime DRM uniquement (Futur : Widevine) |
 | Lecture externe (RBOP) | VOD + Live | DRM Primetime uniquement |
 | Rotation de licence | VOD + Live | DRM Primetime uniquement |
-| Rotation clé | VOD + Live | DRM Primetime et DRM Widevine |
+| Rotation clé | VOD + Live | DRM Primetime uniquement |
 
 | Fonctionnalité | Type de contenu | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Lorsque la résolution est associée à un problème signalé, une référence Z
 
 Cette section présente un résumé du problème résolu dans la version Android 3.11 de TVSDK.
 
-* ZD#41252 - Les caractères coréens sont affichés comme symboles de glyphe manquants pour les manifestes HLS avec WebVTT dans l’application de référence TVSDK Android.
+* ZD#41252 - Caractères coréens rompus dans WebVTT après Android 7.1.
 
 ### Problèmes résolus dans les versions précédentes
 
