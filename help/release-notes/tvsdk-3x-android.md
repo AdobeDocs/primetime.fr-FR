@@ -1,14 +1,14 @@
 ---
 title: Notes de mise à jour de TVSDK 3.11 pour Android
 seo-title: Notes de mise à jour de TVSDK 3.11 pour Android
-description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.10
+description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11
 seo-description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 26b0622f807405eaec9cfe162799111ed340e02c
+source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
 
 ---
 
@@ -97,46 +97,58 @@ Cette version s’est concentrée sur la résolution des principaux problèmes d
 * **Prise en charge de la résolution des publicités parallèles et du téléchargement du manifeste**
 
    * TVSDK 3.2 prend en charge la résolution simultanée, au lieu de la résolution séquentielle pour toutes les demandes d’annonce et les coupures publicitaires, à l’exception de VMAP.
+
    * Tous les manifestes publicitaires d’une coupure publicitaire sont téléchargés simultanément.
+
 * **Prise en charge de la résolution des publicités et du délai d’expiration du téléchargement du manifeste activée.**
 
    * Les utilisateurs peuvent désormais définir la valeur du délai d’expiration pour la résolution globale de la publicité et les téléchargements de manifeste.  Dans le cas du VMAP, la valeur du délai d’expiration s’applique aux coupures publicitaires individuelles, car toutes les coupures publicitaires sont résolues de manière séquentielle.
+
 * **Ajout de nouvelles API dans la classe AdvertisingMetadata :**
 
-   * void setAdResolutionTimeout(int adResolutionTimeout)
-   * int getAdResolutionTimeout()
-   * void setAdManifestTimeout(int adManifestTimeout)
-   * int getAdManifestTimeout()
+   * `void setAdResolutionTimeout(int adResolutionTimeout)`
+
+   * `int getAdResolutionTimeout()`
+
+   * `void setAdManifestTimeout(int adManifestTimeout)`
+
+   * `int getAdManifestTimeout()`
+
 * **Supprimé sous les API de la classe AdvertisingMetadata :**
 
-   * void setAdRequestTimeout(int adRequestTimeout)
-   * int getAdRequestTimeout()
+   * `void setAdRequestTimeout(int adRequestTimeout)`
+
+   * `int getAdRequestTimeout()`
+
 * **Lecture des flux activée avec le codec audio AC3/EAC3**
 
-   * void alwaysUseAC3OnSupportedDevices(boolean val)dans la classe MediaPlayer
+   * `void alwaysUseAC3OnSupportedDevices(boolean val)` en `MediaPlayer` classe
+
 * **TVSDK prend en charge la lecture CMAF et des flux ordinaires pour la Widevine CTR cryptée.**
+
 * **La lecture des flux 4K HEVC est maintenant prise en charge.**
+
 * **Demandes** d’appel d’annonce parallèles : TVSDK prérécupère désormais 20 demandes d’appel d’annonce en parallèle.
 
 **Version 3.0**
 
 * **TVSDK 3.0 prend en charge les flux de codage vidéo haute efficacité (HEVC).**
 
-* **Juste à temps - Résolution des publicités plus proches des marqueurs publicitaires**
+* **Juste à temps : la résolution des publicités plus proches des marqueurs** publicitaires Lazy Ad Resolving résout désormais chaque coupure publicitaire indépendamment. Auparavant, la résolution des publicités était une approche en deux phases : les pré-rouleaux ont été résolus avant la  de lecture et tous les emplacements milieu/post-roll combinés après le démarrage de la lecture. Grâce à cette fonctionnalité améliorée, chaque coupure publicitaire est maintenant résolue à un moment spécifique avant le point de repère publicitaire.
 
-   La résolution des publicités différées résout désormais chaque coupure publicitaire indépendamment. Auparavant, la résolution des publicités était une approche en deux phases : les pré-rouleaux ont été résolus avant la  de lecture et tous les emplacements milieu/post-roll combinés après le démarrage de la lecture. Grâce à cette fonctionnalité améliorée, chaque coupure publicitaire est maintenant résolue à un moment spécifique avant le point de repère publicitaire.
+> [!NOTE]
+>
+> La résolution des publicités différées a désormais été désactivée par défaut et doit être explicitement activée.
 
-   **Veuillez noter : La résolution des publicités différées a désormais été désactivée par défaut et doit être explicitement activée.**
+Une nouvelle API est ajoutée pour `AdvertisingMetadata::setDelayAdLoadingTolerance` obtenir la tolérance de chargement différé des publicités associée à ces métadonnées publicitaires.\
+La recherche est maintenant autorisée immédiatement après PRÉPARATION, la recherche de coupures publicitaires survenues résultera en une résolution immédiate avant la fin de la recherche.\
+Les modes de signature `SERVER_MAP` et `MANIFEST_CUES` sont pris en charge.
 
-   Une nouvelle API est ajoutée à *AdvertisingMetadata::setDelayAdLoadingTolérance* pour obtenir la tolérance de chargement différé de publicité associée à ces métadonnées publicitaires.\
-   La recherche sera maintenant autorisée immédiatement après PRÉPARATION, la recherche de coupures publicitaires survenues résultera en une résolution immédiate avant la fin de la recherche.\
-   Les modes de signature SERVER_MAP et MANIFEST_CUES sont pris en charge.
-
-   Pour plus d’informations, reportez-vous au guide du programmeur Android TVSDK 3.0 sur les modifications d’API et de  de l’.
+Pour plus d’informations, reportez-vous au Guide [du programmeur Android](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) TVSDK 3.0 sur les modifications d’API et de  de.
 
 * **Mise à jour`targetSdkVersion`de la dernière version**
 
-   Mise à jour `targetSdkVersion` de 19 à 27 pour un bon fonctionnement.
+Mise à jour `targetSdkVersion` de 19 à 27 pour un fonctionnement sans heurts.
 
 * **Placement.Type getPlacementType() est désormais une méthode sur l’interface TimelineMarker**
 
@@ -167,6 +179,7 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Il s&#39;agit de 10 secondes dans la seconde publicité pendant la coupure.
 
    * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
+
    * Les suivis publicitaires pour la publicité partielle lue (seconde publicité) ne sont pas déclenchés. Les outils de suivi de la troisième publicité sont déclenchés.
 
 * **Chargement sécurisé des publicités via HTTPS**
@@ -175,7 +188,7 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 
 * **AdSystem et ID créatif ajoutés aux demandes CRS**
 
-   * Incluez désormais &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
+   Incluez maintenant `AdSystem` et `CreativeId` en tant que nouveaux paramètres dans les requêtes 1401 et 1403.
 
 * **L&#39;API setEncodeUrlForTracking de la classe NetworkConfiguration a été supprimée** car les caractères dangereux d&#39;une URL doivent être codés.
 
@@ -183,17 +196,17 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 
 Android TVSDK v2.5.4  les mises à jour et les modifications d’API suivantes  le :
 
-* Modifications de la valeur par défaut pour WebViewDebbuging
+* Modifications de la valeur par défaut pour `WebViewDebbuging`
 
-   La valeur WebViewDebbuging est définie sur False par défaut. Pour l’activer, appelez setWebContentDebuggingEnabled(true) dans l’application.
+   `WebViewDebbuging` est définie sur `Fals`e par défaut. Pour l’activer, appelez `setWebContentsDebuggingEnabled(true)` dans l’application.
 
-* Mise à niveau des versions d’OpenSSL et de Curl
+* **Mise à niveau des versions d’OpenSSL et de Curl**
 
    Mise à jour de libcurl vers v7.57.0 et OpenSSL vers v1.0.2k.
 
 * Accès au niveau de l’application pour l’objet de réponse VAST
 
-   Présentation d’une nouvelle API NetworkAdInfo::getVastXml() qui permet d’accéder à l’objet de réponse VAST de l’application.
+   Ajout d’une nouvelle API `NetworkAdInfo::getVastXml()` qui donne accès à l’objet de réponse VAST à l’application.
 
 **Version 2.5.3**
 
@@ -205,23 +218,24 @@ Android TVSDK v2.5.4  les mises à jour et les modifications d’API suivantes  
 
 * Agent utilisateur de TVSDK personnalisable : nous avons ajouté de nouvelles API pour personnaliser les agents utilisateur.
 
-   * setCustomUserAgent(valeur de chaîne)
-   * getCustomUserAgent()
+   * `setCustomUserAgent(String value)`
+   * `getCustomUserAgent()`
 
 * Partagez des cookies entre l’application Android et TVSDK : Android TVSDK prend désormais en charge l’accès aux cookies entre le calque JAVA (stocké dans le magasin de cookies de l’application Android) et le calque C++ TVSDK. Désormais, il est possible de définir et/ou de modifier les cookies dans le calque C++ natif, car ils seront exposés au magasin de cookies Java.
+
 * Modifications de l’API :
 
-   * Un nouvel  CookiesUpdateEvent est ajouté. Il est distribué par le lecteur de médias lorsque son cookie est mis à jour.
+   * Un nouveau  de `CookiesUpdatedEvent` est ajouté. Il est distribué par le lecteur de médias lorsque son cookie est mis à jour.
 
-   * Une nouvelle API est ajoutée à NetworkConfiguration::set/ getCustomUserAgent() pour utiliser l&#39;agent utilisateur personnalisé.
+   * Une nouvelle API est ajoutée pour `NetworkConfiguration::set/ getCustomUserAgent()` utiliser l’agent utilisateur personnalisé.
 
-   * Une nouvelle API est ajoutée à NetworkConfiguration::set/ getEncodedUrlForTracking pour forcer le codage des caractères dangereux.
+   * Une nouvelle API est ajoutée `NetworkConfiguration::set/ getEncodedUrlForTracking` pour forcer le codage des caractères dangereux.
 
-   * Une nouvelle API est ajoutée à NetworkConfiguration::getNetworkDownVerifyUrl() pour définir une URL de vérification réseau en cas de basculement.
+   * Une nouvelle API est ajoutée pour `NetworkConfiguration::getNetworkDownVerificationUrl()` définir une URL de vérification réseau en cas de basculement.
 
-   * Une nouvelle propriété est ajoutée à TextFormat::trahirSpaceAsAlphaNum qui définit si l’espace doit être traité comme alphanumérique lors de l’affichage des légendes.
+   * Une nouvelle propriété `TextFormat::treatSpaceAsAlphaNum` qui définit si l’espace doit être traité comme alphanumérique lors de l’affichage des légendes est ajoutée.
 
-* Modifications dans SizeAvailableEvent : Auparavant, les méthodes getHeight() et getWidth() de SizeAvailableEvent dans la version 2.5.2 étaient utilisées pour renvoyer la hauteur et la largeur d’image, qui étaient renvoyées par le format multimédia. Désormais, il renvoie respectivement la hauteur et la largeur de sortie renvoyées par le décodeur.
+* Changements dans `SizeAvailableEvent`. Auparavant, `getHeight()` et `getWidth()` `SizeAvailableEvent` les méthodes de la version 2.5.2 étaient utilisées pour renvoyer la hauteur et la largeur du cadre, qui étaient renvoyées par le format de support. Désormais, il renvoie respectivement la hauteur et la largeur de sortie renvoyées par le décodeur.
 
 * Modifications du comportement de mise en mémoire tampon : Le comportement de mise en mémoire tampon est modifié. Il reste aux développeurs d’applications ce qu’ils veulent faire en cas de vide de la mémoire tampon. 2.5.3 utilise la taille du tampon de lecture en cas de vide du tampon.
 
@@ -233,37 +247,38 @@ Android TVSDK v2.5.2   des correctifs importants et quelques modifications d’A
 
 Les nouvelles fonctionnalités importantes d’Android 2.5.1.
 
-* **Améliorations** des performancesLa nouvelle architecture TVSDK 2.5.1 apporte un certain nombre d’améliorations des performances. Sur la base des statistiques d’une étude d’analyse comparative tierce, la nouvelle architecture offre une réduction de 5 fois du temps de démarrage et de 3,8 fois moins d’images perdues par rapport à la moyenne du secteur :
+* **Améliorations des performances -** La nouvelle architecture TVSDK 2.5.1 apporte un certain nombre d’améliorations des performances. Sur la base des statistiques d’une étude d’analyse comparative tierce, la nouvelle architecture offre une réduction de 5 fois du temps de démarrage et de 3,8 fois moins d’images perdues par rapport à la moyenne du secteur :
 
-   * **Instant on for VOD and live -** Lorsque vous activez l’activation instantanée, TVSDK initialise et met en mémoire tampon le média avant le  de lecture. Comme vous pouvez lancer plusieurs instances MediaPlayerItemLoader simultanément en arrière-plan, vous pouvez mettre en mémoire tampon plusieurs flux. Lorsqu’un utilisateur modifie le  du et que le flux a été mis en mémoire tampon correctement, la lecture sur le nouvel  de  immédiatement. TVSDK 2.5.1 prend également en charge l’installation pour les flux **en direct** . Les flux en direct sont remis en mémoire tampon lorsque la fenêtre active se déplace.
+* **Instant on for VOD and live -** Lorsque vous activez l’activation instantanée, TVSDK initialise et met en mémoire tampon le média avant le  de lecture. Comme vous pouvez lancer plusieurs instances MediaPlayerItemLoader simultanément en arrière-plan, vous pouvez mettre en mémoire tampon plusieurs flux. Lorsqu’un utilisateur modifie le  du et que le flux a été mis en mémoire tampon correctement, la lecture sur le nouvel  de  immédiatement. TVSDK 2.5.1 prend également en charge l’installation pour les flux **en direct** . Les flux en direct sont remis en mémoire tampon lorsque la fenêtre active se déplace.
 
-   * **Logique ABR améliorée -** La nouvelle logique ABR est basée sur la longueur de la mémoire tampon, le taux de changement de la longueur de la mémoire tampon et la bande passante mesurée. Ainsi, l’ABR choisit le débit approprié lorsque la bande passante fluctue et optimise le nombre de fois où le commutateur de débit se produit réellement en surveillant le débit auquel la longueur de la mémoire tampon change.
+* **Logique ABR améliorée -** La nouvelle logique ABR est basée sur la longueur de la mémoire tampon, le taux de changement de la longueur de la mémoire tampon et la bande passante mesurée. Ainsi, l’ABR choisit le débit approprié lorsque la bande passante fluctue et optimise le nombre de fois où le commutateur de débit se produit réellement en surveillant le débit auquel la longueur de la mémoire tampon change.
 
-   * **Téléchargement de segment partiel / Sous-segmentation -** TVSDK réduit davantage la taille de chaque fragment, afin de  la lecture le plus tôt possible. Le fragment de texte doit avoir une image clé toutes les deux secondes.
+* **Téléchargement de segment partiel / Sous-segmentation -** TVSDK réduit davantage la taille de chaque fragment, afin de  la lecture le plus tôt possible. Le fragment de texte doit avoir une image clé toutes les deux secondes.
 
-   * **Résolution des publicités irrégulières -** TVSDK n’attend pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues. Ceci s’applique aux flux VOD utilisés avec l’ISAC. Les opérations telles que la recherche et l’avance rapide ne sont pas autorisées tant que la résolution de la publicité n’est pas terminée. Pour les flux en direct, cette fonction ne peut pas être activée pour la résolution des publicités pendant un  en direct.
+* **Résolution des publicités irrégulières -** TVSDK n’attend pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues. Ceci s’applique aux flux VOD utilisés avec l’ISAC. Les opérations telles que la recherche et l’avance rapide ne sont pas autorisées tant que la résolution de la publicité n’est pas terminée. Pour les flux en direct, cette fonction ne peut pas être activée pour la résolution des publicités pendant un  en direct.
 
-   * **Connexions réseau persistantes -** Cette fonctionnalité permet à TVSDK de créer et de stocker un interne de connexions réseau persistantes. Ces connexions sont réutilisées pour plusieurs requêtes, plutôt que d’ouvrir une nouvelle connexion pour chaque requête réseau, puis de la détruire par la suite. Cela augmente l’efficacité et diminue la latence du code réseau, ce qui accélère les performances de lecture.
+* **Connexions réseau persistantes -** Cette fonctionnalité permet à TVSDK de créer et de stocker un interne de connexions réseau persistantes. Ces connexions sont réutilisées pour plusieurs requêtes, plutôt que d’ouvrir une nouvelle connexion pour chaque requête réseau, puis de la détruire par la suite. Cela augmente l’efficacité et diminue la latence du code réseau, ce qui accélère les performances de lecture.
 Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connexion *continue* . Certains serveurs peuvent ne pas prendre en charge ce type de connexion. Dans ce cas, TVSDK revient à établir une connexion pour chaque requête. En outre, bien que les connexions persistantes soient activées par défaut, TVSDK dispose désormais d’une option de configuration qui permet aux applications de désactiver les connexions persistantes si nécessaire.
 
-   * **Téléchargement parallèle -** Le téléchargement vidéo et audio en parallèle plutôt qu’en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité d’accès à des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
+* **Téléchargement parallèle -** Le téléchargement vidéo et audio en parallèle plutôt qu’en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité d’accès à des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
 
-   * **Téléchargements de publicités parallèles : TVSDK prérécupère les publicités en parallèle à la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.**
+* **Téléchargements de publicités parallèles : TVSDK prérécupère les publicités en parallèle à la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.**
 
 * **Lecture**
 
-   * **Lecture de contenu MP4 : il n’est pas nécessaire de recoder les clips courts MP4** pour les lire dans TVSDK.
-      > [!NOTE]
-      >
-      > Le basculement ABR, la lecture de l’astuce, l’insertion d’annonces publicitaires, la liaison audio tardive et la sous-segmentation ne sont pas pris en charge pour la lecture au format MP4.
+* **Lecture de contenu MP4 : il n’est pas nécessaire de recoder les clips courts MP4** pour les lire dans TVSDK.
 
-   * **Lecture vidéo avec débit binaire adaptatif (ABR) -** Cette fonctionnalité permet à TVSDK de basculer entre les flux iFrame en mode de lecture par astuce. Vous pouvez utiliser des non iFrame pour jouer à des vitesses de lecture inférieures.
+   > [!NOTE]
+   >
+   > Le basculement ABR, la lecture de l’astuce, l’insertion d’annonces publicitaires, la liaison audio tardive et la sous-segmentation ne sont pas pris en charge pour la lecture au format MP4.
 
-   * **Lecture plus fluide -** Ces améliorations améliorent l’expérience des utilisateurs :
+* **Lecture vidéo avec débit binaire adaptatif (ABR) -** Cette fonctionnalité permet à TVSDK de basculer entre les flux iFrame en mode de lecture par astuce. Vous pouvez utiliser des non iFrame pour jouer à des vitesses de lecture inférieures.
 
-      * Sélection adaptative de la vitesse de transmission et de la fréquence d’images lors de la lecture de l’astuce, en fonction de la bande passante et des  de mémoire tampon
+* **Lecture plus fluide -** Ces améliorations améliorent l’expérience des utilisateurs :
 
-      * Utilisez le flux principal au lieu du flux IDR pour obtenir une lecture rapide jusqu’à 30 ips.
+   * Sélection adaptative de la vitesse de transmission et de la fréquence d’images lors de la lecture de l’astuce, en fonction de la bande passante et des  de mémoire tampon
+
+   * Utilisez le flux principal au lieu du flux IDR pour obtenir une lecture rapide jusqu’à 30 ips.
 
 * **Protection du contenu**
 
@@ -291,18 +306,22 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
    * `getHeight()` et `getWidth()` les méthodes de `SizeAvailableEvent` renvoyer la sortie respectivement en hauteur et en largeur. Le format d’affichage peut être calculé comme suit :
 
+      ```java
       SizeAvailableEvent e;
-DAR = e.getWidth()/ e.getHeight();
+      DAR = e.getWidth()/ e.getHeight();
+      ```
 
        rapport L/H  du en termes de largeur et de hauteur de l’Ear peuvent également être utilisés pour calculer la largeur et la hauteur de l’image :
 
+      ```java
       SAR = e.getSarWidth()/e.getSarHeight();
-frameHeight = e.getHeight();
-frameWidth = e.getWidth()/SAR;
+      frameHeight = e.getHeight();
+      frameWidth = e.getWidth()/SAR;
+      ```
 
 * **Cookies**
 
-   * Android TVSDK prend désormais en charge l’accès aux cookies JAVA stockés dans le magasin de cookies de l’application Android. Une API de rappel (onCookiesUpdate) est fournie pour l’enregistrement chaque fois qu’un nouveau cookie est inclus dans l’en-tête de réponse &quot;Set-Cookie&quot;. Ces cookies sont disponibles en tant que  de cookie(s) HttpCookie(s) utilisé(s) pour un URI/domaine différent en définissant ces valeurs de cookie sur cet URI/domaine particulier à l’aide de CookieStore. De même, les valeurs de cookie dans TVSDK sont mises à jour à l’aide de l’API d’ajout CookieStore.
+   * Android TVSDK prend désormais en charge l’accès aux cookies JAVA stockés dans le magasin de cookies de l’application Android. Une API de rappel (onCookiesUpdate) est fournie pour l’enregistrement chaque fois qu’un nouveau cookie est inclus dans l’en-tête **Set-Cookie** Response. Ces cookies sont disponibles en tant que  de cookie(s) HttpCookie(s) utilisé(s) pour un URI/domaine différent en définissant ces valeurs de cookie sur cet URI/domaine particulier à l’aide de CookieStore. De même, les valeurs de cookie dans TVSDK sont mises à jour à l’aide de l’API d’ajout CookieStore.
 
 ## Matrice des fonctionnalités {#feature-matrix}
 
