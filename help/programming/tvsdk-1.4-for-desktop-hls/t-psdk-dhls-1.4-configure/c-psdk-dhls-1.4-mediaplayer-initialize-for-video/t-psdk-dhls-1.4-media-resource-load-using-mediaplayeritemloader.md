@@ -1,29 +1,29 @@
 ---
 description: MediaPlayerItemLoader permet également de résoudre une ressource multimédia. Cela s’avère utile lorsque vous souhaitez obtenir des informations sur un flux multimédia particulier sans instancier une instance MediaPlayer.
 seo-description: MediaPlayerItemLoader permet également de résoudre une ressource multimédia. Cela s’avère utile lorsque vous souhaitez obtenir des informations sur un flux multimédia particulier sans instancier une instance MediaPlayer.
-seo-title: Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader
-title: Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader
+seo-title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
+title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
 uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: ''
 
 ---
 
 
-# Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
+# Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
 
 MediaPlayerItemLoader permet également de résoudre une ressource multimédia. Cela s’avère utile lorsque vous souhaitez obtenir des informations sur un flux multimédia particulier sans instancier une instance MediaPlayer.
 
-Grâce à la `MediaPlayerItemLoader` classe, vous pouvez échanger une ressource multimédia pour la ressource `MediaPlayerItem` correspondante sans attacher un à une `MediaPlayer` instance, ce qui conduirait à l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d’obtention de l’ `MediaPlayerItem` instance est asynchrone.
+Par le biais de la `MediaPlayerItemLoader` classe, vous pouvez échanger une ressource média pour la ressource correspondante `MediaPlayerItem` sans attacher une vue à une `MediaPlayer` instance, ce qui entraînerait l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d’obtention de l’ `MediaPlayerItem` instance est asynchrone.
 
-1. Mettez en oeuvre des écouteurs  pour ces  de : `MediaPlayerItemLoader`
+1. Mettez en oeuvre des écouteurs de événement pour ces `MediaPlayerItemLoader` événements :
 
-   * `MediaPlayerItemLoaderEvent.ERROR` 
+   * `MediaPlayerItemLoaderEvent.ERROR` événement
 
       TVSDK l’utilise pour informer votre application qu’une erreur s’est produite. TVSDK fournit une propriété d’erreur qui contient des informations de diagnostic.
 
-1. Enregistrez cette instance dans le `MediaPlayerItemLoader`.
-1. Appelez `DefaultMediaPlayerItemLoader.load`, en transmettant une instance d’un `MediaResource` objet.
+1. Enregistrez cette instance sur le `MediaPlayerItemLoader`.
+1. Appel `DefaultMediaPlayerItemLoader.load`, transmission d’une instance d’un `MediaResource` objet.
 
    L’URL de l’ `MediaResource` objet doit pointer vers le flux pour lequel vous souhaitez obtenir des informations. Par exemple :
 
