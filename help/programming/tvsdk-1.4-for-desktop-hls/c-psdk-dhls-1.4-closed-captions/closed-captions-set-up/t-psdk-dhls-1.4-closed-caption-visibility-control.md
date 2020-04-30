@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
-seo-description: Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
-seo-title: Contrôle de la visibilité des sous-titres
-title: Contrôle de la visibilité des sous-titres
+description: Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
+seo-description: Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
+seo-title: Contrôler la visibilité des sous-titres
+title: Contrôler la visibilité des sous-titres
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
@@ -10,17 +10,17 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 ---
 
 
-# Contrôle de la visibilité des sous-titres{#control-closed-caption-visibility}
+# Contrôler la visibilité des sous-titres{#control-closed-caption-visibility}
 
-Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
+Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
 
 >[!TIP]
 >
->Si le texte de sous-titrage est affiché lorsque le lecteur passe en mode de recherche, le texte ne s’affiche plus une fois la recherche terminée. Au lieu de cela, au bout de quelques secondes, TVSDK affiche le texte de sous-titrage codé suivant dans la vidéo après la position de fin de la recherche.
+>Si le texte de sous-titrage s’affiche lorsque le lecteur passe en mode de recherche, le texte ne s’affiche plus une fois la recherche terminée. Au lieu de cela, après quelques secondes, TVSDK affiche le texte de sous-titrage suivant dans la vidéo après la position de fin de la recherche.
 
 >[!NOTE]
 >
->Les valeurs de visibilité des sous-titres sont définies dans `ClosedCaptionsVisibility`. >
+>Les valeurs de visibilité des sous-titres fermés sont définies dans `ClosedCaptionsVisibility`. >
 >
 ```>
 >public static const HIDDEN:String = hidden; 
@@ -30,13 +30,13 @@ Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité es
 
 
 1. Attendez que le `MediaPlayer` programme ait au moins l’état PRÉPARÉ (voir [Attendre un état](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valide).
-1. Pour obtenir le paramètre de visibilité actuel pour les sous-titres, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
+1. Pour obtenir le paramètre de visibilité actuel pour les légendes fermées, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Pour modifier la visibilité des sous-titres, utilisez la méthode setter, en transmettant une valeur de visibilité `ClosedCaptionsVisibility`.
+1. Pour modifier la visibilité des légendes fermées, utilisez la méthode setter, en transmettant une valeur de visibilité de `ClosedCaptionsVisibility`.
 
    Par exemple :
 
@@ -44,7 +44,7 @@ Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité es
    public function set ccVisibility(value:String):void
    ```
 
-1. Définissez un  déroulant.
+1. Définissez une liste déroulante.
 
    ```
    <s:DropDownList id="ccTracksList" width="85" 
@@ -53,7 +53,7 @@ Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité es
                    prompt="CC"/>
    ```
 
-1. Définissez un tableau liable de pistes de sous-titrage codé.
+1. Définissez un tableau liable de pistes de sous-titrage fermées.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
@@ -74,7 +74,7 @@ Vous pouvez contrôler la visibilité des sous-titres. Lorsque la visibilité es
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. Créez et mettez à jour le  lorsqu’un utilisateur fait un choix à partir du  du.
+1. Créez et mettez à jour la liste lorsqu’un utilisateur fait un choix dans la liste.
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 
