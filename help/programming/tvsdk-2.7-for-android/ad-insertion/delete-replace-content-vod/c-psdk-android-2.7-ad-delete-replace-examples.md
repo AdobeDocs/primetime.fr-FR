@@ -5,7 +5,7 @@ seo-title: Exemples de suppression et de remplacement de publicités
 title: Exemples de suppression et de remplacement de publicités
 uuid: 31ceb39a-aa30-472e-908a-3ba57559045f
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: ''
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Voici quelques exemples du processus de suppression et de remplacement des publicités.
 
-Voici un exemple d’utilisation de la fonction `DELETE_RANGE`:
+Voici un exemple d’utilisation du `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +43,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Voici un exemple d’utilisation de la fonction `REPLACE_RANGE`:
+Voici un exemple d’utilisation du `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
