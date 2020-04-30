@@ -20,9 +20,9 @@ Le navigateur TVSDK analyse les premiers octets de la réponse pour détecter le
 
 ## Niveau de manifeste {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-Le navigateur TVSDK utilise le `mediaResource.resourceType` paramètre transmis dans la `replaceCurrentResource` méthode pour détecter le type de contenu de l’URL manifeste. Pour plus d’informations, voir la `AdobePSDK.MediaPlayer` classe.
+Le navigateur TVSDK utilise le `mediaResource.resourceType` paramètre transmis dans la `replaceCurrentResource` méthode pour détecter le type de contenu de l’URL manifeste. Pour plus d&#39;informations, consultez la `AdobePSDK.MediaPlayer` classe.
 
-Dans le lecteur UI Framework, vous pouvez spécifier le type de ressource dans la ressource multimédia comme suit :
+Dans le lecteur UI Framework, vous pouvez spécifier le type de ressource dans la ressource média comme suit :
 
 ```js
 var playerWrapper = ptp.videoPlayer('.videoDiv', { 
@@ -35,9 +35,9 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-S’ `resourceType` il n’est pas fourni, la structure de l’interface utilisateur détermine le type de ressource à partir de l’extension d’URL de ressource, qui est ensuite transmise à `replaceCurrentResource` la méthode.
+Si elle `resourceType` n&#39;est pas fournie, la structure de l&#39;interface utilisateur détermine le type de ressource à partir de l&#39;extension URL de ressource, qui est ensuite transmise à `replaceCurrentResource` la méthode.
 
 >[!TIP]
 >
->Pour un manifeste sans extension, veillez à ce que `resourceType` soit toujours transmis lors du chargement d’une ressource dans l’interface utilisateur.
+>Pour un manifeste sans extension, veillez à ce qu’il `resourceType` soit toujours transmis lors du chargement d’une ressource dans l’interface utilisateur.
 
