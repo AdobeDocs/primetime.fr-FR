@@ -16,31 +16,31 @@ TVSDK requiert des exigences spécifiques pour le contenu multimédia, le conten
 
 ## Configuration système et logiciel requise {#section_96E5B079900246E78682AE44D3F23068}
 
-Pour utiliser TVSDK, assurez-vous que votre matériel, votre système d’exploitation et vos versions d’application répondent toutes aux exigences minimales énumérées ci-dessous.
+Pour utiliser TVSDK, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de votre application répondent toutes aux exigences minimales énumérées ci-dessous.
 
 | Système d’exploitation | Android 4.0 ou version ultérieure (niveau d’API minimal 14) |
 |---|---|
-| UC | 1 GHz Core simple ou équivalent |
+| CPU | 1 GHz simple coeur ou équivalent |
 | RAM | 256 Mo |
 | GPU | GPU matériel requis pour la lecture |
 | Architecture | x86 via Houdini, ARM64, ARMv7 et ARMv8 |
 
 ## Exigences en matière de contenu et de manifeste {#section_72DD0E4DA9774DCCADB42887497F1386}
 
-Vérifiez les restrictions et les exigences pour les flux et les listes de lecture (manifestes), y compris les clés de chiffrement DRM.
+Vérifiez les restrictions et les exigences relatives aux flux et aux listes de lecture (manifestes), y compris les clés de chiffrement DRM.
 
-| Adobe Access DRM | Si le flux protégé par DRM est à débit multiple (MBR), la clé de chiffrement DRM utilisée pour le MBR doit être la même que la clé utilisée dans tous les flux de débit binaire. |
+| Adobe Access DRM | Si le flux protégé par DRM est à débit multiple (MBR), la clé de chiffrement DRM utilisée pour le MBR doit être identique à la clé utilisée dans tous les flux de débit binaire. |
 |---|---|
-| Manifestations de variantes d&#39;annonce | Doit avoir les mêmes rendus de débit binaire que les rendus du contenu principal. |
+| Manifestations de variantes d&#39;annonce | Doit avoir les mêmes rendus de débit que les rendus du contenu principal. |
 
-## #EXT-X-VERSION {#section_49A33664651A46EC9ED888BA9C1C3F6D}
+## #EXT-X-VERSION requirements {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-La version de `#EXT-X-VERSION` dans le [!DNL .m3u8] fichier affecte les fonctionnalités disponibles pour votre application et les `EXT` balises valides dans votre liste de lecture/manifeste.
+La version du `#EXT-X-VERSION` fichier [!DNL .m3u8] affecte les fonctionnalités disponibles pour votre application et les `EXT` balises valides dans votre liste de lecture/manifeste.
 
 Voici quelques informations sur la `#EXT-X-VERSION` balise, qui spécifie la version du protocole HLS :
 
-* La version doit correspondre aux fonctionnalités et aux attributs de la liste de lecture HLS ; dans le cas contraire, des erreurs de lecture peuvent se produire. Pour plus d’informations, voir la spécification [](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)HTTP Live Streaming.
-* Adobe recommande d’utiliser au moins la version 2 de HLS pour la lecture dans les clients basés sur TVSDK.
+* La version doit correspondre aux fonctionnalités et aux attributs de la liste de lecture HLS ; sinon, des erreurs de lecture peuvent se produire. Pour plus d’informations, voir Spécification [de diffusion en flux continu en direct](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)HTTP.
+* Adobe recommande d’utiliser au moins la version 2 de HLS pour la lecture sur des clients basés sur TVSDK.
 
    Les clients et les serveurs doivent implémenter les versions de la manière suivante :
 
@@ -60,7 +60,7 @@ Voici quelques informations sur la `#EXT-X-VERSION` balise, qui spécifie la ver
    <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valeurs de <span class="codeph"> </span> durée EXTINF à virgule flottante <p>Les balises de durée ( <span class="codeph"> #EXTINF: </span>&lt;durée&gt;,&lt;titre&gt;) dans la version 2 ont été arrondies à des valeurs entières. Les versions 3 et ultérieures exigent que les durées soient spécifiées exactement, en virgule flottante. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valeurs de <span class="codeph"> </span> durée EXTINF à virgule flottante <p>Les balises de durée ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) dans la version 2 ont été arrondis à des valeurs entières. Les versions 3 et ultérieures nécessitent des durées précises, en virgule flottante. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 
@@ -69,9 +69,9 @@ Voici quelques informations sur la `#EXT-X-VERSION` balise, qui spécifie la ver
     <ul id="ul_3355A6CBBE2141DDB92660BB4B604D70"> 
      <li id="li_5E73D41AF6DC4CEE88D6C029FFCFC350">La <span class="codeph"> balise EXT-X-BYTERANGE </span> </li> 
      <li id="li_BF5141F516F749E5890860D487EB5287">La <span class="codeph"> balise EXT-X-I-FRAME-STREAM-INF </span> </li> 
-     <li id="li_E0D399A13812499B94107CDE62998EE9">La <span class="codeph"> </span> balise EXT-X-I-FRAMES-ONLY </li> 
-     <li id="li_A7783AFF99854EFBBAECD2967E4CBF2B">La <span class="codeph"> balise EXT-X-MEDIA </span> </li> 
-     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD">Attributs <span class="codeph"> AUDIO </span> et <span class="codeph"> VIDEO </span> de la balise <span class="codeph"> EXT-X-STREAM-INF </span> </li> 
+     <li id="li_E0D399A13812499B94107CDE62998EE9">La <span class="codeph"> balise </span> EXT-X-I-FRAMES-ONLY </li> 
+     <li id="li_A7783AFF99854EFBBAECD2967E4CBF2B">La balise <span class="codeph"> EXT-X-MEDIA </span> </li> 
+     <li id="li_15AE652F33C1454AA90DDC65E7D6C2FD">Attributs <span class="codeph"> AUDIO </span> et <span class="codeph"> VIDEO </span> de la balise <span class="codeph"> </span> EXT-X-STREAM-INF </li> 
      <li id="li_DB2A7847D5884F6E91FD9E78101FBCA5">Audio alternatif TVSDK </li> 
     </ul> </td> 
   </tr> 
