@@ -1,22 +1,22 @@
 ---
-description: Le SDK TVSDK fournit des API et un exemple de code pour la gestion des périodes de panne.
-seo-description: Le SDK TVSDK fournit des API et un exemple de code pour la gestion des périodes de panne.
-seo-title: Mise en oeuvre de la gestion du blocage
-title: Mise en oeuvre de la gestion du blocage
+description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+seo-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+seo-title: Mise en oeuvre de la gestion des interruptions de service
+title: Mise en oeuvre de la gestion des interruptions de service
 uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
 
-# Mise en oeuvre de la gestion du blocage {#implement-blackout-handling}
+# Mise en oeuvre de la gestion des interruptions de service {#implement-blackout-handling}
 
-Le SDK TVSDK fournit des API et un exemple de code pour la gestion des périodes de panne.
+TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
 
-Pour mettre en oeuvre la gestion des blocages et fournir un contenu alternatif pendant le blocage :
+Pour mettre en oeuvre la gestion des interruptions de service et fournir un autre contenu pendant la coupure de service :
 
-1. Configurez votre application pour vous abonner aux balises d’arrêt dans un manifeste de flux en direct.
+1. Configurez votre application pour vous abonner à des balises d’arrêt dans un manifeste de flux en direct.
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
