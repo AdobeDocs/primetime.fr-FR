@@ -1,6 +1,6 @@
 ---
-description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut obtenir une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
-seo-description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut obtenir une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+seo-description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
 seo-title: Licence
 title: Licence
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
@@ -12,22 +12,22 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 # Licence{#licensing}
 
-La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut obtenir une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
 
-Avant que votre application ou page Web sur le périphérique d’un utilisateur final puisse lire du contenu protégé par DRM, il doit acquérir un jeton d’un serveur de droits ou de stockage que vous, le client, exploitez. Adobe fournit un exemple de serveur de référence à cette fin : Serveur [de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Avant que votre application ou page Web sur un périphérique d’utilisateur final puisse lire du contenu protégé par DRM, il doit acquérir un jeton d’un serveur de droits ou de stockage que vous, le client, utilisez. Adobe fournit un exemple de serveur de référence à cet effet : [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Votre serveur de droits ou de stockage demandera un jeton de licence au serveur ExpressPlay concerné, uniquement après avoir vérifié auprès de vos propres systèmes dorsaux pour déterminer si l&#39;utilisateur spécifique est autorisé à regarder le contenu demandé. La réponse renvoyée par la demande de jeton de licence est soit une URL prête à l’emploi pour le serveur de licences, soit la réponse contient l’URL dans une structure JSON, selon la solution DRM avec laquelle vous travaillez.
+Votre serveur de droits ou de stockage demandera un jeton de licence au serveur ExpressPlay approprié, uniquement après avoir vérifié auprès de vos propres systèmes dorsaux pour déterminer si l&#39;utilisateur spécifique est autorisé à regarder le contenu demandé. La réponse renvoyée par la demande de jeton de licence est soit une URL prête à l’emploi pour le serveur de licences, soit la réponse contient l’URL dans une structure JSON, selon la solution DRM que vous utilisez.
 
 >[!NOTE]
 >
 >La demande de jeton de licence ne peut pas être effectuée à partir du client lui-même :
->1. Les droits doivent être contrôlés dans un  de confiance ; et
->1. L&#39;authentificateur du client doit être tenu secret.
+>1. Les droits doivent être contrôlés dans un environnement de confiance ; et
+>1. L&#39;authentificateur de client doit être tenu secret.
 
 
-1. Faites une demande de jeton de licence.
+1. Demande de jeton de licence.
 
-   Dans le cas d’un scénario de  rapide, dans lequel vous souhaitez simplement vous assurer que les différents composants impliqués fonctionnent ensemble, vous pouvez utiliser [!DNL curl] une fonction telle que demander votre jeton de licence (plutôt que d’obtenir une application en cours d’exécution et de tester des appels à partir de là). Par exemple :
+   Dans le cas d’un scénario à début rapide, dans lequel vous souhaitez simplement vous assurer que les différents composants impliqués fonctionnent ensemble, vous pouvez utiliser quelque chose comme [!DNL curl] faire votre demande de jeton de licence (plutôt que d’obtenir initialement une application en cours d’exécution et de tester les appels à partir de là). Par exemple :
 
    * Widevine :
 
@@ -66,7 +66,7 @@ Votre serveur de droits ou de stockage demandera un jeton de licence au serveur 
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   Notez que la réponse de Widevine est une chaîne URL &quot;prête à l’emploi&quot;.
+   Notez que la réponse Widevine est une chaîne URL prête à l&#39;emploi.
 
    * PlayReady :
 
@@ -144,4 +144,4 @@ Votre serveur de droits ou de stockage demandera un jeton de licence au serveur 
    O1PqRkx59Q2q1s2cFNrqfml8Y3RQ
    ```
 
-   Notez que la réponse de FairPlay est une chaîne URL &quot;prête à l’emploi&quot;.
+   Notez que la réponse FairPlay est une chaîne URL prête à l’emploi.
