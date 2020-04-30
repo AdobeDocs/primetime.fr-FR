@@ -2,8 +2,8 @@
 description: La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
 keywords: normalize rule;creative selection rules
 seo-description: La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
-seo-title: Normaliser les règles
-title: Normaliser les règles
+seo-title: Normalisation des règles
+title: Normalisation des règles
 uuid: eccae85b-907e-4e16-9bb8-6c2be6cb0ab6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -11,7 +11,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Normaliser les règles{#normalize-rules}
+# Normalisation des règles{#normalize-rules}
 
 La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
 
@@ -37,10 +37,10 @@ La règle de normalisation définit une transformation d’URL à appliquer à u
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> hôte</span></td> 
-   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque <span class="codeph"> des correspondances</span> et des attributs de valeurs <span class="codeph"></span> sont définis.</td> 
+   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque des <span class="codeph"> correspondances</span> et des attributs de <span class="codeph"> valeurs</span> sont définis.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> correspond à</span></td> 
+   <td><span class="codeph"> correspond</span></td> 
    <td></td> 
    <td></td> 
    <td>Valeurs possibles :
@@ -49,27 +49,27 @@ La règle de normalisation définit une transformation d’URL à appliquer à u
      <li><span class="codeph"> ne</span> - pas égal à</li> 
      <li><span class="codeph"> co</span> - contient</li> 
      <li><span class="codeph"> nc</span> - non contient</li> 
-     <li><span class="codeph"> sw</span> -  avec</li> 
+     <li><span class="codeph"> sw</span> - débuts avec</li> 
      <li><span class="codeph"> ew</span> - se termine par</li> 
     </ul></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> valeurs</span></td> 
+   <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Tableau</span></td> 
    <td></td> 
-   <td>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"></span> du créatif source et fera correspondre les valeurs définies dans ce tableau.</td> 
+   <td>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"></span> du créatif source et fera une correspondance avec les valeurs définies dans ce tableau.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rechercher</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td>  normal à appliquer sur l’URL de création source à faire correspondre.</td> 
+   <td> expression régulière à appliquer sur l’URL de création source à faire correspondre.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> remplacer</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td>  normal à appliquer sur l’URL de création source à remplacer en fonction de la correspondance.</td> 
+   <td> expression régulière à appliquer sur l’URL de création source à remplacer en fonction de la correspondance.</td> 
   </tr> 
  </tbody> 
 </table>
