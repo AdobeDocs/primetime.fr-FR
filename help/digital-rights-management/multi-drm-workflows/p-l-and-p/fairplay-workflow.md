@@ -1,6 +1,6 @@
 ---
-description: Le DRM  consiste à créer un package de votre contenu, à fournir une licence pour le contenu et à lire le contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais avec quelques différences dans les détails.
-seo-description: Le DRM  consiste à créer un package de votre contenu, à fournir une licence pour le contenu et à lire le contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais avec quelques différences dans les détails.
+description: Les workflows DRM impliquent la création d’un pack de contenu, l’octroi de licences pour le contenu et la lecture du contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais certaines différences se trouvent dans les détails.
+seo-description: Les workflows DRM impliquent la création d’un pack de contenu, l’octroi de licences pour le contenu et la lecture du contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais certaines différences se trouvent dans les détails.
 seo-title: Processus multi-DRM pour FairPlay
 title: Processus multi-DRM pour FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
@@ -12,28 +12,28 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
 # Processus multi-DRM pour FairPlay {#multi-drm-workflow-for-fairplay}
 
-Le DRM  consiste à créer un package de votre contenu, à fournir une licence pour le contenu et à lire le contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais avec quelques différences dans les détails.
+Les workflows DRM impliquent la création d’un pack de contenu, l’octroi de licences pour le contenu et la lecture du contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais certaines différences se trouvent dans les détails.
 
-Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’assemblage, de la licence et de la lecture du contenu HLS protégé par Apple FairPlay. Ce flux de travaux comprend également des instructions facultatives pour la mise en oeuvre de la lecture hors ligne et de la rotation des licences.
+Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’emballage, de la licence et de la lecture de contenu HLS protégé par Apple FairPlay. Ce processus comprend également des instructions facultatives pour la mise en oeuvre de la lecture hors ligne et de la rotation des licences.
 
 ## Activer le service ExpressPlay pour FairPlay {#enable-expressplay-service-for-fairplay}
 
-La solution FairPlay DRM d’Apple nécessite une configuration lorsque vous l’utilisez avec les services ExpressPlay DRM. Cela implique d’obtenir des informations d’identification d’Apple et de les télécharger vers ExpressPlay.
+La solution FairPlay DRM d&#39;Apple nécessite une configuration lorsque vous l&#39;utilisez avec les services ExpressPlay DRM. Cela implique d’obtenir des informations d’identification d’Apple et de les télécharger vers ExpressPlay.
 
-Pour activer le service ExpressPlay pour la protection du contenu FairPlay, procédez comme suit.
+Suivez ces étapes pour activer le service ExpressPlay pour la protection du contenu FairPlay.
 
-1. Obtenez des informations d’identification auprès d’Apple.
+1. Récupérez les informations d’identification auprès d’Apple.
 
-   Ces informations d’identification sont fournies de manière unique à chaque. Vous devez les demander en remplissant le formulaire suivant : [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
+   Ces informations d’identification sont attribuées de manière unique à chaque prestataire. Vous devez les demander en remplissant le formulaire suivant : [https://developer.apple.com/contact/fps/](https://developer.apple.com/contact/fps/).
 
    >[!NOTE]
    >
-   >Sélectionnez **[!UICONTROL Content Provider]** Rôle principal.
+   >Sélectionnez **[!UICONTROL Content Provider]** le rôle principal.
 
    Une fois votre demande approuvée, Apple vous enverra un pack *de déploiement en flux continu* FairPlay.
 1. Générer une demande de signature de certificat.
 
-   Vous pouvez utiliser [!DNL openssl] pour générer votre paire de clés publique/privée et votre demande de certificat signée (CSR).
+   Vous pouvez utiliser [!DNL openssl] pour générer votre paire de clés publique/privée et votre demande de signature de certificat (CSR).
 
    1. Générez votre paire de clés.
 
@@ -50,20 +50,20 @@ Pour activer le service ExpressPlay pour la protection du contenu FairPlay, proc
 
       >[!NOTE]
       >
-      >Les instructions de cette étape se trouvent dans votre pack *de déploiement en flux continu* FairPlay, mais sont incluses ici pour votre commodité. Si vous rencontrez des problèmes avec cette partie du processus, consultez les instructions du fichier *FairPlayCertificateCreation.pdf* (dans votre pack de déploiement).
+      >Les instructions de cette étape se trouvent dans votre package *de déploiement en flux continu* FairPlay, mais sont incluses ici pour votre commodité. Si vous rencontrez des problèmes avec cette partie du processus, consultez les instructions du fichier *FairPlayCertificateCreation.pdf* (dans votre pack de déploiement).
 
-1. Téléchargez votre fichier CSR sur le portail des développeurs Apple.
-   1. L’agent d’équipe de votre équipe de développement doit se connecter [!DNL developer.apple.com/account].
-   1. Cliquez sur **[!UICONTROL Certificates, Identifiers & Profiles]**, puis sélectionnez la **[!UICONTROL iOS, tvOS, watchOS]** liste déroulante en haut à gauche de la page, puis cliquez **[!UICONTROL Certificates->Production]** à gauche de la page.
+1. Téléchargez votre CSR sur le portail des développeurs Apple.
+   1. L&#39;agent d&#39;équipe de votre équipe de développement doit se connecter à [!DNL developer.apple.com/account].
+   1. Cliquez sur **[!UICONTROL Certificates, Identifiers & Profiles]**, puis sélectionnez la liste **[!UICONTROL iOS, tvOS, watchOS]** déroulante en haut à gauche de la page, puis cliquez sur **[!UICONTROL Certificates->Production]** à gauche de la page.
    1. Cliquez sur le **[!UICONTROL +]** bouton en haut à droite de la page pour demander un nouveau certificat. Sélectionnez l’ **[!UICONTROL FairPlay Streaming Certificate]** option sous **[!UICONTROL Production]**.
 
       La boîte de dialogue Certificat *iOS* Ajouter s’ouvre.
-   1. Dans le certificat *iOS* Ajouter, téléchargez le fichier CSR que vous avez généré à l’étape 2.b., puis cliquez sur **[!UICONTROL Generate]**.
+   1. Dans le certificat *iOS* Ajouter, téléchargez le fichier CSR que vous avez généré à l’étape 2.b, puis cliquez sur **[!UICONTROL Generate]** le bouton.
 
-      Votre clé de  (ASK) s’affiche dans la même boîte de dialogue.
+      Votre clé de Clé secrète (ASK) s’affiche dans la même boîte de dialogue.
    1. Écrivez votre demande et stockez-la dans un endroit sûr.
-   1. Dans votre requête ASK, cliquez sur pour terminer la génération du certificat et cliquez sur **[!UICONTROL Continue]**.
-   1. Après avoir vérifié que vous avez enregistré votre requête, cliquez sur **[!UICONTROL Generate]** pour continuer.
+   1. Cliquez sur dans votre ASK pour terminer la génération de certificats et cliquez sur **[!UICONTROL Continue]**.
+   1. Après avoir vérifié que vous avez enregistré votre demande de service financier, cliquez sur **[!UICONTROL Generate]** pour continuer.
 
       >[!NOTE] {importance=&quot;high&quot;}
       >
@@ -71,18 +71,18 @@ Pour activer le service ExpressPlay pour la protection du contenu FairPlay, proc
 
    1. Téléchargez votre certificat FPS.
 
-      Veillez à enregistrer une copie de sauvegarde de votre clé privée (à partir de l’étape 2.a) et de votre clé publique (le certificat FPS que vous avez téléchargé au cours de cette étape) dans un endroit sûr.
+      Assurez-vous d&#39;enregistrer une copie de sauvegarde de votre clé privée (à partir de l&#39;étape 2.a) et de votre clé publique (le certificat FPS que vous avez téléchargé au cours de cette étape) dans un endroit sûr.
 1. Configurez votre compte ExpressPlay avec vos informations d’identification FairPlay.
-   1. Disons le nom du certificat que vous avez téléchargé à l’étape 3.h. est [!DNL fairplay.cer].
+   1. Supposons que le nom du certificat que vous avez téléchargé à l’étape 3.h. est [!DNL fairplay.cer].
    1. Ouvrez le [!DNL fairplay.cer] fichier à l’aide de l’utilitaire Apple Keychain Access.
-   1. Filtrez vos nombreux certificats en saisissant &quot; `fairplay`&quot; dans le champ de recherche situé en haut à droite.
-   1. Identifiez votre certificat  FairPlay.
+   1. Filtrez vos nombreux certificats en entrant &quot; `fairplay`&quot; dans le champ de recherche situé en haut à droite.
+   1. Identifiez le certificat FairPlay de votre société.
 
-      Le nom de votre  doit être associé au certificat émis par Apple.
-   1. Développez le certificat en sélectionnant la flèche de développement, puis cliquez avec le bouton droit sur votre clé privée.
+      Votre nom de société doit être associé au certificat émis par Apple.
+   1. Développez le certificat en sélectionnant la flèche de développement, puis cliquez avec le bouton droit de la souris sur votre clé privée.
    1. Sélectionnez **[!UICONTROL Export "Your Company Name"]** et enregistrez le [!DNL .p12] fichier.
 
-      Vous serez invité à attribuer un mot de passe pour protéger ce fichier. Notez ce mot de passe car vous devrez l’envoyer avec votre paquet d’informations d’identification.
+      Vous serez invité à attribuer un mot de passe pour protéger ce fichier. Notez ce mot de passe car vous devrez l&#39;envoyer avec votre paquet d&#39;informations d&#39;identification.
    1. Connectez-vous à votre compte sur [www.expressplay.com](https://www.expressplay.com).
    1. Cliquez sur **[!UICONTROL DRM SERVICES]** en haut à gauche, puis sélectionnez l’ **[!UICONTROL FairPlay]** onglet.
    1. Téléchargez vos informations d’identification FairPlay vers votre compte ExpressPlay.
@@ -100,20 +100,20 @@ Vous pouvez désormais créer des applications iOS ou des pages HTML5 avec la pr
 
 ### Assemblage de votre contenu pour FairPlay {#package-your-content-for-fairplay}
 
-Pour compresser votre contenu, vous pouvez utiliser Adobe Offline Packager ou d’autres outils tels que le programme de mise en package Bento4 d’ExpressPlay.
+Pour créer un pack contenant votre contenu, vous pouvez utiliser Adobe Offline Packager ou d’autres outils tels que le Packager Bento4 d’ExpressPlay.
 
-Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentation du fichier d’origine et insertion dans un manifeste), et protègent la vidéo avec la solution DRM choisie (dans ce cas, FairPlay) :
+Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentation du fichier d’origine et placement de celui-ci dans un manifeste) et protègent la vidéo avec la solution DRM que vous avez choisie (dans ce cas, FairPlay) :
 
 * [Adobe Offline Packager for FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
-* [Packagers ExpressPlay - Bento4 pour HLS](https://www.bento4.com/developers/hls/)
+* [ExpressPlay Packagers - Bento4 pour HLS](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
 
 ![](assets/pkg_lic_play_hls_web.png)
 
-1. Assemblez votre contenu.
+1. Empaquetez votre contenu.
 
-   Voici un exemple d’assemblage à l’aide d’Adobe Offline Packager. L’outil Packager utilise un fichier de configuration ( [!DNL fairplay.xml], par exemple), qui ressemble à quelque chose comme ceci :
+   Voici un exemple d’assemblage utilisant Adobe Offline Packager. L’outil Packager utilise un fichier de configuration ( [!DNL fairplay.xml]par exemple) qui ressemble à ce qui suit :
 
    ```
    <config>
@@ -132,16 +132,16 @@ Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentati
    ```
 
    * `in_path` - Cette entrée indique l&#39;emplacement de la vidéo source sur votre machine d&#39;emballage locale.
-   * `out_type` - Cette entrée décrit le type de sortie assemblée, dans ce cas HLS pour FairPlay.
+   * `out_type` - Cette entrée décrit le type de sortie emballée, dans ce cas HLS pour FairPlay.
    * `out_path` - L&#39;emplacement sur la machine locale où vous voulez que votre sortie aille.
    * `drm_sys` - La solution DRM que vous incluez dans votre pack. C&#39;est `FAIRPLAY` dans ce cas.
    * `frag_dur` - Durée du fragment en secondes.
-   * `target_dur` - Durée de  du pour la sortie HLS.
-   * `key_file_path` - Il s’agit de l’emplacement du fichier de licence sur votre machine de conditionnement qui sert de clé de chiffrement de contenu (CEK). Il s’agit d’une chaîne hexadécimale de 16 octets codée en base 64.
+   * `target_dur` - Durée de cible de la sortie HLS.
+   * `key_file_path` - Il s’agit de l’emplacement du fichier de licence sur votre machine de conditionnement qui sert de clé de chiffrement de contenu (CEK). Il s’agit d’une chaîne hexadécimale codée en base 64 et codée sur 16 octets.
    * `iv_file_path` - Il s&#39;agit de l&#39;emplacement du fichier IV sur votre machine d&#39;emballage.
    * `key_url` - Paramètre URI de la `EXT-X-KEY` balise du [!DNL .m3u8] fichier.
    * `content_id` - Valeur par défaut.
-   Comme indiqué dans la documentation [de](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Il est recommandé de créer un fichier de configuration contenant les options courantes que vous souhaitez utiliser pour générer les sorties. Créez ensuite la sortie en fournissant des options spécifiques sous forme d’argument de ligne de commande.&quot;
+   Comme indiqué dans la documentation [de](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Il est recommandé de créer un fichier de configuration contenant les options courantes que vous souhaitez utiliser pour générer les sorties. Ensuite, créez la sortie en fournissant des options spécifiques sous forme d&#39;argument de ligne de commande.&quot;
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -160,53 +160,53 @@ Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentati
 
 Vous pouvez définir des stratégies pour le contenu protégé par FairPlay à l’aide d’un serveur de droits. Vous pouvez configurer le vôtre ou utiliser un exemple de serveur de droits fourni par Adobe.
 
-Adobe fournit un exemple de serveur de droits ExpressPlay (SEES) qui montre comment effectuer des droits basés sur *le* temps et liés aux *périphériques* . Cet exemple de serveur de droits est construit sur les services ExpressPlay.
+Adobe fournit un exemple de serveur de droits ExpressPlay (SEES) qui indique comment effectuer des droits basés sur *le* temps et liés *aux* périphériques. Cet exemple de serveur de droits est construit sur les services ExpressPlay.
 
 [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
 * [Service de référence : Droits basés sur le temps](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-* [Service de référence : Droit de liaison de périphérique](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+* [Service de référence : Droits de liaison de périphérique](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
 
-## Licences et lecture pour FairPlay {#licensing-and-playback-for-fairplay}
+## Licence et lecture pour FairPlay {#licensing-and-playback-for-fairplay}
 
 La licence et la lecture d’un contenu protégé par FairPlay nécessitent l’échange de schémas d’URL entre le schéma utilisé dans le fichier de manifeste vidéo (skd:) et celui utilisé dans les demandes de jeton ExpressPlay (https:).
 
-Vous trouverez ici les instructions relatives à la mise en oeuvre de licences et de la lecture à partir d’un client iOS TVSDK : [Activez Apple FairPlay dans les applications](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)TVSDK. Vous pouvez également mettre en oeuvre la lecture hors ligne et la rotation des licences pour FairPlay.
+Vous trouverez ici les instructions relatives à la mise en oeuvre de la licence et de la lecture d’un client TVSDK iOS : [Activez Apple FairPlay dans les applications](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)TVSDK. Vous pouvez également mettre en oeuvre la lecture hors ligne et la rotation des licences pour FairPlay (facultatif).
 
 ## HLS hors ligne avec FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
 
-Vous souhaitez peut-être permettre aux utilisateurs de lire du contenu protégé par FairPlay lorsque son autorisation n’est pas récupérable car le lecteur est isolé du Web (par exemple sur un avion).
+Vous souhaitez peut-être permettre aux utilisateurs de lire du contenu protégé par FairPlay lorsque l’autorisation n’est pas récupérable car le lecteur est isolé du Web (par exemple sur un avion).
 
-Avant de commencer ce , téléchargez et lisez le  Apple **&quot;Lecture hors ligne avec diffusion en flux continu FairPlay et diffusion en flux continu HTTP&quot;**. Lisez le guide pour savoir comment télécharger des segments de flux de transport (TS) et les enregistrer sur votre ordinateur local.
+Avant de commencer cette tâche, téléchargez et lisez le document Apple **&quot;Lecture hors ligne avec la diffusion en flux continu FairPlay et la diffusion en flux continu HTTP Live&quot;**. Lisez le guide pour savoir comment télécharger des segments de flux de transport (TS) et les enregistrer sur votre ordinateur local.
 
-Mettez en oeuvre le jeu hors ligne pour FairPlay avec ce flux de travail :
+Mettez en oeuvre la lecture hors ligne pour FairPlay avec ce flux de travail :
 
 1. Téléchargez le segment HLS TS.
-1. Demandez une licence de location permanente au serveur FairPlay (voir **&quot;Politique de location permanente FairPlay&quot;**).
+1. Demande de licence de location permanente auprès du serveur FairPlay (voir **&quot;Politique de location permanente FairPlay&quot;**).
 1. Enregistrez le `persistentContentKey`.
 1. Lire le contenu FairPlay hors ligne.
 
 >[!NOTE]
 >
->La diffusion en flux continu FairPlay sur le client n’pas le déchiffrement  si la clé de contenu persistante a expiré. Toutefois, il continuera l’expérience utilisateur si la clé de contenu expire pendant la lecture.
+>FairPlay Streaming sur le client ne début pas le déchiffrement si la clé de contenu persistante a expiré. Cependant, l’expérience utilisateur se poursuivra si la clé de contenu expire au cours de la lecture.
 >
->Voir [Utilisation du de diffusion en flux continu](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) HTTP pour plus d’informations.
+>Voir [Utilisation du document de diffusion en flux continu](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) HTTP Live pour plus d’informations.
 
 ### Rotation des licences FairPlay {#section_D32AA08C61474B4F876AC2A5F18CB879}
 
-La rotation des licences permet d’éviter le piratage de licences de contenu qui s’exécute pendant longtemps.
+La rotation des licences est un système destiné à empêcher le piratage de licences de contenu qui est lu pendant longtemps.
 
-Dans un manifeste M3U8, chaque balise clé s’applique aux segments TS suivants jusqu’à la balise clé suivante ou jusqu’à la fin du fichier.
+Dans un manifeste M3U8, chaque balise de clé s’applique aux segments TS suivants jusqu’à la balise de clé suivante ou jusqu’à la fin du fichier.
 
-Pour ajouter une rotation de licence, procédez comme suit :
+Pour ajouter la rotation des licences, procédez comme suit :
 
 * Insérez une nouvelle balise de clé FairPlay pendant la rotation de la licence.
 
-   Vous pouvez ajouter n’importe quel nombre de balises clés.
+   N’importe quel nombre de balises clés peut être ajouté.
 
-   Pour le contenu linéaire, veillez à conserver la balise clé la plus récente dans la fenêtre M3U8. iOS demandera le prochain M3U8 lorsqu’il reste environ deux segments TS à lire (environ 20 secondes). Si le nouveau M3U8 contient de nouvelles balises de clé, toutes les requêtes de clé se produisent immédiatement. Les clés existantes précédentes ne seront plus demandées. iOS attend la fin de toutes les requêtes clés avant que la lecture ne s’.
+   Pour le contenu linéaire, veillez à conserver la balise clé la plus récente dans la fenêtre M3U8. iOS va demander le prochain M3U8 lorsqu&#39;il reste environ deux segments TS à lire (environ 20 secondes). Si le nouveau M3U8 contient de nouvelles balises de clés, toutes les requêtes de clés surviennent immédiatement. Les clés existantes précédentes ne seront plus demandées. iOS attend la fin de toutes les requêtes clés avant que la lecture ne début.
 
-   Pour le contenu VOD avec rotation de licence, toutes les requêtes clés se produisent au début de la lecture.
+   Pour le contenu VOD avec rotation de licence, toutes les requêtes clés surviennent au début de la lecture.
 
    Voici un exemple de M3U8 avec rotation de clé :
 
