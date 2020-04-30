@@ -14,7 +14,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
    L’utilisateur qui demande un certificat doit être un demandeur.
 
-1. Dans l’onglet Requête, sélectionnez le type de certificat (serveur de licences, Packager ou Transport).
+1. Dans l’onglet Demande, sélectionnez le type de certificat (serveur de licences, Packager ou Transport).
 
    >[!NOTE]
    >
@@ -23,13 +23,13 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 1. Effectuez l’une des opérations suivantes :
 
    * Téléchargez le fichier CSR.
-   * Copiez les informations CSR du CSR et collez-les dans le formulaire.
+   * Copiez les informations du CSR et collez-les dans le formulaire.
 
       >[!NOTE]
       >
-      >Pour copier les informations CSR, sélectionnez le texte compris entre la balise de début `(-----BEGIN CERTIFICATE REQUEST-----)` et la balise de fin `(-----END CERTIFICATE REQUEST-----)`, sans les inclure.
+      >Pour copier les informations CSR, sélectionnez le texte compris entre la balise de début `(-----BEGIN CERTIFICATE REQUEST-----)` et la balise de fin `(-----END CERTIFICATE REQUEST-----)`, à l’exclusion de celles-ci.
 
 1. Cliquez sur le **[!UICONTROL Submit Request]** bouton.
 
-   Un e-mail est envoyé aux administrateurs de compte et secondaires pour révision. Le demandeur est Cc&#39;d.
+   Un e-mail est envoyé aux administrateurs de compte et aux administrateurs secondaires pour révision. Le demandeur est Cc&#39;d.
 
