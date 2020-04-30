@@ -12,9 +12,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 # Vérifier si le serveur de licences a démarré correctement {#check-whether-the-license-server-started-properly}
 
-Il existe plusieurs façons de déterminer si votre serveur de licence d’implémentation de référence a démarré correctement. Une méthode consiste à vérifier les [!DNL catalina.log] journaux, mais cela peut ne pas suffire, car le serveur de licences se connecte à ses propres fichiers journaux.
+Il existe plusieurs méthodes pour déterminer si votre serveur de licence d’implémentation de référence a démarré correctement. Une méthode consiste à vérifier les [!DNL catalina.log] journaux, mais cela peut ne pas suffire, car le serveur de licences se connecte à ses propres fichiers journaux.
 1. Vérifiez votre [!DNL AdobeFlashAccess.log] fichier.
 
-   C’est là que le serveur de licences d’implémentation de référence écrit les informations du journal. L’emplacement de ce fichier journal est indiqué par votre [!DNL log4j.xml] fichier et peut être modifié pour pointer vers n’importe quel emplacement. Par défaut, le fichier journal est copié dans le répertoire de travail dans lequel vous exécutez votre script `catalina` Tomcat.
-1. Accédez à l’URL suivante et vérifiez que le texte &quot;License Server is setup correct&quot; s’affiche :
+   C’est ici que le serveur de licences d’implémentation de référence écrit les informations de journal. L&#39;emplacement de ce fichier journal est indiqué par votre [!DNL log4j.xml] fichier et peut être modifié pour pointer vers n&#39;importe quel emplacement. Par défaut, le fichier journal est copié dans le répertoire de travail dans lequel vous exécutez votre script `catalina` Tomcat.
+1. Accédez à l’URL suivante, puis vérifiez que le texte &quot;License Server is setup good&quot; s’affiche :
    [!DNL ht<span></span>tps://localhost:8080/flashaccess/license/v4]
