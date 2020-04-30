@@ -10,15 +10,15 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 # Autre son {#alternate-audio}
 
-L’audio de remplacement, ou liaison tardive, vous permet de basculer entre les pistes audio disponibles pour une piste vidéo. Ainsi, les utilisateurs peuvent sélectionner un suivi de langue lors de la lecture de la vidéo.
+Le son alternatif, ou à liaison tardive, vous permet de basculer entre les pistes audio disponibles pour une piste vidéo. Ainsi, les utilisateurs peuvent sélectionner un suivi de langue lors de la lecture de la vidéo.
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Lorsque TVSDK crée l’ `MediaPlayerItem` instance de la vidéo active, il crée un `AudioTrack` élément pour chaque piste audio disponible. L’élément contient une `name` propriété, une chaîne qui contient généralement une description reconnaissable par l’utilisateur de la langue de ce suivi. L’élément contient également des informations sur l’utilisation de ce suivi par défaut.
+Lorsque TVSDK crée l’ `MediaPlayerItem` instance de la vidéo active, il crée un `AudioTrack` élément pour chaque piste audio disponible. L’élément contient une `name` propriété, une chaîne contenant généralement une description reconnaissable par l’utilisateur de la langue de ce suivi. L’élément contient également des informations sur l’utilisation de ce suivi par défaut.
 
-Quand il est temps de lire la vidéo, vous pouvez demander un des pistes audio disponibles, laisser l’utilisateur en choisir une, et définir la lecture de la vidéo avec la piste sélectionnée.
+Quand il est temps de lire la vidéo, vous pouvez demander une liste des pistes audio disponibles, laisser l&#39;utilisateur en choisir une, et configurer la lecture de la vidéo pour la lecture avec la piste sélectionnée.
 
-Bien que rare, si une piste audio supplémentaire devient disponible après la création de la `MediaPlayerItem`, TVSDK déclenche un `MediaPlayerItem.AUDIO_UPDATED` .
+Bien que rare, si une piste audio supplémentaire devient disponible après sa création `MediaPlayerItem`, TVSDK déclenche un `MediaPlayerItem.AUDIO_UPDATED` événement.
 
 ## Ajout d’API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
@@ -36,7 +36,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 **getAudioTracks**
 
-Cette fonction renvoie  de toutes les pistes audio disponibles actuelles dans un média spécifié.
+Cette fonction renvoie la liste de toutes les pistes audio actuellement disponibles dans un média spécifié.
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
