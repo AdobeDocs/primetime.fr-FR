@@ -1,8 +1,8 @@
 ---
-description: Le navigateur TVSDK distribue des  de qualité de service (QoS) pour avertir votre application de l’existence d’ susceptibles d’influencer le calcul des statistiques de qualité de service (telles que la mise en mémoire tampon et la recherche d’un  de qualité de service).
-seo-description: Le navigateur TVSDK distribue des  de qualité de service (QoS) pour avertir votre application de l’existence d’ susceptibles d’influencer le calcul des statistiques de qualité de service (telles que la mise en mémoire tampon et la recherche d’un  de qualité de service).
-seo-title: ' QoS'
-title: ' QoS'
+description: Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+seo-description: Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+seo-title: événements QoS
+title: événements QoS
 uuid: 3384bc51-b435-4cd9-a1f8-9abf2605205b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,11 +10,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-#  QoS{#qos-events}
+# événements QoS{#qos-events}
 
-Le navigateur TVSDK distribue des  de qualité de service (QoS) pour avertir votre application de l’existence d’ susceptibles d’influencer le calcul des statistiques de qualité de service (telles que la mise en mémoire tampon et la recherche d’un  de qualité de service).
+Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
 
-Pour être averti de tous les  de liés à la qualité de service, créez une instance de `AdobePSDK.QOSProvider` et joignez l’instance MediaPlayer à cette `QOSProvider` instance :
+Pour être informé de tous les événements liés à la qualité de service, créez une instance de `AdobePSDK.QOSProvider` et joignez l’instance MediaPlayer à cette `QOSProvider` instance :
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
