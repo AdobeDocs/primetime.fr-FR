@@ -1,6 +1,6 @@
 ---
-description: Créez un PlaybackManager qui gère la configuration du flux HLS et l’opération de lecture. Aucune autre configuration n’est requise.
-seo-description: Créez un PlaybackManager qui gère la configuration du flux HLS et l’opération de lecture. Aucune autre configuration n’est requise.
+description: Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
+seo-description: Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
 seo-title: Activer la lecture vidéo
 title: Activer la lecture vidéo
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
@@ -12,7 +12,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 # Activer la lecture vidéo {#enable-video-playback}
 
-Créez un PlaybackManager qui gère la configuration du flux HLS et l’opération de lecture. Aucune autre configuration n’est requise.
+Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
 
 1. Créez l’objet du lecteur multimédia en vous assurant que le code suivant existe dans [!DNL PlayerFragment.java]:
 
@@ -24,20 +24,20 @@ Créez un PlaybackManager qui gère la configuration du flux HLS et l’opérati
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Créez le gestionnaire de lecture via `ManagerFactory`:
+1. Créez le gestionnaire de lecture à l’aide de `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Mettez en oeuvre le `PlaybackManagerEventListener` dans `PlayerFragment` pour gérer le de lecture :
+1. Mettez en oeuvre le `PlaybackManagerEventListener` dans le `PlayerFragment` pour gérer les événements de lecture :
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Enregistrez l’écouteur de  dans `PlayerFragment`:
+1. Enregistrez l’écouteur de événement dans `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -59,7 +59,7 @@ Créez un PlaybackManager qui gère la configuration du flux HLS et l’opérati
 
 ## Documentation sur les API connexes {#related-api-documentation}
 
-* [Classe PlaybackManager](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
+* [Gestionnaire de lecture de classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
 * [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)
 * [mediacore.utils.TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/utils/TimeRange.html)
 * [mediacore.BufferControlParameters](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/BufferControlParameters.html)
