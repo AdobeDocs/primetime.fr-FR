@@ -23,7 +23,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Générateur d'opportunités de plage personnalisée </span> </td> 
+   <td> <span class="codeph"> Générateur d'opportunité de plage personnalisée </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -62,10 +62,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique de plage personnalisée) </td> 
+   <td> S/O (mode de signalisation automatique CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature ManifestCue </td> 
+   <td> <span class="codeph"> Mode </span> de signature de ManifestCue </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -86,7 +86,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique de plage personnalisée) </td> 
+   <td> S/O (mode de signalisation automatique CustomRange) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Mode </span> de signature de plage personnalisée </td> 
@@ -172,10 +172,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> de plage personnalisée </span> ) </td> 
+   <td> S/O (mode de signalisation automatique <span class="codeph"> personnaliséRange </span> ) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature ManifestCue </td> 
+   <td> <span class="codeph"> Mode </span> de signature de ManifestCue </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> 
     <code>
@@ -186,7 +186,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> de plage personnalisée </span> ) </td> 
+   <td> S/O (mode de signalisation automatique <span class="codeph"> personnaliséRange </span> ) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Mode </span> de signature de plage personnalisée </td> 
