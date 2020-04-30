@@ -32,9 +32,9 @@ class DRMManager
     }
 ```
 
-Une fois que vous avez appelé cette API, votre code peut alors la lecture du contenu de la manière habituelle. Si vous utilisez Expressplay, vous pouvez transmettre le jeton dans le cadre de l’URL du serveur de licences ou en tant que propriété de requête et le retirer de l’URL du serveur de licences.
+Après avoir appelé cette API, votre code peut alors début la lecture du contenu de la manière habituelle. Si vous utilisez Expressplay, vous pouvez transmettre le jeton dans le cadre de l’URL du serveur de licences ou en tant que propriété de requête et le retirer de l’URL du serveur de licences.
 
-Certains périphériques Android prennent en charge Windows et PlayReady. Sur ces périphériques, le client peut vouloir forcer le PSDK à déchiffrer le contenu à l’aide d’un DRM particulier si le contenu comporte plusieurs en-têtes DRM. Pour ce faire, appelez l’API suivante avant de lire :
+Certains périphériques Android prennent en charge Widevine et PlayReady. Sur ces périphériques, le client peut vouloir forcer PSDK à déchiffrer le contenu à l’aide d’un DRM particulier si le contenu comporte plusieurs en-têtes DRM. Pour ce faire, appelez l’API suivante avant de lire :
 
 ```
 class MediaPlayer 
