@@ -10,9 +10,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
 # A propos des rôles d’inscription de certificat {#about-certificate-enrollment-roles}
 
-Le processus d’inscription au certificat requiert au moins deux employés : un administrateur et un demandeur. Le titulaire du SDK DRM Primetime nomme un administrateur de compte. Il ne peut y avoir qu&#39;un seul administrateur de compte. L’administrateur du compte peut désigner un administrateur secondaire.
+Le processus d’inscription au certificat requiert au moins deux employés : un administrateur et un demandeur. Le titulaire de licence SDK DRM de Primetime nomme un administrateur de compte. Il ne peut y avoir qu&#39;un seul administrateur de compte. L’administrateur de compte peut désigner un administrateur secondaire.
 
-Les administrateurs peuvent désigner jusqu’à cinq demandeurs. Les demandeurs sont des employés de votre  qui demandent et déploient des certificats. Les administrateurs approuvent les demandes de certificat. Chaque compte Adobe ID ne peut avoir qu’un rôle.
+Les administrateurs peuvent désigner jusqu’à cinq demandeurs. Les demandeurs sont des employés de votre société qui demandent et déploient des certificats. Les administrateurs approuvent les demandes de certificat. Chaque compte Adobe ID ne peut avoir qu’un rôle.
 
 Voici les capacités de chaque rôle :
 
@@ -21,18 +21,18 @@ Voici les capacités de chaque rôle :
    * Un administrateur de compte par licence
    * Demandeurs Ajouter
    * Ajouter un administrateur secondaire
-   * Modifier les informations téléphoniques et l&#39;expression de contestation du demandeur 
+   * Modifier les informations téléphoniques et l&#39;expression de contestation de la société du demandeur
    * Supprimer les demandeurs et les administrateurs secondaires
-   * Approbation ou rejet des demandes de certificat
+   * Approuver ou rejeter des demandes de certificat
    * Révoquer les certificats émis
 
 * Administrateur secondaire
 
    * Un administrateur secondaire par licence
    * Demandeurs Ajouter
-   * Modifier les informations téléphoniques et l&#39;expression de contestation du demandeur 
+   * Modifier les informations téléphoniques et l&#39;expression de contestation de la société du demandeur
    * Supprimer les demandeurs
-   * Approbation ou rejet des demandes de certificat
+   * Approuver ou rejeter des demandes de certificat
    * Révoquer les certificats émis
 
 * Demandeur
