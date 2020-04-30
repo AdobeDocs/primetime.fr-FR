@@ -14,8 +14,8 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Vous devrez peut-être savoir si le contenu multimédia est en direct ou sur demande (VOD).
 
-1. Assurez-vous que le lecteur est au moins dans l’ `PREPARED` état.
-1. Déterminez si le `MediaPlayerItem` contenu est en direct ( `true`) ou VOD ( `false`).
+1. Assurez-vous que le lecteur est à au moins l’ `PREPARED` état.
+1. Déterminez si le `MediaPlayerItem` contenu est actif ( `true`) ou VOD ( `false`).
 
    ```java
    boolean isLive();
