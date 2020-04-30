@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 seo-description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
-seo-title: Mise en oeuvre d’un résolveur de contenu personnalisé
-title: Mise en oeuvre d’un résolveur de contenu personnalisé
+seo-title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
+title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,11 +10,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Mise en oeuvre d’un résolveur de contenu personnalisé {#implement-a-custom-content-resolver}
+# Mise en oeuvre d’un outil de résolution de contenu personnalisé {#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité. Le premier qui renvoie true est sélectionné pour résoudre l’opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution de contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’affichage d’une notification lorsque le processus est terminé.
+Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Comme le processus de résolution du contenu est généralement asynchrone, il incombe au résolveur de contenu d’en avertir la fin.
 
 1. Créez une `AdvertisingFactory` instance personnalisée et remplacez `createContentResolver`.
 
@@ -55,7 +55,7 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération à 
 
 1. Transmettez un `AdvertisingMetadata` objet à TVSDK comme suit :
    1. Créez un `AdvertisingMetadata` objet et un `MetadataNode` objet.
-   1. Enregistrez l’ `AdvertisingMetadata` objet dans `MetadataNode`.
+   1. Enregistrez l&#39; `AdvertisingMetadata` objet dans `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +63,7 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération à 
                   advertisingMetadata);
    ```
 
-1. Créez une classe de résolution d’annonces personnalisée qui étend la `ContentResolver` classe.
+1. Créez une classe personnalisée de résolution d’annonces qui étend la `ContentResolver` classe.
    1. Dans le résolveur d’annonces personnalisé, remplacez cette fonction protégée :
 
       ```java
@@ -73,7 +73,7 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération à 
 
       Les métadonnées contiennent votre `AdvertisingMetada`nom. Utilisez-la pour la génération de `TimelineOperation` vecteurs suivante.
 
-   1. Pour chaque opportunité de placement, créez un `Vector<TimelineOperation>`tableau.
+   1. Pour chaque opportunité de placement, créez un `Vector<TimelineOperation>`.
 
       Le vecteur peut être vide, mais pas nul.
 
@@ -105,7 +105,7 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération à 
 
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Cet exemple de résolveur d’annonces personnalisé émet une requête HTTP au serveur d’annonces et reçoit une réponse JSON.
+Cet exemple de résolveur d’annonces personnalisé effectue une requête HTTP au serveur d’annonces et reçoit une réponse JSON.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
