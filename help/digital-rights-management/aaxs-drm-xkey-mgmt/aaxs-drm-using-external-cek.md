@@ -1,8 +1,8 @@
 ---
-description: Utilisez la fonction de CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
-seo-description: Utilisez la fonction de CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
-seo-title: Utilisation du CEK externe pour valider et compresser des licences
-title: Utilisation du CEK externe pour valider et compresser des licences
+description: Utilisez la fonction CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
+seo-description: Utilisez la fonction CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
+seo-title: Utilisation du CEK externe pour diffuser et assembler des licences
+title: Utilisation du CEK externe pour diffuser et assembler des licences
 uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
 translation-type: tm+mt
 source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
@@ -10,20 +10,20 @@ source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
 ---
 
 
-# Utilisation du CEK externe pour valider et compresser des licences{#using-external-cek-to-vend-and-package-licenses}
+# Utilisation du CEK externe pour diffuser et assembler des licences{#using-external-cek-to-vend-and-package-licenses}
 
-Utilisez la fonction de CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
+Utilisez la fonction CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
 
 ## EncryptContentWithExternalKey.java
 
-Il s’agit d’un outil de ligne de commande qui permet de chiffrer une vidéo au format AAXS et de créer des métadonnées *ne contenant pas* le CEK (protégé par un certificat public du serveur de licences AAXS). L’outil incorpore plutôt un identifiant CEK dans les métadonnées de la vidéo.
+Il s&#39;agit d&#39;un outil de ligne de commande qui permet de chiffrer AAXS une vidéo et de créer des métadonnées qui *ne contiendront pas* le CEK (protégé par un certificat public du serveur de licences AAXS). L’outil incorpore plutôt un identifiant CEK dans les métadonnées de la vidéo.
 
-Lors de l’acquisition de la licence, le serveur de licences AAXS observe un indicateur dans les métadonnées indiquant que ce contenu a été protégé à l’aide d’un CEK externe. Le serveur de licences extrait l’ID CEK des métadonnées, puis un référentiel sécurisé/CKMS pour récupérer le CEK approprié.
+Lors de l’acquisition de la licence, le serveur de licences AAXS observe un indicateur dans les métadonnées indiquant que ce contenu a été protégé à l’aide d’un CEK externe. Le serveur de licences va extraire l’identifiant CEK des métadonnées, puis requête un référentiel sécurisé/CKMS pour récupérer le CEK approprié.
 
 ## Processus de création de package
 
 1. Vérifiez que vous utilisez Java 1.6.0_24 ou version ultérieure.
-1. Pour afficher l’utilisation de l’outil : `java -jar AdobePackager_ExternalCEK.jar`
+1. Pour afficher l&#39;utilisation de l&#39;outil : `java -jar AdobePackager_ExternalCEK.jar`
 1. Pour compresser du contenu :
 
    ```
@@ -34,7 +34,7 @@ Lors de l’acquisition de la licence, le serveur de licences AAXS observe un in
 
 >[!NOTE]
 >
->* Le code source Java peut être créé à l’aide de l’ANT inclus. `build-samples.xml`
+>* Le code source Java peut être créé à l&#39;aide de l&#39;ANT inclus `build-samples.xml`
 >* Le SDK Flash Access ( `adobe-flashaccess-sdk.jar`) doit se trouver sur le chemin de classe
 >
 
@@ -42,8 +42,8 @@ Lors de l’acquisition de la licence, le serveur de licences AAXS observe un in
 
 ## Processus du serveur
 
-1. Configurez l’implémentation des références.
-1. Le cas échéant, nettoyez les déploiements d’implémentation de référence précédents :
+1. Configurez la mise en oeuvre des références.
+1. S’il en existe, nettoyez les déploiements d’implémentation de référence précédents :
 
    1. `delete <tomcat>\work\Catalina\*.*`
    1. `delete <tomcat>\conf\Catalina\*.*`
@@ -52,7 +52,7 @@ Lors de l’acquisition de la licence, le serveur de licences AAXS observe un in
 1. Vérifiez qu’il existe un [!DNL CEKDepot.properties] fichier à côté de votre [!DNL flashaccess-refimpl.properties]
 
 1. Lancer une demande de licence à partir d’un lecteur Adobe Primetime
-1. Observez les journaux Impl de référence pour obtenir un résultat similaire à :
+1. Observez les journaux Impl de référence pour obtenir un résultat similaire :
 
    ```
    DEBUG [com.adobe.flashaccess.refimpl.web.RefImplLicenseReqHandler.REQUESTS] 
