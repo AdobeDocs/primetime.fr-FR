@@ -12,7 +12,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 # Chargement sécurisé des publicités via HTTPS{#secure-ad-loading-over-https}
 
-Adobe Primetime peut demander des serveurs d’annonces tiers via https, même si le lecteur est hébergé sur http. Seuls les appels de serveurs publicitaires sont mis à niveau vers https que le client recherche pendant la phase de résolution de publicité Auditude.
+Adobe Primetime peut demander des serveurs d’annonces tiers sur https, même si le lecteur est hébergé sur http. Seuls les appels des serveurs d’annonces sont mis à niveau vers https recherchés par le client pendant la phase de résolution des publicités Auditude.
 
 >[!NOTE]
 >
