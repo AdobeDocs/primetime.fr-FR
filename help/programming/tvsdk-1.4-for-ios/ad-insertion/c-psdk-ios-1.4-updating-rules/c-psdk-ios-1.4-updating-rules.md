@@ -1,9 +1,9 @@
 ---
-description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection créative publicitaire sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
+description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection publicitaire créative sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
 keywords: creative selection rules;AdobeTVSDKConfig;ad creative priorities;transformation rules
-seo-description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection créative publicitaire sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
-seo-title: Mettre à jour les règles de sélection créative
-title: Mettre à jour les règles de sélection créative
+seo-description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection publicitaire créative sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
+seo-title: Mettre à jour les règles de sélection publicitaire
+title: Mettre à jour les règles de sélection publicitaire
 uuid: c33fe1f0-78cb-4dc2-89d2-e9fb1bf0e73f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -13,23 +13,23 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Présentation {#update-ad-creative-selection-rules-overview}
 
-Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection créative publicitaire sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
+Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection publicitaire créative sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
 
-Lorsque votre lecteur vidéo émet une requête vers un serveur d’annonces, la réponse VAST/VMAP comprend généralement plusieurs éléments créatifs ( `MediaFile` éléments), qui fournissent chacun une URL vers une version de -codec différente. Dans certains cas, les éléments créatifs de la réponse VAST/VMAP fournissent chacun un débit différent pour la publicité. Si vous souhaitez définir vos propres règles de priorité et de transformation pour ces créatifs publicitaires, vous pouvez le faire dans le fichier de [!DNL AdobeTVSDKConfig.json] configuration.
+Lorsque votre lecteur vidéo envoie une requête à un serveur d’annonces, la réponse VAST/VMAP comprend généralement plusieurs éléments créatifs publicitaires ( `MediaFile` éléments), chacun d’eux fournissant une URL vers une version de conteneur-codec différente. Dans certains cas, les créatifs publicitaires dans la réponse VAST/VMAP fournissent chacun un débit différent pour la publicité. Si vous souhaitez définir vos propres règles de priorité et de transformation pour ces créatifs publicitaires, vous pouvez le faire dans le fichier de [!DNL AdobeTVSDKConfig.json] configuration.
 
 >[!IMPORTANT]
 >
 >* Ne modifiez pas le nom du fichier de configuration TVSDK. Le nom doit rester [!DNL AdobeTVSDKConfig.json].
->* Vous pouvez placer ce fichier n’importe où accessible à votre lot.
+>* Vous pouvez placer ce fichier n’importe où accessible pour votre lot.
 >
 
 
 
-Vous pouvez spécifier deux types de règles dans [!DNL AdobeTVSDKConfig.json]: Règles de *priorité* et de *normalisation* des règles.
+Vous pouvez spécifier deux types de règles dans [!DNL AdobeTVSDKConfig.json]: *Règles de priorité* et *normalisation* des règles.
 
 **[!UICONTROL Disabling Pre-Roll]**
 
-Pour désactiver le pré-roulement, vous devez modifier les générateurs d’opportunités par défaut afin de ne pas effectuer l’appel pré-roll. Par défaut, TVSDK utilise les générateurs d’opportunités suivants :
+Pour désactiver le pré-roulement, vous devez modifier les générateurs d&#39;opportunités par défaut pour ne pas effectuer l&#39;appel pré-roulement. Par défaut, TVSDK utilise les générateurs d’opportunités suivants :
 
 ```
 /** 
@@ -43,7 +43,7 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
 } 
 ```
 
-Pour désactiver le pré-déploiement sur les flux en direct, cela doit changer pour inclure uniquement SpliceOutOpportunityGenerator :
+Pour désactiver le prédéploiement sur les flux en direct, cette modification doit être modifiée afin d’inclure uniquement SpliceOutOpportunityGenerator :
 
 ```
 /** 
