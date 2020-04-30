@@ -14,16 +14,16 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
 
-Avant de  la lecture, vous devez vous abonner aux balises.
-Pour vous abonner à des balises, affectez à la `subscribedTags` propriété un vecteur contenant les noms de balise personnalisés. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété.
+Avant les débuts de lecture, vous devez vous abonner aux balises .
+Pour vous abonner à des balises, affectez à la `subscribedTags` propriété un vecteur contenant les noms de balise personnalisés. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez à la `adTags` propriété un vecteur contenant les noms de balises publicitaires personnalisées.
 
 Pour être averti des balises personnalisées dans les manifestes HLS :
 
-1. Définissez les noms des balises publicitaires personnalisées globalement en attribuant un vecteur contenant les balises personnalisées à `subscribeTags` dans `MediaPlayerItemConfig`.
+1. Définissez les noms des balises publicitaires personnalisées globalement en affectant un vecteur qui contient les balises personnalisées à `subscribeTags` dans `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Vous devez inclure le `#` préfixe lors de l’utilisation de flux HLS.
+   >Vous devez inclure le `#` préfixe lors de l’utilisation des flux HLS.
 
    Par exemple :
 
@@ -48,14 +48,14 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
    player.replaceCurrentResource(mediaResource);
    ```
 
-1. Pour définir le nom des balises abonnées pour un flux, le cas échéant :
+1. Si nécessaire, pour définir les noms des balises abonnées pour un flux :
    1. Créez une configuration d’élément du lecteur multimédia.
 
       >[!TIP]
       >
       >La méthode la plus simple consiste à créer une configuration d’élément par défaut du lecteur multimédia.
 
-   1. Affectez un vecteur contenant les balises personnalisées à `subscribeTags` in `MediaPlayerItemConfig`.
+   1. Affectez un vecteur contenant les balises personnalisées à `subscribeTags` entrer `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -75,7 +75,7 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
    mediaPlayerItemConfig.adTags = adTags;
    ```
 
-1. Pour que les modifications du flux prennent effet, utilisez la configuration d’élément du lecteur multimédia lors du chargement du flux média.
+1. Pour que les modifications du flux prennent effet, utilisez la configuration d’élément du lecteur multimédia lors du chargement du flux.
 
    ```
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
