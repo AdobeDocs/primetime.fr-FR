@@ -1,8 +1,8 @@
 ---
-description: L’élément clé côté client de la solution DRM Primetime est DRM Manager. L’exemple d’application inclus dans le SDK Android inclut également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
-seo-description: L’élément clé côté client de la solution DRM Primetime est DRM Manager. L’exemple d’application inclus dans le SDK Android inclut également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
-seo-title: Présentation de l’interface DRM Primetime
-title: Présentation de l’interface DRM Primetime
+description: L’élément clé côté client de la solution DRM Primetime est le Gestionnaire de DRM. L’exemple d’application inclus dans le SDK Android comprend également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
+seo-description: L’élément clé côté client de la solution DRM Primetime est le Gestionnaire de DRM. L’exemple d’application inclus dans le SDK Android comprend également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
+seo-title: Présentation de l’interface DRM de Primetime
+title: Présentation de l’interface DRM de Primetime
 uuid: d77a98c8-c1f5-4fe3-8d0b-3d21e288f228
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
@@ -10,9 +10,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# Présentation de l’interface DRM Primetime {#primetime-drm-interface-overview}
+# Présentation de l’interface DRM de Primetime {#primetime-drm-interface-overview}
 
-L’élément clé côté client de la solution DRM Primetime est DRM Manager. L’exemple d’application inclus dans le SDK Android inclut également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
+L’élément clé côté client de la solution DRM Primetime est le Gestionnaire de DRM. L’exemple d’application inclus dans le SDK Android comprend également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
@@ -30,10 +30,10 @@ Voici les principaux éléments d’API pour travailler avec DRM :
 
    >[!TIP]
    >
-   >Cette API ne renvoie un `DRMManager` objet valide qu’après le `MediaPlayerEvent.DRM_METADATA` déclenchement. Si vous appelez `getDRMManager()` avant que ce ne se déclenche, il peut renvoyer la valeur NULL.
+   >Cette API retournera un `DRMManager` objet valide uniquement après le `MediaPlayerEvent.DRM_METADATA` déclenchement. Si vous appelez `getDRMManager()` avant le déclenchement de ce événement, il peut renvoyer la valeur NULL.
 
-* Classe `DRMHelper` d’assistance, utile lors de l’implémentation des  DRM.
-* Méthode `DRMHelper` de chargeur de métadonnées, qui charge les métadonnées DRM lorsqu’elles se trouvent dans une URL distincte du média.
+* Classe `DRMHelper` d’assistance, utile lors de l’implémentation de workflows DRM.
+* Méthode de chargement `DRMHelper` des métadonnées, qui charge les métadonnées DRM lorsqu’elles sont situées dans une URL distincte du média.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +41,7 @@ Voici les principaux éléments d’API pour travailler avec DRM :
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Méthode `DRMHelper` permettant de vérifier les métadonnées DRM et de déterminer si l’authentification est requise.
+* Méthode `DRMHelper` permettant de vérifier les métadonnées DRM et de déterminer si une authentification est requise.
 
    ```java
    /** 
@@ -80,8 +80,8 @@ Voici les principaux éléments d’API pour travailler avec DRM :
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* qui avise votre application de divers et de l’état et de l’ de DRM.
+* Événements qui informent votre application de diverses activités et de l’état de DRM.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Pour plus d’informations sur DRM, voir la documentation [](https://helpx.adobe.com/primetime/user-guide.html)DRM.
+Pour plus d’informations sur DRM, consultez la documentation [](https://helpx.adobe.com/primetime/user-guide.html)DRM.
