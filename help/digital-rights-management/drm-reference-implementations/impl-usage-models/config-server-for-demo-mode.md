@@ -12,18 +12,18 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Configuration du mode de démonstration du modèle d’utilisation{#configure-usage-model-demo-mode}
 
-Avant que le serveur d’implémentation des références puisse émettre des licences pour la démonstration du modèle d’utilisation, vous devez configurer le serveur pour spécifier le mode de génération des licences pour chacun des quatre modèles d’utilisation. Cela signifie que vous devez spécifier une stratégie DRM pour chaque modèle d’utilisation. L’implémentation de référence comprend les exemples de stratégies DRM suivants dans le [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] répertoire :
+Avant que le serveur d’implémentation de référence puisse émettre des licences pour la démonstration du modèle d’utilisation, vous devez configurer le serveur pour spécifier comment les licences sont générées pour chacun des quatre modèles d’utilisation. Cela signifie que vous devez spécifier une stratégie DRM pour chaque modèle d&#39;utilisation. L’implémentation de référence comprend les exemples de stratégies DRM suivants dans le [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] répertoire :
 
-* `dto-policy.pol` - (Téléchargement/Propre)
+* `dto-policy.pol` - (Téléchargement par site)
 * `vod-policy.pol` - (Location/Vidéo à la demande)
-* `sub-policy.pol` - ( )
+* `sub-policy.pol` - (Abonnement)
 * `ad-policy.pol` - (Publicité financée)
 
 >[!NOTE]
 >
 >Vous pouvez remplacer ces exemples de stratégies par vos propres stratégies DRM.
 
-1. Définissez ces propriétés dans [!DNL flashaccess-refimpl.properties] pour spécifier la stratégie DRM que vous prévoyez d’appliquer à chaque modèle d’utilisation :
+1. Définissez ces propriétés dans [!DNL flashaccess-refimpl.properties] pour spécifier la stratégie DRM que vous prévoyez d&#39;appliquer à chaque modèle d&#39;utilisation :
 
    ```
    # DRM Policy file name for Download To Own usage 
@@ -36,4 +36,4 @@ Avant que le serveur d’implémentation des références puisse émettre des li
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. Copiez les exemples de fichiers de stratégie dans le répertoire que vous spécifiez dans la `config.resourcesDirectory` propriété [!DNL flashaccess-refimpl.properties].
+1. Copiez les exemples de fichiers de stratégie dans le répertoire que vous spécifiez dans la `config.resourcesDirectory` propriété de [!DNL flashaccess-refimpl.properties].
