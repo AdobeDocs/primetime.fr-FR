@@ -5,7 +5,7 @@ seo-title: Configuration de votre système de notification
 title: Configuration de votre système de notification
 uuid: caa6a306-dea9-45ee-b0b3-569b5f2527a1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
@@ -16,12 +16,12 @@ Vous pouvez écouter les notifications et ajouter vos propres notifications à l
 
 Le coeur du système de notification de Primetime Player est la `Notification` classe, qui représente une notification autonome.
 
-La `NotificationHistory` classe fournit un mécanisme permettant d’accumuler des notifications. Il stocke un journal des objets Notification (NotificationHistoryItem) qui représente une collection de notifications.
+La `NotificationHistory` classe fournit un mécanisme permettant d&#39;accumuler des notifications. Il stocke un journal des objets Notification (NotificationHistoryItem) qui représente une collection de notifications.
 
 Pour recevoir des notifications :
 
 * Écoute des notifications
-* Ajouter de notifications à l’historique des notifications
+* Ajouter notifications à l’historique des notifications
 
 1. Prêtez attention aux changements d’état.
 1. Implémentez le `MediaPlayer.PlaybackEventListener.onStateChanged` rappel.
