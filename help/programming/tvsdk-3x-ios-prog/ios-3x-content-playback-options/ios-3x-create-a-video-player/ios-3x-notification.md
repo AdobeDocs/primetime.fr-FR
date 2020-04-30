@@ -1,6 +1,6 @@
 ---
-description: Le lecteur peut écouter toute une série de  qui indiquent l’état du lecteur.
-seo-description: Le lecteur peut écouter toute une série de  qui indiquent l’état du lecteur.
+description: Le lecteur peut écouter une série de événements qui indiquent l’état du lecteur.
+seo-description: Le lecteur peut écouter une série de événements qui indiquent l’état du lecteur.
 seo-title: Configuration des notifications
 title: Configuration des notifications
 uuid: b178b2eb-da40-456b-997a-46ae18d635fa
@@ -12,9 +12,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 # Configuration des notifications {#set-up-notifications}
 
-Le lecteur peut écouter toute une série de  qui indiquent l’état du lecteur.
+Le lecteur peut écouter une série de événements qui indiquent l’état du lecteur.
 
-En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur client, `self.player` dans l’exemple suivant représente l’ `PTMediaPlayer` instance. L’exemple suivant implémente la `addObservers` méthode présentée dans les instructions de configuration de PTMediaPlayer et inclut la plupart des notifications :
+En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur client, `self.player` l’exemple suivant représente l’ `PTMediaPlayer` instance. L’exemple suivant implémente la `addObservers` méthode présentée dans les instructions de configuration de PTMediaPlayer et inclut la plupart des notifications :
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerStatusChange:)  
@@ -45,7 +45,7 @@ En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur 
 
 ## Notifications iOS {#section_65D9B2DBF5574313BD3218AB02242BBB}
 
-`ThePTMediaPlayerNotifications` classe  les notifications que TVSDK envoie à votre lecteur.
+`ThePTMediaPlayerNotifications` liste les notifications que TVSDK envoie à votre lecteur.
 
 <table frame="all" colsep="1" rowsep="1" id="table_ios_notifications"> 
  <tbody> 
@@ -99,7 +99,7 @@ En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerItemChangedNotification </span> </td> 
-   <td colname="2"> Un autre <span class="codeph"> élément PTMediaPlayerItem </span> du <span class="codeph"> lecteur PTMediaPlayer </span> a été défini. </td> 
+   <td colname="2"> Un autre <span class="codeph"> élément PTMediaPlayerItem </span> de <span class="codeph"> PTMediaPlayer </span> a été défini. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerItemDRMMetadataChanged </span> </td> 
@@ -107,11 +107,11 @@ En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerMediaSelectionOptionsAvailableNotification </span> </td> 
-   <td colname="2"> Il existe de nouveaux sous-titres et d'autres pistes audio ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
+   <td colname="2"> Il y a de nouveaux sous-titres et d'autres pistes audio ( <span class="codeph"> PTMediaSelectionOption </span>). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerNewNotificationEntryAddedNotification </span> </td> 
-   <td colname="2"> Une nouvelle <span class="codeph"> notification PTNotification </span> a été ajoutée au <span class="codeph"> PTNotificationHistoryItem </span> de l’élément actuel <span class="codeph"> PTMediaPlayerItem </span>, c’est-à-dire lorsqu’un de notification est ajouté à l’historique des notifications. </td> 
+   <td colname="2"> Une nouvelle <span class="codeph"> notification PTNotification </span> a été ajoutée à l'élément <span class="codeph"> PTNotificationHistoryItem </span> du <span class="codeph"> PTMediaPlayerItem actuel </span>, c'est-à-dire lorsqu'un événement de notification est ajouté à l'historique des notifications. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerPlayCompletedNotification </span> </td> 
@@ -131,7 +131,7 @@ En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerPlayStartedNotification </span> </td> 
-   <td colname="2"> Lecture en cours. </td> 
+   <td colname="2"> La lecture a commencé. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerStatusNotification </span> </td> 
@@ -154,22 +154,22 @@ En supposant qu’ `PTMediaPlayer` il s’agisse d’une propriété du lecteur 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTMediaPlayerTimelineChangedNotification </span> </td> 
-   <td colname="2"> La chronologie du lecteur actuel a changé. </td> 
+   <td colname="2"> La chronologie actuelle du lecteur a changé. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" colsep="1" rowsep="1"> <span class="codeph"> PTTimedMetadataChangedNotification </span> </td> 
-   <td colname="2"> Le SDK TVSDK a rencontré la première occurrence d’une balise abonnée. </td> 
+   <td colname="2"> TVSDK a rencontré la première occurrence d’une balise abonnée. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <span class="codeph"> PTTimedMetadataChangedInBackgroundNotification </span> </td> 
-   <td colname="2"> <p>Une balise abonnée est identifiée dans le manifeste d’arrière-plan et une nouvelle <span class="codeph"> instance PTTimedMetadata </span> est préparée à partir de ce manifeste. </p> </td> 
+   <td colname="2"> <p>Une balise abonnée est identifiée dans le manifeste d’arrière-plan et une nouvelle <span class="codeph"> instance de métadonnées </span> imedMetadata est préparée à partir de celui-ci. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Exemples de gestionnaires pour les notifications {#section_D729C2403A234DD09596829D26882ADC}
 
-Les fragments de code suivants illustrent certaines des manières dont vous pouvez utiliser les notifications.
+Les extraits de code suivants illustrent certaines des façons d’utiliser les notifications.
 
 Récupérez l’ `PTAdBreak` instance à l’aide `PTMediaPlayerAdBreakKey`:
 
@@ -182,7 +182,7 @@ Récupérez l’ `PTAdBreak` instance à l’aide `PTMediaPlayerAdBreakKey`:
 } 
 ```
 
-Définissez `subtitlesOptions` et `audioOptions`:
+Définir `subtitlesOptions` et `audioOptions`:
 
 ```
  - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification \*) notification { 
