@@ -1,8 +1,8 @@
 ---
 description: Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
 seo-description: Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
-seo-title: Classes de journal
-title: Classes de journal
+seo-title: Classes de chronologie
+title: Classes de chronologie
 uuid: effb7308-f581-4bc2-808d-7f7ccb121a3a
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
@@ -10,7 +10,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 ---
 
 
-# Classes de journal {#timeline-classes}
+# Classes de chronologie {#timeline-classes}
 
 Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
 
@@ -24,7 +24,7 @@ Ces classes fournissent des informations sur la chronologie du média particulie
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlacementOpportunity.html" format="html" scope="external"> PTPlacementOpportunity</a> </td> 
-   <td colname="2"> Une classe d’opportunité représente un point d’intérêt sur la chronologie. </td> 
+   <td colname="2"> Une classe d'opportunité représente un point d'intérêt sur la chronologie. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTTimeline.html" format="html" scope="external"> PTTimeline</a> </td> 
