@@ -22,7 +22,7 @@ Pour générer une licence, utilisez la syntaxe suivante :
 </i class="+ topic>
 ```
 
-`metadata` est un fichier .metadata contenant les métadonnées DRM d’Adobe Access. Ce fichier peut être obtenu à partir d’un contenu protégé à l’aide de l’ `-d -m` option de Media Packager.
+`metadata` est un fichier .metadata contenant les métadonnées DRM d&#39;Adobe Access. Ce fichier peut être obtenu à partir d’un contenu protégé à l’aide de l’ `-d -m` option Media Packager.
 
 Pour afficher une licence générée précédemment, utilisez la syntaxe suivante :
 
@@ -47,35 +47,35 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "> Spécifiez l’emplacement du fichier de configuration. Si cette option n’est pas utilisée, le générateur de licences recherche flashaccesstools.properties dans le répertoire de travail. Les options spécifiées sur la ligne de commande sont prioritaires sur celles présentes dans le fichier de configuration. </td> 
+   <td colname="2" class="- topic/entry "> Spécifiez l’emplacement du fichier de configuration. Si cette option n’est pas utilisée, le générateur de licences recherche flashaccesstools.properties dans le répertoire de travail. Les options spécifiées sur la ligne de commande sont prioritaires sur celles du fichier de configuration. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> fichier de licence</span></i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Affiche des informations sur une licence déjà générée. </td> 
+   <td colname="2" class="- topic/entry "> Affichez des informations sur une licence déjà générée. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-leaf-filename</span> </td> 
    <td colname="2" class="- topic/entry "> Générez une licence feuille et écrivez la sortie dans un fichier spécifié. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m metadata-filename</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-m nom_fichier_métadonnées</span> </td> 
    <td colname="2" class="- topic/entry "> Spécifiez les métadonnées de contenu pour lesquelles générer une licence. (Obligatoire pour générer une licence) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que <span class="codeph"> -o</span> n’est pas défini, une erreur est renvoyée. </td> 
+   <td colname="2" class="- topic/entry ">Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que <span class="codeph"> -o</span> n'est pas défini, une erreur est renvoyée. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
-   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, écrasez-le sans invite. </td> 
+   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, remplacez-le sans invite. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-policy-num</span> </td> 
-   <td colname="2" class="- topic/entry "> Si les métadonnées contiennent plusieurs stratégies, indiquez le nombre de stratégies à utiliser (à partir de 1) pour générer la licence. Si elle n’est pas spécifiée, la première stratégie est utilisée. </td> 
+   <td colname="2" class="- topic/entry "> Si les métadonnées contiennent plusieurs stratégies, indiquez le numéro de la stratégie à utiliser (à partir de 1) pour générer la licence. Si elle n’est pas spécifiée, la première stratégie est utilisée. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Générez une licence pour le spécifié. Un certificat de périphérique ou de domaine peut être utilisé. Plusieurs <span class="+ topic/ph pr-d/codeph codeph"> options -r </span>peuvent être spécifiées pour créer une licence pour plusieurs. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r destinataire-cert</span> </td> 
+   <td colname="2" class="- topic/entry ">Générez une licence pour le destinataire spécifié. Un certificat de périphérique ou de domaine peut être utilisé. Plusieurs <span class="+ topic/ph pr-d/codeph codeph"> options </span>-r peuvent être spécifiées pour créer une licence pour plusieurs destinataires. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 
