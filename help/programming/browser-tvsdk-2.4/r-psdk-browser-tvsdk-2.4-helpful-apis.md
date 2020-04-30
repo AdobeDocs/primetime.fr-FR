@@ -20,7 +20,7 @@ Certaines API peuvent vous aider à utiliser Adobe Flash Player.
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Si cette option est prise en charge, vous pouvez utiliser le `forceFlash` paramètre pour remplacer la séquence de détermination de la technologie de lecture et forcer l’implémentation à utiliser Flash Player.
+Si elle est prise en charge, vous pouvez utiliser le `forceFlash` paramètre pour remplacer la séquence de détermination de la technologie de lecture et forcer l’implémentation à utiliser Flash Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
