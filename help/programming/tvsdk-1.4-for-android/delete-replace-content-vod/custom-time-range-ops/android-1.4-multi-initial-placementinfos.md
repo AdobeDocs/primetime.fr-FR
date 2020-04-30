@@ -1,8 +1,8 @@
 ---
 description: TVSDK peut configurer plusieurs informations de placement initiales.
 seo-description: TVSDK peut configurer plusieurs informations de placement initiales.
-seo-title: Plusieurs informations de positionnement initial
-title: Plusieurs informations de positionnement initial
+seo-title: Informations de placement initiales multiples
+title: Informations de placement initiales multiples
 uuid: e0f549d7-3092-45e9-bd67-ee41d01075b5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,7 +10,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Plusieurs informations de positionnement initial{#multiple-initial-placementinformations}
+# Informations de placement initiales multiples{#multiple-initial-placementinformations}
 
 TVSDK peut configurer plusieurs informations de placement initiales.
 
