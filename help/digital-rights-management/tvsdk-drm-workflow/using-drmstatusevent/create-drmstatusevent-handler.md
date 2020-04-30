@@ -10,9 +10,9 @@ source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
 
 # Création d’un gestionnaire DRMStatusEvent{#create-a-drmstatusevent-handler}
 
-L’exemple suivant crée un gestionnaire de  qui génère les informations d’état du contenu DRM pour l’objet Primetime à l’origine de l’ de.
+L’exemple suivant crée un gestionnaire de événements qui génère les informations d’état du contenu DRM pour l’objet Primetime à l’origine du événement.
 
-Ajouter un gestionnaire de  de à un objet Primetime qui pointe vers un contenu protégé :
+Ajouter un gestionnaire de événements à un objet Primetime qui pointe vers un contenu protégé :
 
 ```
 function drmStatusEventHandler(event:DRMStatusEvent):void { trace(event); } 
