@@ -3,7 +3,7 @@ seo-title: Exemple d’une ressource VOD personnalisée
 title: Exemple d’une ressource VOD personnalisée
 uuid: 23ff3778-09d4-43ef-89c3-67f8fc56f5da
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: ''
 
 ---
 
@@ -40,6 +40,6 @@ seg5.ts
 
 Votre application peut configurer les scénarios suivants :
 
-* Une notification lorsque `#EXT-X-ASSET` des balises, ou tout autre jeu de noms de balises personnalisées auquel vous vous êtes abonné, existent dans le fichier.
+* Une notification indiquant si `#EXT-X-ASSET` des balises, ou tout autre ensemble de noms de balises personnalisés auxquels vous vous êtes abonné, existent dans le fichier.
 * Insérez des publicités lorsqu’une `#EXT-X-AD` balise, ou tout autre nom de balise personnalisé, se trouve dans le flux.
 
