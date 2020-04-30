@@ -1,8 +1,8 @@
 ---
-description: La liaison audio tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-description: La liaison audio tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-title: Accès à d’autres pistes audio
-title: Accès à d’autres pistes audio
+description: Le fichier audio à liaison tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
+seo-description: Le fichier audio à liaison tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
+seo-title: Accéder à d'autres pistes audio
+title: Accéder à d'autres pistes audio
 uuid: 2915a74f-5ec3-457e-890d-5c79be39f37a
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
@@ -10,14 +10,14 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 ---
 
 
-# Accès à d’autres pistes audio {#access-alternate-audio-tracks}
+# Accéder à d&#39;autres pistes audio {#access-alternate-audio-tracks}
 
-La liaison audio tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
+Le fichier audio à liaison tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
 
 1. Attendez que MediaPlayer soit au moins dans l’ `PTMediaPlayerStatusReady` état.
-1. Écoute cette  :
+1. Écoutez ce événement :
 
-   notification `PTMediaPlayerItemMediaSelectionOptionsAvailable`: Le  initial des pistes audio est disponible.
+   notification `PTMediaPlayerItemMediaSelectionOptionsAvailable`: La liste initiale des pistes audio est disponible.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -26,7 +26,7 @@ La liaison audio tardive utilise PTMediaPlayer pour lire une vidéo spécifiée 
         object:self.player];
    ```
 
-1. Obtenez les pistes audio disponibles à partir de l’ `PTMediaPlayerItem` instance.
+1. Récupère les pistes audio disponibles à partir de l&#39; `PTMediaPlayerItem` instance.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
