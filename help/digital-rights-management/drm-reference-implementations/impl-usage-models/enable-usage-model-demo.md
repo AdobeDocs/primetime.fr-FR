@@ -10,7 +10,7 @@ source-git-commit: 6e949c2f88deef88f0d0ac95b18c006da1c89d2f
 
 # Activer la démonstration du modèle d’utilisation{#enable-the-usage-model-demo}
 
-1. Spécifiez la propriété personnalisée `RI_UsageModelDemo=true` au moment de l’assemblage.
+1. Spécifiez la propriété personnalisée `RI_UsageModelDemo=true` au moment de la création du pack.
 
    Si vous assemblez du contenu à l’aide de l’outil de ligne de commande Media Packager, saisissez :
 
@@ -20,5 +20,5 @@ source-git-commit: 6e949c2f88deef88f0d0ac95b18c006da1c89d2f
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->Si vous n’activez pas le mode de démonstration facultatif au moment de la création du pack, le serveur de licences émet une licence basée sur la première stratégie DRM valide qu’il traite.
+>Si vous n’activez pas le mode de démonstration facultatif au moment de la création du pack, le serveur de licences délivre une licence basée sur la première stratégie DRM valide qu’il traite.
 
