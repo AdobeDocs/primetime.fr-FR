@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez insérer des publicités dans votre contenu VOD et le contenu dynamique/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
-seo-description: Vous pouvez insérer des publicités dans votre contenu VOD et le contenu dynamique/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
-seo-title: Conditions requises pour la publicité
-title: Conditions requises pour la publicité
+description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
+seo-description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
+seo-title: Exigences en matière de publicité
+title: Exigences en matière de publicité
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
@@ -10,7 +10,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 ---
 
 
-# Délai d’expiration de la publicité {#ad-timeout}
+# Expiration de la publicité {#ad-timeout}
 
 ## Exigences de la fondation AV {#av-foundation-requirements}
 
@@ -18,7 +18,7 @@ Dans le cas d’un contenu VOD, l’assemblage de la liste de lecture, qui impli
 
 En cas de contenu en direct, chaque fois que la liste de lecture est mise à jour, l’assemblage de la liste de lecture doit être terminé dans les 20 secondes.
 
-**API relatives au délai d’expiration AdResolution**
+**API pertinentes pour le délai d’expiration AdResolution**
 
 ```
 /** @name Properties */
@@ -37,7 +37,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-Suivez ensuite la section : Métadonnées [Primetime et serveur](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Suivez ensuite la section : [Métadonnées](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)du serveur et de Primetime.
 
 **API relatives au délai d’expiration d’AdManifest**
 
@@ -59,4 +59,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-Suivez ensuite la section : Métadonnées [Primetime et serveur](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Suivez ensuite la section : [Métadonnées](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)du serveur et de Primetime.
