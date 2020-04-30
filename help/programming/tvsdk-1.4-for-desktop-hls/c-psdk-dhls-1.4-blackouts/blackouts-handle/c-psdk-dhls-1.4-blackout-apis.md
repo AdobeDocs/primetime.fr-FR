@@ -1,6 +1,6 @@
 ---
-description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de coupures d’Internet, notamment des méthodes, des métadonnées et des notifications.
-seo-description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de coupures d’Internet, notamment des méthodes, des métadonnées et des notifications.
+description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
+seo-description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
 seo-title: Eléments de l’API Blackout
 title: Eléments de l’API Blackout
 uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
@@ -12,25 +12,25 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 # Eléments de l’API Blackout{#blackout-api-elements}
 
-TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de coupures d’Internet, notamment des méthodes, des métadonnées et des notifications.
+TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
 
-Vous pouvez utiliser les éléments suivants lors de l’implémentation d’une solution de blackout dans votre lecteur.
+Vous pouvez utiliser les éléments suivants lors de la mise en oeuvre d’une solution de blackout dans votre lecteur.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Enregistre la ressource actuellement chargée comme ressource en arrière-plan. Si `replaceCurrentResource` est appelé après cette méthode, TVSDK continue à télécharger le manifeste de l’élément d’arrière-plan jusqu’à ce que vous appeliez `unregisterCurrentBackgroundItem`.
+   * `registerCurrentItemAsBackgroundItem` Enregistre la ressource actuellement chargée en tant que ressource en arrière-plan. Si `replaceCurrentResource` est appelé après cette méthode, TVSDK continue à télécharger le manifeste de l’élément d’arrière-plan jusqu’à ce que vous appeliez `unregisterCurrentBackgroundItem`.
 
-   * `unregisterCurrentBackgroundItem`  Efface la ressource d’arrière-plan actuellement définie et arrête de récupérer et d’analyser le manifeste d’arrière-plan.
+   * `unregisterCurrentBackgroundItem`  Efface la ressource d&#39;arrière-plan actuellement définie et arrête la récupération et l&#39;analyse du manifeste d&#39;arrière-plan.
 
-* **Métadonnées** de coupure de courant Type de métadonnées spécifique aux coupures de courant.
+* **BlackoutMetadata** Type de métadonnées spécifique aux pannes d’électricité.
 
-   Cela vous permet de définir des plages impossibles à rechercher (un attribut supplémentaire appelé `TimeRange` `nonseekableRange`) sur TVSDK. TVSDK vérifie ces plages (si la position de recherche souhaitée est comprise dans une `nonseekableRange`) chaque fois que l’utilisateur effectue une recherche. S’il est défini et que l’utilisateur effectue une recherche dans une plage non recherchée, TVSDK force le lecteur à l’heure de fin de la `seekableRange`.
+   Cela vous permet de définir des plages impossibles à rechercher (un attribut supplémentaire appelé `TimeRange` `nonseekableRange`) sur TVSDK. TVSDK vérifie ces plages (si la position de recherche souhaitée est comprise dans une `nonseekableRange`) chaque fois que l’utilisateur effectue une recherche. Si elle est définie et que l’utilisateur effectue une recherche dans une plage non recherchée, TVSDK force le lecteur à l’heure de fin de la `seekableRange`visionneuse.
 
-* **ICI SUIVANT** **DefaultMetadataKeys** Activez ou désactivez la fonction preroll sur un flux en direct en définissant `ENABLE_LIVE_PREROLL` sur true ou false. Si la valeur est false, TVSDK n’effectue pas d’appel explicite du serveur d’annonces pour les publicités preroll avant la lecture du contenu et ne lit donc pas la lecture preroll. Cela n&#39;a pas d&#39;impact sur le milieu des parcours. La valeur par défaut est true.
+* **DÉBUT ICI NEXT** **DefaultMetadataKeys** Activez ou désactivez la pré-lecture sur un flux en direct en définissant `ENABLE_LIVE_PREROLL` la valeur true ou false. Si elle est définie sur false, TVSDK ne lance pas d’appel de serveur publicitaire explicite pour les publicités preroll avant la lecture du contenu et ne lit donc pas la lecture preroll. Cela n&#39;a aucun impact sur les moyennes places. La valeur par défaut est true.
 
 * **TimedMetadataEvent**
 
-   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` Sous-type de  - Distribué lorsque TVSDK détecte une balise abonnée dans le manifeste d’arrière-plan.
+   * `TIMED_METADATA_IN_BACKGROUND_AVAILABLE` Sous-type de événement : distribué lorsque TVSDK détecte une balise abonnée dans le manifeste d’arrière-plan.
 
 * **Notifications**
 
