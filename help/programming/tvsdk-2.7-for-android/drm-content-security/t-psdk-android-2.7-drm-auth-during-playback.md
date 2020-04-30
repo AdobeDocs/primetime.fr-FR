@@ -18,9 +18,9 @@ Avec la rotation des licences, un fichier est chiffré avec plusieurs licences D
 
 >[!TIP]
 >
->Avant de commencer la lecture, déterminez si vous avez affaire à une licence liée au domaine et si l’authentification de domaine est requise. Si oui, terminez l’authentification de domaine et joignez-le.
+>Avant de commencer la lecture, déterminez si vous avez affaire à une licence liée au domaine et si l’authentification de domaine est requise. Si oui, effectuez l’authentification de domaine et joignez le domaine.
 
-1. Lorsque de nouvelles métadonnées DRM sont découvertes dans un fichier, un  est distribué sur la couche de l’application.
+1. Lorsque de nouvelles métadonnées DRM sont découvertes dans une ressource, un événement est distribué dans la couche de l’application.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -35,12 +35,12 @@ Avec la rotation des licences, un fichier est chiffré avec plusieurs licences D
    };
    ```
 
-1. Utilisez le `DRMMetadata` pour vérifier si l’authentification est nécessaire.
+1. Utilisez le `DRMMetadata` pour vérifier si une authentification est nécessaire.
 
    * Si l’authentification n’est pas requise, vous n’avez rien à faire et la lecture se poursuit sans interruption.
-   * Si l’authentification est requise, effectuez l’authentification DRM.
+   * Si l&#39;authentification est requise, effectuez l&#39;authentification DRM.
 
-      Cette opération étant asynchrone et gérée dans un autre thread, elle n’a aucun impact sur l’interface utilisateur ni sur la lecture vidéo.
+      Cette opération étant asynchrone et gérée dans un thread différent, elle n’a aucun impact sur l’interface utilisateur ni sur la lecture vidéo.
 
 1. Si l’authentification échoue, l’utilisateur ne peut pas continuer à regarder la vidéo et la lecture s’arrête.
 
