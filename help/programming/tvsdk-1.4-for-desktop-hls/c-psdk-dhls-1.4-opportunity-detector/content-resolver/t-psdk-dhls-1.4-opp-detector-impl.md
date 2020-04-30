@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez mettre en oeuvre vos propres détecteurs d’opportunités.
-seo-description: Vous pouvez mettre en oeuvre vos propres détecteurs d’opportunités.
-seo-title: Mise en oeuvre d’un détecteur d’opportunités personnalisé
-title: Mise en oeuvre d’un détecteur d’opportunités personnalisé
+description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités.
+seo-description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités.
+seo-title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
+title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,20 +10,20 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Mise en oeuvre d’un détecteur d’opportunités personnalisé{#implement-a-custom-opportunity-detector}
+# Mise en oeuvre d&#39;un détecteur d&#39;opportunités personnalisé{#implement-a-custom-opportunity-detector}
 
-Vous pouvez mettre en oeuvre vos propres détecteurs d’opportunités.
+Vous pouvez mettre en oeuvre vos propres détecteurs d&#39;opportunités.
 
-* Si votre générateur d’opportunités est basé sur `TimedMetadata` des objets associés au flux de média actuel, il doit étendre le `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
+* Si votre générateur d’opportunités est basé sur `TimedMetadata` des objets associés au flux de médias actuel, il doit étendre le `SpliceOutOpportunityGenerator` ou `TimedMetadataOpportunityGenerator`.
 
-* Si votre générateur d’opportunités est basé sur des données hors bande fournies par un service externe (un CIS, par exemple), il doit étendre le `OpportunityGenerator`.
+* Si votre générateur d&#39;opportunités est basé sur des données hors bande fournies par un service externe (tel qu&#39;un SID), il doit étendre le `OpportunityGenerator`.
 
 1. Créez le générateur d’opportunités personnalisé.
 
        Si votre générateur d&#39;opportunités personnalisé est basé sur les objets &quot;TimedMetadata&quot;, étendez le paramètre &quot;TimedMetadataOpportunityGenerator&quot; et remplacez les méthodes suivantes :
    
-   * `doConfigure` - Cette méthode est appelée une fois que l’élément du lecteur multimédia a été créé et permet au générateur d’opportunités de créer un jeu initial d’opportunités, le cas échéant.
-   * `doProcess` - Cette méthode est appelée chaque fois qu’une nouvelle méthode `TimedMetadata` est détectée (par exemple, pour les flux en direct/linéaires chaque fois que la liste de lecture/le manifeste est actualisé).
+   * `doConfigure` - Cette méthode est appelée une fois que l&#39;élément du lecteur multimédia a été créé et permet au générateur d&#39;opportunités de créer un ensemble initial d&#39;opportunités si nécessaire.
+   * `doProcess` - Cette méthode est appelée chaque fois que de nouveaux éléments `TimedMetadata` sont détectés (par exemple, pour les flux en direct/linéaires chaque fois que la liste de lecture/le manifeste est actualisé).
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
