@@ -13,5 +13,5 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 Il existe deux façons d’utiliser les gestionnaires de fonctionnalités pour activer, désactiver et configurer les fonctionnalités :
 
 * Vous pouvez créer et configurer un gestionnaire de fonctionnalités en transmettant les informations de configuration d’un fichier de configuration au lecteur de médias.
-* Vous pouvez activer et désactiver des fonctionnalités sans passer par le code à l’aide de la fabrique de gestionnaires.
+* Vous pouvez activer et désactiver des fonctionnalités sans passer par le code en utilisant la fabrique de gestion.
 
