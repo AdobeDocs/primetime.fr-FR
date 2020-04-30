@@ -12,18 +12,18 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Utilisation de DRMContentData pour précharger des licences{#using-drmcontentdata-to-pre-load-licenses}
 
-Les étapes suivantes décrivent le processus de  la licence d’un fichier multimédia protégé utilisant un `DRMContentData` objet.
+Les étapes suivantes décrivent le processus de pré-chargement de la licence d’un fichier multimédia protégé à l’aide d’un `DRMContentData` objet.
 
 1. Obtenez les métadonnées DRM binaires pour le contenu assemblé.
 
-   Si vous utilisez Primetime DRM Java Reference Implementations Packager, ce fichier de métadonnées est généré automatiquement avec une [!DNL .metadata] extension. Vous pouvez, par exemple, télécharger ces métadonnées à l’aide de la `URLLoader` classe. Si vous utilisez du contenu HLS ou HDS, les métadonnées sont référencées dans le fichier manifeste de contenu ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluses *dans* le fichier manifeste sous la forme d’une chaîne codée en Base64 (qui doit être décodée en Base64 avant la consommation).
+   Si vous utilisez Primetime DRM Java Reference Implementations Packager, ce fichier de métadonnées est généré automatiquement avec une [!DNL .metadata] extension. Vous pouvez, par exemple, télécharger ces métadonnées à l’aide de la `URLLoader` classe. Si vous utilisez du contenu HLS ou HDS, les métadonnées sont référencées dans le fichier manifeste de contenu ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluses *dans* le fichier manifeste sous la forme d’une chaîne codée en Base64 (qui doit être décodée en Base64 avant consommation).
 1. Créez un `DRMContentData` objet en transmettant les métadonnées à la fonction constructeur :
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. Les autres étapes sont identiques au flux de travail décrit dans la section Détails *du processus de protection du* contenu.
+1. Le reste des étapes est identique au processus décrit dans la section Détails *du processus de protection du* contenu.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
