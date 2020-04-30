@@ -14,7 +14,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Ces classes fournissent des informations qui vous aident à déterminer les performances du lecteur.
 
-Package : Package [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) : [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
+Package : [package com.adobe.mediacore.qos](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/package-summary.html) : [com.adobe.mediacore.qos.metrics](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_2893EFF9755149159A4F94E781C76B6E"> 
  <thead> 
@@ -25,12 +25,12 @@ Package : Package [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primeti
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph">mesures.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> Mise en mémoire tampon des mesures</a></span></td> 
-   <td colname="2"> Fournit des informations sur le temps passé par le lecteur lors de la mise en mémoire tampon et la fréquence à laquelle un de mise en mémoire tampon s’est . </td> 
+   <td colname="1"><span class="codeph">mesures.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/BufferingMetrics.html" format="html" scope="external"> Mesures de mémoire tampon</a></span></td> 
+   <td colname="2"> Fournit des informations sur le temps passé par le lecteur lors de la mise en mémoire tampon et la fréquence à laquelle un événement de mise en mémoire tampon s’est produit. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> DeviceInformation</a> </span></td> 
-   <td colname="2">Fournit des informations sur la plateforme et le système d’exploitation sur lesquels l’expression s’exécute : 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/DeviceInformation.html" format="html" scope="external"> Informations sur le périphérique</a> </span></td> 
+   <td colname="2">Fournit des informations sur la plate-forme et le système d’exploitation sur lesquels l’expression s’exécute : 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Version du système d’exploitation de la plate-forme </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Numéro de version de la bibliothèque Expression </li> 
@@ -42,19 +42,19 @@ Package : Package [com.adobe.mediacore.qos](https://help.adobe.com/en_US/primeti
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/LoadInfo.html" format="html" scope="external"> LoadInfo</a></span> </td> 
-   <td colname="2"> Contient diverses informations sur la qualité de service (QoS) concernant le chargement de diverses ressources (fichiers, manifeste ou liste de lecture, fragments/segments, pistes, etc.). </td> 
+   <td colname="2"> Contient diverses informations de qualité de service sur le chargement de diverses ressources (fichiers, manifeste ou liste de lecture, fragments/segments, pistes, etc.). </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> PlaybackInformation</a></span> </td> 
-   <td colname="2"> Fournit des informations sur les performances de la lecture. Cela inclut la fréquence d’images, le débit  du, le temps total passé dans la mise en mémoire tampon, le nombre de tentatives de mise en mémoire tampon, le temps nécessaire pour obtenir le premier octet à partir du premier fragment vidéo, le temps nécessaire pour effectuer le rendu de la première image, la longueur actuellement mise en mémoire tampon et le temps de mise en mémoire tampon. </td> 
+   <td colname="2"> Fournit des informations sur les performances de la lecture. Cela inclut la fréquence d’images, le débit par profil, le temps total passé en mémoire tampon, le nombre de tentatives de mise en mémoire tampon, le temps nécessaire pour obtenir le premier octet à partir du premier fragment vidéo, le temps nécessaire au rendu de la première image, la longueur actuellement mise en mémoire tampon et le temps de mise en mémoire tampon. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph">mesures.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackLoadMetrics</a></span> </td> 
-   <td colname="2"> Fournit des informations sur le temps nécessaire au chargement du média, sur le temps nécessaire au lecteur pour effectuer le rendu de la première image ou, en cas d’erreur, sur l’échec. </td> 
+   <td colname="2"> Fournit des informations sur le temps de chargement du média, sur le temps nécessaire au lecteur pour effectuer le rendu de la première image ou, en cas d’erreur, sur l’échec du lecteur. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph">mesures.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackLoadMetrics.html" format="html" scope="external"> PlaybackMetrics</a> </span></td> 
-   <td colname="2"> Fournit des informations sur le comportement de la lecture. Cela inclut la fréquence d’images, le débit, la longueur de la mémoire tampon, etc. </td> 
+   <td colname="2"> Fournit des informations sur le comportement de la lecture. Cela inclut la fréquence d’images, le débit binaire, la longueur de la mémoire tampon, etc. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph">mesures.<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/qos/metrics/PlaybackSessionMetrics.html" format="html" scope="external"> PlaybackSessionMetrics</a></span> </td> 
