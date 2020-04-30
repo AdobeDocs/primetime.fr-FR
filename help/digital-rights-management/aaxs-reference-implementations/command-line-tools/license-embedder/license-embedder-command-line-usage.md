@@ -37,7 +37,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
    <td colname="2" class="- topic/entry "> Nom du fichier contenant la licence à incorporer. Plusieurs options <span class="codeph"> -l </span> peuvent être spécifiées pour incorporer plusieurs licences. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m nom_fichier_métadonnées </span> </td> 
    <td colname="2" class="- topic/entry "> Spécifiez les métadonnées de contenu pour lesquelles générer une licence. (Obligatoire pour générer une licence) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -46,7 +46,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
-   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, écrasez-le sans invite. </td> 
+   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, remplacez-le sans invite. </td> 
   </tr> 
  </tbody> 
 </table>
