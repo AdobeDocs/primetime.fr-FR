@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres générateurs d'opportunités en implémentant la classe OpportunityGenerator.
 seo-description: Vous pouvez mettre en oeuvre vos propres générateurs d'opportunités en implémentant la classe OpportunityGenerator.
-seo-title: Implémentation d’un générateur d’opportunités personnalisé
-title: Implémentation d’un générateur d’opportunités personnalisé
+seo-title: Mise en oeuvre d’un générateur d’opportunités personnalisé
+title: Mise en oeuvre d’un générateur d’opportunités personnalisé
 uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
@@ -10,7 +10,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 ---
 
 
-# Implémentation d’un générateur d’opportunités personnalisé {#implement-a-custom-opportunity-generator}
+# Mise en oeuvre d’un générateur d’opportunités personnalisé {#implement-a-custom-opportunity-generator}
 
 Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en implémentant la classe OpportunityGenerator.
 
@@ -47,7 +47,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
    itemLoader.load(resource, id, config);
    ```
 
-1. Créez une classe de générateur d’opportunités personnalisée qui implémente la `OpportunityGenerator` classe.
+1. Créez une classe de générateur d&#39;opportunités personnalisée qui implémente la `OpportunityGenerator` classe.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
@@ -75,7 +75,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Pour chaque `TimedMetadata` ou groupe de `TimedMetadata`, créez une opportunité avec les attributs suivants :
+   1. Pour chaque `TimedMetadata` ou groupe de `TimedMetadata`clients, créez une opportunité avec les attributs suivants :
 
       ```java
       Opportunity( 
@@ -86,11 +86,11 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
       ); 
       ```
 
-   1. Pour chaque opportunité créée, appelez `resolve` le `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Pour chaque opportunité créée, faites appel `resolve` au `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Il s’agit d’un exemple de détecteur d’opportunités de placement personnalisé :
+Voici un exemple de détecteur d&#39;opportunités de placement personnalisé :
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
