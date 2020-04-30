@@ -14,13 +14,13 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
 
-Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes ultérieures effectuées pour les ressources de ce manifeste utiliseront l’emplacement du domaine final, ce qui évite 302 réponses supplémentaires. Cette fonction est activée par défaut et vous pouvez modifier ce paramètre.
+Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires. Cette fonction est activée par défaut et vous pouvez modifier ce paramètre.
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité est prise en charge uniquement dans les navigateurs certifiés qui prennent en charge la `responseURL` propriété dans l’ `XMLHttpRequest` objet.
+>Cette fonctionnalité est uniquement prise en charge dans les navigateurs certifiés qui prennent en charge la `responseURL` propriété dans l’ `XMLHttpRequest` objet.
 
-Pour les secours Flash, tenez compte des informations suivantes :
+Pour la reprise Flash, tenez compte des informations suivantes :
 
 * Les utilisateurs finaux doivent avoir installé Adobe Flash Player version 23 ou ultérieure.
 * Si l’intégrité du flux est désactivée, la redirection 302 est prise en charge uniquement sur les navigateurs certifiés.
