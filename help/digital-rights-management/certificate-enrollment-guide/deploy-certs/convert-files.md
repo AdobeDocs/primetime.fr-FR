@@ -14,7 +14,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
 1. Convertissez le fichier PKCS#7 en fichier PEM temporaire.
 
-   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl pkcs7 -in mycompany-license.p7b -inform DER -out mycompany-license-temp.pem \ 
@@ -27,7 +27,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
 1. Convertissez le fichier PEM temporaire en fichier PFX.
 
-   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl pkcs12 -export -inkey mycompany-license.key -in mycompany-license-temp.pem \ 
@@ -36,7 +36,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
 1. Convertissez le fichier PEM temporaire en fichier PEM final.
 
-   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM 
@@ -50,7 +50,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
 1. Convertissez le fichier PEM en fichier DER.
 
-   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Pour utiliser OpenSSL, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl x509 -in mycompany-license.pem -inform PEM -out mycompany-license.der -outform DER 
@@ -58,5 +58,5 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Les fichiers DER sont requis uniquement pour le gestionnaire de flux continu dynamique HTTP.
+   >Les fichiers DER sont requis uniquement pour le module HTTP Dynamic Streaming Packager.
 
