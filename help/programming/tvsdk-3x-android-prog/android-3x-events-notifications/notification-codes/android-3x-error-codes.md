@@ -13,7 +13,7 @@ Lisez la section pour en savoir plus sur les codes d’erreur PSDK, les avertiss
 
 ## Erreurs
 
-Le tableau suivant fournit des informations détaillées sur les notifications de type ERROR. La plupart des erreurs contiennent des métadonnées pertinentes; par exemple, URL de la ressource dont le téléchargement a échoué. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans le contenu audio alternatif ou dans une publicité.
+Le tableau suivant fournit des informations détaillées sur les notifications de type ERROR. La plupart des erreurs contiennent des métadonnées pertinentes ; par exemple, URL de la ressource dont le téléchargement a échoué. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -22,9 +22,9 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
    <th><b>Description</b></th>
   </tr>
   <tr>
-    <td>SUCCÈS</td>
+    <td>RÉUSSITE</td>
     <td>0</td>
-    <td>L'opération effectuée par l'API sous-jacente est réussie.</td>
+    <td>L'opération effectuée par l'API sous-jacente a réussi.</td>
   </tr>
   <tr>
     <td>INVALID_ARGUMENT</td>
@@ -39,7 +39,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>ILLEGAL_STATE</td>
     <td>3</td>
-    <td>L’opération n’est pas prise en charge dans l’état actuel du lecteur.</td>
+    <td>L'opération n'est pas prise en charge dans l'état actuel du lecteur.</td>
   </tr>
   <tr>
     <td>INTERFACE_NOT_FOUND</td>
@@ -54,7 +54,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>UNSUPPORTED_OPERATION</td>
     <td>6</td>
-    <td>L’opération demandée n’est actuellement pas prise en charge.</td>
+    <td>L'opération demandée n'est actuellement pas prise en charge.</td>
   </tr>
   <tr>
     <td>DATA_NOT_AVAILABLE</td>
@@ -67,7 +67,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
     <td>Une erreur s'est produite lors de l'exécution d'une opération de recherche.</td>
   </tr>
   <tr>
-    <td>UNSUPPORTED_FEATURE</td>
+    <td>NON SUPPORTED_FEATURE</td>
     <td>9</td>
     <td>Cette fonction n’est pas prise en charge.</td>
   </tr>
@@ -79,22 +79,22 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
     <td>11</td>
-    <td>Le codec audio/vidéo du flux donné n’est pas pris en charge par TVSDK ou par le périphérique sous-jacent.</td>
+    <td>Le codec audio/vidéo de la diffusion en continu n’est pas pris en charge par TVSDK ou par le périphérique sous-jacent.</td>
   </tr>
   <tr>
     <td>MEDIA_ERROR</td>
     <td>12</td>
-    <td>Le média spécifié est introuvable.</td>
+    <td>Le support spécifié est introuvable.</td>
   </tr>
   <tr>
     <td>NETWORK_ERROR</td>
     <td>13</td>
-    <td>Une erreur s’est produite lors du téléchargement d’un fragment ou d’un segment (vidéo et audio).</td>
+    <td>Une erreur s'est produite lors du téléchargement d'un fragment ou d'un segment (vidéo et audio).</td>
   </tr>
   <tr>
     <td>GENERIC_ERROR</td>
     <td>14</td>
-    <td> d’erreur générique. Non pas réellement émis par TVSDK. Il ne s’agit que d’un marqueur pour la fin de la plage de codes numériques correspondant aux  d’erreur TVSDK.</td>
+    <td>événement d’erreur générique. Non pas réellement émis par TVSDK. Il s’agit uniquement d’un marqueur pour la fin de la plage de codes numériques correspondant aux événements d’erreur TVSDK.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
@@ -107,7 +107,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
     <td>Une erreur liée à une piste audio s'est produite (Autre audio)</td>
   </tr>
   <tr>
-    <td>ACCESS_FROM_DIFFÉRENT_THREAD</td>
+    <td>ACCESS_FROM_DIFFERENT_THREAD</td>
     <td>17</td>
     <td>L’API PSDK est appelée à partir d’un thread différent de celui dans lequel le PSDK a été initialisé.</td>
   </tr>
@@ -129,19 +129,19 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La lecture HLS n’a pas été activée dans le lecteur Flash. Voir AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
+    <td>La lecture HLS n'a pas été activée dans Flash Player. Voir AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
     <td>58</td>
-    <td>Délai d'expiration réseau lors de la récupération d'un serveur de ressource/connexion.</td>
+    <td>Délai d'expiration du réseau lors de la récupération d'une ressource/d'un serveur de connexion.</td>
   </tr>
 </table>
 
 ## Avertissements
 
 Le tableau suivant fournit des informations détaillées sur les notifications de type WARN.
-La plupart des avertissements contiennent des métadonnées pertinentes ; par exemple, l’URL de la ressource dont le téléchargement a échoué. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans le contenu audio alternatif ou dans une publicité.
+La plupart des avertissements contiennent des métadonnées pertinentes ; par exemple, l’URL de la ressource dont le téléchargement a échoué. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -162,7 +162,7 @@ La plupart des avertissements contiennent des métadonnées pertinentes ; par ex
   <tr>
     <td>AD_RESOLVER_FAILED</td>
     <td>202</td>
-    <td>Le module externe d'annonce n'a pas pu résoudre les publicités.</td>
+    <td>Le plug-in publicitaire n'a pas réussi à résoudre les publicités.</td>
   </tr>
   <tr>
     <td>AD_MANIFEST_LOAD_FAILED</td>
@@ -172,7 +172,7 @@ La plupart des avertissements contiennent des métadonnées pertinentes ; par ex
   <tr>
     <td>AD_RESOLUTION_IN_PROGRESS</td>
     <td>204</td>
-    <td>Opération de résolution des publicités en cours.</td>
+    <td>L'opération de résolution des publicités est en cours.</td>
   </tr>
   </table>
 
@@ -185,9 +185,9 @@ La plupart des avertissements contiennent des métadonnées pertinentes ; par ex
     <th><b>Description</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OPTIMIZATION_</td>
+    <td>REVENUE_OPTIMIZATION_RAPPORTS</td>
     <td>300</td>
-    <td>TVSDK - Notifications détaillées pour d’autres  et   de.</td>
+    <td>TVSDK - Notifications détaillées pour plus d’rapports et d’analyse.</td>
   </tr>
  </table>
 
@@ -204,17 +204,17 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>  
     <td>END_OF_PERIOD</td>
     <td>-1</td>
-    <td>Fin de période.</td>
+    <td>Fin de la période.</td>
   </tr>
   <tr>
-    <td>SUCCÈS</td>
+    <td>RÉUSSITE</td>
     <td>0</td>
     <td>Opération réussie.</td>
   </tr>
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
     <td>1</td>
-    <td>Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/échec seront disponibles ultérieurement.</td>
+    <td>Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/d’échec seront disponibles ultérieurement.</td>
   </tr>
   <tr>
     <td>EOF</td>
@@ -224,7 +224,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>DECODER_FAILED</td>
     <td>3</td>
-    <td>Échec du décodeur au moment de l’exécution.</td>
+    <td>Échec du décodeur au moment de l'exécution.</td>
   </tr>
   <tr>
     <td>DEVICE_OPEN_ERROR</td>
@@ -284,12 +284,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
     <td>UNSUPPORTED_CONFIG</td>
     <td>15</td>
-    <td>La configuration n’est pas prise en charge.</td>
+    <td>La configuration n'est pas prise en charge.</td>
   </tr>
   <tr>  
     <td>UNSUPPORTED_OPERATION</td>
     <td>16</td>
-    <td>Opération non prise en charge.</td>
+    <td>L'opération n'est pas prise en charge.</td>
   </tr>
   <tr>
     <td>WAITING_FOR_INIT</td>
@@ -309,12 +309,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>OP_ONLY_ALLOWED_IN_PAUSED_STATE</td>
     <td>20</td>
-    <td>L’opération n’est autorisée que lorsqu’elle est en pause.</td>
+    <td>L'opération n'est autorisée que pendant la mise en pause.</td>
   </tr>
   <tr> 
     <td>OP_INVALID_WITH_AUDIO_ONLY_FILE</td>
     <td>21</td>
-    <td>Cette opération ne peut pas être utilisée sur des fichiers audio uniquement.</td>
+    <td>L'opération ne peut pas être utilisée sur des fichiers audio uniquement.</td>
   </tr>
   <tr>
     <td>PREVIOUS_STEP_SEEK_IN_PROGRESS</td>
@@ -339,22 +339,22 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>FILE_STRUCTURE_INVALID</td>
     <td>26</td>
-    <td>Le fichier spécifié n’est pas conforme à la syntaxe attendue.</td>
+    <td>Le fichier spécifié n'est pas conforme à la syntaxe attendue.</td>
   </tr>
   <tr>
     <td>COMPONENT_CREATION_FAILURE</td>
     <td>27</td>
-    <td>Impossible de créer un composant essentiel.</td>
+    <td>Un composant essentiel n'a pas pu être créé.</td>
   </tr>
   <tr>
     <td>DRM_INIT_ERROR</td>
     <td>28</td>
-    <td>Impossible de créer le contexte DRM.</td>
+    <td>Échec de la création du contexte DRM.</td>
   </tr>
   <tr>
-    <td>_NOT_SUPPORTED</td>
+    <td>CONTENEUR_NOT_SUPPORTED</td>
     <td>29</td>
-    <td>Le type de  n’est pas pris en charge.</td>
+    <td>Le type de Conteneur n'est pas pris en charge.</td>
   </tr>
   <tr>
     <td>SEEK_FAILED</td>
@@ -382,9 +382,9 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
     <td>Débordement.</td>
   </tr>
   <tr>  
-    <td>VIDEO___NOT_SUPPORTED</td>
+    <td>VIDEO_PROFIL_NOT_SUPPORTED</td>
     <td>35</td>
-    <td> vidéo non pris en charge.</td>
+    <td>profil vidéo non pris en charge.</td>
   </tr>
   <tr>
     <td>PERIOD_NOT_LOADED</td>
@@ -394,10 +394,10 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
     <td>INVALID_REPLACE_DURATION</td>
     <td>37</td>
-    <td>La durée de remplacement spécifiée n’est pas valide ou s’étend au-delà de la fin du flux.</td>
+    <td>La durée de remplacement spécifiée n'est pas valide ou s'étend au-delà de la fin du flux.</td>
   </tr>
   <tr>
-    <td>APPELLED_FROM_WRONG_THREAD</td>
+    <td>CALLED_FROM_WRONG_THREAD</td>
     <td>38</td>
     <td>L'API ne peut pas être appelée à partir du mauvais thread. Surtout pour les éléments d’API qui doivent être appelés à partir du thread principal uniquement.</td>
   </tr>
@@ -409,7 +409,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>ABORDÉ</td>
     <td>40</td>
-    <td>L’opération a été abandonnée par un appel explicite Abandonner ou Détruire.</td>
+    <td>L’opération a été abandonnée par un appel explicite d’abort ou de destruction.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
@@ -429,12 +429,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>NETWORK_DOWN</td>
     <td>44</td>
-    <td>La connexion réseau de l’utilisateur est hors service. La lecture peut s’arrêter à tout moment et reprendra lorsque la connexion sera disponible.</td>
+    <td>La connexion réseau de l'utilisateur est interrompue. La lecture peut s’arrêter à tout moment et reprendra lorsque la connexion sera disponible.</td>
   </tr>
   <tr>
-    <td>NO_USABLE_BITRATE_</td>
+    <td>NO_USABLE_BITRATE_PROFIL</td>
     <td>45</td>
-    <td>Aucun de débit binaire utilisable  trouvé dans le flux.</td>
+    <td>profil de débit binaire utilisable introuvable dans le flux.</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
@@ -452,19 +452,19 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
     <td>Le remplacement spécifié dans une API d'insertion n'a pas pu réussir. Cela signifie que l’insertion a réussi mais que le remplacement n’a pas eu lieu. Le remplacement peut échouer si le manifeste à remplacer a été supprimé du plan de montage chronologique.</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_</td>
+    <td>SWITCH_TO_ASYMMETRIC_PROFIL</td>
     <td>49</td>
-    <td>DRM passe à un  asymétrique. Tous les  du doivent être alignés dans la durée. Si ce n’est pas le cas, cet avertissement est généré et il se peut qu’il y ait des sauts dans la lecture.</td>
+    <td>DRM passe à un profil asymétrique. Tous les profils devraient être alignés sur la durée. Si ce n’est pas le cas, cet avertissement est généré et la lecture peut être sauterelle.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_BACKWARD</td>
     <td>50</td>
-    <td>La fenêtre dynamique ne doit avancer que vers l’avant. Si ce n'est pas le cas, cet avertissement sera lancé et la fenêtre ne sera pas lue. Pour cette raison, il peut y avoir des sauts (ou une longue pause/arrêt) dans la lecture.</td>
+    <td>La fenêtre active ne doit avancer que. Si ce n'est pas le cas, cet avertissement sera lancé et la fenêtre ne sera pas lue. De ce fait, il peut y avoir des sauts (ou une longue pause/arrêt) dans la lecture.</td>
   </tr>
   <tr>
     <td>CURRENT_PERIOD_EXPIRED</td>
     <td>51</td>
-    <td>La fenêtre dynamique a dépassé la période actuelle.</td>
+    <td>La fenêtre active a dépassé la période actuelle.</td>
   </tr>
   <tr>
     <td>CONTENT_LENGTH_MISMATCH</td>
@@ -479,12 +479,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>  
     <td>LIVE_HOLD</td>
     <td>54</td>
-    <td>Le lecteur de médias ne peut pas charger les segments, car il a atteint la fin de la fenêtre active. Le chargement des segments reprend lorsque le serveur ajoute de nouveaux médias à la fenêtre active. Cet état est généralement atteint si :<ul><li>La valeur bufferTime est trop élevée (égale ou supérieure à la durée de la fenêtre active).</li><li>Une combinaison d’une ou de plusieurs API d’insertion/effacement a remplacé plus de supports qu’elle n’en a ajouté.</li><li>La période suivante est une période de production avec un remplacement de média en attente (en raison de l'appel de l'API InsertBy)</li></ul></td>
+    <td>Le lecteur de médias ne peut pas charger les segments, car il a atteint la fin de la fenêtre active. Le chargement des segments reprend lorsque le serveur ajoute de nouveaux médias à la fenêtre active. Cet état est généralement atteint si :<ul><li>La valeur bufferTime est trop élevée (égale ou supérieure à la durée de la fenêtre active).</li><li>Une combinaison d’une ou de plusieurs API d’insertion/suppression a remplacé plus de supports qu’elle n’en a ajouté.</li><li>La période suivante est une période de production avec un remplacement de média en attente (en raison de l'appel API InsertBy)</li></ul></td>
   </tr>
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>L’interlettrage audio et vidéo dans le média n’est pas effectué correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes.</td>
+    <td>L’interception audio et vidéo dans le média n’est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes.</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -494,12 +494,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La lecture HLS n’a pas été activée dans le lecteur Flash. Voir AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>La lecture HLS n'a pas été activée dans Flash Player. Voir AuthorizedFeatures.enableHLSPlayback.</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
     <td>58</td>
-    <td>Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais cela indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect.</td>
+    <td>Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect.</td>
   </tr>
   <tr>
     <td>RANGE_SPANS_READ_HEAD</td>
@@ -509,27 +509,27 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
     <td>POSTROLL_WITH_LIVE_NOT_ALLOWED</td>
     <td>60</td>
-    <td>Les insertions postroulantes ne sont pas autorisées sur un support en direct. Elles sont toutefois autorisées une fois que le serveur a marqué le média comme terminé.</td>
+    <td>Les insertions postroulées ne sont pas autorisées sur un support en direct. Ils sont toutefois autorisés une fois que le serveur a marqué le support comme terminé.</td>
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
     <td>61</td>
-    <td>Une question très rare qui ne devrait jamais se produire.</td>
+    <td>Un problème très rare qui ne devrait jamais se produire.</td>
   </tr>
   <tr>  
     <td>SPS_PPS_FOUND_OUTSIDE_AVCC</td>
     <td>62</td>
-    <td>Le flux ne suit pas la recommandation de création de package de toujours placer H264 SPS/PPS dans un AVCC. Des problèmes de recherche/lecture peuvent être affichés.</td>
+    <td>Le flux ne suit pas la recommandation d’empaquetage consistant à toujours placer H264 SPS/PPS dans un AVCC. Des problèmes de recherche/lecture peuvent être observés.</td>
   </tr>
   <tr>  
     <td>PARTIAL_REPLACEMENT</td>
     <td>63</td>
-    <td>Le remplacement spécifié dans une API d'insertion n'a été que partiellement effectué. Cela se produit lorsque replaceDuration s’étend sur la durée du plan de montage chronologique.</td>
+    <td>Le remplacement spécifié dans une API d'insertion n'a été effectué que partiellement. Cela se produit lorsque replaceDuration s’étend sur la durée de la chronologie.</td>
   </tr>
   <tr>
     <td>RENDITION_M3U8_ERROR</td>
     <td>64</td>
-    <td>Une erreur de chargement s’est produite dans la liste de lecture du rendu. Il s’agit uniquement d’AVE, et non de FlashPlayer.</td>
+    <td>La liste de lecture du rendu comportait une erreur de chargement. Il s'agit uniquement d'AVE, et non de FlashPlayer.</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
@@ -539,7 +539,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>SEGMENT_SKIPPED_ON_FAILURE</td>
     <td>66</td>
-    <td>Impossible de lire le segment et est ignoré en cas d’échec.</td>
+    <td>Impossible de lire le segment et est ignoré en cas d'échec.</td>
   </tr>
   <tr>
     <td>INCOMPATIBLE_RENDER_MODE</td>
@@ -564,7 +564,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>CANNOT_SPLIT_TIMELINE</td>
     <td>71</td>
-    <td>Impossible d'effectuer une opération de division sur un plan de montage chronologique.</td>
+    <td>Impossible d'effectuer une opération de fractionnement sur un plan de montage chronologique.</td>
   </tr>
   <tr>
     <td>CANNOT_ERASE_TIMELINE</td>
@@ -574,27 +574,27 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>DID_NOT_GET_NEXT_FRAGMENT</td>
     <td>73</td>
-    <td>N’a pas obtenu le fragment suivant.</td>
+    <td>N'a pas obtenu le fragment suivant.</td>
   </tr>
   <tr>
     <td>NO_TIMELINE</td>
     <td>74</td>
-    <td>Aucune chronologie n’est présente dans une structure de données interne.</td>
+    <td>Aucune chronologie présente dans une structure de données interne.</td>
   </tr>
   <tr>
     <td>LISTENER_NOT_FOUND</td>
     <td>75</td>
-    <td>Aucun écouteur n’a été trouvé dans une structure de données interne.</td>
+    <td>Aucun écouteur n'a été trouvé dans une structure de données interne.</td>
   </tr>
   <tr>
-    <td>AUDIO__ERROR</td>
+    <td>AUDIO_DÉBUT_ERROR</td>
     <td>76</td>
-    <td>Impossible de  audio.</td>
+    <td>Impossible de début du son.</td>
   </tr>
   <tr>
     <td>NO_AUDIO_SINK</td>
     <td>77</td>
-    <td>Aucun récepteur audio n’est présent dans une structure de données interne.</td>
+    <td>Aucun récepteur audio présent dans une structure de données interne.</td>
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
@@ -624,17 +624,17 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>TIMELINE_TOO_SHORT</td>
     <td>83</td>
-    <td>La durée du plan de montage chronologique est trop courte. S’il s’agit d’un flux en direct, une mise en mémoire tampon fréquente peut survenir.</td>
+    <td>La durée de la chronologie est trop courte. S’il s’agit d’un flux en direct, une mise en mémoire tampon fréquente peut se produire.</td>
   </tr>
   <tr>
-    <td>AUDIO_ONLY_STREAM_</td>
+    <td>AUDIO_ONLY_STREAM_DÉBUT</td>
     <td>84</td>
     <td>Le flux est passé à un flux audio uniquement.</td>
   </tr>
   <tr>  
     <td>AUDIO_ONLY_STREAM_END</td>
     <td>85</td>
-    <td>Le flux est passé de l’audio uniquement à un flux vidéo.</td>
+    <td>Le flux est passé d’un flux audio uniquement à un flux vidéo.</td>
   </tr>
   <tr>
     <td>KEY_NOT_FOUND</td>
@@ -659,21 +659,21 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>UNREPORTED_TIME_DISCONTINUITY_FOUND</td>
     <td>91</td>
-    <td>Discontinuité de temps non rapporté (PTS) détectée.</td>
+    <td>Discontinuité de temps non signalé (PTS) détectée.</td>
   </tr>
   <tr>
     <td>UNMATCHED_AV_DISCONTINUITY_FOUND</td>
     <td>92</td>
-    <td>Discontinuité audio et vidéo inégale trouvée.</td>
+    <td>Discontinuité audio et vidéo inégalée détectée.</td>
   </tr>
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>Une erreur s'est produite lors de la lecture du média en mode de lecture de l'astuce. Le mode de lecture de la vidéo est terminé et le flux est en pause. Appelez Play() pour lire le média en mode normal.</td>
+    <td>Une erreur s'est produite lors de la lecture du média en mode de lecture par astuces. Le mode de lecture des vidéos est terminé et le flux est suspendu. Appelez Play() pour lire le média en mode normal.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_AHEAD</td>
     <td>95</td>
-    <td>Le joueur est sorti de la fenêtre en direct et doit chercher à rattraper.</td>
+    <td>Le joueur est sorti de la fenêtre active et doit chercher à rattraper son retard.</td>
   </tr>
 </table>
