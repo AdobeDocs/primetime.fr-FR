@@ -1,8 +1,8 @@
 ---
 description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 seo-description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
-seo-title: Ignorer les coupures publicitaires pendant une période donnée
-title: Ignorer les coupures publicitaires pendant une période donnée
+seo-title: Ignorer les coupures publicitaires pour une période
+title: Ignorer les coupures publicitaires pour une période
 uuid: f8a5c1e3-e97f-421f-ac98-79de94a82955
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
@@ -10,13 +10,13 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# Ignorer les coupures publicitaires pendant une période donnée {#skip-ad-breaks-for-a-period-of-time}
+# Ignorer les coupures publicitaires pour une période {#skip-ad-breaks-for-a-period-of-time}
 
 Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 
 >[!IMPORTANT]
 >
->Si vous devez effectuer une recherche interne pour pardonner une publicité, il se peut qu’il y ait une légère interruption pendant la lecture.
+>Si vous devez effectuer une recherche interne pour pardonner une publicité, il peut y avoir une légère pause pendant la lecture.
 
 Pour remplacer le comportement de coupure publicitaire par défaut de TVSDK, vous pouvez étendre le sélecteur de stratégie publicitaire par défaut. Il existe quatre stratégies de coupure publicitaire :
 
@@ -25,18 +25,18 @@ Pour remplacer le comportement de coupure publicitaire par défaut de TVSDK, vou
 
    >[!NOTE]
    >
-   >La stratégie de coupure publicitaire SKIP peut ne pas fonctionner comme prévu pour les flux en direct lorsqu’une publicité est présente au point de diffusion. Par exemple, dans le cas d’une coupure publicitaire preroll, SKIP provoque une recherche jusqu’à la fin de la coupure publicitaire, qui peut être supérieure au point de production. Dans ce cas, TVSDK peut rechercher le milieu d’une publicité.
+   >La stratégie de coupure publicitaire SKIP peut ne pas fonctionner comme prévu pour les flux en direct lorsqu’une publicité est présente au point de diffusion. Par exemple, dans le cas d’une coupure publicitaire preroll, SKIP entraîne une recherche jusqu’à la fin de la coupure publicitaire, qui peut être supérieure au point de production. Dans ce cas, TVSDK peut rechercher le milieu d’une publicité.
 
 * REMOVE_AFTER
 * SUPPRIMER
 
    >[!NOTE]
    >
-   >La stratégie `REMOVE` de coupure publicitaire est censée être obsolète. Adobe recommande d’utiliser la stratégie `SKIP` de coupure publicitaire au lieu de `REMOVE`.
+   >La stratégie `REMOVE` de coupure publicitaire est censée être abandonnée. Adobe recommande d’utiliser la stratégie de coupure `SKIP` publicitaire au lieu de `REMOVE`.
 
-L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisée ignore les publicités au cours des cinq prochaines minutes (heure de l’horloge murale) après qu’un utilisateur ait vu une coupure publicitaire.
+L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
 
-1. Lorsque l’utilisateur termine de regarder une coupure publicitaire, enregistrez l’heure actuelle du système.
+1. Lorsque l&#39;utilisateur termine de regarder une coupure publicitaire, enregistrez l&#39;heure système actuelle.
 
    ```java
    @Override 
@@ -49,7 +49,7 @@ L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisée i
    }
    ```
 
-1. Étendez `AdPolicySelector`.
+1. Étendre `AdPolicySelector`.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
