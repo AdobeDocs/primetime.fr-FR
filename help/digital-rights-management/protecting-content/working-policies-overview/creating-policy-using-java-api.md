@@ -1,6 +1,6 @@
 ---
-seo-title: Création d’une stratégie DRM avec l’API Java
-title: Création d’une stratégie DRM avec l’API Java
+seo-title: Création d’une stratégie DRM à l’aide de l’API Java
+title: Création d’une stratégie DRM à l’aide de l’API Java
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
@@ -8,11 +8,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 ---
 
 
-# Création d’une stratégie DRM avec l’API Java {#creating-a-drm-policy-with-the-java-api}
+# Création d’une stratégie DRM à l’aide de l’API Java {#creating-a-drm-policy-with-the-java-api}
 
 Pour créer une stratégie DRM avec l’API Java :
 
-1. Configurez votre  de développement  et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configuration de votre de développement .](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Configurez votre environnement de développement et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configuration de votre environnement de développement.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 1. Créez un `com.adobe.flashaccess.sdk.policy.Policy` objet et spécifiez ses propriétés, notamment les droits, la durée de mise en cache des licences et la date de fin de la stratégie DRM.
 
    ```java
@@ -48,7 +48,7 @@ Pour créer une stratégie DRM avec l’API Java :
    } 
    ```
 
-1. Sérialisez l’ `Policy` objet DRM et stockez-le dans un fichier ou une base de données.
+1. Sérialisez l’objet DRM `Policy` et stockez-le dans un fichier ou une base de données.
 
    ```java
    // Serialize the DRM policy  
