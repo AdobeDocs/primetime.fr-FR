@@ -10,7 +10,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Structure du répertoire de journalisation{#log-directory-structure}
 
-Le répertoire des journaux a la structure suivante :
+Le répertoire des journaux possède la structure suivante :
 
 ```
 <i class="+ topic ph hi-d="" i "="">
