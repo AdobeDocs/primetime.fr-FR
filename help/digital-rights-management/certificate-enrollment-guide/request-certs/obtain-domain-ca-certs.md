@@ -1,6 +1,6 @@
 ---
-seo-title: Obtention des certificats d'autorité de certification de domaine
-title: Obtention des certificats d'autorité de certification de domaine
+seo-title: Obtention des certificats d’autorité de certification de domaine
+title: Obtention des certificats d’autorité de certification de domaine
 uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
@@ -8,18 +8,18 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 ---
 
 
-# Obtention des certificats d&#39;autorité de certification de domaine{#obtain-domain-ca-certificates}
+# Obtention des certificats d’autorité de certification de domaine{#obtain-domain-ca-certificates}
 
 Contrairement au certificat License Server, Packager ou Transport, le certificat d’autorité de certification de domaine n’est pas émis par Adobe. Vous pouvez obtenir ce certificat auprès d’une autorité de certification ou générer un certificat autosigné à utiliser à cette fin.
 
 Le certificat d’autorité de certification de domaine doit utiliser une clé 1024 bits et contenir les attributs standard requis dans un certificat d’autorité de certification :
 
-* Extension Contraintes de base avec l&#39;indicateur CA défini sur true
-* Extension d’utilisation de clé spécifiant la signature de certificat autorisée
+* Extension de contraintes de base avec l&#39;indicateur CA défini sur true
+* Extension d&#39;utilisation de clés indiquant que la signature de certificat est autorisée
 
-Par exemple, avec OpenSSL, un certificat d’autorité de certification autosigné peut être généré comme suit :
+Par exemple, avec OpenSSL, un certificat d’autorité de certification auto-signé peut être généré comme suit :
 
-1. Créez un fichier nommé [!DNL ca-extensions.txt] contenant :
+1. Créez un fichier appelé [!DNL ca-extensions.txt] contenant :
 
    ```
    keyUsage=critical,keyCertSign  
@@ -33,7 +33,7 @@ Par exemple, avec OpenSSL, un certificat d’autorité de certification autosign
    openssl genrsa -des3 -out domain-ca.key 1024 
    ```
 
-1. Générer un fichier CSR :
+1. Générer une CSR :
 
    ```
    openssl req -new -key domain-ca.key -out domain-ca.csr 
@@ -46,13 +46,13 @@ Par exemple, avec OpenSSL, un certificat d’autorité de certification autosign
      -out domain-ca.cer -extfile ca-extensions.txt 
    ```
 
-1. Générer le mot de passe :
+1. Générer un mot de passe :
 
    ```
    openssl rand -base64 8 
    ```
 
-1. Générer le fichier PFX :
+1. Générer PFX :
 
    ```
    openssl pkcs12 -export -inkey domain-ca.key \ 
