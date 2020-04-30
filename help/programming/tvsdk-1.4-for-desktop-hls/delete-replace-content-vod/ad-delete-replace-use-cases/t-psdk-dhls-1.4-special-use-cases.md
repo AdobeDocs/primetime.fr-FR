@@ -12,11 +12,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Cas d&#39;utilisation spéciale{#special-use-cases}
 
-TVSDK favorise les paramètres de plage personnalisée par rapport aux paramètres publicitaires standard. Par exemple, si des plages MARK sont définies, les paramètres d’insertion de la publicité sont ignorés. Si les plages REPLACE sont définies, TVSDK utilise automatiquement le mode `CustomRanges` de signalisation.
+TVSDK favorise les paramètres de plage personnalisée par rapport aux paramètres d’annonce standard. Par exemple, si des plages MARK sont définies, les paramètres d’insertion de la publicité sont ignorés. Si les plages REPLACE sont définies, TVSDK utilise automatiquement le mode `CustomRanges` de signalisation.
 
 1. `ReplaceRange` sans durée de remplacement
 
-   Si la durée de remplacement est absente, la durée réelle du remplacement est déterminée par le serveur. Le nombre de publicités placées dans cette `AdBreak` variable est également déterminé par le serveur.
+   Si la durée de remplacement est manquante, la durée de remplacement réelle est déterminée par le serveur. Le nombre de publicités placées dans cette liste `AdBreak` est également déterminé par le serveur.
 
    ```
    {
@@ -60,6 +60,6 @@ TVSDK favorise les paramètres de plage personnalisée par rapport aux paramètr
    }
    ```
 
-1. Plages MARK et DELETE avec durée de remplacement
+1. Marquer et SUPPRIMER les plages avec la durée de remplacement
 
    La durée de remplacement supplémentaire est ignorée.
