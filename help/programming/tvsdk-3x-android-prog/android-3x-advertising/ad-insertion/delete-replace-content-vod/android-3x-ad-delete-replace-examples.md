@@ -14,7 +14,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Voici quelques exemples du processus de suppression et de remplacement des publicités.
 
-Voici un exemple d’utilisation de la fonction `DELETE_RANGE`:
+Voici un exemple d’utilisation du `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +43,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Voici un exemple d’utilisation de la fonction `REPLACE_RANGE`:
+Voici un exemple d’utilisation du `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
