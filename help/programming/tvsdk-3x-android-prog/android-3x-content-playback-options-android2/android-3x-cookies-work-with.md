@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
-seo-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
+description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
+seo-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 seo-title: Utilisation des cookies
 title: Utilisation des cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
@@ -12,22 +12,22 @@ source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 # Utilisation des cookies {#work-with-cookies}
 
-Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
+Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
-Voici un exemple de requête au serveur de clés avec une certaine authentification :
+Voici un exemple de demande au serveur clé avec une certaine authentification :
 
-1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique que ce client est autorisé à du contenu.
+1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique que ce client est autorisé à vue du contenu.
 1. En fonction des attentes du serveur de licences, votre application génère un jeton d’authentification.
 
    Cette valeur est transmise à TVSDK.
 1. TVSDK définit cette valeur dans l’en-tête du cookie.
-1. Lorsque TVSDK envoie une requête au serveur de clés pour obtenir une clé afin de déchiffrer le contenu, la requête contient la valeur d’authentification dans l’en-tête du cookie.
+1. Lorsque TVSDK envoie une requête au serveur de clés pour obtenir une clé pour déchiffrer le contenu, la requête contient la valeur d’authentification dans l’en-tête du cookie.
 
    Le serveur de clés sait que la requête est valide.
 
-Pour utiliser les cookies :
+Pour utiliser des cookies :
 
-1. Créez un cookie `cookieManager` et ajoutez-y vos cookies pour les URI.
+1. Créez un cookie `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
 
    Par exemple :
 
@@ -45,13 +45,13 @@ Pour utiliser les cookies :
    >
    >Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
-   Le TVSDK  ceci `cookieManager` au moment de l’exécution, vérifie s’il existe des cookies associés à l’URL et les utilise automatiquement.
+   TVSDK la requête `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
 
-   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas `networkConfiguration.setCookieHeaders` l’API car la mise à jour aura lieu dans le magasin de cookies JAVA.
+   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas `networkConfiguration.setCookieHeaders` l’API car la mise à jour aura lieu dans la banque de cookies JAVA.
 
-   `networkConfiguration.setCookieHeaders` L’API définit les cookies sur le cookieStore C++ de TVSDK.
+   `networkConfiguration.setCookieHeaders` L’API définit les cookies sur le CookieStore C++ de TVSDK.
 
-   Lorsque vous utilisez des cookies JAVA et les partagez entre Application et TVSDK, utilisez JAVA CookieStore pour gérer uniquement les cookies.
+   Lorsque vous utilisez des cookies JAVA et les partagez entre Application et TVSDK, utilisez JAVA CookieStore pour gérer les cookies uniquement.
 
    Avant d’initialiser la lecture, définissez les cookies sur le magasin de cookies à l’aide du Gestionnaire de cookies, comme indiqué ci-dessus.
 
@@ -65,10 +65,10 @@ Pour utiliser les cookies :
 
    >[!NOTE]
    >
-   >Après avoir défini cet &#39;setReadSetCookieHeader&#39; sur false, définissez les cookies pour les requêtes de clés à l’aide du gestionnaire de cookies JAVA.
+   >Après avoir défini sur false ce &#39;setReadSetCookieHeader&#39;, définissez les cookies pour les requêtes de clés à l’aide du gestionnaire de cookies JAVA.
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-Cette API de rappel est déclenchée chaque fois qu’il existe une mise à jour dans les cookies C++ (cookies provenant d’une réponse http). L’application doit écouter ce rappel et peut mettre à jour son magasin de cookies JAVA en conséquence afin que ses appels réseau dans JAVA puissent utiliser les cookies comme suit :
+Cette API de rappel est déclenchée chaque fois qu’il y a une mise à jour des cookies C++ (cookies provenant de la réponse http). L’application doit écouter ce rappel et peut mettre à jour son magasin de cookies JAVA en conséquence afin que ses appels réseau dans JAVA puissent utiliser les cookies comme suit :
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {
