@@ -1,20 +1,20 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Remplacez les plages de temps par une publicité Adobe Primetime pour la prise de décision publicitaire.
-title: Remplacez les plages de temps par une publicité Adobe Primetime pour la prise de décision publicitaire.
+seo-title: Remplacement des plages de temps par une publicité de prise de décision publicitaire Adobe Primetime
+title: Remplacement des plages de temps par une publicité de prise de décision publicitaire Adobe Primetime
 uuid: 101ac42d-5ba5-4487-af95-483a6594808a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: ''
 
 ---
 
 
-# Remplacez les plages de temps par une publicité Adobe Primetime pour la prise de décision publicitaire.{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
+# Remplacement des plages de temps par une publicité de prise de décision publicitaire Adobe Primetime{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-Supprimez `TimeRanges` entre le `begin` et `end` dans `localTime` du plan de montage chronologique. Remplacez-le par un AdBreak de `begin` à `begin+replaceDuration`.
+Supprimez `TimeRanges` entre le `begin` et `end` l&#39;entrée `localTime` de la chronologie. Remplacez-le par un AdBreak de `begin` à `begin+replaceDuration`.
 
-Remplacez les plages par des publicités Primetime et de prise de décision.
+Remplacez les plages par des annonces de prise de décision et Primetime.
 
 ```
 {   
