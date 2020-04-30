@@ -1,8 +1,8 @@
 ---
-description: Lorsque vous enregistrez  auditeurs avec le navigateur TVSDK, vous spécifiez un à écouter et le nom de votre rappel. Lorsqu’un se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet  du type approprié.
-seo-description: Lorsque vous enregistrez  auditeurs avec le navigateur TVSDK, vous spécifiez un à écouter et le nom de votre rappel. Lorsqu’un se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet  du type approprié.
-seo-title: ' et classes pour les rappels'
-title: ' et classes pour les rappels'
+description: Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d'événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
+seo-description: Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d'événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
+seo-title: Types d'événement et classes pour les rappels
+title: Types d'événement et classes pour les rappels
 uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,15 +10,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-#  et classes pour les rappels{#event-types-and-classes-for-callbacks}
+# Types d&#39;événement et classes pour les rappels{#event-types-and-classes-for-callbacks}
 
-Lorsque vous enregistrez  auditeurs avec le navigateur TVSDK, vous spécifiez un à écouter et le nom de votre rappel. Lorsqu’un se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet  du type approprié.
+Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d&#39;événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Lorsque vous écoutez ce nom de  de (AdobePSDK.EventType) </th> 
-   <th class="entry">expressions/browser-tvsdk-name transmet un  à votre rappel de ce type d’objet (<span class="codeph"> AdobePSDK.</span>) </th> 
+   <th colname="2" class="entry"> Lorsque vous écoutez ce nom de événement (AdobePSDK.EventType) </th> 
+   <th class="entry">expressions/browser-tvsdk-name transmet un événement à votre rappel de ce type d’objet (<span class="codeph"> AdobePSDK.Événement</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -92,11 +92,11 @@ Lorsque vous enregistrez  auditeurs avec le navigateur TVSDK, vous spécifiez un
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> _CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> PROFIL_CHANGED</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAY_</span> </td> 
+   <td colname="2"><span class="codeph"> PLAY_DÉBUT</span> </td> 
    <td><span class="codeph"> PSDKEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -109,7 +109,7 @@ Lorsque vous enregistrez  auditeurs avec le navigateur TVSDK, vous spécifiez un
    <td><span class="codeph"> SeekEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> SIZE_AVAILABLE</span> </td> 
+   <td colname="2"><span class="codeph"> TAZE_AVAILABLE</span> </td> 
    <td><span class="codeph"> SizeAvailableEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
