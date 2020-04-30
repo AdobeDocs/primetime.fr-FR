@@ -12,4 +12,4 @@ source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
 
 # Fichier de stratégie interdomaines {#crossdomain-policy-file}
 
-Pour que les clients d’exécution Flash puissent demander une licence auprès du serveur de licences, un fichier de stratégie interdomaines est requis. Voir *Utilisation du SDK Adobe Access pour la protection du contenu* pour en savoir plus.
+Pour que les clients Flash Runtime puissent demander une licence au serveur License Server, un fichier de stratégie interdomaines est requis. Voir *Utilisation du SDK Adobe Access pour la protection du contenu* pour en savoir plus.
