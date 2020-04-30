@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné en cours de lecture par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel sont identifiées les sections de contenu qui correspondent au contenu de la publicité.
-seo-description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné en cours de lecture par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel sont identifiées les sections de contenu qui correspondent au contenu de la publicité.
-seo-title: Vérifier la chronologie de la lecture
-title: Vérifier la chronologie de la lecture
+description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné lu par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
+seo-description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné lu par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
+seo-title: Contrôler la chronologie de la lecture
+title: Contrôler la chronologie de la lecture
 uuid: 2f903493-2d88-4af2-ac71-36300b49735b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,20 +10,20 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Vérifier la chronologie de la lecture{#inspect-the-playback-timeline}
+# Contrôler la chronologie de la lecture{#inspect-the-playback-timeline}
 
-Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné en cours de lecture par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel sont identifiées les sections de contenu qui correspondent au contenu de la publicité.
+Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné lu par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
 
-Voici un exemple d’implémentation, comme le montre la capture d’écran suivante.
+Voici un exemple d’implémentation, comme illustré dans la capture d’écran suivante.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
 ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
 
-1. Accédez à l’ `Timeline` objet dans la `MediaPlayer` méthode à l’aide de la `get` méthode.
+1. Accédez à l&#39; `Timeline` objet dans la `MediaPlayer` méthode à l&#39;aide de la `get` méthode.
 
-   La `Timeline` classe encapsule les informations liées au contenu du plan de montage chronologique associé à l’élément média actuellement chargé par l’ `MediaPlayer` instance. La `Timeline` classe donne accès à un en lecture seule du plan de montage chronologique sous-jacent. La `Timeline` classe fournit une méthode getter pour obtenir tous les `TimelineMarker` objets placés.
+   La `Timeline` classe encapsule les informations liées au contenu de la chronologie associée à l&#39;élément média actuellement chargé par l&#39; `MediaPlayer` instance. La `Timeline` classe permet d&#39;accéder à une vue en lecture seule de la chronologie sous-jacente. La `Timeline` classe fournit une méthode getter pour obtenir tous les `TimelineMarker` objets placés.
 
-1. Effectuez une itération dans le de `TimelineMarkers` et utilisez les informations renvoyées pour mettre en oeuvre votre chronologie.
+1. Effectuez une itération sur la liste des `TimelineMarkers` informations renvoyées et utilisez-les pour mettre en oeuvre votre chronologie.
 
        Un objet &quot;TimelineMarker&quot; contient deux informations :
    
