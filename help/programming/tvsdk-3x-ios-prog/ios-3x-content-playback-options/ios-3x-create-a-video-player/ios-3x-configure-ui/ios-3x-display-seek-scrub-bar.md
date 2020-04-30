@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 seo-description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
-seo-title: Affichage d’une barre de défilement de recherche avec la position actuelle du temps de lecture
-title: Affichage d’une barre de défilement de recherche avec la position actuelle du temps de lecture
+seo-title: Affichage d’une barre de défilement de recherche avec la position de temps de lecture actuelle
+title: Affichage d’une barre de défilement de recherche avec la position de temps de lecture actuelle
 uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
@@ -10,7 +10,7 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 ---
 
 
-# Affichage d’une barre de défilement de recherche avec la position actuelle du temps de lecture {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Affichage d’une barre de défilement de recherche avec la position de temps de lecture actuelle {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
