@@ -21,14 +21,14 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
      auditudeSettings.zoneId = "123869";
    ```
 
-1. Ajouter les métadonnées publicitaires au `MediaResource`.
+1. Ajouter les métadonnées publicitaires à la `MediaResource`.
 
    ```js
    var mediaResource =  
      new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
    ```
 
-1. Ajouter les paramètres dans la configuration et ajoutez une fabrique `SpliceOut` d’analyseurs.
+1. Ajouter les paramètres dans la configuration et ajoutez une fabrique d’ `SpliceOut` analyseurs.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
