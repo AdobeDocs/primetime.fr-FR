@@ -12,7 +12,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 # Format JSON pour l’URL de demande de liste de lecture du manifeste de variante {#json-format-for-url-for-requesting-variant-manifest-playlist}
 
-Si `pttrackingmode=simple` ou `ptplayer=ios-mobileweb`, le serveur de manifeste renvoie un fichier au format JSON contenant Master-M3U8, URL à utiliser par le client pour demander le fichier M3U8 décrivant le contenu.
+Si `pttrackingmode=simple` ou `ptplayer=ios-mobileweb`, le serveur de manifeste renvoie un fichier au format JSON contenant Master-M3U8, URL que le client doit utiliser pour demander le fichier M3U8 décrivant le contenu.
 
 Il s’agit du format du fichier JSON contenant l’ `Master-M3U8` URL.
 
