@@ -12,17 +12,17 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Configuration d’une lecture personnalisée {#cset-up-customized-playback}
 
-Vous pouvez personnaliser ou remplacer le comportement d’une publicité en enregistrant l’instance de stratégie publicitaire avec TVSDK.
+Vous pouvez personnaliser ou remplacer le comportement d’une publicité en enregistrant l’instance de stratégie d’annonce avec TVSDK.
 
 Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
 
 * Implémentez l’ `AdPolicySelector` interface et toutes ses méthodes.
 Cette option est recommandée si vous devez remplacer tous les comportements publicitaires par défaut.
 
-* Etendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
-Cette option est recommandée si vous ne devez remplacer que certains des comportements par défaut.
+* Étendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+Cette option est recommandée si vous ne devez remplacer que certains comportements par défaut.
 
-Pour les deux options, complétez le  suivant :
+Pour les deux options, effectuez les tâches suivantes :
 
 Pour personnaliser les comportements publicitaires :
 
@@ -32,7 +32,7 @@ Pour personnaliser les comportements publicitaires :
 
 >[!ATTENTION]
 >
->Les stratégies publicitaires personnalisées enregistrées au début de >la lecture sont effacées lorsque l’instance MediaPlayer est >délocalisée.Votre application doit enregistrer une instance de stratégie >sélecteur chaque fois qu’une nouvelle session de lecture est créée.
+>Les stratégies publicitaires personnalisées enregistrées au début de >la lecture sont effacées lorsque l&#39;instance MediaPlayer est >délocalisée.Votre application doit enregistrer une instance de stratégie >sélecteur chaque fois qu&#39;une nouvelle session de lecture est créée.
 
 Par exemple :
 
