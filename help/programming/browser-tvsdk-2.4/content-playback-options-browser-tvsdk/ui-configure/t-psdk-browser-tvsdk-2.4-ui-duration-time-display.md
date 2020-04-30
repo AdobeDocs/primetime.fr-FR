@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez utiliser le navigateur TVSDK pour récupérer les informations sur le média que vous pouvez afficher dans la barre de recherche.
 seo-description: Vous pouvez utiliser le navigateur TVSDK pour récupérer les informations sur le média que vous pouvez afficher dans la barre de recherche.
-seo-title: Affiche la durée, l’heure actuelle et la durée restante de la vidéo
-title: Affiche la durée, l’heure actuelle et la durée restante de la vidéo
+seo-title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
+title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,14 +10,14 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Affiche la durée, l’heure actuelle et la durée restante de la vidéo{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Vous pouvez utiliser le navigateur TVSDK pour récupérer les informations sur le média que vous pouvez afficher dans la barre de recherche.
 
-1. Attendez que votre joueur soit dans l&#39;état PRÉPARÉ.
+1. Attendez que votre lecteur soit au moins à l’état PRÉPARÉ.
 1. Récupérez l’heure actuelle du curseur de lecture à l’aide de l’ `MediaPlayer.currentTime` attribut.
 
-   Cet attribut renvoie la position actuelle du curseur de lecture sur le plan de montage chronologique virtuel en millisecondes. Le temps est calculé par rapport au flux résolu qui peut contenir plusieurs instances de contenu alternatif, comme plusieurs publicités ou coupures publicitaires épissées dans le flux principal. Pour les flux en direct/linéaires, l’heure renvoyée se trouve toujours dans la plage de la fenêtre de lecture.
+   Cet attribut renvoie la position actuelle du curseur de lecture sur le plan de montage chronologique virtuel en millisecondes. Le temps est calculé par rapport au flux résolu qui peut contenir plusieurs instances de contenu alternatif, telles que plusieurs publicités ou coupures publicitaires épissées dans le flux principal. Pour les flux en direct/linéaires, l’heure renvoyée se trouve toujours dans la plage de la fenêtre de lecture.
 
    ```js
    MediaPlayer.currentTime
@@ -26,13 +26,13 @@ Vous pouvez utiliser le navigateur TVSDK pour récupérer les informations sur l
 1. Récupérez la plage de lecture du flux et déterminez sa durée.
    1. Utilisez la `mediaPlayer.playbackRange` propriété pour obtenir la plage de temps de la chronologie virtuelle.
 
-   1. Pour déterminer la durée, soustrayez le  de la fin de la plage.
+   1. Pour déterminer la durée, soustrayez le début de la fin de la plage.
 
-      Cela inclut la durée du contenu supplémentaire inséré dans le flux (publicités).
+      Cela inclut la durée du contenu supplémentaire qui est inséré dans le flux (publicités).
 
-      Pour VOD, la plage commence toujours par zéro et la valeur de fin est égale à la somme de la durée du contenu principal et de la durée du contenu supplémentaire inséré dans le flux (publicités).
+      Pour VOD, la plage commence toujours par zéro et la valeur finale est égale à la somme de la durée du contenu principal et de la durée du contenu supplémentaire inséré dans le flux (publicités).
 
-      Pour un fichier linéaire/en direct, la plage représente la plage de la fenêtre de lecture et cette plage change pendant la lecture.
+      Pour un fichier linéaire/vivant, la plage représente la plage de la fenêtre de lecture et cette plage change pendant la lecture.
 
 1. Utilisez les méthodes disponibles sur les éléments MediaPlayer et Browser TVSDK pour configurer les paramètres de la barre de recherche.
 
@@ -50,7 +50,7 @@ Vous pouvez utiliser le navigateur TVSDK pour récupérer les informations sur l
      </div> 
    ```
 
-   Voici le fichier CSS correspondant :
+   Voici le css correspondant :
 
    ```
    #seekbar { 
