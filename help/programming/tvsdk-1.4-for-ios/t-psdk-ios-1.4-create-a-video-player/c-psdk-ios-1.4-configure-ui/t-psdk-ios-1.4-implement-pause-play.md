@@ -1,20 +1,20 @@
 ---
-description: Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour mettre en pause et lire le média.
-seo-description: Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour mettre en pause et lire le média.
+description: Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour suspendre et lire le média.
+seo-description: Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour suspendre et lire le média.
 seo-title: Mise en oeuvre d’un bouton Lecture/Pause
 title: Mise en oeuvre d’un bouton Lecture/Pause
 uuid: eccdce4b-0114-4389-b5ee-74fe62d38ed8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
 
 # Mise en oeuvre d’un bouton Lecture/Pause{#implement-a-play-pause-button}
 
-Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour mettre en pause et lire le média.
+Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour suspendre et lire le média.
 
-Utilisez l’exemple de code suivant pour implémenter un bouton de lecture ou de pause :
+Utilisez l’exemple de code suivant pour mettre en oeuvre un bouton de lecture ou de pause :
 
 <!--<a id="example_BC2632D673FE451190A30A23145090D0"></a>-->
 
