@@ -1,6 +1,6 @@
 ---
-seo-title: ' et notifications'
-title: ' et notifications'
+seo-title: Événements et notifications
+title: Événements et notifications
 uuid: 9fa40621-338a-455e-b86d-81837d45fe0d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
@@ -8,5 +8,5 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 ---
 
 
-#  et notifications{#events-and-notifications}
+# Événements et notifications{#events-and-notifications}
 
