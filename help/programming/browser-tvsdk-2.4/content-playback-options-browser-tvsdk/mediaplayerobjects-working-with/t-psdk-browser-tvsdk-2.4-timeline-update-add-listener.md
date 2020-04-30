@@ -1,6 +1,6 @@
 ---
-description: Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les auditeurs  appropriés.
-seo-description: Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les auditeurs  appropriés.
+description: Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les écouteurs de événement appropriés.
+seo-description: Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les écouteurs de événement appropriés.
 seo-title: Ajouter écouteurs pour TimelineUpdateEvent
 title: Ajouter écouteurs pour TimelineUpdateEvent
 uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
@@ -12,9 +12,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Ajouter écouteurs pour TimelineUpdateEvent{#add-listeners-for-timelineupdatedevent}
 
-Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les auditeurs  appropriés.
+Pour recevoir des notifications sur les mises à jour de la chronologie, enregistrez les écouteurs de événement appropriés.
 
-Chaque fois que le plan de montage chronologique est mis à jour, il est `MediaPlayer` distribué `AdobePSDK.TimelineEvent` avec le type `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Chaque fois que la chronologie est mise à jour, les `MediaPlayer` messages `AdobePSDK.TimelineEvent` sont de type `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Mettez en oeuvre les écouteurs appropriés.
 
    ```js
@@ -33,7 +33,7 @@ Chaque fois que le plan de montage chronologique est mis à jour, il est `MediaP
    }
    ```
 
-1. Enregistrez les auditeurs .
+1. Enregistrez les écouteurs de événement.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
