@@ -1,26 +1,26 @@
 ---
-description: Votre application peut surveiller le   dans votre lecteur et l’état changeant du lecteur en écoutant les  distribués par TVSDK.
-seo-description: Votre application peut surveiller le   dans votre lecteur et l’état changeant du lecteur en écoutant les  distribués par TVSDK.
-seo-title: Résumé  du lecteur Primetime
-title: Résumé  du lecteur Primetime
+description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements qui sont distribués par TVSDK.
+seo-description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements qui sont distribués par TVSDK.
+seo-title: Résumé des événements du lecteur Primetime
+title: Résumé des événements du lecteur Primetime
 uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: ''
 
 ---
 
 
-# Résumé  du lecteur Primetime {#primetime-player-events-summary-overview}
+# Résumé des événements du lecteur Primetime {#primetime-player-events-summary-overview}
 
-Votre application peut surveiller le   dans votre lecteur et l’état changeant du lecteur en écoutant les  distribués par TVSDK.
+Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements qui sont distribués par TVSDK.
 
-## Events {#events}
+## Événements {#events}
 
-TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se produisent. Chaque  correspond à une classe d’écouteur, avec une méthode de rappel que vous devez implémenter.
+TVSDK vous avertit lorsque des événements auxquels votre application doit répondre se produisent. Chaque événement correspond à une classe d’écouteur, avec une méthode de rappel que vous devez implémenter.
 
 >[!TIP]
 >
->Les codes  sont les constantes de l&#39; `MediaPlayerEvent` enum.
+>Les codes de événement sont les constantes de l&#39; `MediaPlayerEvent` enum.
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
@@ -28,7 +28,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
-* ** Code  du ** `AD_BREAK_COMPLETE`
+* ** Code de Événement ** `AD_BREAK_COMPLETE`
 
 ## AdBreakSkippedEventListener {#section_7AE5442442484F45B521D3309691C59C}
 
@@ -36,7 +36,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
-* ** Code  du ** `AD_BREAK_SKIPPED`
+* ** Code de Événement ** `AD_BREAK_SKIPPED`
 
 ## AdBreakStartedEventListener {#section_0D50327621164E3A9C8F3337AA20BDE7}
 
@@ -44,7 +44,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
-* ** Code  du ** `AD_BREAK_START`
+* ** Code de Événement ** `AD_BREAK_START`
 
 ## AdClickedEventListener {#section_9A6FD39EEDE0460B94FD074B5C2FB9BE}
 
@@ -52,7 +52,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdClicked(AdClickEvent event)`
 
-* ** Code  du ** `AD_CLICK`
+* ** Code de Événement ** `AD_CLICK`
 
 ## AdCompletedEventListener {#section_D45EA0B1825145259EAC50A3E6B24BFC}
 
@@ -60,23 +60,23 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdCompleted(AdPlaybackEvent event)`
 
-* ** Code  du ** `AD_COMPLETE`
+* ** Code de Événement ** `AD_COMPLETE`
 
 ## AdProgressEventListener {#section_C26ACC4B941942B0A24DB06585EF52AB}
 
-* ** Signification ** en cours de lecture.
+* ** Signification ** Rapports de progression pendant la lecture.
 
 * ** Rappel à implémenter ** `onAdProgress(AdPlaybackEvent event)`
 
-* ** Code  du ** `AD_PROGRESS`
+* ** Code de Événement ** `AD_PROGRESS`
 
 ## AdResolutionCompleteEventListener {#section_E9D545408CBA448EA2A8606DA629FB0B}
 
-* ** Signification ** La résolution des publicités Primetime est terminée. Ce ne s’applique qu’au contenu VOD.
+* ** Signification ** Primetime et la résolution des publicités est terminée. Ce événement ne s’applique qu’au contenu VOD.
 
 * ** Rappel à implémenter ** `onAdResolutionComplete()`
 
-* ** Code  du ** `AD_RESOLUTION_COMPLETE`
+* ** Code de Événement ** `AD_RESOLUTION_COMPLETE`
 
 ## AdStartedEventListener {#section_A4339C48F82640A8AF4AF09CB3B33188}
 
@@ -84,7 +84,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAdStarted(AdPlaybackEvent event)`
 
-* ** Code  du ** `AD_START`
+* ** Code de Événement ** `AD_START`
 
 ## AudioUpdateEventListener {#section_06E1A9F683E1411081CFC6BD30C3B669}
 
@@ -92,7 +92,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onAudioUpdated(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `AUDIO_TRACK_UPDATED`
+* ** Code de Événement ** `AUDIO_TRACK_UPDATED`
 
 ## BufferingBeginEventListener {#section_F8378841149A4801867ADDC7C0A98C57}
 
@@ -100,7 +100,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onBufferingBegin(BufferEvent event)`
 
-* ** Code  du ** `BUFFERING_BEGIN`
+* ** Code de Événement ** `BUFFERING_BEGIN`
 
 ## BufferingEndEventListener {#section_9107E0ED59474F11A04E243C6B117E21}
 
@@ -108,7 +108,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onBufferingEnd(BufferEvent event)`
 
-* ** Code  du ** `BUFFERING_END`
+* ** Code de Événement ** `BUFFERING_END`
 
 ## BufferPreparedEventListener {#section_F6BFDF525D8B41B7B6E0EFCCE3065811}
 
@@ -116,15 +116,15 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onBufferPrepared()`
 
-* ** Code  du ** `BUFFER_PREPARED`
+* ** Code de Événement ** `BUFFER_PREPARED`
 
 ## CaptionsUpdateEventListener {#section_048BB128ADB747519F02DEDDD1C88B86}
 
-* ** Signification ** Une nouvelle piste de sous-titrage a été détectée.
+* ** Signification ** Une nouvelle piste de légende a été détectée.
 
 * ** Rappel à implémenter ** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `CAPTIONS_UPDATED`
+* ** Code de Événement ** `CAPTIONS_UPDATED`
 
 ## DRMMetadataInfoEventListener {#section_CB55064D305A40D5BBAD09A53D63DB95}
 
@@ -132,7 +132,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
-* ** Code  du ** `DRM_METADATA`
+* ** Code de Événement ** `DRM_METADATA`
 
 ## ItemCreatedEventListener {#section_32A3178664C841008370E8447C978AB2}
 
@@ -140,15 +140,15 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onItemCreated(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `ITEM_CREATED`
+* ** Code de Événement ** `ITEM_CREATED`
 
 ## ItemLoadCompleteEventListener {#section_E29A3D7D2666461599909BD8E8BA46A7}
 
-* ** Signification ** De nouvelles informations de chargement ont été créées pour l’élément actuel.
+* ** Signification ** De nouvelles informations de chargement ont été créées pour l&#39;article en cours.
 
 * ** Rappel à implémenter ** `onLoadComplete(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `ITEM_UPDATED`
+* ** Code de Événement ** `ITEM_UPDATED`
 
 ## LoadInformationEventListener {#section_A986AD83F68446B99EAC888F98B39148}
 
@@ -156,7 +156,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onLoadInformation(LoadInformationEvent event)`
 
-* ** Code  du ** `LOAD_INFORMATION_AVAILABLE`
+* ** Code de Événement ** `LOAD_INFORMATION_AVAILABLE`
 
 ## MainManifestUpdateEventListener {#section_73709D121CED48C1B38550135DA55548}
 
@@ -164,7 +164,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `MANIFEST_UPDATED`
+* ** Code de Événement ** `MANIFEST_UPDATED`
 
 ## NotificationEventListener {#section_E8F27B979D374B5D8EA184E23BC17E43}
 
@@ -172,7 +172,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onNotification(NotificationEvent event)`
 
-* ** Code  du ** `OPERATION_FAILED`
+* ** Code de Événement ** `OPERATION_FAILED`
 
 ## PlaybackRangeUpdateEventListener {#section_9072862D7EB842AEA3094DAF911CDF7F}
 
@@ -180,7 +180,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
-* ** Code  du ** `PLAYBACK_RANGE_UPDATED`
+* ** Code de Événement ** `PLAYBACK_RANGE_UPDATED`
 
 ## PlaybackRatePlayingEventListener {#section_548A489ABED44F89BDF29DB9EDD348C5}
 
@@ -188,15 +188,15 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onRatePlaying(PlaybackRateEvent event)`
 
-* ** Code  du ** `RATE_PLAYING`
+* ** Code de Événement ** `RATE_PLAYING`
 
 ## PlaybackRateSelectedEventListener {#section_B303BAAFA6D14C1599AD3D7D79D722DD}
 
-* ** Signification ** L’attribut de taux de MediaPlayer a été défini.
+* ** Signification ** L&#39;attribut de taux de MediaPlayer a été défini.
 
 * ** Rappel à implémenter ** `onRateSelected(PlaybackRateEvent event)`
 
-* ** Code  du ** `RATE_SELECTED`
+* ** Code de Événement ** `RATE_SELECTED`
 
 ## PlayStartEventListener {#section_1D54CAE387B243679348A26E65B6A3FD}
 
@@ -204,23 +204,23 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onPlayStart()`
 
-* ** Code  du ** `PLAY_START`
+* ** Code de Événement ** `PLAY_START`
 
 ## ProfileChangeEventListener {#section_EEDF08916D1D40509E64EC180F143C9A}
 
-* ** Signification ** Le  actuel du lecteur multimédia a changé.
+* ** Signification ** Le profil actuel de MediaPlayer a changé.
 
 * ** Rappel à implémenter ** `onProfileChanged(ProfileEvent event)`
 
-* ** Code  du ** `PROFILE_CHANGED`
+* ** Code de Événement ** `PROFILE_CHANGED`
 
 ## RéservationReachedEventListener {#section_31677E931F154E7E86D725B2B046065C}
 
-* ** Signification ** Playback a atteint une réservation de calendrier.
+* ** Signification ** La lecture a atteint une réservation de chronologie.
 
 * ** Rappel à implémenter ** `onReservationReached(ReservationEvent event)`
 
-* ** Code  du ** `RESERVATION_REACHED`
+* ** Code de Événement ** `RESERVATION_REACHED`
 
 ## SeekBeginEventListener {#section_749E02ED2B1647438F50224C85260A1D}
 
@@ -228,23 +228,23 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onSeekBegin(SeekEvent event)`
 
-* ** Code  du ** `SEEK_BEGIN`
+* ** Code de Événement ** `SEEK_BEGIN`
 
 ## SeekEndEventListener {#section_4F70BAD695AF4717B2254D9DBA1071E4}
 
-* ** Signification ** L’opération de recherche est terminée.
+* ** Signification ** L&#39;opération de recherche est terminée.
 
 * ** Rappel à implémenter ** `onSeekEnd(SeekEvent event)`
 
-* ** Code  du ** `SEEK_END`
+* ** Code de Événement ** `SEEK_END`
 
-## SeekPositionAdapedEventListener {#section_01F89B73DBB84BEBBA60D820BF5FAC9A}
+## SeekPositionAdjustmentEventListener {#section_01F89B73DBB84BEBBA60D820BF5FAC9A}
 
 * ** Signification ** La position de recherche a été ajustée en raison de règles de lecture internes ou de règles de fonctionnement externes.
 
 * ** Rappel à implémenter ** `onPositionAdjusted(SeekEvent event)`
 
-* ** Code  du ** `SEEK_POSITION_ADJUSTED`
+* ** Code de Événement ** `SEEK_POSITION_ADJUSTED`
 
 ## SizeAvailableEventListener {#section_90DF6565E59B44B19338A7B89D53BBBF}
 
@@ -252,7 +252,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onSizeAvailable(SizeAvailableEvent event)`
 
-* ** Code  du ** `SIZE_AVAILABLE`
+* ** Code de Événement ** `SIZE_AVAILABLE`
 
 ## StatusChangeEventListener {#section_310D2327089D46358F9CE03EA76F3287}
 
@@ -260,7 +260,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
-* ** Code  du ** `STATUS_CHANGED`
+* ** Code de Événement ** `STATUS_CHANGED`
 
 ## TimeChangeEventListener {#section_ED3855BD90124D97836B2D0957AD9E0C}
 
@@ -268,7 +268,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onTimeChanged(TimeChangeEvent event)`
 
-* ** Code  du ** `TIME_CHANGED`
+* ** Code de Événement ** `TIME_CHANGED`
 
 ## TimedEventEventListener {#section_5E62C2C81C3B4F93B46E7518578456EA}
 
@@ -276,7 +276,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onTimedEvent(TimedEventEvent event)`
 
-* ** Code  du ** `TIMED_EVENT`
+* ** Code de Événement ** `TIMED_EVENT`
 
 ## TimelineMetadataAddedInBackgroundEventListener {#section_7B923C7116154CCFBAE1FCA92C928EB2}
 
@@ -284,7 +284,7 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onTimedMetadata(TimedMetadataEvent event)`
 
-* ** Code  du ** `TIMED_METADATA_ADDED_IN_BACKGROUND`
+* ** Code de Événement ** `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
 ## TimedMetadataEventListener {#section_9741EA321ACF403FB8E9AB311BAACDD7}
 
@@ -292,12 +292,12 @@ TVSDK vous avertit lorsque des , auxquelles votre application doit répondre, se
 
 * ** Rappel à implémenter ** `onTimedMetadata(TimedMetadataEvent event)`
 
-* ** Code  du ** `TIMED_METADATA_AVAILABLE`
+* ** Code de Événement ** `TIMED_METADATA_AVAILABLE`
 
 ## TimelineUpdateEventListener {#section_D0755BD2AF3347C7861395706E31B861}
 
-* ** Signification ** La chronologie a été modifiée. Des publicités ont peut-être été ajoutées ou supprimées du plan de montage chronologique.
+* ** Signification ** La chronologie a été modifiée. Il est possible que des publicités aient été ajoutées ou supprimées de la chronologie.
 
 * ** Rappel à implémenter ** `onTimelineUpdated(TimelineEvent event)`
 
-* ** Code  du ** `TIMELINE_UPDATED`
+* ** Code de Événement ** `TIMELINE_UPDATED`
