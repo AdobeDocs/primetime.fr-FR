@@ -14,7 +14,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
 
-Pour utiliser les comportements par défaut :
+Pour utiliser des comportements par défaut :
 
     * Si vous implémentez votre propre classe &quot;AdvertisingFactory&quot;, renvoyez la valeur null pour &quot;createAdPolicySelector&quot;.
     
