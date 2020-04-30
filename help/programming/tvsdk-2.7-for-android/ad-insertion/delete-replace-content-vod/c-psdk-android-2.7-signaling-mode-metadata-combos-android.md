@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
-seo-description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
-seo-title: Effet sur l’insertion et la suppression d’une publicité depuis le mode de signalisation publicitaire et les combinaisons de métadonnées publicitaires
-title: Effet sur l’insertion et la suppression d’une publicité depuis le mode de signalisation publicitaire et les combinaisons de métadonnées publicitaires
+description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation publicitaire et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
+seo-description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation publicitaire et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
+seo-title: Effet sur l’insertion et la suppression d’une publicité à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires
+title: Effet sur l’insertion et la suppression d’une publicité à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
@@ -10,9 +10,9 @@ source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
 ---
 
 
-# Effet sur l’insertion et la suppression d’une publicité depuis le mode de signalisation publicitaire et les combinaisons de métadonnées publicitaires {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Effet sur l’insertion et la suppression d’une publicité à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
+Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation publicitaire et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
 
 >[!TIP]
 >
@@ -24,7 +24,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
  <thead> 
   <tr> 
    <th class="entry"> Mode de signature de publicité </th> 
-   <th class="entry"> Métadonnées de publicité </th> 
+   <th class="entry"> Métadonnées de la publicité </th> 
    <th class="entry"> Résolveurs créés </th> 
    <th class="entry"><span class="codeph"> PlacementInformations</span> créées </th> 
    <th class="entry"> Comportement résultant </th> 
@@ -32,7 +32,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
  </thead>
  <tbody> 
   <tr> 
-   <td colname="1"> <p><b>Carte serveur</b> </p> </td> 
+   <td colname="1"> <p><b>Carte du serveur</b> </p> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -61,11 +61,11 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Annonces insérées </td> 
+   <td> Publicités insérées </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Remplacer, Auditude </td> 
    <td> Supprimer, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Plages remplacées </td> 
@@ -73,14 +73,14 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Annonce personnalisée </td> 
+   <td> Publicité personnalisée </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Mark, Auditude </td> 
-   <td> Annonce personnalisée, Auditude </td> 
+   <td> Publicité personnalisée, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées, aucune publicité insérée </td> 
   </tr> 
@@ -96,7 +96,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </td> 
-   <td> Annonces insérées </td> 
+   <td> Publicités insérées </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -126,13 +126,13 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Annonce personnalisée </td> 
+   <td> Publicité personnalisée </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Remplacer, Auditude </td> 
    <td> Supprimer, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Plages remplacées </td> 
@@ -167,7 +167,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Remplacer, Auditude </td> 
    <td> Supprimer, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Plages remplacées par des publicités </td> 
@@ -175,7 +175,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Annonce personnalisée </td> 
+   <td> Publicité personnalisée </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
@@ -212,11 +212,11 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
    <td> Auditude </td> 
    <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Annonces insérées </td> 
+   <td> Publicités insérées </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Replace, Auditude </td> 
+   <td> Remplacer, Auditude </td> 
    <td> Supprimer, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Plages remplacées par des publicités </td> 
@@ -224,14 +224,14 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Annonce personnalisée </td> 
+   <td> Publicité personnalisée </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Mark, Auditude </td> 
-   <td> Annonce personnalisée, Auditude </td> 
+   <td> Publicité personnalisée, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
