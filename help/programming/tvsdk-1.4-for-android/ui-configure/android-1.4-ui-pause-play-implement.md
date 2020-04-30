@@ -15,8 +15,8 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
 
 1. Créez un bouton Pause/Lecture qui effectue les opérations suivantes.
-   1. Attendez que votre joueur soit dans l&#39;état PRÉPARÉ.
-   1. Pour  lecture, appelez la méthode de lecture TVSDK :
+   1. Attendez que votre lecteur soit au moins à l’état PRÉPARÉ.
+   1. Pour début la lecture, appelez la méthode de lecture TVSDK :
 
       ```java
       void play() throws IllegalStateException;
@@ -30,5 +30,5 @@ Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des bouto
 
 1. Utilisez le `MediaPlayer.PlaybackEventListener.onStateChanged` rappel pour rechercher les erreurs ou pour effectuer d’autres actions appropriées.
 
-   TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur le changement d’état dans le rappel, y compris le nouvel état, tel que PAUSED ou PLAYING.
+   TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur la modification de l’état dans le rappel, y compris le nouvel état, tel que PAUSED ou PLAYING.
 
