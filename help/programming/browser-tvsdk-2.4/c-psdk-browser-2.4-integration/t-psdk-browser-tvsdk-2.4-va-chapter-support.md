@@ -12,9 +12,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Mise en oeuvre de la prise en charge des chapitres{#implement-chapter-support}
 
-Un chapitre est défini comme l’intervalle entre chaque coupure publicitaire. Par exemple, le temps entre une coupure publicitaire preroll et la première coupure publicitaire mid-roll est défini comme le premier chapitre. Vous pouvez définir et suivre des chapitres pour le suivi vidéo dans une application navigateur TVSDK à l’aide de chapitres personnalisés. Les chapitres personnalisés sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
+Un chapitre est défini comme l’intervalle entre chaque coupure publicitaire. Par exemple, le temps entre une coupure publicitaire preroll et la première coupure publicitaire mid-roll est défini comme le premier chapitre. Vous pouvez définir et suivre des chapitres pour le suivi vidéo dans une application basée sur le navigateur TVSDK à l’aide de chapitres personnalisés. Les chapitres personnalisés sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
 
-1. Définissez et suivez les chapitres personnalisés.
+1. Définissez et suivez des chapitres personnalisés.
 
    ```js
    vaObj.enableChapterTracking = true; 
