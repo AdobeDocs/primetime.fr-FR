@@ -14,13 +14,13 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 
 Cette section présente un exemple de configuration qui illustre les concepts et la forme de la configuration.
 
-L’exemple de configuration JSON suivant définit une stratégie de sortie de pixels qui spécifie ce qui suit :
+L’exemple de configuration JSON suivant définit une stratégie de sortie de pixels qui spécifie les éléments suivants :
 
-* Restreindre le déchiffrement de la vidéo aux résolutions de 1080 ou moins
+* Limiter le déchiffrement de la vidéo aux résolutions de 1080 ou moins
 * Imposer des contraintes spécifiques aux résolutions 720 et 480 :
 
-   * Pour la résolution 720 : exiger le HDCP pour la sortie numérique; nécessitent une protection *Copy Generation Management System - Analog* (CGMS-A) pour une sortie analogique.
-   * Pour la résolution 480 : exiger le HDCP pour la sortie numérique; ne nécessitent pas de protection pour le mode analogique
+   * Pour la résolution 720 : exiger le HDCP pour la sortie numérique ; nécessitent une protection *Copy Generation Management System - Analog* (CGMS-A) pour une sortie analogique.
+   * Pour la résolution 480 : exiger le HDCP pour la sortie numérique ; ne nécessitent pas de protection pour l&#39;analogique
 
 ```
 { 
