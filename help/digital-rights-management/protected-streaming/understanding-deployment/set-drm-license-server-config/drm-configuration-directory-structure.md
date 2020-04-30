@@ -1,6 +1,6 @@
 ---
-seo-title: Structure du répertoire de configuration
-title: Structure du répertoire de configuration
+seo-title: Structure d'annuaire de configuration
+title: Structure d'annuaire de configuration
 uuid: 90ddd205-9dc6-4be1-ab10-ac37d93192c2
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
@@ -8,7 +8,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 ---
 
 
-# Structure du répertoire de configuration{#configuration-directory-structure}
+# Structure d&#39;annuaire de configuration{#configuration-directory-structure}
 
 Les répertoires de configuration ont la structure suivante :
 
