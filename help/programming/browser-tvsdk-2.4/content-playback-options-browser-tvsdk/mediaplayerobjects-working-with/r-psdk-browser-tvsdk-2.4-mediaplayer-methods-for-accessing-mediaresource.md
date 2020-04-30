@@ -26,7 +26,7 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
   <tr rowsep="1"> 
    <td colname="1"> Flux en direct </td> 
    <td colname="2"> <span class="codeph"> live </span> </td> 
-   <td colname="3"> True si le flux est en direct ; false s’il s’agit de VOD. </td> 
+   <td colname="3"> True si le flux est actif ; false s’il s’agit de VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Sous-titres </td> 
@@ -35,26 +35,26 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> closeCaptionsTracks </span> </td> 
-   <td colname="3"> Fournit un  de pistes de sous-titrage codé disponibles. </td> 
+   <td colname="3"> Fournit une liste de pistes de sous-titres disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> Récupère la piste de sous-titrage codé qui a été sélectionnée avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="3"> Récupère la piste de sous-titrage fermée qui a été sélectionnée avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Autre son </td> 
    <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
-   <td colname="3"> <p>True si le flux comporte des pistes audio de remplacement. </p> </td> 
+   <td colname="3"> <p>True si le flux comporte d’autres pistes audio. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
-   <td colname="3"> Fournit un  de pistes audio alternatives disponibles. </td> 
+   <td colname="3"> Fournit une liste de pistes audio alternatives disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
     <ph>
-      Récupère la piste audio actuellement sélectionnée qui a été sélectionnée avec <span class="codeph"> selectAudioTrack </span>. 
+      Récupère la piste audio actuellement sélectionnée qui a été sélectionnée avec <span class="codeph"> select AudioTrack </span>. 
     </ph> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -64,15 +64,15 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
-   <td colname="3"> Fournit un des objets de métadonnées minutés associés au flux. </td> 
+   <td colname="3"> Fournit une liste des objets de métadonnées minutés associés au flux. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1">  multiples (débit) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> </span> </td> 
+   <td colname="1" morerows="1"> Plusieurs profils (débit) </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profils </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Fournit un  du de débit binaire associé à ce flux. <p>Remarque :  Vous pouvez récupérer le débit binaire pour chaque  de, ainsi que la hauteur et la largeur du  de. </p> </td> 
+   <td colname="3"> Fournit une liste des profils de débit binaire associés à ce flux. <p>Remarque :  Vous pouvez récupérer le débit binaire pour chaque profil ainsi que la hauteur et la largeur du profil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ressource média </td> 
