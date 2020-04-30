@@ -14,4 +14,4 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Lorsque vous émettez une licence, le serveur de licences peut remplacer les règles d’utilisation spécifiées dans la stratégie.
 
-Si la stratégie spécifie une date de , aucune licence n’est générée avant cette date  de. Cependant, vous pouvez définir une date de  future dans la licence une fois la licence générée. Cette option doit être utilisée avec précaution car le client ne peut pas empêcher l’utilisateur de faire avancer le temps du système pour contourner la date de  du.
+Si la stratégie spécifie une date de début, aucune licence n’est générée avant cette date de début. Cependant, vous pouvez définir une date de début ultérieure dans la licence une fois la licence générée. Cette option doit être utilisée avec précaution car le client ne peut pas empêcher l’utilisateur de faire avancer le temps du système pour contourner la date de début.
