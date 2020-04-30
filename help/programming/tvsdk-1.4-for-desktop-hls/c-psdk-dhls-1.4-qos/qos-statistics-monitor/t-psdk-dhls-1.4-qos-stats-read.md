@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 seo-description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
-seo-title: Lecture des statistiques de lecture, de mise en mémoire tampon et de périphérique QOS
-title: Lecture des statistiques de lecture, de mise en mémoire tampon et de périphérique QOS
+seo-title: Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS
+title: Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,11 +10,11 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Lecture des statistiques de lecture, de mise en mémoire tampon et de périphérique QOS{#read-qos-playback-buffering-and-device-statistics}
+# Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS{#read-qos-playback-buffering-and-device-statistics}
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d’images, les données temporelles, etc.
+La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK et la taille/densité d’écran.
 
@@ -29,7 +29,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère régulièrement les nouvelles valeurs de la qualité de service `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
