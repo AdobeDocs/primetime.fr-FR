@@ -24,7 +24,7 @@ Ces classes vous permettent de personnaliser la journalisation.
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogEntry.html" format="html" scope="external"> PTLogEntry</a> </td> 
-   <td colname="2" rowsep="0"> Classe qui définit un journal d’entrée et contient des informations sur un message journal. </td> 
+   <td colname="2" rowsep="0"> Classe qui définit un journal d'entrée et contient des informations sur un message de journal. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
@@ -32,7 +32,7 @@ Ces classes vous permettent de personnaliser la journalisation.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocole. Méthodes requises pour implémenter une journalisation personnalisée pour le SDK TVSDK. </td> 
+   <td colname="2"> Protocole. Méthodes requises pour implémenter une journalisation personnalisée pour TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>
