@@ -14,7 +14,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
 Pour créer un lecteur de base à l’aide de l’interface utilisateur :
 
-1. Créez une instance `<div>` pour votre instance de lecteur.
+1. Créez une instance `<div>` pour votre lecteur.
 
    Par exemple :
 
@@ -33,7 +33,7 @@ Pour créer un lecteur de base à l’aide de l’interface utilisateur :
    </script>
    ```
 
-   Lors de la création du lecteur, une classe CSS de `<div>` est attribuée à l’ `ptp-main-video-div-style`élément spécifié. Le modèle DOM résultant s’affiche comme suit :
+   Lors de la création du lecteur, une classe CSS de `<div>` l’élément `ptp-main-video-div-style`spécifié est attribuée à l’élément spécifié. Le modèle DOM obtenu ressemble à ceci :
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -70,7 +70,7 @@ Pour créer un lecteur de base à l’aide de l’interface utilisateur :
    </div>
    ```
 
-L’objet renvoyé par l’appel `ptp.videoPlayer()` fournit un comportement qui englobe l’API du lecteur multimédia TVSDK et permet le contrôle programmatique de la lecture. Lorsque vous effectuez des appels sur l’instance du lecteur multimédia, l’interface utilisateur se met à jour en fonction des  déclenchées par le lecteur multimédia :
+L’objet renvoyé par appel `ptp.videoPlayer()` fournit un comportement qui encapsule l’API du lecteur multimédia TVSDK et permet le contrôle programmatique de la lecture. Lorsque vous effectuez des appels sur l’instance du lecteur multimédia, l’interface utilisateur se met à jour en fonction des événements déclenchés par le lecteur multimédia :
 
 ```js
 <script> 
