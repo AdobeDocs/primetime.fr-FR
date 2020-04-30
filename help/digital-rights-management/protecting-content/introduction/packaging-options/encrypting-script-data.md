@@ -10,7 +10,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 # Chiffrement des données de script {#encrypting-script-data}
 
-Cette option de création de package indique si les données de script incorporées dans le contenu sont chiffrées.
+Cette option d’assemblage indique si les données de script incorporées dans le contenu sont chiffrées.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
