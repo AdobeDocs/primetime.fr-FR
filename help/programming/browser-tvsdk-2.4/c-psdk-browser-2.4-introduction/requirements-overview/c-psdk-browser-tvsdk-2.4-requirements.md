@@ -12,13 +12,13 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 # Présentation {#requirements-overview}
 
-Le SDK du navigateur requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
+Le navigateur TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
 
-La version du SDK du navigateur comprend les lecteurs suivants :
+La version de Browser TVSDK inclut les lecteurs suivants :
 
 * `Primetime.js` pour HLS sur ordinateur et mobile
 
-Les lecteurs comprennent les API de référence suivantes :
+Les lecteurs incluent les API de référence suivantes :
 
 * `Primetime.js` SDK du navigateur
 * API JavaScript pour la lecture principale
