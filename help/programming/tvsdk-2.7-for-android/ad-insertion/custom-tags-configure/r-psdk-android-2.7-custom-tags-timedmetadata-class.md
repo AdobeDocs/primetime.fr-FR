@@ -5,7 +5,7 @@ seo-title: Classe de métadonnées minutées
 title: Classe de métadonnées minutées
 uuid: 45bd0d9f-3641-4041-905a-a36658c8c9ce
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: ''
 
 ---
 
@@ -28,30 +28,30 @@ La classe fournit les éléments suivants :
   <tr> 
    <td colname="col1"> <span class="codeph"> id </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>Identifiant unique des métadonnées temporisées. </p> <p>Cette valeur est généralement extraite de l’attribut indice/ID de balise. Sinon, une valeur aléatoire unique est fournie. Utilisez <span class="codeph"> getId </span>. </p> </td> 
+   <td colname="col2"> <p>Identificateur unique des métadonnées temporisées. </p> <p>Cette valeur est généralement extraite de l’attribut ID de balise/indice. Sinon, une valeur aléatoire unique est fournie. Utilisez <span class="codeph"> getId </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> métadonnées </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
    <td colname="col02"> Métadonnées </td> 
-   <td colname="col2"> <p>Informations traitées/extraites de la balise personnalisée playlist/manifest. Utilisez <span class="codeph"> getMetadata </span>. </p> </td> 
+   <td colname="col2"> <p>Informations traitées/extraites de la liste de lecture/balise personnalisée manifest. Utilisez <span class="codeph"> getMetadata </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> Chaîne </td> 
-   <td colname="col2"> <p>Nom des métadonnées minutées. Si le type est <span class="codeph"> BALISE </span>, la valeur représente le nom du repère/de la balise. Si le type est <span class="codeph"> ID3 </span>, il est nul. Utilisez <span class="codeph"> getName </span>. </p> </td> 
+   <td colname="col2"> <p>Nom des métadonnées temporisées. Si le type est <span class="codeph"> TAG </span>, la valeur représente le nom de la balise/indice. Si le type est <span class="codeph"> ID3 </span>, il est nul. Utilisez <span class="codeph"> getName </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> time </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> <p>Position temporelle, en millisecondes, par rapport à la  du contenu principal où sont présentes ces métadonnées minutées dans le flux. Utilisez <span class="codeph"> getTime </span>. </p> </td> 
+   <td colname="col2"> <p>Position temporelle, en millisecondes, par rapport au début du contenu principal où ces métadonnées temporisées sont présentes dans le flux. Utilisez <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> type </span> </td> 
    <td colname="col02"> Type </td> 
    <td colname="col2"> <p>Type des métadonnées temporisées. Utilisez <span class="codeph"> getType </span>. 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
-      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">BALISE : indique que les métadonnées minutées ont été créées à partir d’une balise dans la liste de lecture/le manifeste. </li> 
-      <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 : indique que les métadonnées minutées ont été créées à partir d’une balise ID3 dans le flux média. </li> 
+      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">BALISE : indique que les métadonnées minutées ont été créées à partir d’une balise dans la liste de lecture/manifeste. </li> 
+      <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 - indique que les métadonnées minutées ont été créées à partir d’une balise ID3 dans le flux média. </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 
@@ -59,13 +59,13 @@ La classe fournit les éléments suivants :
 
 <!--<a id="section_737CC47997F74F80A3C5C6171ADE120E"></a>-->
 
-Tenez compte des points suivants :
+Souvenez-vous des points suivants :
 
-* TVSDK extrait automatiquement le d’attributs en paires clé-valeur et stocke les attributs dans la propriété de métadonnées.
+* TVSDK extrait automatiquement la liste d’attributs en paires clé-valeur et stocke les attributs dans la propriété metadata.
 
    >[!TIP]
    >
-   >Les données complexes contenues dans les balises personnalisées du manifeste, telles que les chaînes avec des caractères spéciaux, doivent être placées entre guillemets. Par exemple:   >
+   >Les données complexes contenues dans les balises personnalisées du manifeste, telles que les chaînes contenant des caractères spéciaux, doivent être placées entre guillemets. Par exemple:   >
    >
    >
    ```>
@@ -76,7 +76,7 @@ Tenez compte des points suivants :
 
 
 
-* Si l’ du échoue en raison d’un format de balise personnalisé, la propriété de métadonnées est vide et votre application doit extraire les informations réelles. Dans ce cas, aucune erreur n’est générée.
+* Si l’extraction échoue en raison d’un format de balise personnalisé, la propriété metadata est vide et votre application doit extraire les informations réelles. Dans ce cas, aucune erreur n’est générée.
 
 <table id="table_1BAE98BF23F641A3A5709EBE37B327F6"> 
  <thead> 
@@ -88,15 +88,15 @@ Tenez compte des points suivants :
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3} </span> </td> 
-   <td colname="col2"> <p>Types possibles pour les métadonnées minutées. </p> </td> 
+   <td colname="col2"> <p>Types possibles pour les métadonnées temporisées. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type, long time, long id, nom de chaîne, métadonnées); </span> </td> 
-   <td colname="col2"> <p>Constructeur par défaut (time est l’heure locale du flux). </p> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata (type, long time, long id, nom de chaîne, métadonnées); </span> </td> 
+   <td colname="col2"> <p>Constructeur par défaut (heure correspond à l’heure locale du flux). </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
-   <td colname="col2"> <p>Position temporelle, par rapport au  du contenu principal, où ces métadonnées ont été insérées dans le flux. </p> </td> 
+   <td colname="col2"> <p>Position temporelle, par rapport au début du contenu principal, où ces métadonnées ont été insérées dans le flux. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 
@@ -112,7 +112,7 @@ Tenez compte des points suivants :
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> public String getName(); </span> </td> 
-   <td colname="col2"> <p>Renvoie le nom du repère, qui est généralement le nom de la balise HLS. </p> </td> 
+   <td colname="col2"> <p>Renvoie le nom du repère, qui est généralement le nom de balise HLS. </p> </td> 
   </tr> 
  </tbody> 
 </table>
