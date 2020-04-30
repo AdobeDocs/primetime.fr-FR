@@ -14,7 +14,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Vous pouvez configurer un contrôle d’interface utilisateur pour régler le volume de la vidéo.
 
-1. Dans la routine de rappel pour l&#39;élément d&#39;interface de contrôle du volume, vérifiez que le lecteur est dans un état valide pour cette commande.
+1. Dans la routine de rappel pour l&#39;élément d&#39;interface de contrôle de volume, assurez-vous que le lecteur est dans un état valide pour cette commande.
 
    >[!TIP]
    >
