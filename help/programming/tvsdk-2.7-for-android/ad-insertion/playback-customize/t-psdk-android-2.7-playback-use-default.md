@@ -10,11 +10,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# Utiliser le comportement de lecture par défaut {#use-the-default-playback-behavior}
+# Utiliser le comportement de lecture par défaut  {#use-the-default-playback-behavior}
 
 Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
 
-1. Pour utiliser des comportements par défaut, effectuez l’une des  de suivantes :
+1. Pour utiliser des comportements par défaut, effectuez l’une des tâches suivantes :
 
    * Si vous implémentez votre propre `AdvertisingFactory` classe, renvoyez la valeur null pour `createAdPolicySelector`.
 
@@ -24,13 +24,13 @@ Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
 
 Vous pouvez personnaliser ou remplacer les comportements publicitaires.
 
-Avant de personnaliser ou de remplacer les comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec TVSDK.
+Avant de personnaliser ou de remplacer des comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec TVSDK.
 
 * Implémentez l’ `AdPolicySelector` interface et toutes ses méthodes.
 
    Cette option est recommandée si vous devez remplacer **tous les** comportements publicitaires par défaut.
 
-* Etendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+* Étendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
 
    Cette option est recommandée si vous ne devez remplacer que **certains** comportements par défaut.
 
@@ -41,7 +41,7 @@ Pour personnaliser les comportements publicitaires :
 
    >[!NOTE]
    >
-   >Les stratégies publicitaires personnalisées enregistrées au début de la lecture sont effacées lorsque l’ `MediaPlayer` instance est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
+   >Les stratégies publicitaires personnalisées qui sont enregistrées au début de la lecture sont effacées lorsque l’ `MediaPlayer` instance est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
 
    Par exemple :
 
