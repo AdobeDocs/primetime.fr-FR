@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez utiliser plusieurs résolutions de contenu pour gérer différentes opérations de chronologie.
-seo-description: Vous pouvez utiliser plusieurs résolutions de contenu pour gérer différentes opérations de chronologie.
-seo-title: Résolveurs de contenu pour la suppression/remplacement d’annonces
-title: Résolveurs de contenu pour la suppression/remplacement d’annonces
+description: Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
+seo-description: Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
+seo-title: Résolveurs de contenu pour suppression/remplacement d’annonces
+title: Résolveurs de contenu pour suppression/remplacement d’annonces
 uuid: 2954ce0f-aed2-4a85-8e53-d4e89d1497b6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,9 +10,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Résolveurs de contenu pour la suppression/remplacement d’annonces {#content-resolvers-for-ad-deletion-replacement}
+# Résolveurs de contenu pour suppression/remplacement d’annonces {#content-resolvers-for-ad-deletion-replacement}
 
-Vous pouvez utiliser plusieurs résolutions de contenu pour gérer différentes opérations de chronologie.
+Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
 
 ```java
 List<ContentResolver> contentResolvers = new ArrayList<ContentResolver>(); 
