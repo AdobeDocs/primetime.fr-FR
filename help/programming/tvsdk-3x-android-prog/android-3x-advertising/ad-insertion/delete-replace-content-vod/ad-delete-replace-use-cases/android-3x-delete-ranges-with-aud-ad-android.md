@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez supprimer de la chronologie les plages de dates comprises entre le début et la fin dans localTime.
-seo-description: Vous pouvez supprimer de la chronologie les plages de dates comprises entre le début et la fin dans localTime.
+description: Vous pouvez supprimer de la chronologie les plages de temps comprises entre le début et la fin dans l’heure locale.
+seo-description: Vous pouvez supprimer de la chronologie les plages de temps comprises entre le début et la fin dans l’heure locale.
 seo-title: Supprimer des plages
 title: Supprimer des plages
 uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
@@ -12,15 +12,15 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 # Supprimer des plages {#delete-ranges}
 
-Vous pouvez supprimer `TimeRanges` entre `begin` et `end` dans `localTime` le plan de montage chronologique.
+Vous pouvez supprimer `TimeRanges` entre `begin` et `end` dans `localTime` la chronologie.
 
 >[!TIP]
 >
->Pour supprimer uniquement certaines plages du contenu, créez une `CustomRangeMetadata` instance et spécifiez le type comme `DELETE` opération avec les plages personnalisées définies.
+>Pour supprimer uniquement certaines plages du contenu, créez une `CustomRangeMetadata` instance et spécifiez le type comme une `DELETE` opération avec les plages personnalisées définies.
 
 Le mappage publicitaire doit être utilisé comme défini par le serveur publicitaire.
 
-1. Pour supprimer des plages avec une publicité Adobe Primetime pour la prise de décision publicitaire :
+1. Pour supprimer des plages à l’aide d’une publicité de prise de décision publicitaire Adobe Primetime, procédez comme suit :
 
    ```
    {   
