@@ -1,8 +1,8 @@
 ---
-description: Les gestionnaires de  de vous permettent de répondre aux  de TVSDK.
-seo-description: Les gestionnaires de  de vous permettent de répondre aux  de TVSDK.
-seo-title: 'Mise en oeuvre des écouteurs et des rappels de '
-title: 'Mise en oeuvre des écouteurs et des rappels de '
+description: Les gestionnaires de Événements vous permettent de répondre aux événements TVSDK.
+seo-description: Les gestionnaires de Événements vous permettent de répondre aux événements TVSDK.
+seo-title: Mise en oeuvre des écouteurs et des rappels de événement
+title: Mise en oeuvre des écouteurs et des rappels de événement
 uuid: f186b39e-e634-4f64-977d-279147d76c5c
 translation-type: tm+mt
 source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
@@ -10,31 +10,31 @@ source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
 ---
 
 
-# Mise en oeuvre des écouteurs et des rappels de {#implement-event-listeners-and-callbacks}
+# Mise en oeuvre des écouteurs et des rappels de événement  {#implement-event-listeners-and-callbacks}
 
-Les gestionnaires de  de vous permettent de répondre aux  de TVSDK.
+Les gestionnaires de Événements vous permettent de répondre aux événements TVSDK.
 
-Lorsqu&#39;un se produit, le mécanisme de  de TVSDK appelle votre gestionnaire de enregistré, lui transmettant les informations de l&#39;.
+Lorsqu&#39;un événement se produit, le mécanisme de événement de TVSDK appelle votre gestionnaire de événements enregistré, en lui transmettant les informations du événement.
 
-TVSDK définit les écouteurs comme des interfaces internes publiques dans l’ `MediaPlayer` interface.
+TVSDK définit les écouteurs comme des interfaces internes publiques à l’intérieur de l’ `MediaPlayer` interface.
 
-Votre application doit mettre en oeuvre des écouteurs de  pour tout TVSDK  qui affecte votre application.
+Votre application doit mettre en oeuvre des écouteurs de événement pour tous les événements TVSDK qui affectent votre application.
 
-1. Déterminez quel  votre application doit écouter.
+1. Déterminez quels événements votre application doit écouter.
 
-   *  de requis : Écoute tous les  de lecture.
+   * événements requis : Prêtez attention à tous les événements de lecture.
 
       >[!IMPORTANT]
       >
-      >Prêtez attention au  de changement d’état, qui se produit lorsque l’état du lecteur change d’une manière que vous devez connaître. Les informations qu’il fournit incluent des erreurs qui peuvent affecter les actions de votre lecteur.
+      >Prêtez attention au événement de changement d’état qui se produit lorsque l’état du lecteur change d’une manière que vous devez connaître. Les informations qu’il fournit incluent des erreurs qui peuvent affecter les actions futures de votre lecteur.
 
-   * Pour d’autres , selon votre application, reportez-vous à la page [Résumé](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)du du lecteur Primetime.
+   * Pour les autres événements, en fonction de votre application, voir le résumé [des événements du lecteur](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)Primetime.
 
-1. Implémentez et ajoutez un écouteur de  pour chaque  de.
+1. Implémentez et ajoutez un écouteur de événement pour chaque événement.
 
-   Pour la plupart des,  TVSDK transmet les arguments aux auditeurs . Ces valeurs fournissent des informations sur le  du qui peuvent vous aider à décider de ce que vous devez faire ensuite. Le `MediaPlayerEvent`  tout le  qui `MediaPlayer` envoie. Pour plus d’informations, reportez-vous à la section [Résumé](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)du du lecteur Primetime.
+   Pour la plupart des événements, TVSDK transmet les arguments aux auditeurs du événement. Ces valeurs fournissent des informations sur le événement qui peuvent vous aider à décider de la suite à donner. La `MediaPlayerEvent` énumération liste tous les événements qui `MediaPlayer` sont distribués. Pour plus d’informations, voir Résumé [des événements du lecteur](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md)Primetime.
 
-   Par exemple, si `mPlayer` est une instance de `MediaPlayer`, voici comment vous pouvez ajouter et structurer un écouteur de  :
+   Par exemple, si `mPlayer` est une instance de `MediaPlayer`, voici comment vous pouvez ajouter et structurer un écouteur de événement :
 
    ```java
    mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -49,13 +49,13 @@ Votre application doit mettre en oeuvre des écouteurs de  pour tout TVSDK  qui 
    }); 
    ```
 
-## Ordre du de lecture {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## Ordre des événements de lecture {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDK envoie des /notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions basées sur des  dans la séquence prévue.
+TVSDK distribue des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
 
-Les exemples suivants montrent l’ordre de certains  qui se produisent pendant la lecture.
+Les exemples suivants montrent l’ordre de certains événements survenant pendant la lecture.
 
-Lors du chargement réussi d’une ressource multimédia via `MediaPlayer.replaceCurrentResource`, l’ordre des  est le suivant :
+Lors du chargement réussi d&#39;une ressource multimédia par `MediaPlayer.replaceCurrentResource`l&#39;intermédiaire de, l&#39;ordre des événements est le suivant :
 
 1. `MediaPlayerEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.INITIALIZING`
 
@@ -63,29 +63,29 @@ Lors du chargement réussi d’une ressource multimédia via `MediaPlayer.replac
 
 >[!TIP]
 >
->Chargez votre ressource multimédia sur le thread principal. Si vous chargez une ressource multimédia sur un thread d’arrière-plan, cette opération ou les opérations suivantes peuvent renvoyer une erreur, telle que `MediaPlayerException`et quitter.
+>Chargez votre ressource multimédia sur le thread principal. Si vous chargez une ressource multimédia sur un thread en arrière-plan, cette opération ou les opérations suivantes peuvent générer une erreur, telle que `MediaPlayerException`et quitter.
 
-Lors de la préparation de la lecture `MediaPlayer.prepareToPlay`, l’ordre des  est le suivant :
+Lors de la préparation de la lecture à travers `MediaPlayer.prepareToPlay`la vidéo, l’ordre des événements est le suivant :
 
 1. `MediaPlayerEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayerEvent.TIMELINE_UPDATED` si des publicités ont été insérées.
 1. `MediaPlayerEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.PREPARED`
 
-Pour les flux en direct/linéaires, pendant la lecture au fur et à mesure que la fenêtre de lecture avance et que des opportunités supplémentaires sont résolues, l’ordre des  est le suivant :
+Pour les flux en direct/linéaires, pendant la lecture, à mesure que la fenêtre de lecture avance et que des opportunités supplémentaires sont résolues, l’ordre des événements est le suivant :
 
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` si des publicités ont été insérées
 
-## Ordre des publicitaires {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Ordre des événements publicitaires {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-Lorsque votre lecture comprend de la publicité, TVSDK envoie des /notifications dans des séquences généralement attendues. Votre lecteur peut implémenter des actions basées sur des  dans la séquence prévue.
+Lorsque la lecture comprend de la publicité, TVSDK envoie des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions basées sur des événements dans la séquence prévue.
 
-Lors de la lecture des publicités, l’ordre des  est le suivant :
+Lors de la lecture des publicités, l’ordre des événements est le suivant :
 
 * `MediaPlayerEvent.AD_RESOLUTION_COMPLETE`
 
-Les  suivantes sont distribuées pour chaque publicité durant la coupure publicitaire :
+Les événements suivants sont distribués pour chaque publicité au cours de la coupure publicitaire :
 
 * `MediaPlayerEvent.AD_BREAK_START`
 * `MediaPlayerEvent.AD_START`
@@ -94,7 +94,7 @@ Les  suivantes sont distribuées pour chaque publicité durant la coupure public
 * `MediaPlayerEvent.AD_COMPLETE`
 * `MediaPlayerEvent.AD_BREAK_COMPLETE`
 
-L’exemple suivant illustre une progression type du de lecture d’annonce :
+L’exemple suivant montre une progression type des événements de lecture publicitaire :
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.AD_RESOLUTION_COMPLETE, new AdResolutionCompleteEventListener() { 
@@ -135,12 +135,12 @@ mediaPlayer.addEventListener(MediaPlayerEvent.AD_CLICK, new AdClickedEventListen
     });
 ```
 
-## Ordre du DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## Ordre des événements DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
-TVSDK distribue des  de gestion des droits numériques (DRM) en réponse aux opérations liées à la gestion des droits numériques, comme lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut implémenter des actions en réponse à ces  de.
+TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut implémenter des actions en réponse à ces événements.
 
-Pour être informé de tous les  de DRM, écoutez `MediaPlayerEvent.DRM_METADATA`. TVSDK distribue des DRM supplémentaires par l’intermédiaire de la `DRMManager` classe.
+Pour être averti de tous les événements liés à la gestion des droits numériques, écoutez `MediaPlayerEvent.DRM_METADATA`. TVSDK distribue d’autres événements DRM par l’intermédiaire de la `DRMManager` classe.
 
-## Ordre du de chargeur {#section_5638F8EDACCE422A9425187484D39DCC}
+## Ordre des événements du chargeur {#section_5638F8EDACCE422A9425187484D39DCC}
 
-TVSDK est distribué `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` lorsque le de chargeur se produit.
+TVSDK distribue des messages `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` lorsque des événements de chargeur se produisent.
