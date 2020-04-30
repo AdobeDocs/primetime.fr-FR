@@ -12,7 +12,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 # Notes de mise à jour de Primetime {#release-notes}
 
 + [Présentation des notes de mise à jour](home.md)
-+ Insertion d’annonce dynamique Primetime {#ptai}
++ Insertion d’annonces dynamiques Primetime {#ptai}
    + [Notes de mise à jour de PTAI 20.3.3](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK pour iOS {#tvsdk-ios}
@@ -28,10 +28,10 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 + TVSDK pour HLS de bureau {tvsdk-desktop-hls}
    + [Notes de mise à jour de TVSDK 1.4 pour Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
-   + [Versions 2 de Primetime Offline Packager](offline-packager-2x-release-note.md)
+   + [Versions de Primetime Offline Packager version 2](offline-packager-2x-release-note.md)
 + Serveur de diffusion en continu Primetime {#streaming-server}
    + [Versions 1 de Primetime Streaming Server](primetime-streaming-server-1x.md)
 + TVSDK pour Playstation 4 {#tvsdk-playstation}
    + [Notes de mise à jour de TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
-+ Gestion des droits numériques {#drm}
++ Digital Rights Management {#drm}
    + [Notes de mise à jour de DRM 5.3.1](drm-531-release-notes.md)
