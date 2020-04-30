@@ -14,25 +14,25 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Vous pouvez mettre en liste blanche vos applications iOS à l’aide de l’outil machotools d’Adobe.
 
-En règle générale, lorsque vous terminez une application TVSDK, vous pouvez utiliser les outils de ligne de commande DRM d’Adobe Primetime pour mettre votre application en liste blanche.
+En règle générale, lorsque vous exécutez une application TVSDK, vous pouvez utiliser les outils de ligne de commande DRM d’Adobe Primetime pour mettre votre application en liste blanche.
 
 >[!TIP]
 >
 >Vous pouvez également utiliser ces outils pour créer des stratégies DRM et chiffrer du contenu.
 
-La liste blanche de votre application garantit que le contenu protégé ne peut être lu que dans votre lecteur vidéo. Toutefois, la liste blanche d’une application iOS requiert que vous exécutiez une procédure spéciale compatible avec les règles d’envoi des applications d’Apple.
+La liste blanche de votre application garantit que le contenu protégé ne peut être lu que dans votre lecteur vidéo. Cependant, la liste blanche d’une application iOS nécessite que vous effectuiez une procédure spéciale qui fonctionne avec les règles d’envoi des applications d’Apple.
 
 Avant d’envoyer une application iOS, vous devez la signer et la publier sur Apple.
 
 >[!NOTE]
 >
->Apple retire la signature de votre développeur et signe à nouveau l’application avec son propre certificat.
+>Apple dépouille la signature de votre développeur et signe à nouveau l’application avec son propre certificat.
 
-En raison de la nouvelle signature, les informations de liste blanche que vous avez générées avant d’être envoyées à l’App Store d’Apple ne sont pas utilisables.
+En raison de la nouvelle signature, les informations de liste blanche que vous avez générées avant de les envoyer à l’App Store d’Apple ne sont pas utilisables.
 
-Pour utiliser cette stratégie d’envoi, Adobe a créé un `machotools` outil qui imprime l’empreinte digitale de votre application iOS afin de créer une valeur digest, de signer cette valeur et d’injecter cette valeur dans votre application iOS. Une fois votre application iOS identifiée, vous pouvez l’envoyer à l’Apple App Store. Lorsqu’un utilisateur exécute votre application à partir de l’App Store, le DRM Primetime effectue un calcul à l’exécution de l’empreinte digitale de l’application et la confirme avec la valeur de prétraitement qui a été précédemment injectée dans l’application. Si l’empreinte correspond, l’application est confirmée comme étant en liste blanche et le contenu protégé est autorisé à être lu.
+Pour utiliser cette stratégie d’envoi, Adobe a créé un `machotools` outil qui imprime votre application iOS pour créer une valeur digest, la signer et l’insérer dans votre application iOS. Une fois votre application iOS empreinte digitale identifiée, vous pouvez la soumettre à l’Apple App Store. Lorsqu’un utilisateur exécute votre application à partir de l’App Store, Primetime DRM effectue un calcul à l’exécution de l’empreinte digitale de l’application et la confirme avec la valeur digest qui a été précédemment injectée dans l’application. Si l’empreinte correspond, l’application est confirmée en tant que liste blanche et le contenu protégé est autorisé à lire.
 
-L’outil Adobe `machotools` est inclus dans le SDK iOS TVSDK, dans le fichier [!DNL [...]/tools/DRM].
+L’outil Adobe `machotools` est inclus dans le SDK iOS TVSDK, dans le fichier [ ! DNL [...]/tools/DRM].
 
 Pour utiliser `machotools`:
 
@@ -46,8 +46,8 @@ Pour utiliser `machotools`:
 
 1. Lorsque vous y êtes invité, saisissez un mot de passe pour protéger la clé privée.
 
-   Les mots de passe doivent contenir au moins 12 caractères et les caractères doivent contenir un mélange de caractères ASCII majuscules et minuscules et de nombres.
-1. Pour utiliser OpenSSL pour générer un mot de passe fort pour vous, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Les mots de passe doivent contenir au moins 12 caractères et les caractères doivent contenir un mélange de caractères ASCII majuscules et minuscules et de chiffres.
+1. Pour utiliser OpenSSL pour générer un mot de passe fort pour vous, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl rand -base64 8
@@ -55,13 +55,13 @@ Pour utiliser `machotools`:
 
 1. Générer une demande de signature de certificat (CSR).
 
-   Pour utiliser OpenSSL pour générer une page CSR, ouvrez une fenêtre de commande et saisissez ce qui suit :
+   Pour utiliser OpenSSL pour générer une CSR, ouvrez une fenêtre de commande et saisissez les informations suivantes :
 
    ```
    openssl req -new -key selfsigncert-ios.key -out selfsigncert-ios.csr -batch
    ```
 
-1. Signez le certificat par vous-même et entrez une durée.
+1. Signez le certificat par vous-même et entrez toute durée.
 
    L’exemple suivant donne une expiration de 20 ans :
 
@@ -97,10 +97,10 @@ Pour utiliser `machotools`:
    ```
 
 1. Créez une nouvelle stratégie DRM ou mettez à jour votre stratégie existante afin d’inclure la valeur de hachage de l’ID d’éditeur renvoyée.
-1. A l’aide de la [!DNL AdobePolicyManager.jar]méthode, créez une nouvelle stratégie DRM (mettez à jour votre stratégie existante) afin d’inclure la valeur de hachage de l’ID d’éditeur renvoyée, un ID d’application facultatif et les attributs de version min et max. dans le [!DNL flashaccess-tools.properties] fichier inclus.
+1. A l’aide de la [!DNL AdobePolicyManager.jar], créez une nouvelle stratégie DRM (mettez à jour votre stratégie existante) afin d’inclure la valeur de hachage de l’ID d’éditeur renvoyée, un ID d’application facultatif et les attributs de version minimale et maximale dans le [!DNL flashaccess-tools.properties] fichier inclus.
 
    ```
    java -jar libs/AdobePolicyManager.jar new app_whitelist.pol
    ```
 
-1. Créez un package du contenu à l’aide de la nouvelle stratégie DRM et confirmez la lecture du contenu autorisé dans votre application iOS.
+1. Créez un package du contenu à l’aide de la nouvelle stratégie DRM et vérifiez la lecture du contenu figurant sur la liste blanche dans votre application iOS.
