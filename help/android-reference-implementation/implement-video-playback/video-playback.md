@@ -12,10 +12,10 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 # Opérations essentielles de lecture vidéo {#essential-operations-of-video-playback}
 
-PlaybackManager fournit les opérations essentielles de la diffusion en flux continu HLS :
+PlaybackManager fournit les opérations essentielles de flux continu HLS :
 
-* Appelle le [gestionnaire d’événements](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)PlaybackManagerEventListener, qui peut répondre de manière appropriée aux  vidéo.
-* Fournit une opération de lecture telle que la lecture, la mise en pause et la recherche.
+* Appelle le [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html), qui peut répondre de manière appropriée aux événements vidéo.
+* Fournit des opérations de lecture telles que la lecture, la mise en pause et la recherche.
 * Renvoie les informations relatives au lecteur, telles que l’état du lecteur, la plage de lecture et le flux vidéo en direct.
 * Détermine si ABR est activé et définit les paramètres de contrôle ABR et buffer en fonction des données de configuration fournies.
 * Détermine si le contrôle de la mémoire tampon est activé et définit les paramètres de contrôle de la mémoire tampon en fonction des données de configuration fournies.
