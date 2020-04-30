@@ -1,18 +1,18 @@
 ---
 description: Ces classes décrivent votre lecteur multimédia et ses ressources.
 seo-description: Ces classes décrivent votre lecteur multimédia et ses ressources.
-seo-title: Classes du lecteur de médias
-title: Classes du lecteur de médias
+seo-title: Classes du lecteur multimédia
+title: Classes du lecteur multimédia
 uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
 
-# Classes du lecteur de médias {#media-player-classes}
+# Classes du lecteur multimédia {#media-player-classes}
 
-Vous pouvez utiliser l’API Objectif-C du lecteur Primetime pour personnaliser le comportement du lecteur.
+Vous pouvez utiliser l’API Objective-C du lecteur Primetime pour personnaliser le comportement du lecteur.
 
 Ces classes décrivent votre lecteur multimédia et ses ressources.
 
@@ -33,15 +33,15 @@ Ces classes décrivent votre lecteur multimédia et ses ressources.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDefaultMediaPlayerClientFactory.html" format="html" scope="external"> PTDefaultMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Implémentation par défaut de <span class="codeph"> PTMediaPlayerClientFactory</span> dans TVSDK. Il fournit les instances PTOpportunityResolver <span class="codeph"> ,</span>PTContentResolver <span class="codeph"> et</span>PTAdPolicySelector <span class="codeph"></span> disponibles. </td> 
+   <td colname="2"> Mise en oeuvre par défaut de <span class="codeph"> PTMediaPlayerClientFactory</span> dans TVSDK. Il fournit les instances <span class="codeph"> PTOpportunityResolver</span>, <span class="codeph"> PTContentResolver</span>et <span class="codeph"> PTAdPolicySelector</span> disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html" format="html" scope="external"> PTMediaPlayer</a></span> </td> 
-   <td colname="2">Définit le composant racine pour la structure du lecteur Primetime. <p>Les applications créent une instance de cette classe pour lire un média. Ce composant envoie des notifications pour que votre application connaisse l’état du lecteur à un moment donné. </p> </td> 
+   <td colname="2">Définit le composant racine de la structure du lecteur Primetime. <p>Les applications créent une instance de cette classe pour lire un média. Ce composant envoie des notifications pour informer votre application de l’état du lecteur à tout moment. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTMediaPlayerClientFactory.html" format="html" scope="external"> PTMediaPlayerClientFactory</a></span> </td> 
-   <td colname="2"> Protocole décrivant les méthodes qu’une fabrique de clients de lecteur multimédia personnalisée doit implémenter pour fournir les instances PTO <span class="codeph"> pportunityResolver</span> , <span class="codeph"> PTContentResolver</span> et <span class="codeph"> PTAdPolicySelector</span> disponibles. </td> 
+   <td colname="2"> Protocole qui décrit les méthodes qu’une fabrique de clients de lecteur de médias personnalisée doit implémenter pour fournir les <span class="codeph"> instances PTOpportunityResolver</span> , <span class="codeph"> PTContentResolver</span> et <span class="codeph"> PTAdPolicySelector</span> disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerItem.html" format="html" scope="external"> PTMediaPlayerItem</a></span> </td> 
@@ -49,24 +49,24 @@ Ces classes décrivent votre lecteur multimédia et ses ressources.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayerView.html" format="html" scope="external"> PTMediaPlayerView</a></span> </td> 
-   <td colname="2"> Gère le composant  de la structure du lecteur Primetime. </td> 
+   <td colname="2"> Gère le composant vue de la structure du lecteur Primetime. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaProfile.html" format="html" scope="external"> PTMediaProfile</a></span> </td> 
-   <td colname="2"> Représente le  d’un seul flux dans la liste de lecture des variantes. </td> 
+   <td colname="2"> Représente l’profil d’un seul flux dans la liste de lecture variante. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaSelectionOption.html" format="html" scope="external"> PTMediaSelectionOption</a></span> </td> 
-   <td colname="2">Représente une ressource multimédia audiovisuelle pour répondre à différentes préférences linguistiques, exigences d’accessibilité ou configurations d’applications personnalisées. Types d’options valides : 
+   <td colname="2">Représente une ressource multimédia audiovisuelle pour répondre à différentes préférences linguistiques, exigences d’accessibilité ou configurations d’application personnalisées. Types d'option valides : 
     <ul id="ul_p2q_gn2_2m"> 
-     <li id="li_46BE5AE49732481FB6D336FFF896E5AD">Sous-titres (<span class="codeph"> PTMediaSelectionOptionTypeSous-titre</span>) </li> 
+     <li id="li_46BE5AE49732481FB6D336FFF896E5AD">Sous-titres (<span class="codeph"> PTMediaSelectionOptionTypeSubtitle</span>) </li> 
      <li id="li_6CEADCA12D4A48B7AE4A539985F32119">Autre son (<span class="codeph"> PTMediaSelectionOptionTypeAudio</span>) </li> 
      <li id="li_248D3D997F8A4B6E9B48869F84060D1F"> <p>Non défini (<span class="codeph"> PTMediaSelectionOptionTypeUndefined</span>) </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> , classe </span> , <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"> protocole PTOpportunityResolver</a></span> </td> 
-   <td colname="2"> Classe utilisée pour le traitement de signaux in-manifest qui seront utilisés comme emplacements pour le processus de prise de décision et d’Adobe Primetime. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTOpportunityResolver.html" format="html" scope="external"> PTOpportunityResolver</a> , </span> classe, <span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolver.html" format="html" scope="external"></a> protocole PTOpportunityResolver</span> </td> 
+   <td colname="2"> Classe utilisée pour le traitement d’indices manifestes qui seront utilisés comme emplacements pour le processus de prise de décision publicitaire Adobe Primetime. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTOpportunityResolverDelegate.html" format="html" scope="external"> PTOpportunityResolverDelegate</a></span> </td> 
@@ -81,8 +81,8 @@ Ces classes décrivent votre lecteur multimédia et ses ressources.
    <td colname="2"> Expose les paramètres généraux de TVSDK et permet à une application de s’abonner à des balises HLS personnalisées. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTTextStyleRule.html" format="html" scope="external"> PTTextStyleRule</a></span> </td> 
-   <td colname="2"> Définit des constantes représentant les clés d’attribut de style de texte qui forment le dictionnaire des règles. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTTextStyleRule.html" format="html" scope="external"> RègleStyleTexte</a></span> </td> 
+   <td colname="2"> Définit des constantes qui représentent les clés d'attribut de style de texte qui forment le dictionnaire de règles. </td> 
   </tr> 
  </tbody> 
 </table>
