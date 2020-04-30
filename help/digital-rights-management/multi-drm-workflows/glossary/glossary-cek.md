@@ -22,19 +22,19 @@ Ce guide présente, dans les notes et les exemples de message d’erreur, de fic
 * `<CEK>`
 * `[YOUR CONTENT KEY]`
 
-Les noms de fichier d’un CEK s’affichent comme suit :
+Les noms de fichier pour un CEK sont affichés comme suit :
 
 * `keyfile.bin`
 * `creds/fairplaybin`
 * `Jaigo_DASH/_info/key.B64.random`
 
-Le CEK lui-même peut être stocké dans un système de gestion des clés ainsi que chiffré. Ce guide fait référence à l’index de  de  en tant que CEKSID de l’ID de de la  CEK. Le terme clé de chiffrement de clé (KEK) fait référence à la clé de chiffrement de second niveau, et le terme `ek` fait référence à la valeur de ce chiffrement.
-Certains appels utilisent à la fois le CEK et le CEK  l’ID de CEKSID, et le CEK récupéré à partir du  doit correspondre au CEK fourni dans l’appel.
-Pour HLS Offline avec FairPlay, il existe également un `persistentContentKey` paramètre qui peut être défini pour expirer.
+Le CEK lui-même peut être stocké dans un système de gestion des clés ainsi que crypté. Ce guide fait référence à l’index d’enregistrement en tant que CEKSID ID d’Enregistrement CEK. Le terme clé de chiffrement de clé (KEK) fait référence à la clé de chiffrement de second niveau et le terme `ek` fait référence à la valeur de ce chiffrement.
+Certains appels utilisent à la fois le CEK et le CEKSID d’ID d’Enregistrement du CEK, et le CEK récupéré de l’enregistrement doit correspondre au CEK fourni dans l’appel.
+Pour HLS Offline avec FairPlay, il existe également un `persistentContentKey` qui peut être défini pour expirer.
 
-## Clé de chiffrement de contenu  ID de {#content-encryption-key-storage-id}
+## ID d’Enregistrement clé de chiffrement de contenu {#content-encryption-key-storage-id}
 
-La clé de chiffrement de contenu  l’ID de (CEKSID) est un identifiant permettant de récupérer une clé de chiffrement de contenu à partir d’un système de gestion des clés.
+L’Enregistrement de clé de chiffrement de contenu (CEKSID) est un identifiant permettant de récupérer une clé de chiffrement de contenu à partir d’un système de gestion des clés.
 
 Le CEKSID est également appelé
 * ID de clé
