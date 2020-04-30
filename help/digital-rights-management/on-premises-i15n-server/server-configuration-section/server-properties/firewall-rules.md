@@ -16,4 +16,4 @@ Pour sécuriser l’accès au serveur d’individualisation, seuls certains chem
 * [!DNL /flashaccess/status]
 * [!DNL /crossdomain.xml]
 
-Les chemins d’accès aux services, tels que [!DNL /flashaccess/admin/*] (par exemple, les pages d’état et d’administration) ne doivent être accessibles qu’à partir du pare-feu. Aucune partie du serveur de génération de clés ne doit être accessible en dehors du pare-feu.
+Les chemins d’accès aux services, tels que [!DNL /flashaccess/admin/*] (p. ex., les pages d’état et d’administration) ne doivent être accessibles que depuis le pare-feu. Aucune partie du serveur de génération de clés ne doit être accessible en dehors du pare-feu.
