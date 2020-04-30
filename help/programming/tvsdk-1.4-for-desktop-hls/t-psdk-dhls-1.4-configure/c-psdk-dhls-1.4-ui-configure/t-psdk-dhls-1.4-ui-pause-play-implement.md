@@ -15,8 +15,8 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
 
 1. Créez un bouton Pause/Lecture qui effectue les opérations suivantes.
-   1. Attendez que votre lecteur soit au moins dans l’état PRÉPARÉ.
-   1. Pour  lecture, appelez la méthode de lecture TVSDK :
+   1. Attendez que votre lecteur soit au moins en état PRÉPARÉ.
+   1. Pour début la lecture, appelez la méthode de lecture TVSDK :
 
       ```
       function play():void;
@@ -28,6 +28,6 @@ Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des bouto
       function pause():void;
       ```
 
-1. Utilisez le rappel pour le `MediaPlayerStatusChangeEvent.STATUS_CHANGED` afin de rechercher les erreurs ou d’effectuer d’autres actions appropriées.
+1. Utilisez le rappel du `MediaPlayerStatusChangeEvent.STATUS_CHANGED` événement pour rechercher les erreurs ou pour prendre d’autres mesures appropriées.
 
    TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur le changement d’état dans le rappel, y compris le nouveau statut, tel que PAUSED ou PLAYING.
