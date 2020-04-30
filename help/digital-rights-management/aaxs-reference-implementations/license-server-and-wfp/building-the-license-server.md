@@ -10,7 +10,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Création du serveur de licences {#building-the-license-server}
 
-Le serveur de licences d’implémentation de référence comprend des fichiers WAR pour le déploiement du serveur de licences. Il comprend également tout le code source du serveur de licences et un script de génération Ant (Référence Implementation\Server\refimpl\build-refimpl.xml) afin que vous puissiez facilement apporter des modifications au code.
+Le serveur de licences d’implémentation de référence comprend des fichiers WAR pour le déploiement du serveur de licences. Il comprend également tout le code source du serveur de licences et un script de création Ant (Référence Implementation\Server\refimpl\build-refimpl.xml) afin que vous puissiez facilement apporter des modifications au code.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
