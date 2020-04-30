@@ -25,8 +25,8 @@ Vous associez les exigences de sortie à des contraintes de pixels spécifiques.
 
 **Sortie numérique**
 
-Les exigences de sortie numérique peuvent spécifier des options restrictives, telles que &quot;la protection de sortie numérique est requise&quot; ou &quot;la lecture n’est pas autorisée&quot;. Les exigences de sortie peuvent également spécifier des options moins restrictives, telles que &quot;aucune protection ne doit être appliquée&quot; ou &quot;une protection numérique doit être utilisée si elle est disponible&quot;.
+La demande de sortie numérique peut spécifier des options restrictives, telles que &quot;la protection de sortie numérique est requise&quot; ou &quot;la lecture n’est pas autorisée&quot;. Les exigences de sortie peuvent également spécifier des options moins restrictives telles que &quot;aucune protection ne doit être appliquée&quot; ou &quot;une protection numérique doit être utilisée si elle est disponible&quot;.
 
 **Sortie analogique**
 
-Les connexions de sortie analogique sont plus simples que la sortie numérique ; elles consistent en une seule exigence de sortie.
+Les connexions de sortie analogique sont plus simples que la sortie numérique ; ils se composent d&#39;une seule exigence de production.
