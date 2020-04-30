@@ -1,6 +1,6 @@
 ---
-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces principal, le lecteur doit la demander au serveur secondaire. Le modèle VAST (Video Ad Serving Template) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaire lorsque la publicité est demandée.
-seo-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces principal, le lecteur doit la demander au serveur secondaire. Le modèle VAST (Video Ad Serving Template) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaire lorsque la publicité est demandée.
+description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
+seo-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
 seo-title: Annonces VAST
 title: Annonces VAST
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
@@ -12,17 +12,17 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Annonces VAST {#vast-ads}
 
-Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces principal, le lecteur doit la demander au serveur secondaire. Le modèle VAST (Video Ad Serving Template) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaire lorsque la publicité est demandée.
+Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
 
 Pour plus d’informations sur VAST, voir [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
-Le SDK du navigateur prend en charge les éléments publicitaires VAST suivants :
+Le navigateur TVSDK prend en charge les éléments publicitaires VAST suivants :
 
 ## Enveloppe et publicités intégrées {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 Les éléments suivants sont pris en charge :
 
-* **`wrapper`** Lorsque le lecteur doit contacter un serveur de publicité secondaire pour demander une publicité, l’élément wrapper fournit les informations de redirection. Un élément wrapper peut pointer vers plusieurs wrappers qui pointent finalement vers une publicité VAST.
+* **`wrapper`** Lorsque le lecteur doit contacter un serveur d’annonces secondaire pour demander une publicité, l’élément wrapper fournit les informations de redirection. Un élément wrapper peut pointer vers plusieurs wrappers qui pointent en fin de compte vers une publicité VAST.
 
 * **`inline`** Les éléments requis suivants sont pris en charge :
 
@@ -38,13 +38,13 @@ Les éléments suivants sont pris en charge :
 
 ## Créatifs {#section_0121F948CB074E49A8132D202786CAA4}
 
-Cet élément est un fichier qui fait partie d’une publicité VAST et qui contient un `creative` élément qui peut prendre en charge une publicité linéaire, une publicité non linéaire ou une publicité connexe. Dans l’ `creative` élément, les éléments `id`, `sequence`et `adId` sont pris en charge.
+Il s’agit d’un fichier qui fait partie d’une publicité VAST et qui contient un `creative` élément qui peut prendre en charge une publicité linéaire, une publicité non linéaire ou une publicité connexe. Dans l’ `creative` élément, les `id`, `sequence`et `adId` éléments sont pris en charge.
 
-Pour plus d&#39;informations sur les types de publicité, procédez comme suit :
+Pour plus d&#39;informations sur les types d&#39;annonces, consultez :
 
 * **Publicités** linéaires Les éléments suivants sont pris en charge :
 
-   * `TrackingEvent`, qui contient l’ `Tracking` élément .
+   * `TrackingEvent`, qui contient l’ `Tracking` élément.
       * `Duration`
       * `AdParameters`
       * `VideoClicks`, notamment :
@@ -75,7 +75,7 @@ Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expa
 
    * `Companion`
       [!TIP]
-Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth`et `expandedHeight` sont pris en charge.
+Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework``expandedWidth`et `expandedHeight` sont pris en charge.
 
       * `StaticResource`
       * `IFrameResource`
