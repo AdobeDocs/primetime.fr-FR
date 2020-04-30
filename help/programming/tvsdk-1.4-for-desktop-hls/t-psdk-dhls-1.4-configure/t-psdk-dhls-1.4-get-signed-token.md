@@ -1,6 +1,6 @@
 ---
-description: Le SDK d’exécution Flash requiert un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
-seo-description: Le SDK d’exécution Flash requiert un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
+description: Le TVSDK Flash Runtime a besoin d’un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
+seo-description: Le TVSDK Flash Runtime a besoin d’un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
 seo-title: Charger votre jeton signé
 title: Charger votre jeton signé
 uuid: 8760eab3-3d6d-47c6-9aa7-f64f6aa5ddcf
@@ -12,31 +12,31 @@ source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
 
 # Charger votre jeton signé {#load-your-signed-token}
 
-Le SDK d’exécution Flash requiert un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
+Le TVSDK Flash Runtime a besoin d’un jeton signé pour vérifier que vous disposez du droit d’appeler l’API TVSDK sur le domaine où réside votre application.
 
 1. Obtenez un jeton signé auprès de votre représentant Adobe pour chacun de vos domaines (où chaque domaine peut être un domaine spécifique ou un domaine générique).
 
-       Pour obtenir un jeton, fournissez à Adobe le domaine dans lequel votre application sera stockée ou chargée, ou, de préférence, le domaine sous forme de hachage SHA256. En retour, Adobe vous fournit un jeton signé pour chaque domaine. Ces jetons prennent l’une des formes suivantes :
+       Pour obtenir un jeton, fournissez à Adobe soit le domaine dans lequel votre application sera stockée ou chargée, soit, de préférence, le domaine en tant que hachage SHA256. En retour, Adobe vous fournit un jeton signé pour chaque domaine. Ces jetons prennent l’une des formes suivantes :
    
-   * Un [!DNL .xml] fichier agissant comme jeton pour un domaine unique ou un domaine générique.
+   * Un [!DNL .xml] fichier agissant comme jeton pour un seul domaine ou domaine générique.
 
       >[!NOTE]
       >
-      >Un jeton pour un domaine générique couvre ce domaine et tous ses sous-domaines. Par exemple, un jeton générique pour le domaine [!DNL mycompany.com] couvrirait également [!DNL vids.mycompany.com] et [!DNL private.vids.mycompany.com]; un jeton générique pour [!DNL vids.mycompany.com] couvrirait également [!DNL private.vids.mycompany.com]. *Les jetons de domaine génériques sont pris en charge uniquement pour certaines versions de Flash Player.*
+      >Un jeton pour un domaine générique couvre ce domaine et tous ses sous-domaines. Par exemple, un jeton générique pour le domaine [!DNL mycompany.com] couvrirait également [!DNL vids.mycompany.com] et [!DNL private.vids.mycompany.com]; un jeton générique pour [!DNL vids.mycompany.com] couvrirait également [!DNL private.vids.mycompany.com]. *Les jetons de domaine génériques ne sont pris en charge que pour certaines versions de Flash Player.*
 
-   * Un [!DNL .swf] fichier contenant des informations de jeton pour plusieurs domaines (à l’exclusion des caractères génériques) (uniques ou génériques), que votre application peut charger dynamiquement.
+   * Fichier [!DNL .swf] contenant des informations de jeton pour plusieurs domaines (sans inclure les caractères génériques) (unique ou générique), que votre application peut charger de manière dynamique.
 
 1. Stockez le fichier de jeton au même emplacement ou domaine que votre application.
 
    Par défaut, TVSDK recherche le jeton à cet emplacement. Vous pouvez également spécifier le nom et l’emplacement du jeton dans `flash_vars` votre fichier HTML.
 1. Si votre fichier de jeton est un fichier XML unique :
-   1. Utilisez `utils.AuthorizedFeaturesHelper.loadFrom` pour télécharger les données stockées à l’URL spécifiée (le fichier de jeton) et en extraire les `authorizedFeatures` informations.
+   1. Permet `utils.AuthorizedFeaturesHelper.loadFrom` de télécharger les données stockées à l’URL spécifiée (le fichier de jeton) et d’en extraire les `authorizedFeatures` informations.
 
-      Cette étape peut varier. Par exemple, vous souhaitez peut-être effectuer une authentification avant de démarrer l’application, ou vous pouvez recevoir le jeton directement à partir de votre système de  (CMS).
+      Cette étape peut varier. Par exemple, vous pouvez effectuer une authentification avant de démarrer l’application ou recevoir directement le jeton de votre système de gestion de contenu (CMS).
 
-   1. TVSDK distribue un `COMPLETED` si le chargement réussit ou un `FAILED` autrement. Prenez les mesures appropriées lorsque vous détectez l’un ou l’autre des .
+   1. TVSDK distribue un `COMPLETED` événement si la charge est réussie ou un `FAILED` événement dans le cas contraire. Prenez les mesures appropriées lorsque vous détectez l’un ou l’autre des événements.
 
-      Cela doit être une réussite pour que votre application fournisse les `authorizedFeatures` objets requis à TVSDK sous la forme d’un `MediaPlayerContext`.
+      Pour que votre application fournisse les `authorizedFeatures` objets requis à TVSDK sous la forme d’un `MediaPlayerContext`formulaire, cette opération doit être réussie.
    Cet exemple montre comment utiliser un [!DNL .xml] fichier à jeton unique.
 
    ```
@@ -54,18 +54,18 @@ Le SDK d’exécution Flash requiert un jeton signé pour vérifier que vous dis
 
 1. Si votre jeton est un [!DNL .swf] fichier :
    1. Définissez une `Loader` classe pour charger dynamiquement le [!DNL .swf] fichier.
-   1. Définissez le `LoaderContext` pour spécifier que le chargement doit se trouver dans le domaine d’application actuel, ce qui permet à TVSDK de choisir le jeton approprié dans le [!DNL .swf] fichier. Si `LoaderContext` n’est pas spécifié, l’action par défaut `Loader.load` consiste à charger le fichier .swf dans le domaine enfant du domaine actuel.
-   1. Prêtez attention au  COMPLETE, que TVSDK distribue si le chargement réussit.
+   1. Définissez le `LoaderContext` pour spécifier le chargement dans le domaine d’application actuel, ce qui permet à TVSDK de choisir le jeton approprié dans le [!DNL .swf] fichier. Si `LoaderContext` n’est pas spécifié, l’action par défaut de `Loader.load` est de charger le fichier .swf dans le domaine enfant du domaine actuel.
+   1. Prêtez attention au événement COMPLETE, que TVSDK distribue si le chargement réussit.
 
-      Écoutez également le ERROR et prenez les mesures appropriées.
-   1. Si le chargement réussit, utilisez la `AuthorizedFeaturesHelper` pour obtenir un `ByteArray` qui contient les données de sécurité codées PCKS-7.
+      Écoutez également le événement ERROR et prenez les mesures appropriées.
+   1. Si le chargement réussit, utilisez le `AuthorizedFeaturesHelper` pour obtenir un `ByteArray` qui contient les données de sécurité codées PCKS-7.
 
-      Ces données sont utilisées par l’API AVE V11 pour obtenir un accusé de réception d’autorisation de la part du lecteur d’exécution Flash. Si le tableau d’octets n’a aucun contenu, utilisez plutôt la procédure pour rechercher un fichier de jeton à domaine unique.
+      Ces données sont utilisées par l’API AVE V11 pour obtenir un accusé de réception d’autorisation de la part de Flash Runtime Player. Si le tableau d’octets ne contient aucun contenu, utilisez plutôt la procédure pour rechercher un fichier de jeton d’un seul domaine.
    1. Utilisez `AuthorizedFeatureHelper.loadFeatureFromData` pour obtenir les données requises à partir du tableau d’octets.
    1. Déchargez le [!DNL .swf] fichier.
    Les exemples suivants montrent comment utiliser un [!DNL .swf] fichier à jetons multiples.
 
-   **Exemple de jeton multiple 1 :**
+   **Exemple 1 à jetons multiples :**
 
    ```
    private function onApplicationComplete(event:FlexEvent):void { 
