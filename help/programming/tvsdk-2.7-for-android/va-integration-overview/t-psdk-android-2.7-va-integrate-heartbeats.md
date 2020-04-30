@@ -16,7 +16,7 @@ Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de 
 Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous disposez des éléments suivants :
 
 * TVSDK 2.5 pour Android.
-* Informations sur la configuration/initialisation
+* Informations sur la configuration / l’initialisation
 
    Contactez votre représentant Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
 
@@ -24,23 +24,23 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Important :  Ce nom de fichier de configuration JSON doit rester <span class="filepath"> ADBMobileConfig.json </span>. Le nom et le chemin d'accès de ce fichier de configuration ne peuvent pas être modifiés. Le chemin d’accès à ce fichier doit être <span class="filepath"> &lt;racine source&gt;/assets </span>. </p> </td> 
+   <td colname="col2"> <p>Important :  Ce nom de fichier de configuration JSON doit rester <span class="filepath"> ADBMobileConfig.json </span>. Impossible de modifier le nom et le chemin d'accès de ce fichier de configuration. Le chemin d’accès à ce fichier doit être <span class="filepath"> &lt;racine source&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi AppMeasurement </td> 
    <td colname="col2"> URL du point de terminaison de la collection principale d’Adobe Analytics (anciennement SiteCatalyst). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Point de terminaison du serveur de suivi vidéo </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est là que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi des est identique à celle du serveur de suivi des analyses. Pour plus d’informations sur la mise en oeuvre du service d’ID de, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
+   <td colname="col1"> Point de terminaison du serveur de suivi des analyses vidéo </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur la mise en oeuvre du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nom du compte </td> 
-   <td colname="col2"> Egalement appelé ID de suite de rapports (RSID). </td> 
+   <td colname="col2"> Connu également sous le nom d’identifiant de suite de rapports (RSID). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> ID d’organisation Marketing Cloud </td> 
-   <td colname="col2"> Valeur de chaîne requise pour l’instanciation du composant. </td> 
+   <td colname="col2"> Valeur de chaîne requise pour instancier le composant Visiteur. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -50,7 +50,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 1. Vérifiez que les options de temps de chargement du fichier de `ADBMobileConfig.json` ressources sont correctes.
 
        &quot;
-    {
+     {
      &quot;version&quot; : &quot;1.1&quot;,
      &quot;analytics&quot; : {
      &quot;rsids&quot; : &quot;adobedevelopment&quot;,
@@ -62,31 +62,31 @@ Pour configurer le suivi vidéo dans votre lecteur :
      &quot;batchLimit&quot; : 50,
      &quot;privacyDefault&quot; : &quot;optedin&quot;,
      &quot;poi&quot; : []
-     },
+ },     
      &quot;marketingCloud&quot; : {
      &quot;org&quot; : &quot;VALEUR FOURNIE PAR ADOBE&quot;
      },
-     &quot;&quot; : {
+     &quot;cible&quot; : {
      &quot;clientCode&quot; : &quot;&quot;,
      &quot;timeout&quot; : 5
      },
      &quot;audienceManager&quot; : {
      &quot;server&quot; : &quot;
- &quot;     }
- }     }
-     
- &quot;Ce fichier de configuration au format JSON est fourni en tant que ressource avec TVSDK.     
+ &quot;     
+ }     
+ }     &quot;
+  Ce fichier de configuration au format JSON est fourni en tant que ressource avec TVSDK.     
      Votre lecteur lit ces valeurs uniquement au moment du chargement et les valeurs restent constantes pendant l’exécution de votre application.
        
- Pour     configurer les options de temps de chargement :
+       Pour configurer les options de temps de chargement :
    
    1. Vérifiez que le `ADBMobileConfig.json` fichier contient les valeurs appropriées (fournies par Adobe).
    1. Vérifiez que ce fichier se trouve dans le `assets/` dossier.
 
-      Ce dossier doit se trouver à la racine de l’arborescence de la source de l’application.
+      Ce dossier doit se trouver à la racine de l&#39;arborescence de la source de l&#39;application.
 
-   1. Compilez et créez votre application.
-   1. Déployez et exécutez l’application intégrée.
+   1. Compilez et générez votre application.
+   1. Déployez et exécutez l’application assemblée.
 
       Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo dans Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 
@@ -94,9 +94,9 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    >[!IMPORTANT]
    >
-   >Vous pouvez arrêter le module d’analyse vidéo en cours d’utilisation et le réinitialiser si nécessaire. Avant de réinitialiser le module, assurez-vous que les métadonnées des analyses vidéo sont également mises à jour vers les métadonnées de contenu correctes. Pour recréer les métadonnées, répétez les deux premières étapes ci-dessous (sous-étapes **a** et **b**).
+   >Vous pouvez arrêter le module d’analyse des vidéos en cours d’utilisation et le réinitialiser si nécessaire. Avant de réinitialiser le module, veillez à ce que les métadonnées des analyses vidéo soient également mises à jour afin d’obtenir les métadonnées de contenu appropriées. Pour recréer les métadonnées, répétez les deux premières étapes ci-dessous (sous-étapes **a** et **b**).
 
-   1. Créez une instance des métadonnées Analytics vidéo.
+   1. Créez une instance des métadonnées d’analyses vidéo.
 
       Cette instance contient toutes les informations de configuration nécessaires pour activer le suivi de pulsation vidéo. Par exemple :
 
@@ -125,7 +125,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
       >[!TIP]
       >
-      >Créez toujours une instance de fournisseur pour chaque session de lecture de contenu et supprimez la référence précédente après avoir détaché l’instance du lecteur multimédia.
+      >Créez toujours une instance de fournisseur pour chaque session de lecture de contenu et supprimez la référence précédente après avoir détaché l’instance du lecteur de médias.
 
       ```java
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
@@ -145,7 +145,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    1. Détruisez le fournisseur d’analyses vidéo.
 
-      Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente du fournisseur vidéo. Une fois que vous avez reçu le  (ou la notification) du contenu terminé, attendez quelques minutes avant de détruire l’instance du fournisseur d’analyses vidéo. La destruction immédiate de l’instance peut gêner la capacité du fournisseur d’analyses vidéo à envoyer un ping &quot;vidéo terminée&quot;.
+      Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente du fournisseur de vidéos. Une fois que vous avez reçu le événement (ou la notification) de fin de contenu, patientez quelques minutes avant de détruire l’instance du fournisseur d’analyses vidéo. La suppression immédiate de l’instance peut affecter la capacité du fournisseur d’analyses vidéo à envoyer un ping &quot;complete video&quot; (fin de la vidéo).
 
       ```java
       if (videoAnalyticsProvider) { 
@@ -156,7 +156,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    1. Marquez manuellement le flux en direct/linéaire comme étant terminé.
 
-      Si vous avez plusieurs épisodes sur un flux en direct, vous pouvez marquer manuellement un épisode comme terminé à l’aide de l’API complète. Cette opération met fin à la session de suivi vidéo pour l’épisode vidéo en cours et vous pouvez  une nouvelle session de suivi pour l’épisode suivant.
+      Si vous avez plusieurs épisodes sur un flux en direct, vous pouvez marquer manuellement un épisode comme terminé en utilisant l’API complète. Ceci met fin à la session de suivi vidéo pour l’épisode vidéo en cours et vous pouvez en début une nouvelle pour l’épisode suivant.
 
       >[!TIP]
       >
