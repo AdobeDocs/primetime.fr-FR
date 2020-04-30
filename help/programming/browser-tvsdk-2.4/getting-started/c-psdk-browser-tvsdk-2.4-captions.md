@@ -5,7 +5,7 @@ seo-title: Légendes
 title: Légendes
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: ''
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 Vous pouvez afficher des légendes lors de la lecture de contenu vidéo.
 
-Pour gérer les légendes, vous devez ajouter l’écouteur de  `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` :
+Pour gérer les légendes, vous devez ajouter l’écouteur de `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` événement :
 
 ```js
 ... 
