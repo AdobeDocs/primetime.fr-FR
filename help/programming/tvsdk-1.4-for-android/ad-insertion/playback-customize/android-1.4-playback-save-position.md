@@ -22,13 +22,13 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    >
    >Les durées des publicités ne sont pas incluses.
 
-   Les coupures publicitaires peuvent varier dans chaque session en raison des modèles publicitaires, du plafonnement des fréquences, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
+   Les coupures publicitaires peuvent varier d’une session à l’autre en raison de modèles publicitaires, d’un plafonnement de fréquence, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
 
-   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `getCurrentTime` renvoie 1 200 secondes, tandis `getLocalTime` qu’à cette position renvoie 900 secondes.
+   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `getCurrentTime` renvoie 1 200 secondes, tandis qu’ `getLocalTime` à cette position renvoie 900 secondes.
 
    >[!IMPORTANT]
    >
-   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
+   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, cela `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
 
    ```java
    // Save the user session when player activity stops 
@@ -49,7 +49,7 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    } 
    ```
 
-1. Restaurez la session utilisateur lorsque le lecteur  le  reprend.
+1. Restaurez la session utilisateur lorsque l’activité du lecteur reprend.
 
    ```java
    @Override 
@@ -75,11 +75,11 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
       >[!TIP]
       >
-      >Cette méthode est appelée uniquement avec des valeurs d’heure locale. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
+      >Cette méthode est appelée uniquement avec des valeurs d’heure locales. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
 
-   * Pour atteindre l’heure actuelle, utilisez `seek`.
+   * Pour rechercher l’heure actuelle, utilisez `seek`.
 
-1. Lorsque votre application reçoit le  de modification de l’ `onStatusChanged` état, recherchez l’heure locale enregistrée.
+1. Lorsque votre application reçoit le événement de modification de l’ `onStatusChanged` état, recherchez l’heure locale enregistrée.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -98,8 +98,8 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    } 
    ```
 
-1. Fournissez les coupures publicitaires comme spécifié dans l’interface de la stratégie publicitaire.
-1. Implémentez un sélecteur de stratégie d’annonce personnalisée en étendant le sélecteur de stratégie d’annonce par défaut.
-1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur par implémentation `selectAdBreaksToPlay`.
+1. Fournissez les coupures publicitaires comme spécifié dans l’interface de stratégie publicitaire.
+1. Implémentez un sélecteur de stratégies publicitaires personnalisé en étendant le sélecteur de stratégies publicitaires par défaut.
+1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur en mettant en oeuvre `selectAdBreaksToPlay`.
 
    Cette méthode comprend une coupure publicitaire preroll et des coupures publicitaires mid-roll avant la position horaire locale. Votre application peut décider de lire une coupure publicitaire preroll et de reprendre à l’heure locale spécifiée, de lire une coupure publicitaire mid-roll et de reprendre à l’heure locale spécifiée, ou de ne pas lire de coupures publicitaires.
