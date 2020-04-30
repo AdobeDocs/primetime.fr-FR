@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de  du.
-seo-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de  du.
+description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
+seo-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
 seo-title: Utiliser des métadonnées minutées
 title: Utiliser des métadonnées minutées
 uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
@@ -12,11 +12,11 @@ source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
 
 # Utiliser des métadonnées minutées{#use-timed-metadata}
 
-Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de  du.
+Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
 
-Pour utiliser ces `PTTimedMetadata` objets enregistrés pendant la lecture, utilisez le dictionnaire enregistré des objets de métadonnées temporisées [Store au moment de leur distribution](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Pour utiliser ces objets enregistrés `PTTimedMetadata` au cours de la lecture, utilisez le dictionnaire enregistré des objets de métadonnées temporisées [Stocker au fur et à mesure qu’ils sont distribués](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Extrayez et mettez à jour le temps de lecture actuel à partir de cette notification et recherchez tous les `PTTimedMetadata` objets avec des  d’heure correspondant au temps de lecture actuel.
+1. Extrayez et mettez à jour le temps de lecture actuel à partir de cette notification et recherchez tous les objets dont les débuts correspondent au temps de lecture actuel. `PTTimedMetadata`
 
    Vous pouvez utiliser ces objets pour effectuer diverses actions.
 
@@ -57,4 +57,4 @@ Pour utiliser ces `PTTimedMetadata` objets enregistrés pendant la lecture, util
    }
    ```
 
-1. Videz régulièrement `PTTimedMetadata` les instances obsolètes du pour éviter que la mémoire ne continue à croître.
+1. Éliminez régulièrement `PTTimedMetadata` les instances obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
