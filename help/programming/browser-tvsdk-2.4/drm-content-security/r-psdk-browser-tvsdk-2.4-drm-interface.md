@@ -1,26 +1,26 @@
 ---
-description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire le contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
-seo-description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire le contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
+description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
+seo-description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
 seo-title: Présentation de l’interface DRM
 title: Présentation de l’interface DRM
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: ''
 
 ---
 
 
 # Présentation de l’interface DRM{#drm-interface-overview}
 
-Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire le contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
+Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->La prise en charge DRM est disponible pour les flux MPEG-Dash protégés par Microsoft PlayReady (sur Internet Explorer sous Windows 8.1 et Edge) et les systèmes DRM Widevine (sur Google Chrome). La prise en charge DRM est disponible pour les flux HLS sur Safari qui sont protégés par FairPlay.
+>La prise en charge DRM est disponible pour les flux MPEG-Dash protégés par Microsoft PlayReady (sur Internet Explorer sous Windows 8.1 et Edge) et Widevine (sur Google Chrome). La prise en charge de DRM est disponible pour les flux HLS sur Safari qui sont protégés par FairPlay.
 
-L’interface clé du processus DRM est la `DRMManager`. Une référence à l’ `DRMManager` instance peut être obtenue via l’instance MediaPlayer :
+L’interface clé du processus DRM est la `DRMManager`. Une référence à l’ `DRMManager` instance peut être obtenue par l’intermédiaire de l’instance MediaPlayer :
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -92,7 +92,7 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Lorsque les données de protection ne sont pas définies, les informations nécessaires, telles que l’URL de la licence, sont récupérées dans la zone PSSH pour les systèmes DRM, le cas échéant.
+1. Lorsque les données de protection ne sont pas définies, les informations nécessaires, telles que l’URL de licence, sont récupérées dans la zone PSSH pour les systèmes DRM, le cas échéant.
 
    >[!TIP]
    >
@@ -100,7 +100,7 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
 
 1. Par défaut, le type de session de la licence DRM est temporaire, ce qui signifie que la licence n’est pas stockée une fois la session fermée.
 
-   Vous pouvez spécifier un type de session à l’aide d’une API dans `DRMManager`.  Pour une compatibilité descendante, les types de session incluent `temporary`, `persistent-license`, `persistent-usage-record`et `persistent`.
+   Vous pouvez spécifier un type de session à l’aide d’une API dans `DRMManager`.  Pour une compatibilité ascendante, les types de session sont `temporary`, `persistent-license`, `persistent-usage-record`et `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
