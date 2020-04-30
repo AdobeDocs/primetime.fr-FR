@@ -16,4 +16,4 @@ Cette liste blanche indique les fichiers SWF autorisés à lire le contenu.
 
 Spécifiez le fichier SWF avec une URL SWF ou un résumé SHA-256 calculé à l’aide du contenu du fichier SWF. Si vous utilisez le résumé SHA-256, cette règle d’utilisation spécifie également la durée maximale pendant laquelle le client peut télécharger et vérifier le fichier SWF.
 
-Exemple de cas d’utilisation : Conceptuellement équivalent à la vérification SWF dans le cas de Flash Media Server, mais appliquée côté client pour limiter les lecteurs vidéo autorisés à lire le contenu. Notez que le comportement DRM Primetime diffère en ce qui concerne l’application du fichier SWF enfant par rapport au fichier SWF parent.
+Exemple de cas d’utilisation : Conceptuellement équivalent à la vérification SWF dans le cas de Flash Media Server, mais appliquée côté client pour limiter les lecteurs vidéo qui peuvent lire le contenu. Notez que le comportement de DRM Primetime diffère en ce qui concerne l’application du fichier SWF enfant par rapport au fichier SWF parent.
