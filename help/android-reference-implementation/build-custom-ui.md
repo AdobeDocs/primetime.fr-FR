@@ -29,4 +29,4 @@ Les composants de l’interface utilisateur des fonctionnalités suivantes sont 
 
 >[!NOTE]
 >
->Pour modifier l’interface utilisateur de la barre de recherche, vous pouvez modifier la classe MarkableSeekBar. La classe [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) gère le curseur, le pouce du curseur, le marqueur d’annonce, les marqueurs de repère, la plage de tampons et les arrière-plans de la plage de recherche.
+>Pour modifier l&#39;interface utilisateur de la barre de recherche, vous pouvez modifier la classe MarkableSeekBar. La classe [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) gère le curseur, le curseur, le curseur, le marqueur publicitaire, les marqueurs de repère, la plage de tampons et les arrière-plans de la plage de recherche.
