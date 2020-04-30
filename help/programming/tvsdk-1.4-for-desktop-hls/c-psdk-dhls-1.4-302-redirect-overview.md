@@ -14,18 +14,18 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
 
-Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes ultérieures effectuées pour les ressources de ce manifeste utiliseront l’emplacement du domaine final, ce qui évite 302 réponses supplémentaires.
+Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires.
 
-Cette fonctionnalité est désactivée par défaut et vous pouvez modifier ce paramètre.
+Cette fonction est désactivée par défaut et vous pouvez modifier ce paramètre.
 
-Si vous activez cette fonctionnalité, elle ne fonctionne correctement que si *toutes les* conditions suivantes sont vraies : dans le cas contraire, aucune optimisation de la redirection n’est effectuée et 302 réponses continuent de se produire :
+Si vous activez cette fonction, elle ne fonctionne correctement que si *toutes les* conditions suivantes sont vraies ; dans le cas contraire, aucune optimisation de la redirection n’est effectuée et 302 réponses continuent à se produire :
 
-* Votre application a été compilée pour Adobe Flash Player 11.8, avec `-swf-version` 21 ou une version ultérieure.
-* Adobe Flash Player 11.8 ou version ultérieure est installé sur votre ordinateur.
+* Votre application a été compilée pour Adobe Flash Player 11.8, avec `-swf-version` 21 ou version ultérieure.
+* Adobe Flash Player 11.8 ou version ultérieure est installé sur vos utilisateurs finaux.
 
 >[!IMPORTANT]
 >
->Pour vous assurer que les cookies sont transmis avec les requêtes publicitaires, désactivez la redirection 302. Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine d’origine du cookie.
+>Pour vous assurer que les cookies sont transmis avec les demandes d’annonce, désactivez la redirection 302. Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine d’origine du cookie.
 
 ## Désactivation ou activation de l’optimisation de la redirection 302 {#section_D6687FC44C61446F878008B629A5FA19}
 
