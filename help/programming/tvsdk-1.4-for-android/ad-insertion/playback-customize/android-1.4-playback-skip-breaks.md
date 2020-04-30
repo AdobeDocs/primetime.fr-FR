@@ -1,8 +1,8 @@
 ---
 description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 seo-description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
-seo-title: Ignorer les coupures publicitaires pendant une période donnée
-title: Ignorer les coupures publicitaires pendant une période donnée
+seo-title: Ignorer les coupures publicitaires pour une période
+title: Ignorer les coupures publicitaires pour une période
 uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,15 +10,15 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Ignorer les coupures publicitaires pendant une période donnée {#skip-ad-breaks-for-a-period-of-time}
+# Ignorer les coupures publicitaires pour une période {#skip-ad-breaks-for-a-period-of-time}
 
 Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 
 >[!IMPORTANT]
 >
->En cas de recherche interne pour ignorer une publicité, il se peut qu’il y ait une légère pause dans la lecture.
+>En cas de recherche interne pour ignorer une publicité, la lecture peut présenter une légère pause.
 
-L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisée ignore les publicités au cours des cinq prochaines minutes (heure de l’horloge murale) après qu’un utilisateur ait vu une coupure publicitaire.
+L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
 
 1. Enregistrez l’heure actuelle du système lorsque l’utilisateur termine de regarder une coupure publicitaire.
 
