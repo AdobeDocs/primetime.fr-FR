@@ -1,8 +1,8 @@
 ---
 description: TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et les flux vidéo/linéaires.
 seo-description: TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et les flux vidéo/linéaires.
-seo-title: Métadonnées du serveur Primetime
-title: Métadonnées du serveur Primetime
+seo-title: Métadonnées du serveur et de l’heure de priorité
+title: Métadonnées du serveur et de l’heure de priorité
 uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
@@ -16,16 +16,16 @@ TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et
 
 [!PREREQUISITE] {othertype=&quot;Prérequis&quot;}
 
-Avant d’inclure de la publicité dans votre contenu vidéo, fournissez les informations de métadonnées suivantes :
+Avant d’inclure de la publicité dans votre contenu vidéo, fournissez les métadonnées suivantes :
 
-* Une `mediaID`, qui identifie le contenu spécifique à lire.
-* Votre `zoneID`, qui identifie votre ou votre site Web.
-* Le domaine du serveur d’annonces, qui spécifie le domaine du serveur d’annonces affecté.
+* Un `mediaID`, qui identifie le contenu spécifique à lire.
+* Votre `zoneID`, qui identifie votre société ou votre site Web.
+* Le domaine de votre serveur d’annonces, qui spécifie le domaine de votre serveur d’annonces affecté.
 * Autres paramètres de ciblage.
 
-## Configuration des métadonnées de serveur et de Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configuration des métadonnées de serveur et Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Votre application doit fournir au SDK TVSDK les `PTAuditudeMetadata` informations requises pour la connexion au serveur d’annonces.
+Votre application doit fournir à TVSDK les `PTAuditudeMetadata` informations requises pour la connexion au serveur d’annonces.
 
 Pour configurer les métadonnées du serveur d’annonces :
 
@@ -47,7 +47,7 @@ Pour configurer les métadonnées du serveur d’annonces :
    [adMetadata release];
    ```
 
-   Voici un exemple :
+   En voici un exemple :
 
    ```
    PTMetadata *metadata = [self createMetadata]; 
