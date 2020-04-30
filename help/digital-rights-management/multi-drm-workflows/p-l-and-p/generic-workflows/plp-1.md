@@ -14,27 +14,27 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Vous pouvez utiliser le gestionnaire de package hors ligne d’Adobe pour préparer le contenu pour l’une des solutions DRM prises en charge par Primetime Cloud DRM, optimisée par ExpressPlay.
 
-Cet ensemble d’instructions suppose que vous avez déjà configuré un compte d’administrateur ExpressPlay :  [Primetime DRM Cloud Quick-](../../../multi-drm-workflows/quick-start/quick-overview.md).
-1. Choisissez l’infrastructure à utiliser pour la création de package de votre contenu. Primetime Packager prend en charge les packages de contenu en ligne de commande et basés sur la configuration pour une utilisation avec les DRM FairPlay, Widevine et PlayReady. Les formats et le chiffrement suivants sont actuellement pris en charge dans TVSDK (et d’autres sont en cours d’élaboration) :
+Cet ensemble d’instructions suppose que vous avez déjà configuré un compte d’administrateur ExpressPlay : [début](../../../multi-drm-workflows/quick-start/quick-overview.md)rapide de Primetime DRM Cloud.
+1. Choisissez l’infrastructure à utiliser pour la création de packs de contenu. Primetime Packager prend en charge les packages de contenu en ligne de commande et basés sur la configuration pour une utilisation avec les DRM FairPlay, Widevine et PlayReady. Les formats et le chiffrement suivants sont actuellement pris en charge dans TVSDK (et d’autres sont en cours d’élaboration) :
 
    * DASH (CENC) / PlayReady, Widevine - Pour HTML5
    * HLS / FairPlay, Access - Pour iOS
 
 1. Choisissez un système de gestion des clés (KMS) :
 
-   * Utilisez le KMS d&#39;ExpressPlay ( [ExpressPlay Key](https://www.expressplay.com/developer/key-storage/)); ce système gère vos clés de contenu via l’API RESTful d’ExpressPlay.
+   * Utilisez le KMS d&#39;ExpressPlay (Enregistrement [de clé](https://www.expressplay.com/developer/key-storage/)ExpressPlay); ce système gère vos clés de contenu via l’API RESTful d’ExpressPlay.
 
       ou...
 
-   * Installez votre propre KMS. Créez une base de données de clés de contenu, sélectionnable par ID de contenu.
+   * Installez votre propre KMS. Créez une base de données de clés de contenu pouvant être sélectionnée par Content-ID.
 
       Dans les deux cas, le KMS gère un approvisionnement de clés de contenu, chaque clé étant associée à un ID de contenu.
 
-1. Assemblez votre contenu. Avec Primetime Packager, vous pouvez assembler un élément de contenu pour une solution DRM spécifique ou pour plusieurs solutions DRM.
+1. Empaquetez votre contenu. Avec Primetime Packager, vous pouvez assembler un élément de contenu pour une solution DRM spécifique ou pour plusieurs solutions DRM.
 
-   Les exemples de commandes suivants illustrent des exemples de mise en package de contenu pour différentes solutions DRM :
+   Les exemples de commandes suivants montrent des exemples de mise en package de contenu pour différentes solutions DRM :
 
-   * [Widevine avec Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) (génère le fichier MPD) :
+   * [Widevine avec Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) (génère un fichier MPD) :
 
       ```
       java -jar OfflinePackager.jar \ 
@@ -76,15 +76,15 @@ Cet ensemble d’instructions suppose que vous avez déjà configuré un compte 
 
        Le serveur de stockage doit gérer les opérations suivantes :
    
-   1. Sélection du contenu par le client. Cette implémentation doit inclure un point de fin pour que les clients puissent demander un jeton de contenu pour un ID de contenu spécifique.
+   1. Sélection du contenu par le client. Cette implémentation doit inclure un point de terminaison permettant aux clients de demander un jeton de contenu pour un ID de contenu spécifique.
    1. Droits du client
    1. Demandes de jeton de licence (ExpressPlay) du client (demande de jeton de licence [ExpressPlay / référence](../../../multi-drm-workflows/license-token-req-resp-ref/license-req-resp-overview.md)de réponse)
 
 1. Créez votre client.
 
-       Le client doit inclure un appel à votre serveur de stockage. Adobe conseille au client d’appeler la vitrine une fois que l’utilisateur a sélectionné du contenu et une fois l’utilisateur authentifié. Ensuite, transmettez le jeton renvoyé par ExpressPlay à votre lecteur pour l’utiliser pour les demandes de licence. Vous trouverez ici des informations sur la mise en oeuvre du composant DRM de vos lecteurs :
+       Le client doit inclure un appel à votre serveur de stockage. Adobe conseille au client d’appeler la vitrine une fois que l’utilisateur a sélectionné du contenu et une fois l’utilisateur authentifié. Ensuite, transmettez le jeton renvoyé d’ExpressPlay à votre lecteur pour l’utiliser pour les demandes de licence. Vous trouverez ci-dessous des informations sur la mise en oeuvre du composant DRM de vos lecteurs :
    
-   * [Navigateur TVSDK pour HTML5](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
+   * [Kit de développement TVSDK du navigateur pour HTML5](https://help.adobe.com/en_US/primetime/psdk/browser_tvsdk/index.html#PSDKs-reference-DRM_interface_overview)
    * [iOS](../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
 
-1. Avec le jeton de licence en main, le client peut maintenant dériver l’URL de demande du jeton et faire la demande de licence vers ExpressPlay, puis lire le contenu sélectionné pour l’utilisateur.
+1. Avec le jeton de licence en main, le client peut maintenant dériver l’URL de demande du jeton et demander la licence à ExpressPlay, puis lire le contenu sélectionné pour l’utilisateur.
