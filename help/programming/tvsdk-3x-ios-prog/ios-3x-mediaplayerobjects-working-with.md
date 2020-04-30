@@ -16,26 +16,26 @@ L’objet PTMediaPlayer représente votre lecteur multimédia. Un objet PTMediaP
 
 ## A propos de la classe MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-Une fois qu’une ressource multimédia a été chargée, TVSDK crée une instance de la `PTMediaPlayerItem` classe pour fournir un accès à cette ressource.
+Une fois qu’une ressource multimédia a été chargée, TVSDK crée une instance de la `PTMediaPlayerItem` classe pour fournir l’accès à cette ressource.
 
-Le `PTMediaPlayer` programme résout la ressource multimédia, charge le fichier manifeste associé et analyse le manifeste. Il s’agit de la partie asynchrone du processus de chargement des ressources. L’ `PTMediaPlayerItem` instance est générée une fois la ressource résolue, et cette instance est une version résolue d’une ressource multimédia. TVSDK permet d’accéder à l’ `PTMediaPlayerItem` instance nouvellement créée par le biais `PTMediaPlayer.currentItem`.
+Le `PTMediaPlayer` résout la ressource média, charge le fichier manifeste associé et analyse le manifeste. Il s&#39;agit de la partie asynchrone du processus de chargement des ressources. L&#39; `PTMediaPlayerItem` instance est générée une fois la ressource résolue, et cette instance est une version résolue d&#39;une ressource média. TVSDK permet d’accéder à l’ `PTMediaPlayerItem` instance nouvellement créée par le biais `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
->Vous devez attendre que la ressource soit chargée correctement avant d’accéder à l’élément du lecteur multimédia.
+>Vous devez attendre que la ressource soit chargée correctement avant d&#39;accéder à l&#39;élément du lecteur multimédia.
 
-## Cycle de vie de l’objet MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
+## Cycle de vie des objets MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-Du moment où vous créez l’ `PTMediaPlayer` instance au moment où vous l’arrêtez (réutilisez ou supprimez), cette instance termine une série de  d’un état à un autre.
+Depuis le moment où vous créez l’ `PTMediaPlayer` instance jusqu’au moment où vous la terminez (réutilisez ou supprimez), cette instance effectue une série de transitions d’un état à l’autre.
 
-Certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, l’appel `play` à `PTMediaPlayerStatusCreated` n’est pas autorisé. Vous ne pouvez appeler cet état qu’une fois que le lecteur a atteint l’ `PTMediaPlayerStatusReady` état.
+Certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, l’appel `play` à l’entrée `PTMediaPlayerStatusCreated` n’est pas autorisé. Vous ne pouvez appeler cet état qu’une fois que le lecteur a atteint l’ `PTMediaPlayerStatusReady` état.
 
-Pour utiliser les états :
+Pour utiliser des états :
 
 * Vous pouvez récupérer l’état actuel de l’objet MediaPlayer avec `PTMediaPlayer.status`.
-* Le  des états est défini dans `PTMediaPlayerStatus`.
+* La liste des états est définie dans `PTMediaPlayerStatus`.
 
-Diagramme Etat- pour le cycle de vie d’une instance MediaPlayer :
+Diagramme transition-état pour le cycle de vie d’une instance MediaPlayer :
 <!--<a id="fig_1C55DE3F186F4B36AFFDCDE90379534C"></a>-->
 
 ![](assets/player-state-transitions-diagram-ios2_web.png)
@@ -52,7 +52,7 @@ Le tableau suivant fournit des détails supplémentaires :
  <tbody> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCreated</span> </p> </td> 
-   <td colname="col2"> <p>Votre application a demandé un nouveau lecteur multimédia en appelant <span class="codeph"> playerWithMediaPlayerItem</span>. Le lecteur nouvellement créé attend que vous spécifiez un élément du lecteur multimédia. Il s’agit de l’état initial du lecteur multimédia. </p> </td> 
+   <td colname="col2"> <p>Votre application a demandé un nouveau lecteur multimédia en appelant <span class="codeph"> playerWithMediaPlayerItem</span>. Le nouveau lecteur attend que vous spécifiez un élément de lecteur multimédia. Il s’agit de l’état initial du lecteur multimédia. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
@@ -60,11 +60,11 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
-   <td colname="col2"> <p>Le kit TVSDK a correctement défini l’élément du lecteur multimédia. </p> </td> 
+   <td colname="col2"> <p>TVSDK a correctement défini l’élément du lecteur multimédia. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusReady</span> </p> </td> 
-   <td colname="col2"> <p>Le contenu est préparé et les publicités ont été insérées dans la chronologie, ou la procédure publicitaire a échoué. La mise en mémoire tampon ou la lecture peuvent commencer. </p> </td> 
+   <td colname="col2"> <p>Le contenu est préparé et les publicités ont été insérées dans la chronologie ou la procédure publicitaire a échoué. La mise en mémoire tampon ou la lecture peuvent commencer. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPlaying</span> </p> </td> 
@@ -72,7 +72,7 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
-   <td colname="col2"> <p>Lorsque votre application est lue et met en pause le média, le lecteur multimédia se déplace entre cet état et <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
+   <td colname="col2"> <p>Lorsque votre application lit et met en pause le média, le lecteur multimédia se déplace entre cet état et <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCompleted</span> </p> </td> 
@@ -84,11 +84,11 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusError</span> </p> </td> 
-   <td colname="col2"> <p>Une erreur s'est produite pendant le processus. Une erreur peut également affecter les actions suivantes de votre application. </p> </td> 
+   <td colname="col2"> <p>Une erreur s'est produite pendant le processus. Une erreur peut également avoir une incidence sur les prochaines actions de votre application. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!TIP]
 >
->Vous pouvez utiliser l’état pour fournir des commentaires sur le processus (par exemple, un compteur en attendant le changement d’état suivant) ou pour passer à l’étape suivante lors de la lecture du média, par exemple en attendant l’état approprié avant d’appeler la méthode suivante.
+>Vous pouvez utiliser l’état pour fournir des commentaires sur le processus (par exemple, un analyseur en attendant le changement d’état suivant) ou pour passer à l’étape suivante lors de la lecture du média, par exemple en attendant l’état approprié avant d’appeler la méthode suivante.
