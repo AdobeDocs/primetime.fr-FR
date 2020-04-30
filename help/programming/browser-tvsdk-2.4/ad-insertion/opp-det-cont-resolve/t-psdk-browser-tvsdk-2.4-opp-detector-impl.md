@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez mettre en oeuvre votre propre générateur d'opportunités en étendant l'interface OpportunityGenerator.
 seo-description: Vous pouvez mettre en oeuvre votre propre générateur d'opportunités en étendant l'interface OpportunityGenerator.
-seo-title: Implémentation d’un générateur d’opportunités personnalisé
-title: Implémentation d’un générateur d’opportunités personnalisé
+seo-title: Mise en oeuvre d’un générateur d’opportunités personnalisé
+title: Mise en oeuvre d’un générateur d’opportunités personnalisé
 uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,7 +10,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Implémentation d’un générateur d’opportunités personnalisé{#implement-a-custom-opportunity-generator}
+# Mise en oeuvre d’un générateur d’opportunités personnalisé{#implement-a-custom-opportunity-generator}
 
 Vous pouvez mettre en oeuvre votre propre générateur d&#39;opportunités en étendant l&#39;interface OpportunityGenerator.
 
