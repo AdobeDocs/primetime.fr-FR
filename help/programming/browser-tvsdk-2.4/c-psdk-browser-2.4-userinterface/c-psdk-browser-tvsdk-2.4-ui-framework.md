@@ -1,8 +1,8 @@
 ---
-description: La structure de l’interface utilisateur est un calque d’interface utilisateur au-dessus du kit de développement logiciel (TVSDK) du navigateur, qui fournit diverses configurations d’interface utilisateur liées au lecteur vidéo prêtes à l’emploi. Vous pouvez créer un lecteur hautement personnalisable en apportant les changements de points qui conviennent à votre  de .
-seo-description: La structure de l’interface utilisateur est un calque d’interface utilisateur au-dessus du kit de développement logiciel (TVSDK) du navigateur, qui fournit diverses configurations d’interface utilisateur liées au lecteur vidéo prêtes à l’emploi. Vous pouvez créer un lecteur hautement personnalisable en apportant les changements de points qui conviennent à votre  de .
-seo-title: Cadre de l’interface utilisateur
-title: Cadre de l’interface utilisateur
+description: La structure de l’interface utilisateur est un calque d’interface utilisateur placé au-dessus du SDK du navigateur, qui fournit différentes configurations d’interface utilisateur liées au lecteur vidéo. Vous pouvez créer un lecteur hautement personnalisable en apportant les modifications appropriées à votre environnement.
+seo-description: La structure de l’interface utilisateur est un calque d’interface utilisateur placé au-dessus du SDK du navigateur, qui fournit différentes configurations d’interface utilisateur liées au lecteur vidéo. Vous pouvez créer un lecteur hautement personnalisable en apportant les modifications appropriées à votre environnement.
+seo-title: La structure de l’interface utilisateur
+title: La structure de l’interface utilisateur
 uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
 source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
@@ -10,15 +10,15 @@ source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
 ---
 
 
-# Cadre de l’interface utilisateur {#the-ui-framework}
+# La structure de l’interface utilisateur {#the-ui-framework}
 
-La structure de l’interface utilisateur est un calque d’interface utilisateur au-dessus du kit de développement logiciel (TVSDK) du navigateur, qui fournit diverses configurations d’interface utilisateur liées au lecteur vidéo prêtes à l’emploi. Vous pouvez créer un lecteur hautement personnalisable en apportant les changements de points qui conviennent à votre  de .
+La structure de l’interface utilisateur est un calque d’interface utilisateur placé au-dessus du SDK du navigateur, qui fournit différentes configurations d’interface utilisateur liées au lecteur vidéo. Vous pouvez créer un lecteur hautement personnalisable en apportant les modifications appropriées à votre environnement.
 
 >[!TIP]
 >
 >Le comportement visuel (habillage) et de l’interface utilisateur est personnalisable.
 
-Vous pouvez réécrire vos propres comportements ou remplacer les fonctionnalités de certains comportements par défaut. Vous pouvez également réutiliser les comportements fournis avec le SDK en écrivant les comportements à partir de zéro.
+Vous pouvez réécrire vos propres comportements ou remplacer la fonctionnalité de certains comportements par défaut. Vous pouvez également réutiliser les comportements fournis avec le SDK en rédigeant les comportements à partir de zéro.
 
 ## Création d’un lecteur de base {#section_30E4812C4DDA4B519C9C837930B6AE45}
 
@@ -40,11 +40,11 @@ Vous pouvez configurer le lecteur de l’une des manières suivantes :
 * Utilisation de l’objet JSON
 * Utilisation des API
 
-Pour générer l’objet JSON, le navigateur TVSDK fournit un outil de configuration de l’interface utilisateur. Dans l’outil, vous pouvez sélectionner différents paramètres, cliquer **[!UICONTROL Test Configuration]** pour vérifier les paramètres, puis cliquer **[!UICONTROL Download Configuration]** pour télécharger les paramètres. Le contenu du fichier téléchargé est utilisé comme objet JSON à transmettre à l’ `ptp.videoPlayer` API.
+Pour générer l’objet JSON, le navigateur TVSDK fournit un outil UI Configurator. Dans l’outil, vous pouvez sélectionner divers paramètres, cliquer **[!UICONTROL Test Configuration]** pour vérifier les paramètres, puis cliquer **[!UICONTROL Download Configuration]** pour télécharger les paramètres. Le contenu du fichier téléchargé est utilisé comme objet JSON à transmettre à l’ `ptp.videoPlayer` API.
 
-**Comment exécuter l’outil** UI Configurator :
+**Comment exécuter l&#39;outil** UI Configurator :
 
-1. Hébergez le `frameworks` dossier disponible dans le SDK du navigateur, sur un serveur Web local.
+1. Hébergez le `frameworks` dossier disponible dans le navigateur TVSDK sur un serveur Web local.
 1. Pour ouvrir l’outil, ouvrez un navigateur et accédez à `< path-to-hosted-frameworks-folder>/ui-framework/ui-configurator/`.
 
 **Configuration du comportement du lecteur**
@@ -55,13 +55,13 @@ Vous pouvez configurer le comportement du lecteur de l’une des manières suiva
 >
 >Pour certains paramètres, les deux options sont disponibles.
 
-* **L’utilisation des API** videoBehavior `ptp.videoPlayer` renvoie la `ptp.videoBehavior`, ce qui vous permet de configurer le lecteur vidéo sous-jacent. Si certains paramètres liés à la lecture doivent être configurés, vous pouvez utiliser cette option.
+* **L’utilisation des API** videoBehavior `ptp.videoPlayer` renvoie le `ptp.videoBehavior`, ce qui vous permet de configurer le lecteur vidéo sous-jacent. Si certains paramètres liés à la lecture doivent être configurés, vous pouvez utiliser cette option.
 
    ```js
    player.setAbrControlParameters ({object})
    ```
 
-* **Transfert d’un objet de configuration à la fonction** videoPlayer Lorsque vous utilisez cet objet, le comportement de l’interface utilisateur peut être configuré en plus des paramètres de lecture décrits ci-dessus. L’appelant doit spécifier les paramètres à modifier et le lecteur continuera à utiliser les valeurs par défaut pour les paramètres non spécifiés.
+* **Transfert d’un objet de configuration à la fonction** videoPlayer Lorsque vous utilisez cet objet, le comportement de l’interface utilisateur peut être configuré en plus des paramètres de lecture décrits ci-dessus. L’appelant doit spécifier les paramètres à modifier et le lecteur continuera à utiliser des valeurs par défaut pour les paramètres non spécifiés.
 
    ```js
    var player = ptp.videoPlayer('#video1', { 
@@ -74,15 +74,15 @@ Vous pouvez configurer le comportement du lecteur de l’une des manières suiva
 
    Dans l&#39;exemple ci-dessus, les paramètres de contrôle ABR ont été configurés à l&#39;aide d&#39;un objet de configuration. Un objet a également été transmis pour configurer le comportement de la barre de contrôle.
 
-   Reportez-vous à la section de structure des objets de configuration  ci-dessous pour connaître la structure de l&#39;objet de configuration.
+   Reportez-vous à la section Structure des objets de configuration de Vue ci-dessous pour la structure de l&#39;objet de configuration.
 
-* **Accès à AdobePSDK.MediaPlayer** Vous pouvez utiliser `videoPlayer.getMediaPlayer` dans certains cas d’utilisation avancée où vous avez besoin d’accéder au lecteur multimédia du navigateur TVSDK.
+* **Accès à AdobePSDK.MediaPlayer** Vous pouvez utiliser `videoPlayer.getMediaPlayer` dans certains cas d’utilisation avancée où vous avez besoin d’accéder à MediaPlayer du navigateur TVSDK.
 
 * **Configuration de l’habillage du lecteur** Pour plus d’informations sur l’habillage du lecteur, voir [Esquisse du lecteur](../../browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-skin-the-player.md).
 
 ## Modification d’un comportement par défaut {#section_D5D692638FFF4BEF81F7BE70E438CCE9}
 
-Dans la terminologie de la structure de l’interface utilisateur, un comportement est un concept qui définit la partie visuelle et la partie interaction d’un composant spécifique. En utilisant la structure d’objet décrite ci-dessous, vous pouvez modifier ce que vous souhaitez modifier dans le comportement.
+Dans la terminologie de la structure de l’interface utilisateur, un comportement est un concept qui définit la partie visuelle et la partie interaction d’un composant spécifique. En utilisant la structure d&#39;objet décrite ci-dessous, vous pouvez modifier ce que vous souhaitez modifier dans le comportement.
 
 Par exemple, une fois le curseur de volume visible, si vous ne souhaitez pas le masquer, utilisez l’exemple suivant :
 
@@ -111,15 +111,15 @@ var player = ptp.videoPlayer('.videoHolder', {
 
 >[!NOTE]
 >
->Selon la personnalisation souhaitée, vous pouvez remplacer certaines fonctionnalités du comportement ou écrire votre propre comportement. Pour plus d’informations sur les fonctionnalités qui peuvent être remplacées, voir la documentation de l’API de structure [de l’](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) interface utilisateur.
+>Selon la personnalisation que vous souhaitez, vous pouvez remplacer certaines fonctionnalités du comportement ou écrire votre propre comportement. Pour plus d’informations sur les fonctionnalités qui peuvent être remplacées, voir la documentation de l’API de structure [de l’](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) interface utilisateur.
 
 ## Références {#section_0A76A3F44D8A49B09FE4C83F3FACCB76}
 
 Voici quelques informations de référence supplémentaires :
 
-* **Structure** des objets de configuration des  Il s’agit de la structure complète des objets qui mentionne tous les comportements par défaut de manière hiérarchique avec les éléments par défaut des comportements. Dans l’exemple de configuration, les usines d’interface utilisateur ont été utilisées pour créer l’élément. Vous pouvez utiliser les mêmes méthodes ou les méthodes préférées pour construire les éléments.
+* **Structure** des objets de la configuration de la Vue Il s&#39;agit de la structure complète des objets qui mentionne tous les comportements par défaut de manière hiérarchique avec les éléments par défaut des comportements. Dans l’exemple de configuration, des usines d’interface utilisateur ont été utilisées pour créer l’élément. Vous pouvez utiliser les mêmes méthodes ou les méthodes préférées pour construire les éléments.
 
-   Vous devez spécifier uniquement les pièces que vous souhaitez modifier et le reste de la fonctionnalité sera sélectionné par défaut. Pour , selon le cas d’utilisation, vous devez fournir la `SingleViewConfigurationObject` structure ou la `MultiViewConfigurationObject` structure.
+   Vous devez spécifier uniquement les pièces que vous souhaitez modifier et le reste de la fonctionnalité sera sélectionné par défaut. Pour début, selon le cas d’utilisation, vous devez fournir la `SingleViewConfigurationObject` structure ou la `MultiViewConfigurationObject` structure.
 
    ```js
    var DEFAULT_CONTROL_BAR_CONFIG = { 
@@ -766,11 +766,11 @@ Voici quelques informations de référence supplémentaires :
    };
    ```
 
-* **Aide à la construction** Ce concept est composé des éléments suivants :
+* **Construction** d&#39;aide Cette construction est composée des éléments suivants :
 
-   * **Usines** Pour créer les éléments visuels, vous pouvez utiliser `ptp.factories.simpleButtonFactory`, `ptp.factories.simpleDivFactory`, `ptp.factories.simpleHRFactory`et `ptp.factories.simpleSliderFactory`. Pour plus d’informations, voir la documentation de l’API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) .
+   * **Usines** Pour créer les éléments visuels, vous pouvez utiliser `ptp.factories.simpleButtonFactory`, `ptp.factories.simpleDivFactory`, `ptp.factories.simpleHRFactory`et `ptp.factories.simpleSliderFactory`. Pour plus d’informations, voir la documentation de l’API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
 
-   * **Les mixins** Mixins sont des modules composables qui peuvent être composés dans les comportements pour utiliser des éléments communs. Par exemple, la plupart des composants souhaitent être conscients des modifications susceptibles d’avoir un impact sur leur comportement lors, par exemple, de la lecture d’une publicité. Tous ces éléments ajoutent une `adBreak` classe.
+   * **Les mixins** sont des modules composables qui peuvent être composés dans les comportements pour utiliser des concepts courants. Par exemple, la plupart des composants souhaitent être conscients des changements susceptibles d’avoir un impact sur leur comportement lors, par exemple, de la lecture d’une publicité. Tous ces éléments ajouteront une `adBreak` classe.
 
       Voici un exemple de mise en oeuvre du mixin intégré `adBreakStyling`:
 
@@ -798,7 +798,7 @@ Voici quelques informations de référence supplémentaires :
       }
       ```
 
-      Maintenant `customBehavior` peut utiliser toutes les méthodes qui sont exposées par `adBreakStyling`, qui dans cet exemple, est `manageAdBreakStyle`. Un autre cas d’utilisation est lorsqu’un mixin peut ajouter des écouteurs de et que dans le gestionnaire, le mixin peut modifier l’élément d’une certaine manière. Par la suite, les composants qui utilisent ce mixin auront automatiquement cette fonctionnalité.
+      Maintenant, `customBehavior` vous pouvez utiliser toutes les méthodes exposées par `adBreakStyling`, ce qui est `manageAdBreakStyle`dans cet exemple. Un autre cas d’utilisation est lorsqu’un mixin peut ajouter des écouteurs de événement et que dans le gestionnaire, le mixin peut modifier l’élément d’une manière ou d’une autre. Par la suite, les composants qui utilisent ce mixin auront automatiquement cette fonctionnalité.
 
-   * **Utilitaires** Certains utilitaires, tels que `ptp.elementGetter`, utilisés dans la section de configuration et `ptp.deepmerge`, peuvent vous aider à créer ou à étendre des comportements. Pour plus d’informations, voir la documentation de l’API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) .
+   * **Utilitaires** Certains utilitaires, tels que `ptp.elementGetter`, qui est utilisé dans la section de configuration et `ptp.deepmerge`, peuvent vous aider à créer ou à étendre des comportements. Pour plus d’informations, voir la documentation de l’API [UI Framework](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html) API.
 
