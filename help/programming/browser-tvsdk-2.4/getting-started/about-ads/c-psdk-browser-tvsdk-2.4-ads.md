@@ -39,7 +39,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
 var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
 ```
 
-Le kit de développement TVSDK du navigateur fournit également les  de spécifiques aux annonces suivantes que vous pouvez utiliser dans vos gestionnaires de pour empêcher le transfert rapide du contenu lors de la lecture des publicités :
+Le kit TVSDK du navigateur fournit également les événements suivants spécifiques aux annonces que vous pouvez utiliser dans vos gestionnaires de événements pour empêcher le transfert rapide du contenu en cours de lecture des publicités :
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
@@ -68,4 +68,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Pour plus d’informations sur les métadonnées requises `AuditudeSettings`, voir Métadonnées [d’insertion](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)d’annonce.
+Pour plus d’informations sur les informations requises `AuditudeSettings`, voir Métadonnées [d’insertion](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)d’annonce.
