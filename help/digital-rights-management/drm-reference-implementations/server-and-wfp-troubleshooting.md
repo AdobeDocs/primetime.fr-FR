@@ -21,7 +21,7 @@ Voici quelques problèmes et solutions que vous pouvez rencontrer lors du déplo
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Vérifiez que le mot de passe a été chiffré avec la `ScrambleUtil` classe.
+   Assurez-vous que le mot de passe a été chiffré avec la `ScrambleUtil` classe.
 
 * Si le message d’erreur suivant s’affiche :
 
@@ -29,7 +29,7 @@ Voici quelques problèmes et solutions que vous pouvez rencontrer lors du déplo
    "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   Vérifiez que vous avez spécifié le mot de passe chiffré correct dans le fichier PFX.
+   Assurez-vous d’avoir spécifié le mot de passe chiffré correct dans le fichier PFX.
 
 * Si le message d’erreur suivant s’affiche :
 
@@ -37,5 +37,5 @@ Voici quelques problèmes et solutions que vous pouvez rencontrer lors du déplo
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Assurez-vous d’utiliser la classe scrambler de mot de passe *fournie avec l’implémentation* de référence. Cet utilitaire de scrambler est différent de celui fourni avec Adobe Primetime DRM Server for Protected Streaming.
+   Assurez-vous d’utiliser la classe scrambler du mot de passe *fournie avec l’implémentation* de référence. Cet utilitaire scrambler est différent de celui fourni avec Adobe Primetime DRM Server for Protected Streaming.
 
