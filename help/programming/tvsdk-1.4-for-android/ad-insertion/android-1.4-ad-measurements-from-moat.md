@@ -1,6 +1,6 @@
 ---
-description: TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux si les créatifs capturent ou négligent un   d'intérêt.
-seo-description: TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux si les créatifs capturent ou négligent un   d'intérêt.
+description: TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui indique mieux si les créatifs capturent ou négligent les intérêts d’une audience.
+seo-description: TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui indique mieux si les créatifs capturent ou négligent les intérêts d’une audience.
 seo-title: Mesures publicitaires de Moat
 title: Mesures publicitaires de Moat
 uuid: 73ef3a14-7ad6-4e67-8ad3-eabbeb898a09
@@ -12,11 +12,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Mesures publicitaires de Moat{#ad-measurements-from-moat}
 
-TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux si les créatifs capturent ou négligent un   d&#39;intérêt.
+TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonces fournissant des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui indique mieux si les créatifs capturent ou négligent les intérêts d’une audience.
 
-Moat est un service permettant de mesurer et d’afficher les données à plusieurs fins, des navigateurs aux applications. Moat génère des données d’analyse marketing en temps réel sur plusieurs plateformes.
+Moat est un service permettant de mesurer et d’afficher les données à plusieurs fins, des navigateurs aux applications. Moat génère des données d’analyse marketing en temps réel sur plusieurs plates-formes.
 
-Le XML de réponse VAST possède une propriété et un élément que votre code peut lire, la `Ad id` propriété la plus à l’extérieur et l’ `Extension` élément le plus à l’extérieur. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer les `Ad id` informations et les `Extension` informations, puis organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à n’importe quel endroit. La valeur de la `Ad id` propriété ultrapériphérique permet au code de coordonner les informations de la campagne associée.
+La réponse VAST XML comporte une propriété et un élément que votre code peut lire, la propriété la plus éloignée `Ad id` et l’ `Extension` élément le plus éloigné. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer à la fois les `Ad id` informations et les `Extension` informations, puis organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à n’importe quel emplacement. La valeur de la propriété ultrapériphérique `Ad id` permet au code de coordonner les informations de la campagne associée.
 
 Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions. Vous trouverez ci-dessous un exemple d’élément.
 
@@ -42,4 +42,4 @@ La roue libre peut également définir la `id` propriété dans l’ `Ad` élém
 <Ad id="118566" sequence="1">
 ```
 
-Reportez-vous à la documentation de l’API pour la classe `NetworkAdInfo`.
+Reportez-vous à la documentation de l&#39;API pour la classe `NetworkAdInfo`.
