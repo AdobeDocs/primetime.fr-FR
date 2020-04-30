@@ -1,6 +1,6 @@
 ---
-description: L’interface MediaPlayer pour Android encapsule la fonctionnalité et le comportement d’un lecteur multimédia.
-seo-description: L’interface MediaPlayer pour Android encapsule la fonctionnalité et le comportement d’un lecteur multimédia.
+description: L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
+seo-description: L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
 seo-title: Configuration de MediaPlayer
 title: Configuration de MediaPlayer
 uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
@@ -12,21 +12,21 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Configuration de MediaPlayer {#set-up-the-mediaplayer}
 
-L’interface MediaPlayer pour Android encapsule la fonctionnalité et le comportement d’un lecteur multimédia.
+L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
 
 TVSDK fournit une implémentation de l’ `MediaPlayer` interface, la `DefaultMediaPlayer` classe. Lorsque vous avez besoin de la fonctionnalité de lecture vidéo, instanciez `DefaultMediaPlayer`.
 
 >[!TIP]
 >
->Interagissez avec l’ `DefaultMediaPlayer` instance uniquement avec les méthodes exposées par l’ `MediaPlayer` interface.
+>N&#39;interagissez avec l&#39; `DefaultMediaPlayer` instance qu&#39;avec les méthodes exposées par l&#39; `MediaPlayer` interface.
 
-1. Instanciez un lecteur multimédia à l’aide de la méthode `DefaultMediaPlayer.create` usine publique, en transmettant un objet de contexte d’application Java Android.
+1. Instanciez MediaPlayer à l’aide de la méthode `DefaultMediaPlayer.create` usine publique, en transmettant un objet contextuel d’application Java Android.
 
    ```java
    public static MediaPlayer create(Context context) 
    ```
 
-1. Appelez `MediaPlayer.getView` pour obtenir une référence à l’ `MediaPlayerView` instance.
+1. Appelez `MediaPlayer.getView` pour obtenir une référence à l&#39; `MediaPlayerView` instance.
 
    ```java
    MediaPlayerView getView() throws IllegalStateException; 
