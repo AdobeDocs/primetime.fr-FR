@@ -1,6 +1,6 @@
 ---
-seo-title: de code / Contenu du package
-title: de code / Contenu du package
+seo-title: Diffusion de code / Contenu du package
+title: Diffusion de code / Contenu du package
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
@@ -8,7 +8,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 ---
 
 
-# de code / Contenu du package{#code-delivery-package-contents}
+# Diffusion de code / Contenu du package{#code-delivery-package-contents}
 
 Le package Adobe Primetime DRM On Premises Individualization Server contient les éléments suivants :
 
@@ -24,11 +24,11 @@ Le package Adobe Primetime DRM On Premises Individualization Server contient les
    * [!DNL libjsafe.so] (Linux)
    * [!DNL jsafe.dll] (Windows)
 
-* [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe d&#39;informations d&#39;identification du serveur
+* [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe d&#39;identification du serveur
 * [!DNL ROOT] - contient un [!DNL crossdomain.xml] fichier
 
 * Fichiers cache ECI - Prétéléchargés
-* [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d’un serveur de licences pour la prise en charge des individualisations sur place
+* [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d&#39;un serveur de licences pour la prise en charge des individualisations sur site
 * [!DNL CreateMetadata.jar] - Utilitaire de création de métadonnées DRM sur site
 * [!DNL client_sample/] - Un dossier avec un extrait de code client
 * Notes de mise à jour - Pour tout ajout de dernière minute à la documentation
