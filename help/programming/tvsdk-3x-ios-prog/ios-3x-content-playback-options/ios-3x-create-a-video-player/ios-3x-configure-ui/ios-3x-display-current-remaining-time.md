@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 seo-description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
-seo-title: Afficher l’heure actuelle et l’heure restante
-title: Afficher l’heure actuelle et l’heure restante
+seo-title: Affiche l'heure actuelle et la durée restante
+title: Affiche l'heure actuelle et la durée restante
 uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
@@ -10,11 +10,11 @@ source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
 ---
 
 
-# Afficher l’heure actuelle et l’heure restante {#display-the-current-time-and-remaining-time}
+# Affiche l&#39;heure actuelle et la durée restante {#display-the-current-time-and-remaining-time}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
-1. Pour mettre en oeuvre un affichage qui montre l’heure actuelle et la durée restante du contenu actif, utilisez l’exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche la durée actuelle et restante du contenu actif, utilisez l’exemple de code suivant :
 
    * 
 
