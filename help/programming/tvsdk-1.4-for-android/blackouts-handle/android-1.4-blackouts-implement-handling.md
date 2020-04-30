@@ -1,8 +1,8 @@
 ---
-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption.
-seo-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption.
-seo-title: Mise en oeuvre de la gestion du blocage
-title: Mise en oeuvre de la gestion du blocage
+description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+seo-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+seo-title: Mise en oeuvre de la gestion des interruptions de service
+title: Mise en oeuvre de la gestion des interruptions de service
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,11 +10,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Mise en oeuvre de la gestion du blocage{#implement-blackout-handling}
+# Mise en oeuvre de la gestion des interruptions de service{#implement-blackout-handling}
 
-TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption.
+TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
 
-Pour mettre en oeuvre la gestion des interruptions de service, y compris la fourniture de contenu alternatif pendant la coupure de service :
+Pour mettre en oeuvre la gestion des interruptions de service, notamment en fournissant du contenu alternatif pendant la coupure de service :
 
 1. Configurez votre application pour détecter les balises d’arrêt dans un manifeste de flux en direct.
 
@@ -27,7 +27,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, y compris la four
    }
    ```
 
-1. Créez des écouteurs de  pour les de métadonnées minutées  dans les flux de premier plan et d’arrière-plan.
+1. Créez des écouteurs de événement pour les événements de métadonnées minutés dans les flux de premier plan et d’arrière-plan.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +36,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, y compris la four
    }
    ```
 
-1. Mettez en oeuvre des gestionnaires de  de métadonnées chronométrés pour les flux de premier plan et d’arrière-plan.
+1. Mettez en oeuvre des gestionnaires de événement de métadonnées chronométrés pour les flux de premier plan et d’arrière-plan.
 
    Premier plan :
 
@@ -98,7 +98,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, y compris la four
    };
    ```
 
-1. Créez des méthodes pour changer de contenu au  et à la fin de la période d’arrêt.
+1. Créez des méthodes pour changer de contenu le début et la fin de la période d’interruption.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +150,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, y compris la four
    }
    ```
 
-1. Mettez à jour les plages impossibles à rechercher si la plage d’arrêt est dans le DVR du flux de lecture.
+1. Mettez à jour les plages impossibles à rechercher si la plage d’interruption se trouve dans le DVR du flux de lecture.
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +183,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, y compris la four
 
    >[!NOTE]
    >
-   >Actuellement, pour plusieurs flux en direct à débit binaire, le de débit binaire réglable (ABR) peut parfois se désynchroniser. Cela entraîne l’affichage d’ `timedMetadata` objets  pour la même balise abonnée. Pour éviter des calculs non recherchables incorrects, il est vivement conseillé de rechercher des plages non recherchables qui se chevauchent après vos calculs, comme dans l’exemple suivant :
+   >Actuellement, pour plusieurs flux dynamiques à débit binaire, les profils de débit binaire (ABR) ajustables peuvent parfois être désynchronisés. Ceci provoque l’affichage d’objets de duplicata `timedMetadata` pour la même balise d’abonnement. Pour éviter des calculs incorrects non recherchables, il est vivement recommandé de vérifier si des plages non recherchables se chevauchent après vos calculs, comme dans l’exemple suivant :
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
