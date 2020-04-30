@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez intégrer des flux audio de liaison tardive ou d’autres flux dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
-seo-description: Vous pouvez intégrer des flux audio de liaison tardive ou d’autres flux dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
-seo-title: Intégrer le son à liaison tardive
-title: Intégrer le son à liaison tardive
+description: Vous pouvez intégrer des flux audio de liaison tardive ou alternatifs dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
+seo-description: Vous pouvez intégrer des flux audio de liaison tardive ou alternatifs dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
+seo-title: Intégration d’un fichier audio à liaison tardive
+title: Intégration d’un fichier audio à liaison tardive
 uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
@@ -10,9 +10,9 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 ---
 
 
-# Intégrer le son à liaison tardive {#integrate-late-binding-audio}
+# Intégration d’un fichier audio à liaison tardive {#integrate-late-binding-audio}
 
-Vous pouvez intégrer des flux audio de liaison tardive ou d’autres flux dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
+Vous pouvez intégrer des flux audio de liaison tardive ou alternatifs dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
 
 * Pour créer un autre gestionnaire audio :
 
