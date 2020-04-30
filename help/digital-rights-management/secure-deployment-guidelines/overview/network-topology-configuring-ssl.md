@@ -14,4 +14,4 @@ source-git-commit: ecb234a18d9e87359caeaab437f43ea2cd5ab499
 
 Le protocole SSL (Secure Sockets Layer) n’est nécessaire que si vous avez besoin de la prise en charge des clients Flash Media Rights Management Server 1.x.
 
-SSL avec authentification du client est requis pour le serveur de clé DRM Adobe Primetime. Pour plus d’informations, voir [Utilisation d’Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).
+SSL avec authentification du client est requis pour le serveur de clés DRM d’Adobe Primetime. Pour plus d’informations, voir [Utilisation d’Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).
