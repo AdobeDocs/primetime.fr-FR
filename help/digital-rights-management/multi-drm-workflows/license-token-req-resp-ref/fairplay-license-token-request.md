@@ -1,6 +1,6 @@
 ---
-description: L’interface du jeton de licence FairPlay fournit des services de production et de test.
-seo-description: L’interface du jeton de licence FairPlay fournit des services de production et de test.
+description: L’interface de jeton de licence FairPlay fournit des services de production et de test.
+seo-description: L’interface de jeton de licence FairPlay fournit des services de production et de test.
 seo-title: Demande/réponse de jeton de licence FairPlay
 title: Demande/réponse de jeton de licence FairPlay
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
@@ -10,9 +10,9 @@ source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
 ---
 
 
-# Demande et réponse du jeton de licence FairPlay {#fairplay-license-token-request-response}
+# Demande et réponse de jeton de licence FairPlay {#fairplay-license-token-request-response}
 
-L’interface du jeton de licence FairPlay fournit des services de production et de test. Cette requête renvoie un jeton qui peut être utilisé pour une licence FairPlay.
+L’interface de jeton de licence FairPlay fournit des services de production et de test. Cette demande renvoie un jeton qui peut être racheté pour une licence FairPlay.
 
 **Méthode : GET, POST** (avec un corps codé www-url qui contient des paramètres pour les deux méthodes)
 
@@ -22,7 +22,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
 
 * **Test :** `https://fp-gen.test.expressplay.com/hms/fp/token`
 
-* **Exemple de requête :**
+* **Exemple de demande :**
 
 ```<xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
   https://fp-gen.test.expressplay.com/hms/fp/token?customerAuthenticator= 
@@ -43,34 +43,34 @@ L’interface du jeton de licence FairPlay fournit des services de production et
    https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
    ```
 
-**Demander des paramètres  de**
+**Paramètres de la Requête de requêtes**
 
-**Tableau 3 : Paramètres de  de jeton**
+**Tableau 3 : Paramètres de Requête de jeton**
 
-| Paramètre  | Description | Obligatoire ? |
+| Paramètre de Requête | Description | Obligatoire ? |
 |--- |--- |--- |
-| customerAuthenticator Authentificateur du client en tant que paramètre  clientAuthenticator FairPlay | Il s’agit de votre clé d’API client, une clé pour votre production et testez  . Vous pouvez le trouver sur l’onglet  d’administration ExpressPlay. | Oui |
-| errorFormat | html ou json. Si html (valeur par défaut), une représentation HTML des erreurs éventuelles est fournie dans le corps d’entité de la réponse. Si json est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs [](https://www.expressplay.com/developer/restapi/#json-errors) JSON pour plus d’informations. Le type MIME de la réponse est soit text/uri- en cas de succès, soit text/html pour le format d’erreur HTML, soit application/json pour le format d’erreur JSON. | Non |
+| customerAuthenticator Authentificateur client en tant que paramètre de requête customerAuthenticator FairPlay | Il s’agit de votre clé d’API client, une clé pour chacun de vos environnements de production et de test. Vous pouvez le trouver dans l’onglet Tableau de bord d’administration ExpressPlay. | Oui |
+| errorFormat | html ou json. Si html (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si json est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs [](https://www.expressplay.com/developer/restapi/#json-errors) JSON pour plus d’informations. Le type MIME de la réponse est soit text/uri-liste on success, soit text/html pour le format d’erreur HTML, soit application/json pour le format d’erreur JSON. | Non |
 
-**Tableau 3 : Paramètres  du de licence**
+**Tableau 4 : Paramètres de la Requête de licence**
 
-| **Paramètre** | **Description** | **Obligatoire ?** |
+| **Paramètre de Requête** | **Description** | **Obligatoire ?** |
 |---|---|---|
 | `generalFlags` | Chaîne hexadécimale de 4 octets représentant les indicateurs de licence. &quot;0000&quot; est la seule valeur autorisée. | Non |
-| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées chiffrées à l’aide d’une clé KEK à l’aide d’un algorithme d’encapsulation de clé (AES Key Wrap, RFC3394). Si `kek` est fourni, l&#39;un des `kid` ou `ek` paramètres doit être fourni, *mais pas les deux*. | Non |
-| `kid` | Une chaîne hexadécimale de 16 octets représentant la clé de chiffrement du contenu ou une chaîne `'^somestring'`. La longueur de la chaîne suivie par le `'^'` ne peut pas être supérieure à 64 caractères. | Non |
+| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l’aide d’un algorithme d’encapsulation de clé (AES Key Wrap, RFC3394). Si `kek` est fourni, l&#39;un des `kid` paramètres ou les `ek` paramètres doivent être fournis, *mais pas les deux*. | Non |
+| `kid` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu ou d’une chaîne `'^somestring'`. La longueur de la chaîne suivie par le `'^'` ne peut pas être supérieure à 64 caractères. | Non |
 | `ek` | Une chaîne hexadécimale représentant la clé de contenu chiffrée. | Non |
-| `contentKey` | Une chaîne hexadécimale de 16 octets représentant la clé de chiffrement du contenu | Oui, à moins que les `kek` et `ek` ou `kid` ne soient fournis. |
-| `iv` | Une chaîne hexadécimale de 16 octets représentant le chiffrement de contenu IV | Oui |
+| `contentKey` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu | Oui, à moins que les `kek` et `ek` ou `kid` sont fournis. |
+| `iv` | Une représentation de chaîne hexadécimale de 16 octets du chiffrement de contenu IV | Oui |
 | `rentalDuration` | Durée de la location en secondes (par défaut - 0) | Non |
-| `fpExtension` | Enchaînement court `extensionType` et `extensionPayload`, sous forme de chaîne séparée par des virgules. Par exemple: […] `&fpExtension=wudo,AAAAAA==&`[…] | Non, n’importe quel nombre peut être utilisé |
+| `fpExtension` | Enveloppe de formulaire courte `extensionType` et `extensionPayload`, sous la forme d’une chaîne séparée par des virgules. Par exemple: […] `&fpExtension=wudo,AAAAAA==&`[…] | Non, n’importe quel nombre peut être utilisé |
 
-**Tableau 5 : Paramètres  de restriction de jeton**
+**Tableau 5 : Paramètres de Requête de restriction de jeton**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>Paramètre</b> </th> 
+   <th class="entry"> <b>Paramètre de Requête</b> </th> 
    <th class="entry"> <b>Description</b> </th> 
    <th class="entry"> <b>Obligatoire ?</b> </th> 
   </tr> 
@@ -78,17 +78,17 @@ L’interface du jeton de licence FairPlay fournit des services de production et
  <tbody> 
   <tr> 
    <td> <span class="codeph"> expirationTime </span> </td> 
-   <td> Heure d’expiration de ce jeton. Cette valeur DOIT être une chaîne au format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> date/heure dans l’indicateur de zone "Z" ("heure Zulu"), ou un entier précédé d’un signe "+". Un exemple de date/heure RFC 3339 est le <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Si la valeur est une chaîne au format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> date/heure, elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un entier précédé d’un signe "+", le jeton est interprété comme un nombre relatif de secondes, à partir de l’émission, que le jeton est valide. </p> Par exemple, <span class="codeph"> +60 </span> indique une minute. La durée de vie maximale et par défaut du jeton (si elle n’est pas spécifiée) est de 30 jours. </td> 
+   <td> Heure d’expiration de ce jeton. Cette valeur DOIT être une chaîne au format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> </a> date/heure RFC 3339 dans l'indicateur de zone "Z" ("heure Zulu"), ou un entier précédé d'un signe "+". Un exemple de date/heure RFC 3339 est le <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Si la valeur est une chaîne au format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> date/heure </a> RFC 3339, elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un entier précédé d’un signe "+", il est interprété comme un nombre relatif de secondes, à partir de l’émission, que le jeton est valide. </p> Par exemple, <span class="codeph"> +60 </span> indique une minute. La durée de vie maximale et par défaut (si elle n’est pas spécifiée) du jeton est de 30 jours. </td> 
    <td> Non </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Tableau 6 : Paramètres de  de corrélation**
+**Tableau 6 : Paramètres de Requête de corrélation**
 
-| **Paramètre** | **Description** | **Obligatoire ?** |
+| **Paramètre de Requête** | **Description** | **Obligatoire ?** |
 |---|---|---|
-| `cookie` | Chaîne arbitraire d’une longueur maximale de 32 caractères, transportée dans le jeton et consignée par le serveur d’échange de jeton. Vous pouvez l’utiliser pour corréler les entrées de journal sur le serveur d’échange et celles sur les serveurs de  du. | Non |
+| `cookie` | Chaîne arbitraire d’une longueur maximale de 32 caractères, transportée dans le jeton et consignée par le serveur d’échange de jetons. Vous pouvez l’utiliser pour corréler les entrées de journal sur le serveur de remboursement et celles sur les serveurs du prestataire. | Non |
 
 **Réponse**
 
@@ -100,9 +100,9 @@ L’interface du jeton de licence FairPlay fournit des services de production et
 | `400 Bad Request` | Arguments non valides | `text/html` ou `application/json` | Description de l’erreur |
 | `401 Unauthorized` | Échec de l&#39;authentification | `text/html` ou `application/json` | Description de l’erreur |
 | `404 Not found` | URL incorrecte | `text/html` ou `application/json` | Description de l’erreur |
-| `50x Server Error` | Erreur du serveur | `text/html` ou `application/json` | Description de l’erreur |
+| `50x Server Error` | Erreur serveur | `text/html` ou `application/json` | Description de l’erreur |
 
-**Tableau 8 : Codes d’erreur**
+**Tableau 8 : Codes d&#39;erreur de Événement**
 
 <table id="table_i2c_zsx_pv">  
  <thead> 
@@ -130,11 +130,11 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2017 </td> 
-   <td> Le jeton d’authentification doit être fourni </td> 
+   <td> Le jeton d'authentification doit être fourni </td> 
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Jeton d'authentification non valide : &lt;détails&gt; <p>Remarque :  Cela peut se produire si l’authentificateur est incorrect ou lors de l’accès à l’API de test sur <span class="filepath"> *.test.expression.com </span> à l’aide de l’authentificateur de production et vice versa. </p> <p importance="high">Remarque :  Le SDK de test et l’outil de test avancé (ATT) fonctionnent uniquement avec <span class="filepath"> *.test.expression.com </span>, tandis que les périphériques de production doivent utiliser <span class="filepath"> *.service.expression.com </span>. </p> </td> 
+   <td> Jeton d'authentification non valide : &lt;détails&gt; <p>Remarque :  Cela peut se produire si l’authentificateur est incorrect ou lors de l’accès à l’API de test sur <span class="filepath"> *.test.expression.com </span> à l’aide de l’authentificateur de production et vice versa. </p> <p importance="high">Remarque :  Le SDK de test et l’outil de test avancé (ATT) ne fonctionnent qu’avec <span class="filepath"> *.test.expression.com </span>, tandis que les périphériques de production doivent utiliser <span class="filepath"> *.service.expression.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -154,7 +154,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Durée de jeu de location manquante </td> 
+   <td> Durée de lecture de location manquante </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
@@ -162,7 +162,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> La clé de chiffrement du contenu doit comporter 32 chiffres hexadécimaux. </td> 
+   <td> La clé de chiffrement du contenu doit contenir 32 chiffres hexadécimaux. </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
@@ -170,7 +170,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td>  du service </td> 
+   <td> Compte désactivé de service </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
@@ -178,7 +178,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Contrôle de sortie non valide, valeurs hors de la plage spécifiée </td> 
+   <td> Contrôle de sortie non valide, valeurs en dehors de la plage spécifiée </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -186,7 +186,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> Le type d’extension doit comporter 4 caractères. </td> 
+   <td> Le type d'extension doit comporter 4 caractères </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
@@ -194,15 +194,15 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> doit être encodé 4 octets </td> 
+   <td> <span class="codeph"> OutputControlFlag </span> doit être codé 4 octets </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> Format d'erreur spécifié non valide : &lt;format&gt; </td> 
+   <td> Format d'erreur non valide spécifié : &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
-   <td> Impossible d'authentifier le périphérique </td> 
+   <td> Le périphérique n'a pas pu être authentifié </td> 
   </tr> 
   <tr> 
    <td> -4010 </td> 
@@ -214,7 +214,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -4019 </td> 
-   <td> Impossible d'obtenir la clé de contenu à partir de la clé  service  de </td> 
+   <td> Impossible d'obtenir la clé de contenu à partir du service d'enregistrement clé </td> 
   </tr> 
   <tr> 
    <td> -4020 </td> 
@@ -246,7 +246,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> Paramètre <span class="codeph"> iv </span> spécifié non valide </td> 
+   <td> Paramètre <span class="codeph"> iv </span> non valide spécifié </td> 
   </tr> 
   <tr> 
    <td> -6004 </td> 
@@ -254,7 +254,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -6005 </td> 
-   <td> Données de clé non valides spécifiées </td> 
+   <td> Données clés non valides spécifiées </td> 
   </tr> 
   <tr> 
    <td> -6006 </td> 
@@ -266,7 +266,7 @@ L’interface du jeton de licence FairPlay fournit des services de production et
   </tr> 
   <tr> 
    <td> -6008 </td> 
-   <td> La liaison d’ID de périphérique n’est pas prise en charge pour FairPlay. </td> 
+   <td> La liaison d'ID de périphérique n'est pas prise en charge pour FairPlay </td> 
   </tr> 
   <tr> 
    <td> -6009 </td> 
