@@ -1,8 +1,8 @@
 ---
-description: L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place dans le contenu par phases.
-seo-description: L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place dans le contenu par phases.
-seo-title: Insérer des publicités
-title: Insérer des publicités
+description: L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
+seo-description: L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
+seo-title: Insérer des annonces
+title: Insérer des annonces
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
@@ -10,11 +10,11 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 ---
 
 
-# Insérer des publicités {#insert-ads}
+# Insérer des annonces {#insert-ads}
 
-L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place dans le contenu par phases.
+L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
 
-Une *`ad break`* publicité contient une ou plusieurs publicités lues en séquence. TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
+Un *`ad break`* contient une ou plusieurs publicités qui sont lues en séquence. TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
 
 >[!TIP]
 >
@@ -26,25 +26,25 @@ TVSDK prend en charge plusieurs cas d’utilisation pour la résolution et l’i
 
 * Insertion publicitaire preroll, où les publicités sont insérées au début du contenu.
 * Insertion d’une publicité intermédiaire, où au moins une publicité est insérée au milieu du contenu.
-* Insertion d’une publicité post-roulage, où au moins une publicité est ajoutée à la fin du contenu.
+* Insertion d’une publicité post-roll, où au moins une publicité est ajoutée à la fin du contenu.
 
-TVSDK résout les publicités, les insère dans les emplacements définis par le serveur d’annonces et calcule la chronologie virtuelle avant le  de lecture. Une fois le de lecture , aucune modification, telle que la suppression de publicités insérées ou insérées, ne peut se produire.
+TVSDK résout les publicités, les insère dans les emplacements définis par le serveur d’annonces et calcule la chronologie virtuelle avant les débuts de lecture. Après les débuts de lecture, aucune modification, telle que les publicités insérées ou insérées supprimées, ne peut se produire.
 
-## Résolution et insertion d’une publicité dynamique et linéaire {#section_A6A1BB262D084462A1D134083556B7CC}
+## Résoudre et insérer des publicités en direct et linéaires {#section_A6A1BB262D084462A1D134083556B7CC}
 
 TVSDK prend en charge plusieurs cas d’utilisation pour la résolution et l’insertion de publicités en direct et linéaire.
 
 * Insertion d’une publicité preroll, où au moins une publicité est insérée au début du contenu.
 * Insertion d’une publicité intermédiaire, où au moins une publicité est insérée au milieu du contenu.
 
-TVSDK résout les publicités et les insère lorsqu’un point de repère est détecté dans le flux en direct ou linéaire. Par défaut, TVSDK prend en charge les indices suivants comme marqueurs publicitaires valides lors de la résolution et du placement des publicités :
+TVSDK résout les publicités et les insère lorsqu’un point de repère est détecté dans le flux en direct ou linéaire. Par défaut, TVSDK prend en charge les indices suivants en tant que marqueurs publicitaires valides lors de la résolution et du placement de publicités :
 
 * # EXT-X-CUEPOINT
 * # EXT-X-AD
 * # EXT-X-CUE
 * # EXT-X-CUE-OUT
 
-Ces marqueurs nécessitent le champ de métadonnées en secondes `DURATION` et l’identifiant unique du signal. Par exemple :
+Ces marqueurs nécessitent les champs de métadonnées en secondes `DURATION` et l’identifiant unique du signal. Par exemple :
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
@@ -54,24 +54,24 @@ Pour plus d’informations sur d’autres indices, voir [S’abonner à des bali
 
 ## Suivi de la publicité cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
-TVSDK effectue automatiquement le suivi des publicités pour la VOD et la diffusion en direct/linéaire.
+TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
 
-Les notifications sont utilisées pour informer votre application de la progression d&#39;une publicité, y compris des informations sur le moment où une publicité commence et se termine.
+Les notifications sont utilisées pour informer votre application de l&#39;avancement d&#39;une publicité, y compris des informations sur le moment où une publicité commence et se termine.
 
-## Mise en oeuvre d’un retour de coupure publicitaire anticipée {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Mise en oeuvre d’un retour anticipé de coupures publicitaires {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
-Pour l’insertion d’une publicité en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
+Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
 
-Voici quelques exemples de retour anticipé d’une coupure publicitaire :
+Voici quelques exemples de retours de coupures publicitaires précoces :
 
-* Durée de la coupure publicitaire dans certains sportifs.
+* Durée de la coupure publicitaire dans certains événements sportifs.
 
-   Bien qu’une durée par défaut soit fournie, si le jeu reprend avant la fin de la pause, la coupure publicitaire doit être quittée.
-* Un signal d’urgence pendant une coupure publicitaire dans un flux en direct.
+   Bien qu’une durée par défaut soit fournie, si le jeu reprend avant que la coupure ne se termine, la coupure publicitaire doit être quittée.
+* Signal d’urgence pendant une coupure publicitaire dans un flux en direct.
 
-La possibilité de quitter rapidement une coupure publicitaire est identifiée par une balise personnalisée dans le manifeste, appelée &quot;splice-in&quot; ou &quot;cue-in&quot;. TVSDK permet à l’application de s’abonner à ces balises de splice pour offrir une opportunité de splice.
+La possibilité de quitter une coupure publicitaire prématurée est identifiée par une balise personnalisée dans le manifeste, appelée &quot;splice-in&quot; ou &quot;indices-in&quot;. TVSDK permet à l’application de s’abonner à ces balises de splice pour offrir une opportunité de splice.
 
-* Pour utiliser la `#EXT-X-CUE-IN` balise comme une opportunité de division et mettre en oeuvre un retour de coupure publicitaire anticipée :
+* Pour utiliser la `#EXT-X-CUE-IN` balise en tant qu’opportunité d’éclatement et mettre en oeuvre un retour de coupure publicitaire anticipée :
 
    1. Abonnez-vous à la balise .
 
@@ -91,7 +91,7 @@ La possibilité de quitter rapidement une coupure publicitaire est identifiée p
 
 * Pour partager la même balise pour la division et la division :
 
-1. Si l&#39;application partage le même signal pour indiquer le signal de départ/de sortie et le signal de départ/de sortie, étendez `PTDefaultAdOpportunityResolver` et implémentez la `preparePlacementOpportunity` méthode.
+1. Si l&#39;application partage le même indice pour indiquer le signal d&#39;arrêt/d&#39;éclatement et le signal d&#39;arrivée/d&#39;éclatement, étendez `PTDefaultAdOpportunityResolver` et implémentez la `preparePlacementOpportunity` méthode.
 
    [!TIP]
 
