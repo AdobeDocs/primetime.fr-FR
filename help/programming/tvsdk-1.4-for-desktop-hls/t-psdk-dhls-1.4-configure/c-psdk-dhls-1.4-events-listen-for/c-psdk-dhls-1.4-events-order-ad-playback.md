@@ -1,8 +1,8 @@
 ---
-description: Lorsque votre lecture comprend de la publicité, TVSDK envoie des /notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions basées sur des  dans la séquence prévue.
-seo-description: Lorsque votre lecture comprend de la publicité, TVSDK envoie des /notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions basées sur des  dans la séquence prévue.
-seo-title: 'Ordre des publicitaires '
-title: 'Ordre des publicitaires '
+description: Lorsque la lecture comprend de la publicité, TVSDK envoie des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
+seo-description: Lorsque la lecture comprend de la publicité, TVSDK envoie des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
+seo-title: Ordre des événements publicitaires
+title: Ordre des événements publicitaires
 uuid: 34a6a606-2f2e-42de-88fd-c91202cafddf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
@@ -10,13 +10,13 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 ---
 
 
-# Ordre des publicitaires{#order-of-advertising-events}
+# Ordre des événements publicitaires{#order-of-advertising-events}
 
-Lorsque votre lecture comprend de la publicité, TVSDK envoie des /notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions basées sur des  dans la séquence prévue.
+Lorsque la lecture comprend de la publicité, TVSDK envoie des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
-Lors de la lecture des publicités, l’ordre des  est le suivant :
+Lors de la lecture des publicités, l’ordre des événements est le suivant :
 
 * `AdBreakPlaybackEvent.AD_BREAK_STARTED`
 * Les éléments suivants sont distribués pour chaque publicité de la coupure publicitaire :
@@ -28,7 +28,7 @@ Lors de la lecture des publicités, l’ordre des  est le suivant :
 
 * `AdBreakPlaybackEvent.AD_BREAK_COMPLETED`
 
-L’exemple suivant illustre une progression type du de lecture d’annonce :
+L’exemple suivant montre une progression type des événements de lecture publicitaire :
 
 ```
 mediaPlayer.addEventListener(AdBreakPlaybackEvent.AD_BREAK_STARTED, onAdBreakStarted); 
