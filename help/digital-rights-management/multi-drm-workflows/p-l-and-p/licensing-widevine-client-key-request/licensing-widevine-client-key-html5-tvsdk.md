@@ -14,7 +14,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Le code peut demander une clé via DRMManager.
 
-Le navigateur TVSDK expose également une API setProtectionData via l’objet DRMManager :
+Le navigateur TVSDK expose également une API setProtectionData par le biais de l’objet DRMManager :
 
 ```
 [  /** 
@@ -31,7 +31,7 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-Votre code doit appeler cette API avant de commencer la lecture du contenu normalement. MediaPlayer.vo.proprotection.ProtectionData est disponible ici : [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Votre code doit appeler cette API avant de démarrer la lecture du contenu de la manière normale. MediaPlayer.vo.proprotection.ProtectionData est documenté ici : [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
 Voici un exemple d’objet de données de protection avec des URL de serveur de licences pour PlayReady et Widevine.
 
