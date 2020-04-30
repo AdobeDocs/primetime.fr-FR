@@ -14,11 +14,11 @@ Indique la fréquence à laquelle le client synchronise son état avec le serveu
 
 Le comportement de synchronisation est défini à l’aide des paramètres suivants :
 
-* Intervalle  — Indique le délai d’attente après la dernière synchronisation réussie pour d’une autre requête de synchronisation.
-* Intervalle d&#39;arrêt fixe — (Facultatif). Interdire la lecture si une synchronisation réussie ne s’est pas produite pendant la durée spécifiée.
-* Forcer la probabilité de synchronisation — (Facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l’intervalle de  suivant.
+* Intervalle de Début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
+* Intervalle d’arrêt définitif — (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
+* Forcer la probabilité de synchronisation — (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->Cette règle d’utilisation est prise en charge par les clients Adobe Access versions 3.0 et ultérieures. Le comportement sur les anciens clients dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minimale du client.
+>Cette règle d’utilisation est prise en charge par les clients Adobe Access versions 3.0 et ultérieures. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minimale du client.
 
