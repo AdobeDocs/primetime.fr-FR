@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe TextFormat, qui définit le style des sous-titrages à fermeture affichés par votre lecteur.
-seo-description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe TextFormat, qui définit le style des sous-titrages à fermeture affichés par votre lecteur.
-seo-title: Contrôle du style de sous-titrage
-title: Contrôle du style de sous-titrage
+description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage fermées à l’aide de la classe TextFormat, qui définit le style des sous-titrages fermés affichés par votre lecteur.
+seo-description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage fermées à l’aide de la classe TextFormat, qui définit le style des sous-titrages fermés affichés par votre lecteur.
+seo-title: Contrôler le style de sous-titrage
+title: Contrôler le style de sous-titrage
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
@@ -10,20 +10,20 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# Contrôle du style de sous-titrage {#control-closed-caption-styling}
+# Contrôler le style de sous-titrage {#control-closed-caption-styling}
 
-Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe TextFormat, qui définit le style des sous-titrages à fermeture affichés par votre lecteur.
+Vous pouvez fournir des informations de style pour les pistes de sous-titrage fermées à l’aide de la classe TextFormat, qui définit le style des sous-titrages fermés affichés par votre lecteur.
 
-Cette classe encapsule les informations de style de sous-titrage, telles que le type, la taille, la couleur et l’opacité de l’arrière-plan.
+Cette classe encapsule les informations de style de sous-titrage, telles que le type de police, la taille, la couleur et l’opacité de l’arrière-plan.
 
 ## Définition des styles de sous-titrage {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
-Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
+Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes TVSDK.
 
-1. Attendez que le lecteur de médias soit au moins dans son `PREPARED` état.
+1. Attendez que le lecteur multimédia soit au moins dans l’ `PREPARED` état.
 1. Créez une `TextFormatBuilder` instance.
 
-   Vous pouvez fournir maintenant tous les paramètres de style de sous-titrage ou les définir ultérieurement.
+   Vous pouvez fournir tous les paramètres de style de sous-titrage ou les définir ultérieurement.
 
    TVSDK encapsule les informations de style de sous-titrage codé dans l’ `TextFormat` interface. La `TextFormatBuilder` classe crée des objets qui implémentent cette interface.
 
@@ -43,7 +43,7 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
       java.lang.String safeArea)
    ```
 
-1. Pour obtenir une référence à un objet qui implémente l’ `TextFormat` interface, appelez la méthode `TextFormatBuilder.toTextFormat` publique.
+1. Pour obtenir une référence à un objet qui implémente l&#39; `TextFormat` interface, appelez la méthode `TextFormatBuilder.toTextFormat` publique.
 
    >[!NOTE]
    >
@@ -53,9 +53,9 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
    public TextFormat toTextFormat()
    ```
 
-1. Vous pouvez également obtenir les paramètres actuels du style de sous-titrage en procédant de l’une des manières suivantes :
+1. Vous pouvez également obtenir les paramètres actuels de style de sous-titrage en procédant de l’une des manières suivantes :
 
-   * Obtenez tous les paramètres de style avec `MediaPlayer.getCCStyle` La valeur renvoyée est une instance de l’ `TextFormat` interface.
+   * Obtenir tous les paramètres de style avec `MediaPlayer.getCCStyle` La valeur renvoyée est une instance de l’ `TextFormat` interface.
 
       ```java
       /** 
@@ -67,7 +67,7 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * Obtenez les paramètres un par un grâce aux méthodes d’obtention de l’ `TextFormat` interface.
+   * Récupérez les paramètres un par un grâce aux méthodes d&#39;obtention de l&#39; `TextFormat` interface.
 
       ```java
       public java.lang.String getFontColor(); 
@@ -103,7 +103,7 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
 
    * Utilisez la `TextFormatBuilder` classe, qui définit des méthodes de définition individuelles.
 
-      L’ `TextFormat` interface définit un objet immuable de sorte qu’il n’y ait que des méthodes get et pas de paramètres. Vous pouvez définir les paramètres de style de sous-titrage uniquement avec la `TextFormatBuilder` classe :
+      L&#39; `TextFormat` interface définit un objet immuable, de sorte qu&#39;il n&#39;y a que les méthodes get et pas de paramètres. Vous pouvez définir les paramètres de style de sous-titrage uniquement avec la `TextFormatBuilder` classe :
 
       ```java
       // set font type 
@@ -128,7 +128,7 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Paramètres de couleurs :** Dans Android TVSDK 2.X, une amélioration a été apportée au style colorimétrique des sous-titres codés. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation des couleurs hexadécimales RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :       >
+      >**Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :       >
       >
       >    * FFFFF = Noir
       >    * 000000 = Blanc
@@ -138,7 +138,7 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
       >
       >etc.
       >
-      >Dans votre application, chaque fois que vous transmettez des informations de style de couleur à `TextFormatBuilder`, vous utilisez toujours le `Color`  comme auparavant, mais vous devez maintenant ajouter `getValue()` à la couleur pour obtenir la valeur sous forme de chaîne. Par exemple :
+      >Dans votre application, chaque fois que vous transmettez des informations de style de couleur à `TextFormatBuilder`, vous utilisez toujours la `Color` énumération comme auparavant, mais vous devez maintenant ajouter `getValue()` à la couleur pour obtenir la valeur sous forme de chaîne. Par exemple :
       >
       ```
       >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
@@ -146,11 +146,11 @@ Vous pouvez mettre en forme le texte de sous-titrage avec les méthodes TVSDK.
 
 
 
-La définition du style de sous-titrage est une opération asynchrone. Les modifications peuvent donc prendre jusqu’à quelques secondes pour apparaître à l’écran.
+La définition du style de sous-titrage est une opération asynchrone qui peut prendre jusqu’à quelques secondes pour que les modifications s’affichent à l’écran.
 
 ## Options de style de sous-titrage {#section_6D685EC2D58C42A2BDDD574EDFCCC2A0}
 
-Vous pouvez définir plusieurs options de style de légende, qui remplacent les options de style des légendes d’origine.
+Vous pouvez spécifier plusieurs options de style de légende et ces options remplacent les options de style dans les légendes d’origine.
 
 ```java
 public TextFormatBuilder( 
@@ -170,7 +170,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->Dans les options qui définissent les valeurs par défaut (par exemple `DEFAULT`), cette valeur fait référence au paramètre défini lors de la spécification initiale de la légende.
+>Dans les options qui définissent les valeurs par défaut (par exemple `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -182,64 +182,64 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Police </td> 
-   <td colname="2"> <p>Type de police. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> TextFormat.Font </span> et qui représente, par exemple, un espacement fixe avec ou sans sérifs. </p> <p>Conseil :  Les polices disponibles sur un périphérique peuvent varier et des substitutions sont utilisées si nécessaire. Le monoespace avec empattements est généralement utilisé comme substitut, bien que cette substitution puisse être propre au système. </p> </td> 
+   <td colname="2"> <p>Type de police. </p> <p>Peut uniquement être définie sur une valeur définie par la <span class="codeph"> énumération </span> TextFormat.Font et qui représente, par exemple, un espacement monochrome avec ou sans sérifs. </p> <p>Conseil :  Les polices disponibles sur un périphérique peuvent varier et des substitutions sont utilisées si nécessaire. Le monoespace avec empattements est généralement utilisé comme substitut, bien que cette substitution puisse être propre au système. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Taille </td> 
-   <td colname="2"> <p>La taille de la légende. </p> <p> Peut uniquement être définie sur une valeur définie par le <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>La taille de la légende. </p> <p> Peut uniquement être définie sur une valeur définie par la <span class="codeph"> énumération TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Taille standard </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MOYEN </span> - Taille standard </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRAND </span> - Environ 30 % plus grand que moyen </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PETITE </span> - Environ 30 % inférieure à moyenne </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> - Taille par défaut de la légende ; identique au support </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> - Taille par défaut de la légende ; identique à medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bordure de la police </td> 
-   <td colname="2"> <p>Effet utilisé pour le bord de la police, par exemple relevé ou aucun. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>Effet utilisé pour le bord de la police, par exemple relevé ou aucun. </p> <p>Peut uniquement être définie sur une valeur définie par la <span class="codeph"> énumération TextFormat.FontEdge </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Couleur de police </td> 
-   <td colname="2"> <p>Couleur de la police. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Couleur de la police. </p> <p>Peut uniquement être définie sur une valeur définie par la <span class="codeph"> énumération TextFormat.Color </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Couleur du bord </td> 
+   <td colname="1"> Edge color </td> 
    <td colname="2"> <p>Couleur de l’effet de contour. </p> <p>Peut être définie sur l’une des valeurs disponibles pour la couleur de la police. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Couleur d'arrière-plan </td> 
-   <td colname="2"> <p>Couleur de la cellule du caractère d’arrière-plan. </p> <p>Peut uniquement être définie sur des valeurs disponibles pour la couleur de la police. </p> </td> 
+   <td colname="1"> Couleur d’arrière-plan </td> 
+   <td colname="2"> <p>Couleur de la cellule de l’arrière-plan. </p> <p>Peut uniquement être définie sur des valeurs disponibles pour la couleur de la police. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Couleur de remplissage </td> 
    <td colname="2"> <p>Couleur d’arrière-plan de la fenêtre dans laquelle se trouve le texte. </p> <p>Peut être définie sur l’une des valeurs disponibles pour la couleur de la police. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Opacité de la police </td> 
+   <td colname="1"> Opacité des polices </td> 
    <td colname="2"> <p>Opacité du texte. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour la police est 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité du fond </td> 
-   <td colname="2"> <p>Opacité de la cellule de caractère d’arrière-plan. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour l’arrière-plan est 100. </p> </td> 
+   <td colname="2"> <p>Opacité de la cellule de caractère d’arrière-plan. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour l'arrière-plan est 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité du remplissage </td> 
    <td colname="2"> <p>Opacité de l’arrière-plan de la fenêtre de sous-titrage. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour le remplissage est égal à 0. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Encart inférieur </td> 
-   <td colname="2"> <p>Distance verticale par rapport au bas de la fenêtre de sous-titrage pour que les légendes soient évitées. </p> <p>Exprimé sous forme de pourcentage de la hauteur de la fenêtre de sous-titrage (par exemple, "20 %") ou d’un nombre de pixels (par exemple, "20"). </p> </td> 
+   <td colname="1"> Entrée inférieure </td> 
+   <td colname="2"> <p>Distance verticale par rapport au bas de la fenêtre de sous-titrage pour les légendes à éviter. </p> <p>Exprimé sous forme de pourcentage de la hauteur de la fenêtre de légende (par exemple, "20 %") ou d’un nombre de pixels (par exemple, "20"). </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> Zone sécurisée </td> 
-   <td colname="2"> <p>Zone située autour du bord de l’écran, entre 0 % et 25 %, où les légendes n’apparaissent pas. </p> <p>Par défaut, la zone de sécurité pour WebVTT est de 0 %. Ce paramètre permet à votre application de remplacer cette valeur par défaut. Si deux valeurs sont fournies, par exemple, la chaîne "10 %,20 %", la première valeur est la zone horizontale sécurisée et la seconde, la zone verticale sécurisée. Si une valeur est fournie, par exemple, la chaîne "15 %", les axes vertical et horizontal utilisent tous deux la zone sécurisée spécifiée. </p> </td> 
+   <td colname="2"> <p>Zone située autour du bord de l’écran, entre 0 % et 25 %, dans laquelle les légendes n’apparaissent pas. </p> <p>Par défaut, la zone sécurisée de WebVTT est de 0 %. Ce paramètre permet à votre application de remplacer cette valeur par défaut. Si deux valeurs sont fournies, par exemple, la chaîne "10 %,20 %", la première valeur est la zone horizontale sécurisée et la seconde, la zone verticale sécurisée. Si une valeur est fournie, par exemple, la chaîne "15%", les axes vertical et horizontal utilisent tous deux la zone de sécurité spécifiée. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Exemples de formatage des légendes {#section_58E8E82494EC4683B010FFDE67485CF9}
 
-Voici quelques exemples qui vous montrent comment définir le formatage des sous-titres.
+Voici quelques exemples qui vous montrent comment spécifier la mise en forme des sous-titres.
 
 **Exemple 1 : Spécifier explicitement les valeurs de format**
 
@@ -267,7 +267,7 @@ private final MediaPlayer.PlaybackEventListener _playbackEventListener =
 } 
 ```
 
-**Exemple 2 : Définition des valeurs de format dans les paramètres**
+**Exemple 2 : Spécification des valeurs de format dans les paramètres**
 
 ```java
 /** 
