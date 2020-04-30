@@ -18,22 +18,22 @@ Chargez une ressource en instanciant directement une ressource MediaResource et 
 
    Remplacez l’élément actuellement lisible de votre `MediaPlayer` objet existant en appelant `replaceCurrentResource` et en transmettant une `MediaResource` instance existante.
 
-1. Attendez que le SDK du navigateur `AdobePSDK.MediaPlayerStatusChangeEvent` TVSDK soit distribué avec `event.status` ce qui suit :
+1. Attendez que le SDK du navigateur TVSDK soit distribué `AdobePSDK.MediaPlayerStatusChangeEvent` avec `event.status` ce qui suit :
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Par l’intermédiaire de ces , l’objet MediaPlayer indique à votre application si la ressource multimédia a bien été chargée.
+      Grâce à ces événements, l’objet MediaPlayer informe votre application de la réussite du chargement de la ressource multimédia.
 
-1. Lorsque l’état du lecteur multimédia devient `MediaPlayerStatus.INITIALIZED`, vous pouvez appeler `MediaPlayer.prepareToPlay`.
+1. Lorsque l’état du lecteur multimédia devient `MediaPlayerStatus.INITIALIZED`différent, vous pouvez appeler `MediaPlayer.prepareToPlay`.
 
-   L’état INITIALIZED indique que le chargement du média a réussi. Appeler le `prepareToPlay` le processus de résolution de publicité et de placement, le cas échéant.
-1. Lorsque le navigateur TVSDK distribue le `MediaPlayerStatus.PREPARED` chargé avec succès par le flux média (un MediaPlayerItem est créé), il est préparé pour la lecture.
+   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
+1. Lorsque le navigateur TVSDK distribue le `MediaPlayerStatus.PREPARED` événement de chargement du flux média (MediaPlayerItem est créé) et est préparé pour la lecture.
 
-En cas d’échec, le `MediaPlayer` commutateur passe au `MediaPlayerStatus.ERROR`.
+En cas de panne, le `MediaPlayer` commutateur est activé sur le `MediaPlayerStatus.ERROR`.
 
-Il avertit également votre application en distribuant le `MediaPlayerStatus.ERROR` .
+Il informe également votre application en distribuant le `MediaPlayerStatus.ERROR` événement.
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
