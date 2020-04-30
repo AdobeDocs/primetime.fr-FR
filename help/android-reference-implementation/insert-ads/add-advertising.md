@@ -10,7 +10,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 # Publicité Ajouter {#add-advertising}
 
-Vous pouvez ajouter une fonctionnalité de publicité au lecteur en créant un fichier `AdsManager` ou en utilisant la fabrique de gestionnaires.
+Vous pouvez ajouter des fonctionnalités de publicité au lecteur en créant un fichier `AdsManager` ou en utilisant la fabrique de gestion.
 
-* Pour créer une `AdsManager`:
-* Pour utiliser une `ManagerFactory` fonction d’activation ou de désactivation des publicités
+* Pour créer un `AdsManager`:
+* Pour utiliser un `ManagerFactory` outil pour activer ou désactiver des publicités
