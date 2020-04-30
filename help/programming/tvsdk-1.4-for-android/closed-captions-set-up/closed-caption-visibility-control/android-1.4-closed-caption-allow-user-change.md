@@ -1,6 +1,6 @@
 ---
-description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage.
-seo-description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage.
+description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
+seo-description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 seo-title: Exemple Autoriser les utilisateurs à modifier le suivi des légendes
 title: Exemple Autoriser les utilisateurs à modifier le suivi des légendes
 uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
@@ -12,9 +12,9 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Exemple : Autoriser les utilisateurs à modifier le suivi des légendes{#example-allow-users-to-change-the-caption-track}
 
-Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage.
+Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 
-1. Créez un bouton simple pour modifier le suivi des sous-titres.
+1. Créez un bouton simple pour modifier le suivi des sous-titres fermés.
 
    ```xml
       <Button 
@@ -28,7 +28,7 @@ Il s’agit d’un exemple de création d’un bouton qui permet à un utilisate
      android:text="CC" /> 
    ```
 
-1. Convertissez le  des pistes de sous-titrage disponibles en tableau de chaînes. Les pistes de sous-titrage codé qui ont  , c’est-à-dire les  pour lesquels TVSDK a découvert des données, sont marquées en conséquence :
+1. Convertissez la liste des pistes de sous-titrage disponibles en tableau de chaînes. Les pistes de sous-titrage fermées qui comportent une activité (c’est-à-dire les canaux pour lesquels TVSDK a découvert des données) sont marquées en conséquence :
 
    ```java
    /** 
@@ -54,7 +54,7 @@ Il s’agit d’un exemple de création d’un bouton qui permet à un utilisate
    } 
    ```
 
-1. Lorsque l’utilisateur clique sur le bouton, affiche une boîte de dialogue qui  tous les suivis CC par défaut.
+1. Lorsque l’utilisateur clique sur le bouton, affiche une boîte de dialogue qui liste tous les suivis CC par défaut.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
