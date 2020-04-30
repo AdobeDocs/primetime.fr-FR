@@ -1,26 +1,26 @@
 ---
-description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le gestionnaire de gestion des droits numériques (DRM).
-seo-description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le gestionnaire de gestion des droits numériques (DRM).
-seo-title: Présentation de l’interface DRM Primetime
-title: Présentation de l’interface DRM Primetime
+description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
+seo-description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
+seo-title: Présentation de l’interface DRM de Primetime
+title: Présentation de l’interface DRM de Primetime
 uuid: 01714ee6-a937-4ca3-b535-6a6ef681ee6d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: ''
 
 ---
 
 
-# Présentation de l’interface DRM Primetime{#primetime-drm-interface-overview}
+# Présentation de l’interface DRM de Primetime{#primetime-drm-interface-overview}
 
-L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le gestionnaire de gestion des droits numériques (DRM).
+L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
 Primetime DRM offre un flux de travail évolutif et efficace pour mettre en oeuvre la protection du contenu dans les applications TVSDK. Vous protégez et gérez les droits sur votre contenu vidéo en créant une licence pour chaque fichier multimédia numérique.
 
-TVSDK prend en charge l’intégration DRM Primetime comme DRM personnalisé. Cela signifie que votre application doit implémenter le d’authentification DRM avant de lire le flux en utilisant Flash `DRMManager`. Pour activer cette fonctionnalité, le `MediaPlayer` gestionnaire DRM vous fournit le gestionnaire d’authentification.
+TVSDK prend en charge l’intégration DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux en utilisant Flash `DRMManager`. Pour activer cette fonctionnalité, le gestionnaire de gestion des droits numériques `MediaPlayer` vous fournit le gestionnaire d’authentification des droits numériques.
 
-Voici les principaux éléments d’API pour travailler avec DRM :
+Il s’agit des éléments d’API les plus importants pour travailler avec DRM :
 
 * Référence dans le lecteur multimédia à l’objet du gestionnaire DRM qui implémente le sous-système DRM :
 
@@ -36,8 +36,8 @@ Autres éléments d’API pertinents :
 * [flash.net.drm.DRMContentData](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMContentData.html)
 * [flash.net.drm.DRMVoucher](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/DRMVoucher.html)
 * [flash.net.drm.AuthenticationMethod](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/drm/AuthenticationMethod.html)
-* [flash...DRMStatusEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMStatusEvent.html)
-* [flash...DRMErrorEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMErrorEvent.html)
+* [flash.événements.DRMStatusEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMStatusEvent.html)
+* [flash.événements.DRMErrorEvent](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/events/DRMErrorEvent.html)
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
