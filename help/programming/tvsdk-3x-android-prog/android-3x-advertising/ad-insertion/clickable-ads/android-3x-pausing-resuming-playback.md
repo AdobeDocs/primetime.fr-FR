@@ -1,8 +1,8 @@
 ---
 description: Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
 seo-description: Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
-seo-title: Suspendre et reprendre la lecture
-title: Suspendre et reprendre la lecture
+seo-title: Pause et reprise de la lecture
+title: Pause et reprise de la lecture
 uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
@@ -10,11 +10,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 ---
 
 
-# Suspendre et reprendre la lecture {#pause-and-resume-playback}
+# Pause et reprise de la lecture {#pause-and-resume-playback}
 
 Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
 
-1. Remplacez le  `onPause` et `onResume` depuis le  de Android.
+1. Remplacez l’Activité `onPause` et `onResume` depuis Android.
 
    ```java
    @Override 
