@@ -26,17 +26,17 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> -1 </td> 
    <td colname="col2"><span class="codeph"> END_OF_PERIOD</span> </td> 
-   <td colname="col3"> Fin de période. </td> 
+   <td colname="col3"> Fin de la période. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 0 </td> 
-   <td colname="col2"><span class="codeph"> SUCCÈS</span> </td> 
+   <td colname="col2"><span class="codeph"> RÉUSSITE</span> </td> 
    <td colname="col3"> Opération réussie. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 1 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
-   <td colname="col3"> Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/échec seront disponibles ultérieurement. </td> 
+   <td colname="col3"> Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/d’échec seront disponibles ultérieurement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 2 </td> 
@@ -46,7 +46,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
-   <td colname="col3"> Échec du décodeur au moment de l’exécution. </td> 
+   <td colname="col3"> Échec du décodeur au moment de l'exécution. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 4 </td> 
@@ -106,12 +106,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 15 </td> 
    <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
-   <td colname="col3"> La configuration n’est pas prise en charge. </td> 
+   <td colname="col3"> La configuration n'est pas prise en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
    <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
-   <td colname="col3"> Opération non prise en charge. </td> 
+   <td colname="col3"> L'opération n'est pas prise en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
@@ -131,12 +131,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 20 </td> 
    <td colname="col2"><span class="codeph"> OP_ONLY_ALLOWED_IN_PAUSED_STATE</span> </td> 
-   <td colname="col3"> L’opération n’est autorisée que lorsqu’elle est en pause. </td> 
+   <td colname="col3"> L'opération n'est autorisée que pendant la mise en pause. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 21 </td> 
    <td colname="col2"><span class="codeph"> OP_INVALID_WITH_AUDIO_ONLY_FILE</span> </td> 
-   <td colname="col3"> Cette opération ne peut pas être utilisée sur des fichiers audio uniquement. </td> 
+   <td colname="col3"> L'opération ne peut pas être utilisée sur des fichiers audio uniquement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 22 </td> 
@@ -161,22 +161,22 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 26 </td> 
    <td colname="col2"><span class="codeph"> FILE_STRUCTURE_INVALID</span> </td> 
-   <td colname="col3"> Le fichier spécifié n’est pas conforme à la syntaxe attendue. </td> 
+   <td colname="col3"> Le fichier spécifié n'est pas conforme à la syntaxe attendue. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 27 </td> 
    <td colname="col2"><span class="codeph"> COMPONENT_CREATION_FAILURE</span> </td> 
-   <td colname="col3"> Impossible de créer un composant essentiel. </td> 
+   <td colname="col3"> Un composant essentiel n'a pas pu être créé. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 28 </td> 
    <td colname="col2"><span class="codeph"> DRM_INIT_ERROR</span> </td> 
-   <td colname="col3"> Impossible de créer le contexte DRM. </td> 
+   <td colname="col3"> Échec de la création du contexte DRM. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> _NOT_SUPPORTED </span> </td> 
-   <td colname="col3"> Le type de  n’est pas pris en charge. </td> 
+   <td colname="col2"><span class="codeph"> CONTENEUR_NOT_SUPPORTED </span> </td> 
+   <td colname="col3"> Le type de Conteneur n'est pas pris en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 30 </td> 
@@ -205,8 +205,8 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 35 </td> 
-   <td colname="col2"><span class="codeph"> VIDEO___NOT_SUPPORTED</span> </td> 
-   <td colname="col3">  vidéo non pris en charge. </td> 
+   <td colname="col2"><span class="codeph"> VIDEO_PROFIL_NOT_SUPPORTED</span> </td> 
+   <td colname="col3"> profil vidéo non pris en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 36 </td> 
@@ -216,11 +216,11 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 37 </td> 
    <td colname="col2"><span class="codeph"> INVALID_REPLACE_DURATION</span> </td> 
-   <td colname="col3"> La durée de remplacement spécifiée n’est pas valide ou s’étend au-delà de la fin du flux. </td> 
+   <td colname="col3"> La durée de remplacement spécifiée n'est pas valide ou s'étend au-delà de la fin du flux. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 38 </td> 
-   <td colname="col2"><span class="codeph"> APPELLED_FROM_WRONG_THREAD</span> </td> 
+   <td colname="col2"><span class="codeph"> CALLED_FROM_WRONG_THREAD</span> </td> 
    <td colname="col3"> L'API ne peut pas être appelée à partir du mauvais thread. Surtout pour les éléments d’API qui doivent être appelés à partir du thread principal uniquement. </td> 
   </tr> 
   <tr> 
@@ -231,7 +231,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 40 </td> 
    <td colname="col2"><span class="codeph"> ABORDÉ</span> </td> 
-   <td colname="col3"> L’opération a été abandonnée par un appel explicite Abandonner ou Détruire. </td> 
+   <td colname="col3"> L'opération a été abandonnée par un appel explicite d'Abandon ou de Détruire. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 41 </td> 
@@ -251,12 +251,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 44 </td> 
    <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
-   <td colname="col3"> La connexion réseau de l’utilisateur est hors service. La lecture peut s’arrêter à tout moment et reprendra lorsque la connexion sera disponible. </td> 
+   <td colname="col3"> La connexion réseau de l'utilisateur est interrompue. La lecture peut s’arrêter à tout moment et reprendra lorsque la connexion sera disponible. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
-   <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_</span> </td> 
-   <td colname="col3"> Aucun de débit binaire utilisable  trouvé dans le flux. </td> 
+   <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_PROFIL</span> </td> 
+   <td colname="col3"> profil de débit binaire utilisable introuvable dans le flux. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 46 </td> 
@@ -275,18 +275,18 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 49 </td> 
-   <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_</span> </td> 
-   <td colname="col3"> DRM passe à un  asymétrique. Tous les  du doivent être alignés dans la durée. Si ce n’est pas le cas, cet avertissement est généré et il se peut qu’il y ait des sauts dans la lecture. </td> 
+   <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_PROFIL</span> </td> 
+   <td colname="col3"> DRM passe à un profil asymétrique. Tous les profils devraient être alignés sur la durée. Si ce n’est pas le cas, cet avertissement est généré et la lecture peut être sauterelle. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 50 </td> 
    <td colname="col2"><span class="codeph"> LIVE_WINDOW_MOVED_BACKWARD</span> </td> 
-   <td colname="col3"> La fenêtre dynamique ne doit avancer que vers l’avant. Si ce n'est pas le cas, cet avertissement sera lancé et la fenêtre ne sera pas lue. Pour cette raison, il peut y avoir des sauts (ou une longue pause/arrêt) dans la lecture. </td> 
+   <td colname="col3"> La fenêtre active ne doit avancer que. Si ce n'est pas le cas, cet avertissement sera lancé et la fenêtre ne sera pas lue. De ce fait, il peut y avoir des sauts (ou une longue pause/arrêt) dans la lecture. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 51 </td> 
    <td colname="col2"><span class="codeph"> CURRENT_PERIOD_EXPIRED</span> </td> 
-   <td colname="col3"> La fenêtre dynamique a dépassé la période actuelle. </td> 
+   <td colname="col3"> La fenêtre active a dépassé la période actuelle. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 52 </td> 
@@ -303,15 +303,15 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
    <td colname="col3"> Le lecteur de médias ne peut pas charger les segments, car il a atteint la fin de la fenêtre active. Le chargement des segments reprend lorsque le serveur ajoute de nouveaux médias à la fenêtre active. Cet état est généralement atteint si : 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
-     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">La valeur <span class="codeph"> bufferTime</span> est trop élevée (égale ou supérieure à la durée de la fenêtre active). </li> 
-     <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">Une combinaison d’une ou de plusieurs API d’insertion/effacement a remplacé plus de supports qu’elle n’en a ajouté. </li> 
-     <li id="li_1B14716B2157492AB1859306D1250523">La période suivante est une période de production avec un remplacement de média en attente (en raison de l'appel de l'API <span class="codeph"> InsérerPar</span> ) </li> 
+     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">Le <span class="codeph"> bufferTime</span> est trop élevé (égal ou supérieur à la durée de la fenêtre active). </li> 
+     <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">Une combinaison d’une ou de plusieurs API d’insertion/suppression a remplacé plus de supports qu’elle n’en a ajouté. </li> 
+     <li id="li_1B14716B2157492AB1859306D1250523">La période suivante est une période de production avec un remplacement de média en attente (en raison de l'appel de l'API <span class="codeph"> InsérerPar</span> ). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
-   <td colname="col3"> L’interlettrage audio et vidéo dans le média n’est pas effectué correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes. </td> 
+   <td colname="col3"> L’interception audio et vidéo dans le média n’est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -321,12 +321,12 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> La lecture HLS n’a pas été activée dans le lecteur Flash. Voir <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
+   <td colname="col3"> La lecture HLS n'a pas été activée dans Flash Player. Voir <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
-   <td colname="col3"> Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais cela indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect. </td> 
+   <td colname="col3"> Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 59 </td> 
@@ -336,27 +336,27 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 60 </td> 
    <td colname="col2"><span class="codeph"> POSTROLL_WITH_LIVE_NOT_ALLOWED</span> </td> 
-   <td colname="col3"> Les insertions postroulantes ne sont pas autorisées sur un support en direct. Elles sont toutefois autorisées une fois que le serveur a marqué le média comme terminé. </td> 
+   <td colname="col3"> Les insertions postroulées ne sont pas autorisées sur un support en direct. Ils sont toutefois autorisés une fois que le serveur a marqué le support comme terminé. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
-   <td colname="col3"> Une question très rare qui ne devrait jamais se produire. </td> 
+   <td colname="col3"> Un problème très rare qui ne devrait jamais se produire. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 62 </td> 
    <td colname="col2"><span class="codeph"> SPS_PPS_FOUND_OUTSIDE_AVCC</span> </td> 
-   <td colname="col3"> Le flux ne suit pas la recommandation de création de package de toujours placer H264 SPS/PPS dans un AVCC. Des problèmes de recherche/lecture peuvent être affichés. </td> 
+   <td colname="col3"> Le flux ne suit pas la recommandation d’empaquetage consistant à toujours placer H264 SPS/PPS dans un AVCC. Des problèmes de recherche/lecture peuvent être observés. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 63 </td> 
    <td colname="col2"><span class="codeph"> PARTIAL_REPLACEMENT</span> </td> 
-   <td colname="col3"> Le remplacement spécifié dans une API d'insertion n'a été que partiellement effectué. Cela se produit lorsque replaceDuration s’étend sur la durée du plan de montage chronologique. </td> 
+   <td colname="col3"> Le remplacement spécifié dans une API d'insertion n'a été effectué que partiellement. Cela se produit lorsque replaceDuration s’étend sur la durée de la chronologie. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 64 </td> 
    <td colname="col2"><span class="codeph"> RENDITION_M3U8_ERROR</span> </td> 
-   <td colname="col3"> Une erreur de chargement s’est produite dans la liste de lecture du rendu. Il s’agit uniquement d’AVE, et non de FlashPlayer. </td> 
+   <td colname="col3"> La liste de lecture du rendu comportait une erreur de chargement. Il s'agit uniquement d'AVE, et non de FlashPlayer. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 65 </td> 
@@ -366,7 +366,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 66 </td> 
    <td colname="col2"><span class="codeph"> SEGMENT_SKIPPED_ON_FAILURE</span> </td> 
-   <td colname="col3"> Impossible de lire le segment et est ignoré en cas d’échec. </td> 
+   <td colname="col3"> Impossible de lire le segment et est ignoré en cas d'échec. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 67 </td> 
@@ -391,7 +391,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 71 </td> 
    <td colname="col2"><span class="codeph"> CANNOT_SPLIT_TIMELINE</span> </td> 
-   <td colname="col3"> Impossible d'effectuer une opération de division sur un plan de montage chronologique. </td> 
+   <td colname="col3"> Impossible d'effectuer une opération de fractionnement sur un plan de montage chronologique. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 72 </td> 
@@ -401,27 +401,27 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 73 </td> 
    <td colname="col2"><span class="codeph"> DID_NOT_GET_NEXT_FRAGMENT</span> </td> 
-   <td colname="col3"> N’a pas obtenu le fragment suivant. </td> 
+   <td colname="col3"> N'a pas obtenu le fragment suivant. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 74 </td> 
    <td colname="col2"><span class="codeph"> NO_TIMELINE</span> </td> 
-   <td colname="col3"> Aucune chronologie n’est présente dans une structure de données interne. </td> 
+   <td colname="col3"> Aucune chronologie présente dans une structure de données interne. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 75 </td> 
    <td colname="col2"><span class="codeph"> LISTENER_NOT_FOUND</span> </td> 
-   <td colname="col3"> Aucun écouteur n’a été trouvé dans une structure de données interne. </td> 
+   <td colname="col3"> Aucun écouteur n'a été trouvé dans une structure de données interne. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 76 </td> 
-   <td colname="col2"><span class="codeph"> AUDIO__ERROR</span> </td> 
-   <td colname="col3"> Impossible de  audio. </td> 
+   <td colname="col2"><span class="codeph"> AUDIO_DÉBUT_ERROR</span> </td> 
+   <td colname="col3"> Impossible de début du son. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 77 </td> 
    <td colname="col2"><span class="codeph"> NO_AUDIO_SINK</span> </td> 
-   <td colname="col3"> Aucun récepteur audio n’est présent dans une structure de données interne. </td> 
+   <td colname="col3"> Aucun récepteur audio présent dans une structure de données interne. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 78 </td> 
@@ -451,17 +451,17 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 83 </td> 
    <td colname="col2"><span class="codeph"> TIMELINE_TOO_SHORT</span> </td> 
-   <td colname="col3"> La durée du plan de montage chronologique est trop courte. S’il s’agit d’un flux en direct, une mise en mémoire tampon fréquente peut survenir. </td> 
+   <td colname="col3"> La durée de la chronologie est trop courte. S’il s’agit d’un flux en direct, une mise en mémoire tampon fréquente peut se produire. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 84 </td> 
-   <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_</span> </td> 
+   <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_DÉBUT</span> </td> 
    <td colname="col3"> Le flux est passé à un flux audio uniquement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 85 </td> 
    <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_END</span> </td> 
-   <td colname="col3"> Le flux est passé de l’audio uniquement à un flux vidéo. </td> 
+   <td colname="col3"> Le flux est passé d’un flux audio uniquement à un flux vidéo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
@@ -486,7 +486,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 91 </td> 
    <td colname="col2"> <span class="codeph"> UNREPORTED_TIME_DISCONTINUITY_FOUND</span> </td> 
-   <td colname="col3"> Discontinuité de temps non rapporté (PTS) détectée. </td> 
+   <td colname="col3"> Discontinuité de temps non signalé (PTS) détectée. </td> 
   </tr> 
  </tbody> 
 </table>
