@@ -10,9 +10,9 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Présentation de la topologie du réseau {#network-topology-overview}
 
-Une fois que vous avez déployé Adobe Access avec succès, il est important de conserver la sécurité de votre  . Cette section décrit les  de nécessaires pour maintenir la sécurité de votre serveur de production Adobe Access.
+Une fois Adobe Access déployé avec succès, il est important de maintenir la sécurité de votre environnement. Cette section décrit les tâches nécessaires pour maintenir la sécurité de votre serveur de production Adobe Access.
 
-Utilisez un proxy ** inverse pour vous assurer que différents ensembles d’URL pour les applications Web Adobe Access sont accessibles aux utilisateurs externes et internes. Cette configuration est plus sécurisée que de permettre aux utilisateurs de se connecter directement au serveur d’applications sur lequel Adobe Access est en cours d’exécution. Le proxy inverse exécute toutes les requêtes HTTP pour le serveur d’applications qui exécute Adobe Access. Les utilisateurs disposent uniquement d’un accès réseau au proxy inverse et peuvent uniquement tenter d’établir les connexions URL prises en charge par le proxy inverse.
+Utilisez un proxy ** inverse pour vous assurer que différents ensembles d’URL pour les applications Web Adobe Access sont disponibles pour les utilisateurs externes et internes. Cette configuration est plus sécurisée que si vous autorisiez les utilisateurs à se connecter directement au serveur d’applications sur lequel Adobe Access s’exécute. Le proxy inverse exécute toutes les requêtes HTTP pour le serveur d’applications qui exécute Adobe Access. Les utilisateurs disposent uniquement d’un accès réseau au proxy inverse et peuvent uniquement tenter les connexions URL prises en charge par le proxy inverse.
 
 <!--<a id="fig-frx-dcg-44"></a>-->
 
