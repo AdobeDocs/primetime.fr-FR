@@ -35,9 +35,9 @@ Le bloc de code ci-dessous définit l’objet JSON de détails lorsque la valeur
 
 | Propriété | Description |
 |---|---|
-| domain | Domaine publicitaire Primetime à utiliser pour les demandes publicitaires. |
-| médiaid | Le média qui a été configuré dans les publicités Primetime pour ce contenu. |
-| zoneid | Le Primetime annonce zoneid. Pour plus d’informations, consultez la documentation des publicités Primetime. |
+| domain | Domaine publicitaire Primetime à utiliser pour les requêtes publicitaires. |
+| médiaid | médiaid configuré dans les publicités Primetime pour ce contenu. |
+| zoneid | Le Primetime annonce zoneid. Pour plus d’informations, consultez la documentation sur les publicités Primetime. |
 | ciblage | Tableau de paires clé/valeur utilisées pour cibler des publicités spécifiques pour le contenu. |
 
 Voir [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) pour plus d’informations sur la valeur de ces attributs.
