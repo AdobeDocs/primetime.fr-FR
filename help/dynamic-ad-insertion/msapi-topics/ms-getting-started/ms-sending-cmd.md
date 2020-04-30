@@ -24,9 +24,9 @@ Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
 
 * **PublisherAssetID** Requis. ID unique de l’éditeur pour le contenu spécifique.
 
-* **URL** de contenu requise. URL du fichier de contenu M3U8, codé Base64 pour être sécurisé dans l’URL du serveur de manifeste. L’URL de contenu doit pointer vers un fichier M3U8 de variante, même s’il n’existe qu’un seul flux de débit binaire.
+* **URL** de contenu obligatoire. URL du fichier de contenu M3U8, codé Base64 pour être sécurisé dans l&#39;URL du serveur de manifeste. L’URL de contenu doit pointer vers un fichier variante M3U8, même s’il n’y a qu’un seul flux de débit binaire.
 
-* **Paramètres** de  Certains sont obligatoires, d&#39;autres facultatifs. Il s’agit de la partie la plus variée de la demande. Ils indiquent au serveur de manifeste quel type de client effectue la demande et ce qu&#39;il veut que le serveur de manifeste fasse.
+* **Paramètres** de Requête Certains sont obligatoires, d&#39;autres facultatifs. Il s&#39;agit de la partie la plus variée de la demande. Ils indiquent au serveur de manifeste quel type de client effectue la demande et ce qu&#39;il souhaite que le serveur de manifeste fasse.
 
    Par exemple :
 
@@ -39,7 +39,7 @@ Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
 
    **Requêtes HTTP ou HTTPS**
 
-   Le serveur de manifeste crée des URL à l’aide du même protocole HTTP de la requête du client. Si un lecteur effectue une requête HTTP (http) non sécurisée, le serveur de manifeste renvoie des URL de manifeste et des URL de suivi Auditude avec le protocole http. Si un lecteur établit une connexion HTTP (https) sécurisée, serveur manifest, il renvoie des URL de manifeste et des URL de suivi Auditude avec le protocole https.
+   Le serveur de manifeste crée des URL à l’aide du même protocole HTTP de la demande du client. Si un lecteur effectue une requête HTTP (http) non sécurisée, le serveur de manifeste renvoie des URL de suivi de manifeste et d’Auditude avec le protocole http. Si un lecteur établit une connexion HTTP sécurisée (https), un serveur manifest, il renvoie des URL de suivi de manifeste et d’Auditude avec le protocole https.
 
    >[!NOTE]
    >
