@@ -1,6 +1,6 @@
 ---
-description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. C'est une façon de charger une ressource multimédia.
-seo-description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. C'est une façon de charger une ressource multimédia.
+description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s'agit d'une façon de charger une ressource multimédia.
+seo-description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s'agit d'une façon de charger une ressource multimédia.
 seo-title: Chargement d’une ressource multimédia dans MediaPlayer
 title: Chargement d’une ressource multimédia dans MediaPlayer
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
@@ -12,20 +12,20 @@ source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
 
 # Chargement d’une ressource multimédia dans MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. C&#39;est une façon de charger une ressource multimédia.
+Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s&#39;agit d&#39;une façon de charger une ressource multimédia.
 
 1. Définissez l’élément lisible de votre lecteur multimédia avec la nouvelle ressource à lire.
 
-   Remplacez l’élément MediaPlayer actuel que vous utilisez en appelant `MediaPlayer.replaceCurrentItem` et en transmettant une `MediaResource` instance existante.
+   Remplacez l’élément MediaPlayer actuellement lisible par votre instance existante en appelant `MediaPlayer.replaceCurrentItem` et en transmettant une `MediaResource` instance existante.
 
 1. Enregistrez une implémentation de l’ `MediaPlayer.PlaybackEventListener` interface avec l’ `MediaPlayer` instance.
 
    * `onPrepared`
-   * `onStateChanged`, puis recherchez INITIALIZED et ERROR.
+   * `onStateChanged`, puis recherchez INITIALISED et ERROR.
 
 1. Lorsque l’état du lecteur multimédia devient INITIALISÉ, vous pouvez appeler `MediaPlayer.prepareToPlay`
 
-   L’état INITIALIZED indique que le chargement du média a réussi. Appeler le `prepareToPlay` le processus de résolution de publicité et de placement, le cas échéant.
+   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
 
 1. Lorsque TVSDK appelle le `onPrepared` rappel, le flux média a été chargé avec succès et est préparé pour la lecture.
 
@@ -37,7 +37,7 @@ Chargez une ressource en instanciant directement une ressource MediaResource et 
 >* Un `state` paramètre de type `MediaPlayer.PlayerState` avec la valeur de `MediaPlayer.PlayerState.ERROR`.
    >
    >
-* Un `notification` paramètre de type `MediaPlayerNotification` qui contient des informations de diagnostic sur le  d’erreur.
+* Un `notification` paramètre de type `MediaPlayerNotification` qui contient des informations de diagnostic sur le événement d&#39;erreur.
 
 
 L’exemple de code simplifié suivant illustre le processus de chargement d’une ressource multimédia :
