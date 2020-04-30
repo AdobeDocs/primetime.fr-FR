@@ -24,7 +24,7 @@ Ces classes fournissent des informations qui vous aident à déterminer les perf
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDeviceInformation.html" format="html" scope="external"> PTDeviceInformation</a> </td> 
-   <td colname="2">Fournit des informations sur la plate-forme et le système d’exploitation sur lesquels TVSDK est exécuté : 
+   <td colname="2">Fournit des informations sur la plate-forme et le système d’exploitation sur lesquels TVSDK s’exécute : 
     <ul id="ul_0DE69F3B38E84964AB98DCCD11E5E123"> 
      <li id="li_19B2D1889FCA4B0F8FCB0EE8F87353B2">Version du système d’exploitation de la plate-forme </li> 
      <li id="li_CA35F4A48FD34555AC7D7832D5997AD4">Numéro de version de la bibliothèque TVSDK </li> 
@@ -36,7 +36,7 @@ Ces classes fournissent des informations qui vous aident à déterminer les perf
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> Fournit des informations sur les performances de la lecture. Cela inclut la fréquence d’images, le débit  du, le temps total passé dans la mise en mémoire tampon, le nombre de tentatives de mise en mémoire tampon, le temps nécessaire pour obtenir le premier octet à partir du premier fragment vidéo, le temps nécessaire pour effectuer le rendu de la première image, la longueur actuellement mise en mémoire tampon et le temps de mise en mémoire tampon. </td> 
+   <td colname="2"> Fournit des informations sur les performances de la lecture. Cela inclut la fréquence d’images, le débit par profil, le temps total passé en mémoire tampon, le nombre de tentatives de mise en mémoire tampon, le temps nécessaire pour obtenir le premier octet à partir du premier fragment vidéo, le temps nécessaire au rendu de la première image, la longueur actuellement mise en mémoire tampon et le temps de mise en mémoire tampon. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
