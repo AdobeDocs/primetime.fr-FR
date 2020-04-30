@@ -1,6 +1,6 @@
 ---
-description: TVSDK vous fournit des informations pour que vous puissiez agir sur les publicités par clics publicitaires. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider de la manière dont vous répondez lorsqu’un utilisateur clique sur une publicité cliquable.
-seo-description: TVSDK vous fournit des informations pour que vous puissiez agir sur les publicités par clics publicitaires. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider de la manière dont vous répondez lorsqu’un utilisateur clique sur une publicité cliquable.
+description: TVSDK fournit des informations vous permettant d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
+seo-description: TVSDK fournit des informations vous permettant d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
 seo-title: Publicités cliquables
 title: Publicités cliquables
 uuid: edefbc66-2d30-441d-9c30-256588504463
@@ -12,17 +12,17 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 # Publicités cliquables {#clickable-ads}
 
-TVSDK vous fournit des informations pour que vous puissiez agir sur les publicités par clics publicitaires. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider de la manière dont vous répondez lorsqu’un utilisateur clique sur une publicité cliquable.
+TVSDK fournit des informations vous permettant d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
 
-Pour TVSDK pour l’exécution Flash, seules les publicités linéaires peuvent être cliquées.
+Pour TVSDK for Flash Runtime, seules les publicités linéaires peuvent être cliquées.
 
 ## Répondre aux clics sur les publicités {#respond-to-clicks-on-ads}
 
-Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application est responsable de répondre. TVSDK vous fournit des informations sur l’URL de destination.
+Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application est responsable de répondre. TVSDK fournit des informations sur l’URL de destination.
 
-Cet exemple illustre une méthode possible de gestion des clics publicitaires.
+Cet exemple présente une méthode possible de gestion des clics publicitaires.
 
-1. Chaque fois qu’une publicité est lue, affichez un bouton au-dessus du lecteur multimédia. Un utilisateur qui clique sur la publicité est redirigé vers l’URL de la publicité. Ce bouton fait partie du [!DNL ClickableAdsOverlay.xml].
+1. Chaque fois qu’une publicité est lue, un bouton s’affiche au-dessus du lecteur multimédia. Un utilisateur qui clique sur la publicité est redirigé vers l’URL de la publicité. Ce bouton fait partie du [!DNL ClickableAdsOverlay.xml]bouton.
 
    ```xml
       <?xml version="1.0"?> 
@@ -35,7 +35,7 @@ Cet exemple illustre une méthode possible de gestion des clics publicitaires.
    </s:VGroup>
    ```
 
-1. Insérez cette incrustation dans l’exemple de lecteur multimédia [!DNL psdkdemo.xml].
+1. Insérez cette incrustation sur l’exemple de lecteur multimédia [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +45,7 @@ Cet exemple illustre une méthode possible de gestion des clics publicitaires.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Pour rendre le visible uniquement lorsqu’une publicité est en cours de lecture, écoutez le  `onAdStart` et le  de `onAdComplete` distribués par .
+1. Pour rendre la vue visible uniquement lorsqu’une publicité est en cours de lecture, écoutez les `onAdStart` et les `onAdComplete` événements distribués par .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -72,9 +72,9 @@ Cet exemple illustre une méthode possible de gestion des clics publicitaires.
    }
    ```
 
-1. Écoute le `AdclickEvent.AD_CLICK` .
+1. Écoute le `AdclickEvent.AD_CLICK` événement.
 
-   Si une publicité est en cours de lecture, TVSDK distribue le `AdClickEvent.AD_CLICK` , à partir duquel vous pouvez récupérer l’URL de clic publicitaire et les informations connexes.
+   Si une publicité est en cours de lecture, TVSDK distribue le `AdClickEvent.AD_CLICK` événement, à partir duquel vous pouvez récupérer l’URL de clic publicitaire et les informations connexes.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
@@ -93,13 +93,13 @@ Cet exemple illustre une méthode possible de gestion des clics publicitaires.
 
 1. Affichez l’URL de clic publicitaire et toutes les informations connexes.
 
-       Vous pouvez, par exemple, l’afficher de l’une des manières suivantes :
+       Par exemple, vous pouvez l’afficher de l’une des manières suivantes :
    
    * Ouvrez l’URL de clic publicitaire dans un navigateur de votre application.
 
-      Sur les plates-formes de bureau, la zone de lecture des publicités vidéo est généralement utilisée pour appeler les URL de clic publicitaire lorsque l’utilisateur clique dessus.
+      Sur les plateformes de bureau, la zone de lecture des publicités vidéo est généralement utilisée pour appeler les URL de clic publicitaire au moment des clics des utilisateurs.
    * Redirigez l’utilisateur vers le navigateur Web mobile externe.
 
-      Sur les périphériques mobiles, la zone de lecture des publicités vidéo est utilisée pour d’autres fonctions, telles que le masquage et l’affichage des commandes, la mise en pause de la lecture, le développement en plein écran, etc. Par conséquent, sur les périphériques mobiles, un  distinct, tel qu’un bouton de sponsor, est généralement présenté à l’utilisateur comme moyen de lancer l’URL de clic publicitaire.
+      Sur les périphériques mobiles, la zone de lecture des publicités vidéo est utilisée pour d’autres fonctions, telles que masquer et afficher les commandes, suspendre la lecture, passer en mode plein écran, etc. Par conséquent, sur les périphériques mobiles, une vue distincte, telle qu’un bouton de sponsor, est généralement présentée à l’utilisateur comme un moyen de lancer l’URL de clic publicitaire.
 
-1. Fermez la fenêtre du navigateur dans laquelle les informations de clic publicitaire sont affichées et relancez la lecture de la vidéo.
+1. Fermez la fenêtre du navigateur dans laquelle les informations de clic publicitaire s’affichent et relancez la lecture de la vidéo.
