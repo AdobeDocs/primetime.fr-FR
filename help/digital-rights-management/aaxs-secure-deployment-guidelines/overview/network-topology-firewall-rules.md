@@ -12,7 +12,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 ## URL entrantes {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
-Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fonctionnalités de l’application que vous souhaitez fournir aux utilisateurs finaux. Autoriser les utilisateurs externes à accéder par le pare-feu externe uniquement aux URL répertoriées dans le tableau suivant :
+Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fonctionnalités d’application que vous souhaitez fournir aux utilisateurs finaux. Autoriser les utilisateurs externes à accéder par le pare-feu externe uniquement aux URL répertoriées dans le tableau suivant :
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-bqs-whz-n4"> 
  <thead class="- topic/thead "> 
@@ -34,7 +34,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL d’authentification de l’utilisateur. Cette URL ne doit être accessible que si vous utilisez les API du client Adobe Access pour effectuer l’authentification de l’utilisateur. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL d’authentification des utilisateurs. Cette URL ne doit être accessible que si vous utilisez les API du client Adobe Access pour effectuer l’authentification des utilisateurs. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -44,7 +44,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
      <li id="li-E6C551DDA030429B9D0073D2685B778A"><span class="filepath"> /flashaccess/license/v4/*</span> </li> 
      <li id="li-57811F4CD7304DBDAFADD65244AED0D9"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL permettant de délivrer des licences aux utilisateurs finaux. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL d’octroi de licences aux utilisateurs finaux. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -94,7 +94,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
 
 ## URL sortantes {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Le serveur de licences nécessite un accès via le pare-feu pour télécharger les listes CRL suivantes à partir d’Adobe :
+Le serveur de licences nécessite un accès via le pare-feu pour télécharger les listes de révocation des certificats suivantes à partir d’Adobe :
 
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
