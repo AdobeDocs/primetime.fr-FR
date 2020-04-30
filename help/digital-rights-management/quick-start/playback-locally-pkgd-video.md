@@ -18,5 +18,5 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    https://drmtest2.adobe.com:8080/AccessPlayer/player.html
    ```
 
-1. Entrez votre URL de contenu assemblée localement dans le champ URL du média du lecteur et lisez-la.
-Si votre contenu assemblé en local n’est pas accessible depuis Internet, vous pouvez télécharger un exemple de lecteur vidéo Adobe (AccessPlayer) depuis<span></span>http://drmtest2.adobe.com:8080/AccessPlayer.zip, puis le placer sur votre serveur Web local pour l’utiliser.
+1. Saisissez votre URL de contenu assemblée localement dans le champ URL du support du lecteur et lisez-la.
+Si votre contenu assemblé en local n’est pas accessible à partir d’Internet, vous pouvez télécharger un exemple de lecteur vidéo Adobe (AccessPlayer) à partir de<span></span>http://drmtest2.adobe.com:8080/AccessPlayer.zip et le placer sur votre serveur Web local pour l’utiliser.
