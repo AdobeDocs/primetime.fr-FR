@@ -16,7 +16,7 @@ Pour activer la lecture audio lorsque l’application est en arrière-plan, l’
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-L’application doit interrompre la lecture lorsqu’elle perd son contrôle sur la mise au point de l’audio au cours de l’, comme répondre au téléphone, etc. Le fragment de code suivant illustre la mise en oeuvre du `OnAudioFocusChangeListener`:
+L’application doit interrompre la lecture lorsqu’elle perd son contrôle sur la mise au point audio pendant les événements, par exemple en répondant au téléphone, etc. Le fragment de code suivant montre comment implémenter le `OnAudioFocusChangeListener`:
 
 ```
 /** 
