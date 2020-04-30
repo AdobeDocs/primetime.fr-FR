@@ -14,7 +14,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK fournit des outils pour la création d’une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
 
-Utilisez les outils de votre plate-forme pour créer un lecteur et le connecter au du lecteur multimédia dans TVSDK, qui dispose de méthodes pour lire et gérer les vidéos. Par exemple, TVSDK fournit des méthodes de lecture et de pause. Vous pouvez créer des boutons d’interface utilisateur sur votre plate-forme et définir les boutons pour appeler ces méthodes TVSDK.
+Utilisez les outils de votre plate-forme pour créer un lecteur et le connecter à la vue du lecteur multimédia dans TVSDK, qui permet de lire et de gérer des vidéos. Par exemple, TVSDK fournit des méthodes de lecture et de pause. Vous pouvez créer des boutons d’interface utilisateur sur votre plate-forme et définir les boutons pour appeler ces méthodes TVSDK.
 
 L’interface PTMediaPlayer encapsule la fonctionnalité et le comportement d’un objet de lecteur multimédia.
 
@@ -28,7 +28,7 @@ Pour configurer votre `PTMediaPlayer`:
 
 1. Créer `PTMetadata`.
 
-   Supposons que votre méthode `createMetada` prépare les métadonnées (voir [Publicité](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Supposons que votre méthode `createMetada` prépare des métadonnées (voir [Publicité](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
@@ -41,13 +41,13 @@ Pour configurer votre `PTMediaPlayer`:
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. Ajouter les observateurs aux notifications envoyées par TVSDK.
+1. Ajouter les observateurs aux notifications que TVSDK envoie.
 
    ```
    [self addObservers]
    ```
 
-1. Créez `PTMediaPlayer` à l’aide de votre nouveau `PTMediaPlayerItem`.
+1. Créez `PTMediaPlayer` à l’aide de votre nouveau `PTMediaPlayerItem`formulaire.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +55,7 @@ Pour configurer votre `PTMediaPlayer`:
 
 1. Définissez les propriétés sur votre lecteur.
 
-   Voici quelques-unes des `PTMediaPlayer` propriétés disponibles :
+   Voici quelques-unes des propriétés disponibles `PTMediaPlayer` :
 
    ```
    player.autoPlay                    = YES;  
@@ -64,7 +64,7 @@ Pour configurer votre `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Définissez la propriété  du lecteur.
+1. Définissez la propriété de vue du lecteur.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -77,14 +77,14 @@ Pour configurer votre `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Ajouter le du lecteur  dans la sous-vued’aujourd’hui.
+1. Ajouter la vue du lecteur dans la sous-vue de la vue active.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Appel `play` à la lecture de  média.
+1. Appel `play` à la lecture multimédia par début.
 
    ```
    [player play];
