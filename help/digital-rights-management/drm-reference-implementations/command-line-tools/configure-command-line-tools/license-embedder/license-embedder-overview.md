@@ -10,9 +10,9 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 # Incorporation de licence DRM {#license-embedder}
 
-Utilisez cette option [!DNL AdobeLicenseEmbedder.jar] pour incorporer des licences prégénérées dans le contenu protégé par Media Packager.
+Permet [!DNL AdobeLicenseEmbedder.jar] d’incorporer des licences prégénérées dans du contenu protégé par Media Packager.
 
-## Utilisation de la ligne de commande Incorporation de licence {#license-embedder-command-line-usage}
+## Utilisation de la ligne de commande License Embedder {#license-embedder-command-line-usage}
 
 ```
 java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
@@ -40,16 +40,16 @@ Le tableau suivant décrit les options de ligne de commande que vous pouvez spé
    <td colname="2" class="- topic/entry "> Nom du fichier contenant la licence à incorporer. Vous pouvez spécifier plusieurs options <span class="codeph"> -l </span> pour incorporer plusieurs licences. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m nom_fichier_métadonnées </span> </td> 
    <td colname="2" class="- topic/entry "> Indique les métadonnées de contenu pour lesquelles vous pouvez générer une licence. Cette option est requise pour générer une licence. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que l’option <span class="codeph"> - o </span> n’a pas été appliquée, une erreur se produit. </td> 
+   <td colname="2" class="- topic/entry "> Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que l'option <span class="codeph"> -o </span> n'a pas été appliquée, une erreur se produit. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
-   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, vous pouvez le remplacer sans être invité à le faire. </td> 
+   <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, vous pouvez le remplacer sans recevoir d’invite. </td> 
   </tr> 
  </tbody> 
 </table>
