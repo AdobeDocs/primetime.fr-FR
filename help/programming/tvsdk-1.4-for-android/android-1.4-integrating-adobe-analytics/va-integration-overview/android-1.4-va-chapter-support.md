@@ -5,7 +5,7 @@ seo-title: Mise en oeuvre de la prise en charge des chapitres
 title: Mise en oeuvre de la prise en charge des chapitres
 uuid: 5b39e494-85ad-43bb-ab56-a55797aa4ef7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
@@ -17,7 +17,7 @@ Vous pouvez définir et suivre des chapitres pour le suivi vidéo dans une appli
 * Les chapitres par défaut sont gérés en interne par TVSDK.
 
    Un chapitre est défini comme l’intervalle entre chaque coupure publicitaire. Par exemple, le temps entre une coupure publicitaire preroll et la première coupure publicitaire mid-roll est défini comme le premier chapitre.
-* Les chapitres personnalisés, qui sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
+* Les chapitres personnalisés, qui sont gérés par l’application et sont basés sur les données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
 
 1. Définissez et suivez les chapitres par défaut ou personnalisés.
 
