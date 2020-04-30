@@ -27,7 +27,7 @@ Vous trouverez ci-dessous la liste des problèmes courants et des solutions de d
        "Unable to load credential from file.pfx -- possibly wrong password."
    ```
 
-   Vérifiez que vous avez spécifié le mot de passe chiffré correct pour le fichier PFX.
+   Assurez-vous d’avoir spécifié le mot de passe chiffré correct pour le fichier PFX.
 
 * Si l’erreur suivante s’affiche :
 
@@ -35,5 +35,5 @@ Vous trouverez ci-dessous la liste des problèmes courants et des solutions de d
        "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Assurez-vous d’avoir utilisé la classe scrambler du mot de passe fournie avec l’implémentation de référence (cet utilitaire de scrambler est différent de celui fourni avec Adobe® Access™ Server for Protected Streaming).
+   Assurez-vous d’avoir utilisé la classe scrambler de mot de passe fournie avec l’implémentation de référence (cet utilitaire de scrambler est différent de celui fourni avec Adobe® Access™ Server for Protected Streaming).
 
