@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez configurer des visuels pour informer l’utilisateur que le contenu est mis en mémoire tampon.
-seo-description: Vous pouvez configurer des visuels pour informer l’utilisateur que le contenu est mis en mémoire tampon.
+description: Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
+seo-description: Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
 seo-title: Mise en mémoire tampon
 title: Mise en mémoire tampon
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
@@ -12,9 +12,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Mise en mémoire tampon{#buffering}
 
-Vous pouvez configurer des visuels pour informer l’utilisateur que le contenu est mis en mémoire tampon.
+Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
 
-Écoutez `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END` . Par exemple :
+Écoute `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END` les événements. Par exemple :
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
