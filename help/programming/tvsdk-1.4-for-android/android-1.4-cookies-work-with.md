@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
-seo-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
+description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
+seo-description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 seo-title: Utilisation des cookies
 title: Utilisation des cookies
 uuid: f060b520-ceec-48ca-929f-683566fe6ae7
@@ -12,16 +12,16 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Utilisation des cookies{#work-with-cookies}
 
-Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion des sessions, l’accès aux portes, etc.
+Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
-Voici un exemple avec un certain type d’authentification lors de l’envoi de requêtes au serveur de clés :
+Voici un exemple avec un certain type d’authentification lors de l’envoi de requêtes au serveur clé :
 
-1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique qu’il est autorisé à du contenu.
-1. Votre application génère un jeton d’authentification, en fonction des attentes du serveur de licences. Transmettez cette valeur à TVSDK.
+1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique qu’il est autorisé à vue du contenu.
+1. Votre application génère un jeton d’authentification, en fonction des exigences du serveur de licences. Transmettez cette valeur à TVSDK.
 1. TVSDK définit cette valeur dans l’en-tête du cookie.
-1. Lorsque TVSDK envoie une requête au serveur de clés pour obtenir une clé afin de déchiffrer le contenu, cette requête contient la valeur d’authentification dans l’en-tête du cookie. Le serveur de clés sait donc que la requête est valide.
+1. Lorsque TVSDK envoie une requête au serveur de clés pour obtenir une clé pour déchiffrer le contenu, cette requête contient la valeur d’authentification dans l’en-tête du cookie, de sorte que le serveur de clés sache que la requête est valide.
 
-Pour utiliser les cookies :
+Pour utiliser des cookies :
 
 1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre `cookieStore`application.
 
@@ -41,9 +41,9 @@ Pour utiliser les cookies :
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   Le TVSDK  ce cookieManager au moment de l’exécution, vérifie s’il existe des cookies associés à l’URL et les utilise automatiquement.
+   TVSDK requête ce cookieManager au moment de l’exécution, vérifie s’il existe des cookies associés à l’URL et les utilise automatiquement.
 
-   Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec les requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la `NetworkConfiguration` méthode `setUseCookieHeadersForAllRequests`:
+   Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec des requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la `NetworkConfiguration` méthode `setUseCookieHeadersForAllRequests`:
 
    ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
