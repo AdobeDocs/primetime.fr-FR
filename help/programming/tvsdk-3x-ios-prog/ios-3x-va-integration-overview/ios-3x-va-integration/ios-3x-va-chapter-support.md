@@ -17,7 +17,7 @@ Vous pouvez définir et suivre des chapitres pour le suivi vidéo dans une appli
 * Les chapitres par défaut sont gérés en interne par TVSDK.
 
    Un chapitre est défini comme l’intervalle entre chaque coupure publicitaire. Par exemple, le temps entre une coupure publicitaire preroll et la première coupure publicitaire mid-roll est défini comme le premier chapitre.
-* Les chapitres personnalisés, qui sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
+* Les chapitres personnalisés, qui sont gérés par l’application et sont basés sur les données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
 
    Définissez et suivez les chapitres par défaut ou personnalisés.
 
