@@ -36,7 +36,7 @@ Fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v1` le fo
 
 Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v2` possède le format de l’exemple suivant, qui provient d’un bloc JSON type.
 
-Il a été raccourci pour éviter une répétition inutile, afin que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier JSON.
+Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier JSON.
 
 ```
 { 
@@ -364,7 +364,7 @@ Il a été raccourci pour éviter une répétition inutile, afin que la structur
 
 >[!NOTE]
 >
->La `offset` valeur de l’ `scte35` attribut telle qu’elle est extraite `ad breaks` peut être négative. En effet, le fichier annexe V2 JSON contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture actuelle. L’ `scte35` attribut contient donc également des informations sur ces coupures publicitaires.
+>La `offset` valeur de l’ `scte35` attribut telle qu’elle est extraite `ad breaks` peut être négative. En effet, le fichier annexe JSON V2 contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture active. Ainsi, l’ `scte35` attribut contient également des informations sur ces coupures publicitaires.
 
 ## Format JSON pour le suivi de la version 3 {#json_v3}
 
