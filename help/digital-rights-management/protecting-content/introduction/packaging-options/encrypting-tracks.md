@@ -12,4 +12,4 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 
 Cette option d’assemblage spécifie les parties du contenu à chiffrer : audio, vidéo ou les deux.
 
-Exemple de cas d’utilisation : Permet de chiffrer uniquement les pistes nécessitant une protection, de réduire les frais de déchiffrement sur le client et d’améliorer les performances de lecture.
+Exemple de cas d’utilisation : Les autorisations qui chiffrent uniquement les pistes nécessitant une protection réduisent les frais de déchiffrement sur le client et améliorent les performances de lecture.
