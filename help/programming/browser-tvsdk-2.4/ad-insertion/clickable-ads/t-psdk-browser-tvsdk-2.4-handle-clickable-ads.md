@@ -1,8 +1,8 @@
 ---
-description: MediaPlayer fournit une fonction notificationClick() qui distribue des  liées aux publicités lorsqu’une publicité cliquable est en cours de lecture. Ces  fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir une fonctionnalité de clics publicitaires.
-seo-description: MediaPlayer fournit une fonction notificationClick() qui distribue des  liées aux publicités lorsqu’une publicité cliquable est en cours de lecture. Ces  fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir une fonctionnalité de clics publicitaires.
-seo-title: Gestion des publicités cliquables
-title: Gestion des publicités cliquables
+description: MediaPlayer fournit une fonction notificationClick() qui distribue des événements liés à la publicité lorsqu’une publicité cliquable est en cours de lecture. Ces événements fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir des fonctionnalités de clics publicitaires.
+seo-description: MediaPlayer fournit une fonction notificationClick() qui distribue des événements liés à la publicité lorsqu’une publicité cliquable est en cours de lecture. Ces événements fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir des fonctionnalités de clics publicitaires.
+seo-title: Gérer les publicités cliquables
+title: Gérer les publicités cliquables
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
@@ -10,11 +10,11 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 ---
 
 
-# Gestion des publicités cliquables {#handle-clickable-ads}
+# Gérer les publicités cliquables {#handle-clickable-ads}
 
-MediaPlayer fournit une fonction notificationClick() qui distribue des  liées aux publicités lorsqu’une publicité cliquable est en cours de lecture. Ces  fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir une fonctionnalité de clics publicitaires.
+MediaPlayer fournit une fonction notificationClick() qui distribue des événements liés à la publicité lorsqu’une publicité cliquable est en cours de lecture. Ces événements fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir des fonctionnalités de clics publicitaires.
 
-Le lecteur multimédia déclenche le  suivant lorsqu’une publicité cliquable est lue :
+MediaPlayer déclenche les événements suivants lorsqu’une publicité cliquable est lue :
 
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
@@ -22,10 +22,10 @@ Le lecteur multimédia déclenche le  suivant lorsqu’une publicité cliquable 
 
 Le `AdClickedEvent` contient les informations nécessaires au traitement de la fonction de clic publicitaire.
 
-1. Fournissez un contrôle dans votre lecteur pour que les utilisateurs puissent cliquer sur des publicités cliquables.
+1. Fournissez un contrôle sur votre lecteur pour permettre aux utilisateurs de cliquer sur des publicités cliquables.
 
    Il peut s’agir d’un bouton ou de tout autre élément permettant de capturer le clic de l’utilisateur.
-1. Ajouter un  d’écouteur pour l’ensemble des clics publicitaires de l’utilisateur .
+1. Ajouter un écouteur de événement pour le événement de clics publicitaires de l’utilisateur.
 
    Par exemple :
 
@@ -34,9 +34,9 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. Ajouter un gestionnaire pour le de clics de l’utilisateur .
+1. Ajouter un gestionnaire pour le événement de clics de l’utilisateur.
 
-   Ce gestionnaire doit demander au lecteur multimédia de déclencher le `AdClicked` .
+   Ce gestionnaire doit demander au MediaPlayer de déclencher le `AdClicked` événement.
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +50,7 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
    } 
    ```
 
-1. Ajouter des  d’écoute pour le lecteur multimédia, l’utilisateur a cliqué sur la publicité et a terminé les notifications.
+1. Ajouter écouteurs de événement pour le début publicitaire MediaPlayer, la publicité sur laquelle l’utilisateur a cliqué et les notifications terminées.
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,9 +60,9 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. Ajouter gestionnaires de  de.
-a. Gérez le  de publicité le .
-Cela peut être utile, comme la configuration de l’interface utilisateur pour l’utilisateur.
+1. Ajouter gestionnaires de événements.
+a. Gérez le événement du début publicitaire.
+Cela peut tout faire, comme la configuration de l’interface utilisateur pour l’utilisateur.
 
    ```
    onAdStarted = function (event) { 
@@ -77,8 +77,8 @@ Cela peut être utile, comme la configuration de l’interface utilisateur pour 
    }
    ```
 
-   b. Gérez le sur lequel l’utilisateur a cliqué.
-Dans cet exemple, nous obtenons des informations sur les publicités du  et ouvrons une nouvelle fenêtre du navigateur à l’aide de ces informations :
+   b. Gérez le événement de clic de la publicité.
+Dans cet exemple, nous obtenons des informations publicitaires du événement et ouvrons une nouvelle fenêtre de navigateur à l’aide de ces informations :
 
    ```
    onAdClickedEvent = function (event) { 
@@ -96,7 +96,7 @@ Dans cet exemple, nous obtenons des informations sur les publicités du  et ouvr
    }
    ```
 
-   c. Gérez le  de la publicité terminée.
+   c. Gérez le événement de la publicité terminée.
 
    ```
    onAdCompleted = function (event) { 
