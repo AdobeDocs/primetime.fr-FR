@@ -1,6 +1,6 @@
 ---
-description: Lorsque la lecture atteint une coupure publicitaire, franchit une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
-seo-description: Lorsque la lecture atteint une coupure publicitaire, franchit une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
+description: Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
+seo-description: Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
 seo-title: Personnalisation de la lecture avec des publicités
 title: Personnalisation de la lecture avec des publicités
 uuid: b21a2b1b-5376-41cb-a772-a8945fd56f3c
@@ -12,23 +12,23 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 # Personnalisation de la lecture avec des publicités {#customize-playback-with-ads}
 
-Lorsque la lecture atteint une coupure publicitaire, franchit une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
+Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
 
 >[!TIP]
 >
 >Vous pouvez remplacer le comportement par défaut en utilisant la `PTAdPolicySelector` classe.
 
-Le comportement par défaut varie selon que l’utilisateur franchit la coupure publicitaire pendant la lecture normale ou effectue une recherche dans une vidéo.
+Le comportement par défaut varie selon que l’utilisateur franchit la coupure publicitaire au cours de la lecture normale ou effectue une recherche dans une vidéo.
 
 Vous pouvez personnaliser le comportement de lecture des publicités de différentes manières :
 
 * Enregistrez la position où l’utilisateur a arrêté de regarder la vidéo et recommencez la lecture à la même position lors d’une session ultérieure.
-* Si une coupure publicitaire est présentée à l’utilisateur, n’affichez aucune publicité supplémentaire pendant un certain nombre de minutes, même si l’utilisateur cherche une nouvelle position.
-* Si la lecture du contenu échoue au bout de quelques minutes, redémarrez le flux ou passez à une autre source pour le même contenu.
+* Si une coupure publicitaire est présentée à l’utilisateur, n’affichez aucune publicité supplémentaire pendant un certain nombre de minutes, même si l’utilisateur cherche à obtenir une nouvelle position.
+* Si la lecture du contenu échoue après quelques minutes, redémarrez le flux ou passez à une autre source pour le même contenu.
 
-   Lors de la session de lecture sur le basculement, pour permettre à l’utilisateur de sauter des publicités et de reprendre la position d’échec précédente, vous pouvez désactiver les publicités preroll et/ou mid-roll. TVSDK fournit des méthodes permettant d’ignorer les publicités preroll et mid-roll.
+   Lors de la session de lecture sur basculement, pour permettre à l’utilisateur de sauter des publicités et de revenir à la position d’échec précédente, vous pouvez désactiver les publicités preroll et/ou mid-roll. TVSDK fournit des méthodes permettant d’ignorer les publicités preroll et mid-roll.
 
-## Eléments API pour la lecture de publicités {#section_296ADE00CFEA40CBA1B46142720D13A5}
+## Eléments d’API pour la lecture de publicités {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
 TVSDK fournit des classes et des méthodes que vous pouvez utiliser pour personnaliser le comportement de lecture du contenu qui contient de la publicité.
 Les éléments d’API suivants sont utiles pour personnaliser la lecture :
@@ -43,39 +43,39 @@ Les éléments d’API suivants sont utiles pour personnaliser la lecture :
  <tbody> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdMetadata </span> </td> 
-   <td colname="col2"> Indiquez si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de <span class="codeph"> la propriété adBreakAsWatched </span> . </td> 
+   <td colname="col2"> Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de la <span class="codeph"> </span> propriété adBreakAsWatched. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdPolicySelector </span> </td> 
-   <td colname="col2"> Protocole qui permet la personnalisation du comportement de l’annonce TVSDK. </td> 
+   <td colname="col2"> Protocole qui permet la personnalisation du comportement d’annonce TVSDK. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector </span> </td> 
-   <td colname="col2"> Classe qui implémente le comportement par défaut de TVSDK. Votre application peut remplacer cette classe pour personnaliser les comportements par défaut sans mettre en oeuvre l’interface complète. </td> 
+   <td colname="col2"> Classe qui implémente le comportement par défaut de TVSDK. Votre application peut remplacer cette classe pour personnaliser les comportements par défaut sans mettre en oeuvre l'interface complète. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTMediaPlayer </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Il s’agit de l’heure locale de la lecture, à l’exclusion des coupures publicitaires importées. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime </span> . <p>Ici, la recherche se produit par rapport à une heure locale dans le flux. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>La position virtuelle sur le plan de montage chronologique est convertie en position locale. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Il s’agit de l’heure locale de lecture, à l’exclusion des pauses publicitaires importées. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime </span> . <p>Ici, la recherche se produit par rapport à une heure locale du flux. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>La position virtuelle sur la chronologie est convertie en position locale. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PTAdBreak </span> </td> 
-   <td colname="col2"> <span class="codeph"> isWatched, </span> propriété. Indique si le lecteur a regardé la publicité. </td> 
+   <td colname="col2"> <span class="codeph"> isWatched </span> , propriété. Indique si le lecteur a regardé la publicité. </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Configuration de la lecture personnalisée {#section_8209BAACC7814C9399988DC7DE9CF4CA}
 
-Avant de pouvoir personnaliser ou remplacer les comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec TVSDK.
+Avant de pouvoir personnaliser ou remplacer des comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec TVSDK.
 
 Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
 
-* Respectez le `PTAdPolicySelector` protocole et mettez en oeuvre toutes les méthodes de sélection de stratégie requises.
+* Respectez le `PTAdPolicySelector` protocole et appliquez toutes les méthodes de sélection de stratégies requises.
 
    Cette option est recommandée si vous devez remplacer **tous les** comportements publicitaires par défaut.
 
@@ -83,13 +83,13 @@ Pour personnaliser les comportements publicitaires, effectuez l’une des opéra
 
    Cette option est recommandée si vous ne devez remplacer que **certains** comportements par défaut.
 
-Pour les deux options, complétez le  suivant :
+Pour les deux options, effectuez les tâches suivantes :
 
-1. Enregistrez l’instance de stratégie à utiliser par TVSDK via la fabrique de clients.
+1. Enregistrez l’instance de stratégie à utiliser par TVSDK via la fabrique client.
 
    >[!NOTE]
    >
-   >Les stratégies publicitaires personnalisées enregistrées au début de la lecture sont effacées lorsque l’ `PTMediaPlayer` instance est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
+   >Les stratégies publicitaires personnalisées qui sont enregistrées au début de la lecture sont effacées lorsque l’ `PTMediaPlayer` instance est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
 
    Par exemple :
 
@@ -104,17 +104,17 @@ Pour les deux options, complétez le  suivant :
 
 1. Mettez en oeuvre vos personnalisations.
 
-## Ignorer les coupures publicitaires pendant une période donnée {#section_99809BE4D9BB4DEEBBF596C746CA428A}
+## Ignorer les coupures publicitaires pour une période {#section_99809BE4D9BB4DEEBBF596C746CA428A}
 
 Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 
 >[!IMPORTANT]
 >
->En cas de recherche interne pour ignorer une publicité, il se peut qu’il y ait une légère pause dans la lecture.
+>En cas de recherche interne pour ignorer une publicité, la lecture peut présenter une légère pause.
 
-L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisée ignore les publicités au cours des cinq prochaines minutes (heure de l’horloge murale) après qu’un utilisateur ait vu une coupure publicitaire.
+L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
 
-1. Enregistrez l’instance de stratégie à utiliser par TVSDK via la fabrique de clients.
+1. Enregistrez l’instance de stratégie à utiliser par TVSDK via la fabrique client.
 
    ```
    // Create an instance of the custom policy selector 
@@ -259,13 +259,13 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    >
    >Les durées des publicités ne sont pas incluses.
 
-   Les coupures publicitaires peuvent varier dans chaque session en raison des modèles publicitaires, du plafonnement des fréquences, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale. Utilisez la `localTime` propriété pour lire cette position que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
+   Les coupures publicitaires peuvent varier d’une session à l’autre en raison de modèles publicitaires, d’un plafonnement de fréquence, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale. Utilisez la `localTime` propriété pour lire cette position, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
 
-   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` il y aura 1 200 secondes, alors `localTime` qu’à cette position il y aura 900 secondes.
+   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` il faudra 1 200 secondes, alors qu’ `localTime` à cette position, il faudra 900 secondes.
 
    >[!IMPORTANT]
    >
-   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
+   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, cela `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -284,11 +284,11 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
    >[!TIP]
    >
-   >Cette méthode est appelée uniquement avec des valeurs d’heure locale. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
+   >Cette méthode est appelée uniquement avec des valeurs d’heure locales. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
 
-   Pour atteindre l’heure actuelle, utilisez `seekToTime`.
+   Pour rechercher l’heure actuelle, utilisez `seekToTime`.
 
-1. Lorsque votre application reçoit le  de modification de l’ `PTMediaPlayerStatusReady` état, recherchez l’heure locale enregistrée.
+1. Lorsque votre application reçoit le événement de modification de l’ `PTMediaPlayerStatusReady` état, recherchez l’heure locale enregistrée.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -296,9 +296,9 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    }];
    ```
 
-1. Fournissez les coupures publicitaires comme spécifié dans l’interface de la stratégie publicitaire.
-1. Implémentez un sélecteur de stratégie d’annonce personnalisée en étendant le sélecteur de stratégie d’annonce par défaut.
-1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur en implémentant `selectAdBreaksToPlay`
+1. Fournissez les coupures publicitaires comme spécifié dans l’interface de stratégie publicitaire.
+1. Implémentez un sélecteur de stratégies publicitaires personnalisé en étendant le sélecteur de stratégies publicitaires par défaut.
+1. Fournir les coupures publicitaires qui doivent être présentées à l’utilisateur en implémentant `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
