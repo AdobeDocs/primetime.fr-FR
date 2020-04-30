@@ -10,6 +10,6 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Fenêtre de lecture{#playback-window}
 
-Indique la durée de validité d’une licence après sa première utilisation pour lire le contenu protégé.
+Indique la durée de validité d’une licence après sa première utilisation pour lire du contenu protégé.
 
-Exemple de cas d’utilisation : Certains modèles d&#39;entreprise permettent une période de location de 30 jours, mais une fois la lecture commencée, elle doit être terminée dans 48 heures. Cette durée de vie de 48 heures de la licence est définie comme la fenêtre de lecture.
+Exemple de cas d’utilisation : Certains modèles d&#39;entreprise permettent une période de location de 30 jours mais, une fois la lecture commencée, elle doit être terminée en 48 heures. Cette longévité de 48 heures de la licence est définie comme la fenêtre de lecture.
