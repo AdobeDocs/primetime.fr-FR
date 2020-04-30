@@ -10,13 +10,13 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 # Préparation des mots de passe pour les fichiers de propriétés du serveur {#preparing-passwords-for-the-server-properties-files}
 
-Pour garantir la sécurité du mot de passe de vos informations d’identification, un outil est fourni pour chiffrer le mot de passe avant qu’il ne soit entré dans le [!DNL flashaccess-refimpl.properties] fichier ou [!DNL flashaccess-refimpl-packager.properties] le fichier.
+Pour garantir la sécurité du mot de passe de vos informations d’identification, un outil est fourni pour chiffrer le mot de passe avant qu’il ne soit entré dans le [!DNL flashaccess-refimpl.properties] fichier ou le [!DNL flashaccess-refimpl-packager.properties] fichier.
 
-Pour exécuter l’outil à l’aide du script ANT fourni :
+Pour exécuter l&#39;outil à l&#39;aide du script ANT fourni :
 
-* Aller à *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* Aller à *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Assurez-vous que la `sdkdir` propriété dans [!DNL build-refimpl.xml] pointe vers le répertoire contenant le SDK Adobe Access.
+* Assurez-vous que la `sdkdir` propriété de la section [!DNL build-refimpl.xml] pointe vers le répertoire contenant le SDK Adobe Access.
 * Exécutez la commande suivante à l’aide d’ANT :
 
    ```
@@ -29,7 +29,7 @@ Pour exécuter l’outil à l’aide de Java :
 
 * Aller à *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
 
-* Dans l’invite de commande, saisissez la commande suivante :
+* Dans l&#39;invite de commande, saisissez la commande suivante :
 
 * Sous Windows :
 
