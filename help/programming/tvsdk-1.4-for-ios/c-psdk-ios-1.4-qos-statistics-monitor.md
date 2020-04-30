@@ -1,8 +1,8 @@
 ---
-description: Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-description: Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-title: Statistiques sur la qualité du service
-title: Statistiques sur la qualité du service
+description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+seo-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+seo-title: Statistiques sur la qualité des services
+title: Statistiques sur la qualité des services
 uuid: b74cbc94-1d69-4b4b-b969-d0e985b4762b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,21 +10,21 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Statistiques sur la qualité du service{#quality-of-service-statistics}
+# Statistiques sur la qualité des services{#quality-of-service-statistics}
 
-Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
 
-## Lecture des statistiques de lecture, de mise en mémoire tampon et de périphérique QOS {#section_9996406E2D814FA382B77E3041CB02BC}
+## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la `PTQOSProvider` classe.
 
-La `PTQOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d’images, les données temporelles, etc.
+La `PTQOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 Il fournit également des informations sur le périphérique, telles que le modèle, le système d’exploitation et l’ID du périphérique du fabricant.
 
 >[!TIP]
 >
->Vous ne pouvez pas modifier la taille de la mémoire tampon de lecture, mais vous pouvez contrôler l’état de la taille de la mémoire tampon pour le débogage ou  . `PTPlaybackInformation` inclut des propriétés telles que `playbackBufferFull` et `playbackLikelyToKeepUp`.
+>Vous ne pouvez pas modifier la taille de la mémoire tampon de lecture, mais vous pouvez contrôler l’état de la taille de la mémoire tampon pour le débogage ou l’analyse. `PTPlaybackInformation` inclut des propriétés telles que `playbackBufferFull` et `playbackLikelyToKeepUp`.
 
 1. Instanciez un lecteur multimédia.
 1. Créez un `PTQOSProvider` objet et joignez-le au lecteur de médias.
