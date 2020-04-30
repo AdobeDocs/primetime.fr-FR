@@ -1,6 +1,6 @@
 ---
-description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre pttrackingversion.
-seo-description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre pttrackingversion.
+description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion
+seo-description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion
 seo-title: Format VMAP pour les URL de suivi
 title: Format VMAP pour les URL de suivi
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
@@ -12,11 +12,11 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 # Format VMAP pour les URL de suivi {#vmap-format-for-tracking-urls}
 
-Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre `pttrackingversion`
+Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête `pttrackingversion`
 
 ## Format VMAP unique {#vmap}
 
-Fichier VMAP envoyé par le serveur de manifeste si `pttrackingversion=vmap` le format de l’exemple suivant est celui d’un bloc VMAP type. Il a été raccourci pour éviter une répétition inutile, afin que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées apparaissent sur plusieurs lignes, bien qu’elles apparaissent sur une seule ligne dans le fichier VMAP.
+Le fichier VMAP que le serveur de manifeste envoie si `pttrackingversion=vmap` possède le format de l&#39;exemple suivant, qui provient d&#39;un bloc VMAP type. Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
