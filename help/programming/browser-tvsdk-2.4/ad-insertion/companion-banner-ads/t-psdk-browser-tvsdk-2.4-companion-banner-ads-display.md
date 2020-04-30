@@ -1,22 +1,22 @@
 ---
-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les  de liées aux publicités.
-seo-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les  de liées aux publicités.
+description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
+seo-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
 seo-title: Afficher les bannières publicitaires
 title: Afficher les bannières publicitaires
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: ''
 
 ---
 
 
 # Afficher les bannières publicitaires {#display-banner-ads}
 
-Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les  de liées aux publicités.
+Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
 
-Le navigateur TVSDK fournit un  de bannières publicitaires associées associées à une publicité linéaire par l’intermédiaire de l’ de `AdobePSDK.PSDKEventType.AD_STARTED` .
+Le navigateur TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire par le biais du `AdobePSDK.PSDKEventType.AD_STARTED` événement.
 
-Les manifestes peuvent spécifier des bannières publicitaires d&#39;accompagnement par :
+Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
 
 * Un extrait de code HTML
 * URL d’une page iFrame
@@ -24,24 +24,24 @@ Les manifestes peuvent spécifier des bannières publicitaires d&#39;accompagnem
 
 Pour chaque publicité connexe, le navigateur TVSDK indique les types disponibles pour votre application.
 
-Ajouter un écouteur pour le  `AdobePSDK.PSDKEventType.AD_STARTED` qui effectue les opérations suivantes :
+Ajouter un écouteur pour le événement `AdobePSDK.PSDKEventType.AD_STARTED` qui effectue les opérations suivantes :
 1. Efface les publicités existantes dans l’instance de bannière.
-1. Obtient le  des publicités d&#39;accompagnement `Ad.getCompanionAssets`.
-1. Si le  des publicités complémentaires n’est pas vide, effectuez une itération sur le pour les instances de bannière.
+1. Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets`.
+1. Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
 
-   Chaque instance de bannière (une `AdBannerAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou statique), ainsi que les données requises pour afficher la bannière correspondante.
-1. Si une publicité vidéo ne comporte aucune publicité connexe, le  des ressources connexes ne contient aucune donnée pour cette publicité vidéo.
-1. Envoie les informations sur la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
+   Chaque instance de bannière (une `AdBannerAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
+1. Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
+1. Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
 
-   Il s’agit généralement d’une `div`, et votre fonction utilise la `div ID` pour afficher la bannière. Par exemple :
+   Il s’agit généralement d’un `div`et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
 
-   Ajouter l’écouteur de  :
+   Ajouter l’écouteur de événement :
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   Implémentez le gestionnaire d’écouteurs :
+   Mettez en oeuvre le gestionnaire d’écouteurs :
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void 
