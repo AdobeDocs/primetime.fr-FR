@@ -1,6 +1,6 @@
 ---
-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les  liées aux publicités.
-seo-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les  liées aux publicités.
+description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
+seo-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
 seo-title: Afficher les bannières publicitaires
 title: Afficher les bannières publicitaires
 uuid: 7246dfab-860f-4b55-9554-49738a483406
@@ -12,11 +12,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 # Afficher les bannières publicitaires {#display-banner-ads}
 
-Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les  liées aux publicités.
+Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
 
-TVSDK fournit un de bannières publicitaires associées associées à une publicité linéaire par l’intermédiaire de l’ `AdPlaybackEventListener.onAdBreakStart` .
+TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire par le biais du `AdPlaybackEventListener.onAdBreakStart` événement.
 
-Les manifestes peuvent spécifier des bannières publicitaires d&#39;accompagnement par :
+Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
 
 * Un extrait de code HTML
 * URL d’une page iFrame
@@ -24,16 +24,16 @@ Les manifestes peuvent spécifier des bannières publicitaires d&#39;accompagnem
 
 Pour chaque publicité connexe, TVSDK indique les types disponibles pour votre application.
 
-1. Ajouter un écouteur pour le `AdPlaybackEventListener.onAdBreakStart` qui effectue les actions suivantes :
+1. Ajouter un écouteur pour le `AdPlaybackEventListener.onAdBreakStart` événement qui effectue les opérations suivantes :
 
    * Efface les publicités existantes dans l’instance de bannière.
-   * Obtient le  des publicités d&#39;accompagnement `Ad.getCompanionAssets`.
-   * Si le  des publicités complémentaires n’est pas vide, effectuez une itération sur le pour les instances de bannière.
+   * Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets`.
+   * Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
 
-      Chaque instance de bannière (une `AdAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou statique), ainsi que les données requises pour afficher la bannière correspondante.
-   * Si une publicité vidéo ne comporte aucune publicité connexe, le  des ressources connexes ne contient aucune donnée pour cette publicité vidéo.
-   * Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire d’affichage DFP normale (DoubleClick for Publishers) dans l’instance de bannière appropriée.
-   * Envoie les informations sur la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
+      Chaque instance de bannière (une `AdAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
+   * Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
+   * Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire standard DFP (DoubleClick for Publishers) dans l’instance de bannière appropriée.
+   * Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
 
-      Il s’agit généralement d’une `div`, et votre fonction utilise la `div ID` pour afficher la bannière.
+      Il s’agit généralement d’un `div`et votre fonction utilise le `div ID` pour afficher la bannière.
 
