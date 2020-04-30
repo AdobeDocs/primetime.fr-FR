@@ -16,7 +16,7 @@ Lors de la détermination des règles de pare-feu, tenez compte des types d’UR
 
 ## URL entrantes {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-Vous pouvez configurer votre pare-feu externe de sorte qu’il expose uniquement les URL de la fonctionnalité de l’application que vous souhaitez fournir aux utilisateurs finaux.
+Vous pouvez configurer votre pare-feu externe de sorte qu’il n’expose que les URL de la fonctionnalité d’application que vous souhaitez fournir aux utilisateurs finaux.
 
 Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare-feu externe :
 
@@ -41,7 +41,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier les utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez les API clientes DRM d’Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier des utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez les API clientes DRM d’Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -86,7 +86,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permettre au client de convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM Primetime. </p> <p>Remarque :  Cette URL doit utiliser SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permet au client de convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM Primetime. </p> <p>Remarque :  Cette URL doit utiliser SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
@@ -105,13 +105,13 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->Le pare-feu interne ne doit permettre que les connexions au serveur de licences DRM Primetime via le proxy inverse et uniquement aux URL du tableau. Pour améliorer l’évolutivité, utilisez HTTP pour les connexions entre le proxy inverse et le DRM Primetime.
+>Le pare-feu interne ne doit autoriser que les connexions au serveur de licences DRM Primetime via le proxy inverse et uniquement aux URL du tableau. Pour améliorer l’évolutivité, utilisez HTTP pour les connexions entre le proxy inverse et le DRM Primetime.
 
 ## URL sortantes {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Les URL sortantes permettent au serveur de licences de télécharger les listes CRL à partir d’Adobe.
+Les URL sortantes permettent au serveur de licences de télécharger les listes de révocation des certificats à partir d’Adobe.
 
-Voici un  des URL sortantes que vous pouvez utiliser :
+Voici une liste des URL sortantes que vous pouvez utiliser :
 
 * `https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
