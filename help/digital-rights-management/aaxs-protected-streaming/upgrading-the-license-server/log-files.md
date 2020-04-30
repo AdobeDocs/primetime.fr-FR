@@ -14,5 +14,5 @@ Les fichiers journaux générés par Adobe Access Server pour l’application de
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->Si les fichiers journaux actuels sont supprimés ou déplacés pendant que le serveur est en cours d’exécution, il se peut que le fichier journal ne soit pas recréé et que certaines informations du journal soient perdues.
+>Si les fichiers journaux actuels sont supprimés ou déplacés pendant l&#39;exécution du serveur, il est possible que le fichier journal ne soit pas recréé et que certaines informations du journal soient perdues.
 
