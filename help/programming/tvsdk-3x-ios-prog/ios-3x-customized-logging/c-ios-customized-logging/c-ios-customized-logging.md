@@ -14,20 +14,20 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Vous pouvez mettre en oeuvre votre propre système de journalisation.
 
-Outre la journalisation à l’aide de notifications prédéfinies, vous pouvez mettre en oeuvre un système de journalisation qui utilise vos messages et messages journaux générés par TVSDK. Pour plus d’informations sur les notifications prédéfinies, voir [Le système](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System)de notification. Vous pouvez utiliser ces journaux pour dépanner vos applications de lecteur et pour mieux comprendre le processus de lecture et de publicité.
+Outre la journalisation à l’aide de notifications prédéfinies, vous pouvez mettre en oeuvre un système de journalisation qui utilise vos messages et messages journaux générés par TVSDK. Pour plus d’informations sur les notifications prédéfinies, voir [Le système](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System)de notification. Vous pouvez utiliser ces journaux pour résoudre les problèmes de vos applications de lecteur et pour mieux comprendre le flux de lecture et de publicité.
 
-La journalisation personnalisée utilise une instance singleton partagée du `PSDKPTLogFactory`, qui fournit un mécanisme pour journaliser les messages vers plusieurs journaux. Vous définissez et ajoutez (inscrivez) un ou plusieurs journaux à la `PTLogFactory`. Cela vous permet de définir plusieurs journaux avec des implémentations personnalisées, comme un journal de console, un journal Web ou un journal d&#39;historique de console.
+La journalisation personnalisée utilise une instance singleton partagée du `PSDKPTLogFactory`, qui fournit un mécanisme pour consigner les messages à plusieurs journaux. Vous définissez et ajoutez (enregistrez) un ou plusieurs journaux de journalisation au `PTLogFactory`. Cela vous permet de définir plusieurs journaux avec des implémentations personnalisées, comme un journal de console, un journal Web ou un journal d&#39;historique de console.
 
-TVSDK génère des messages de journal pour la plupart de ses  , que le `PTLogFactory` transmet à tous les journaliers enregistrés. Votre application peut également générer des messages de journal personnalisés, qui sont transmis à tous les journaux enregistrés. Chaque blogueur peut filtrer les messages et prendre les mesures appropriées.
+TVSDK génère des messages de journal pour la plupart de ses activités, que les `PTLogFactory` transmettent à tous les journaliseurs enregistrés. Votre application peut également générer des messages de journal personnalisés, qui sont transférés à tous les journaux enregistrés. Chaque journal peut filtrer les messages et prendre les mesures appropriées.
 
 Il existe deux implémentations pour `PTLogFactory`:
 
-* Pour écouter les journaux.
-* Pour ajouter des journaux à une `PTLogFactory`.
+* Pour l’écoute des journaux.
+* Pour ajouter des journaux à un `PTLogFactory`journal.
 
 ## Écoute des journaux {#listen-to-logs}
 
-Pour vous inscrire à l’écoute des journaux :
+Pour vous inscrire pour écouter les journaux :
 1. Implémentez une classe personnalisée qui suit le protocole `PTLogger`:
 
    ```
@@ -45,7 +45,7 @@ Pour vous inscrire à l’écoute des journaux :
    @end
    ```
 
-1. Pour enregistrer l’instance afin de recevoir les entrées de journalisation, ajoutez une instance de la `PTLogger` à la `PTLoggerFactory`:
+1. Pour enregistrer l&#39;instance pour recevoir les entrées de journalisation, ajoutez une instance du `PTLogger` au `PTLoggerFactory`:
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -58,7 +58,7 @@ Pour vous inscrire à l’écoute des journaux :
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-Voici un exemple de filtrage des journaux à l’aide du `PTLogEntry` type :
+Voici un exemple de filtrage des journaux en utilisant le `PTLogEntry` type :
 
 ```
 @implementation PTConsoleLogger 
@@ -95,7 +95,7 @@ Pour vous inscrire pour écouter les journaux :
 
 Créez un nouveau fichier `PTLogEntry` et ajoutez-le à `thePTLogFactory`:
 
-Vous pouvez instancier manuellement une `PTLogEntry` et l’ajouter à l’instance `PTLogFactory` partagée ou utiliser l’une des macros pour accomplir le même  de.
+Vous pouvez instancier manuellement une `PTLogEntry` instance et l’ajouter à l’instance `PTLogFactory` partagée ou utiliser l’une des macros pour accomplir la même tâche.
 
 Voici un exemple de journalisation à l’aide de la `PTLogDebug` macro :
 
