@@ -16,7 +16,7 @@ Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonn
 
 >[!TIP]
 >
->La prise de décision publicitaire d’Adobe Primetime était auparavant connue sous le nom d’Auditude.
+>Auparavant, la prise de décision publicitaire d’Adobe Primetime était connue sous le nom d’Auditude.
 
 1. Créez l’ `AuditudeSettings` instance.
 
@@ -24,7 +24,7 @@ Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonn
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domaine et Adobe Primetime pour la prise de décision publicitaire.
+1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domain et Adobe Primetime pour la prise de décision publicitaire.
 
    ```js
    auditudeSettings.domain = "yourdomain"; 
@@ -43,15 +43,15 @@ Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonn
 
 1. Chargez l’ `MediaResource` objet par le biais de la `MediaPlayer.replaceCurrentResource(resource)` méthode.
 
-   Le `MediaPlayer` le chargement et le traitement du manifeste du flux média.
+   Les `MediaPlayer` débuts de chargement et de traitement du manifeste de flux média.
 
-1. Lorsque le `MediaPlayer` à l’état INITIALIZED, obtenez les caractéristiques du flux média sous la forme d’une `MediaPlayerItem` instance via l’ `MediaPlayer.CurrentItem` attribut.
-1. (Facultatif)  l’ `MediaPlayerItem` instance pour voir si le flux est en direct, qu’il comporte ou non des pistes audio de remplacement.
+1. Lorsque l’état INITIALISÉ est `MediaPlayer` transition, obtenez les caractéristiques du flux média sous la forme d’une `MediaPlayerItem` instance via l’ `MediaPlayer.CurrentItem` attribut.
+1. (Facultatif) Requête l’ `MediaPlayerItem` instance pour déterminer si le flux est actif, qu’il comporte ou non des pistes audio de remplacement.
 
-   Ces informations peuvent vous aider à préparer l’interface utilisateur pour la lecture. Par exemple, si vous savez qu’il existe deux pistes audio, vous pouvez inclure une commande d’interface utilisateur qui bascule entre ces pistes.
+   Ces informations peuvent vous aider à préparer l’interface utilisateur à la lecture. Par exemple, si vous savez qu&#39;il y a deux pistes audio, vous pouvez inclure une commande d&#39;interface utilisateur qui bascule entre ces pistes.
 
-1. Appelez `MediaPlayer.prepareToPlay` pour le flux de travail publicitaire.
+1. Appelez `MediaPlayer.prepareToPlay` pour début le processus publicitaire.
 
-   Une fois les publicités résolues et placées sur la chronologie, le `  MediaPlayer ` se  à l’état PRÉPARÉ.
-1. Appelez `MediaPlayer.play` pour la lecture.
-Le kit de développement TVSDK du navigateur comprend désormais des publicités lorsque votre média est lu.
+   Une fois les publicités résolues et placées sur la chronologie, les `  MediaPlayer ` transitions sont à l’état PRÉPARÉ.
+1. Appelez `MediaPlayer.play` pour début de la lecture.
+Le kit TVSDK du navigateur comprend désormais des publicités lorsque votre média est lu.
