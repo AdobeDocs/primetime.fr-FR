@@ -17,5 +17,5 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 1. Copiez le [!DNL ROOT] dossier du package fourni par Adobe dans le [!DNL webapps] répertoire.
 
-   Le serveur d’individualisation doit également héberger le [!DNL crossdomain.xml] fichier. (Le [!DNL ROOT] dossier contient le [!DNL crossdomain.xml] fichier ; doit [!DNL ROOT] être en majuscules.) Le serveur de génération de clés ne nécessite pas ce fichier.
+   Le serveur d’individualisation doit également héberger le [!DNL crossdomain.xml] fichier. (Le [!DNL ROOT] dossier contient le [!DNL crossdomain.xml] fichier ; [!DNL ROOT] doit être dans tous les majuscules.) Le serveur de génération de clés ne nécessite pas ce fichier.
 
