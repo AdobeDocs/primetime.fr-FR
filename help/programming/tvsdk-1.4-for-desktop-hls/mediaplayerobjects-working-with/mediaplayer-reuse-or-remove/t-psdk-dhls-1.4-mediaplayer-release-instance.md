@@ -14,9 +14,9 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 Vous devez libérer une instance et des ressources MediaPlayer lorsque vous n’avez plus besoin de MediaResource.
 
-Lorsque vous relâchez un `MediaPlayer` objet, les ressources matérielles sous-jacentes associées à cet `MediaPlayer` objet sont réparties.
+Lorsque vous relâchez un `MediaPlayer` objet, les ressources matérielles sous-jacentes associées à cet `MediaPlayer` objet sont affectées.
 
-Voici quelques raisons de publier une `MediaPlayer`:
+Voici quelques raisons de publier un `MediaPlayer`:
 
 * Le fait de détenir des ressources inutiles peut affecter les performances.
 * Si plusieurs instances du même codec vidéo ne sont pas prises en charge sur un périphérique, une erreur de lecture peut se produire pour d’autres applications.
@@ -27,4 +27,4 @@ Voici quelques raisons de publier une `MediaPlayer`:
    function release():void;
    ```
 
-Une fois l’ `MediaPlayer` instance libérée, vous ne pouvez plus l’utiliser. Si une méthode de l’ `MediaPlayer` interface est appelée une fois qu’elle est relâchée, une `IllegalStateException` méthode est lancée.
+Une fois l’ `MediaPlayer` instance libérée, vous ne pouvez plus l’utiliser. Si une méthode de l’ `MediaPlayer` interface est appelée après sa publication, une `IllegalStateException` est générée.
