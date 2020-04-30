@@ -41,12 +41,12 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
    <td colname="2"> Classe. Fabrique de journalisation par défaut.</td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Journaliste</a></span> </td> 
    <td colname="2">Interface. Méthodes requises pour implémenter une journalisation personnalisée pour l’expression. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/NullLogger.html" format="html" scope="external"> NullLogger</a></span> </td> 
-   <td colname="2"> Classe. Un journal qui ne consigne rien.</td> 
+   <td colname="2"> Classe. Enregistreur qui ne consigne rien.</td> 
   </tr> 
  </tbody> 
 </table>
