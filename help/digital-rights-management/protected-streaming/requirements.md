@@ -10,7 +10,7 @@ source-git-commit: 68f1318db89cf9422f5969f669c11f3784560db6
 
 # Conditions requises{#requirements}
 
-Votre de  de génération doit  répondre aux exigences minimales suivantes :
+Votre environnement de génération doit respecter les exigences minimales suivantes :
 
 * Microsoft Windows Server 2008 ou Red Hat® Enterprise Linux® 5.6
 * Oracle Java JRE 1.6 (Oracle Java JDK 1.6 est requis pour créer des extensions d’autorisation personnalisées)
