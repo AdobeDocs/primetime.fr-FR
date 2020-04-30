@@ -1,6 +1,6 @@
 ---
-description: Dans AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
-seo-description: Dans AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
+description: Dans le fichier AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
+seo-description: Dans le fichier AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
 seo-title: Exemples de règles de sélection créative
 title: Exemples de règles de sélection créative
 uuid: 58e6637e-9f5c-471a-8bc8-d217b36e5f9d
@@ -12,7 +12,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 # Exemples de règles de sélection créative {#sample-creative-selection-rules}
 
-Dans AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
+Dans le fichier AdobeTVSDKConfig.json, vous pouvez spécifier des règles par défaut ainsi que des règles pour des zones spécifiques.
 
 ## Exemples de règles par défaut {#section_xy4_3fx_hz}
 
