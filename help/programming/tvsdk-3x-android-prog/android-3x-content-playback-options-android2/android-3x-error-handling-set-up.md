@@ -14,11 +14,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Vous pouvez configurer un emplacement pour gérer les erreurs.
 
-1. Implémentez une fonction de rappel de  pour `MediaPlayerEvent.STATUS_CHANGED`.
+1. Implémentez une fonction de rappel de événement pour `MediaPlayerEvent.STATUS_CHANGED`.
 
-   TVSDK transmet des informations , telles qu’un `MediaPlayerStatusChangeEvent` objet.
+   TVSDK transmet des informations sur le événement, par exemple un `MediaPlayerStatusChangeEvent` objet.
 1. Dans le rappel, lorsque l’état renvoyé est `MediaPlayerStatus.ERROR`défini, fournissez une logique pour gérer toutes les erreurs.
-1. Une fois l’erreur traitée, réinitialisez l’ `MediaPlayer` objet ou chargez une nouvelle ressource multimédia.
+1. Une fois l’erreur gérée, réinitialisez l’ `MediaPlayer` objet ou chargez une nouvelle ressource multimédia.
 
    Lorsque l’ `MediaPlayer` objet est dans l’état d’erreur, il reste dans cet état jusqu’à ce que vous le réinitialisiez à l’aide de la `MediaPlayer.reset` méthode.
 
