@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez utiliser le DRM Android natif Widevine avec les flux DASH.
-seo-description: Vous pouvez utiliser le DRM Android natif Widevine avec les flux DASH.
-seo-title: DRM Widevine
-title: DRM Widevine
+description: Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
+seo-description: Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
+seo-title: DRM sans fil
+title: DRM sans fil
 uuid: ceb2f18f-9e53-47d6-9d4b-7004ac1d22c9
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
@@ -10,9 +10,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# DRM Widevine {#widevine-drm}
+# DRM sans fil {#widevine-drm}
 
-Vous pouvez utiliser le DRM Android natif Widevine avec les flux DASH.
+Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
 
 Appelez l’ `com.adobe.mediacore.drm.DRMManager` API suivante avant de commencer la lecture :
 
