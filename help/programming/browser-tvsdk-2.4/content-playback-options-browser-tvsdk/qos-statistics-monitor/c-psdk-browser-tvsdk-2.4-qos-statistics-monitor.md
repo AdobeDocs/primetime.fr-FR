@@ -1,8 +1,8 @@
 ---
-description: Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-description: Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-title: Statistiques sur la qualité du service
-title: Statistiques sur la qualité du service
+description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+seo-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+seo-title: Statistiques sur la qualité des services
+title: Statistiques sur la qualité des services
 uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
@@ -10,15 +10,15 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 ---
 
 
-# Statistiques sur la qualité du service{#quality-of-service-statistics}
+# Statistiques sur la qualité des services{#quality-of-service-statistics}
 
-Qualité du service  (QoS)  un détaillé sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
 
-## Lecture des statistiques de lecture, de mise en mémoire tampon et de périphérique QOS {#read-qos-playback-buffering-and-device-statistics}
+## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#read-qos-playback-buffering-and-device-statistics}
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d’images, les données temporelles, etc.
+La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 1. Instanciez un lecteur multimédia.
 1. Créez un `QOSProvider` objet et joignez-le au lecteur de médias.
@@ -31,7 +31,7 @@ La `QOSProvider` classe fournit diverses statistiques, notamment des information
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère régulièrement les nouvelles valeurs de la qualité de service `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
 
    ```js
    var qosTimer = (function () { 
