@@ -12,7 +12,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 
 1. Créez une interface utilisateur pour récupérer les informations d’identification d’authentification de l’utilisateur.
 
-   Voici un exemple Flex d’interface utilisateur simple pour récupérer les informations d’identification de l’utilisateur. Il se compose d’un objet de panneau contenant deux `TextInput` objets, un pour chaque nom d’utilisateur et mot de passe. Le panneau contient également un bouton qui lance la `credentials()` méthode.
+   Vous trouverez ci-dessous un exemple Flex d’interface utilisateur simple pour récupérer les informations d’identification de l’utilisateur. Il se compose d’un objet de panneau contenant deux `TextInput` objets, un pour chacun des noms d’utilisateur et des informations d’identification de mot de passe. Le panneau contient également un bouton qui lance la `credentials()` méthode.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -43,7 +43,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
 
 1. Ecrivez la `credentials()` méthode pour traiter les valeurs d’authentification fournies par l’utilisateur.
 
-   La `credentials()` méthode est définie par l’utilisateur et transmet les valeurs de nom d’utilisateur et de mot de passe à la `setDRMAuthenticationCredentials()` méthode. Une fois les valeurs transmises, la `credentials()` méthode réinitialise les valeurs des `TextInput` objets.
+   La `credentials()` méthode est une méthode définie par l’utilisateur qui transmet les valeurs de nom d’utilisateur et de mot de passe à la `setDRMAuthenticationCredentials()` méthode. Une fois les valeurs transmises, la `credentials()` méthode réinitialise les valeurs des `TextInput` objets.
 
    ```
    <mx:Script> 
@@ -56,7 +56,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    </mx:Script> 
    ```
 
-   Une méthode pour implémenter ce type d’interface simple consiste à inclure le panneau dans un nouvel état. Le nouvel état provient de l’état de base lorsque l’ `DRMAuthenticateEvent` objet est lancé. L’exemple suivant contient un `VideoDisplay` objet avec un attribut source qui pointe vers un fichier vidéo protégé. Dans ce cas, la `credentials()` méthode est modifiée de sorte qu’elle renvoie également l’application à l’état de base. Cette méthode le fait après avoir transmis les informations d’identification de l’utilisateur et réinitialisé les valeurs de l’objet TextInput.
+   L’une des manières d’implémenter ce type d’interface simple consiste à inclure le panneau dans un nouvel état. Le nouvel état provient de l’état de base lorsque l’ `DRMAuthenticateEvent` objet est lancé. L&#39;exemple suivant contient un `VideoDisplay` objet doté d&#39;un attribut source qui pointe vers un fichier vidéo protégé. Dans ce cas, la `credentials()` méthode est modifiée de sorte qu’elle renvoie également l’application à l’état de base. Cette méthode le fait après avoir transmis les informations d’identification de l’utilisateur et réinitialisé les valeurs de l’objet TextInput.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
