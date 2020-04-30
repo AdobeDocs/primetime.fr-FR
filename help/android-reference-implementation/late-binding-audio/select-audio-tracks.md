@@ -1,6 +1,6 @@
 ---
-seo-title: Sélection des pistes audio
-title: Sélection des pistes audio
+seo-title: Sélectionner les pistes audio
+title: Sélectionner les pistes audio
 uuid: a827f426-956b-4a5f-90ba-db12010aa7c7
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
@@ -8,17 +8,17 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 ---
 
 
-# Sélection des pistes audio{#select-the-audio-tracks}
+# Sélectionner les pistes audio{#select-the-audio-tracks}
 
-Pour sélectionner des pistes audio pour une liaison tardive, implémentez [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
+Pour sélectionner des pistes audio à lier tardivement, implémentez [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
-| Pour... | Appelle... |
+| Pour... | Appeler... |
 |---|---|
-| Obtenir un  des pistes AA disponibles | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| Obtenir une liste de pistes AA disponibles | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
 | Obtenir la piste sélectionnée actuelle | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
 | Sélectionner une piste AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-L’exemple de code suivant illustre la manière dont l’implémentation de référence obtient les pistes audio du kit TVSDK et affecte la piste sélectionnée à l’élément média associé :
+L’exemple de code suivant illustre comment l’implémentation de référence obtient les pistes audio du SDK TVSDK et affecte la piste sélectionnée à l’élément média associé :
 
 ```java
 /** 
