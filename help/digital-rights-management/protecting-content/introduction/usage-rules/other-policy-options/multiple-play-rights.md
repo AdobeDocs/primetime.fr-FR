@@ -1,6 +1,6 @@
 ---
-seo-title: Plusieurs droits de lecture
-title: Plusieurs droits de lecture
+seo-title: Droits de lecture multiples
+title: Droits de lecture multiples
 uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
 translation-type: tm+mt
 source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
@@ -8,8 +8,8 @@ source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
 ---
 
 
-# Plusieurs droits de lecture {#multiple-play-rights}
+# Droits de lecture multiples {#multiple-play-rights}
 
-Vous pouvez spécifier le paramètre de droits de lecture multiples pour différentes règles d’utilisation que vous appliquez à différentes plateformes ou applications.
+Vous pouvez spécifier plusieurs paramètres de droits de lecture pour différentes règles d’utilisation que vous appliquez à différentes plateformes ou applications.
 
-Exemple de cas d’utilisation : A l’aide de plusieurs droits de lecture, vous pouvez créer une stratégie DRM Primetime pour spécifier que la protection Output est requise sur la plate-forme Microsoft® Windows®. Toutefois, il est facultatif sur les plateformes Apple® Macintosh® et Linux®.
+Exemple de cas d’utilisation : A l’aide de plusieurs droits de lecture, vous pouvez créer une stratégie DRM Primetime pour spécifier que Output Protection est requis sur la plate-forme Microsoft® Windows®. Cependant, elle est facultative sur les plates-formes Apple® Macintosh® et Linux®.
