@@ -1,29 +1,29 @@
 ---
-description: Le sous-titrage affiche la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-description: Le sous-titrage affiche la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-title: Sélectionner une piste de sous-titrage parmi les pistes disponibles
-title: Sélectionner une piste de sous-titrage parmi les pistes disponibles
+description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
+seo-description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
+seo-title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
+title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
 
-# Sélectionner une piste de sous-titrage parmi les pistes disponibles{#select-a-current-caption-track-from-among-available-tracks}
+# Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles{#select-a-current-caption-track-from-among-available-tracks}
 
-Vous pouvez sélectionner une piste dans un de pistes de sous-titrage actuellement disponibles. Il devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Il se peut que certaines pistes ne soient pas disponibles au départ. Écoutez donc le  qui indique que d&#39;autres sont devenues disponibles.
+Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d&#39;autres sont devenues disponibles.
 
 >[!TIP]
 >
->Les sous-titres sont toujours activés. Toutes les pistes de sous-titrage codé par défaut sont considérées comme présentes. Les pistes par défaut (CC1-CC4, CS1-CS6, par exemple) sont énumérées dans `ClosedCaptionsTrack.DefaultCCTypes`. Lorsque la lecture commence, TVSDK recherche   sur l’un de ces . S’il trouve  , il définit la `isActive` méthode de cette piste et distribue le `MediaPlayer.PlaybackEventListener.onUpdated` .
+>Les légendes fermées sont toujours activées. Toutes les pistes de sous-titrage par défaut sont considérées comme présentes. Les pistes par défaut (telles que CC1-CC4, CS1-CS6) sont énumérées dans `ClosedCaptionsTrack.DefaultCCTypes`. Lorsque la lecture commence, TVSDK recherche l’activité sur l’un de ces canaux. S’il détecte l’activité, il définit la `isActive` méthode de ce suivi et répartit le `MediaPlayer.PlaybackEventListener.onUpdated` événement.
 
-1. Attendez que le lecteur de médias soit au moins à l’état PRÉPARÉ.
-1. Ecoutez ces  :
+1. Attendez que le lecteur multimédia soit au moins à l’état PRÉPARÉ.
+1. Prêtez attention aux événements suivants :
 
-   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: Le  initial des pistes de sous-titrage est disponible
+   * `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: La liste initiale des pistes de sous-titrage est disponible
 
-1. Obtenez un  de toutes les pistes de sous-titrage actuellement disponibles.
+1. Obtenez une liste de toutes les pistes de sous-titrage actuellement disponibles.
 
    Par exemple :
 
@@ -32,7 +32,7 @@ Vous pouvez sélectionner une piste dans un de pistes de sous-titrage actuelleme
          mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. Sélectionnez une piste disponible pour être la piste actuelle.
+1. Sélectionnez une piste disponible pour être la piste en cours.
 
    Par exemple :
 
