@@ -14,13 +14,13 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
 
-Avant de  la lecture, vous devez vous abonner aux balises. Pour être averti des balises personnalisées dans les manifestes HLS :
+Avant les débuts de lecture, vous devez vous abonner aux balises . Pour être averti des balises personnalisées dans les manifestes HLS :
 
-1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` in `MediaPlayerItemConfig`.
+1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` entrer `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Vous devez inclure le `#` préfixe lors de l’utilisation de flux HLS.
+   >Vous devez inclure le `#` préfixe lors de l’utilisation des flux HLS.
 
    Par exemple :
 
