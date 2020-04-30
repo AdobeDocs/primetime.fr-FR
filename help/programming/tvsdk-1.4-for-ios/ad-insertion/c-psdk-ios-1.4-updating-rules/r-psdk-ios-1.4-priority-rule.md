@@ -15,7 +15,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 La règle de priorité définit l’ordre de priorité des créatifs publicitaires qui seront sélectionnés pour la lecture à partir d’une réponse VAST/VMAP.
 
-## Une règle de priorité possède les attributs et valeurs possibles suivants :
+## Une règle Priorité comporte les attributs et valeurs possibles suivants :
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
@@ -28,19 +28,19 @@ La règle de priorité définit l’ordre de priorité des créatifs publicitair
  </thead>
  <tbody> 
   <tr> 
-   <td><span class="codeph"> priorité</span></td> 
+   <td><span class="codeph"> priority</span></td> 
    <td><span class="codeph"> Tableau</span></td> 
    <td></td> 
-   <td> Tableau de types mime minuscules qui définissent la priorité dans laquelle les créatifs source doivent être sélectionnés pour la lecture.</td> 
+   <td> Tableau de types minuscules mime qui définissent la priorité dans laquelle les créatifs source doivent être sélectionnés pour la lecture.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> hôte</span></td> 
-   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque <span class="codeph"> des correspondances</span> et des attributs de valeurs <span class="codeph"></span> sont définis.</td> 
+   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque des <span class="codeph"> correspondances</span> et des attributs de <span class="codeph"> valeurs</span> sont définis.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> correspond à</span></td> 
+   <td><span class="codeph"> correspond</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> multiple</span></td> 
    <td>Valeurs possibles :
@@ -49,27 +49,27 @@ La règle de priorité définit l’ordre de priorité des créatifs publicitair
      <li><span class="codeph"> ne</span> - pas égal à</li> 
      <li><span class="codeph"> co</span> - contient</li> 
      <li><span class="codeph"> nc</span> - non contient</li> 
-     <li><span class="codeph"> sw</span> -  avec</li> 
+     <li><span class="codeph"> sw</span> - débuts avec</li> 
      <li><span class="codeph"> ew</span> - se termine par</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
-   <td><span class="codeph"> priorité</span></td> 
+   <td><span class="codeph"> priority</span></td> 
    <td>La valeur doit toujours être <span class="codeph"> prioritaire</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> valeurs</span></td> 
+   <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Tableau</span></td> 
    <td></td> 
-   <td> <p>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"></span> du créatif source et fera correspondre les valeurs définies dans ce tableau.</p> </td> 
+   <td> <p>TVSDK utilisera l’attribut <span class="codeph"> match</span> sur l’élément <span class="codeph"></span> de création source et fera une correspondance avec les valeurs définies dans ce tableau.</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td></td> 
-   <td> <p>La valeur peut être <span class="codeph"> vod</span> ou <span class="codeph"> live</span></p> </td> 
+   <td> <p>La valeur peut être <span class="codeph"> validée</span> ou <span class="codeph"> active</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
