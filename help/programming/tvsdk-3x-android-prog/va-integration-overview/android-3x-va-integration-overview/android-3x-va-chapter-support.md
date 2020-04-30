@@ -18,9 +18,9 @@ Les chapitres personnalisés sont gérés par l’application et reposent sur de
 
 >[!CAUTION]
 >
->Les chapitres par défaut ne sont pas pris en charge dans le kit TVSDK Android 3.0.
+>Les chapitres par défaut ne sont pas pris en charge dans le SDK Android 3.0.
 
-Définissez et suivez les chapitres personnalisés.
+Définissez et suivez des chapitres personnalisés.
 
 ```java
 // First, enable chapter tracking by setting   
