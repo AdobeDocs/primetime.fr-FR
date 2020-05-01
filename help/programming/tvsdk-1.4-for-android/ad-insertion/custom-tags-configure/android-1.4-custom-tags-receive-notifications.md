@@ -1,8 +1,8 @@
 ---
-description: Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de  appropriés.
-seo-description: Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de  appropriés.
-seo-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
+description: Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de événement appropriés.
+seo-description: Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de événement appropriés.
+seo-title: Ajouter écouteurs pour les notifications de métadonnées minutées
+title: Ajouter écouteurs pour les notifications de métadonnées minutées
 uuid: cd7a5936-d63a-4711-ac16-2d79bac099a3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,17 +10,17 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Ajouter des écouteurs pour les notifications de métadonnées minutées {#add-listeners-for-timed-metadata-notifications}
+# Ajouter écouteurs pour les notifications de métadonnées minutées {#add-listeners-for-timed-metadata-notifications}
 
-Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de  appropriés.
+Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de événement appropriés.
 
-Vous pouvez surveiller les métadonnées minutées en écoutant les  de suivantes, qui avertissent votre application des  de connexes :
+Vous pouvez surveiller les métadonnées minutées en écoutant les événements suivants, qui avertissent votre application de l’activité associée :
 
-* `onTimedMetadata`: Chaque fois qu’une balise abonnée unique est identifiée lors de l’analyse du contenu, TVSDK prépare un nouvel `TimedMetadata` objet et distribue ce .
+* `onTimedMetadata`: Chaque fois qu’une balise d’abonnement unique est identifiée lors de l’analyse du contenu, TVSDK prépare un nouvel `TimedMetadata` objet et distribue ce événement.
 
-   L’objet contient le nom de la balise à laquelle vous vous êtes abonné, l’heure locale de la lecture où cette balise apparaîtra, ainsi que d’autres données.
+   L’objet contient le nom de la balise à laquelle vous vous êtes abonné, l’heure locale de lecture à laquelle cette balise apparaîtra, ainsi que d’autres données.
 
-   Écoute les .
+   Écoute les événements.
 
    ```java
    private final TimedMetadataEventListener timedMetadataEventListener =  
@@ -44,4 +44,4 @@ Vous pouvez surveiller les métadonnées minutées en écoutant les  de suivante
    }; 
    ```
 
-Les métadonnées ID3 utilisent le même écouteur onTimedMetadata pour indiquer la présence d’une balise ID3. Cela ne doit toutefois pas prêter à confusion, car vous pouvez utiliser la `TimedMetadata` `type` propriété d’un objet pour différencier la balise TAG de l’ID3. Pour plus d’informations sur les balises ID3, voir Balises [ID3](../../../tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md).
+Les métadonnées ID3 utilisent le même écouteur onTimedMetadata pour indiquer la présence d’une balise ID3. Cela ne doit toutefois pas prêter à confusion, car vous pouvez utiliser la `TimedMetadata` `type` propriété d’un objet pour différencier la balise TAG de l’ID3. Pour plus d’informations sur les balises ID3, voir Balises [](../../../tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)ID3.
