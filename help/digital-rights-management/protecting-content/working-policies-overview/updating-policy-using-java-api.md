@@ -12,7 +12,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Pour mettre à jour une stratégie DRM avec l’API Java :
 
-1. Configurez votre  de développement  et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configuration du](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)de développement .
+1. Configurez votre environnement de développement et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configuration de l’environnement](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)de développement.
 1. Créez une `Policy` instance DRM et lisez la stratégie DRM à partir d’un fichier ou d’une base de données.
 
    ```
@@ -44,7 +44,7 @@ Pour mettre à jour une stratégie DRM avec l’API Java :
    }
    ```
 
-1. Sérialisez l’objet DRM `Policy` mis à jour et stockez-le dans un fichier ou une base de données.
+1. Sérialisez l’objet DRM mis à jour et stockez-le dans un fichier ou une base de données. `Policy`
 
    ```java
    // Serialize the DRM policy.  
