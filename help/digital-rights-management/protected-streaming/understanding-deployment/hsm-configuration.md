@@ -27,4 +27,4 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Si vous pouvez  vos informations d’identification dans le , le module HSM est correctement configuré et le serveur de licences peut désormais accéder aux informations d’identification.
+Si vous pouvez vue vos informations d’identification dans la liste, le module HSM est correctement configuré et le serveur de licences peut désormais accéder aux informations d’identification.
