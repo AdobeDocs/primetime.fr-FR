@@ -1,8 +1,8 @@
 ---
-description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo entraînent également un changement de l’état du lecteur. Vous implémentez des écouteurs  pour capturer et répondre aux  de (objets MediaPlayerEvent).
-seo-description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo entraînent également un changement de l’état du lecteur. Vous implémentez des écouteurs  pour capturer et répondre aux  de (objets MediaPlayerEvent).
-seo-title: Notifications et  de l’état du lecteur, , erreurs et consignation
-title: Notifications et  de l’état du lecteur, , erreurs et consignation
+description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
+seo-description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
+seo-title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
+title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
@@ -10,31 +10,31 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 ---
 
 
-# Notifications et  de l’état du lecteur, , erreurs et consignation {#notifications-and-events-for-player-status-activity-errors-and-logging}
+# Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
-Les  et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
+Les Événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
 
-Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo entraînent également un changement de l’état du lecteur. Vous implémentez des écouteurs  pour capturer et répondre aux  de (objets MediaPlayerEvent).
+Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
 
 Votre application peut récupérer les informations de notification et d’état. Grâce à ces informations, vous pouvez également créer un système de journalisation pour les diagnostics et la validation.
 
-## Contenu de notification {#section_DF951FF601794CF592841BB7406DC1A1}
+## Contenu de la notification {#section_DF951FF601794CF592841BB7406DC1A1}
 
 `MediaPlayerNotification` fournit des informations relatives à l’état du lecteur.
 
-TVSDK fournit un chronologique des `MediaPlayerNotification` notifications et chaque notification contient les informations suivantes :
+TVSDK fournit une liste chronologique des `MediaPlayerNotification` notifications et chaque notification contient les informations suivantes :
 
 * Horodatage
-* Métadonnées de diagnostic composées des éléments suivants :
+* Métadonnées de diagnostic comprenant les éléments suivants :
 
    * `type`: INFORMATIONS, AVERTISSEMENT ou ERREUR.
    * `code`: Représentation numérique de la notification.
    * `name`: Description lisible de la notification, telle que SEEK_ERROR
    * `metadata`: paires clé/valeur qui contient des informations pertinentes sur la notification. Par exemple, une clé nommée `URL` fournit une valeur qui est une URL liée à la notification.
 
-   * `innerNotification`: Référence à un autre `MediaPlayerNotification` objet qui affecte directement cette notification.
+   * `innerNotification`: Référence à un autre `MediaPlayerNotification` objet qui a un impact direct sur cette notification.
 
-Vous pouvez stocker ces informations en local pour  plus tard  ou les envoyer à un serveur distant pour la journalisation et la représentation graphique.
+Vous pouvez stocker ces informations localement pour une analyse ultérieure ou les envoyer à un serveur distant pour consigner et représenter graphiquement.
 
 ## Configuration de votre système de notification {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
@@ -49,7 +49,7 @@ Pour recevoir des notifications, écoutez les notifications comme suit :
 
    >[!NOTE]
    >
-   >Les types de notifications sont énumérés dans l’ `Notification.Type` énumération :
+   >Les types de notifications sont énumérés dans l&#39; `Notification.Type` énumération :
 
    * `ERROR`
    * `INFO`
@@ -59,31 +59,31 @@ Pour recevoir des notifications, écoutez les notifications comme suit :
 
 Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 
-Le système de notification vous permet de collecter des informations de journalisation et de débogage pour le diagnostic et la validation sans insister sur le système.
+Le système de notification vous permet de collecter des informations de journalisation et de débogage pour les diagnostics et les validations sans insister sur le système.
 
 >[!IMPORTANT]
 >
->La connexion n’est pas incluse dans une configuration de production et ne devrait pas gérer le trafic à fort chargement. Si votre implémentation n’a pas besoin d’être absolument terminée, pensez à l’efficacité de la transmission des données pour éviter de surcharger votre système.
+>L’extrémité arrière de la journalisation ne fait pas partie d’une configuration de production et ne devrait pas gérer le trafic à forte charge. Si votre implémentation n’a pas besoin d’être complète, pensez à l’efficacité de la transmission des données pour éviter de surcharger votre système.
 
 Voici un exemple de récupération des notifications :
 
-1. Créez un thread d’exécution basé sur le minuteur pour votre application vidéo qui  périodiquement les données rassemblées par le système de notification TVSDK.
-1. Si l’intervalle du minuteur est trop long et que la taille du  est trop petite, l’ de l’ de l’ de la de notification déborde.
+1. Créez un thread d’exécution basé sur un minuteur pour votre application vidéo qui requête périodiquement les données collectées par le système de notification TVSDK.
+1. Si l’intervalle du minuteur est trop long et que la taille de la liste du événement est trop petite, la liste du événement de notification déborde.
 
    >[!NOTE]
    >
    >Pour éviter ce débordement, effectuez l’une des opérations suivantes :    >
    >    
    >    
-   >    1. Réduisez l’intervalle de temps qui déclenche le thread qui interroge les nouveaux .
-   >    1. Augmentez la taille du de notification.
+   >    1. Réduisez l&#39;intervalle de temps qui conduit le thread qui effectue l&#39;interrogation des nouveaux événements.
+   >    1. Augmentez la taille de la liste de notification.
 
 
-1. Sérialisez les entrées de de notification les plus récentes au format JSON et envoyez les entrées à un serveur distant pour le post-traitement.
+1. Sérialisez les dernières entrées du événement de notification au format JSON et envoyez les entrées à un serveur distant pour post-traitement.
 
    >[!NOTE]
    >
    >Le serveur distant peut afficher les données fournies sous forme graphique en temps réel.
 
-1. Pour détecter la perte des  de notification, recherchez les lacunes dans la séquence des valeurs d’index de .
+1. Pour détecter la perte de événements de notification, recherchez des lacunes dans la séquence de valeurs d’index de événement.
 
