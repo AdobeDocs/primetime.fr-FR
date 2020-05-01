@@ -10,6 +10,6 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Date de fin relative{#relative-end-date}
 
-La date de fin relative indique la date d’expiration de la licence, exprimée par rapport à la date d’emballage, et non par rapport à la date d’émission de la licence.
+La date de fin relative indique la date d’expiration de la licence, exprimée par rapport à la date d’emballage, et non par rapport à la date à laquelle la licence a été délivrée.
 
-Exemple de cas d’utilisation : Dans un processus d’assemblage automatisé, utilisez une seule stratégie DRM Primetime avec cette option pour une série de vidéos, afin de définir la date d’expiration sur 30 jours par rapport à la date d’emballage.
+Exemple de cas d’utilisation : Dans un processus de création de package automatisé, utilisez une seule stratégie DRM Primetime avec cette option pour une série de vidéos, afin de définir la date d’expiration sur 30 jours par rapport à la date d’emballage.
