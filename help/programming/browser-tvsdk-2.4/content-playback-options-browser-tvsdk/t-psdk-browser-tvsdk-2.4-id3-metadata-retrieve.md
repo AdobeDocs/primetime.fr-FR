@@ -1,6 +1,6 @@
 ---
-description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment du flux de transport (TS) dans les flux HLS et distribue un . L’application peut extraire des données de la balise .
-seo-description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment du flux de transport (TS) dans les flux HLS et distribue un . L’application peut extraire des données de la balise .
+description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
+seo-description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
 seo-title: Balises ID3
 title: Balises ID3
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
@@ -12,9 +12,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Balises ID3{#id-tags}
 
-Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment du flux de transport (TS) dans les flux HLS et distribue un . L’application peut extraire des données de la balise .
+Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
 
-Lorsqu’une nouvelle métadonnées ID3 est trouvée dans le flux HLS sous-jacent, le navigateur TVSDK déclenche un `AdobePSDK.TimedMetadataEvent` .
+Lorsqu’une nouvelle métadonnées ID3 est trouvée dans le flux HLS sous-jacent, le navigateur TVSDK déclenche un `AdobePSDK.TimedMetadataEvent` événement.
 
 L’ `TimedMetadata` objet ID3 possède les propriétés suivantes :
 
@@ -28,27 +28,27 @@ L’ `TimedMetadata` objet ID3 possède les propriétés suivantes :
  <tbody> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>Type d’objet <span class="codeph"> TimedMetadata </span> . </p> <p>Pour les métadonnées ID3, la valeur est <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+   <td colname="col2"> <p>Type d’ <span class="codeph"> objet </span> TimedMetadata. </p> <p>Pour les métadonnées ID3, la valeur est <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> time </span> </p> </td> 
-   <td colname="col2"> <p> Heure du lecteur à laquelle ces métadonnées minutées ont été détectées. </p> </td> 
+   <td colname="col2"> <p> Heure du lecteur à laquelle ces métadonnées temporisées ont été détectées. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>ID de l’objet <span class="codeph"> TimedMetadata </span> . </p> </td> 
+   <td colname="col2"> <p>ID de l’ <span class="codeph"> objet </span> TimedMetadata. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>Nom de l’objet <span class="codeph"> TimedMetadata </span> . Pour les métadonnées ID3, la valeur est "ID3". </p> </td> 
+   <td colname="col2"> <p>Nom de l’ <span class="codeph"> objet </span> TimedMetadata. Pour les métadonnées ID3, la valeur est "ID3". </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> contenu </span> </p> </td> 
-   <td colname="col2"> <p>Contenu des métadonnées temporisées. Pour les balises ID3, cette valeur représente le tableau d’octets sérialisé. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> content </span> </p> </td> 
+   <td colname="col2"> <p>Contenu des métadonnées temporisées. Pour les balises ID3, cette valeur représente le tableau d’octets sérialisés. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> métadonnées </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> Informations </span> traitées TimedMetadata, qui est une instance d’ <span class="codeph"> AdobePSDK.Metadata </span> où sont stockées les images ID3. </p> <p> <p>Remarque :  Pour la <span class="codeph"> balise vidéo Safari, les données d’image spécifiques de la balise ID3 sont exposées sous la forme d’un objet par le biais d’un </span> objet AdobePSDK.Metadata, tandis que pour les autres navigateurs, les données d’image de la balise ID3 sont exposées sous la forme d’un tableau d’octets par le biais de l’objet <span class="codeph"> AdobePSDK.Metadata </span> <span class="codeph"> </span> . </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadata </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> Informations </span> traitées TimedMetadata, qui est une instance d’ <span class="codeph"> AdobePSDK.Metadata </span> où les images ID3 sont stockées. </p> <p> <p>Remarque :  Pour la balise <span class="codeph"> vidéo Safari </span> , les données d’image particulières de la balise ID3 sont exposées sous la forme d’un objet par le biais d’un <span class="codeph"> objet AdobePSDK.Metadata, tandis que pour les autres navigateurs, les données d’image de la balise ID3 sont exposées sous la forme d’un tableau d’octets par le biais de l’objet </span> Adobe PSDK.Metadata <span class="codeph"> </span> . </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -57,7 +57,7 @@ L’ `TimedMetadata` objet ID3 possède les propriétés suivantes :
 
 Les différentes balises ID3 stockées dans `TimedMetadata` peuvent être récupérées par l’application de deux manières différentes :
 
-* Dans AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, d’écoute.
+* Dans l’écouteur de événement AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
 
    ```
    var isSafari = function () { 
