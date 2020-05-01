@@ -1,6 +1,6 @@
 ---
-description: Afin d’accommoder les clients qui souhaitent payer uniquement ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
-seo-description: Afin d’accommoder les clients qui souhaitent payer uniquement ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+description: Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+seo-description: Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
 seo-title: Mesures de facturation
 title: Mesures de facturation
 uuid: 658ffbcd-dedc-464c-8ec7-aa3bdfcb1512
@@ -12,32 +12,32 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Mesures de facturation {#billing-metrics}
 
-Afin d’accommoder les clients qui souhaitent payer uniquement ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
 
-Chaque fois que le lecteur génère un de flux  , TVSDKenvoie des messages HTTP régulièrement au système de facturation d’Adobe. La période, connue sous le nom de durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités milieu de gamme activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec Adobe détermine les valeurs réelles.
+Chaque fois que le lecteur génère un événement de début de diffusion en continu, TVSDK début à envoyer régulièrement des messages HTTP au système de facturation d’Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec Adobe détermine les valeurs réelles.
 
 Les messages contiennent les informations suivantes :
 
 * Type de contenu (dynamique, linéaire ou VOD)
 * URL de contenu
 * Activation ou non des publicités
-* Activation ou non des publicités moyennes (VOD uniquement)
-* Protection du flux par DRM
+* Activation ou non des publicités preroll moyennes (VOD uniquement)
+* Si le flux est protégé par DRM
 * Version et plate-forme du SDK TVSDK
 
-Adobe préconfigure cette disposition, mais si vous souhaitez la modifier, contactez votre représentant Adobe Enablement.
+Adobe préconfigure cet arrangement, mais si vous souhaitez le modifier, contactez votre représentant Adobe Enablement.
 
-Pour surveiller les statistiques envoyées par TVSDK à Adobe, obtenez l’URL auprès de votre représentant Adobe Enablement et utilisez un outil de capture réseau, par exemple Charles, pour afficher les données.
+Pour contrôler les statistiques envoyées par TVSDK à Adobe, obtenez l’URL auprès de votre représentant Adobe Enablement et utilisez un outil de capture réseau, par exemple Charles, pour afficher les données.
 
 ## Configuration des mesures de facturation {#configure-billing-metrics}
 
-Si vous utilisez la configuration par défaut, vous n’avez rien d’autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration auprès de votre représentant Adobe Enablement, utilisez la classe PTBillingMetricsConfiguration pour configurer ces paramètres avant d’initialiser le lecteur multimédia.
+Si vous utilisez la configuration par défaut, il n&#39;y a rien d&#39;autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant Adobe Enablement, utilisez la classe PTBillingMetricsConfiguration pour configurer ces paramètres avant d&#39;initialiser le lecteur multimédia.
 
 La plupart des clients doivent utiliser la configuration par défaut.
 
 >[!IMPORTANT]
 >
->La configuration que vous définissez reste en vigueur pendant la durée de vie du lecteur multimédia. Une fois que vous avez initialisé le lecteur multimédia, vous ne pouvez plus modifier la configuration.
+>La configuration que vous définissez reste en vigueur pendant toute la durée de vie du lecteur multimédia. Une fois que vous avez initialisé le lecteur multimédia, vous ne pouvez plus modifier la configuration.
 
 Pour configurer les mesures de facturation :
 
