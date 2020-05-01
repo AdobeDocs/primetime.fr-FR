@@ -10,7 +10,7 @@ source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
 
 # Utiliser Adobe Media Server {#use-adobe-media-server}
 
-Certains clients utilisent peut-être déjà Adobe Media Server et souhaitent conserver ce modèle de de contenu. Si tel est le cas, les données DRM de Primetime Cloud requises peuvent être extraites de l’un des fichiers de configuration inclus dans ce kit afin de renseigner la configuration XML JIT (Juste à temps) pour AMS.
+Certains clients utilisent peut-être déjà Adobe Media Server et souhaitent conserver ce modèle de diffusion de contenu. Si tel est le cas, les données spécifiques à Primetime Cloud DRM requises peuvent être extraites de l’un des fichiers de configuration inclus dans ce kit pour renseigner la configuration XML JIT (Just In Time) pour AMS.
 
 Par exemple :
 
