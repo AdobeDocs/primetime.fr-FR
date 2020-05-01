@@ -14,20 +14,20 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Vous pouvez ajouter des boutons Pause et Lecture pour suspendre ou lire la vidéo.
 
-1. Pour créer un bouton de mise en pause ou de lecture :
+1. Pour créer un bouton de pause ou de lecture :
    1. Attendez que le joueur soit au moins dans l&#39;état préparé.
-   1. Pour  lecture, appelez la `play` méthode :
+   1. Pour début la lecture, appelez la `play` méthode :
 
       ```java
       void play() throws MediaPlayerException;
       ```
 
-   1. Pour mettre la lecture en pause, appelez la `pause()` méthode suivante :
+   1. Pour interrompre la lecture, appelez la `pause()` méthode :
 
       ```java
       void pause() throws MediaPlayerException;
       ```
 
-1. Utilisez le rappel de modifié pour rechercher des erreurs ou pour effectuer d’autres actions appropriées.
+1. Utilisez le rappel de événement d’état modifié pour rechercher les erreurs ou pour effectuer d’autres actions appropriées.
 
    TVSDK appelle ce rappel pour `pause()` ou `play()` et transmet des informations sur le changement d’état, y compris le nouveau statut, tel que suspendu ou en cours de lecture.
