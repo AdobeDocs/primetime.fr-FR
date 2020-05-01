@@ -14,7 +14,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 
-1. Créez un bouton pour modifier le suivi des sous-titres.
+1. Créez un bouton pour modifier le suivi des sous-titres fermés.
 
    ```xml
    <Button 
@@ -28,9 +28,9 @@ Cette procédure est un exemple de création d’un bouton qui permet à un util
      android:text="CC" /> 
    ```
 
-1. Convertissez le  des pistes de sous-titrage disponibles en tableau de chaînes.
+1. Convertissez la liste des pistes de sous-titrage disponibles en tableau de chaînes.
 
-   Les pistes de sous-titrage fermées qui ont  , c’est-à-dire les  pour lesquels TVSDK a découvert des données, sont marquées en conséquence.
+   Les pistes de sous-titrage fermées qui ont une activité, c’est-à-dire les canaux pour lesquels TVSDK a découvert des données, sont marquées en conséquence.
 
    ```java
    /** 
@@ -58,7 +58,7 @@ Cette procédure est un exemple de création d’un bouton qui permet à un util
    } 
    ```
 
-1. Lorsque l’utilisateur clique sur le bouton, affiche une boîte de dialogue qui toutes les pistes de sous-titrage codé par défaut.
+1. Lorsque l’utilisateur clique sur le bouton, affiche une boîte de dialogue qui liste toutes les pistes de sous-titrage par défaut.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
