@@ -1,6 +1,6 @@
 ---
-description: Le lecteur Primetime prend en charge l’intégration DRM Primetime comme DRM personnalisé. Cela signifie que votre application doit implémenter le d’authentification DRM  avant de lire le flux.
-seo-description: Le lecteur Primetime prend en charge l’intégration DRM Primetime comme DRM personnalisé. Cela signifie que votre application doit implémenter le d’authentification DRM  avant de lire le flux.
+description: Le lecteur Primetime prend en charge l’intégration de DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux.
+seo-description: Le lecteur Primetime prend en charge l’intégration de DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux.
 seo-title: Protection du contenu DRM
 title: Protection du contenu DRM
 uuid: 95c446f6-8304-4d70-9bef-7368b9364025
@@ -12,25 +12,25 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 # Protection du contenu DRM {#drm-content-protection}
 
-Le lecteur Primetime prend en charge l’intégration DRM Primetime comme DRM personnalisé. Cela signifie que votre application doit implémenter le d’authentification DRM  avant de lire le flux.
+Le lecteur Primetime prend en charge l’intégration de DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux.
 
-Pour activer cette fonctionnalité, TVSDK fournit le gestionnaire DRM pour l’authentification. L’implémentation de référence fournit un exemple de  de suivant :
+Pour activer cette fonction, TVSDK fournit le gestionnaire DRM pour l’authentification. L’implémentation de référence fournit un exemple des workflows suivants :
 
-* Comment charger et lire les flux HLS avec la protection de contenu Access, optimisée pour les faibles taux d&#39;erreur et les  rapides.
-* Comment charger et lire des flux HLS avec la protection de contenu AES128.
-* Comment charger et lire les flux HLS avec protection de contenu PHLS, optimisé pour les faibles taux d&#39;erreurs et les  rapides.
+* Comment charger et lire les flux HLS avec la protection de contenu Access, optimisée pour des taux d&#39;erreur bas et un début rapide.
+* Comment charger et lire les flux HLS avec la protection de contenu AES128.
+* Comment charger et lire les flux HLS avec la protection de contenu PHLS, optimisée pour des taux d&#39;erreur bas et un début rapide.
 
-Tout le contenu protégé par DRM est géré automatiquement par les bibliothèques DRM intégrées à TVSDK. Cependant, vous pouvez exposer la gestion des erreurs, l’optimisation de l’individualisation des périphériques et l’acquisition de licences à l’aide des rappels d’API TVSDK.
+Tout le contenu protégé par DRM est automatiquement géré par les bibliothèques DRM intégrées à TVSDK. Cependant, vous pouvez exposer la gestion des erreurs, l’optimisation de l’individualisation des périphériques et l’acquisition de licences à l’aide des rappels d’API TVSDK.
 
-## Ajouter la protection du contenu au lecteur {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
+## Protection Ajouter contenu du lecteur {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
-Vous pouvez ajouter une protection du contenu au lecteur en créant un gestionnaire de lecture ou en utilisant la fabrique de gestionnaires.
+Vous pouvez ajouter une protection de contenu au lecteur en créant un gestionnaire de lecture ou en utilisant la fabrique de gestionnaires.
 
 Pour créer un gestionnaire de protection du contenu :
 
 * Initialisez le système DRM.
 
-   L’exemple de code suivant illustre l’appel `loadDRMServices` dans la `onCreate()` fonction de l’application, afin de vous assurer que toute initialisation requise pour le système DRM est lancée avant le démarrage de la lecture.
+   L’exemple de code suivant montre comment appeler `loadDRMServices` la fonction `onCreate()` de l’application pour s’assurer que toute initialisation requise pour le système DRM est initialisée avant le démarrage de la lecture.
 
    ```java
    @Override 
@@ -42,7 +42,7 @@ Pour créer un gestionnaire de protection du contenu :
 
 * Préchargez les licences DRM.
 
-   L’exemple de code suivant illustre le chargement de la `VideoItems` page lorsque le chargement du de contenu est terminé. Les licences DRM seront ainsi acquises à partir du serveur de licences et mises en cache localement, de sorte que, lors de la  de lecture, le contenu se chargera avec un délai minimal.
+   L&#39;exemple de code suivant montre comment charger la liste `VideoItems` de contenu lorsque le chargement est terminé. Ainsi, les licences DRM sont acquises à partir du serveur de licences et mises en cache localement, de sorte que, lors des débuts de lecture, le contenu se charge avec un délai minimum.
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -62,11 +62,11 @@ Pour créer un gestionnaire de protection du contenu :
 
    >[!NOTE]
    >
-   >Vous pouvez définir les licences DRM Precache sur Activé dans l’interface utilisateur des paramètres afin qu’elles préviennent les licences DRM lors du chargement du contenu. Toutefois, il est recommandé de précharger un élément spécifique au lieu de prédéfinir toutes les licences du catalogue.
+   >Vous pouvez définir les licences DRM Precache sur ON dans l’interface utilisateur des paramètres pour qu’elles préviennent les licences DRM lors du chargement de contenu. Cependant, la meilleure pratique consiste à précharger un élément spécifique au lieu de prédéfinir toutes les licences du catalogue.
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* Pour `ManagerFactory` mettre en oeuvre la gestion des erreurs DRM, assurez-vous que la ligne de code suivante figure dans le [!DNL PlayerFragment.java] fichier :
+* Pour mettre en oeuvre `ManagerFactory` la gestion des erreurs DRM, assurez-vous que la ligne de code suivante figure dans le [!DNL PlayerFragment.java] fichier :
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
