@@ -16,9 +16,9 @@ Utilisez la classe d’assistance `AuditudeSettings`, qui étend la `MetadataNod
 
 >[!TIP]
 >
->La prise de décision publicitaire Adobe Primetime était auparavant connue sous le nom d’Auditude.
+>Auparavant, la prise de décision publicitaire d’Adobe Primetime était connue sous le nom d’Auditude.
 
-Les métadonnées publicitaires se trouvent dans la `MediaResource.Metadata` propriété. Lors du démarrage de la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires appropriées.
+Les métadonnées de publicité se trouvent dans la `MediaResource.Metadata` propriété. Lors du démarrage de la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires appropriées.
 
 1. Créez l’ `AuditudeSettings` instance.
 
@@ -26,7 +26,7 @@ Les métadonnées publicitaires se trouvent dans la `MediaResource.Metadata` pro
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Définissez les paramètres de prise de décision publicitaire Adobe Primetime `mediaID`, `zoneID`, `<ph conkeyref="phrases/primetime-sdk-name"/>`et les paramètres de ciblage facultatifs.
+1. Définissez les paramètres de ciblage facultatifs, `mediaID``zoneID``<ph conkeyref="phrases/primetime-sdk-name"/>`et la prise de décision publicitaire Adobe Primetime.
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -44,7 +44,7 @@ Les métadonnées publicitaires se trouvent dans la `MediaResource.Metadata` pro
 
    >[!TIP]
    >
-   >L’ID de média est utilisé par TVSDK sous la forme d’une chaîne, convertie en valeur md5, et utilisé pour la `u` valeur dans la demande d’URL de prise de décision et de Primetime. Par exemple :
+   >L’ID de média est utilisé par TVSDK sous la forme d’une chaîne, convertie en valeur md5, et est utilisé pour la `u` valeur dans la demande d’URL de prise de décision et de Primetime. Par exemple :
    >
    >`https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
@@ -57,15 +57,15 @@ Les métadonnées publicitaires se trouvent dans la `MediaResource.Metadata` pro
 
 1. Chargez l’ `MediaResource` objet par le biais de la `MediaPlayer.replaceCurrentResource` méthode.
 
-   Le `MediaPlayer` le chargement et le traitement du manifeste du flux média.
+   Les `MediaPlayer` débuts de chargement et de traitement du manifeste de flux média.
 
-1. Lorsque le `MediaPlayer` à l’état INITIALIZED, obtenez les caractéristiques du flux média sous la forme d’une `MediaPlayerItem` instance par le biais de la `MediaPlayer.CurrentItem` méthode.
-1. (Facultatif)  l’ `MediaPlayerItem` instance pour voir si le flux est en direct, qu’il comporte des pistes audio de remplacement ou qu’il soit protégé.
+1. Lorsque l’état INITIALISÉ est `MediaPlayer` transition, obtenez les caractéristiques du flux média sous la forme d’une `MediaPlayerItem` instance par le biais de la `MediaPlayer.CurrentItem` méthode.
+1. (Facultatif) Requête de l’ `MediaPlayerItem` instance pour déterminer si le flux est actif, qu’il comporte des pistes audio alternatives ou que le flux soit protégé.
 
-   Ces informations peuvent vous aider à préparer l’interface utilisateur pour la lecture. Par exemple, si vous savez qu’il existe deux pistes audio, vous pouvez inclure une commande d’interface utilisateur qui bascule entre ces pistes.
+   Ces informations peuvent vous aider à préparer l’interface utilisateur à la lecture. Par exemple, si vous savez qu&#39;il y a deux pistes audio, vous pouvez inclure une commande d&#39;interface utilisateur qui bascule entre ces pistes.
 
-1. Appelez `MediaPlayer.prepareToPlay` pour le flux de travail publicitaire.
+1. Appelez `MediaPlayer.prepareToPlay` pour début le processus publicitaire.
 
-   Une fois les publicités résolues et placées sur la chronologie, le `MediaPlayer` à l’ `PREPARED` état.
-1. Appelez `MediaPlayer.play` pour la lecture.
+   Une fois les publicités résolues et placées sur la chronologie, les `MediaPlayer` transitions sont à l’ `PREPARED` état.
+1. Appelez `MediaPlayer.play` pour début de la lecture.
 TVSDK comprend désormais des publicités lorsque votre média est lu.
