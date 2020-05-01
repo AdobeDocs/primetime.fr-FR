@@ -1,8 +1,8 @@
 ---
-description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuce, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
-seo-description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuce, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
-seo-title: Mise en oeuvre rapide de l’avance et du retour en arrière
-title: Mise en oeuvre rapide de l’avance et du retour en arrière
+description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
+seo-description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
+seo-title: Mise en oeuvre rapide de l’avance et du rembobinage
+title: Mise en oeuvre rapide de l’avance et du rembobinage
 uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -12,11 +12,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Présentation {#implement-fast-forward-and-rewind-overview}
 
-Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuce, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
+Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
 
 Pour changer de vitesse, vous devez définir une valeur.
 
-1. Passez du mode de lecture normal (1x) au mode de lecture fictive en définissant le taux sur la valeur `MediaPlayer` autorisée.
+1. Passez du mode de lecture normal (1x) au mode de lecture par astuces en définissant le taux sur le `MediaPlayer` à une valeur autorisée.
 
    * La `MediaPlayerItem` classe définit les taux de lecture autorisés.
    * TVSDK sélectionne le taux autorisé le plus proche si le taux spécifié n’est pas autorisé.
@@ -46,13 +46,13 @@ Pour changer de vitesse, vous devez définir une valeur.
    }
    ```
 
-1. Vous pouvez éventuellement écouter les  de changement de taux, qui vous indiquent quand vous avez demandé un changement de taux et quand un changement de taux se produit.
+1. Vous pouvez éventuellement écouter les événements de changement de taux, ce qui vous permet de savoir quand vous avez demandé un changement de taux et quand un changement de taux se produit réellement.
 
-       TVSDK distribue le  suivant en rapport avec le jeu vidéo :
+       TVSDK distribue les événements suivants liés au jeu vidéo :
    
    * `AdobePSDK.PSDKEventType.RATE_SELECTED` lorsque la `rate` valeur change.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` lorsque la lecture reprend au rythme sélectionné.
 
-      TVSDK distribue ces deux  lorsque le lecteur revient du mode de jeu de l’astuce au mode de jeu normal.
+      TVSDK distribue ces deux événements lorsque le lecteur revient du mode de lecture de l’astuce au mode de lecture normal.
 
