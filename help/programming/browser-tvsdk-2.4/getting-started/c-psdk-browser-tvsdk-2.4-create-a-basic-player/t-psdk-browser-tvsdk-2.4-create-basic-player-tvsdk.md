@@ -14,9 +14,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Suivez les étapes ci-après pour créer un lecteur de base à l’aide du SDK du navigateur.
 
-1. Créez un répertoire dans lequel vous pouvez télécharger les fichiers compressés pour le SDK du navigateur TVSDK.
-1. Téléchargez le navigateur TVSDK à partir de Zendesk, décompressez les fichiers et placez le dossier infrastructures dans le nouveau répertoire.
-1. Créez un modèle HTML standard simple pour le code avec un `div` dans celui-ci.
+1. Créez un répertoire dans lequel vous pouvez télécharger les fichiers compressés pour le SDK Browser TVSDK.
+1. Téléchargez le navigateur TVSDK à partir de Zendesk, décompressez les fichiers et importez le dossier infrastructures dans le nouveau répertoire.
+1. Créez un modèle standard HTML simple pour le code avec un `div` dans celui-ci.
 1. Placez ce standard dans un fichier HTML dans le répertoire que vous avez créé à l’étape 1.
 
    ```
@@ -33,7 +33,7 @@ Suivez les étapes ci-après pour créer un lecteur de base à l’aide du SDK d
    </html>
    ```
 
-1. Ajouter les bibliothèques du navigateur TVSDK dans la section head.
+1. Ajouter les bibliothèques Browser TVSDK dans la section head.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -48,10 +48,10 @@ Suivez les étapes ci-après pour créer un lecteur de base à l’aide du SDK d
    <body onload="startVideo()">
    ```
 
-1.  implémentation de la `startVideo` fonction.
+1. Début d’implémentation de la `startVideo` fonction.
 1. Ajouter une balise de script et créez la `startVideo` fonction dans la balise .
 
-   C&#39;est censé être dans la section head de la page.
+   Il est censé se trouver dans la section head de la page.
 
    ```js
    <script> 
@@ -78,13 +78,13 @@ Suivez les étapes ci-après pour créer un lecteur de base à l’aide du SDK d
    player.view = view;
    ```
 
-1. Ajouter le lecteur  l’écouteur.
+1. Ajouter l’écouteur de événement du lecteur.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. Mettez en oeuvre le gestionnaire de  de et placez-le avant l’écouteur de  d’ajout de.
+1. Mettez en oeuvre le gestionnaire de événements et placez-le avant l’écouteur de événement ajouté.
 
    ```js
    var onStatusChange = function (event) { 
@@ -157,7 +157,7 @@ Suivez les étapes ci-après pour créer un lecteur de base à l’aide du SDK d
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Lorsque le lecteur est à l’état INITIALIZED, appelez `prepareToPlay`.
+1. Lorsque le lecteur est à l’état INITIALISÉ, appelez `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
