@@ -1,8 +1,8 @@
 ---
-description: Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’assemblage, de la licence et de la lecture du contenu DASH chiffré avec Widevine et PlayReady.
-seo-description: Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’assemblage, de la licence et de la lecture du contenu DASH chiffré avec Widevine et PlayReady.
-seo-title: Processus multi-DRM pour Windows et PlayReady
-title: Processus multi-DRM pour Windows et PlayReady
+description: Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’emballage, de la licence et de la lecture de contenu DASH chiffré avec Widevine et PlayReady.
+seo-description: Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’emballage, de la licence et de la lecture de contenu DASH chiffré avec Widevine et PlayReady.
+seo-title: Flux de travaux multiDRM pour Windows et PlayReady
+title: Flux de travaux multiDRM pour Windows et PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
@@ -10,19 +10,19 @@ source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
 ---
 
 
-# Processus multi-DRM pour Windows et PlayReady {#multi-drm-workflow-for-widevine-and-playready}
+# Flux de travaux multiDRM pour Windows et PlayReady {#multi-drm-workflow-for-widevine-and-playready}
 
-Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’assemblage, de la licence et de la lecture du contenu DASH chiffré avec Widevine et PlayReady.
+Ce flux de travaux multi-DRM vous guide tout au long de la configuration, de l’emballage, de la licence et de la lecture de contenu DASH chiffré avec Widevine et PlayReady.
 
-Primetime TVSDK prend en charge la lecture de contenu DASH chiffré à l’aide de la technologie Widevine ou PlayReady sur HTML5 et Android uniquement dans TVSDK version 2.X. Le chiffrement du contenu DASH est défini par la spécification Common Encryption, dont les détails complets ne sont pas compris dans le champ d&#39;application de ce . Cette section fournit des détails pertinents sur le format DASH, la spécification de chiffrement et des informations sur certains des outils que vous pouvez utiliser pour générer le contenu pris en charge.
+Primetime TVSDK prend en charge la lecture de contenu DASH chiffré par Widevine ou PlayReady sur HTML5 et Android uniquement dans TVSDK version 2.X. Le chiffrement du contenu DASH est défini par la spécification Common Encryption, dont les détails complets ne relèvent pas du présent document. Cette section fournit des détails pertinents sur le format DASH, la spécification de chiffrement et des informations sur certains des outils que vous pouvez utiliser pour générer le contenu pris en charge.
 
 >[!NOTE]
 >
->Aucun plan n’a été fait pour renvoyer vers Android TVSDK 1.X la lecture de contenu DASH chiffré sur Widevine.
+>Aucun plan n&#39;a été fait pour renvoyer vers Android TVSDK 1.X la lecture du contenu DASH chiffré à l&#39;aide de la technologie Widevine.
 
 ## Contenu DASH et chiffrement commun en un coup d’oeil {#section_33A881158F724835B4B89AAE97302B17}
 
-Le contenu du tiret est constitué d’un manifeste principal, écrit en xml, qui pointe vers les fichiers vidéo et audio à lire. Dans l’exemple ci-dessous, le manifeste DASH pointe vers une URL vidéo, video/1080_30.mp4, et une URL audio, audio/1080_30.mp4, par rapport à l’URL du manifeste.
+Le contenu du tiret est constitué d’un manifeste principal, écrit en xml, qui pointe vers les fichiers vidéo et audio à lire. Dans l’exemple ci-dessous, le manifeste DASH pointe vers une URL de vidéo, video/1080_30.mp4, et une URL audio, audio/1080_30.mp4, par rapport à l’URL du manifeste.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -137,4 +137,4 @@ Observez que le premier exemple ci-dessus fait référence à un seul fichier po
 </Representation>
 ```
 
-Dans ce cas, l’analyseur de contenu (TVSDK) s’attend à trouver du contenu vidéo aux formats Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s, etc. Il est principalement utilisé pour la diffusion en direct et a l&#39;avantage de ne pas demander au client de télécharger à nouveau le manifeste de temps en temps.
+Dans ce cas, l’analyseur de contenu (TVSDK) s’attend à trouver du contenu vidéo à Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s, etc. Il est principalement utilisé pour la diffusion en direct en flux continu et présente l’avantage de ne pas demander au client de télécharger à nouveau le manifeste de temps en temps.
