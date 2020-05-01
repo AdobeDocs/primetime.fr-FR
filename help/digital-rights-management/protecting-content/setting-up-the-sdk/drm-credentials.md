@@ -10,10 +10,10 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Informations d’identification DRM d’Adobe Primetime{#adobe-primetime-drm-credentials}
 
-Les types d’informations d’identification suivants sont requis avant que vous puissiez utiliser le DRM Primetime :
+Les types d’informations d’identification suivants sont requis pour pouvoir utiliser Primetime DRM :
 
-* **Packager** - Utilisé lors de la création d’un pack pour signer les métadonnées ajoutées au contenu chiffré.
-* **Serveur** de licences : permet de protéger la clé de chiffrement du contenu dans les métadonnées et de signer des licences par le serveur de licences.
-* **Transport** : permet de protéger les requêtes/réponses échangées entre le client et le serveur de licences.
-* **Autorité de certification** du domaine : utilisé pour émettre des certificats de domaine sur les périphériques qui rejoignent un domaine.
+* **Packager** - Utilisé pendant la création de package pour signer les métadonnées ajoutées au contenu chiffré.
+* **License Server** - Utilisé pour protéger la clé de chiffrement du contenu dans les métadonnées et utilisé par le serveur de licences pour signer des licences.
+* **Transport** - Utilisé pour protéger les requêtes/réponses échangées entre le client et le serveur de licences.
+* **Autorité de certification** du domaine - Utilisé pour émettre des certificats de domaine sur les périphériques qui rejoignent un domaine.
 
