@@ -30,15 +30,15 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogEntry.html" format="html" scope="external"> LogEntry</a> </span></td> 
-   <td colname="2" rowsep="0"> Classe. Définit un journal d’entrée et contient des informations sur un message journal. </td> 
+   <td colname="2" rowsep="0"> Classe. Définit un journal d’entrée et contient des informations sur un message de journal. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a> </span></td> 
    <td colname="2"> Interface. Active la journalisation personnalisée. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Interface. Méthodes requises pour implémenter un journal personnalisé pour l’ <code>primetime-sdk-name</code> expression. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Journaliste</a> </span></td> 
+   <td colname="2">Interface. Méthodes requises pour implémenter une journalisation personnalisée pour l’ <code>primetime-sdk-name</code> expression. </td> 
   </tr> 
  </tbody>
 </table>
