@@ -1,6 +1,6 @@
 ---
-title: Références de l’API Adobe Primetime
-seo-title: Références de l’API Adobe Primetime
+title: Références à l’API Adobe Primetime
+seo-title: Références à l’API Adobe Primetime
 description: Les API vous aident à créer rapidement et facilement une application ou une intégration fonctionnelle.
 seo-description: Les API vous aident à créer rapidement et facilement une application ou une intégration fonctionnelle.
 topic-tags: API-references
@@ -10,7 +10,7 @@ source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 ---
 
 
-# Références de l’API Adobe Primetime {#api-references}
+# Références à l’API Adobe Primetime {#api-references}
 
 + TVSDK 3.11 {#tvsdk-311}
    + [TVSDK 3.11 pour Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
@@ -49,5 +49,5 @@ source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 + Divers {#miscellaneous}
    + [Bibliothèque Video Heartbeat](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [Interface utilisateur de la version 2.4 du kit de développement TVSDK du navigateur](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
-   + [API publiques PSDK FlashRuntime](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
+   + [Interface utilisateur pour la version 2.4 du navigateur TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [PSDK FlashRuntime Public APIs](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
