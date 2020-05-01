@@ -1,6 +1,6 @@
 ---
-description: Les flux de médias peuvent comporter des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
-seo-description: Les flux de médias peuvent comporter des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
+description: Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
+seo-description: Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
 seo-title: Balises personnalisées
 title: Balises personnalisées
 uuid: d781385d-d8e6-4681-884f-92d9d21bdb62
@@ -12,7 +12,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Présentation {#custom-tags-overview}
 
-Les flux de médias peuvent comporter des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
+Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier playlist/manifest, et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
 
 ## Balises de contenu HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
@@ -20,7 +20,7 @@ Les flux de médias peuvent comporter des métadonnées supplémentaires sous la
 >
 >Cette fonctionnalité n’est pas disponible pour Safari sur les ordinateurs Apple, car TVSDK utilise la balise vidéo, plutôt que Flash ou MSE, pour lire le contenu HLS.
 
-TVSDK fournit un support prêt à l’emploi pour des balises publicitaires #EXT spécifiques. Votre application peut utiliser des balises personnalisées pour améliorer le processus publicitaire ou pour prendre en charge les scénarios de coupure de courant. Pour prendre en charge les  avancées, TVSDK vous permet de spécifier et d’abonner des balises supplémentaires dans le manifeste. Vous pouvez être averti lorsque ces balises apparaissent dans le fichier manifeste.
+TVSDK fournit un support prêt à l’emploi pour des balises publicitaires #EXT spécifiques. Votre application peut utiliser des balises personnalisées pour améliorer le processus publicitaire ou pour prendre en charge les scénarios de coupure de courant. Pour prendre en charge les workflows avancés, TVSDK vous permet de spécifier et d’abonner des balises supplémentaires dans le manifeste. Vous pouvez être averti lorsque ces balises apparaissent dans le fichier manifeste.
 
 >[!TIP]
 >
@@ -62,9 +62,9 @@ seg5.ts
 
 Votre application peut configurer les scénarios suivants :
 
-* Une notification lorsque `#EXT-X-ASSET` des balises, ou tout autre jeu de noms de balises personnalisées auquel vous vous êtes abonné, existent dans le fichier.
+* Une notification indiquant si `#EXT-X-ASSET` des balises, ou tout autre ensemble de noms de balises personnalisés auxquels vous vous êtes abonné, existent dans le fichier.
 * Insérez des publicités lorsqu’une `#EXT-X-AD` balise, ou tout autre nom de balise personnalisé, se trouve dans le flux.
 
-Vous pouvez vous abonner à l’une des balises suivantes sous forme de balises personnalisées : `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Vous êtes averti par un `TimedMetadata` lors de l’analyse des fichiers de manifeste.
+Vous pouvez vous abonner à l’une des balises suivantes en tant que balises personnalisées : `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Un `TimedMetadata` événement vous en informe lors de l’analyse des fichiers de manifeste.
 
-Il existe des balises publicitaires, telles que `EXT-X-CUE`, auxquelles vous êtes déjà abonné. Ces balises publicitaires sont également utilisées par le générateur d’opportunités par défaut. Vous pouvez spécifier les balises publicitaires utilisées par le générateur d’opportunités par défaut en définissant la `adTags` propriété.
+Il existe des balises publicitaires, telles que `EXT-X-CUE`, auxquelles vous êtes déjà abonné. Ces balises publicitaires sont également utilisées par le générateur d’opportunités par défaut. Vous pouvez spécifier les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut en définissant la `adTags` propriété.
