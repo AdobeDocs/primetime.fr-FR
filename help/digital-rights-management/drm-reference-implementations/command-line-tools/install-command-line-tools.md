@@ -16,8 +16,8 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
    * [!DNL flashaccesstools.properties] - Fichier de configuration par défaut pour les outils de ligne de commande.
    * [!DNL libs/] - Contient les fichiers JAR des outils de ligne de commande
-   * [!DNL samples/] - Contient le script de génération d’objet ( [!DNL build-samples.xml]) et les fichiers source Java.
+   * [!DNL samples/] - Contient le script de build ant ( [!DNL build-samples.xml]) et les fichiers source Java.
 
       >[!NOTE]
       >
-      >Les fichiers source Java montrent comment utiliser les API SDK DRM Primetime. Pour créer et exécuter les exemples, exécutez le script [!DNL build-samples.xml] Ant dans [!DNL samples/].
+      >Les fichiers source Java montrent comment utiliser les API SDK DRM de Primetime. Pour créer et exécuter les exemples, exécutez le script [!DNL build-samples.xml] Ant dans [!DNL samples/].
