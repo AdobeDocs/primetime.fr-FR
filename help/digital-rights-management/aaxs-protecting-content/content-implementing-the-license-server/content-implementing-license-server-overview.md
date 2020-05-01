@@ -10,15 +10,15 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Présentation{#overview}
 
-Pour délivrer des licences aux clients, vous devez déployer un serveur de licences Adobe Access. Le serveur de licences utilise le SDK Adobe® Access™ pour effectuer les  suivantes :
+Pour délivrer des licences à des clients, vous devez déployer un serveur de licences Adobe Access. Le serveur de licences utilise le SDK Adobe® Access™ pour effectuer les tâches suivantes :
 
-* Traitez les demandes d’authentification, si l’authentification par nom d’utilisateur/mot de passe est prise en charge.
+* Traitez les demandes d’authentification si l’authentification par nom d’utilisateur/mot de passe est prise en charge.
 * Traiter les demandes de licence
-* Demandes d&#39;obtention de version de serveur de processus : tous les serveurs doivent implémenter la prise en charge de ce type de requête.
+* Traiter les demandes d&#39;obtention de version de serveur : tous les serveurs doivent mettre en oeuvre la prise en charge de ce type de demande.
 * Traiter les demandes d&#39;enregistrement de domaine : uniquement nécessaire si vous implémentez un serveur de domaine.
 * Traiter les demandes de désenregistrement de domaine : uniquement nécessaire si vous implémentez un serveur de domaine.
-* Synchronisation des processus — Uniquement nécessaire si les licences spécifient les exigences de synchronisation.
+* Synchronisation des processus : uniquement nécessaire si les licences spécifient les exigences de synchronisation.
 
-En outre, le serveur doit fournir une logique métier pour authentifier les utilisateurs, déterminer si les utilisateurs sont autorisés à du contenu et, éventuellement, suivre l’utilisation des licences.
+En outre, le serveur doit fournir une logique métier pour authentifier les utilisateurs, déterminer si les utilisateurs sont autorisés à vue du contenu et éventuellement suivre l’utilisation des licences.
 
-Pour plus d’informations sur l’API Java abordée dans ce chapitre, voir Référence *sur l’API d’accès* Adobe.
+Pour plus d’informations sur l’API Java abordée dans ce chapitre, voir Référence *sur les API* Adobe Access.
