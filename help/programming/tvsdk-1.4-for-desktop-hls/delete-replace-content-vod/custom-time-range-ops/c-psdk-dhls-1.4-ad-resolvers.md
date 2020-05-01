@@ -1,8 +1,8 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Résolveurs de publicité
-title: Résolveurs de publicité
+seo-title: Résolveurs d’annonces
+title: Résolveurs d’annonces
 uuid: 705df232-4adc-4f3a-b4aa-dafbd2b8fe4c
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
@@ -10,7 +10,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 ---
 
 
-# Résolveurs de publicité {#ad-resolvers}
+# Résolveurs d’annonces {#ad-resolvers}
 
 ```
 if (resource.metadata != null) { 
