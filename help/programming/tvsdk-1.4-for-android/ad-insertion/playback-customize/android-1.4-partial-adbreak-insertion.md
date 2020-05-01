@@ -1,8 +1,8 @@
 ---
-description: Vous pouvez activer une expérience de type TV pour pouvoir rejoindre au milieu d’une publicité, dans des flux en direct.
-seo-description: Vous pouvez activer une expérience de type TV pour pouvoir rejoindre au milieu d’une publicité, dans des flux en direct.
-seo-title: Insertion partielle de saut de publicité
-title: Insertion partielle de saut de publicité
+description: Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct.
+seo-description: Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct.
+seo-title: Insertion partielle d’une coupure publicitaire
+title: Insertion partielle d’une coupure publicitaire
 uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,20 +10,20 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Insertion partielle de saut de publicité {#partial-ad-break-insertion}
+# Insertion partielle d’une coupure publicitaire {#partial-ad-break-insertion}
 
-Vous pouvez activer une expérience de type TV pour pouvoir rejoindre au milieu d’une publicité, dans des flux en direct.
+Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct.
 
-La fonction Pause publicitaire partielle vous permet de reproduire une expérience de type TV où, si le client  un flux en direct dans un milieu, il  dans ce milieu. C&#39;est similaire à passer à un de télévision et les publicités s&#39;exécutent sans problème.
+La fonction de coupure publicitaire partielle vous permet d’imiter une expérience TV où, si le client début un flux en direct dans un milieu, il début dans ce milieu. Il est similaire à passer à un canal de télévision et les publicités fonctionnent sans accroc.
 
-Par exemple, si un utilisateur se joint au milieu d’une coupure publicitaire de 90 secondes (trois publicités de 30 secondes), de 10 secondes dans la seconde publicité (c’est-à-dire, à 40 secondes de la coupure publicitaire), ce qui suit se produit :
+Par exemple, si un utilisateur se joint au milieu d’une coupure publicitaire de 90 secondes (trois publicités de 30 secondes), 10 secondes après la seconde publicité (c’est-à-dire à 40 secondes de la coupure publicitaire), ce qui suit se produit :
 
-* La seconde publicité est lue pendant la durée restante (20 s), suivie de la troisième publicité.
+* La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
 * Les suivis publicitaires pour la publicité partiellement lue (la deuxième publicité) ne sont pas déclenchés. Seul le suivi de la troisième publicité est déclenché.
 
 Ce comportement n’est pas activé par défaut. Pour activer cette fonctionnalité dans votre application, procédez comme suit.
 
-1. Désactivez les pré-roulements en direct, à l’aide de la méthode setEnableLivePreroll de la classe AdvertisingMetadata.
+1. Désactivez les droits en direct, à l’aide de la méthode setEnableLivePreroll de la classe AdvertisingMetadata.
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
@@ -37,11 +37,11 @@ Ce comportement n’est pas activé par défaut. Pour activer cette fonctionnali
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. Cette fonctionnalité nécessite la mise en oeuvre d’un sélecteur de stratégie d’annonce personnalisée pour personnaliser le comportement. Si vous ne disposez pas déjà d’une implémentation personnalisée de la classe AdvertisingFactory, ajoutez une nouvelle implémentation AdvertisingFactory. Remplacez la méthode createAdPolicySelector. Cette méthode renvoie une nouvelle instance de l’implémentation d’AdPolicySelector.
+1. Cette fonctionnalité nécessite la mise en oeuvre d’un sélecteur de stratégie d’annonce personnalisé pour personnaliser le comportement. Si vous n’avez pas encore d’implémentation personnalisée de la classe AdvertisingFactory, ajoutez une nouvelle implémentation de AdvertisingFactory. Remplacez la méthode createAdPolicySelector. Cette méthode renvoie une nouvelle instance de l’implémentation d’AdPolicySelector.
 
-   Vous trouverez ci-dessous un exemple de mise en oeuvre à titre de référence. L’exemple d’implémentation suivant peut être utilisé à partir du package com.adobe.mediacore. Toutefois, il est simplifié pour une référence facile et il n’est pas recommandé d’utiliser ce document en l’état.
+   Vous trouverez ci-dessous un exemple de mise en oeuvre pour référence. L’exemple d’implémentation suivant peut être utilisé à partir du package com.adobe.mediacore. Toutefois, il est simplifié pour une référence facile et il n&#39;est pas recommandé d&#39;être utilisé tel quel.
 
-   1. Sélecteur de stratégie d’annonce d’exemple
+   1. Sélecteur de stratégie d&#39;annonce d&#39;exemple
 
       ```
        package com.adobe.mediacore;
@@ -194,7 +194,7 @@ Ce comportement n’est pas activé par défaut. Pour activer cette fonctionnali
       } 
       ```
 
-   1. Remplacer la méthode createAdPolicySelector
+   1. Remplacement de la méthode createAdPolicySelector
 
       ```
       @Override 
