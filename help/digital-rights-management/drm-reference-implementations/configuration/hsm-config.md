@@ -1,6 +1,6 @@
 ---
-description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l’utilisation d’un HSM ne soit pas obligatoire, elle est recommandée.
-seo-description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l’utilisation d’un HSM ne soit pas obligatoire, elle est recommandée.
+description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l'utilisation d'un HSM ne soit pas nécessaire, elle est recommandée.
+seo-description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l'utilisation d'un HSM ne soit pas nécessaire, elle est recommandée.
 seo-title: Configuration HSM
 title: Configuration HSM
 uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
@@ -12,18 +12,18 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Configuration HSM{#hsm-configuration}
 
-Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l’utilisation d’un HSM ne soit pas obligatoire, elle est recommandée.
+Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l&#39;utilisation d&#39;un HSM ne soit pas nécessaire, elle est recommandée.
 
 Pour utiliser des informations d’identification sur un HSM, vous devez créer un fichier de configuration pour le fournisseur Sun PKCS#11. Pour plus d&#39;informations, consultez le Guide [de référence](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)Java PCKS#11.
 
-Pour vérifier que votre fichier de configuration HSM et Sun PKCS#11 sont configurés, saisissez la commande suivante à l’aide de l’outil de commande de clés installé avec le JDK Java :
+Pour vérifier que votre fichier de configuration HSM et Sun PKCS#11 est configuré, tapez la commande suivante à l’aide de l’outil de commande de clés installé avec le JDK Java :
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
   -providerArg pkcs11.cfg -list
 ```
 
-Vous avez correctement configuré le module HSM si vous pouvez  vos informations d’identification dans le .
+Vous avez correctement configuré le module HSM si vous pouvez vue vos informations d’identification dans la liste.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
