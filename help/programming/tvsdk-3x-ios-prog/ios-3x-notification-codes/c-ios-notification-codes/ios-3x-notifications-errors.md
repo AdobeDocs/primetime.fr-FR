@@ -10,11 +10,11 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 ---
 
 
-# Codes de notification d’ERREUR {#error-notification-codes}
+# Codes de notification d’erreur {#error-notification-codes}
 
 Ce tableau fournit des informations détaillées sur les notifications de type ERROR.
 
-La plupart des erreurs contiennent des métadonnées appropriées, par exemple l’URL de la ressource dont le téléchargement a échoué. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans le contenu audio alternatif ou dans une publicité.
+La plupart des erreurs contiennent des métadonnées pertinentes, par exemple l’URL de la ressource qui n’a pas pu être téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
 <table frame="all" colsep="1" rowsep="1" id="table_8B61210A406A45ACBE37FC29729DDE22"> 
  <thead> 
@@ -38,7 +38,7 @@ La plupart des erreurs contiennent des métadonnées appropriées, par exemple l
    <td colname="1"><span class="codeph"> 100000 </span> </td> 
    <td colname="2"><span class="codeph"> DRM_ERROR </span> </td> 
    <td colname="3"> </td> 
-   <td colname="4"><span class="codeph"> MAJOR_DRM_CODE DESCRIPTION </span><span class="codeph"> _MINOR_DRM_CODE </span><span class="codeph"> _MINOR </span> </td> 
+   <td colname="4"><span class="codeph"> MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"> DESCRIPTION </span> </td> 
    <td colname="5"></td> 
   </tr> 
   <tr rowsep="1"> 
@@ -110,7 +110,7 @@ La plupart des erreurs contiennent des métadonnées appropriées, par exemple l
    <td colname="2"><span class="codeph"> AD_RESOLVER_METADATA_ INVALIDE </span> </td> 
    <td colname="3"> <span class="codeph"> AD_NOT_INSERTED</span> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
-   <td colname="5"> <p>La résolution de la publicité a échoué en raison d'un format de métadonnées publicitaires non valide. </p> </td> 
+   <td colname="5"> <p>Échec de la résolution de la publicité en raison d'un format de métadonnées publicitaires non valide. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104005 </span> </td> 
@@ -121,13 +121,13 @@ La plupart des erreurs contiennent des métadonnées appropriées, par exemple l
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104006 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_ </span> </td> 
+   <td colname="2"><span class="codeph"> AD_INATTEIGNABLE </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"> Aucun </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Native</b> </td> 
+   <td colname="1"><b>natif</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -149,17 +149,17 @@ La plupart des erreurs contiennent des métadonnées appropriées, par exemple l
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 107002 </span> </td> 
-   <td colname="2"><span class="codeph"> SET_CC_VISIBILITY_ ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> ERREUR SET_CC_VISIBILITY_ </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"> <p>Aucun </p> </td> 
    <td colname="5"> <p>Une erreur s'est produite lors de la tentative de modification de la visibilité des pistes CC. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 107003 </span> </td> 
-   <td colname="2"><span class="codeph"> SET_CC_STYLING_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> ERREUR SET_CC_STYLING_ERROR </span> </td> 
    <td colname="3"> <span class="codeph"> NATIVE_ERROR </span> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
-   <td colname="5"> <p>Une erreur s'est produite lors de la tentative de modification des options de style pour les pistes CC. </p> </td> 
+   <td colname="5"> <p>Une erreur s'est produite lors de la tentative de modification des options de mise en forme pour les pistes CC. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Unique iOS</b> </td> 
@@ -243,20 +243,20 @@ La plupart des erreurs contiennent des métadonnées appropriées, par exemple l
    <td colname="2"><span class="codeph"> SITECATALYST_ERROR </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
-   <td colname="5"> <p>Erreur de catalyseur de site. Voir la description. </p> </td> 
+   <td colname="5"> <p>Erreur SiteCatalyst. Voir la description. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170011 </span> </td> 
-   <td colname="2"><span class="codeph"> AD___DURATION_INCOMPATIBLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_CIBLE_DURATION_INCOMPATIBLE </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>La DURÉE  de la publicité est supérieure à la DURÉE  du contenu. </p> </td> 
+   <td colname="5"> <p>La DURÉE de CIBLE de la publicité est supérieure à la DURÉE de CIBLE du contenu. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->L’ID d’annonce et l’URL peuvent être récupérés via la `PTAdAsset` balise dans les métadonnées de notification avec la `AD_ASSET` clé.
+>L’ID d’annonce et l’URL peuvent être récupérés via les métadonnées `PTAdAsset` de notification avec la `AD_ASSET` clé.
 >
 >L’ `[]` attribut spécifie une clé facultative pour la notification.
