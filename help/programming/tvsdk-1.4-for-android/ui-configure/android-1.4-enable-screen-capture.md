@@ -13,7 +13,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 # Activer la capture d’écran{#enable-screen-capture}
 
-TVSDK désactive la capture d’écran par défaut. Le joueur appelle `setSecure(true)` l&#39; `com.adobe.ave.VideoEngineView` objet au moment de la construction. Vous avez accès à cet objet, car vous devez construire un `VideoEngineView` objet et le fournir à l’ `VideoEngine` objet.
+TVSDK n’autorise pas la capture d’écran par défaut. Le joueur appelle `setSecure(true)` l&#39; `com.adobe.ave.VideoEngineView` objet au moment de la construction. Vous avez accès à cet objet, car vous devez construire un `VideoEngineView` objet et le fournir à l’ `VideoEngine` objet.
 
 Pour activer la capture d’écran dans votre application :
 
