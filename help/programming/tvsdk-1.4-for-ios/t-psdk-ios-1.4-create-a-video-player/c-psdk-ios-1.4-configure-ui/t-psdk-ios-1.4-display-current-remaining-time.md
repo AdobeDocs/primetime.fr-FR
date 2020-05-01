@@ -1,8 +1,8 @@
 ---
 description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 seo-description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
-seo-title: Afficher l’heure actuelle et l’heure restante
-title: Afficher l’heure actuelle et l’heure restante
+seo-title: Affiche l'heure actuelle et la durée restante
+title: Affiche l'heure actuelle et la durée restante
 uuid: 800996ff-afc0-4e17-9d70-5ec1e1fcfdc7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
@@ -10,11 +10,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 ---
 
 
-# Afficher l’heure actuelle et l’heure restante {#display-the-current-time-and-remaining-time}
+# Affiche l&#39;heure actuelle et la durée restante {#display-the-current-time-and-remaining-time}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
-1. Pour mettre en oeuvre un affichage qui montre l’heure actuelle et la durée restante du contenu actif, utilisez l’exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche la durée actuelle et restante du contenu actif, utilisez l’exemple de code suivant :
 
    ```
    // 1. Register for the PTMediaPlayerTimeChangeNotification 
