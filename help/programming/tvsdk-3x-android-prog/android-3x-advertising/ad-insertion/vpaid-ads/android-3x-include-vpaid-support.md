@@ -1,6 +1,6 @@
 ---
-description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnalisé et des écouteurs appropriés.
-seo-description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnalisé et des écouteurs appropriés.
+description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire personnalisée et des écouteurs appropriés.
+seo-description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire personnalisée et des écouteurs appropriés.
 seo-title: Mise en oeuvre de l’intégration VPAID 2.0
 title: Mise en oeuvre de l’intégration VPAID 2.0
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
@@ -12,9 +12,9 @@ source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
 
 # Mise en oeuvre de l’intégration VPAID 2.0 {#implement-vpaid-integration}
 
-Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnalisé et des écouteurs appropriés.
+Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire personnalisée et des écouteurs appropriés.
 
-1. Ajouter le publicitaire personnalisé  à l’interface du lecteur lorsque le lecteur est à l’état PRÉPARÉ.
+1. Ajouter la vue publicitaire personnalisée à l’interface du lecteur lorsque celui-ci est à l’état PRÉPARÉ.
 
    ```java
    ... 
@@ -31,17 +31,17 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnali
        _playerFrame.addView(view);
    ```
 
-1. Créez des écouteurs et traitez le  décrit dans la section [](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
+1. Créez des écouteurs et traitez les événements décrits dans les [Événements](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
 
    >[!IMPORTANT]
    >
-   >Dans un flux de travail VPAID 2.0, pour les publicitaires personnalisés, il est très important de conserver votre `CustomAdView` instance dans les  `AdBreak` ( `AD_BREAK_START`) et les `AdBreak` fins ( `AD_BREAK_COMPLETE`), du moment où vous créez le publicitaire personnalisé au moment où vous le supprimez. En d’autres termes, ne créez pas d’ publicitaire personnalisé pour chaque de coupure publicitaire et supprimez-le à chaque coupure publicitaire terminée.
+   >Dans un flux de travail VPAID 2.0, pour les vues publicitaires personnalisées, il est très important de conserver votre `CustomAdView` instance dans `AdBreak` les débuts (événement `AD_BREAK_START`) et `AdBreak` se termine (événement `AD_BREAK_COMPLETE`), du moment où vous créez la vue publicitaire personnalisée au moment où vous en disposez. En d’autres termes, ne créez pas de vue publicitaire personnalisée sur chaque début de coupure publicitaire et supprimez-la à chaque coupure publicitaire terminée.
    >
    >
-   >En outre, vous ne devez créer vos  publicitaires personnalisées que lorsque votre lecteur est à l’état PRÉPARÉ,
+   >En outre, vous ne devez créer votre vue publicitaire personnalisée que lorsque votre lecteur est à l’état PRÉPARÉ,
    >
    >
-   >Ne supprimez les  publicitaires personnalisées que lors de l’appel de la réinitialisation. Par exemple :
+   >Ne supprimez la vue publicitaire personnalisée que lorsque la réinitialisation est appelée. Par exemple :
    >
    >
    ```
@@ -53,7 +53,7 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez un publicitaire personnali
    >
    >```
    >
-   >Enfin, avant de disposer de vos  publicitaires personnalisées, vous devez les supprimer du `FrameLayout`. Par exemple :
+   >Enfin, avant de disposer de votre vue publicitaire personnalisée, vous devez la supprimer de la `FrameLayout`. Par exemple :
    >
    >
    ```
