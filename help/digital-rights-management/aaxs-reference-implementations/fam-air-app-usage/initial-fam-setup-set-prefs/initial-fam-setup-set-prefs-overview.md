@@ -10,13 +10,13 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Présentation des préférences {#setting-preferences-overview}
 
-À l’exception de l’URL du serveur Packager, toutes les préférences spécifiées ci-dessous sont stockées dans le [!DNL flashaccess-refimpl-packager.properties] fichier sur le serveur. Tous les paramètres peuvent être modifiés soit directement dans le fichier de propriétés, soit par le biais de l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Entrez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
+A l’exception de l’URL de Packager Server, toutes les préférences spécifiées ci-dessous sont stockées dans le [!DNL flashaccess-refimpl-packager.properties] fichier sur le serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Tapez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
 >Tous les répertoires et chemins d’accès se rapportent aux répertoires sur le serveur packager, et non sur le client exécutant l’application AIR.
 
-Les modifications apportées ici prennent effet immédiatement une fois les préférences enregistrées. Il n’est pas nécessaire de redémarrer le serveur à moins que le thread de Packager ne se soit arrêté en raison de problèmes de configuration.
+Toute modification apportée ici prend effet immédiatement une fois les préférences enregistrées. Il n&#39;est pas nécessaire de redémarrer le serveur à moins que le thread de Packager ne se termine en raison de problèmes de configuration.
 
 Les descriptions de préférences utilisent les termes suivants :
 
@@ -34,7 +34,7 @@ Les descriptions de préférences utilisent les termes suivants :
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Répertoire de ressources </td> 
-   <td colname="2" class="- topic/entry "> Répertoire contenant les stratégies, les certificats, les informations d’identification et toute autre ressource requise pour le serveur Packager </td> 
+   <td colname="2" class="- topic/entry "> Répertoire contenant les stratégies, certificats, informations d’identification et toute autre ressource requise pour le serveur de packages </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> URL du serveur de licences </td> 
