@@ -5,7 +5,7 @@ seo-title: Codes de notification INFO
 title: Codes de notification INFO
 uuid: 10145ce6-9eb0-4829-85dd-1acfe97b07e8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: ''
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Ce tableau fournit des informations détaillées sur les notifications de type INFO.
 
-La plupart des notifications d’informations contiennent des métadonnées appropriées, par exemple l’URL de la ressource qui n’a pas été téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans le contenu audio alternatif ou dans une publicité.
+La plupart des notifications d’informations contiennent des métadonnées pertinentes, par exemple l’URL de la ressource qui n’a pas été téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
 <table frame="all" colsep="1" rowsep="1" id="table_503463046E764A87B10EB5D8B294EB23"> 
  <thead> 
@@ -36,7 +36,7 @@ La plupart des notifications d’informations contiennent des métadonnées appr
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_ </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_DÉBUT </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"> Aucun </td> 
    <td colname="5"> La lecture a commencé. </td> 
@@ -50,10 +50,10 @@ La plupart des notifications d’informations contiennent des métadonnées appr
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_ </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_DÉBUT </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"> <p> Aucun </p> </td> 
-   <td colname="5"> Une opération de recherche a été initiée. </td> 
+   <td colname="5"> Une opération de recherche a été lancée. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 300003 </span> </td> 
@@ -67,7 +67,7 @@ La plupart des notifications d’informations contiennent des métadonnées appr
    <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
-   <td colname="5"> L’état du lecteur a changé. Lorsque l’état est ERROR, la notification interne est l’objet de notification d’erreur qui a déclenché le basculement vers l’état ERROR. </td> 
+   <td colname="5"> L'état du lecteur a changé. Lorsque l’état est ERROR, la notification interne est l’objet de notification d’erreur qui a déclenché le basculement vers l’état ERROR. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Débit adaptatif (ABR)</b> </td> 
