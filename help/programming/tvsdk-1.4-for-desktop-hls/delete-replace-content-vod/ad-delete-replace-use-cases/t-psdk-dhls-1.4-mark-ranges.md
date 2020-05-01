@@ -12,7 +12,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 # Marquer les plages{#mark-ranges}
 
-Marquez `TimeRanges` entre le `begin` et `end` dans `localTime` comme un `AdBreak` du plan de montage chronologique. Les autres paramètres de publicité sont ignorés.
+Marquez `TimeRanges` entre le `begin` et `end` dans `localTime` comme un `AdBreak` de la chronologie. Les autres paramètres de publicité sont ignorés.
 
 1. Marquer les plages de temps.
 
