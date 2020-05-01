@@ -1,8 +1,8 @@
 ---
-description: L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
-seo-description: L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
-seo-title: Griffeur de mot de passe
-title: Griffeur de mot de passe
+description: L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM d’Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
+seo-description: L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM d’Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
+seo-title: Défileur de mots de passe
+title: Défileur de mots de passe
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
 source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
@@ -10,11 +10,11 @@ source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
 ---
 
 
-# Griffeur de mot de passe {#password-scrambler}
+# Défileur de mots de passe {#password-scrambler}
 
-L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
+L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur DRM d’Adobe Primetime pour les fichiers de configuration de diffusion en flux continu protégé.
 
-Pour exécuter le scrambler, tapez:
+Pour exécuter le scrambler, tapez :
 
 ```
 Scrambler.bat  
@@ -45,4 +45,4 @@ Tous les mots de passe que vous avez spécifiés dans les fichiers [!DNL flashac
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->L’utilitaire Password Scrambler du serveur DRM Primetime pour la diffusion en flux continu protégée n’est pas interchangeable avec le scrambler fourni avec le serveur de licence d’implémentation de référence.
+>L&#39;utilitaire Password Scrambler du serveur DRM Primetime pour la diffusion en flux continu protégée n&#39;est pas interchangeable avec le scrambler fourni avec le serveur de licence de mise en oeuvre de référence.
