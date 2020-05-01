@@ -14,7 +14,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
 
-Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes ultérieures effectuées pour les ressources de ce manifeste utiliseront l’emplacement du domaine final, ce qui évite 302 réponses supplémentaires.
+Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires.
 
 Cette fonction est activée par défaut et vous pouvez modifier ce paramètre.
 
