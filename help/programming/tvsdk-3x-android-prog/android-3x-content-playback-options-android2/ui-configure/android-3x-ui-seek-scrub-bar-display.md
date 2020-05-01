@@ -1,6 +1,6 @@
 ---
-description: TVSDK prend en charge la recherche d'une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
-seo-description: TVSDK prend en charge la recherche d'une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
+description: TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
+seo-description: TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
 seo-title: Affichage d’une barre de défilement de recherche avec la position de lecture actuelle
 title: Affichage d’une barre de défilement de recherche avec la position de lecture actuelle
 uuid: 30a9237c-bbd5-457e-a93c-662570711986
@@ -12,23 +12,23 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 # Affichage d’une barre de défilement de recherche avec la position de lecture actuelle {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-TVSDK prend en charge la recherche d&#39;une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
+TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une liste de lecture de fenêtre coulissante, dans la vidéo à la demande (VOD) et les flux en direct.
 
 >[!TIP]
 >
->La recherche dans un flux en direct n’est autorisée que pour le DVR.
+>La recherche dans un flux en direct n&#39;est autorisée que pour le magnétoscope numérique.
 
 1. Configurez les rappels pour la recherche.
 
-   La recherche étant asynchrone, TVSDK distribue les  de recherche suivantes :
+   La recherche étant asynchrone, TVSDK distribue les événements suivants liés à la recherche :
 
-   * `MediaPlayerEvent.SEEK_BEGIN`, où le de recherche .
-   * `MediaPlayerEvent.SEEK_END`, où la recherche réussit.
+   * `MediaPlayerEvent.SEEK_BEGIN`, où les débuts de recherche.
+   * `MediaPlayerEvent.SEEK_END`, où la recherche a réussi.
    * `MediaPlayerEvent.OPERATION_FAILED`, où la recherche a échoué.
 
-1. Attendez que le lecteur soit dans un état valide pour la recherche.
+1. Attendez que le lecteur ait un état valide pour la recherche.
 
-   Les états valides sont PRÉPARÉS, TERMINÉS, EN PAUSE et EN COURS DE LECTURE.
+   Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING.
 1. Utilisez le paramètre natif `SeekBar` à définir `OnSeekBarChangeListener`, qui détermine le moment où l’utilisateur effectue un défilement.
 1. Transmettez la position de recherche demandée (millisecondes) à la `MediaPlayer.seek` méthode.
 
@@ -36,22 +36,22 @@ TVSDK prend en charge la recherche d&#39;une position spécifique (temps) où le
    void seek(long position) throws MediaPlayerException;
    ```
 
-   Vous pouvez effectuer une recherche uniquement dans la durée recherchée de la ressource. Pour la vidéo à la demande, c’est-à-dire de 0 à la durée de la ressource.
+   Vous ne pouvez effectuer des recherches que dans la durée recherchée de la ressource. Pour la vidéo à la demande, il s’agit de 0 jusqu’à la durée de la ressource.
 
    >[!TIP]
    >
-   >Cette étape déplace la tête de lecture vers une nouvelle position dans le flux, mais la position calculée finale peut différer de la position de recherche spécifiée.
+   >Cette étape déplace la tête de lecture vers une nouvelle position dans le flux, mais la position finale calculée peut différer de la position de recherche spécifiée.
 
-1. Écoutez `MediaPlayerEvent.OPERATION_FAILED` et prenez les mesures appropriées.
+1. Prêtez attention `MediaPlayerEvent.OPERATION_FAILED` et prenez les mesures appropriées.
 
-   Ce transmet l’avertissement approprié. Votre application détermine comment procéder et les options incluent de relancer la recherche ou de poursuivre la lecture à partir de la position précédente.
+   Ce événement transmet l&#39;avertissement approprié. Votre application détermine comment procéder et les options incluent la tentative de nouvelle recherche ou la poursuite de la lecture à partir de la position précédente.
 
 1. Attendez que TVSDK appelle le `MediaPlayerEvent.SEEK_END` rappel.
-1. Récupérez la position de lecture modifiée finale à l’aide du paramètre position du rappel.
+1. Récupérez la position de lecture modifiée finale à l’aide du paramètre de position du rappel.
 
-   C’est important car la position réelle du après la recherche peut être différente de la position demandée. Des règles, y compris le comportement de lecture, sont affectées si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires, peuvent s’appliquer.
+   Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Des règles, y compris le comportement de lecture, sont affectées si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires, peuvent s’appliquer.
 
-1. Utilisez les informations de position lors de l’affichage d’une barre de défilement de recherche.
+1. Utilisez les informations de position lors de l&#39;affichage d&#39;une barre de défilement de recherche.
 
 <!--<a id="example_EEB73818260C43C8B5AE12BA68548AB7"></a>-->
 
