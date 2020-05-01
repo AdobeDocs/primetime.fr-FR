@@ -14,30 +14,30 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Vous pouvez réinitialiser, réutiliser ou libérer une instance MediaPlayer dont vous n’avez plus besoin.
 
-## Réinitialiser ou réutiliser une instance MediaPlayer {#section_C183E6164C184C3CBC5321FC6A2528EA}
+## Réinitialisation ou réutilisation d’une instance MediaPlayer {#section_C183E6164C184C3CBC5321FC6A2528EA}
 
-Vous pouvez réinitialiser une `MediaPlayer` instance pour la rétablir dans son état IDLE non initialisé tel que défini dans `MediaPlayerStatus`. Vous pouvez également remplacer le média actif ou en définir un nouveau à l’aide d’une ressource multimédia précédemment chargée.
+Vous pouvez réinitialiser une `MediaPlayer` instance pour la rétablir à son état IDLE non initialisé, comme défini dans `MediaPlayerStatus`. Vous pouvez également remplacer l&#39;élément multimédia actif ou en définir un nouveau à l&#39;aide d&#39;une ressource multimédia précédemment chargée.
 
 Cette opération est utile dans les cas suivants :
 
 * Vous souhaitez réutiliser une `MediaPlayer` instance mais devez charger une nouvelle `MediaResource` (contenu vidéo) et remplacer l’instance précédente.
 
-   La réinitialisation vous permet de réutiliser l’ `MediaPlayer` instance sans avoir à libérer des ressources, recréer les ressources `MediaPlayer`et les réaffecter. La `replaceCurrentItem` méthode effectue automatiquement ces étapes.
+   La réinitialisation vous permet de réutiliser l’ `MediaPlayer` instance sans avoir à débloquer les ressources, recréer les `MediaPlayer`ressources et les réaffecter. La `replaceCurrentItem` méthode effectue automatiquement ces étapes pour vous.
 
-* Lorsque l’état `MediaPlayer` est ERREUR et doit être effacé.
+* Lorsque la `MediaPlayer` variable est dans un état ERREUR et doit être effacée.
 
    >[!IMPORTANT]
    >
    >C&#39;est le seul moyen de récupérer de l&#39;état ERROR.
 
-1. Appelez `MediaPlayer.reset()` à rétablir l’état non initialisé de l’ `MediaPlayer` instance :
+1. Appelez `MediaPlayer.reset()` pour rétablir l&#39;état non initialisé de l&#39; `MediaPlayer` instance :
 
    ```js
    reset(); // returns AdobePSDK.PSDKErrorCode.SUCCESS 
             // on successful reset
    ```
 
-1. Appel `MediaPlayer.replaceCurrentItem()` à charger un autre `MediaResource`
+1. Appel `MediaPlayer.replaceCurrentItem()` pour charger un autre `MediaResource`
 
    >[!TIP]
    >
@@ -47,13 +47,13 @@ Cette opération est utile dans les cas suivants :
 
    >[!NOTE]
    >
-   >Lorsque vous recevez le `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` avec l’état PRÉPARÉ, vous pouvez  la lecture.
+   >Lorsque vous recevez le `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` événement avec l’état PRÉPARÉ, vous pouvez début la lecture.
 
 ## Publication d’une instance et de ressources MediaPlayer {#section_2D159975C82245098E7078FE0B1578CE}
 
 Vous devez libérer une `MediaPlayer` instance et des ressources lorsque vous n’avez plus besoin de MediaResource.
 
-Voici quelques raisons de publier une `MediaPlayer`:
+Voici quelques raisons de publier un `MediaPlayer`:
 
 * Le fait de détenir des ressources inutiles peut affecter les performances.
 * Le fait de laisser un `MediaPlayer` objet inutile peut entraîner une consommation continue de batterie pour les périphériques mobiles.
@@ -67,5 +67,5 @@ Voici quelques raisons de publier une `MediaPlayer`:
 
    >[!NOTE]
    >
-   >Une fois l’ `MediaPlayer` instance libérée, vous ne pouvez plus l’utiliser. Si une méthode de l’ `MediaPlayer` interface est appelée une fois qu’elle est relâchée, une `IllegalStateException` méthode est lancée.
+   >Une fois l’ `MediaPlayer` instance libérée, vous ne pouvez plus l’utiliser. Si une méthode de l’ `MediaPlayer` interface est appelée après sa publication, une `IllegalStateException` est générée.
 
