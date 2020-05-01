@@ -10,6 +10,6 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 # Consommer des listes CRL publiées par Adobe{#consume-crls-published-by-adobe}
 
-Le SDK télécharge régulièrement les listes CRL publiées par Adobe. Ne bloquez pas l’accès à ces fichiers et n’empêchez pas l’application de ces listes CRL.
+Le SDK télécharge régulièrement les listes CRL publiées par Adobe. Ne bloquez pas l’accès à ces fichiers ou n’empêchez pas l’application de ces listes CRL.
 
-Le SDK dispose d’une option de configuration permettant d’ignorer les erreurs lors de la récupération des listes CRL Adobe. Cette option ne peut être utilisée que dans les  de développement . Dans le  de production , le serveur de licences doit être en mesure de récupérer les listes CRL d’Adobe. L’échec d’obtention d’une liste CRL valide est une erreur.
+Le SDK dispose d’une option de configuration permettant d’ignorer les erreurs lors de la récupération des listes CRL Adobe. Cette option ne peut être utilisée que dans les environnements de développement. Dans les environnements de production, le serveur de licences doit être en mesure de récupérer les listes CRL auprès d’Adobe. L&#39;échec d&#39;obtention d&#39;une liste CRL valide est une erreur.
