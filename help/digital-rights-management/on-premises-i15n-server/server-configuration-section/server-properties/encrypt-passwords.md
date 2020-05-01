@@ -10,12 +10,12 @@ source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
 
 # Chiffrer les mots de passe{#encrypt-passwords}
 
-Les fichiers de propriétés comprennent plusieurs valeurs de mot de passe que vous ne devez pas saisir en texte brut. Chiffrez ces valeurs à l’aide de la commande suivante :
+Les fichiers de propriétés comportent plusieurs valeurs de mot de passe que vous ne devez pas saisir en texte brut. Chiffrez ces valeurs à l’aide de la commande suivante :
 
 `java -jar adobe-flashaccess-i15n-setup.jar password`
 
-Cette commande génère un mot de passe chiffré, que vous utilisez ensuite dans les fichiers de propriétés.
+Cette commande génère un mot de passe chiffré, que vous utiliserez ensuite dans les fichiers de propriétés.
 
 >[!NOTE]
->Il ne s’agit pas de l’utilitaire utilisé pour chiffrer les mots de passe du serveur de licences.
+>Il ne s&#39;agit pas de l&#39;utilitaire utilisé pour chiffrer les mots de passe du serveur de licences.
 
