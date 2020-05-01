@@ -10,8 +10,8 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
 # Mise en oeuvre de l’enregistrement de domaine anonyme{#implement-anonymous-domain-registration}
 
-1. Créez une stratégie DRM spécifiant que l’enregistrement de domaine est obligatoire.
-1. Spécifiez l’URL du serveur de domaine comme suit :
+1. Créez une stratégie DRM qui spécifie que l&#39;enregistrement de domaine est requis.
+1. Spécifiez l’URL du serveur de domaine en tant que :
 
    ```
    https://[host:port]/flashaccess/domainserver/domainname/
