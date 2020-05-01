@@ -14,20 +14,20 @@ source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
 
 Vous pouvez personnaliser ou remplacer les comportements publicitaires.
 
-Avant de pouvoir personnaliser ou remplacer les comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec .
+Avant de pouvoir personnaliser ou remplacer des comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec .
 Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
 
 * Implémentez l’ `AdPolicySelector` interface et toutes ses méthodes.
 
    Cette option est recommandée si vous devez remplacer **tous les** comportements publicitaires par défaut.
 
-* Etendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+* Étendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
 
    Cette option est recommandée si vous ne devez remplacer que **certains** comportements par défaut.
 
-Pour les deux options, complétez le  suivant :
+Pour les deux options, effectuez les tâches suivantes :
 
-1. Mettez en oeuvre votre propre sélecteur de stratégies publicitaires personnalisées.
+1. Mettez en oeuvre votre propre sélecteur de stratégies d’annonces personnalisées.
 
    ```
    public class CustomAdPolicySelector implements AdPolicySelector { 
@@ -63,4 +63,4 @@ Pour les deux options, complétez le  suivant :
 
    >[!TIP]
    >
-   >Si la fabrique de contenu personnalisé a été enregistrée pour un flux spécifique via la `MediaPlayerItemConfig` classe, elle sera effacée lorsque l’ `MediaPlayer` instance est délocalisée. Votre application doit l’enregistrer chaque fois qu’une nouvelle session de lecture est créée.
+   >Si la fabrique de contenu personnalisée a été enregistrée pour un flux spécifique via la `MediaPlayerItemConfig` classe, elle sera effacée lorsque l’ `MediaPlayer` instance est délocalisée. Votre application doit l’enregistrer chaque fois qu’une nouvelle session de lecture est créée.
