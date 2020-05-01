@@ -26,19 +26,19 @@ Package : [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/AudioTrack.html" format="html" scope="external"> AudioTrack</a></span></td> 
-   <td colname="2">Classe qui étend <span class="codeph"> Track</span> pour définir l’abstraction de la piste audio. </td> 
+   <td colname="2">Classe qui étend <span class="codeph"> Track</span> pour définir l'abstraction de la piste audio. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> ClosedCaptionsTrack</a> ClosedCaptionsTrack</span> </td> 
-   <td colname="2">Classe qui étend <span class="codeph"> Track</span> pour définir l’abstraction de sous-titrage codé. Classe qui définit l’ <span class="codeph"> abstraction ClosedCaptions</span> . Une piste de sous-titrage est définie de manière unique par son nom ET son type de service. Différents types de service peuvent partager le même nom.</td> 
+   <td colname="2">Classe qui étend <span class="codeph"> Track</span> pour définir l’abstraction de sous-titrage fermée. Classe qui définit l'abstraction <span class="codeph"> ClosedCaptions</span> . Un suivi de sous-titres fermés est défini de manière unique par son nom ET son type de service. Différents types de service peuvent partager le même nom.</td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Profile</a> </span></td> 
-   <td colname="2"> Classe qui contient des informations sur les de médias, telles que la hauteur, la largeur et le débit. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Profil</a> </span></td> 
+   <td colname="2"> Classe qui contient des informations sur le profil du média, telles que la hauteur, la largeur et le débit. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Suivi</a> </span></td> 
-   <td colname="2">Classe qui définit l’abstraction de la piste à utiliser lors de la définition de <span class="codeph"> AudioTrack</span> et <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Piste</a> </span></td> 
+   <td colname="2">Classe qui définit l'abstraction de la piste à utiliser pour définir <span class="codeph"> AudioTrack</span> et <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
   </tr>
  </tbody>
 </table>
