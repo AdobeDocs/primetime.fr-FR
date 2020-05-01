@@ -26,7 +26,7 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   où `container` correspond à l’élément  de `div` qui contient votre `HTMLMediaElement`.
+   où `container` est l’élément de cible `div` qui contient votre `HTMLMediaElement`élément.
 
    Par exemple, sur une page HTML :
 
@@ -56,7 +56,7 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    player.view = view;
    ```
 
-1. Joignez l’ `div` élément de contrôles personnalisés à votre instance MediaPlayer.
+1. Joignez l’élément de contrôle personnalisé `div` à votre instance MediaPlayer.
 
    Par exemple, en HTML :
 
