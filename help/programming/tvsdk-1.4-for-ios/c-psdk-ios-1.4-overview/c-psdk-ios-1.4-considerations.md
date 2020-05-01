@@ -16,7 +16,7 @@ Pour utiliser TVSDK de manière efficace, vous devez prendre en compte certains 
 
 ## Considérations {#section_tvsdk_considerations}
 
-Tenez compte des informations suivantes lorsque vous utilisez TVSDK :
+Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
 
 * Adobe Primetime ne fonctionne pas sur les simulateurs iOS.
 
@@ -24,29 +24,29 @@ Tenez compte des informations suivantes lorsque vous utilisez TVSDK :
 * La lecture n’est prise en charge que pour le contenu HLS (HTTP Live Streaming).
 * Le contenu vidéo principal peut être multiplexé, où les flux vidéo et audio se trouvent dans le même rendu, ou non multiplexé, où les flux vidéo et audio se trouvent dans des rendus distincts.
 * L’API TVSDK est implémentée dans Objective-C.
-* La lecture vidéo requiert la structure native d’Apple AV Foundation. Cela a une incidence sur la manière et le moment d’accéder aux ressources multimédia, notamment aux sous-titres et aux calendriers fermés :
+* La lecture vidéo nécessite la structure native d’Apple AV Foundation. Cela a une incidence sur la manière et le moment où les ressources multimédia, y compris les sous-titres et les calendriers fermés, peuvent être consultées :
 
    * Les réglages de la chronologie ne peuvent pas être modifiés après la configuration initiale.
 
-      Par exemple, une publicité ne peut pas être supprimée du plan de montage chronologique une fois qu’elle a été lue. Si l’utilisateur effectue une nouvelle recherche dans la présentation, la même publicité est relue même si la stratégie consistait à supprimer la publicité.
-   * Selon la précision de l’encodeur, la durée réelle du média codé peut différer de la durée enregistrée dans le manifeste de ressources de flux.
+      Par exemple, une publicité ne peut pas être supprimée du plan de montage chronologique après sa lecture. Si l’utilisateur effectue de nouveau une recherche dans la présentation, la même publicité est lue à nouveau, même si la stratégie consistait à la supprimer.
+   * Selon la précision de l’encodeur, la durée réelle du support codé peut différer des durées enregistrées dans le manifeste de ressources de diffusion en continu.
 
-      Il n’existe aucun moyen fiable de resynchroniser entre la chronologie virtuelle idéale et la chronologie de la lecture réelle. Le suivi de la progression de la lecture du flux pour la gestion des publicités et les analyses vidéo doit utiliser le temps de lecture réel. Le comportement des  et de l’interface utilisateur peut donc ne pas suivre précisément le contenu multimédia et publicitaire.
+      Il n&#39;existe aucun moyen fiable de resynchroniser entre la chronologie virtuelle idéale et la chronologie de la lecture réelle. Le suivi de la progression de la lecture du flux pour la gestion des publicités et les analyses vidéo doit utiliser le temps de lecture réel. Par conséquent, le comportement des rapports et de l’interface utilisateur peut ne pas suivre précisément le contenu multimédia et publicitaire.
    * L’agent utilisateur entrant pour toutes les requêtes HTTP de TVSDK sur cette plate-forme est déterminé par le périphérique et la version iOS qui s’exécute sur le périphérique.
 
-      La valeur de la chaîne de l’agent utilisateur correspond par défaut à ce que le système d’exploitation affecte.
+      La valeur de la chaîne de l’agent utilisateur correspond par défaut à ce que le système d’exploitation attribue.
 
 ## Meilleures pratiques {#section_tvsdk_best_practices}
 
-Voici quelques recommandations pour TVSDK :
+Voici les pratiques recommandées pour TVSDK :
 
-* Utilisez HLS version 3.0 ou ultérieure pour le contenu  du.
-* Utilisez l’outil Mediastreamvalidator d’Apple pour valider les flux VOD.
-* La `PTSDKConfig` classe fournit des méthodes pour appliquer SSL sur les requêtes effectuées sur les serveurs Primetime et de décision publicitaire, DRM et Video Analytics.
+* Utilisez HLS version 3.0 ou ultérieure pour le contenu du programme.
+* Utilisez l’outil mediastreamvalidator d’Apple pour valider les flux VOD.
+* La `PTSDKConfig` classe fournit des méthodes pour appliquer SSL sur les requêtes effectuées sur les serveurs Primetime de prise de décision publicitaire, DRM et Video Analytics.
 
-   Pour plus d’informations, voir les méthodes `forceHTTPS` et `isForcingHTTPS` les méthodes de cette classe.
+   Pour plus d&#39;informations, consultez les méthodes `forceHTTPS` et `isForcingHTTPS` dans cette classe.
 
    >[!IMPORTANT]
    >
-   >Les requêtes envoyées à des domaines tiers tels que les pixels du suivi des publicités, le contenu et les URL des publicités, ainsi que les requêtes similaires ne sont pas modifiées. Il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir des URL prises en charge via HTTPS.
+   >Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées. Il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir des URL prises en charge par HTTPS.
 
