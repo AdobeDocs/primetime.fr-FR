@@ -1,10 +1,10 @@
 ---
-description: 'De nouvelles API ont été introduites, qui indiquent à TVSDK d’ignorer l’état de connectivité réseau lors du téléchargement des manifestes. '
-seo-description: 'De nouvelles API ont été introduites, qui indiquent à TVSDK d’ignorer l’état de connectivité réseau lors du téléchargement des manifestes. '
+description: 'De nouvelles API ont été introduites, qui demanderont à TVSDK d’ignorer l’état de connectivité réseau lors du téléchargement des manifestes. '
+seo-description: 'De nouvelles API ont été introduites, qui demanderont à TVSDK d’ignorer l’état de connectivité réseau lors du téléchargement des manifestes. '
 seo-title: Lecture hors ligne avec Android
 title: Lecture hors ligne avec Android
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: ''
 
 ---
 
@@ -20,7 +20,7 @@ boolean NetworkConfiguration::getOfflinePlayback()
 
 Vous pouvez activer ce paramètre et ignorer la connectivité réseau.
 
-Définissez `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` sur true. La valeur par défaut d’une valeur booléenne est false.
+Définissez `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` la valeur sur true. La valeur par défaut d’une valeur booléenne est false.
 
 ```
 // example of NetworkConfiguration
