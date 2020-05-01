@@ -10,7 +10,7 @@ source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
 
 # Création de JKS pour un validateur XSTS{#create-jks-for-an-xsts-validator}
 
-1. Découvrez le nom d’alias du certificat privé, situé dans le fichier du partenaire [!DNL .pfx] .
+1. Recherchez le nom d’alias du certificat privé, situé dans le [!DNL .pfx] fichier du partenaire.
 
    ```
    keytool -list -storetype pkcs12 -keystore xsts_partner_cert.pfx -v 
@@ -32,7 +32,7 @@ source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
            -file x_secure_token_service.part.xboxlive.com.cer 
    ```
 
-1. Placez [!DNL xsts.jks] dans votre répertoire d’accueil Tomcat, puis définissez `-Dxsts-keystore-password=****` Tomcat.
+1. Placez [!DNL xsts.jks] dans votre répertoire d’accueil Tomcat, et définissez `-Dxsts-keystore-password=****` Tomcat.
 
 Si [!DNL xsts_partner_cert.pfx] et [!DNL xsts.jks] utilisent des mots de passe différents, mettez à jour le `xsts` mot de passe dans `jks` pour qu’ils soient identiques.
 
