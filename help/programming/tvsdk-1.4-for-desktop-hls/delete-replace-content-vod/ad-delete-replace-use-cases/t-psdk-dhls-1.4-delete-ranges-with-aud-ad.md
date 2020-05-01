@@ -1,8 +1,8 @@
 ---
-description: Supprimez les plages de temps entre le début et la fin dans localTime du plan de montage chronologique.
-seo-description: Supprimez les plages de temps entre le début et la fin dans localTime du plan de montage chronologique.
-seo-title: Supprimer des plages avec la publicité Primetime et la prise de décision
-title: Supprimer des plages avec la publicité Primetime et la prise de décision
+description: Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
+seo-description: Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
+seo-title: Supprimer des plages avec l’annonce de prise de décision et Primetime
+title: Supprimer des plages avec l’annonce de prise de décision et Primetime
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
@@ -10,9 +10,9 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 ---
 
 
-# Supprimer des plages avec la publicité Primetime et la prise de décision{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Supprimer des plages avec l’annonce de prise de décision et Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-Supprimez les plages de temps entre le début et la fin dans localTime du plan de montage chronologique.
+Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
 
 Supprimez des plages avec une publicité Expression.
 
