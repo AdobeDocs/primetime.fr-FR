@@ -1,6 +1,6 @@
 ---
-description: L'interface du jeton de licence Widevine fournit des services de production et de test.
-seo-description: L'interface du jeton de licence Widevine fournit des services de production et de test.
+description: L'interface de jeton de licence Widevine fournit des services de production et de test.
+seo-description: L'interface de jeton de licence Widevine fournit des services de production et de test.
 seo-title: Demande/réponse de jeton de licence Widevine
 title: Demande/réponse de jeton de licence Widevine
 uuid: a3522422-7075-49a7-bc55-137ef84ee430
@@ -12,9 +12,9 @@ source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
 
 # Demande/réponse de jeton de licence Widevine {#widevine-license-token-request-response}
 
-L&#39;interface du jeton de licence Widevine fournit des services de production et de test.
+L&#39;interface de jeton de licence Widevine fournit des services de production et de test.
 
-Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Widevine.
+Cette requête HTTP renvoie un jeton qui peut être racheté pour une licence Widevine.
 
 **Méthode : GET, POST** (avec un corps codé www-url qui contient des paramètres pour les deux méthodes)
 
@@ -24,7 +24,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Wi
 
 * **Test :** ` [https://wv-gen.test.expressplay.com/hms/wv/token](https://wv-gen.test.expressplay.com/hms/wv/token)`
 
-* **Exemple de requête :**
+* **Exemple de demande :**
 
    ```
    https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
@@ -39,12 +39,12 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Wi
 
 <!--<a id="section_1E22012EE4B94BB2974D3B16DE8812D9"></a>-->
 
-**Tableau 13 : Paramètres de  de jeton**
+**Tableau 13 : Paramètres de Requête de jeton**
 
 <table id="table_ww1_hcs_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>Paramètre</b> </th> 
+   <th class="entry"> <b>Paramètre de Requête</b> </th> 
    <th class="entry"> <b>Description</b> </th> 
    <th class="entry"> <b>Obligatoire ?</b> </th> 
   </tr> 
@@ -52,45 +52,45 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Wi
  <tbody> 
   <tr> 
    <td> <span class="codeph"> customerAuthenticator </span> </td> 
-   <td> <p>Il s’agit de votre clé d’API client, une clé pour votre production et testez  . Vous pouvez le trouver sur l’onglet  d’administration ExpressPlay. </p> </td> 
+   <td> <p>Il s’agit de votre clé d’API client, une clé pour chacun de vos environnements de production et de test. Vous pouvez le trouver dans l’onglet Tableau de bord d’administration ExpressPlay. </p> </td> 
    <td> Oui </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> errorFormat </span> </td> 
-   <td> HTML <span class="codeph"> ou </span> json <span class="codeph"> </span>. <p>Si <span class="codeph"> html </span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si <span class="codeph"> json </span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON </a> pour plus d’informations. </p> <p>Le type MIME de la réponse est <span class="codeph"> text/uri-- </span> en cas de succès, <span class="codeph"> text/html </span> pour le format d’erreur <span class="codeph"> html, ou </span> <span class="codeph"> application/json  pour le format d’erreur de  Json.</span><span class="codeph"></span> </p> </td> 
+   <td> <span class="codeph"> html </span> ou <span class="codeph"> json </span>. <p>Si <span class="codeph"> html </span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si <span class="codeph"> json </span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON </a> pour plus d’informations. </p> <p>Le type MIME de la réponse est <span class="codeph"> text/uri-liste </span> on success, <span class="codeph"> text/html </span> for <span class="codeph"> html </span> error format ou <span class="codeph"> application/json  for  json  format d’erreur json.</span><span class="codeph"></span> </p> </td> 
    <td> Non </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Tableau 14 : Paramètres  du de licence**
+**Tableau 14 : Paramètres de la Requête de licence**
 
-| Paramètre  | Description | Obligatoire ? |
+| Paramètre de Requête | Description | Obligatoire ? |
 |--- |--- |--- |
 | `generalFlags` | Chaîne hexadécimale de 4 octets représentant les indicateurs de licence. &quot;0000&quot; est la seule valeur autorisée | Non |
-| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées chiffrées à l’aide d’une clé KEK à l’aide d’un algorithme d’encapsulation de clé (AES Key Wrap, RFC3394). | Non |
-| `kid` | Une chaîne hexadécimale de 16 octets représentant la clé de chiffrement du contenu ou une chaîne `^somestring'`. La longueur de la chaîne suivie par le `^` ne peut pas être supérieure à 64 caractères. Consultez la note ci-dessous pour un exemple. | Oui |
+| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l&#39;aide d&#39;un algorithme d&#39;encapsulation de clés (AES Key Wrap, RFC3394). | Non |
+| `kid` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu ou d’une chaîne `^somestring'`. La longueur de la chaîne suivie par le `^` ne peut pas être supérieure à 64 caractères. Consultez la note ci-dessous pour un exemple. | Oui |
 | `ek` | Une chaîne hexadécimale représentant la clé de contenu chiffrée. | Non |
-| `contentKey` | Une chaîne hexadécimale de 16 octets représentant la clé de chiffrement du contenu | Oui, sauf si `kek` et `ek` ou `kid` si |
+| `contentKey` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu | Oui, sauf si `kek` et `ek` ou `kid` si |
 | `contentId` | ID de contenu | Non |
 | `securityLevel` | Les valeurs autorisées sont comprises entre 1 et 5. <ul><li>1 = `SW_SECURE_CRYPTO`</li><li> 2 = `SW_SECURE_DECODE` </li><li> 3 = `HW_SECURE_CRYPTO` </li><li> 4 = `HW_SECURE_DECODE` </li><li> 5 = `HW_SECURE_ALL`</li></ul> | Oui |
 | `hdcpOutputControl` | Les valeurs autorisées sont 0, 1, 2. <ul><li>0 = `HDCP_NONE` </li><li> 1 = `HDCP_V1` </li><li> 2 = `HDCP_V2`</li></ul> | Oui |
-| `licenseDuration` * | Durée de la licence en secondes. S’il n’est pas fourni, il indique qu’il n’existe aucune limite à la durée. Veuillez consulter la note ci-dessous pour obtenir des informations détaillées. | Non |
-| `wvExtension` | court-formulaire encapsulant extensionType et extensionPayload, sous forme de chaîne séparée par des virgules. Voir le format ci-dessous. Exemple : `…&wvExtension=wudo,AAAAAA==&…` | Non, n’importe quel nombre peut être utilisé |
+| `licenseDuration` * | Durée de la licence en secondes. Si elle n’est pas fournie, elle indique qu’il n’y a pas de limite à la durée. Veuillez consulter la note ci-dessous pour obtenir des informations détaillées. | Non |
+| `wvExtension` | Un court formulaire encapsulant extensionType et extensionPayload, sous forme de chaîne séparée par des virgules. Voir le format ci-dessous. Exemple : `…&wvExtension=wudo,AAAAAA==&…` | Non, n’importe quel nombre peut être utilisé |
 
-A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` quelques secondes après le début de la lecture. </li><li> Pour autoriser l’arrêt/la reprise de la lecture pendant une durée illimitée, omettez `licenseDuration` (l’option infinie est définie par défaut). Sinon, spécifiez la durée pendant laquelle les utilisateurs finaux doivent pouvoir profiter du flux. </li></ol>
+A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` quelques secondes après le début de la lecture. </li><li> Pour autoriser l’arrêt/la reprise de la lecture pendant une durée illimitée, omettez `licenseDuration` (il sera par défaut infini). Sinon, spécifiez la durée pendant laquelle les utilisateurs finaux doivent pouvoir profiter du flux. </li></ol>
 
-**Tableau 15 : Paramètres  de restriction de jeton**
+**Tableau 15 : Paramètres de Requête de restriction de jeton**
 
-| Paramètre  | Description | Obligatoire ? |
+| Paramètre de Requête | Description | Obligatoire ? |
 |--- |--- |--- |
-| `expirationTime` | Heure d’expiration de ce jeton. Cette valeur DOIT être une chaîne au format [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) date/heure dans l’indicateur de zone &quot;Z&quot; (&quot;heure Zulu&quot;), ou un entier précédé du signe +. Un exemple de date/heure RFC 3339 est 2006-04-14T12:01:10Z. <br> Si la valeur est une chaîne au format date/heure [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) , elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un nombre entier précédé du signe +, le nombre de secondes, à partir de l’émission, pendant lequel le jeton est valide est interprété comme un nombre relatif de secondes. Par exemple, `+60` indique une minute. <br> La durée de vie maximale et par défaut du jeton (si elle n’est pas spécifiée) est de 30 jours. | Non |
+| `expirationTime` | Heure d’expiration de ce jeton. Cette valeur DOIT être une chaîne au format [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) date/heure dans l&#39;indicateur de zone Z (&quot;heure Zulu&quot;), ou un entier précédé du signe +. Un exemple de date/heure RFC 3339 est 2006-04-14T12:01:10Z. <br> Si la valeur est une chaîne au format date/heure [RFC 339](https://www.ietf.org/rfc/rfc3339.txt) , elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un entier précédé du signe +, le jeton est interprété comme un nombre relatif de secondes, à partir de l’émission, que le jeton est valide. Par exemple, `+60` spécifie une minute. <br> La durée de vie maximale et par défaut (si elle n’est pas spécifiée) du jeton est de 30 jours. | Non |
 
-**Tableau 16 : Paramètres de  de corrélation**
+**Tableau 16 : Paramètres de Requête de corrélation**
 
-| **Paramètre** | **Description** | **Obligatoire ?** |
+| **Paramètre de Requête** | **Description** | **Obligatoire ?** |
 |---|---|---|
-| `cookie` | Chaîne arbitraire de 32 caractères maximum transportée dans le jeton et consignée par le serveur d’échange de jeton. Peut être utilisé pour corréler les entrées de journal sur le serveur de remboursement et celles sur les serveurs de  du. | Non |
+| `cookie` | Chaîne arbitraire pouvant contenir jusqu’à 32 caractères transportée dans le jeton et consignée par le serveur de remboursement du jeton. Peut être utilisé pour corréler les entrées de journal sur le serveur de remboursement et celles sur les serveurs du prestataire. | Non |
 
 <!--<a id="section_6BFBD314C77C40C4B172ABBDD2D8D80E"></a>-->
 
@@ -102,9 +102,9 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
 | `400 Bad Request` | Arguments non valides | `text/html` ou `application/json` | Description de l’erreur |
 | `401 Unauthorized` | Échec de l&#39;authentification | `text/html` ou `application/json` | Description de l’erreur |
 | `404 Not found` | URL incorrecte | `text/html` ou `application/json` | Description de l’erreur |
-| `50x Server Error` | Erreur du serveur | `text/html` ou `application/json` | Description de l’erreur |
+| `50x Server Error` | Erreur serveur | `text/html` ou `application/json` | Description de l’erreur |
 
-**Tableau 18 : Codes d’erreur**
+**Tableau 18 : Codes d&#39;erreur de Événement**
 
 <table id="table_agj_gqx_pv">  
  <thead> 
@@ -132,11 +132,11 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2017 </td> 
-   <td> Le jeton d’authentification doit être fourni </td> 
+   <td> Le jeton d'authentification doit être fourni </td> 
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Jeton d'authentification non valide : &lt;détails&gt; <p>Remarque :  Cela peut se produire si l’authentificateur est incorrect ou lors de l’accès à l’API de test sur *.test.expression.com à l’aide de l’authentificateur de production et vice versa. </p> <p importance="high">Remarque :  Le SDK de test et l’outil de test avancé (ATT) fonctionnent uniquement avec <span class="filepath"> *.test.expression.com </span>, tandis que les périphériques de production doivent utiliser <span class="filepath"> *.service.expression.com. </span> </p>. </td> 
+   <td> Jeton d'authentification non valide : &lt;détails&gt; <p>Remarque :  Cela peut se produire si l’authentificateur est incorrect ou lors de l’accès à l’API de test sur *.test.expression.com à l’aide de l’authentificateur de production et vice versa. </p> <p importance="high">Remarque :  Le SDK de test et l’outil de test avancé (ATT) ne fonctionnent qu’avec <span class="filepath"> *.test.expression.com </span>, tandis que les périphériques de production doivent utiliser <span class="filepath"> *.service.expression.com. </span> </p>. </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -148,7 +148,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Durée de jeu de location manquante </td> 
+   <td> Durée de lecture de location manquante </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
@@ -156,7 +156,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> La clé de chiffrement du contenu doit comporter 32 chiffres hexadécimaux. </td> 
+   <td> La clé de chiffrement du contenu doit contenir 32 chiffres hexadécimaux. </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
@@ -164,7 +164,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td>  du service </td> 
+   <td> Compte désactivé de service </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
@@ -172,7 +172,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Contrôle de sortie non valide, valeurs hors de la plage spécifiée </td> 
+   <td> Contrôle de sortie non valide, valeurs en dehors de la plage spécifiée </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
@@ -180,7 +180,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> Le type d’extension doit comporter 4 caractères. </td> 
+   <td> Le type d'extension doit comporter 4 caractères </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
@@ -188,15 +188,15 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> doit être encodé 4 octets </td> 
+   <td> <span class="codeph"> OutputControlFlag </span> doit être codé 4 octets </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> Format d'erreur spécifié non valide : &lt;format&gt; </td> 
+   <td> Format d'erreur non valide spécifié : &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
-   <td> Impossible d'authentifier le périphérique </td> 
+   <td> Le périphérique n'a pas pu être authentifié </td> 
   </tr> 
   <tr> 
    <td> -4010 </td> 
@@ -208,7 +208,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -4019 </td> 
-   <td> Impossible d'obtenir la clé de contenu à partir de la clé  service  de </td> 
+   <td> Impossible d'obtenir la clé de contenu à partir du service d'enregistrement clé </td> 
   </tr> 
   <tr> 
    <td> -4020 </td> 
@@ -216,7 +216,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> enfant </span> doit comporter 64 caractères après le caractère "^" </td> 
+   <td> <span class="codeph"> enfant </span> doit comporter 64 caractères après le caractère '^' </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
@@ -232,7 +232,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -6005 </td> 
-   <td> Données de clé non valides spécifiées </td> 
+   <td> Données clés non valides spécifiées </td> 
   </tr> 
   <tr> 
    <td> -6007 </td> 
@@ -240,7 +240,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -7002 </td> 
-   <td> La liaison d'ID de périphérique n'est pas prise en charge pour Windows </td> 
+   <td> La liaison d'ID de périphérique n'est pas prise en charge pour Widevine </td> 
   </tr> 
   <tr> 
    <td> -7003 </td> 
@@ -264,7 +264,7 @@ A propos `licenseDuration`: <ol><li> La lecture s’arrête `licenseDuration` qu
   </tr> 
   <tr> 
    <td> -7009 </td> 
-   <td> Paramètres WVExtension <span class="codeph"> </span> spécifiés non valides </td> 
+   <td> Paramètres <span class="codeph"> WVExtension non valides </span> spécifiés </td> 
   </tr> 
   <tr> 
    <td> -7011 </td> 
