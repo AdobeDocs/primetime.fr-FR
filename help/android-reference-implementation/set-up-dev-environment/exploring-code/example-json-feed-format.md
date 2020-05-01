@@ -14,4 +14,4 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 L’implémentation de référence utilise un fichier d’entrée JSON.
 
-[Cet exemple](https://help.adobe.com/en_US/primetime/api/reference_implementation/json-example.json) montre comment formater les métadonnées publicitaires pour les publicités Primetime, les publicités directes et les marqueurs publicitaires personnalisés.
+[Cet exemple](https://help.adobe.com/en_US/primetime/api/reference_implementation/json-example.json) illustre comment formater les métadonnées publicitaires pour les publicités Primetime, les publicités directes et les marqueurs publicitaires personnalisés.
