@@ -1,10 +1,10 @@
 ---
-title: Notes de mise à jour de PTAI 20.3.3
+title: Notes de mise à jour de PTAI 20.5.1
 description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,13 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 **Lorsque :** Mardi 28 janvier 2020 de 2h00 à 3h00 EST
 
-* **VMAP avec prise en charge FER pour &quot;nbc&quot; CueFormat** Convertissez des indices du flux FER en FW timeline override params, lorsque ptcueformat=nbc est utilisé et que le flux est un flux VOD avec des indices manifestes et des publicités intégrées.
+* **VMAP avec prise en charge FER pour nbc CueFormat**
 
-* Expurger le champ user-agent dans l’en-tête HTTP avant de le transférer à des fournisseurs d’annonces publicitaires tiers/CDN.
+   Convertissez des indices du flux FER en paramètres de remplacement de chronologie FW, lorsque `ptcueformat=nbc` ce flux est utilisé et qu’il s’agit d’un flux VOD avec des indices manifestes et des publicités intégrées.
 
-* Filtrez les caractères contrôlables/non imprimables (code ascii &lt; 32) des en-têtes HTTP &quot;user-agent&quot; avant de les envoyer à Auditude et aux autres fournisseurs d’annonces, CDN. Auditude Ad-Call échouait pour ces en-têtes non valides.
+* Expurger le champ user-agent dans l’en-tête HTTP avant de le transférer à des fournisseurs publicitaires tiers/CDN.
+
+* Filtrez les caractères de contrôle/non imprimables (code ASCII &lt; 32) des en-têtes HTTP user-agent avant de les envoyer à Auditude et aux autres fournisseurs d’annonces, CDN. Auditude Ad-Call échouait pour ces en-têtes non valides.
 
 * Purger les anciens objets V1 des groupes NetStorage pour que le nombre d’objets reste dans les limites sécurisées d’Akamai.
 
