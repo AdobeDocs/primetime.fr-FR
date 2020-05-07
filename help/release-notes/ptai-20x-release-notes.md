@@ -2,7 +2,7 @@
 title: Notes de mise à jour de PTAI 20.5.1
 description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 7c6acf4b310a7df4ea79a5974f66f7f4b615b21c
+source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
