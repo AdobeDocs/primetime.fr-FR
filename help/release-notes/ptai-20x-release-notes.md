@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.5.1
 description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
+source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 ## Nouveautés de PTAI 20.5.1
 
-**Lorsque :** Mardi 5 mai 2020 de 4 h à 5 h EST
+**Lorsque :** Mardi 5 mai 2020 de 4 h à 5 h, heure de l&#39;Est
 
 * Correction d’un problème afin de s’assurer que les en-têtes CORS corrects sont fournis lors de l’envoi d’en-têtes If-Modified-Since.
 
@@ -28,7 +28,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 ### Version 20.3.4
 
-**Lorsque :** Mercredi 1er avril 2020 de 03h00 à 04h00 EST
+**Lorsque :** Mercredi 1er avril 2020 de 03h00 à 04h00, heure de l&#39;Est
 
 * Correction d’un problème en raison duquel les sous-titres n’étaient pas synchronisés après l’insertion de publicités dans VOD/WebVTT.
 
@@ -36,7 +36,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 ### Version 20.3.3
 
-**Lorsque :** Jeudi 26 mars 2020 de 3 h à 4 h EST
+**Lorsque :** Jeudi 26 mars 2020 de 03h00 à 04h00, heure de l&#39;Est
 
 * Les réponses SSAI 4XX et 5XX fournissent désormais correctement des en-têtes liés à CORS, ce qui permet aux clients javascript/webview interdomaines de lire correctement les réponses d’erreur.
 
@@ -44,9 +44,36 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 * Correction d’un problème lié aux flux audio CMAF/déuxed, en raison duquel les numéros EXT-X-MEDIA-SEQUENCE s’incrémentaient incorrectement dans certains scénarios.
 
+### Version 20.3.2
+
+**Lorsque :** Mercredi 11 mars 2020 de 05h30 à 07h00, heure de l&#39;Est
+
+* Améliorations de la gestion du signal SCTE35.
+
+* Mises à jour de maintenance.
+
+### Version 20.3.1
+
+**Lorsque :** Jeudi 5 mars 2020 de 02h30 à 04h30, heure de l&#39;Est
+
+* Amélioration des performances :
+
+   * Ajout de la prise en charge du cache pour les manifestes m3u8 maître/média. Ces manifestes répondent maintenant à Cache-Control : en-têtes publics et Max-Age, qui peuvent souvent améliorer les performances du début vidéo.
+
+   * Ajout de la prise en charge de l’extraction forcée des éléments créatifs https sur http, ce qui peut également améliorer les performances du début vidéo.
+
+* Correctifs de sécurité et de maintenance.
+
+### Version 20.2.1
+
+**Lorsque :** Jeudi 13 février 2020 de 4 h 30 à 05 h 30, heure de l&#39;Est
+
+* Ajout de la prise en charge de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
+* Améliorations mineures des performances et mises à jour de maintenance.
+
 ### Version 20.1.3
 
-**Lorsque :** Mardi 28 janvier 2020 de 2h00 à 3h00 EST
+**Lorsque :** Mardi 28 janvier 2020 de 2h00 à 3h00, heure de l&#39;Est
 
 * **VMAP avec prise en charge FER pour nbc CueFormat**
 
@@ -57,6 +84,22 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 * Filtrez les caractères de contrôle/non imprimables (code ASCII &lt; 32) des en-têtes HTTP user-agent avant de les envoyer à Auditude et aux autres fournisseurs d’annonces, CDN. Auditude Ad-Call échouait pour ces en-têtes non valides.
 
 * Purger les anciens objets V1 des groupes NetStorage pour que le nombre d’objets reste dans les limites sécurisées d’Akamai.
+
+### Correctif [de la version 20.1.2]
+
+**Lorsque :** Lundi 20 janvier 2020 de 02h00 à 03h00, heure de l&#39;Est
+
+* Mises à jour de maintenance.
+
+### Version 20.1.1
+
+**Lorsque :** Mercredi 15 janvier 2020 de 4 h à 05 h, heure de l&#39;Est
+
+* Le service de retraitement créatif offre désormais une insertion publicitaire plus rapide en mettant automatiquement sur liste noire les éléments créatifs malformés.
+
+* Ajout de la prise en charge de la phase 1 pour le nouveau format de repère SCTE 35 lors de l&#39;insertion publicitaire côté serveur.
+
+* Mises à niveau de maintenance.
 
 ## Problèmes résolus
 
