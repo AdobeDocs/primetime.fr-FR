@@ -4,7 +4,10 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
@@ -12,6 +15,10 @@ source-git-commit: ''
 # Notes de mise à jour de Primetime
 
 Bienvenue dans les Notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
+
+## Améliorations et correctifs de la version 20.5.1 de l’API
+
+Axé sur la résolution des principaux problèmes des clients.
 
 ## Correctifs dans TVSDK 3.11 Android
 
@@ -23,10 +30,6 @@ Pour plus d’informations sur la version actuelle d’ [Android](../release-not
 Cette version s’est concentrée sur la résolution des principaux problèmes des clients.
 
 Pour plus d’informations sur la version actuelle d’ [iOS](../release-notes/tvsdk-3x-ios.md), reportez-vous à la section.
-
-## Améliorations et correctifs de la version 20.3.3 de l’API
-
-Concédé aux problèmes des clients.
 
 Pour plus d’informations sur la version actuelle de l’insertion d’annonces dynamiques, voir Notes [de mise à jour de l’](ptai-19x-release-notes.md)API.
 
