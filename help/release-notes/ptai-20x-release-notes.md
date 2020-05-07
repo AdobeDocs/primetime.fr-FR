@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.5.1
 description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 **Lorsque :** Jeudi 26 mars 2020 de 03h00 à 04h00, heure de l&#39;Est
 
-* Les réponses SSAI 4XX et 5XX fournissent désormais correctement des en-têtes liés à CORS, ce qui permet aux clients javascript/webview interdomaines de lire correctement les réponses d’erreur.
+* Les réponses SSAI 4XX et 5XX fournissent désormais correctement des en-têtes liés à CORS, ce qui permet aux clients de vues Web javascript interdomaines de lire correctement les réponses d’erreur.
 
 * Correction d’un problème lié aux en-têtes X-Forwarded-For, en raison duquel les adresses IPv6 n’étaient pas correctement codées dans l’URL lors de leur transmission aux serveurs d’annonces.
 
@@ -85,7 +85,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 * Purger les anciens objets V1 des groupes NetStorage pour que le nombre d’objets reste dans les limites sécurisées d’Akamai.
 
-### Correctif [de la version 20.1.2]
+### Version 20.1.2 (Correctif)
 
 **Lorsque :** Lundi 20 janvier 2020 de 02h00 à 03h00, heure de l&#39;Est
 
@@ -103,7 +103,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 ## Problèmes résolus
 
-Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, ZD#xxxxx.
+Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, `ZD#xxxxx`
 
 **PITA 20.5.1**
 
