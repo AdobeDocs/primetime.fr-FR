@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.5.1
 description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 ## Problèmes résolus
 
 Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, ZD#xxxxx.
+
+**PITA 20.5.1**
+
+* Problèmes d’en-têtes CORS lors de l’envoi d’en-têtes If-Modified-Since.
+
+* Questions relatives au tableau de bord CRS.
+
+**PTAI 20.3.4**
+
+* Problème en raison duquel les sous-titres n’étaient pas synchronisés après l’insertion de publicités dans VOD/WebVTT.
 
 **PTAI 20.3.3**
 
