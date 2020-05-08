@@ -306,7 +306,7 @@ Enregistrements de ce type de journal demande que le serveur manifeste crée pou
 
 ### enregistrements TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
 
-Enregistre ``of ``ce ``type ``journal ``responses ``du ``manifest ``serveur ``sends ``dans ``clients ```` `answer` ``les légendes. ``requests ```for```WEBVTT `` Les champs situés au-delà de TRACE_WEBVTT_RESPONSE &quot;apparaissent dans l&#39;ordre indiqué dans le tableau, `by`onglets séparés.
+Records of this type log responses the manifest server sends to clients in answer to requests for WEBVTT captions. Fields beyond TRACE_WEBVTT_RESPONSE appear in the order shown in the table, separated by tabs.
 
 | Champ | Type | Description |
 |--- |--- |--- |
