@@ -1,29 +1,36 @@
 ---
-title: Notes de mise à jour de TVSDK 3.11 pour iOS
-description: Les Notes de mise à jour de TVSDK 3.11 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.11.
+title: Notes de mise à jour de TVSDK 3.12 pour iOS
+description: Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.11 pour iOS {#tvsdk-for-ios-release-notes}
+# Notes de mise à jour de TVSDK 3.12 pour iOS {#tvsdk-for-ios-release-notes}
 
-Les Notes de mise à jour de TVSDK 3.11 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.11.
+Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
 
 ## Configuration système et logiciel requise {#system-software-requirements}
 
-Avant de télécharger iOS 3.11, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de vos applications répondent aux exigences suivantes :
+Avant de télécharger iOS 3.12, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de vos applications répondent aux exigences suivantes :
 
 Système d’exploitation : iOS 8.0 ou version ultérieure.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Correctifs fournis pour les problèmes des clients qui provoquent le blocage de l’application `isFallbackOnInvalidCreativeEnabled` et `customParams` de la méthode.
+Correction d’un problème en raison duquel la diffusion en direct échouait après 15 minutes de lecture.
 
 Pour les correctifs de la version actuelle, reportez-vous à la section Problèmes [client résolus](#resolved-issues) et pour les limitations, reportez-vous à la section Problèmes [connus et limitations](#known-issues-and-limitations) .
 
 ### Nouvelles fonctionnalités et correctifs des versions précédentes {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Correctifs fournis pour les problèmes des clients qui provoquent le blocage de l’application `isFallbackOnInvalidCreativeEnabled` et `customParams` de la méthode.
 
 **iOS TVSDK 3.10**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* La diffusion en continu en direct échoue après 15 minutes de lecture lors de l’utilisation de TVSDK pour iOS 3.10.
+
+### Problèmes résolus dans les versions précédentes {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998) - L’application `isFallbackOnInvalidCreativeEnabled` se bloque.
 
 * (ZD#41289) - `NSInvalidArgumentException` est observé avec la méthode `customParams` conduisant au blocage de l&#39;application.
-
-### Problèmes résolus dans les versions précédentes {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -521,7 +531,7 @@ Problème de lecture lorsque la balise # EXT-X-PLAYLIST-TYPE du flux est défini
 
 Utilisation de Creative Id et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS.
 
-* [ ZD #29462) - TremorHub et les VOD A&amp;E provoquent un blocage dans les applications iOS.
+* [ ZD #29462) - TremorHub et les VOD A&amp;E provoquent un blocage dans les applications iOS
 
 **Version 1.4.36 (1.4.36.835)**
 
