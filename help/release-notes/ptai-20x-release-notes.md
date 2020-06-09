@@ -1,20 +1,40 @@
 ---
-title: Notes de mise à jour de PTAI 20.5.1
-description: Les notes de mise à jour de la version 20.5.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.6.1
+description: Les notes de mise à jour de la version 20.6.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de Primetime Dynamic Ad Insertion 20.5.1
+# Notes de mise à jour de Primetime Dynamic Ad Insertion 20.6.1
 
-Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus dans l’insertion dynamique des publicités Primetime en 2020.
+Les notes de mise à jour sur l’insertion dynamique des publicités 20.6.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus dans l’insertion dynamique des publicités Primetime en 2020.
 
-## Nouveautés de PTAI 20.5.1
+## Nouveautés de PTAI 20.6.1
+
+**Lorsque :** Mardi 2 juin 2020 de 03h00 à 05h00, heure de l&#39;Est
+
+**Nouvelles fonctionnalités**
+
+Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suivantes via la configuration côté serveur :
+
+* Manipulation du manifeste : Les segments HLS et les URL de ressources peuvent désormais être transformés entre HTTP et HTTPS afin d’améliorer les performances en réduisant les poignées de main TLS sur les requêtes principales. Il peut également être utilisé pour unifier des fragments de publicités/de contenu sur les mêmes CDN.
+
+* VOD de forme longue : Amélioration des API pour maintenir la session en vie avec les ressources VOD de forme longue.
+
+**Correctifs**
+
+* Correction d’un problème en raison duquel les fragments WebVTT étaient toujours demandés sous le protocole http, quel que soit le protocole d’origine demandé.
+
+* Correction d’un problème en raison duquel les balises EXT-X-DISCONTINUITY étaient supprimées du haut de la liste de lecture lors du passage des publicités au contenu. Contactez l’assistance Adobe pour activer ce correctif.
+
+## Nouveautés des versions précédentes
+
+### Version 20.5.1
 
 **Lorsque :** Mardi 5 mai 2020 de 4 h à 5 h, heure de l&#39;Est
 
@@ -23,8 +43,6 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 * Correctifs de bogues sur le tableau de bord CRS.
 
 * Mises à jour de maintenance.
-
-## Nouveautés des versions précédentes
 
 ### Version 20.3.4
 
@@ -58,9 +76,9 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 * Amélioration des performances :
 
-   * Ajout de la prise en charge du cache pour les manifestes m3u8 maître/média. Ces manifestes répondent maintenant à Cache-Control : en-têtes publics et Max-Age, qui peuvent souvent améliorer les performances du début vidéo.
+   * Prise en charge Ajoutée du cache pour les manifestes m3u8 maître/média. Ces manifestes répondent maintenant à Cache-Control : en-têtes publics et Max-Age, qui peuvent souvent améliorer les performances du début vidéo.
 
-   * Ajout de la prise en charge de l’extraction forcée des éléments créatifs https sur http, ce qui peut également améliorer les performances du début vidéo.
+   * Prise en charge Ajoutée pour forcer la récupération des éléments créatifs https sur http, ce qui peut également améliorer les performances des débuts vidéo.
 
 * Correctifs de sécurité et de maintenance.
 
@@ -68,7 +86,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 **Lorsque :** Jeudi 13 février 2020 de 4 h 30 à 05 h 30, heure de l&#39;Est
 
-* Ajout de la prise en charge de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
+* Prise en charge Ajoutée de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
 * Améliorations mineures des performances et mises à jour de maintenance.
 
 ### Version 20.1.3
@@ -97,7 +115,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.5.1 dé
 
 * Le service de retraitement créatif offre désormais une insertion publicitaire plus rapide en mettant automatiquement sur liste noire les éléments créatifs malformés.
 
-* Ajout de la prise en charge de la phase 1 pour le nouveau format de repère SCTE 35 lors de l&#39;insertion publicitaire côté serveur.
+* Prise en charge de la phase 1 Ajoutée pour le nouveau format de repère SCTE 35 dans l&#39;insertion publicitaire côté serveur.
 
 * Mises à niveau de maintenance.
 
