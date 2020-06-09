@@ -1,12 +1,12 @@
 ---
 title: Notes de mise à jour de Primetime
-seo-title: Notes de mise à jour d’Adobe Primetime
+seo-title: Notes de mise à jour de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
+source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Notes de mise à jour de Primetime
 
-Bienvenue dans les Notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
+Bienvenue dans les Notes de mise à jour de Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
+
+## Améliorations et correctifs de la version 20.6.1 de l’API
+
+Cette version s’est concentrée sur des fonctionnalités telles que la manipulation du manifeste et l’amélioration des API pour maintenir la session en vie avec les ressources VOD à long terme. Cette version intègre également des correctifs aux principaux problèmes des clients.
+
+Pour plus d’informations sur la version actuelle de l’insertion d’annonces dynamiques, voir Notes [de mise à jour de l’](ptai-20x-release-notes.md)API.
 
 ## Améliorations et correctifs des notes de mise à jour de TVSDK 3.12 iOS
 
 Cette version s’est concentrée sur la résolution des principaux problèmes des clients.
 
 Pour plus d’informations sur la version actuelle d’ [iOS](../release-notes/tvsdk-3x-ios.md), reportez-vous à la section.
-
-## Améliorations et correctifs de la version 20.5.1 de l’API
-
-Axé sur la résolution des principaux problèmes des clients.
-
-Pour plus d’informations sur la version actuelle de l’insertion d’annonces dynamiques, voir Notes [de mise à jour de l’](ptai-20x-release-notes.md)API.
 
 ## Correctifs dans TVSDK 3.11 Android
 
@@ -54,6 +54,6 @@ Pour plus d’informations sur la version actuelle d’ [Android](../release-not
 
 * [Authentification Primetime](https://tve.helpdocsonline.com/home)
 
-* [Forums DRM d’Adobe Primetime](https://forums.adobe.com/community/adobe_access)
+* [Forums DRM Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
-* [Ressources pour les développeurs Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
+* [Ressources du développeur Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
