@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.6.1
 description: Les notes de mise à jour de la version 20.6.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,6 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 * Correction d’un problème en raison duquel les fragments WebVTT étaient toujours demandés sous le protocole http, quel que soit le protocole d’origine demandé.
 
 * Correction d’un problème en raison duquel les balises EXT-X-DISCONTINUITY étaient supprimées du haut de la liste de lecture lors du passage des publicités au contenu. Contactez l’assistance Adobe pour activer ce correctif.
-
-## Nouveautés des versions précédentes
 
 ### Version 20.5.1
 
@@ -86,7 +84,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 **Lorsque :** Jeudi 13 février 2020 de 4 h 30 à 05 h 30, heure de l&#39;Est
 
-* Prise en charge Ajoutée de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
+* Prise en charge Ajoutée pour l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
 * Améliorations mineures des performances et mises à jour de maintenance.
 
 ### Version 20.1.3
