@@ -2,7 +2,10 @@
 title: Notes de mise à jour de PTAI 19.11.1
 description: Les notes de mise à jour de la version 19.11.1 de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de Primetime Dynamic Ad Insertion en 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,13 +51,14 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 **Lorsque :** Mercredi 21 août 2019 de 2h00 à 3h00 heure de l&#39;Est
 
 * Tableau de bord SSAI : Section Statistiques de session. Vous pouvez exporter les événements de session via l’option Télécharger CSV.
+
 * Mises à jour de maintenance
 
 ### Version 19.8.1
 
 **Lorsque :** Mardi 6 août 2019 000 heures, de 2 h 30, heure de l&#39;Est, au mardi 6 août 2019 000 heures, de 4 h 30, heure de l&#39;Est
 
-* Tableau de bord SSAI : Ajout d’une nouvelle section, Statistiques de session, au Tableau de bord SSAI
+* Tableau de bord SSAI : Nouvelle section Ajoutée, Statistiques de session, au Tableau de bord SSAI
    * Si l’ID de session d’une session SSAI pour laquelle le mode de débogage est activé (ptdebug=true), vous pouvez rechercher l’activité suivante qui s’est produite au cours de cette session :
       * Demandes/réponses d’annonce
       * Publicités insérées
@@ -78,10 +82,10 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 **Lorsque :** Mercredi 12 juin 2019 11h30 PST au jeudi 13 juin 2019 12h30 PST
 
 * CRS : Règle de normalisation pour les créatifs de RevJet
-   * Ajout d’une règle de normalisation d’URL créative pour RevJet, utilisée par CRS et SSAI
+   * Règle de normalisation des URL créatives Ajoutée pour RevJet, utilisée par CRS et SSAI
    * TVSDK : Si vous diffusez ou prévoyez de diffuser des publicités de RevJet, des règles de normalisation devront être ajoutées aux règles CRS JSON pour utiliser CRS avec leurs créatifs. Contactez votre gestionnaire de compte technique pour obtenir de l’aide.
 * CRS : Règle de normalisation pour les créatifs d&#39;Innovid
-   * Ajout d’une règle de normalisation des URL créatives pour Innovid, utilisée par SSAI.
+   * Règle de normalisation des URL créatives Ajoutée pour Innovid, utilisée par SSAI
    * La règle de normalisation utilisée par CRS a été ajoutée dans une version antérieure.
    * TVSDK : La règle de normalisation à ajouter dans le fichier JSON des règles CRS a été fournie après une version antérieure, mais pour être sûr, contactez votre gestionnaire de compte technique pour examiner toutes les règles de normalisation que vous avez en place.
       >[!NOTE]
@@ -92,14 +96,14 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 **Lorsque :** Mercredi 22 mai 2012 00 h 00, heure de l&#39;Est, jusqu&#39;au mercredi 22 mai 2014 00 h 00, heure de l&#39;Est
 
-* Ajout de la prise en charge du CMAF (contenu HLS/fMP4)
+* Prise en charge Ajoutée du CMAF (contenu HLS/fMP4)
    * SSAI : Gérer les manifestes CMAF
    * SSAI : Lancez des demandes de transcodage et récupérez des fichiers CRS en fonction du format de contenu (HLS/ts et HLS/fMP4).
-   * CRS : Ajout d’un flux de travail pour recompresser les publicités au format CMAF (HLS/fMP4)
+   * CRS : Processus Ajouté pour recompresser les publicités au format CMAF (HLS/fMP4)
 * SSAI : Correction d’un problème qui empêchait l’insertion de publicités non muxes dans du contenu non muxé lorsque le contenu et la publicité n’avaient pas de flux audio uniquement (EXT-X-STREAM-INF).
-* SSAI : Ajout de la prise en charge des jetons d’authentification CDN Limelight (LLNW) pour les segments de contenu
+* SSAI : Prise en charge Ajoutée des jetons d’authentification CDN Limelight (LLNW) pour les segments de contenu
    * Lorsque `pttoken=limelight` ou `pttoken=llnw` est ajouté à l’URL d’amorçage, nous ajouterons un en-tête secret lors de la récupération de la liste de lecture principale source, puis nous ajouterons les paramètres de requête de l’en-tête X-Adobe-Sig de LLNW aux segments de contenu.
-* SSAI : Ajout d’une autre valeur de jeton (`pttoken=centurylink`) pour la prise en charge des jetons d’authentification CDN CenturyLink, publiée le 30 juillet 2018
+* SSAI : Ajouté une autre valeur de jeton (`pttoken=centurylink`) pour la prise en charge des jetons d’authentification CDN CenturyLink, publiée le 30 juillet 2018
    * `pttoken=centurylink` a le même comportement que `pttoken=level3`et les deux valeurs sont valides
 
 ### Version 19.5.1
@@ -121,7 +125,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 * CRS : Nouvelle architecture et processus de transfert des ressources CRS vers les origines CDN des clients
    * Les processus de la tâche par origine CDN sont séparés, de sorte que les goulets d’étranglement de transfert pour une origine CDN n’affectent pas les téléchargements vers d’autres origines CDN.
    * Autres avantages : Les délais de traitement des tâches CRS et les taux de transfert vers les origines CDN des clients sont améliorés
-* SSAI : Ajout d’URL ClickThrough et ClickTracking pour les annonces vidéo au format JSON v2 sidecar
+* SSAI : URL de clic publicitaire et de suivi des clics Ajoutées pour les annonces vidéo au format JSON v2 sidecar
    * Une nouvelle propriété de tableau JSON, &quot;videoClicks&quot;, suivra la propriété &quot;trackingURLs&quot;.
    * Les noms de valeur &quot;événement&quot; seront &quot;clickThrough&quot; et &quot;clickTracking&quot; et ils n’auront pas de valeur startTime.
 * SSAI : Pour les actifs CRS, ajout d’une fonctionnalité permettant d’étendre de 30 jours à chaque insertion l’expiration de l’enregistrement de recherche d’un actif CRS.
@@ -130,7 +134,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
    * Le nouveau comportement s&#39;applique à l&#39;ensemble du système et peut être désactivé si une baisse de performances est détectée.
 * SSAI : Comportement de manipulation de manifeste WebVTT mis à jour pour les flux en direct uniquement
    * Comportement précédent : Dans le manifeste WebVTT uniquement, supprimez les balises EXT-X-DISCONTINUITY qui seraient insérées avant chaque publicité insérée et après le dernier segment de la coupure publicitaire insérée.
-   * Nouveau comportement : Ajout d’un nouveau paramètre, vttdisc, avec les valeurs acceptées true et false, à l’URL d’amorçage SSAI.
+   * Nouveau comportement : Ajouté un nouveau paramètre, vttdisc, avec les valeurs acceptées true et false, à l’URL d’amorçage SSAI.
       * vttdisc=true: Les balises EXT-X-DISCONTINUITY seront insérées dans le manifeste WebVTT avant chaque publicité insérée et après le dernier segment de coupure publicitaire insérée, ce qui correspond au comportement des manifestes audio/vidéo et audio uniquement.
       * vttdisc=false (identique au comportement précédent) : Dans le manifeste WebVTT uniquement, supprimez les balises EXT-X-DISCONTINUITY qui seraient insérées avant chaque publicité insérée et après le dernier segment de la coupure publicitaire insérée.
       * Si le paramètre vttdisc est omis ou a une valeur autre que true/false, vttdisc prend par défaut la valeur true.
@@ -141,7 +145,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 **Lorsque :** Mercredi 20 février 2019 de 1 h 30, heure de l&#39;Est, au mercredi 20 février 2019 de 3 h 30, heure de l&#39;Est
 
-* SSAI : Ajout d’URL ClickThrough et ClickTracking pour les annonces vidéo au format JSON v2 sidecar
+* SSAI : URL de clic publicitaire et de suivi des clics Ajoutées pour les annonces vidéo au format JSON v2 sidecar
    * Sous la propriété &quot;trackingURLs&quot;, leurs noms de valeur &quot;événement&quot; seront &quot;clickthrough&quot; (clic publicitaire) et &quot;clickTracking&quot; (suivi des clics).
    * Leurs valeurs startTime seront le début de la publicité.
 * SSAI : Pour les actifs CRS, ajout d’une fonctionnalité permettant d’étendre de 30 jours à chaque insertion l’expiration de l’enregistrement de recherche d’un actif CRS.
@@ -170,7 +174,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
    * Ancienne structure de la clé de recherche : Paramètres de zone, de système publicitaire, d’identifiant de publicité, d’identifiant créatif, d’URL créative et de format (durée de cible, format de sortie, CDN de destination)
    * Les clés de recherche des ressources CRS existantes seront mises à jour pour correspondre à la nouvelle structure avant la version de production, mais notez que les nouvelles ressources transcodées entre la mise à jour des clés de recherche et la version de production pourraient être ignorées. Si tel est le cas, ils lanceraient une nouvelle demande de SIR la prochaine fois qu&#39;ils seront rencontrés après la libération.
 
-* CRS : Ajout de la possibilité de mettre en liste noire/d’autoriser les requêtes CRS en provenance de systèmes publicitaires spécifiques, d’ID d’annonce, d’ID de création, d’URL de création et/ou de format créatif
+* CRS : Ajoute la possibilité de mettre en liste noire/d’autoriser les requêtes CRS en provenance de systèmes publicitaires spécifiques, d’ID d’annonce, d’ID créatifs, d’URL créatives et/ou de format créatif.
 
    >Note
    >
