@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -184,7 +187,7 @@ TVSDK annule maintenant le téléchargement du segment en cours, si nécessaire,
 
 * **Chargement sécurisé des publicités via HTTPS**
 
-   Adobe Primetime permet de demander un premier appel au serveur d’annonces primetime et au serveur CRS sur https.
+   Adobe Primetime offre une option pour demander le premier appel au serveur d’annonces primetime et au serveur CRS sur https.
 
 * **AdSystem et ID créatif ajoutés aux demandes CRS**
 
@@ -286,8 +289,8 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **Prise en charge des processus**
 
-   * **Intégration de la facturation directe : envoie les mesures de facturation à l’arrière-plan d’Adobe Analytics, qui est certifié par Adobe Primetime pour les flux utilisés par le client.**
-   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client, ni ne les inclut. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
+   * **Intégration de la facturation directe : envoie les mesures de facturation à l’arrière-plan Adobe Analytics, qui est certifié par Adobe Primetime pour les flux utilisés par le client.**
+   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics du client ou n’est pas inclus dans les appels de serveur Analytics. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
 
    * **Prise en charge du basculement améliorée -** Stratégies supplémentaires mises en oeuvre pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs hôtes, des fichiers de liste de lecture et des segments.
 
@@ -300,7 +303,7 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **Analytics**
 
-   * **VHL 2.0 -** Il s’agit de la dernière intégration optimisée de la bibliothèque Video Heartbeats Library (VHL) pour la collecte automatique des données d’utilisation d’Adobe Analytics. La complexité des API a été réduite afin de faciliter la mise en oeuvre. Téléchargez la bibliothèque VHL [v2.0.0 pour Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) et extrayez le fichier JAR dans le dossier libs.
+   * **VHL 2.0 -** Il s’agit de la dernière intégration optimisée de la bibliothèque Video Heartbeats Library (VHL) pour la collecte automatique de données d’utilisation pour Adobe Analytics. La complexité des API a été réduite afin de faciliter la mise en oeuvre. Téléchargez la bibliothèque VHL [v2.0.0 pour Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) et extrayez le fichier JAR dans le dossier libs.
 
 * **SizeAvaliableEventListener**
 
@@ -334,7 +337,8 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Lecture générale (Lecture, Pause, Recherche) | VOD + Live | Y |
 | FER - Lecture générale (Lecture, Pause, Recherche) | FER VOD | Y |
 | Rechercher quand une publicité est en cours de lecture | VOD + Live | Non pris en charge |
-| AC3 | VOD + Live | Non pris en charge |
+| Lecture HEVC | VOD + Live | conteneur fMP4 uniquement |
+| AC3 et EAC3 | VOD + Live | Non pris en charge |
 | MP3 | VOD | Non pris en charge |
 | Lecture de contenu MP4 | VOD | Y |
 | Logique de commutation de débit adaptatif | VOD + Live | Y |
@@ -354,7 +358,6 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Liaison audio tardive | VOD + Live | Y |
 | 302 Redirection | VOD + Live | Y |
 | Lecture avec décalage | VOD + Live | Y |
-| Lecture audio uniquement | VOD + Live | Y |
 | Lecture de la bande | VOD + Live | Y |
 | Mouvement lent dans la lecture en bande | VOD + Live | Non pris en charge |
 | Lecture lisse (avec ABR) | VOD + Live | Y |
@@ -384,26 +387,50 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Résolution des publicités différées | VOD | Y |
 | Prise en charge des marqueurs de discontinuité - SSAI | VOD + Live | Y |
 | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | VOD + Live | Y |
+| 302 Attractions de redirection | VOD + Live | Y |
+
+| Fonction | Type de contenu | HLS |
+|---|---|---|
+| Lecture générale, publicités activées | VOD + Live | Y |
+| Contenu FER avec publicités activées | VOD | Y |
+| Comportements publicitaires par défaut | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| Publicités MP4 | VOD + Live | Y (provenant de CRS) |
+| Lecture à l&#39;aide de publicités activée | VOD + Live | Y |
+| Publicité uniquement | VOD | Y |
+| Paramètres de ciblage | VOD + Live | Y |
+| Paramètres personnalisés | VOD + Live | Y |
+| Comportements publicitaires personnalisés | VOD + Live | Y |
+| Balises publicitaires personnalisées | Live | Y |
+| Résolveurs d’annonces personnalisés | VOD + Live | Y |
+| Résolveur d’annonce personnalisé à roue libre | VOD | Y |
+| C3 | VOD + Live | Non pris en charge |
+| Résolution des publicités différées | VOD | Y |
+| Prise en charge des marqueurs de discontinuité - SSAI | VOD + Live | Y |
+| Publicités d’accompagnement, bannières publicitaires et publicités cliquables | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Sortie de publicité anticipée | Live | Y |
 | Hiérarchisation des créatifs basée sur des règles | VOD + Live | Y |
 | Règles CRS | VOD + Live | Y |
 | Résolveur d’annonces JSON | VOD + Live | Non pris en charge |
 | Intégration de la souris | VOD + Live | Y |
+| Insertion partielle de coupures publicitaires | Live | Y |
 
 | Fonction | Type de contenu | HLS |
 |---|---|---|
 | Chiffrement AES | VOD + Live | Y |
 | Exemple de chiffrement AES | VOD + Live | Y |
 | Flux jetés | VOD + Live | Y |
-| DRM | VOD + Live | Primetime DRM uniquement (Futur : Widevine) |
+| DRM sans fil | VOD + Live | conteneur fMP4 uniquement |
+| DRM Primetime | VOD + Live | Y |
 | Lecture externe (RBOP) | VOD + Live | DRM Primetime uniquement |
 | Rotation de licence | VOD + Live | DRM Primetime uniquement |
 | Rotation clé | VOD + Live | DRM Primetime uniquement |
 
 | Fonction | Type de contenu | HLS |
 |---|---|---|
-| Intégration d’Adobe Analytics VHL | VOD + Live | Y |
+| Intégration de VHL Adobe Analytics | VOD + Live | Y |
 | Facturation | VOD + Live | Y |
 
 ## Problèmes résolus {#resolved-issues}
@@ -440,7 +467,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 **Version 3.4**
 
-* ZD#37996 - Correction d’un problème de lecture par pagaille pour les flux HEVC CMAF linéaires et VOD.
+* ZD#37996 - Correction d’un problème de lecture par accrochage pour les flux HEVC CMAF linéaire et VOD.
 * ZD#37706 - Correction d’un problème de légendes altérées.
 * ZD#37622 - Correction d’un problème lié aux erreurs URISyntaxErrors irrécupérables pour des annonces spécifiques.
 * ZD#36938 - Correction d’un problème en raison duquel le débit passait au débit moyen, puis augmentait au débit le plus élevé après avoir quitté les lectures de piège.
@@ -458,7 +485,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 * ZD#37622 - Erreurs de syntaxe URIS à partir de capsules publicitaires spécifiques.
    * Correction d’un problème de blocage de la lecture de flux lorsque des publicités destinées à l’application Android du client contenaient un % non codé.
 * ZD#37631 - Mécanisme de nouvelle tentative de manifeste principal pour Android TVSDK.
-   * Ajout d’une nouvelle API dans la configuration réseau pour la gestion de cette amélioration. Si cette API n&#39;est pas utilisée, le manifeste n&#39;est pas réessayé. S&#39;il est utilisé, le manifeste est alors réessayé pour gérer les erreurs réseau et les dépassements de délai.
+   * Nouvelle API Ajoutée dans la configuration réseau pour gérer cette amélioration. Si cette API n&#39;est pas utilisée, le manifeste n&#39;est pas réessayé. S&#39;il est utilisé, le manifeste est alors réessayé pour gérer les erreurs réseau et les dépassements de délai.
 
 **Version 3.2**
 
@@ -500,7 +527,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD #31533 - Lecture audio sur Android après l’envoi de l’application en arrière-plan.
 
-   * Ajout `enableAudioPlaybackInBackground` de l’API MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
+   * Ajoutée `enableAudioPlaybackInBackground` API de MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
 
 **Android TVSDK 2.5.5**
 
@@ -512,7 +539,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
    * Amélioration de la correction précédente en gérant la casse dans l’analyse XML où le problème était reproductible lorsque &quot;space&quot; est placé avant le signe &quot;égal&quot; comme &lt;VAST version =&quot;2.0&quot;>
 
-* ZD #29296 - Android : Ajouter AdSystem et ID Creative aux demandes CRS.
+* ZD #29296 - Android : Ajoutez AdSystem et Creative ID aux demandes CRS.
 
    * Incluez désormais les paramètres &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
 
@@ -528,7 +555,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
    * Correction du scénario pour éviter le blocage.
 
-* ZD #32256 - Problème de rotation des licences et de rotation des clés - Adobe Access
+* ZD #32256 - Problème de rotation des licences et de rotation des clés - Accès Adobe
 
    * Correction de l’initialisation des segments avec les métadonnées DRM pour le contenu SampleAES. Fonctionne correctement avec le contenu AES128.
 
@@ -550,7 +577,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD #34793 - TVSDK 2.5.x se bloquait avec le programme de résolution de contenu personnalisé dans certains cas lorsque VideoEngine supposait que les paramètres d’audience étaient disponibles et qu’ils ne l’étaient pas.
 
-   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). Ajout d’une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
+   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). Ajouté une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
 
 * ZD #32584 - Impossible d&#39;accéder à l&#39;information complète présente dans le noeud &lt;Extensions> d&#39;une réponse VAST.
 
@@ -744,4 +771,4 @@ Cette version de TVSDK présente les problèmes suivants :
 * [Document](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) d’API C++ TVSDK Android - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient davantage de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une meilleure compréhension de l’API Java.
 * [Guide de migration de TVSDK 1.4 à 2.5 pour Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Pour gérer les scénarios d’activation/désactivation d’écran, consultez le `Application_Changes_for_Screen_On_Off.pdf` fichier inclus dans la compilation.
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
