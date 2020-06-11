@@ -4,7 +4,7 @@ seo-title: Notes de mise à jour de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
+source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -15,6 +15,12 @@ ht-degree: 0%
 # Notes de mise à jour de Primetime
 
 Bienvenue dans les Notes de mise à jour de Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
+
+## Correctifs dans TVSDK 3.12 Android
+
+Cette version était axée sur la mise à jour de la version graduelle de l’application de référence Primetime vers la version 5.6.4.
+
+Pour plus d’informations sur la version actuelle d’ [Android](../release-notes/tvsdk-3x-android.md), consultez la section.
 
 ## Améliorations et correctifs de la version 20.6.1 de l’API
 
@@ -27,12 +33,6 @@ Pour plus d’informations sur la version actuelle de l’insertion d’annonces
 Cette version s’est concentrée sur la résolution des principaux problèmes des clients.
 
 Pour plus d’informations sur la version actuelle d’ [iOS](../release-notes/tvsdk-3x-ios.md), reportez-vous à la section.
-
-## Correctifs dans TVSDK 3.11 Android
-
-La version a amélioré la prise en charge de la gestion des droits numériques sur périphériques et a résolu les principaux problèmes des clients.
-
-Pour plus d’informations sur la version actuelle d’ [Android](../release-notes/tvsdk-3x-android.md), consultez la section.
 
 ## Voir aussi
 
