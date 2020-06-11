@@ -1,24 +1,24 @@
 ---
-title: Notes de mise à jour de TVSDK 3.11 pour Android
-seo-title: Notes de mise à jour de TVSDK 3.11 pour Android
-description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11
-seo-description: Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11
+title: Notes de mise à jour de TVSDK 3.12 pour Android
+seo-title: Notes de mise à jour de TVSDK 3.12 pour Android
+description: Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12
+seo-description: Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
 workflow-type: tm+mt
-source-wordcount: '5490'
+source-wordcount: '5531'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.11 pour Android {#tvsdk-for-android-release-notes}
+# Notes de mise à jour de TVSDK 3.12 pour Android {#tvsdk-for-android-release-notes}
 
-Les Notes de mise à jour de TVSDK 3.11 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.11.
+Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12.
 
 Le lecteur de référence Android est inclus avec le SDK Android dans le répertoire samples/ de votre distribution. Le fichier README.md qui l’accompagne explique comment créer le lecteur de référence.
 
@@ -36,16 +36,21 @@ TVSDK pour Android offre de nombreuses améliorations de performances par rappor
 
 L’ensemble complet des fonctionnalités prises en charge et non prises en charge est présenté dans la section Matrice [des](#feature-matrix) fonctionnalités des notes de mise à jour.
 
-## Android TVSDK 3.11
+## Android TVSDK 3.12
 
-**Extraire la boîte d&#39;en-tête spécifique au système de protection (PSSH) autorisée**
+La version graduelle de l’application de référence Primetime est maintenant mise à jour vers la version 5.6.4.
 
-TVSDK permet désormais de récupérer la zone d’en-tête spécifique au système de protection associée à la ressource média chargée en cours. Une nouvelle API `getPSSH()` a été ajoutée à `com.adobe.mediacore.drm.DRMManager`.
-Pour plus d&#39;informations, voir [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+Pour configurer et exécuter une application de référence à l’aide d’Android Studio, suivez les instructions du fichier Lisez-moi disponible avec le fichier compressé TVSDK à `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`l’adresse.
 
 Les principaux problèmes des clients corrigés dans la version actuelle sont mentionnés dans la section Problèmes [](#resolved-issues) résolus.
 
 ### Nouvelles fonctionnalités et améliorations des versions précédentes
+
+**Android TVSDK 3.11**
+
+* **En-tête spécifique au système de protection (PSSH) Récupération autorisée** - TVSDK permet la récupération de la boîte d&#39;en-tête spécifique au système de protection associée à la ressource média chargée en cours. Nouvelle API `getPSSH()` ajoutée à `com.adobe.mediacore.drm.DRMManager`.
+
+Pour plus d&#39;informations, voir [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 
 **Android TVSDK 3.10**
 
@@ -53,9 +58,9 @@ Cette version s’est concentrée sur la résolution des principaux problèmes d
 
 **Android TVSDK 3.9**
 
-* **Secure Diffusion over HTTPS** - Android TVSDK 3.9 introduit les fonctionnalités de diffusion sécurisées via HTTPS afin de fournir du contenu en toute sécurité avec une échelle et des performances inégalées.
+* **Secure Diffusion over HTTPS** - Android TVSDK 3.9 a introduit les fonctionnalités de diffusion sécurisées via HTTPS afin de fournir du contenu en toute sécurité avec une échelle et des performances inégalées.
 
-   Pour activer la diffusion sécurisée via HTTPS, une nouvelle API est introduite dans `NetworkConfiguration` la classe.
+   Pour activer la diffusion sécurisée via HTTPS, une nouvelle API a été introduite dans `NetworkConfiguration` la classe.
 
    `public void setForceHTTPS (boolean value)`
 
@@ -65,7 +70,7 @@ Cette version s’est concentrée sur la résolution des principaux problèmes d
 
 * **Prise en charge de la pré-lecture avec la fonction** Ad-Break partielle - Grâce à cette amélioration, TVSDK 3.8 prend en charge les publicités preroll avec la fonction Ad-Break partielle (PABI).
 
-   La publicité preroll, si elle est disponible, est lue, puis le contenu est lu à partir du point de lecture imitant l’expérience de la télévision en direct.
+La publicité preroll, si elle est disponible, est lue, puis le contenu est lu à partir du point de lecture imitant l’expérience de la télévision en direct.
 
 **Android TVSDK 3.7**
 
@@ -82,6 +87,7 @@ Cette version s’est concentrée sur la résolution des principaux problèmes d
 **Version 3.5**
 
 * **Résolution** de publicité juste à temps - TVSDK 3.5 supprime la prise en charge des publicités lues de la chronologie.
+
 * **Prise en charge de la lecture** hors ligne - Avec la lecture hors ligne, les utilisateurs peuvent désormais télécharger du contenu vidéo sur leurs appareils et le regarder lorsqu’ils ne sont pas connectés. Pour plus d’informations, reportez-vous à la section &quot;Lecture[hors ligne avec Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf)&quot;.
 
 **Version 3.4**
@@ -437,13 +443,17 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 
 Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche, par exemple ZD#xxxxx.
 
-**Android TVSDK 3.11**
+**Android TVSDK 3.12**
 
-Cette section présente un résumé du problème résolu dans la version Android de TVSDK 3.11.
+Cette section présente un résumé du problème résolu dans la version Android de TVSDK 3.12.
 
-* ZD#41252 - Caractères coréens dans WebVTT rompus après Android 7.1.
+* ZD#40584 - L’application de référence Primetime n’est pas créée avec la dernière version de la version graduelle.
 
 ### Problèmes résolus dans les versions précédentes
+
+**Android TVSDK 3.11**
+
+* ZD#41252 - Caractères coréens dans WebVTT rompus après Android 7.1.
 
 **Android TVSDK 3.10**
 
