@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ TVSDK annule maintenant le téléchargement du segment en cours, si nécessaire,
    Expérience TV consistant à se joindre au milieu d’une publicité sans déclencher le suivi de la publicité partiellement visionnée.\
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
 
-   * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
+   * La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
 
    * Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis de la troisième publicité seulement sont déclenchés.
 
@@ -393,28 +393,6 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Résolution des publicités différées | VOD | Y |
 | Prise en charge des marqueurs de discontinuité - SSAI | VOD + Live | Y |
 | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | VOD + Live | Y |
-| 302 Attractions de redirection | VOD + Live | Y |
-
-| Fonction | Type de contenu | HLS |
-|---|---|---|
-| Lecture générale, publicités activées | VOD + Live | Y |
-| Contenu FER avec publicités activées | VOD | Y |
-| Comportements publicitaires par défaut | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| Publicités MP4 | VOD + Live | Y (provenant de CRS) |
-| Lecture à l&#39;aide de publicités activée | VOD + Live | Y |
-| Publicité uniquement | VOD | Y |
-| Paramètres de ciblage | VOD + Live | Y |
-| Paramètres personnalisés | VOD + Live | Y |
-| Comportements publicitaires personnalisés | VOD + Live | Y |
-| Balises publicitaires personnalisées | Live | Y |
-| Résolveurs d’annonces personnalisés | VOD + Live | Y |
-| Résolveur d’annonce personnalisé à roue libre | VOD | Y |
-| C3 | VOD + Live | Non pris en charge |
-| Résolution des publicités différées | VOD | Y |
-| Prise en charge des marqueurs de discontinuité - SSAI | VOD + Live | Y |
-| Publicités d’accompagnement, bannières publicitaires et publicités cliquables | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Sortie de publicité anticipée | Live | Y |
 | Hiérarchisation des créatifs basée sur des règles | VOD + Live | Y |
@@ -507,7 +485,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD#33740 - TVSDK lance un avertissement inutile juste après la création d’un objet MediaPlayer et l’appel de replaceCurrentResource()
 
-   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état suspendu
+   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état de suspension
 
 * ZD#36442 - Chaque nouvelle lecture déconnecte la session de débogage à distance, rendant impossible le débogage.
 
