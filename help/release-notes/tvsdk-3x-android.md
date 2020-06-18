@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
-source-wordcount: '5415'
+source-wordcount: '5417'
 ht-degree: 0%
 
 ---
@@ -295,8 +295,8 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **Prise en charge des processus**
 
-   * **Intégration de la facturation directe : envoie les mesures de facturation à l’arrière-plan Adobe Analytics, qui est certifié par Adobe Primetime pour les flux utilisés par le client.**
-   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics du client ou n’est pas inclus dans les appels de serveur Analytics. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
+   * **Intégration de la facturation directe -** envoie les mesures de facturation au serveur principal Analytics Adobe, qui est certifié par Adobe Primetime pour les flux utilisés par le client.
+   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports de Adobe Primetime. Cela n’interfère pas avec les suites de rapports Adobe ou les appels au serveur du client, ni ne les inclut. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
 
    * **Prise en charge du basculement améliorée -** Stratégies supplémentaires mises en oeuvre pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs hôtes, des fichiers de liste de lecture et des segments.
 
@@ -357,7 +357,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Basculement avancé | VOD + Live | Y |
 | Notifications de la qualité de service et du lecteur | VOD + Live | Y |
 | Prise en charge des en-têtes de cookie | VOD + Live | Y |
-| Prise en charge des en-têtes HTTP personnalisés | VOD + Live | Y (liste blanche requise) |
+| Prise en charge des en-têtes HTTP personnalisés | VOD + Live | Y (autoriser la mise en vente requise) |
 | Définir les paramètres de contrôle de la mémoire tampon | VOD + Live | Y |
 | Définition des contrôles de débit binaire adaptatif | VOD + Live | Y |
 | Balises de manifeste personnalisées | VOD + Live | Y |
@@ -414,7 +414,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 
 | Fonction | Type de contenu | HLS |
 |---|---|---|
-| Intégration de VHL Adobe Analytics | VOD + Live | Y |
+| Intégration d’Adobe Analytics VHL | VOD + Live | Y |
 | Facturation | VOD + Live | Y |
 
 ## Problèmes résolus {#resolved-issues}
@@ -468,11 +468,11 @@ Cette section présente un résumé du problème résolu dans la version Android
    * Correction d’un cas spécifique lié aux événements de suivi des publicités.
 * ZD#37491 - Code d’état HTTP avec méta d’erreur absent.
    * Travail sur la propagation des erreurs réseau plus élevées dans la pile.
-* ZD#37808 - En-tête personnalisé de la liste blanche.
+* ZD#37808 - Liste autorisée d’un nouvel en-tête personnalisé.
    * La prise en charge de SSAI_TAG a été ajoutée dans le cadre de ce correctif.
 * ZD#37622 - Erreurs de syntaxe URIS à partir de capsules publicitaires spécifiques.
    * Correction d’un problème de blocage de la lecture de flux lorsque des publicités destinées à l’application Android du client contenaient un % non codé.
-* ZD#37631 - Mécanisme de nouvelle tentative de manifeste principal pour Android TVSDK.
+* ZD#37631 - Mécanisme de nouvelle tentative de manifeste Maître pour Android TVSDK.
    * Nouvelle API Ajoutée dans la configuration réseau pour gérer cette amélioration. Si cette API n&#39;est pas utilisée, le manifeste n&#39;est pas réessayé. S&#39;il est utilisé, le manifeste est alors réessayé pour gérer les erreurs réseau et les dépassements de délai.
 
 **Version 3.2**
