@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ TVSDK annule maintenant le téléchargement du segment en cours, si nécessaire,
 
 * **Chargement sécurisé des publicités via HTTPS**
 
-   Adobe Primetime permet de demander un premier appel au serveur d’annonces primetime et au serveur CRS sur https.
+   Adobe Primetime offre une option pour demander le premier appel au serveur d’annonces primetime et au serveur CRS sur https.
 
 * **AdSystem et ID créatif ajoutés aux demandes CRS**
 
@@ -146,8 +149,8 @@ Remarque : La commutation ABR, la lecture de l’astuce, l’insertion d’annon
 
 * **Prise en charge des processus**
 
-   * **Intégration de la facturation directe : envoie les mesures de facturation à l’arrière-plan d’Adobe Analytics, qui est certifié par Adobe Primetime pour les flux utilisés par le client.** 
-TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client, ni ne les inclut. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
+   * **Intégration de la facturation directe -** envoie les mesures de facturation au serveur principal Analytics Adobe, qui est certifié par Adobe Primetime pour les flux utilisés par le client.
+TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports de Adobe Primetime. Cela n’interfère pas avec les suites de rapports Adobe ou les appels au serveur du client, ni ne les inclut. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
    * **Prise en charge du basculement améliorée -** Stratégies supplémentaires mises en oeuvre pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs hôtes, des fichiers de liste de lecture et des segments.
 
 * **Publicité**
@@ -157,7 +160,7 @@ TVSDK collecte automatiquement des mesures, en conformité avec le contrat de ve
 
 * **Analytics**
 
-   * **VHL 2.0 -** Il s’agit de la dernière intégration optimisée de la bibliothèque Video Heartbeats Library (VHL) pour la collecte automatique des données d’utilisation d’Adobe Analytics. La complexité des API a été réduite afin de faciliter la mise en oeuvre. Téléchargez la bibliothèque VHL [v2.0.0 pour Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) et extrayez le fichier JAR dans le dossier libs.
+   * **VHL 2.0 -** Il s’agit de la dernière intégration optimisée de la bibliothèque Video Heartbeats Library (VHL) pour la collecte automatique de données d’utilisation pour Adobe Analytics. La complexité des API a été réduite afin de faciliter la mise en oeuvre. Téléchargez la bibliothèque VHL [v2.0.0 pour Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) et extrayez le fichier JAR dans le dossier libs.
 
 * **SizeAvaliableEventListener**
    * Les méthodes getHeight() et getWidth() de SizeAvailableEvent renvoient désormais respectivement la sortie en hauteur et en largeur. Le format d’affichage peut être calculé comme suit :
@@ -204,7 +207,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un Y indique que la fonctionna
 | Basculement avancé | VOD + Live | Y |
 | Notifications de la qualité de service et du lecteur | VOD + Live | Y |
 | Prise en charge des en-têtes de cookie | VOD + Live | Y |
-| Prise en charge des en-têtes HTTP personnalisés | VOD + Live | Y (liste blanche requise) |
+| Prise en charge des en-têtes HTTP personnalisés | VOD + Live | Y (autoriser la mise en vente requise) |
 | Définir les paramètres de contrôle de la mémoire tampon | VOD + Live | Y |
 | Définition des contrôles de débit binaire adaptatif | VOD + Live | Y |
 | Balises de manifeste personnalisées | VOD + Live | Y |
@@ -283,7 +286,7 @@ Cette section présente un résumé du problème résolu dans la publication de 
 * ZD #34149 - Le lecteur continue à demander des manifestes même si une erreur se produit.
    * Correction du cas où TVSDK effectuait des appels répétitifs même lorsque tous les profils étaient en panne (erreur 404).
 * ZD #31533 - Lecture audio sur Android après l’envoi de l’application en arrière-plan.
-   * Ajout `enableAudioPlaybackInBackground` de l’API MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
+   * Ajoutée `enableAudioPlaybackInBackground` API de MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
 
 **Android TVSDK 2.5.5**
 
@@ -291,7 +294,7 @@ Cette section présente un résumé du problème résolu dans la publication de 
    * En raison de la variable m_nOutputHeight (dans AndroidMCVideoDecoder) mise à jour avec la hauteur d’image au lieu de la hauteur de sortie réelle. Changements appropriés apportés à la fonction getVideoFrame pour calculer correctement m_nOutputHeight.
 * ZD #26614 - Urgent — service d&#39;annonce tiers / programmatique — échec de la diffusion des impressions.
    * Amélioration de la correction précédente en gérant la casse dans l’analyse XML où le problème était reproductible lorsque &quot;space&quot; est placé avant le signe &quot;égal&quot; comme &lt;VAST version =&quot;2.0&quot;>
-* ZD #29296 - Android : Ajouter AdSystem et ID Creative aux demandes CRS.
+* ZD #29296 - Android : Ajoutez AdSystem et Creative ID aux demandes CRS.
    * Incluez désormais les paramètres &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
 * ZD #33062 - Le TVSDK se bloque sur l’occurrence du caractère pipe dans la réponse VAST sous le noeud CDATA.
    * API setEncodeUrlForTracking dans la classe NetworkConfiguration supprimée en tant que caractères non sûrs dans une URL à coder.
@@ -299,7 +302,7 @@ Cette section présente un résumé du problème résolu dans la publication de 
    * Correction de la logique maintenant. Lors de l&#39;utilisation de fichiers multimédias au format webm et 3gpp, CRS demande à être envoyé pour webm. Et en utilisant les deux fichiers de support au format 3gpp, le CRS demande à être envoyé pour le fichier 3gpp à débit le plus élevé.
 * ZD #33125 - L’application Android se bloque avec une balise DoubleClick spécifique dans le VMAP.
    * Correction du scénario pour éviter le blocage.
-* ZD #32256 - Problème de rotation des licences et de rotation des clés - Adobe Access.
+* ZD #32256 - Problème de rotation des licences et de rotation des clés - Accès Adobe.
    * Correction de l’initialisation des segments avec les métadonnées DRM pour le contenu SampleAES. Fonctionne correctement avec le contenu AES128.
 * ZD #33619 - Transfert rapide d’un contenu de liste de lecture en croissance bloqué en état de mise en mémoire tampon près d’un point de production.
    * Traitement de l&#39;affaire lors de la traversée du point d&#39;accès en mode de jeu par astuces.
@@ -310,7 +313,7 @@ Cette section présente un résumé du problème résolu dans la publication de 
 * ZD #34528 - Résolution vidéo ne mettant pas à niveau au-delà de 640x360 sur le dongle 3e génération de FireTV.
    * Amélioration du correctif pour inclure les dernières mises à jour du microprogramme.
 * ZD #34793 - TVSDK 2.5.x se bloquait avec le programme de résolution de contenu personnalisé dans certains cas lorsque VideoEngine supposait que les paramètres d’audience étaient disponibles et qu’ils ne l’étaient pas.
-   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). Ajout d’une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
+   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). Ajouté une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
 * ZD #32584 - Impossible d&#39;accéder à l&#39;information complète présente dans le noeud &lt;Extensions> d&#39;une réponse VAST.
    * Correction d’un problème lié à l’analyse XML. Désormais, NetworkAdInfo fournit les informations complètes présentes dans le noeud &lt;Extensions>.
 * ZD #35086 - Pas d&#39;obtention des données d&#39;extension complètes du lecteur en cas de réponses VMAP spécifiques.
@@ -430,4 +433,4 @@ Cette version de TVSDK présente les problèmes suivants :
 * [Document](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) d’API C++ TVSDK Android - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient davantage de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une meilleure compréhension de l’API Java.
 * [Guide de migration de TVSDK 1.4 à 2.5 pour Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Pour gérer les scénarios d’activation/désactivation d’écran, consultez le `Application_Changes_for_Screen_On_Off.pdf` fichier inclus dans la compilation.
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
