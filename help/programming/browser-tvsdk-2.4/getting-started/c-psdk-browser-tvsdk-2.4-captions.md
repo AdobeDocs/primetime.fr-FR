@@ -5,7 +5,10 @@ seo-title: Légendes
 title: Légendes
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -56,4 +59,3 @@ player:{
  
 }); 
 ```
-
