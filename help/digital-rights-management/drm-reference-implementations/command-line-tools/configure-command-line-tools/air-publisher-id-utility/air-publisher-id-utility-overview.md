@@ -3,7 +3,10 @@ seo-title: Présentation
 title: Présentation
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 Lorsque vous créez un fichier AIR, l’outil ADT (AIR Developer Tool) génère automatiquement un identifiant d’éditeur. L’utilitaire d’identification de l’éditeur AIR ( [!DNL AdobePublisherIDUtility.jar]) calcule l’identifiant de l’éditeur pour une application AIR.
 
-L’ID d’éditeur est unique au certificat que vous utilisez pour créer un fichier AIR. Si vous réutilisez le même certificat pour plusieurs applications AIR, toutes les applications AIR ont le même ID d’éditeur. Une version AIR qui succède à la version 1.5.2 n’ajoute pas l’identifiant d’éditeur généré à un fichier. Par conséquent, si vous prévoyez d’utiliser une liste blanche d’applications AIR, utilisez cet outil pour déterminer l’identifiant de l’éditeur.
+L’ID d’éditeur est unique au certificat que vous utilisez pour créer un fichier AIR. Si vous réutilisez le même certificat pour plusieurs applications AIR, toutes les applications AIR ont le même ID d’éditeur. Une version AIR qui succède à la version 1.5.2 n’ajoute pas l’identifiant d’éditeur généré à un fichier. Par conséquent, si vous prévoyez d’utiliser une liste autorisée d’applications AIR, utilisez cet outil pour déterminer l’identifiant de l’éditeur.
 
 >[!NOTE] {class=&quot;- rubrique/note &quot;}
 >
->L’ID d’éditeur utilisé pour l’application de la liste blanche AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier de l’application.
+>L’ID d’éditeur utilisé pour l’application de la liste autorisée AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier de l’application.
 
 ## Utilisation de la ligne de commande de l’utilitaire d’identification de l’éditeur AIR {#air-publisher-id-utility-command-line-usage}
 
