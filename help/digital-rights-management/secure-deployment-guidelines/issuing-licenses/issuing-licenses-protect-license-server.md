@@ -5,7 +5,10 @@ seo-title: Protection du serveur de licences
 title: Protection du serveur de licences
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Vous devez vous assurer d’émettre des licences en toute sécurité. Tenez com
 
 ## Consommation de listes CRL générées localement {#consuming-locally-generated-crls}
 
-Pour utiliser des listes de révocation des certificats générées localement et des listes de mise à jour de stratégie, utilisez les API DRM d’Adobe Primetime pour vérifier la signature.
+Pour utiliser des listes de révocation des certificats générées localement et des listes de mise à jour de stratégie, utilisez les API DRM Adobe Primetime pour vérifier la signature.
 
 Les API suivantes vérifient que les listes n’ont pas été modifiées et que les listes ont été signées par le serveur de licences approprié :
 
@@ -30,23 +33,23 @@ Les API suivantes vérifient que les listes n’ont pas été modifiées et que 
 
 ## Consommation de listes CRL publiées par Adobe{#consuming-crls-published-by-adobe}
 
-Le SDK télécharge régulièrement les listes de révocation des certificats publiées par Adobe. Vous devez vous assurer que l’accès à ces fichiers n’est pas bloqué ou que l’application de ces listes CRL n’est pas empêchée.
+Le SDK télécharge régulièrement les listes CRL publiées par Adobe. Vous devez vous assurer que l’accès à ces fichiers n’est pas bloqué ou que l’application de ces listes CRL n’est pas empêchée.
 
-Le SDK dispose d’une option de configuration permettant d’ignorer les erreurs lors de la récupération des listes de révocation des certificats Adobe et vous ne pouvez appliquer cette option que dans les environnements de développement. Dans les environnements de production, le serveur de licences doit récupérer les listes CRL auprès d’Adobe. Si le serveur de licences ne parvient pas à obtenir une liste de révocation des certificats valide, une erreur s’est produite.
+Le SDK dispose d’une option de configuration permettant d’ignorer les erreurs lors de la récupération des CRL Adobe et vous pouvez uniquement appliquer cette option dans les environnements de développement. Dans les environnements de production, le serveur de licences doit récupérer les listes CRL d’Adobe. Si le serveur de licences ne parvient pas à obtenir une liste de révocation des certificats valide, une erreur s’est produite.
 
 ## Génération de listes CRL pour compléter celles publiées par Adobe{#generating-crls-to-supplement-those-published-by-adobe}
 
 Vous pouvez utiliser Adobe Primetime DRM pour créer des listes CRL qui complètent la liste CRL de l’ordinateur publiée par Adobe.
 
-Le SDK DRM de Primetime vérifie et applique les listes de révocation des certificats Adobe. Cependant, vous pouvez interdire d’autres ordinateurs clients en créant une liste CRL qui révoque des informations d’identification d’ordinateur supplémentaires en transmettant la liste CRL au SDK DRM de Primetime. Lorsque vous émettez une licence, le SDK vérifie la liste de révocation des certificats d’Adobe et votre liste de révocation des certificats.
+Le SDK DRM de Primetime vérifie et applique les CRL Adobe. Cependant, vous pouvez interdire d’autres ordinateurs clients en créant une liste CRL qui révoque des informations d’identification d’ordinateur supplémentaires en transmettant la liste CRL au SDK DRM de Primetime. Lorsque vous émettez une licence, le SDK vérifie la CRL Adobe et votre CRL.
 
 Pour générer des listes CRL, voir [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
 ## Détection de restauration {#rollback-detection}
 
-Si votre implémentation d’Adobe Primetime DRM utilise des règles de fonctionnement qui exigent que le client conserve l’état (par exemple, l’intervalle de lecture), Adobe recommande que le serveur conserve le suivi du compteur d’annulation et utilise la liste blanche AIR ou SWF.
+Si votre implémentation de Adobe Primetime DRM utilise des règles de fonctionnement qui exigent que le client conserve l’état (par exemple, l’intervalle de lecture), Adobe recommande que le serveur conserve le suivi du compteur d’annulation et utilise AIR ou SWF pour autoriser la mise en vente.
 
-Le compteur d&#39;annulation est envoyé au serveur dans la plupart des requêtes du client. Si votre mise en oeuvre de Primetime DRM ne nécessite pas le compteur d’annulation, elle peut être ignorée. Dans le cas contraire, Adobe conseille au serveur de stocker l’ID d’ordinateur aléatoire, obtenu à l’aide de [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), et la valeur de compteur actuelle dans une base de données.
+Le compteur d&#39;annulation est envoyé au serveur dans la plupart des requêtes du client. Si votre mise en oeuvre de Primetime DRM ne nécessite pas le compteur d’annulation, elle peut être ignorée. Dans le cas contraire, Adobe recommande au serveur de stocker l’ID d’ordinateur aléatoire, obtenu à l’aide de [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), et la valeur de compteur actuelle dans une base de données.
 
 Pour plus d&#39;informations sur la façon d&#39;incrémenter et de suivre le compteur d&#39;annulation, consultez [ClientState](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/ClientState.html) et Détection de restauration.
 
@@ -72,17 +75,17 @@ Une attaque par déni de service est une tentative d’attaque par des attaquant
 
 Pour en savoir plus sur la protection de relecture, voir [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Tenir à jour une liste blanche des gestionnaires de contenu approuvés{#maintain-a-whitelist-of-trusted-content-packagers}
+## Tenir à jour une liste autorisée de gestionnaires de contenu approuvés{#maintain-a-allowlist-of-trusted-content-packagers}
 
-Une liste blanche est une liste d’entités de confiance.
+Une liste autorisée est une liste d&#39;entités de confiance.
 
-Pour les gestionnaires de packages de contenu, les entités sont des organisations dont le propriétaire du contenu fait confiance pour assembler (ou chiffrer) les fichiers vidéo et créer du contenu protégé DRM. Lors du déploiement d’Adobe Primetime DRM, vous devez conserver une liste blanche des packages de contenu approuvés. Vous devez également vérifier l’identité du gestionnaire de contenu dans les métadonnées DRM d’un fichier protégé par DRM avant d’émettre une licence.
+Pour les gestionnaires de packages de contenu, les entités sont des organisations dont le propriétaire du contenu fait confiance pour assembler (ou chiffrer) les fichiers vidéo et créer du contenu protégé DRM. Lors du déploiement de Adobe Primetime DRM, vous devez conserver une liste autorisée de gestionnaires de contenu approuvés. Vous devez également vérifier l’identité du gestionnaire de contenu dans les métadonnées DRM d’un fichier protégé par DRM avant d’émettre une licence.
 
 Pour savoir comment obtenir des informations sur l’entité qui a inclus le contenu, voir [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
 ## Délai d’expiration pour les jetons d’authentification{#timeout-for-authentication-tokens}
 
-Tous les jetons d’authentification générés par le SDK DRM d’Adobe Primetime ont un délai d’expiration pour protéger la sécurité de l’application.
+Tous les jetons d’authentification générés par le SDK DRM Adobe Primetime ont un délai d’expiration pour protéger la sécurité de l’application.
 
 L’expiration du jeton d’authentification est spécifiée, utilisez le SDK DRM Primetime lors du traitement d’une demande d’authentification. Une fois arrivé à expiration, le jeton n’est plus valide et l’utilisateur doit s’authentifier de nouveau auprès du serveur de licences.
 
