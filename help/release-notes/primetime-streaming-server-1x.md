@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Nouveautés des versions 1.3 et 1.4 de Primetime Streaming Server.
 
 * Le chiffrement AES HLS est disponible pour les workflows en direct et VOD. L’Origine Primetime peut appliquer le chiffrement HLS AES à des flux HLS entrants ou à des fichiers MP4.
 * Il peut également appliquer le chiffrement JIT HLS AES lorsqu’il est utilisé pour convertir des flux HDS entrants en flux HLS.
-* L’Origine Primetime prend désormais en charge la liste blanche SWF pour les flux PHLS. Auparavant, il était pris en charge uniquement pour les flux de SPHD.
+* L&#39;Origine Primetime prend désormais en charge les fichiers SWF permettant l&#39;inscription des flux PHLS. Auparavant, il était pris en charge uniquement pour les flux de SPHD.
 
 **Primetime Live Packager**
 
@@ -57,7 +60,7 @@ Les certificats PHDS/PHLS ont été actualisés. La même date d&#39;expiration 
 La version 1.3.1 fait référence au correctif logiciel. Les améliorations suivantes en font une mise à niveau recommandée pour les clients, car elle consiste en des améliorations de performances clés pour les cas d’utilisation du format JIT MP4 :
 
 1. Correctif de performances pour la génération MP4 JIT m3u8 sur Origine avec DRM, y compris la rotation de clé
-1. Ajout d’une configuration &quot;CopyQueryParamToJITFragmentURIs&quot; pour copier les paramètres de requête de la demande de manifeste JIT vers les URI de fragment générés pour la conversion JIT MP4. Reportez-vous à la documentation du serveur d’Origines HTTP pour obtenir des exemples d’utilisation.
+1. Ajouté une configuration &quot;CopyQueryParamToJITFragmentURIs&quot; pour copier les paramètres de requête de la demande de manifeste JIT vers les URI de fragment générés pour la conversion JIT MP4. Reportez-vous à la documentation du serveur d’Origines HTTP pour obtenir des exemples d’utilisation.
 1. Autoriser les fichiers MP4 sans extension pour la conversion JIT, via la configuration Config/MP4Only ajoutée au fichier vod.xml
 
 ### Correctifs inclus dans la version 1.3.1 {#bug-fixes-included-in-release-1}
@@ -234,7 +237,7 @@ La configuration minimale requise ci-dessus est vraie pour Origine Server et Liv
 **Installation du serveur d’Origines HTTP**
 
 1. Téléchargez le logiciel Java JRE et JDK sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d’installation.
-1. Extrayez le fichier d’archive Adobe Primetime - HTTP Origine Server 1.4 `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`sur votre disque.
+1. Extrayez sur votre disque le fichier d’archive Adobe Primetime - HTTP Origine Server 1.4 `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`.
 
 **Pour début à Live Packager** Pour début à l’outil de création de package, exécutez la commande suivante à partir du répertoire racine de l’outil de création de package :\
 `$packager_start.sh`
@@ -324,4 +327,4 @@ Reportez-vous au document de prise en main de Primetime Offline Packager pour ob
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
