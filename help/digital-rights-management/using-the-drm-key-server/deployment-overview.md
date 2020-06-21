@@ -3,7 +3,10 @@ seo-title: Présentation du déploiement de Primetime DRM Key Server
 title: Présentation du déploiement de Primetime DRM Key Server
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -83,9 +86,9 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Informations d’identification DRM Primetime {#primetime-drm-credentials}
 
-Pour traiter les requêtes clés des clients iOS DRM Primetime et Xbox 360, le serveur de clés DRM Primetime doit être configuré avec un jeu d’informations d’identification émises par Adobe. Ces informations d’identification peuvent être stockées dans des fichiers PKCS#12 ( [!DNL .pfx]) ou sur un HSM.
+Pour traiter les requêtes clés des clients iOS DRM Primetime et Xbox 360, le serveur de clés DRM Primetime doit être configuré avec un ensemble d&#39;informations d&#39;identification émises par Adobe. Ces informations d’identification peuvent être stockées dans des fichiers PKCS#12 ( [!DNL .pfx]) ou sur un HSM.
 
-Les [!DNL .pfx] fichiers peuvent être localisés n’importe où, mais pour faciliter la configuration, Adobe conseille de placer les [!DNL .pfx] fichiers dans le répertoire de configuration du client. Pour plus d’informations, voir Fichiers [de configuration du serveur de](#key-server-configuration-files)clés.
+Les [!DNL .pfx] fichiers peuvent être localisés n&#39;importe où, mais pour faciliter la configuration, Adobe recommande de placer les [!DNL .pfx] fichiers dans le répertoire de configuration du locataire. Pour plus d’informations, voir Fichiers [de configuration du serveur de](#key-server-configuration-files)clés.
 
 ### Configuration HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
@@ -143,7 +146,7 @@ Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichie
 
 Tous les fichiers de configuration de client incluent :
 
-* Informations d’identification du serveur de clés - Spécifie une ou plusieurs informations d’identification du serveur de clés (certificat et clé privée) émises par Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* Informations d&#39;identification du serveur de clés - Spécifie une ou plusieurs informations d&#39;identification du serveur de clés (certificat et clé privée) émises par Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
 Le fichier de configuration du client **iOS** comprend les éléments suivants :
 
@@ -153,7 +156,7 @@ Le fichier de configuration du client **Xbox 360** comprend :
 
 * Informations d’identification XSTS - Spécifie les informations d’identification du développeur d’applications utilisées pour déchiffrer les jetons XSTS.
 * Certificat de signature XSTS : indique le certificat utilisé pour vérifier la signature sur les jetons XSTS.
-* Liste blanche de Packager - Certificats de Packager approuvés par le serveur de clés. S’il n’y a aucun certificat packager contenu dans la liste, tous les certificats packager seront approuvés.
+* Liste autorisée Packager - Certificats Packager approuvés par le serveur de clés. S’il n’y a aucun certificat packager contenu dans la liste, tous les certificats packager seront approuvés.
 
 ## Fichiers journaux {#log-files}
 
