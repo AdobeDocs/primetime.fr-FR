@@ -3,14 +3,17 @@ seo-title: Création de stratégies DRM personnalisées (facultatif)
 title: Création de stratégies DRM personnalisées (facultatif)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
 
 # Création de stratégies DRM personnalisées (facultatif){#create-custom-drm-policies-optional}
 
-Le kit de protection DRM de Primetime Cloud est fourni avec quelques stratégies préconfigurées qui peuvent être utilisées lors de l’assemblage. Si d’autres configurations de stratégie sont souhaitées, par exemple un droit de liste SWF spécifique, le Gestionnaire de stratégies DRM Primetime inclus peut être utilisé pour générer des stratégies personnalisées.
+Le kit de protection DRM de Primetime Cloud est fourni avec quelques stratégies préconfigurées qui peuvent être utilisées lors de l’assemblage. Si d’autres configurations de stratégie sont souhaitées, par exemple un droit d’Liste autorisée SWF spécifique, le Gestionnaire de stratégies DRM Primetime inclus peut être utilisé pour générer des stratégies personnalisées.
 
 >[!NOTE]
 >
@@ -28,7 +31,7 @@ java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 
 Si vous utilisez l’authentification/droits personnalisés DRM de Primetime Cloud et souhaitez créer de manière dynamique une stratégie DRM pour chaque demande de licence (au lieu d’extraire des stratégies d’un pool pré-généré), Adobe vous recommande d’utiliser directement le SDK Java DRM de Primetime. L’utilisation directe du SDK Java est plus rapide que celle de l’ [!DNL AdobePolicyManager.jar] outil, qui génère automatiquement le fichier de stratégie sur le disque, entraînant une surcharge d’E/S du disque.
 
-Vous trouverez un exemple de code à l’aide du SDK Java dans le [!DNL /Primetime DRM PolicyManager/sampleCode/] répertoire, nommé [!DNL CreatePolicy.java] et [!DNL CreatePolicyWithOutputProtection.java]. Vous trouverez des javadocs et la documentation relative au SDK Java dans [Présentation d’Adobe Primetime DRM SDK.](../../../digital-rights-management/drm-sdk-overview/overview.md)
+Vous trouverez un exemple de code à l’aide du SDK Java dans le [!DNL /Primetime DRM PolicyManager/sampleCode/] répertoire, nommé [!DNL CreatePolicy.java] et [!DNL CreatePolicyWithOutputProtection.java]. Vous trouverez des javadocs et la documentation relative au SDK Java dans [An Overview of Adobe Primetime DRM SDK.](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
 Pour créer et exécuter les exemples, copiez les fichiers .java dans le dossier ../libs/ et exécutez :
 
