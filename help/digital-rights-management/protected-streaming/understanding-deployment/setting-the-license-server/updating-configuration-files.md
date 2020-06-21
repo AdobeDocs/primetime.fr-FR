@@ -5,7 +5,10 @@ seo-title: Mise à jour des fichiers de configuration
 title: Mise à jour des fichiers de configuration
 uuid: 34b3247c-3458-49de-b1b0-dc0ebbf61c88
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Vous pouvez à tout moment modifier le mot de passe HSM [!DNL flashaccess-global
 
 ## Mise à jour du fichier de configuration du client {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Vous pouvez à tout moment modifier toutes les valeurs spécifiées dans le [!DNL flashaccess-tenant.xml] fichier. Les modifications prennent effet la prochaine fois que le serveur recharge le fichier de configuration. En outre, le serveur recherche toutes les modifications dans tous les fichiers d’informations d’identification ( [!DNL .pfx]) et les fichiers de certificat de liste blanche de packager qui sont référencés dans le fichier de configuration du client.
+Vous pouvez à tout moment modifier toutes les valeurs spécifiées dans le [!DNL flashaccess-tenant.xml] fichier. Les modifications prennent effet la prochaine fois que le serveur recharge le fichier de configuration. En outre, le serveur recherche toutes les modifications apportées à tous les fichiers d’informations d’identification ( [!DNL .pfx]) et aux fichiers de certificat de liste autorisée de packager référencés dans le fichier de configuration du client.
