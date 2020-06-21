@@ -6,12 +6,15 @@ seo-title: Propriétés de configuration
 title: Propriétés de configuration
 uuid: 216921d1-a9c1-4650-9dce-c025836986e5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 0%
 
 ---
 
 
-# Propriétés de configuration{#configuration-properties}
+# Propriétés de configuration {#configuration-properties}
 
 <!--<a id="section_20A96CDCC5C340DEAF455C6E300E5712"></a>-->
 
@@ -87,11 +90,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Clients DRM qui ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules DRM qui ne peuvent pas être utilisées (liste noire). </p> <p>La valeur se compose de paires nom=valeur <span class="codeph"></span> séparées par des virgules au format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win, release=2.0, arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Clients DRM qui ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules DRM qui ne peuvent pas être utilisées (liste bloquée). </p> <p>La valeur se compose de paires nom=valeur <span class="codeph"></span> séparées par des virgules au format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win, release=2.0, arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklist</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Les runtimes d'application ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules d’exécution qui ne peuvent pas être utilisées (liste noire). </p> <p>La valeur se compose de paires nom=valeur <span class="codeph"></span> séparées par des virgules au format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arche|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Les runtimes d'application ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules d’exécution qui ne peuvent pas être utilisées (liste bloquée). </p> <p>La valeur se compose de paires nom=valeur <span class="codeph"></span> séparées par des virgules au format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arche|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
@@ -161,7 +164,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.ota</span> </td> 
-   <td colname="2" class="- topic/entry ">Spécifie les types de connexion OTA (over the air) qui doivent être autorisés. Les types de connexion valides sont les suivants : 
+   <td colname="2" class="- topic/entry ">Spécifie les types de connexion OTA (over the air) qui doivent être autorisés dans la liste. Les types de connexion valides sont les suivants : 
     <ul id="ul_iz5_4fp_fs"> 
      <li id="li_FB07519EFEFE4B95B3B1F5BFD4DE6591"><span class="codeph"> MIRACATE</span> </li> 
      <li id="li_51E7DE83679F4630B01264407DAD0E84"><span class="codeph"> AIRPLAY</span> </li> 
@@ -183,11 +186,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications autres que Flash (Adobe AIR, iOS, Android, etc.) qui sont autorisés à lire du contenu protégé. La propriété doit utiliser le format suivant : <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications non Flash (Adobe AIR, iOS, Android, etc.) qui sont autorisés à lire du contenu protégé. La propriété doit utiliser le format suivant : <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications SWF autorisées à lire du contenu protégé. La propriété doit utiliser le format suivant : </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications SWF autorisées à lire du contenu protégé. La propriété doit utiliser le format suivant : </p> <p class="- topic/p "> 
      <ul id="ul_EC20F52AD95C4BE3B7F703048A43CDF0"> 
       <li id="li_3E4A47D925C24834A2C25BC5943279D4"><span class="+ topic/ph pr-d/codeph codeph">URL</span> </li> 
       <li id="li_9A7CAF081C5F488FB5CDA6D38C5552F6"><span class="+ topic/ph pr-d/codeph codeph">file=swf_file</span> </li> 
