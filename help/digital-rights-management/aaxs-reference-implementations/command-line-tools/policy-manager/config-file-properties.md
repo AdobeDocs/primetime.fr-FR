@@ -3,7 +3,10 @@ seo-title: Propriétés du fichier de configuration
 title: Propriétés du fichier de configuration
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,11 @@ Le fichier de configuration spécifie les propriétés suivantes. Pour les noms 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Les clients DRM ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules DRM qui ne peuvent pas être utilisées (liste noire). La valeur se compose de paires nom=valeur séparées par des virgules avec le format suivant : <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple : <span class="codeph"> os=Win, release=2.0, arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Les clients DRM ne peuvent pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules DRM qui ne peuvent pas être utilisées (liste bloquée). La valeur se compose de paires nom=valeur séparées par des virgules avec le format suivant : <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple : <span class="codeph"> os=Win, release=2.0, arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklist</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Les runtimes d'application ne pouvaient pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules d’exécution qui ne peuvent pas être utilisées (liste noire). La valeur se compose de paires nom=valeur séparées par des virgules avec le format suivant : <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arche|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Les runtimes d'application ne pouvaient pas accéder au contenu protégé. Cette option spécifie une liste de versions des modules d’exécution qui ne peuvent pas être utilisées (liste bloquée). La valeur se compose de paires nom=valeur séparées par des virgules avec le format suivant : <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arche|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Les paires nom/valeur supplémentaires doivent être séparées par des virgules. Par exemple, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nom/valeur-paires</i> </p> </td> 
@@ -93,7 +96,7 @@ Le fichier de configuration spécifie les propriétés suivantes. Pour les noms 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.useRootLicense</span> </td> 
-   <td colname="2" class="- topic/entry ">Indique si cette stratégie comporte une licence racine (voir Chaînage <i class="+ topic/ph hi-d/i ">de licence</i> amélioré dans <i class="+ topic/ph hi-d/i ">Utilisation d’Adobe Access pour la protection du contenu</i>). </td> 
+   <td colname="2" class="- topic/entry ">Indique si cette stratégie possède une licence racine (voir Chaînage <i class="+ topic/ph hi-d/i ">de licence</i> amélioré dans <i class="+ topic/ph hi-d/i ">Utilisation de l’accès Adobe pour la protection du contenu</i>). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.startDate</span> </td> 
@@ -145,11 +148,11 @@ Le fichier de configuration spécifie les propriétés suivantes. Pour les noms 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste blanche des applications Adobe AIR ou iOS autorisées à lire du contenu protégé. La propriété doit utiliser le format suivant : <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée des applications Adobe AIR ou iOS autorisées à lire du contenu protégé. La propriété doit utiliser le format suivant : <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste blanche des applications SWF permettant de lire du contenu protégé. Utilisez le format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> ou fichier=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> est le fichier SWF pour lequel calculer le hachage et max_time_to_verify est le temps maximum pour permettre le téléchargement et la vérification du SWF (en secondes).<i class="+ topic/ph hi-d/i "></i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications SWF autorisées à lire du contenu protégé. Utilisez le format suivant : </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> ou fichier=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> est le fichier SWF pour lequel calculer le hachage et max_time_to_verify est le temps maximum pour permettre le téléchargement et la vérification du SWF (en secondes).<i class="+ topic/ph hi-d/i "></i> </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
