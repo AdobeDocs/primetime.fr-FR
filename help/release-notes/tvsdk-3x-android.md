@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ TVSDK annule maintenant le téléchargement du segment en cours, si nécessaire,
    Expérience TV consistant à se joindre au milieu d’une publicité sans déclencher le suivi de la publicité partiellement visionnée.\
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
 
-   * La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
+   * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
 
    * Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis de la troisième publicité seulement sont déclenchés.
 
@@ -435,7 +435,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 **Android TVSDK 3.10**
 
-* ZD#40340 - L’application se bloque avec l’erreur &quot;App Not Responding&quot; lors de la tentative de lecture après la mise en liste noire de tous les fichiers TS (TypeScript).
+* ZD#40340 - L’application se bloque avec l’erreur &quot;App Not Responding&quot; lors de la tentative de lecture après avoir bloqué la liste de tous les fichiers TS (TypeScript).
 
 **Android TVSDK 3.8**
 
@@ -485,7 +485,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD#33740 - TVSDK lance un avertissement inutile juste après la création d’un objet MediaPlayer et l’appel de replaceCurrentResource()
 
-   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état de suspension
+   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état suspendu
 
 * ZD#36442 - Chaque nouvelle lecture déconnecte la session de débogage à distance, rendant impossible le débogage.
 
