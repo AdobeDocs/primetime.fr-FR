@@ -3,7 +3,10 @@ seo-title: Contrôles de protection de sortie
 title: Contrôles de protection de sortie
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Le paramètre de protection de sortie contrôle si la sortie sur des périphéri
 
 Contrôle si la sortie sur les périphériques de rendu externes doit être restreinte. Un périphérique externe est défini comme tout périphérique vidéo ou audio qui n’est pas incorporé à l’ordinateur. Les écrans intégrés, tels que ceux des ordinateurs portables, ne sont pas considérés comme externes dans le scénario des contrôles de protection de sortie.
 
-Les types de connexion OTA (survol) sont tous blacklistés par défaut, mais peuvent être autorisés explicitement si nécessaire. Les connexions OTA prises en charge sont les suivantes : Miracast, AirPlay, DLNA et WIDI.
+Les types de connexion OTA sont tous répertoriés par défaut, mais peuvent être autorisés explicitement si nécessaire. Les connexions OTA prises en charge sont les suivantes : Miracast, AirPlay, DLNA et WIDI.
 
 **Protection de la sortie basée sur la résolution : (Disponible à partir de la version 5.3.) ** Ceci offre une protection de sortie basée sur le nombre de pixels verticaux du contenu, ce qui permet de spécifier diverses exigences de protection en fonction du nombre de pixels verticaux.
 
