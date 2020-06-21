@@ -5,7 +5,10 @@ seo-title: Utilisation de la ligne de commande de Policy Manager
 title: Utilisation de la ligne de commande de Policy Manager
 uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1228'
+ht-degree: 0%
 
 ---
 
@@ -109,7 +112,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[ : <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications AIR capables de lire du contenu protégé. </p> <p class="- topic/p ">Vous pouvez appliquer cette option pour restreindre les éditeurs, les applications et les versions qui peuvent accéder au contenu protégé par cette stratégie DRM. </p> <p class="- topic/p ">Si vous ne spécifiez pas <i class="+ topic/ph hi-d/i ">appId</i>, toutes les applications pour publisher <i class="+ topic/ph hi-d/i ">pubId</i> sont autorisées. </p> <p>Remarque :  <i class="+ topic/ph hi-d/i ">les numéros de version min</i> et <i class="+ topic/ph hi-d/i ">max</i> sont facultatifs. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -air </span> pour autoriser plusieurs applications. Si vous ne spécifiez pas d’application AIR ou SWF, toutes les applications peuvent accéder à ce contenu. Lors d'une mise à jour, pour supprimer toutes les entrées de la liste, appliquez <span class="codeph"> -air </span> sans les arguments restants. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications AIR capables de lire du contenu protégé. </p> <p class="- topic/p ">Vous pouvez appliquer cette option pour restreindre les éditeurs, les applications et les versions qui peuvent accéder au contenu protégé par cette stratégie DRM. </p> <p class="- topic/p ">Si vous ne spécifiez pas <i class="+ topic/ph hi-d/i ">appId</i>, toutes les applications pour publisher <i class="+ topic/ph hi-d/i ">pubId</i> sont autorisées. </p> <p>Remarque :  <i class="+ topic/ph hi-d/i ">les numéros de version min</i> et <i class="+ topic/ph hi-d/i ">max</i> sont facultatifs. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -air </span> pour autoriser plusieurs applications. Si vous ne spécifiez pas d’application AIR ou SWF, toutes les applications peuvent accéder à ce contenu. Lors d'une mise à jour, pour supprimer toutes les entrées de la liste, appliquez <span class="codeph"> -air </span> sans les arguments restants. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmChaîne de liste noire nom </span><i class="+ topic/ph hi-d/i ">/</i> valeur <span class="+ topic/ph pr-d/codeph codeph"></span> paires <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"></span> </td> 
@@ -137,7 +140,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= fichier_swf </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications SWF autorisées à lire du contenu protégé. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -swf </span> pour autoriser plusieurs applications. Si vous ne spécifiez aucune application AIR ou SWF, toutes les applications peuvent accéder à ce contenu. </p> <p>Lors d’une mise à jour, pour supprimer toutes les entrées de la liste, appliquez <span class="codeph"> -swf </span> sans les arguments restants. Si vous souhaitez identifier un fichier SWF par sa valeur de hachage, vous devez spécifier le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre la vérification du fichier SWF (en secondes). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications SWF autorisées à lire du contenu protégé. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -swf </span> pour autoriser plusieurs applications. Si vous ne spécifiez aucune application AIR ou SWF, toutes les applications peuvent accéder à ce contenu. </p> <p>Lors d’une mise à jour, pour supprimer toutes les entrées de la liste, appliquez <span class="codeph"> -swf </span> sans les arguments restants. Si vous souhaitez identifier un fichier SWF par sa valeur de hachage, vous devez spécifier le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre la vérification du fichier SWF (en secondes). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= valeur </span> </td> 
@@ -145,11 +148,11 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -p name= valeur </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ajoute une propriété personnalisée qui apparaît dans la licence générée pour chaque client. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -p </span> pour ajouter plusieurs propriétés. Lors d’une mise à jour, vous devez appliquer <span class="codeph"> -p </span> sans les arguments restants si vous souhaitez supprimer toutes les propriétés. L'interprétation ou le traitement de ces données est géré par l'implémentation de l'application cliente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ajoute une propriété personnalisée qui s’affiche dans la licence générée pour chaque client. </p> <p class="- topic/p ">Vous pouvez spécifier plusieurs options <span class="codeph"> -p </span> pour ajouter plusieurs propriétés. Lors d’une mise à jour, vous devez appliquer <span class="codeph"> -p </span> sans les arguments restants si vous souhaitez supprimer toutes les propriétés. L'interprétation ou le traitement de ces données est géré par l'implémentation de l'application cliente. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;types de connexion&gt; </span> </span> </td> 
-   <td colname="2" class="- topic/entry "> Contraintes en matière de protection de la production par voie aérienne. Le <span class="codeph"> champ </span> liste blanche indique les types de connexion à la liste blanche et le format de &lt;types de connexion&gt; est <span class="codeph"> [type(,type)*] </span>, où le type peut être l’un des suivants : MIRACAST, AIRPLAY, WIDI, DLNA </td> 
+   <td colname="2" class="- topic/entry "> Contraintes en matière de protection de la production dans l'air (OTA). Le <span class="codeph"> champ </span> liste blanche indique les types de connexion à la liste autorisée et le format de &lt;types de connexion&gt; est <span class="codeph"> [type(,type)*] </span>, où le type peut être l’un des suivants : MIRACAST, AIRPLAY, WIDI, DLNA </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution &lt;nom_fichier&gt; </span> </td> 
