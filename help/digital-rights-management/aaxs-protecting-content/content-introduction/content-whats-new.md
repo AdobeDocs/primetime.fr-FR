@@ -5,7 +5,10 @@ seo-title: Présentation
 title: Présentation
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '482'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ Adobe® Access™ est une solution avancée de gestion des droits numériques et
 
 Le contenu chiffré est maintenant prêt pour le déploiement et le client peut demander la licence au serveur.
 
-Le SDK fournit une API Java pour accomplir ces tâches et inclut des implémentations de référence du serveur de licences et des outils de ligne de commande basés sur les API Java. Pour plus d’informations, voir *Utilisation des implémentations* de référence d’Adobe Access.
+Le SDK fournit une API Java pour accomplir ces tâches et inclut des implémentations de référence du serveur de licences et des outils de ligne de commande basés sur les API Java. Pour plus d’informations, voir *Utilisation des implémentations* de référence d’accès Adobe.
 
-## Nouveautés d’Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}
+## Nouveautés de Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}
 
 * **CEK** externe : Possibilité d’intégrer un système de gestion de clés de contenu (CKMS) aux workflows de diffusion de licences DRM et d’empaquetage de contenu, plutôt que de chiffrer le CEK et de le regrouper dans les métadonnées du contenu. Voir Présentation [du CEK externe DRM d’](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)Adobe Access.
 
@@ -40,4 +43,4 @@ Le SDK fournit une API Java pour accomplir ces tâches et inclut des implémenta
 
 Indique des règles d’utilisation personnalisées. Les données personnalisées peuvent être incluses dans les licences délivrées par le serveur de licences. L’interprétation/le traitement de ces données dépend entièrement de la mise en oeuvre de l’application cliente et du serveur de licences.
 
-Exemple de cas d’utilisation : Permet l’extensibilité des règles d’utilisation en permettant la transmission sécurisée d’autres règles métier dans le cadre de la stratégie et/ou de la licence de contenu. Pour des raisons de sécurité, puisque ces règles d’utilisation sont appliquées dans le code d’application client personnalisé, cette option doit être utilisée conjointement avec l’application AIR ou les options de liste blanche SWF de Flash Player. Pour plus d’informations, voir &quot;Restrictions[d’exécution et d’application](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)&quot;.
+Exemple de cas d’utilisation : Permet l’extensibilité des règles d’utilisation en permettant la transmission sécurisée d’autres règles métier dans le cadre de la stratégie et/ou de la licence de contenu. Pour des raisons de sécurité, puisque ces règles d’utilisation sont appliquées dans le code d’application client personnalisé, cette option doit être utilisée conjointement avec l’application AIR ou les options de liste autorisée SWF de Flash Player. Pour plus d’informations, voir &quot;Restrictions[d’exécution et d’application](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)&quot;.
