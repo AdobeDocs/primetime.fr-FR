@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.6.1
 description: Les notes de mise à jour de la version 20.6.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 **Lorsque :** Jeudi 13 février 2020 de 4 h 30 à 05 h 30, heure de l&#39;Est
 
-* Prise en charge Ajoutée pour l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
+* Prise en charge Ajoutée de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
 * Améliorations mineures des performances et mises à jour de maintenance.
 
 ### Version 20.1.3
@@ -111,7 +111,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 **Lorsque :** Mercredi 15 janvier 2020 de 4 h à 05 h, heure de l&#39;Est
 
-* Le service de retraitement créatif offre désormais une insertion publicitaire plus rapide en mettant automatiquement sur liste noire les éléments créatifs malformés.
+* Le service de reconditionnement d’images offre désormais une insertion publicitaire plus rapide en bloquant automatiquement la liste des créatifs malformés.
 
 * Prise en charge de la phase 1 Ajoutée pour le nouveau format de repère SCTE 35 dans l&#39;insertion publicitaire côté serveur.
 
