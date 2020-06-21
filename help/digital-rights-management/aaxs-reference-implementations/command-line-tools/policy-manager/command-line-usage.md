@@ -3,7 +3,10 @@ seo-title: Utilisation de la ligne de commande
 title: Utilisation de la ligne de commande
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1024'
+ht-degree: 0%
 
 ---
 
@@ -89,7 +92,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[ : <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications AIR autorisées à lire du contenu protégé. Utilisez cette option pour restreindre les éditeurs, les applications et les versions qui peuvent accéder au contenu protégé par cette stratégie. </p> <p class="- topic/p ">Si <i class="+ topic/ph hi-d/i ">appId</i> n’est pas spécifié, toutes les applications pour publisher <i class="+ topic/ph hi-d/i ">pubId</i> sont autorisées. </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">les numéros de version min</i> et <i class="+ topic/ph hi-d/i ">max</i> sont facultatifs. </p> <p class="- topic/p ">Plusieurs <span class="codeph"> options </span> -air peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -air sans les arguments restants pour supprimer toutes les entrées de la liste. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée des applications AIR autorisées à lire du contenu protégé. Utilisez cette option pour restreindre les éditeurs, les applications et les versions qui peuvent accéder au contenu protégé par cette stratégie. </p> <p class="- topic/p ">Si <i class="+ topic/ph hi-d/i ">appId</i> n’est pas spécifié, toutes les applications pour publisher <i class="+ topic/ph hi-d/i ">pubId</i> sont autorisées. </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">les numéros de version min</i> et <i class="+ topic/ph hi-d/i ">max</i> sont facultatifs. </p> <p class="- topic/p ">Plusieurs <span class="codeph"> options </span> -air peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -air sans les arguments restants pour supprimer toutes les entrées de la liste. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmChaîne de liste noire nom </span><i class="+ topic/ph hi-d/i ">/</i> valeur <span class="+ topic/ph pr-d/codeph codeph"></span> paires <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"></span> </td> 
@@ -117,11 +120,11 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= fichier_swf </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Liste blanche des applications SWF autorisées à lire du contenu protégé. Plusieurs options -swf peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -swf sans les arguments restants pour supprimer toutes les entrées de la liste. Pour identifier un fichier SWF par sa valeur de hachage, spécifiez le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre l’exécution de la vérification du fichier SWF (en secondes). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée des applications SWF autorisées à lire du contenu protégé. Plusieurs options -swf peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -swf sans les arguments restants pour supprimer toutes les entrées de la liste. Pour identifier un fichier SWF par sa valeur de hachage, spécifiez le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre l’exécution de la vérification du fichier SWF (en secondes). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= valeur </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Spécifie les clés/valeurs personnalisées à ajouter à la stratégie. Plusieurs options <span class="codeph"> -k </span> peuvent être spécifiées. Lors de la mise à jour, utilisez <span class="codeph"> -k </span> sans les arguments restants pour supprimer toutes les propriétés. L’interprétation ou le traitement de ces données dépend entièrement de la mise en oeuvre du serveur de licences Adobe Access. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Spécifie les clés/valeurs personnalisées à ajouter à la stratégie. Plusieurs options <span class="codeph"> -k </span> peuvent être spécifiées. Lors de la mise à jour, utilisez <span class="codeph"> -k </span> sans les arguments restants pour supprimer toutes les propriétés. L'interprétation ou le traitement de ces données dépend entièrement de la mise en oeuvre du serveur de licences Adobe Access. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -p name= valeur </span> </td> 
