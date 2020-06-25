@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 19.11.1
 description: Les notes de mise à jour de la version 19.11.1 de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de Primetime Dynamic Ad Insertion en 2019.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.8.2
 
-**Lorsque :** Mercredi 21 août 2019 de 2 h à 3 h, heure de l&#39;Est
+**Lorsque :** Mercredi 21 août 2019 de 2h00 à 3h00 heure de l&#39;Est
 
 * Tableau de bord SSAI : Section Statistiques de session. Vous pouvez exporter les événements de session via l’option Télécharger CSV.
 
@@ -174,13 +174,13 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
    * Ancienne structure de la clé de recherche : Paramètres de zone, de système publicitaire, d’identifiant de publicité, d’identifiant créatif, d’URL créative et de format (durée de cible, format de sortie, CDN de destination)
    * Les clés de recherche des ressources CRS existantes seront mises à jour pour correspondre à la nouvelle structure avant la version de production, mais notez que les nouvelles ressources transcodées entre la mise à jour des clés de recherche et la version de production pourraient être ignorées. Si tel est le cas, ils lanceraient une nouvelle demande de SIR la prochaine fois qu&#39;ils seront rencontrés après la libération.
 
-* CRS : Possibilité Ajoutée de placer sur l&#39;liste bloquée/placer sur l&#39;liste autorisée des demandes CRS en provenance de systèmes publicitaires spécifiques, d’ID d’annonce, d’ID de création, d’URL de création et/ou de format créatif
+* CRS : Possibilité Ajoutée de liste bloquée/liste autorisée des demandes CRS provenant de systèmes publicitaires spécifiques, d’ID d’annonce, d’ID créatifs, d’URL créatives et/ou de format créatif
 
    >Note
    >
    >Adobe ajoute des règles de liste bloquée lorsque des fournisseurs d’annonces avec des valeurs dynamiques (par exemple, un paramètre dynamique dans l’URL) pour la même publicité sont détectés. Ces règles de liste bloquée seront désactivées une fois le composant dynamique résolu, soit par le fournisseur, soit par le biais d’une règle de normalisation.
 
-   * Si vous souhaitez ajouter une liste bloquée ou une règle de liste autorisée pour votre zone, contactez votre gestionnaire de compte technique pour obtenir de l’aide.
+   * Si vous souhaitez ajouter une règle de liste bloquée ou de liste autorisée pour votre zone, contactez votre gestionnaire de compte technique pour obtenir de l’aide.
 
 ### Version 19.1.1
 
