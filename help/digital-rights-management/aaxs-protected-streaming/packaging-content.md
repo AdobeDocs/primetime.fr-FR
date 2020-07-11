@@ -3,9 +3,9 @@ seo-title: Création d’un package de contenu
 title: Création d’un package de contenu
 uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -27,4 +27,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Si chaque client utilise un serveur de licences et des informations d’identification de transport différents, veillez à spécifier le certificat du client approprié dans le gestionnaire de packages.
 
-Pour s’assurer que le serveur ne délivre des licences qu’au contenu conditionné par des packages connus, incluez le certificat de l’emballeur dans la liste autorisée packager du fichier de configuration du locataire.
+Pour s’assurer que le serveur ne délivre des licences qu’au contenu conditionné par des packages connus, incluez le certificat de packager dans la liste autorisée packager du fichier de configuration du client.
