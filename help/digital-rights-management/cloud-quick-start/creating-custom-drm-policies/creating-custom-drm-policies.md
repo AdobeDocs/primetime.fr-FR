@@ -3,9 +3,9 @@ seo-title: Création de stratégies DRM personnalisées (facultatif)
 title: Création de stratégies DRM personnalisées (facultatif)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Création de stratégies DRM personnalisées (facultatif){#create-custom-drm-policies-optional}
 
-Le kit de protection DRM de Primetime Cloud est fourni avec quelques stratégies préconfigurées qui peuvent être utilisées lors de l’assemblage. Si d’autres configurations de stratégie sont souhaitées, par exemple un droit d’Liste autorisée SWF spécifique, le Gestionnaire de stratégies DRM Primetime inclus peut être utilisé pour générer des stratégies personnalisées.
+Le kit de protection DRM de Primetime Cloud est fourni avec quelques stratégies préconfigurées qui peuvent être utilisées lors de l’assemblage. Si d’autres configurations de stratégie sont souhaitées, par exemple un droit d’inscription SWF spécifique, le Gestionnaire de stratégies DRM Primetime inclus peut être utilisé pour générer des stratégies personnalisées.
 
 >[!NOTE]
 >
