@@ -4,9 +4,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Aide de Primetime Digital Rights Management
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2202'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ ht-degree: 0%
       + [Règles temporelles](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Conditions requises pour la synchronisation](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Restrictions d’exécution et d’application {#runtime-application-restrictions}
-      + [Liste autorisée pour les applications DRM Primetime autorisées à lire du contenu protégé...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Liste autorisée des applications DRM Primetime autorisées à lire du contenu protégé..](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
       + [Liste autorisée pour les fichiers SWF Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
       + [Liste bloquée des clients DRM limitée à l&#39;accès au contenu protégé](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
       + [Liste bloquée des exécutions d’applications](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
@@ -281,8 +281,8 @@ ht-degree: 0%
       + [Gestionnaire de stratégies DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Utilisation de la ligne de commande de Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [Propriétés de configuration](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [Liste autorisée d’application non SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
-      + [Liste autorisée de l’application SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
+      + [Application non SWF Autoriser la mise en vente](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [Application SWF Autoriser la mise en vente](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [Gestionnaire de mise à jour des stratégies DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
    + [Gestionnaire de Listes de révocation DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
