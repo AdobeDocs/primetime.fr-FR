@@ -5,7 +5,7 @@ seo-title: Liste bloquée des exécutions d’applications
 title: Liste bloquée des exécutions d’applications
 uuid: fc3c9bd6-b1e6-4534-b29c-cd9a35b80928
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Liste bloquée des exécutions d’applications{#blocklist-of-application-runtimes}
+# Liste bloquée des exécutions d’applications {#blocklist-of-application-runtimes}
 
 La Liste bloquée des runtimes d&#39;application spécifie la version du client Primetime ou du Flash Runtime qui ne peut pas accéder au contenu. Spécifiez le runtime restreint (Flash Player, AIR ou iOS), la plate-forme et la version.
 
