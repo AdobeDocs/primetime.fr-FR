@@ -3,7 +3,7 @@ seo-title: Liste bloquée des runtimes d'application limitée à l'accès au con
 title: Liste bloquée des runtimes d'application limitée à l'accès au contenu protégé
 uuid: 462a2c09-b335-4768-bd0e-1359db169d69
 translation-type: tm+mt
-source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -22,4 +22,3 @@ Le runtime de l&#39;application peut être identifié par l&#39;un des attributs
 | **Attribut** | **Valeurs prises en charge** | **Critères de correspondance** | **Description** |
 |---|---|---|---|
 | Application | &quot;FlashPlayer&quot;, &quot;AIR&quot;, &quot;DRM_Library&quot;, &quot;AVE&quot; | Correspondance exacte | Identifie le nom du runtime de l&#39;application. |
-
