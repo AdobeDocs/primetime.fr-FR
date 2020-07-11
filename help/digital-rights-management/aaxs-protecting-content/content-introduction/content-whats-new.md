@@ -5,7 +5,7 @@ seo-title: Présentation
 title: Présentation
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ Le SDK fournit une API Java pour accomplir ces tâches et inclut des implémenta
 
 Indique des règles d’utilisation personnalisées. Les données personnalisées peuvent être incluses dans les licences délivrées par le serveur de licences. L’interprétation/le traitement de ces données dépend entièrement de la mise en oeuvre de l’application cliente et du serveur de licences.
 
-Exemple de cas d’utilisation : Permet l’extensibilité des règles d’utilisation en permettant la transmission sécurisée d’autres règles métier dans le cadre de la stratégie et/ou de la licence de contenu. Pour des raisons de sécurité, puisque ces règles d’utilisation sont appliquées dans le code d’application client personnalisé, cette option doit être utilisée conjointement avec l’application AIR ou les options de liste autorisée SWF de Flash Player. Pour plus d’informations, voir &quot;Restrictions[d’exécution et d’application](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)&quot;.
+Exemple de cas d’utilisation : Permet l’extensibilité des règles d’utilisation en permettant la transmission sécurisée d’autres règles métier dans le cadre de la stratégie et/ou de la licence de contenu. Pour des raisons de sécurité, puisque ces règles d’utilisation sont appliquées dans le code d’application client personnalisé, cette option doit être utilisée conjointement avec l’application AIR ou les options de liste autorisée SWF de Flash Player. Pour plus d’informations, voir Restrictions [](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)d’exécution et d’application.
