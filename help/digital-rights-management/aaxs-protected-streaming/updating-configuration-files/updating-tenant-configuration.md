@@ -3,9 +3,9 @@ seo-title: Mise à jour du fichier de configuration du client
 title: Mise à jour du fichier de configuration du client
 uuid: b6cb43e2-b9a5-40bf-879a-010fcc3d5935
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
