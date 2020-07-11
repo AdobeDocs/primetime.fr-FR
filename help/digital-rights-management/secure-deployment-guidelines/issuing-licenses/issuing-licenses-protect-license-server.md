@@ -5,9 +5,9 @@ seo-title: Protection du serveur de licences
 title: Protection du serveur de licences
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1200'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Une attaque par déni de service est une tentative d’attaque par des attaquant
 
 Pour en savoir plus sur la protection de relecture, voir [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Tenir à jour une liste autorisée de gestionnaires de contenu approuvés{#maintain-a-allowlist-of-trusted-content-packagers}
+## Tenir à jour une liste autorisée de gestionnaires de contenu approuvés {#maintain-a-allowlist-of-trusted-content-packagers}
 
 Une liste autorisée est une liste d&#39;entités de confiance.
 
