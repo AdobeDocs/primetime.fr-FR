@@ -3,9 +3,9 @@ seo-title: Utilisation de la ligne de commande
 title: Utilisation de la ligne de commande
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= fichier_swf </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée des applications SWF autorisées à lire du contenu protégé. Plusieurs options -swf peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -swf sans les arguments restants pour supprimer toutes les entrées de la liste. Pour identifier un fichier SWF par sa valeur de hachage, spécifiez le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre l’exécution de la vérification du fichier SWF (en secondes). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">liste autorisée d’applications SWF autorisées à lire du contenu protégé. Plusieurs options -swf peuvent être spécifiées pour autoriser plusieurs applications. Si aucune application AIR ou SWF n’est spécifiée, toutes les applications peuvent accéder à ce contenu. Lors d’une mise à jour, utilisez -swf sans les arguments restants pour supprimer toutes les entrées de la liste. Pour identifier un fichier SWF par sa valeur de hachage, spécifiez le fichier SWF pour lequel calculer le hachage et la durée maximale pour permettre l’exécution de la vérification du fichier SWF (en secondes). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= valeur </span> </td> 
