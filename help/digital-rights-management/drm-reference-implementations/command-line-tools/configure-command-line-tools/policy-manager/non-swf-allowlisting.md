@@ -3,7 +3,7 @@ seo-title: Application non SWF Autoriser la mise en vente
 title: Application non SWF Autoriser la mise en vente
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Application non SWF Autoriser la mise en vente {#non-swf-application-allowlisting}
+# Application non SWF Autoriser la mise en vente {#non-swf-application-isting}
 
 AIR a été la première plate-forme présentant les applications permettant la création de listes et le nom de la propriété que vous utilisez pour la liste autorisée d’applications non SWF (Adobe AIR, iOS, Android, etc.). conserve son nom d’origine : `policy.allowedAIRApplication.n`. Cela permet la lecture du contenu par toutes les applications autres que Flash qui sont signées avec un certificat de signature avant la publication. On parle alors de *ID de l&#39;application*. Vous pouvez extraire le ID de l&#39;application à l’aide de l’ [!DNL AdobePublisherIDUtility.jar] outil. Cette autorisation d’inscription sera appliquée à tout client prenant en charge la gestion des droits numériques Primetime.
 
