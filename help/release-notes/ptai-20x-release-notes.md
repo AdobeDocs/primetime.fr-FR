@@ -1,20 +1,44 @@
 ---
-title: Notes de mise à jour de PTAI 20.6.1
-description: Les notes de mise à jour de la version 20.6.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.7.1
+description: Les notes de mise à jour de la version 20.7.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de Primetime Dynamic Ad Insertion 20.6.1
+# Notes de mise à jour de Primetime Dynamic Ad Insertion 20.7.1
 
-Les notes de mise à jour sur l’insertion dynamique des publicités 20.6.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus dans l’insertion dynamique des publicités Primetime en 2020.
+Les notes de mise à jour sur l’insertion dynamique des publicités 20.7.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus dans l’insertion dynamique des publicités Primetime en 2020.
 
-## Nouveautés de PTAI 20.6.1
+## Nouveautés de PTAI 20.7.1
+
+**Lorsque :** Jeudi 9 juillet 2020 de 03h00 à 05h00, heure de l&#39;Est
+
+**Nouvelles fonctionnalités et améliorations**
+
+* Amélioration de SCTE35 pour utiliser soit les messages de Début/fin d&#39;annonce du fournisseur, soit les messages de Début/fin de rupture pour identifier le signal.
+
+* Mise à jour de l’en-tête X-ADBE-AI-X1 avec des informations supplémentaires pour faciliter le dépannage.
+
+* Amélioration de l’agrégation des mesures.
+
+* Tableau de bord de la console SSAI amélioré pour le panneau Statistiques de session.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.6.2
+
+**Lorsque :** Jeudi 18 juin 2020 de 03:00 à 04:00 AM, heure de l&#39;Est
+
+**Améliorations**
+
+Amélioration de la synchronisation des flux pour les clients vidéo nécessitant une précision de milliseconde. Contactez l’assistance Adobe pour activer la précision en millisecondes pour `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Version 20.6.1
 
 **Lorsque :** Mardi 2 juin 2020 de 03h00 à 05h00, heure de l&#39;Est
 
@@ -32,7 +56,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correction d’un problème en raison duquel les balises EXT-X-DISCONTINUITY étaient supprimées du haut de la liste de lecture lors du passage des publicités au contenu. Contactez l’assistance Adobe pour activer ce correctif.
 
-### Version 20.5.1
+#### Version 20.5.1
 
 **Lorsque :** Mardi 5 mai 2020 de 4 h à 5 h, heure de l&#39;Est
 
@@ -42,7 +66,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de maintenance.
 
-### Version 20.3.4
+#### Version 20.3.4
 
 **Lorsque :** Mercredi 1er avril 2020 de 03h00 à 04h00, heure de l&#39;Est
 
@@ -50,7 +74,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de sécurité.
 
-### Version 20.3.3
+#### Version 20.3.3
 
 **Lorsque :** Jeudi 26 mars 2020 de 03h00 à 04h00, heure de l&#39;Est
 
@@ -60,7 +84,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correction d’un problème lié aux flux audio CMAF/déuxed, en raison duquel les numéros EXT-X-MEDIA-SEQUENCE s’incrémentaient incorrectement dans certains scénarios.
 
-### Version 20.3.2
+#### Version 20.3.2
 
 **Lorsque :** Mercredi 11 mars 2020 de 05h30 à 07h00, heure de l&#39;Est
 
@@ -68,7 +92,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de maintenance.
 
-### Version 20.3.1
+#### Version 20.3.1
 
 **Lorsque :** Jeudi 5 mars 2020 de 02h30 à 04h30, heure de l&#39;Est
 
@@ -80,14 +104,14 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correctifs de sécurité et de maintenance.
 
-### Version 20.2.1
+#### Version 20.2.1
 
 **Lorsque :** Jeudi 13 février 2020 de 4 h 30 à 05 h 30, heure de l&#39;Est
 
 * Prise en charge Ajoutée de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
 * Améliorations mineures des performances et mises à jour de maintenance.
 
-### Version 20.1.3
+#### Version 20.1.3
 
 **Lorsque :** Mardi 28 janvier 2020 de 2h00 à 3h00, heure de l&#39;Est
 
@@ -101,13 +125,13 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Purger les anciens objets V1 des groupes NetStorage pour que le nombre d’objets reste dans les limites sécurisées d’Akamai.
 
-### Version 20.1.2 (Correctif)
+#### Version 20.1.2 (Correctif)
 
 **Lorsque :** Lundi 20 janvier 2020 de 02h00 à 03h00, heure de l&#39;Est
 
 * Mises à jour de maintenance.
 
-### Version 20.1.1
+#### Version 20.1.1
 
 **Lorsque :** Mercredi 15 janvier 2020 de 4 h à 05 h, heure de l&#39;Est
 
@@ -120,6 +144,12 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 ## Problèmes résolus
 
 Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, `ZD#xxxxx`
+
+**PITA 20.6.1**
+
+* `WebVTT` les fragments étaient toujours demandés dans le protocole http, quel que soit le protocole original demandé.
+
+* `EXT-X-DISCONTINUITY` sont supprimées du haut de la liste de lecture lors du passage des publicités au contenu. Contactez l’assistance Adobe pour activer ce correctif.
 
 **PITA 20.5.1**
 
