@@ -4,9 +4,9 @@ seo-title: Notes de mise à jour de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Cette version était axée sur la mise à jour de la version graduelle de l’ap
 
 Pour plus d’informations sur la version actuelle d’ [Android](../release-notes/tvsdk-3x-android.md), consultez la section.
 
-## Améliorations et correctifs de la version 20.6.1 de l’API
+## Améliorations et correctifs de la version 20.7.1 de l’API
 
-Cette version s’est concentrée sur des fonctionnalités telles que la manipulation du manifeste et l’amélioration des API pour maintenir la session en vie avec les ressources VOD à long terme. Cette version intègre également des correctifs aux principaux problèmes des clients.
+La version s’est concentrée sur l’amélioration de SCTE35, l’ajout d’informations supplémentaires dans les en-têtes de réponse HTTP X-ADBE-AI-X1, l’agrégation de mesures améliorée et le panneau &quot;Statistiques de session&quot;.
 
 Pour plus d’informations sur la version actuelle de l’insertion d’annonces dynamiques, voir Notes [de mise à jour de l’](ptai-20x-release-notes.md)API.
 
