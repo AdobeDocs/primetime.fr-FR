@@ -1,20 +1,30 @@
 ---
-title: Notes de mise à jour de PTAI 20.7.1
-description: Les notes de mise à jour de la version 20.7.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’insertion publicitaire dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.8.1
+description: Les notes de mise à jour de la version 20.8.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de Primetime Dynamic Ad Insertion 20.7.1
+# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.8.1
 
-Les notes de mise à jour sur l’insertion dynamique des publicités 20.7.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus dans l’insertion dynamique des publicités Primetime en 2020.
+Les notes de mise à jour de l’Ad Insertion dynamique version 20.8.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
 
-## Nouveautés de PTAI 20.7.1
+## Nouveautés de PTAI 20.8.1
+
+**Lorsque :** Mardi 4 août 2020 de 3h00 à 6h00, heure de l&#39;Est
+
+**Améliorations et correctifs**
+
+Mises à jour de maintenance.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.7.1
 
 **Lorsque :** Jeudi 9 juillet 2020 de 03h00 à 05h00, heure de l&#39;Est
 
@@ -26,9 +36,7 @@ Les notes de mise à jour sur l’insertion dynamique des publicités 20.7.1 dé
 
 * Amélioration de l’agrégation des mesures.
 
-* Tableau de bord de la console SSAI amélioré pour le panneau Statistiques de session.
-
-### Améliorations et correctifs des versions précédentes
+* Tableau de bord de la console SSAI amélioré pour le panneau Statistiques de session
 
 #### Version 20.6.2
 
