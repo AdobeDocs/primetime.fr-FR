@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 # Notes de mise à jour de Primetime {#release-notes}
 
 + [Présentation des notes de mise à jour](home.md)
-+ Insertion d’annonces dynamiques Primetime {#ptai}
-   + [Notes de mise à jour de PTAI 20.7.1](ptai-20x-release-notes.md)
++ Ad Insertion dynamique Primetime {#ptai}
+   + [Notes de mise à jour de PTAI 20.8.1](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK pour iOS {#tvsdk-ios}
    + [Notes de mise à jour de TVSDK 3.12 pour iOS](tvsdk-3x-ios.md)
