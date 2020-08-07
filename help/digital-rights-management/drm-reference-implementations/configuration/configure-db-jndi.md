@@ -5,7 +5,10 @@ seo-title: Configuration de la base de données du serveur de licences
 title: Configuration de la base de données du serveur de licences
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Pour configurer la base de données exemple en configurant le schéma de base de
    Ce script se trouve dans le `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` dossier.
 1. Exécutez le [!DNL PopulateSampleDB] script pour renseigner les données comme vous l’avez fait à l’étape 2.
 
-   >[!NOTE] {class=&quot;- rubrique/note &quot;}
+   >[!NOTE]
    >
    >La première fois que vous exécutez le [!DNL CreateSampleDB.sql] script, l’erreur suivante se produit :
 
