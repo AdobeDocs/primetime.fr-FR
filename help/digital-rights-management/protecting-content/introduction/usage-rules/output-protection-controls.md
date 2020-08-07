@@ -3,9 +3,9 @@ seo-title: Contrôles de protection de sortie
 title: Contrôles de protection de sortie
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Les options/niveaux d&#39;application suivants sont disponibles :
 | **Aucune protection** : aucune activation de la protection de sortie n’est appliquée pour les sorties analogiques et numériques. | OUI | OUI |
 | **Aucune lecture** : n’autorisez pas la lecture sur un périphérique externe pour les sorties analogiques et numériques. | OUI | OUI |
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Bien que ces règles soient appliquées de manière cohérente sur toutes les plates-formes, vous ne pouvez activer la protection de sortie en toute sécurité que sur les plates-formes Windows. Sur d’autres plates-formes, telles que Macintosh et Linux, aucune fonction de système d’exploitation compatible n’est disponible pour les applications tierces.
 
