@@ -3,14 +3,17 @@ seo-title: Fichiers de propriétés du serveur
 title: Fichiers de propriétés du serveur
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
 # Fichiers de propriétés du serveur {#server-properties-files}
 
-Le serveur requiert deux fichiers de configuration, un pour le serveur de licences et un autre pour le gestionnaire de packages. Les deux fichiers doivent être placés sur le chemin de classe. Les fichiers de propriétés contiennent l’emplacement des informations d’identification émises par Adobe. Ces informations d’identification peuvent être spécifiées sous la forme d’un fichier .pfx et d’un mot de passe ou en fournissant un alias et un mot de passe pour les informations d’identification stockées sur un HSM.
+Le serveur requiert deux fichiers de configuration, un pour le serveur de licences et un autre pour le gestionnaire de packages. Les deux fichiers doivent être placés sur le chemin de classe. Les fichiers de propriétés contiennent l’emplacement des informations d’identification émises par l’Adobe. Ces informations d’identification peuvent être spécifiées sous la forme d’un fichier .pfx et d’un mot de passe ou en fournissant un alias et un mot de passe pour les informations d’identification stockées sur un HSM.
 
 Consultez les fichiers de propriétés pour plus d&#39;informations sur les valeurs spécifiques et l&#39;utilisation de chaque paramètre. Des exemples de fichiers de propriétés se trouvent dans le répertoire &quot;resources&quot; de l&#39;implémentation de référence (Référence Implementation\Server\resources).
 
@@ -32,7 +35,7 @@ Pour préparer correctement le mot de passe de vos informations d’identificati
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >L’exemple précédent utilise un point-virgule (;) comme séparateur. Pour les plates-formes autres que Microsoft Windows, utilisez un deux-points (:) comme délimiteur.
 
