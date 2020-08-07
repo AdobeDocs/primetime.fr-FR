@@ -3,7 +3,10 @@ seo-title: Package media
 title: Package media
 uuid: f6e877be-d916-4766-bc44-99891a3df3a8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Si vous souhaitez compresser un seul fichier FLV ou F4V, choisissez l’ **[!UIC
 
 Si vous souhaitez compresser tous les fichiers d’un dossier, choisissez l’ **[!UICONTROL Select Single Folder]** option. Spécifiez le dossier contenant les fichiers source. Seuls les fichiers du dossier d’entrée correspondant aux **[!UICONTROL Input Media File Selection]** critères sont compressés (les fichiers des sous-dossiers ne sont pas compressés). Choisissez de chiffrer [!DNL .flv] des fichiers, [!DNL .f4v] des fichiers ou de saisir une expression régulière personnalisée (par exemple &quot;.*&quot; chiffre tous les fichiers du dossier). Les fichiers chiffrés seront enregistrés dans le dossier de sortie spécifié, en utilisant le même nom de fichier que le fichier d’origine.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Les chemins d’accès aux fichiers doivent faire référence aux fichiers disponibles pour le serveur d’emballage. Si vous exécutez Flash Access Manager sur un autre ordinateur que le serveur de création de package, vous devez spécifier un chemin d’accès accessible par le serveur (situé sur un lecteur réseau ou sur le serveur lui-même).
 
