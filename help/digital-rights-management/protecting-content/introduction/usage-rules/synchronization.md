@@ -5,7 +5,10 @@ seo-title: Conditions requises pour la synchronisation
 title: Conditions requises pour la synchronisation
 uuid: 594a4bb2-c042-4485-9cae-73b8f9f93d82
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Les conditions requises pour la synchronisation indiquent la fréquence à laque
 
 Le comportement de synchronisation est défini à l’aide des paramètres suivants :
 
-* **Intervalle** de Début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
+* **Intervalle** de début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
 * **Intervalle** d’arrêt dur - (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
 * **Forcer la probabilité** de synchronisation - (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Cette règle d’utilisation est prise en charge par les clients DRM Primetime version 3.0 ou ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences.
 
