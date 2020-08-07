@@ -5,7 +5,10 @@ seo-title: Règles de pare-feu
 title: Règles de pare-feu
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier des utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez les API clientes DRM d’Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier des utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez les API client DRM Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -103,13 +106,13 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Le pare-feu interne ne doit autoriser que les connexions au serveur de licences DRM Primetime via le proxy inverse et uniquement aux URL du tableau. Pour améliorer l’évolutivité, utilisez HTTP pour les connexions entre le proxy inverse et le DRM Primetime.
 
 ## URL sortantes {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Les URL sortantes permettent au serveur de licences de télécharger les listes de révocation des certificats à partir d’Adobe.
+Les URL sortantes permettent au serveur de licences de télécharger les listes CRL à partir d’Adobe.
 
 Voici une liste des URL sortantes que vous pouvez utiliser :
 
