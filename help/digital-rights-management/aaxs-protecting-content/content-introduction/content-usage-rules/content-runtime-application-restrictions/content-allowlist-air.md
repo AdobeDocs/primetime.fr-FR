@@ -3,9 +3,9 @@ seo-title: Liste autorisée pour les applications Adobe® Primetime autorisées 
 title: Liste autorisée pour les applications Adobe® Primetime autorisées à lire du contenu protégé
 uuid: 3b1f938c-5c76-459e-a918-dfbec0fc2ff9
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Indique les applications AIR/iOS qui peuvent lire du contenu. Spécifiez le ID d
 
 Exemple de cas d’utilisation : Utilisez cette règle pour limiter la lecture à une application AIR/iOS particulière ou pour contrôler quelle version peut accéder au contenu.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Si vous utilisez Adobe Flash Builder pour créer des applications protégées, veillez à ne pas déployer l’application en mode &quot;débogage&quot;. Lors du déploiement d’une application en mode &quot;débogage&quot;, Flash Builder ajoute &quot;.debug&quot; au ID de l&#39;application AIR. Cela provoquera un comportement inattendu de la fonctionnalité de liste autorisée dans Adobe Access.
+>Si vous utilisez Adobe Flash Builder pour créer des applications protégées, veillez à ne pas déployer l&#39;application en mode &quot;débogage&quot;. Lors du déploiement d&#39;une application en mode &quot;débogage&quot;, le Flash Builder ajoute &quot;.debug&quot; au ID de l&#39;application AIR. Cela provoquera un comportement inattendu de la fonctionnalité de liste autorisée dans Adobe Access.
 
