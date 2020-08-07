@@ -3,7 +3,10 @@ seo-title: Présentation des préférences
 title: Présentation des préférences
 uuid: d1c067b1-6c2b-460e-8d00-5a5bfee0789c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 A l’exception de l’URL de Packager Server, toutes les préférences spécifiées ci-dessous sont stockées dans le [!DNL flashaccess-refimpl-packager.properties] fichier sur le serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Tapez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Tous les répertoires et chemins d’accès se rapportent aux répertoires sur le serveur packager, et non sur le client exécutant l’application AIR.
 
