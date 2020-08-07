@@ -1,18 +1,21 @@
 ---
-description: Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Ce lecteur peut être un exemple de lecteur mis à disposition par Adobe ou votre propre application vidéo basée sur TVSDK.
-seo-description: Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Ce lecteur peut être un exemple de lecteur mis à disposition par Adobe ou votre propre application vidéo basée sur TVSDK.
+description: Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Il peut s’agir d’un exemple de lecteur rendu disponible par Adobe ou de votre propre application vidéo basée sur TVSDK.
+seo-description: Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Il peut s’agir d’un exemple de lecteur rendu disponible par Adobe ou de votre propre application vidéo basée sur TVSDK.
 seo-title: Lecture du contenu protégé
 title: Lecture du contenu protégé
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # Lecture du contenu protégé {#playback-your-protected-content}
 
-Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Ce lecteur peut être un exemple de lecteur mis à disposition par Adobe ou votre propre application vidéo basée sur TVSDK.
+Pour tester votre solution DRM, vous avez besoin d’une application vidéo capable de traiter la solution DRM que vous utilisez. Il peut s’agir d’un exemple de lecteur rendu disponible par Adobe ou de votre propre application vidéo basée sur TVSDK.
 
 1. Utilisez l’URL du serveur de licences à partir de la réponse du jeton que vous avez récupérée du serveur ExpressPlay pour vérifier si vous pouvez lire votre contenu protégé.
 
@@ -20,7 +23,7 @@ Pour tester votre solution DRM, vous avez besoin d’une application vidéo capa
    * **PlayReady** - Obtenez l’URL et le jeton du serveur de licences à partir de l’objet JSON renvoyé par votre demande de jeton de licence.
    * **FairPlay** - Utilisez la réponse FairPlay directement reçue de votre demande de jeton de licence ExpressPlay.
 
-1. Testez la lecture de votre contenu protégé en utilisant votre propre lecteur ou un exemple de lecteur Adobe existant.
+1. Testez la lecture de votre contenu protégé en utilisant votre propre lecteur ou un exemple de lecteur d’Adobe existant.
 
    Indiquez l’URL de votre contenu protégé (l’emplacement de votre manifeste M3U8 ou MPD, selon la solution DRM que vous testez).
 
@@ -48,7 +51,7 @@ Pour tester votre solution DRM, vous avez besoin d’une application vidéo capa
 
    **Vérification de la lecture lors du test de votre configuration FairPlay :** FairPlay nécessite quelques étapes supplémentaires pour lire le contenu lorsque vous utilisez les serveurs de licences ExpressPlay. Si vous utilisez [!DNL curl] pour tester vos connexions (comme décrit dans [Licence](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), vous devez *modifier votre manifeste* M3U8 (votre contenu emballé) comme suit :
 
-1. Ajouter la réponse que vous avez reçue de votre demande de jeton de licence à la `#EXT-X-KEY:` balise du manifeste ; et
+1. ajoutez la réponse que vous avez reçue de votre demande de jeton de licence à la `#EXT-X-KEY:` balise du manifeste ; et
 1. Modifiez le protocole de cette URL de la réponse (maintenant dans le manifeste), de `https://` à `skd://`.
 
    Voici un exemple complet pour tester la lecture avec FairPlay, y compris l’étape de licence :
@@ -82,7 +85,7 @@ Pour tester votre solution DRM, vous avez besoin d’une application vidéo capa
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {importance=&quot;high&quot;}
+   >[!NOTE]
    >
    >Les informations ci-dessus s&#39;appliquent uniquement aux tests de votre configuration FairPlay. Il peut ne pas s’appliquer à la configuration de votre production, selon la façon dont vous configurez votre gestionnaire FairPlay. Voir [Activer Apple FairPlay dans les applications](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) iOS pour en savoir plus.
 
