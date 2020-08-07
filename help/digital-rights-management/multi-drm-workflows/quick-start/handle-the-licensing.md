@@ -1,20 +1,23 @@
 ---
-description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
-seo-description: La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+description: La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+seo-description: La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
 seo-title: Licence
 title: Licence
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
 # Licence{#licensing}
 
-La licence est le principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
 
-Avant que votre application ou page Web sur un périphérique d’utilisateur final puisse lire du contenu protégé par DRM, il doit acquérir un jeton d’un serveur de droits ou de stockage que vous, le client, utilisez. Adobe fournit un exemple de serveur de référence à cet effet : [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Avant que votre application ou page Web sur un périphérique d’utilisateur final puisse lire du contenu protégé par DRM, il doit acquérir un jeton d’un serveur de droits ou de stockage que vous, le client, utilisez. adobe fournit un exemple de serveur de référence à cet effet : [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 Votre serveur de droits ou de stockage demandera un jeton de licence au serveur ExpressPlay approprié, uniquement après avoir vérifié auprès de vos propres systèmes dorsaux pour déterminer si l&#39;utilisateur spécifique est autorisé à regarder le contenu demandé. La réponse renvoyée par la demande de jeton de licence est soit une URL prête à l’emploi pour le serveur de licences, soit la réponse contient l’URL dans une structure JSON, selon la solution DRM que vous utilisez.
 
