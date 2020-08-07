@@ -5,7 +5,10 @@ seo-title: Emballage et protection du contenu
 title: Emballage et protection du contenu
 uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '822'
+ht-degree: 0%
 
 ---
 
@@ -24,13 +27,13 @@ Si l’implémentation de la création de package de contenu nécessite une conn
 
 ## Emballage sécurisé de contenu {#securely-packaging-content}
 
-Le fichier de configuration de l’outil de ligne de commande Adobe Primetime DRM Media Packager requiert des informations d’identification PKCS12 utilisées lors de la création de packs.
+Le fichier de configuration de l’outil de ligne de commande Adobe Primetime DRM Media Packager requiert des informations d’identification PKCS12 utilisées lors de la création de package.
 
 Dans les outils de ligne de commande Mise en oeuvre de référence, le mot de passe du fichier d’identification PKCS12 est stocké dans le `flashaccess.properties` fichier en clair. Pour cette raison, prenez soin de protéger l&#39;ordinateur hébergeant ce fichier et assurez-vous que l&#39;ordinateur est dans un environnement sécurisé. Pour plus d’informations, voir Sécurité [physique et accès](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Il utilise également les certificats de transport License Server et License Server, et l&#39;intégrité et la confidentialité de ces informations doivent être protégées. Seules les entités autorisées doivent être autorisées à utiliser l&#39;emballeur. Si vos clés privées sont compromises, informez Adobe Systems Incorporated immédiatement afin que le certificat puisse être révoqué.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >L’API vous permet d’utiliser la même clé pour plusieurs éléments de contenu. Pour garantir un niveau de sécurité optimal, utilisez cette fonction uniquement pour le contenu FMS à débit multiple. N’utilisez pas la même clé pour plusieurs fichiers qui représentent un contenu différent.
 
@@ -46,7 +49,7 @@ Une fois l&#39;emballage terminé, la clé d&#39;emballage est récupérée et n
 
 ## Stockage sécurisé des stratégies {#securely-storing-policies}
 
-Le SDK DRM d’Adobe Primetime vous permet de développer des applications qui peuvent être utilisées pour la création de packages de contenu et de stratégies.
+Le SDK Adobe Primetime DRM vous permet de développer des applications qui peuvent être utilisées dans l’emballage de contenu et la création de stratégies.
 
 Lorsque vous créez ces applications, vous pouvez autoriser certains utilisateurs à créer et modifier des stratégies et limiter les autres utilisateurs à appliquer uniquement des stratégies existantes au contenu. Vous devez mettre en oeuvre les contrôles d&#39;accès nécessaires et créer des comptes d’utilisateurs avec des privilèges différents pour la création de stratégies et l’application de stratégies.
 
