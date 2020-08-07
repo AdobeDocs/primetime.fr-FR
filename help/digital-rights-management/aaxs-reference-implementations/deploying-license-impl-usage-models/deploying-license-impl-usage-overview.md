@@ -3,7 +3,10 @@ seo-title: Présentation de la mise en oeuvre des modèles d’utilisation
 title: Présentation de la mise en oeuvre des modèles d’utilisation
 uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ L’implémentation des références comprend une logique métier permettant de 
 
 * Téléchargement à soi-même (DTO)
 * Location/Vidéo sur demande (VOD)
-* Abonnement (à volonté)
+* abonnement (à volonté)
 * Publicités financées
 
 Pour activer la démonstration du modèle d’utilisation, spécifiez la propriété personnalisée `RI_UsageModelDemo=true` au moment de l’assemblage. Si vous assemblez du contenu à l’aide de l’outil de ligne de commande Media Packager, spécifiez :
@@ -23,7 +26,7 @@ Pour activer la démonstration du modèle d’utilisation, spécifiez la propri�
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
 ```
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Si vous n’activez pas le mode de démonstration facultatif au moment du pack, le serveur de licences utilise la stratégie spécifiée au moment du pack pour émettre une licence. Si plusieurs stratégies ont été spécifiées, le serveur de licences utilise la première stratégie valide.
 
