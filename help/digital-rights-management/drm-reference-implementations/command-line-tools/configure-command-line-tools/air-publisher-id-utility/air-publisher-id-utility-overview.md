@@ -3,9 +3,9 @@ seo-title: Présentation
 title: Présentation
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lorsque vous créez un fichier AIR, l’outil ADT (AIR Developer Tool) génère 
 
 L’ID d’éditeur est unique au certificat que vous utilisez pour créer un fichier AIR. Si vous réutilisez le même certificat pour plusieurs applications AIR, toutes les applications AIR ont le même ID d’éditeur. Une version AIR qui succède à la version 1.5.2 n’ajoute pas l’identifiant d’éditeur généré à un fichier. Par conséquent, si vous prévoyez d’utiliser une liste autorisée d’applications AIR, utilisez cet outil pour déterminer l’identifiant de l’éditeur.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >L’ID d’éditeur utilisé pour l’application de la liste autorisée AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier de l’application.
 
