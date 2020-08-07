@@ -3,14 +3,17 @@ seo-title: Utilisation de la ligne de commande
 title: Utilisation de la ligne de commande
 uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 
 # Utilisation de la ligne de commande {#command-line-usage}
 
-Avant d’utiliser Media Packager, assurez-vous de respecter les exigences répertoriées dans la section Conditions requises et assurez-vous que le fichier de configuration contient les informations requises (voir Fichier de configuration dans la section *Utilisation des implémentations* de référence Adobe Access).
+Avant d’utiliser Media Packager, assurez-vous de respecter les exigences répertoriées dans la section Conditions requises et assurez-vous que le fichier de configuration contient les informations requises (voir Fichier de configuration dans la section *Utilisation des implémentations* de référence d’accès à l’Adobe).
 
 Media Packager se trouve dans le [!DNL \Reference Implementation\Command Line tools] répertoire du DVD. Pour chiffrer un fichier unique, utilisez la syntaxe suivante :
 
@@ -67,7 +70,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` est un [!DNL .metadata] fichier contenant les métadonnées DRM.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Lors de l’assemblage, Media Packager ne génère plus par défaut un fichier .header. Pour générer ce fichier, utilisez l’ `-h` option lors de l’assemblage.
 
