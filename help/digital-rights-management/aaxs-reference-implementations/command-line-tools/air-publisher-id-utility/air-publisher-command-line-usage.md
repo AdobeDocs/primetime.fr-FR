@@ -3,7 +3,10 @@ seo-title: Utilisation de la ligne de commande
 title: Utilisation de la ligne de commande
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ java -jar AdobePublisherIDUtility.jar
 
 * `signingcert` spécifie le certificat utilisé pour signer l&#39;application AIR
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Pour déterminer l’ID d’éditeur d’une application iOS, utilisez l’ `-s` option et spécifiez le certificat utilisé pour signer l’application iOS. ***Adobe Primetime est requis pour créer des applications iOS capables de lire du contenu*** protégé par Access.
+>Pour déterminer l’ID d’éditeur d’une application iOS, utilisez l’ `-s` option et spécifiez le certificat utilisé pour signer l’application iOS. ***adobe primetime est nécessaire pour créer des applications iOS capables de lire du contenu*** protégé par Access.
 
