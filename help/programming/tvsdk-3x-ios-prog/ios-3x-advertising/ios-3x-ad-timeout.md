@@ -1,11 +1,14 @@
 ---
-description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
-seo-description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface de prise de décision publicitaire d’Adobe Primetime.
+description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface Adobe Primetime Ad Decision.
+seo-description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface Adobe Primetime Ad Decision.
 seo-title: Exigences en matière de publicité
 title: Exigences en matière de publicité
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
