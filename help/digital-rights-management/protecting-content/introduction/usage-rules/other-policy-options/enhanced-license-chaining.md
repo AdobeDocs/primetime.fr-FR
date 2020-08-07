@@ -3,7 +3,10 @@ seo-title: Chaîne améliorée de licence
 title: Chaîne améliorée de licence
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Primetime DRM 2.0 prend en charge le chaînage de licences dans lequel les licen
 
 Si vous souhaitez activer le chaînage amélioré des licences, vous devez alors affecter une clé de chiffrement racine à une stratégie DRM Primetime. La clé de chiffrement racine est utilisée pour lier de façon cryptographique la licence feuille à la licence racine.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Le chaînage de licences amélioré est pris en charge par les clients DRM de Primetime version 3.0 ou ultérieure. Si un client plus âgé demande une licence pour un contenu prenant en charge le chaînage de licences amélioré, le serveur de licences peut toujours émettre une licence pour ce client en utilisant le chaînage de licences qui est pris en charge par Primetime DRM 2.0.
 
