@@ -5,7 +5,10 @@ seo-title: Balises personnalisées
 title: Balises personnalisées
 uuid: 648645c8-f7cc-4118-b169-cc5c473afe23
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Les flux de médias peuvent contenir des métadonnées supplémentaires sous la 
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité n’est pas disponible pour Safari sur les ordinateurs Apple, car TVSDK utilise la balise vidéo, plutôt que Flash ou MSE, pour lire le contenu HLS.
+>Cette fonctionnalité n’est pas disponible pour Safari sur les ordinateurs Apple, car TVSDK utilise la balise vidéo, plutôt que le Flash ou le MSE, pour lire le contenu HLS.
 
 TVSDK fournit un support prêt à l’emploi pour des balises publicitaires #EXT spécifiques. Votre application peut utiliser des balises personnalisées pour améliorer le processus publicitaire ou pour prendre en charge les scénarios de coupure de courant. Pour prendre en charge les workflows avancés, TVSDK vous permet de spécifier et d’abonner des balises supplémentaires dans le manifeste. Vous pouvez être averti lorsque ces balises apparaissent dans le fichier manifeste.
 
@@ -26,9 +29,9 @@ TVSDK fournit un support prêt à l’emploi pour des balises publicitaires #EXT
 >
 >Vous pouvez vous abonner à des balises personnalisées pour les flux VOD et les flux dynamiques/linéaires.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
->Lorsque HLS est lu en utilisant la balise Video dans Safari, et non en utilisant Flash Fallback, cette fonctionnalité ne sera pas disponible dans Safari.
+>Lorsque HLS est lu en utilisant la balise Vidéo dans Safari, et non en utilisant Flash Fallback, cette fonctionnalité ne sera pas disponible dans Safari.
 
 ## Utilisation de balises HLS personnalisées {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
