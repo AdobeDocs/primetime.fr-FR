@@ -3,7 +3,10 @@ seo-title: Stockage des informations d’identification
 title: Stockage des informations d’identification
 uuid: a9e9db72-c921-4c28-ad1d-3fd3c2283f14
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ Le SDK DRM de Primetime prend en charge différentes méthodes de stockage des i
 
 Vous devez surveiller de près les clés privées pour assurer la sécurité de votre contenu et de votre serveur de licences. PKCS12 est un format de fichier d’archive standard permettant de stocker les informations d’identification chiffrées avec un mot de passe. (Vous pouvez également chiffrer et signer le fichier PKCS12 lui-même.) L’extension de fichier [!DNL .pfx] est généralement utilisée pour les fichiers qui prennent en charge ce format.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Adobe recommande d’utiliser un HSM pour une sécurité maximale.
+>adobe vous recommande d’utiliser un HSM pour une sécurité maximale.
 >
->Consultez le guide *Adobe Primetime DRM Secure Deployment Guidelines* .
+>Consultez le guide *Adobe Primetime DRM Secure Deployment Guidelines* Guide.
 
->[!NOTE] {importance=&quot;high&quot;}
+>[!NOTE]
 >
 >Depuis Java 1.7, Sun Java 64 bits pour Windows ne prend plus en charge les interfaces PKCS11 requises par Primetime DRM pour la communication avec les périphériques HSM. Si vous prévoyez d’utiliser un module HSM, vous devez utiliser une version 32 bits de Java ou un JDK prenant en charge les interfaces PKCS11 complètes.
 
