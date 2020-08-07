@@ -5,7 +5,10 @@ seo-title: Demande/réponse de jeton de licence FairPlay
 title: Demande/réponse de jeton de licence FairPlay
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -47,17 +50,17 @@ L’interface de jeton de licence FairPlay fournit des services de production et
 
 **Tableau 3 : Paramètres de Requête de jeton**
 
-| Paramètre de Requête | Description | Obligatoire ? |
+| Paramètre de requête | Description | Obligatoire ? |
 |--- |--- |--- |
 | customerAuthenticator Authentificateur client en tant que paramètre de requête customerAuthenticator FairPlay | Il s’agit de votre clé d’API client, une clé pour chacun de vos environnements de production et de test. Vous pouvez le trouver dans l’onglet Tableau de bord d’administration ExpressPlay. | Oui |
 | errorFormat | html ou json. Si html (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si json est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs [](https://www.expressplay.com/developer/restapi/#json-errors) JSON pour plus d’informations. Le type MIME de la réponse est soit text/uri-liste on success, soit text/html pour le format d’erreur HTML, soit application/json pour le format d’erreur JSON. | Non |
 
 **Tableau 4 : Paramètres de la Requête de licence**
 
-| **Paramètre de Requête** | **Description** | **Obligatoire ?** |
+| **Paramètre de requête** | **Description** | **Obligatoire ?** |
 |---|---|---|
 | `generalFlags` | Chaîne hexadécimale de 4 octets représentant les indicateurs de licence. &quot;0000&quot; est la seule valeur autorisée. | Non |
-| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l’aide d’un algorithme d’encapsulation de clé (AES Key Wrap, RFC3394). Si `kek` est fourni, l&#39;un des `kid` paramètres ou les `ek` paramètres doivent être fournis, *mais pas les deux*. | Non |
+| `kek` | Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l&#39;aide d&#39;un algorithme d&#39;encapsulation de clés (AES Key Wrap, RFC3394). Si `kek` est fourni, l&#39;un des `kid` paramètres ou les `ek` paramètres doivent être fournis, *mais pas les deux*. | Non |
 | `kid` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu ou d’une chaîne `'^somestring'`. La longueur de la chaîne suivie par le `'^'` ne peut pas être supérieure à 64 caractères. | Non |
 | `ek` | Une chaîne hexadécimale représentant la clé de contenu chiffrée. | Non |
 | `contentKey` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu | Oui, à moins que les `kek` et `ek` ou `kid` sont fournis. |
@@ -70,7 +73,7 @@ L’interface de jeton de licence FairPlay fournit des services de production et
 <table id="table_ar3_lsx_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>Paramètre de Requête</b> </th> 
+   <th class="entry"> <b>Paramètre de requête</b> </th> 
    <th class="entry"> <b>Description</b> </th> 
    <th class="entry"> <b>Obligatoire ?</b> </th> 
   </tr> 
@@ -86,7 +89,7 @@ L’interface de jeton de licence FairPlay fournit des services de production et
 
 **Tableau 6 : Paramètres de Requête de corrélation**
 
-| **Paramètre de Requête** | **Description** | **Obligatoire ?** |
+| **Paramètre de requête** | **Description** | **Obligatoire ?** |
 |---|---|---|
 | `cookie` | Chaîne arbitraire d’une longueur maximale de 32 caractères, transportée dans le jeton et consignée par le serveur d’échange de jetons. Vous pouvez l’utiliser pour corréler les entrées de journal sur le serveur de remboursement et celles sur les serveurs du prestataire. | Non |
 
@@ -102,7 +105,7 @@ L’interface de jeton de licence FairPlay fournit des services de production et
 | `404 Not found` | URL incorrecte | `text/html` ou `application/json` | Description de l’erreur |
 | `50x Server Error` | Erreur serveur | `text/html` ou `application/json` | Description de l’erreur |
 
-**Tableau 8 : Codes d&#39;erreur de Événement**
+**Tableau 8 : Codes d&#39;erreur de événement**
 
 <table id="table_i2c_zsx_pv">  
  <thead> 
