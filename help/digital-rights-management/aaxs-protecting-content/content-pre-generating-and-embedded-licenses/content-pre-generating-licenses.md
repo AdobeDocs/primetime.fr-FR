@@ -3,7 +3,10 @@ seo-title: Licences pré-générées
 title: Licences pré-générées
 uuid: 31430753-11f1-4ce5-b402-cf4279119a05
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Lors de la création d’une licence Feuille, les métadonnées de contenu doive
 
 Lors de la génération d’une licence racine, les métadonnées de contenu peuvent être spécifiées comme décrit ci-dessus. Vous pouvez également générer une licence racine à l’aide d’une stratégie ( `setSelectedPolicy()`) et d’une URL de serveur de licences ( `setLicenseServerURL()`) au lieu des métadonnées.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Une URL de serveur de licences est requise même s’il n’existe pas de serveur de licences Adobe Access à partir duquel les clients peuvent demander une licence. Dans ce cas, l’URL du serveur de licences doit spécifier une URL identifiant l’émetteur de la licence.
+>Une URL de serveur de licences est requise même s&#39;il n&#39;existe aucun serveur de licences d&#39;accès aux Adobes à partir duquel les clients peuvent demander une licence. Dans ce cas, l’URL du serveur de licences doit spécifier une URL identifiant l’émetteur de la licence.
 
 Si la stratégie utilise le chaînage de licences amélioré, les informations d’identification du serveur de licences doivent être spécifiées afin de déchiffrer la clé de chiffrement racine dans la stratégie ( `setRootKeyRetrievalInfo()`).
 
