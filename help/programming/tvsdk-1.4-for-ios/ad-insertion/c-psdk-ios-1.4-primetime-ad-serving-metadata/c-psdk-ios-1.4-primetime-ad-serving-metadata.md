@@ -5,7 +5,10 @@ seo-title: Métadonnées du serveur et de l’heure de priorité
 title: Métadonnées du serveur et de l’heure de priorité
 uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et les flux vidéo/linéaires.
 
->[!NOTE] {othertype=&quot;Prérequis&quot;}
+>[!NOTE]
 >
 >Avant d’inclure de la publicité dans votre contenu vidéo, fournissez les métadonnées suivantes :
 >
@@ -22,6 +25,7 @@ TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et
 >* Votre `zoneID`, qui identifie votre société ou votre site Web.
 >* Le domaine de votre serveur d’annonces, qui spécifie le domaine de votre serveur d’annonces affecté.
 >* Autres paramètres de ciblage.
+
 >
 
 
