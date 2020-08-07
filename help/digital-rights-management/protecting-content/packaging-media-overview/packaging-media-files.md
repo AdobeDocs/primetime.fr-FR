@@ -3,7 +3,10 @@ seo-title: Présentation de la création de packages de fichiers multimédias
 title: Présentation de la création de packages de fichiers multimédias
 uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '663'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Lorsqu’un fichier est chiffré, son contenu ne peut pas être analysé sans la
 
 Un élément de contenu spécifié peut avoir plusieurs stratégies DRM. Par exemple, vous pouvez attribuer des licences au contenu sous différents modèles d’entreprise sans avoir à regrouper le contenu plusieurs fois. De plus, vous pouvez autoriser l’accès anonyme pendant une courte période, puis permettre au client d’acheter le contenu pour un accès illimité. Si le contenu est compressé en utilisant plusieurs stratégies DRM, le serveur de licences doit implémenter une logique pour sélectionner la stratégie DRM à utiliser pour émettre une licence.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >L&#39;architecture permet de spécifier des stratégies DRM d&#39;utilisation et de les lier au contenu lorsque le contenu est compressé. Pour qu’un client puisse lire du contenu, il doit acquérir une licence pour un ordinateur spécifié. La licence spécifie les règles d’utilisation qui sont appliquées et fournit la clé qui doit être utilisée pour déchiffrer le contenu. La stratégie DRM représente un modèle pour générer une licence. Cependant, le serveur de licences peut remplacer les règles d’utilisation lorsqu’il délivre une licence. La licence peut être rendue invalide par de telles contraintes, telles que les délais d’expiration ou les fenêtres de lecture.
 
@@ -34,6 +37,6 @@ Dans certains cas, vous devrez peut-être stocker les métadonnées du contenu d
 
 Toutes ces tâches peuvent être accomplies avec l’API Java.
 
-Pour plus d’informations sur l’API Java, voir *Adobe Primetime DRM API Reference* .
+Pour plus d’informations sur l’API Java, voir Référence *de l’API DRM* Adobe Primetime.
 
 Voir *Utilisation des implémentations* de référence DRM d’Adobe Primetime pour en savoir plus sur l’implémentation de référence de Media Packager.
