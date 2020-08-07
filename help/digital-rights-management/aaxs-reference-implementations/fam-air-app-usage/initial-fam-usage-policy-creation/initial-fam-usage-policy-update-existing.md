@@ -3,7 +3,10 @@ seo-title: Mettre à jour une stratégie existante
 title: Mettre à jour une stratégie existante
 uuid: 081e5dab-e735-4ae9-bcfd-15dd9819bef3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Pour mettre à jour une stratégie existante, choisissez le nom de fichier dans 
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Save]**. Le fichier de stratégie du [!DNL Resource] répertoire sera remplacé par la version mise à jour.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Même si le nom de la stratégie est modifié, le nom du fichier dans le [!DNL Resource] Répertoire ne sera pas modifié.
 
