@@ -1,19 +1,22 @@
 ---
-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée d’Adobe Primetime.
+description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
 keywords: DRM;DASH;HLS
-seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée d’Adobe Primetime.
+seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
 seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
 
 # Présentation de l’interface DRM de Primetime {#primetime-drm-interface-overview}
 
-Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée d’Adobe Primetime.
+Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
@@ -23,7 +26,7 @@ L’élément clé côté client du système de gestion des droits numériques (
 
 Primetime DRM offre un flux de travail évolutif et efficace pour mettre en oeuvre la protection du contenu dans les applications TVSDK. Vous protégez et gérez les droits sur votre contenu vidéo en créant une licence pour chaque fichier multimédia numérique.
 
-TVSDK prend en charge l’intégration DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux en utilisant Flash DRMManager. Pour activer cette fonction, MediaPlayer vous fournit le gestionnaire DRM pour l’authentification.
+TVSDK prend en charge l’intégration DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux en utilisant le Flash DRMManager. Pour activer cette fonction, MediaPlayer vous fournit le gestionnaire DRM pour l’authentification.
 
 Reportez-vous à l’exemple de code du lecteur DRM inclus dans le package TVSDK.
 
@@ -43,7 +46,7 @@ TVSDK émet une `PTMediaPlayerItemDRMMetadataChanged` notification lorsque les m
 
 Si le flux protégé par DRM est encodé à débit binaire multiple (MBR), les métadonnées DRM utilisées pour la liste de lecture des variantes doivent être identiques aux métadonnées utilisées dans tous les flux de débit binaire.
 
-[!TIP] {importance=&quot;high&quot;}
+[!TIP]
 
 Lors du référencement des URL de ressources protégées DRM dans votre application iOS, le paramètre de chaîne de requête `?faxs=1` doit être ajouté à l’URL de niveau set M3U8 (MBR). Par exemple :
 
@@ -59,4 +62,4 @@ Primetime DRM est intégré à TVSDK, ce qui simplifie la mise en oeuvre de la p
 
 Pour obtenir une vue d’ensemble et des détails sur l’utilisation de Primetime DRM pour mettre en oeuvre la protection de contenu dans une application TVSDK, voir :
 
-* [Adobe Primetime TVSDK-DRM Workflow (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
+* [Processus Adobe Primetime TVSDK-DRM (PDF)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_tvsdk_drm_workflow.pdf)
