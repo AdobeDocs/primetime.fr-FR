@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Le lecteur de référence Android est inclus avec le SDK Android dans le répert
 >
 >1. Téléchargez VideoHeartbeat.jar depuis [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (bibliothèque VideoHeartbeat pour Android v2.0.0).
 >1. Extrayez VideoHeartbeat.jar dans le dossier libs/.
->
-
 
 
 TVSDK pour Android offre de nombreuses améliorations de performances par rapport aux versions précédentes. Il offre une expérience d&#39;affichage de haute qualité et comporte toutes les fonctionnalités de la version 1.4, à l&#39;exception de la prise en charge de Multi-CDN.
@@ -145,9 +143,9 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
 * **Juste à temps : la résolution des publicités plus proches des marqueurs** publicitaires Lazy Ad Resolving résout désormais chaque coupure publicitaire indépendamment. Auparavant, la résolution des publicités était une approche en deux phases : les pré-rouleaux ont été résolus avant le début de lecture et tous les créneaux milieu/post-roll combinés après le démarrage de la lecture. Grâce à cette fonctionnalité améliorée, chaque coupure publicitaire est maintenant résolue à un moment précis avant le point de repère publicitaire.
 
-> [!NOTE]
+>[!NOTE]
 >
-> La résolution des publicités différées a été modifiée pour être désactivée par défaut et doit être explicitement activée.
+>La résolution des publicités différées a été modifiée pour être désactivée par défaut et doit être explicitement activée.
 
 Une nouvelle API est ajoutée `AdvertisingMetadata::setDelayAdLoadingTolerance` pour obtenir la tolérance de chargement différé associée à ces métadonnées publicitaires.\
 La recherche est maintenant autorisée immédiatement après la PRÉPARATION, la recherche de coupures publicitaires générera une résolution immédiate avant la fin de la recherche.\
@@ -187,13 +185,13 @@ TVSDK annule maintenant le téléchargement du segment en cours, si nécessaire,
    Expérience TV consistant à se joindre au milieu d’une publicité sans déclencher le suivi de la publicité partiellement visionnée.\
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
 
-   * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
+   * La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
 
    * Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis de la troisième publicité seulement sont déclenchés.
 
 * **Chargement sécurisé des publicités via HTTPS**
 
-   Adobe Primetime offre une option pour demander le premier appel au serveur d’annonces primetime et au serveur CRS sur https.
+   adobe primetime offre une option permettant de demander un premier appel au serveur d’annonces avant la mise en service et au serveur CRS sur https.
 
 * **AdSystem et ID créatif ajoutés aux demandes CRS**
 
@@ -277,9 +275,9 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **Lecture de contenu MP4 : il n’est pas nécessaire de retranscoder les clips courts MP4 pour** les lire dans TVSDK.
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > La commutation ABR, la lecture de l’astuce, l’insertion d’annonces publicitaires, la liaison audio tardive et la sous-segmentation ne sont pas prises en charge pour la lecture MP4.
+   >La commutation ABR, la lecture de l’astuce, l’insertion d’annonces publicitaires, la liaison audio tardive et la sous-segmentation ne sont pas prises en charge pour la lecture MP4.
 
 * **Lecture avec débit binaire adaptatif (ABR) -** Cette fonctionnalité permet à TVSDK de basculer entre les flux iFrame en mode lecture par astuces. Vous pouvez utiliser des profils autres qu’iFrame pour jouer à des vitesses de lecture inférieures.
 
@@ -295,8 +293,9 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connex
 
 * **Prise en charge des processus**
 
-   * **Intégration de la facturation directe -** envoie les mesures de facturation au serveur principal Analytics Adobe, qui est certifié par Adobe Primetime pour les flux utilisés par le client.
-   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour l’insertion de données drm - en fonction de la durée du flux facturable - à la suite de rapports de Adobe Primetime. Cela n’interfère pas avec les suites de rapports Adobe ou les appels au serveur du client, ni ne les inclut. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
+   * **Intégration de la facturation directe -** envoie les mesures de facturation à l&#39;arrière-plan Adobe Analytics, qui est certifié par Adobe Primetime pour les flux utilisés par le client.
+
+   TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion d’annonces et les indicateurs activés pour l’insertion d’images drm - en fonction de la durée du flux facturable - à la suite de rapports propriétaire Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client ou ne les inclut pas. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
 
    * **Prise en charge du basculement améliorée -** Stratégies supplémentaires mises en oeuvre pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs hôtes, des fichiers de liste de lecture et des segments.
 
@@ -472,7 +471,7 @@ Cette section présente un résumé du problème résolu dans la version Android
    * La prise en charge de SSAI_TAG a été ajoutée dans le cadre de ce correctif.
 * ZD#37622 - Erreurs de syntaxe URIS à partir de capsules publicitaires spécifiques.
    * Correction d’un problème de blocage de la lecture de flux lorsque des publicités destinées à l’application Android du client contenaient un % non codé.
-* ZD#37631 - Mécanisme de nouvelle tentative de manifeste Maître pour Android TVSDK.
+* ZD#37631 - Mécanisme de nouvelle tentative de manifeste de Principal pour Android TVSDK.
    * Nouvelle API Ajoutée dans la configuration réseau pour gérer cette amélioration. Si cette API n&#39;est pas utilisée, le manifeste n&#39;est pas réessayé. S&#39;il est utilisé, le manifeste est alors réessayé pour gérer les erreurs réseau et les dépassements de délai.
 
 **Version 3.2**
@@ -485,7 +484,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD#33740 - TVSDK lance un avertissement inutile juste après la création d’un objet MediaPlayer et l’appel de replaceCurrentResource()
 
-   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état suspendu
+   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état de suspension
 
 * ZD#36442 - Chaque nouvelle lecture déconnecte la session de débogage à distance, rendant impossible le débogage.
 
@@ -515,7 +514,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD #31533 - Lecture audio sur Android après l’envoi de l’application en arrière-plan.
 
-   * Ajoutée `enableAudioPlaybackInBackground` API de MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
+   * API Ajoutée `enableAudioPlaybackInBackground` de MediaPlayer qui doit être appelée avec &quot;True&quot; comme argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture audio lorsque l’application est en arrière-plan.
 
 **Android TVSDK 2.5.5**
 
@@ -527,7 +526,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
    * Amélioration de la correction précédente en gérant la casse dans l’analyse XML où le problème était reproductible lorsque &quot;space&quot; est placé avant le signe &quot;égal&quot; comme &lt;VAST version =&quot;2.0&quot;>
 
-* ZD #29296 - Android : Ajoutez AdSystem et Creative ID aux demandes CRS.
+* ZD #29296 - Android : ajoutez AdSystem et Creative ID aux demandes CRS.
 
    * Incluez désormais les paramètres &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
 
@@ -543,7 +542,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
    * Correction du scénario pour éviter le blocage.
 
-* ZD #32256 - Problème de rotation des licences et de rotation des clés - Accès Adobe
+* ZD #32256 - Rotation de licence et problème de rotation clé - Accès aux Adobes
 
    * Correction de l’initialisation des segments avec les métadonnées DRM pour le contenu SampleAES. Fonctionne correctement avec le contenu AES128.
 
@@ -565,7 +564,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD #34793 - TVSDK 2.5.x se bloquait avec le programme de résolution de contenu personnalisé dans certains cas lorsque VideoEngine supposait que les paramètres d’audience étaient disponibles et qu’ils ne l’étaient pas.
 
-   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). Ajouté une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
+   * Le blocage survenait en raison d’un appel de fonction sur un pointeur partagé Null (auditudeSettings). ajouté une vérification conditionnelle dans VideoEngineTimeline::placeToSourceTimeline() pour vérifier que auditudeSettings est disponible avant d’appeler quoi que ce soit sur cet objet.
 
 * ZD #32584 - Impossible d&#39;accéder à l&#39;information complète présente dans le noeud &lt;Extensions> d&#39;une réponse VAST.
 
@@ -622,7 +621,7 @@ WebViewDebbuging a la valeur False par défaut. Pour activer le débogage, défi
 * Flux de résolution Zendesk#32794-1080P non lu sur Android
 
    Nous avons modifié les méthodes SizeAvailableEvent et précédemment, getHeight() et getWidth() de SizeAvailableEvent dans la version 2.5, utilisées pour renvoyer la hauteur et la largeur de trame, qui étaient renvoyées par le format de support. Elle renvoie désormais respectivement la hauteur et la largeur de sortie renvoyées par le décodeur.
-* Zendesk #19359 Flash Player se bloque en raison de la position de l&#39;attribut #EXT-X-FAXS-CM dans le manifeste de niveau défini.
+* Le Flash Player Zendesk #19359 se bloque en raison de la position de l&#39;attribut #EXT-X-FAXS-CM dans le manifeste de niveau défini.
 
    La balise #EXT-X-FAXS-CM doit toujours apparaître dans la liste de lecture supérieure avant que le débit ou les segments individuels n’apparaissent dans la liste de lecture.
 
@@ -756,7 +755,7 @@ Cette version de TVSDK présente les problèmes suivants :
 * [Configuration requise](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
 * [Guide du programmeur TVSDK 3.10 pour Android](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
 * [Javadoc Android TVSDK pour référence API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
-* [Document](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) d’API C++ TVSDK Android - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient davantage de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une meilleure compréhension de l’API Java.
+* [DOCUMENT](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) d’API C++ TVSDK Android - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient davantage de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une meilleure compréhension de l’API Java.
 * [Guide de migration de TVSDK 1.4 à 2.5 pour Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
 * Pour gérer les scénarios d’activation/désactivation d’écran, consultez le `Application_Changes_for_Screen_On_Off.pdf` fichier inclus dans la compilation.
 * Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
