@@ -1,18 +1,21 @@
 ---
-description: Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences à partir d’un serveur Web HTTP simple.
+description: Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences auprès d’un serveur Web HTTP simple.
 seo-description: Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences auprès d’un serveur Web HTTP simple.
 seo-title: Licences pré-générées
 title: Licences pré-générées
 uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
 
 # Licences pré-générées {#pre-generating-licenses}
 
-Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences à partir d’un serveur Web HTTP simple.
+Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences auprès d’un serveur Web HTTP simple.
 
 Si vous souhaitez prégénérer des licences, vous devez utiliser `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` pour obtenir une instance de `LicenseFactory`. Vous devez spécifier des informations d’identification de serveur de licences pour signer les licences générées par cette fabrique. Cette classe prend en charge la génération de licences Leaf sans chaînage de licences et de licences Leaf et Root avec le chaînage de licences [Enhanced](../../protecting-content/implementing-the-license-server/license-chaining/gen-enhanced-license-chaining.md).
 
@@ -20,9 +23,9 @@ Lorsque vous générez une licence Feuille, vous devez spécifier les métadonn�
 
 Lorsque vous générez une licence racine, vous devez spécifier les métadonnées de contenu comme décrit ci-dessus. Vous pouvez également générer une licence racine en appliquant une stratégie DRM ( `setSelectedPolicy()`) et une URL de serveur de licences ( `setLicenseServerURL()`) plutôt que des métadonnées.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Une URL de serveur de licences est requise même s’il n’existe pas de serveur de licences DRM Adobe Primetime à partir duquel les clients peuvent demander une licence. Dans ce cas, l’URL du serveur de licences doit spécifier une URL identifiant l’émetteur de la licence.
+>Une URL de serveur de licences est requise même s’il n’existe aucun serveur de licences DRM Adobe Primetime à partir duquel les clients peuvent demander une licence. Dans ce cas, l’URL du serveur de licences doit spécifier une URL identifiant l’émetteur de la licence.
 
 Si la stratégie DRM utilise le chaînage de licences amélioré, vous devez spécifier des informations d’identification de serveur de licences pour déchiffrer la clé de chiffrement racine dans la stratégie DRM ( `setRootKeyRetrievalInfo()`).
 
