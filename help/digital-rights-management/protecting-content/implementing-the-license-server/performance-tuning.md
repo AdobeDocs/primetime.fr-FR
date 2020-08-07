@@ -3,7 +3,10 @@ seo-title: Réglage des performances
 title: Réglage des performances
 uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '404'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Suivez les conseils suivants pour améliorer les performances :
 * L’utilisation d’un HSM réseau peut être beaucoup plus lente que l’utilisation d’un HSM directement connecté.
 * Pour améliorer les performances, vous pouvez éventuellement activer la prise en charge native des opérations de cryptographie en déployant les bibliothèques spécifiques à la plate-forme situées dans le [!DNL thirdparty/cryptoj] dossier du SDK. Pour activer la prise en charge native, ajoutez la bibliothèque de votre plate-forme (jsafe.dll pour Windows ou libjsafe.so pour Linux) au chemin d’accès.
 
-   >[!NOTE] {class=&quot;- rubrique/note &quot;}
+   >[!NOTE]
    >
    >Si vous exécutez plusieurs applications Web dans la même instance Tomcat et que vous avez `jsafe.dll` le chemin d’accès, seule la première application Web chargée peut charger la `jsafe.dll` bibliothèque. Par conséquent, seule la première application Web bénéficie du support natif. Dans de tels cas, pour améliorer les performances de toutes les applications Web, placez `cryptoj.jar`hors du fichier WAR. Par exemple, dans le `<tomcat_installation_folder>/lib` répertoire.
 
@@ -25,9 +28,9 @@ Suivez les conseils suivants pour améliorer les performances :
 
 Dans certaines conditions, les environnements Linux peuvent interrompre leurs opérations liées à la gestion des droits numériques Primetime qui nécessitent la génération de nombres aléatoires, notamment :
 
-* Démarrage d’Adobe Primetime DRM License Server
+* Démarrage du serveur de licence DRM Adobe Primetime
 * Génération de stratégie à l’aide de l’ [!DNL AdobePolicyManager] utilitaire
-* Création d’un package de contenu protégé par DRM avec Adobe Media Server ou Primetime OfflinePackager
+* Mise en package de contenu protégé par DRM avec Adobe Media Server ou Primetime OfflinePackager
 
 Les retards au cours de ces opérations sont souvent le résultat d&#39;un pool à faible entropie sur votre serveur Linux.
 
