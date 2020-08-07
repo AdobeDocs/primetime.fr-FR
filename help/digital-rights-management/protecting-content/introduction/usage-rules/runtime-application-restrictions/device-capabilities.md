@@ -5,7 +5,10 @@ seo-title: Fonctionnalités de l'appareil requises pour lire le contenu protég�
 title: Fonctionnalités de l'appareil requises pour lire le contenu protégé
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -39,7 +42,7 @@ Les attributs suivants peuvent identifier les fonctionnalités du périphérique
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Cette règle d’utilisation est prise en charge par les clients DRM d’Adobe Primetime version 2.0.2 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences.
 >
