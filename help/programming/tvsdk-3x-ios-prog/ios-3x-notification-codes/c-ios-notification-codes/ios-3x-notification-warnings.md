@@ -5,7 +5,10 @@ seo-title: AVERTISSEMENT des codes de notification
 title: AVERTISSEMENT des codes de notification
 uuid: da1a561d-3b9a-468a-a24a-7b6fa62aa2e8
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 3%
 
 ---
 
