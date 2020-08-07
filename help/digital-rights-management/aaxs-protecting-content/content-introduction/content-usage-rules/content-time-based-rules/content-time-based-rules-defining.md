@@ -3,21 +3,24 @@ seo-title: Définition de règles temporelles
 title: Définition de règles temporelles
 uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 0%
 
 ---
 
 
 # Définition de règles temporelles {#defining-time-based-rules}
 
-Adobe Access applique une &quot;application souple&quot; des restrictions de licence temporelles. Si un droit temporel expire pendant la lecture d’une vidéo, le comportement par défaut d’Adobe Access consiste à ne pas restreindre la lecture jusqu’à la prochaine recréation du flux vidéo (en appelant `Netstream.stop()` et `Netstream.play()`).
+adobe Access utilise une &quot;application souple&quot; des restrictions de licence temporelles. Si un droit de lecture expire au cours de la lecture d’une vidéo, le comportement par défaut d’Accès Adobe consiste à ne pas restreindre la lecture jusqu’à la prochaine recréation du flux vidéo (en appelant `Netstream.stop()` et `Netstream.play()`).
 
 Bien que l’application souple soit le comportement par défaut, vous pouvez également activer l’application stricte en exécutant l’une des tâches suivantes :
 
 * Demandez à votre lecteur vidéo d’interroger régulièrement la licence afin de s’assurer qu’aucune des restrictions de temps n’a expiré. Pour ce faire, appelez `DRMManager.loadVoucher(LOCAL_ONLY).`un code d&#39;erreur indiquant que la licence stockée en local n&#39;est plus valide.
 * Chaque fois que l’utilisateur clique sur le bouton Pause, vous pouvez enregistrer l’horodatage de la vidéo en cours, puis appeler `Netstream.stop().`Lorsque l’utilisateur clique sur le bouton Lecture, vous pouvez rechercher l’emplacement enregistré, puis appeler `Netstream.play()`.
 
-## Date Début {#start-date}
+## Date début {#start-date}
 
 Indique la date à laquelle une licence est valide.
 
@@ -37,7 +40,7 @@ Exemple de cas d’utilisation : Dans un processus d’emballage automatisé, ut
 
 ## Durée de mise en cache de la licence {#license-caching-duration}
 
-Indique la durée pendant laquelle une licence peut être mise en cache sur le disque dans le magasin de licences local du client sans nécessiter de nouvelle acquisition à partir du serveur de licences. Vous pouvez également spécifier une date/heure absolue après laquelle une licence ne peut plus être mise en cache.
+Indique la durée pendant laquelle une licence peut être mise en cache sur le disque dans le magasin de licences local du client sans nécessiter de réacquisition à partir du serveur de licences. Vous pouvez également spécifier une date/heure absolue après laquelle une licence ne peut plus être mise en cache.
 
 Une fois la date d’expiration du cache passée, la licence n’est plus valide et le client doit demander une nouvelle licence au serveur de licences.
 
@@ -55,10 +58,10 @@ Indique la fréquence à laquelle le client synchronise son état avec le serveu
 
 Le comportement de synchronisation est défini à l’aide des paramètres suivants :
 
-* Intervalle de Début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
+* Intervalle de début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
 * Intervalle d’arrêt définitif — (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
 * Forcer la probabilité de synchronisation — (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Cette règle d’utilisation est prise en charge par les clients Adobe Access versions 3.0 et ultérieures. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minimale du client.
+>Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 3.0 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minimale du client.
