@@ -3,7 +3,10 @@ seo-title: Règles de pare-feu
 title: Règles de pare-feu
 uuid: a5667030-c4d0-42e3-b56e-20a12c903954
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -34,7 +37,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL d’authentification des utilisateurs. Cette URL ne doit être accessible que si vous utilisez les API du client Adobe Access pour effectuer l’authentification des utilisateurs. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL d’authentification des utilisateurs. Cette URL ne doit être accessible que si vous utilisez les API du client d'accès à l'Adobe pour effectuer l'authentification de l'utilisateur. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -75,7 +78,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL à utiliser par le client pour convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM Adobe Access. </p> <p class="- topic/p ">Remarque : <i class="+ topic/ph hi-d/i ">Cette URL doit utiliser SSL (HTTPS)</i>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL à utiliser par le client pour convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM d’accès à l’Adobe. </p> <p class="- topic/p ">Remarque : <i class="+ topic/ph hi-d/i ">Cette URL doit utiliser SSL (HTTPS)</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
@@ -88,13 +91,13 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Le pare-feu interne ne doit autoriser que les connexions au serveur de licences Adobe Access par le biais du proxy inverse et uniquement aux URL répertoriées ci-dessus. Pour améliorer l’évolutivité, les connexions entre le proxy inverse et Adobe Access seront effectuées via HTTP.
+>Le pare-feu interne ne doit autoriser que les connexions au serveur de licences d&#39;accès à l&#39;Adobe par le proxy inverse et uniquement aux URL répertoriées ci-dessus. Pour améliorer l’évolutivité, les connexions entre le proxy inverse et l’accès à l’Adobe seront effectuées via HTTP.
 
 ## URL sortantes {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Le serveur de licences nécessite un accès via le pare-feu pour télécharger les listes de révocation des certificats suivantes à partir d’Adobe :
+Le serveur de licences nécessite un accès via le pare-feu pour télécharger les listes de révocation des certificats suivantes à partir de l’Adobe :
 
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
