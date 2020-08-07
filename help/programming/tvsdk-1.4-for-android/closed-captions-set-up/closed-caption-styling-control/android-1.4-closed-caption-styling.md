@@ -5,7 +5,10 @@ seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
 uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
@@ -144,8 +147,9 @@ public TextFormatBuilder(
  String bottomInset)
 ```
 
-[!TIP]
-Dans les options qui définissent les valeurs par défaut (par exemple, DEFAULT), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
+>[!TIP]
+>
+>Dans les options qui définissent les valeurs par défaut (par exemple, DEFAULT), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
