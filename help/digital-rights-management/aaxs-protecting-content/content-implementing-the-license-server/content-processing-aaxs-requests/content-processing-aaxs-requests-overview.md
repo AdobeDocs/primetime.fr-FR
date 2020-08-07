@@ -3,7 +3,10 @@ seo-title: Présentation
 title: Présentation
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ La classe de base utilisée pour gérer l&#39;interaction requête/réponse uniq
 
 Si la demande aboutit, définissez les données de la réponse ; dans le cas contraire, appelez `RequestMessageBase.setErrorData()` en cas d’échec. Mettez toujours fin à l’implémentation en appelant la `close()` méthode (il est recommandé d’ `close()` appeler dans le `finally` bloc d’une `try` instruction). Consultez la documentation de référence sur les `MessageHandlerBase` API pour un exemple d’appel du gestionnaire.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Le code d’état HTTP 200 (OK) doit être envoyé en réponse à toutes les requêtes traitées par le gestionnaire. Si le gestionnaire n&#39;a pas pu être créé en raison d&#39;une erreur du serveur, le serveur peut répondre avec un autre code d&#39;état, tel que 500 (Erreur interne du serveur).
 
