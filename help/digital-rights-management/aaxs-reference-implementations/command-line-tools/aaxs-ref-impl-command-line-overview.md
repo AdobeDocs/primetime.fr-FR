@@ -3,7 +3,10 @@ seo-title: 'Outils de ligne de commande pour la création de packages de contenu
 title: 'Outils de ligne de commande pour la création de packages de contenu et la création de listes de révocation '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +28,9 @@ L’implémentation de référence comprend les outils de ligne de commande suiv
 Les exigences relatives à l’utilisation des outils de ligne de commande disponibles dans les implémentations de référence sont les suivantes :
 
 * Tous les outils de ligne de commande nécessitent Java 1.5 ou version ultérieure.
-* Informations d’identification de Packager et License Server (certificat et mot de passe) émises par Adobe. Vous avez besoin d’informations d’identification pour chiffrer et signer des fichiers vidéo, pour signer des listes de mise à jour et de révocation des stratégies et pour prégénérer des licences.
+* Informations d’identification de Packager et License Server (certificat et mot de passe) émises par l’Adobe. Vous avez besoin d’informations d’identification pour chiffrer et signer des fichiers vidéo, pour signer des listes de mise à jour et de révocation des stratégies et pour prégénérer des licences.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >En raison d’un bogue Java, les arguments utilisés sur la ligne de commande (tels que les noms de fichier, les noms de stratégie ou les descriptions) ne doivent utiliser que les caractères du jeu de caractères par défaut du système d’exploitation.
 
@@ -48,4 +51,4 @@ Définissez les valeurs des propriétés dans le fichier de configuration avant 
 
 Vous pouvez copier les fichiers dont vous avez besoin à partir du [!DNL \Reference Implementation\Command Line Tools] répertoire du DVD, qui contient le fichier de [!DNL flashaccesstools.properties] configuration par défaut, et un [!DNL libs] répertoire, qui contient les fichiers JAR des outils.
 
-Le [!DNL samples] répertoire contient plusieurs exemples de fichiers source Java démontrant l’utilisation des API du SDK Adobe Access. Pour créer et exécuter les exemples, utilisez le script [!DNL build-samples.xml] Ant.
+Le [!DNL samples] répertoire contient plusieurs exemples de fichiers source Java démontrant l’utilisation des API Adobe Access SDK. Pour créer et exécuter les exemples, utilisez le script [!DNL build-samples.xml] Ant.
