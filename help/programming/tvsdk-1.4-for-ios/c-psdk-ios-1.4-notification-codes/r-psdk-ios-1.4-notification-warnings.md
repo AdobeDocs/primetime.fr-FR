@@ -5,7 +5,10 @@ seo-title: AVERTISSEMENT des codes de notification
 title: AVERTISSEMENT des codes de notification
 uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 3%
 
 ---
 
@@ -166,4 +169,6 @@ La plupart des avertissements contiennent des métadonnées pertinentes, par exe
  </tbody> 
 </table>
 
->[!NOTE] L’ID d’annonce et l’URL peuvent être récupérés via PTAdAsset dans les métadonnées de notification avec la `AD_ASSET` clé.
+>[!NOTE]
+>
+>L’ID d’annonce et l’URL peuvent être récupérés via PTAdAsset dans les métadonnées de notification avec la `AD_ASSET` clé.
