@@ -5,9 +5,9 @@ seo-title: Liste bloquée des clients DRM limitée à l'accès au contenu proté
 title: Liste bloquée des clients DRM limitée à l'accès au contenu protégé
 uuid: 38bc024e-0c5b-4c1c-8d4b-94b9e0fec67e
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ Une version client DRM Primetime peut être identifiée par les attributs spéci
 
 | **Attribut** | **Valeurs prises en charge** | **Critères de correspondance** | **Description** |
 |---|---|---|---|
-| Environnement | `“PC”, “PortingKit”` | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
-| SE | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Correspondance exacte | Platform |
+| environnement | `“PC”, “PortingKit”` | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
+| SE | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Correspondance exacte | Plateforme |
 | Architecture | `“32”, “64”` | Correspondance exacte | 32 bits ou 64 bits |
 | Type d’écran | `“PC”, “Mobile”, “TV”` | Correspondance exacte |  |
 | Version d’exécution | Numéro de version valide. Par exemple, `“2.0.0”, "3.0", "4.0", "11.0"`, etc. | Correspond si la version du client est inférieure ou égale à la version spécifiée. | Le numéro de version est spécifié sous la forme d’une combinaison de nombres et de points (&quot;.&quot;) de toute longueur. |
@@ -32,7 +32,7 @@ Une version client DRM Primetime peut être identifiée par les attributs spéci
 | Fournisseur OEM | Chaîne fournisseur OEM pouvant être située dans le certificat d’exécution émis à un client qui a transporté le DRM Primetime sur un périphérique. | Correspondance exacte | Chaîne d&#39;identification du fournisseur OEM pour le périphérique utilisant le kit de portage. |
 | Modèle | Chaîne de modèle qui peut se trouver dans le certificat d’exécution émis à un client qui a transporté le DRM Primetime sur un périphérique. Par exemple, `"iOS_Mobile", "Android_Mobile", "Chrome", "ChromeOS_ARM", "WindowsOnARM", "AVE"` | Correspondance exacte | Chaîne d&#39;identification du modèle de périphérique pour le périphérique utilisant le kit de portage. |
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Lorsque vous spécifiez une entrée dans la liste bloquée, vous pouvez définir des valeurs pour un ou plusieurs des attributs mentionnés dans le tableau précédent. Tout attribut non spécifié est traité comme un caractère générique. Si le client DRM Primetime correspond à toutes les valeurs spécifiées dans une entrée de liste bloquée, ce client peut ne pas accéder au contenu protégé.
 
