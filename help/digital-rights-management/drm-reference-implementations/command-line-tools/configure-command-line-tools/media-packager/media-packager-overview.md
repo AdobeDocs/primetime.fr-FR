@@ -5,7 +5,10 @@ seo-title: Présentation
 title: Présentation
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +63,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` - Série d&#39;entrées source délimitées par des espaces blancs pour les fichiers à chiffrer.
 * `dest-directory` - Répertoire de destination dans lequel vous souhaitez écrire du contenu chiffré. Les fichiers chiffrés sont automatiquement enregistrés dans ce répertoire en utilisant les mêmes noms de fichier que les fichiers source. Cependant, le répertoire de destination ne peut pas inclure de fichiers source.
 
-**Informations sur la Vue d’un fichier chiffré :**
+**Informations sur la vue d’un fichier chiffré :**
 
 ```
 java -jar AdobePackager.jar -d  
@@ -69,7 +72,7 @@ java -jar AdobePackager.jar -d
 </i class="+ topic>
 ```
 
-**Informations sur la Vue d’un fichier de métadonnées :**
+**Informations sur la vue d’un fichier de métadonnées :**
 
 ```
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
@@ -77,7 +80,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` est un [!DNL .metadata] fichier qui inclut des métadonnées DRM.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Lors de la création d’un pack, Media Packager ne peut plus générer de [!DNL .header] fichier par défaut. Pour générer un [!DNL .header] fichier, utilisez l’ `-h` option lors de la création de package.
 
@@ -200,7 +203,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Définit la version minimale du serveur requise pour émettre des licences pour le contenu en cours de création de package. </p> <p class="- topic/p ">Spécifiez x (pour Primetime DRM x.0) où x représente un numéro de version majeur. Les versions de serveurs antérieures à la version 3.0 d’Adobe Primetime ne prennent pas en charge ce paramètre. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Définit la version minimale du serveur requise pour émettre des licences pour le contenu en cours de création de package. </p> <p class="- topic/p ">Spécifiez x (pour Primetime DRM x.0) où x représente un numéro de version majeur. Les versions de serveurs antérieures à Adobe Primetime version 3.0 ne prennent pas en charge ce paramètre. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert </span> </td> 
