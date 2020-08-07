@@ -5,7 +5,10 @@ seo-title: Processus multi-DRM pour FairPlay
 title: Processus multi-DRM pour FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Suivez ces étapes pour activer le service ExpressPlay pour la protection du con
 
    >[!NOTE]
    >
-   >Sélectionnez **[!UICONTROL Content Provider]** le rôle principal.
+   >Sélectionnez **[!UICONTROL Content Provider]** le rôle Principal.
 
    Une fois votre demande approuvée, Apple vous enverra un pack *de déploiement en flux continu* FairPlay.
 1. Générer une demande de signature de certificat.
@@ -57,15 +60,15 @@ Suivez ces étapes pour activer le service ExpressPlay pour la protection du con
    1. Cliquez sur **[!UICONTROL Certificates, Identifiers & Profiles]**, puis sélectionnez la liste **[!UICONTROL iOS, tvOS, watchOS]** déroulante en haut à gauche de la page, puis cliquez sur **[!UICONTROL Certificates->Production]** à gauche de la page.
    1. Cliquez sur le **[!UICONTROL +]** bouton en haut à droite de la page pour demander un nouveau certificat. Sélectionnez l’ **[!UICONTROL FairPlay Streaming Certificate]** option sous **[!UICONTROL Production]**.
 
-      La boîte de dialogue Certificat *iOS* Ajouter s’ouvre.
-   1. Dans le certificat *iOS* Ajouter, téléchargez le fichier CSR que vous avez généré à l’étape 2.b, puis cliquez sur **[!UICONTROL Generate]** le bouton.
+      La boîte de dialogue *Ajouter un certificat* iOS s’ouvre.
+   1. Dans le certificat *iOS* Ajouté, téléchargez le fichier CSR que vous avez généré à l’étape 2.b, puis cliquez sur **[!UICONTROL Generate]**.
 
       Votre clé de Clé secrète (ASK) s’affiche dans la même boîte de dialogue.
    1. Écrivez votre demande et stockez-la dans un endroit sûr.
    1. Cliquez sur dans votre ASK pour terminer la génération de certificats et cliquez sur **[!UICONTROL Continue]**.
    1. Après avoir vérifié que vous avez enregistré votre demande de service financier, cliquez sur **[!UICONTROL Generate]** pour continuer.
 
-      >[!NOTE] {importance=&quot;high&quot;}
+      >[!NOTE]
       >
       >Il est important que vous enregistriez une copie de votre demande et que vous la stockiez en toute sécurité. *Si votre ASK est compromis, vous ne pourrez plus protéger votre contenu avec FairPlay Streaming.* Un seul (1) ASK est attribué à votre équipe. La valeur ne sera plus fournie et vous ne pourrez plus la récupérer ultérieurement.
 
@@ -100,11 +103,11 @@ Vous pouvez désormais créer des applications iOS ou des pages HTML5 avec la pr
 
 ### Assemblage de votre contenu pour FairPlay {#package-your-content-for-fairplay}
 
-Pour créer un pack contenant votre contenu, vous pouvez utiliser Adobe Offline Packager ou d’autres outils tels que le Packager Bento4 d’ExpressPlay.
+Pour regrouper votre contenu dans un pack, vous pouvez utiliser Adobe Offline Packager ou d’autres outils tels que le Packager Bento4 d’ExpressPlay.
 
 Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentation du fichier d’origine et placement de celui-ci dans un manifeste) et protègent la vidéo avec la solution DRM que vous avez choisie (dans ce cas, FairPlay) :
 
-* [Adobe Offline Packager for FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
+* [adobe Offline Packager for FairPlay DRM](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=21)
 * [ExpressPlay Packagers - Bento4 pour HLS](https://www.bento4.com/developers/hls/)
 
 <!--<a id="fig_jbn_fw5_xw"></a>-->
@@ -141,6 +144,7 @@ Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentati
    * `iv_file_path` - Il s&#39;agit de l&#39;emplacement du fichier IV sur votre machine d&#39;emballage.
    * `key_url` - Paramètre URI de la `EXT-X-KEY` balise du [!DNL .m3u8] fichier.
    * `content_id` - Valeur par défaut.
+
    Comme indiqué dans la documentation [de](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)Packager, &quot;Il est recommandé de créer un fichier de configuration contenant les options courantes que vous souhaitez utiliser pour générer les sorties. Ensuite, créez la sortie en fournissant des options spécifiques sous forme d&#39;argument de ligne de commande.&quot;
 
    ```
@@ -158,9 +162,9 @@ Les développeurs préparent la vidéo pour la lecture (par exemple, fragmentati
 
 ### Définition de stratégies pour FairPlay {#setting-policies-for-fairplay}
 
-Vous pouvez définir des stratégies pour le contenu protégé par FairPlay à l’aide d’un serveur de droits. Vous pouvez configurer le vôtre ou utiliser un exemple de serveur de droits fourni par Adobe.
+Vous pouvez définir des stratégies pour le contenu protégé par FairPlay à l’aide d’un serveur de droits. Vous pouvez configurer le vôtre ou utiliser un exemple de serveur de droits fourni par un Adobe.
 
-Adobe fournit un exemple de serveur de droits ExpressPlay (SEES) qui indique comment effectuer des droits basés sur *le* temps et liés *aux* périphériques. Cet exemple de serveur de droits est construit sur les services ExpressPlay.
+adobe fournit un exemple de serveur de droits ExpressPlay (SEES) qui indique comment effectuer des droits basés sur *le* temps et liés *aux* périphériques. Cet exemple de serveur de droits est construit sur les services ExpressPlay.
 
 [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
