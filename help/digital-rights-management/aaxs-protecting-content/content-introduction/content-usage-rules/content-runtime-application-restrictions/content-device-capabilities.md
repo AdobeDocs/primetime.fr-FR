@@ -3,7 +3,10 @@ seo-title: Fonctionnalités de l'appareil requises pour lire le contenu protég�
 title: Fonctionnalités de l'appareil requises pour lire le contenu protégé
 uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Les capacités du périphérique peuvent être identifiées par les attributs sp
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Cette règle d’utilisation est prise en charge par les clients Adobe Access versions 2.0.2 et ultérieures. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minimale du client.
+>Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 2.0.2 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minimale du client.
 
