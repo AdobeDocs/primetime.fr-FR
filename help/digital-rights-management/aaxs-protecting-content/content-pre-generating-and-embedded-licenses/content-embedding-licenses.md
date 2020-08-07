@@ -3,7 +3,10 @@ seo-title: Incorporation de licences
 title: Incorporation de licences
 uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Pour incorporer une licence, obtenez une instance de `com.adobe.flashaccess.sdk.
 
 Pour obtenir un exemple de code démontrant les licences incorporées, reportez-vous `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` au répertoire &quot;Exemples&quot; des outils de ligne de commande de mise en oeuvre de référence.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
->Les clients Adobe Access 2.0 ignorent toutes les licences incorporées dans le contenu et tentent d’obtenir une licence auprès du serveur de licences spécifié dans les métadonnées. Toutefois, si les métadonnées indiquent qu’aucun serveur de licences n’est disponible, un client Adobe Access 2.0 devra effectuer la mise à niveau vers la vue du contenu.
+>Les clients d&#39;Adobe Access 2.0 ignoreront toutes les licences incorporées dans le contenu et tenteront d&#39;obtenir une licence auprès du serveur de licences spécifié dans les métadonnées. Toutefois, si les métadonnées indiquent qu’aucun serveur de licences n’est disponible, un client Adobe Access 2.0 devra effectuer la mise à niveau vers la vue du contenu.
 
 Voir Licences [](../../aaxs-protecting-content/content-introduction/packaging-options/content-out-of-band-licenses.md)hors bande.
