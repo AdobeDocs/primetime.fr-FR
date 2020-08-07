@@ -3,9 +3,9 @@ seo-title: Exécution du serveur DRM pour la diffusion en flux continu protégé
 title: Exécution du serveur DRM pour la diffusion en flux continu protégée
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Exécution du serveur DRM pour la diffusion en flux continu protégée {#running-the-drm-server-for-protected-streaming}
 
-Avant de pouvoir début au serveur DRM Adobe Primetime pour la diffusion en flux continu protégée, il est recommandé de vérifier la validité des paramètres dans les fichiers de configuration.
+Avant de pouvoir début au serveur Adobe Primetime DRM pour la diffusion en flux continu protégée, il est recommandé de vérifier la validité des paramètres dans les fichiers de configuration.
 
 Vous pouvez vérifier la validité des paramètres en utilisant les utilitaires fournis avec le serveur de licences. (Voir *Configuration validator* dans ce guide.
 
@@ -25,7 +25,7 @@ Une fois le serveur démarré, vous devez vérifier qu’il a été correctement
 
 Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en flux continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Si les fichiers journaux actuels sont supprimés ou déplacés pendant l&#39;exécution du serveur, il est possible que le fichier journal ne soit pas recréé. Par conséquent, certaines informations de journal peuvent être supprimées.
 
@@ -50,7 +50,7 @@ Les répertoires de journaux sont structurés pour faciliter leur utilisation. L
 
 ### Fichier journal global {#section_1CFA90748142439C9F3BE380969539DA}
 
-Le fichier journal global [!DNL flashaccess-global.log]se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal que le SDK Java DRM Adobe Primetime ou des messages de journal peuvent avoir générés au cours de l&#39;initialisation du serveur.
+Le fichier journal global [!DNL flashaccess-global.log]se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal que le SDK Java DRM d&#39;Adobe Primetime ou des messages de journal peuvent avoir générés au moment de l&#39;initialisation du serveur.
 
 ### Fichier journal de partition {#section_5660137CD6AA40519E72A4315534846B}
 
