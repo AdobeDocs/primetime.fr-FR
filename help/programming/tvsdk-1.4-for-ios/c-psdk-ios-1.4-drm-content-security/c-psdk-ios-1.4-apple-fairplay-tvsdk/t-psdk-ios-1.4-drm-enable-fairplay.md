@@ -5,7 +5,10 @@ seo-title: Activation d’Apple FairPlay dans les applications TVSDK
 title: Activation d’Apple FairPlay dans les applications TVSDK
 uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPl
 
    La `resourceLoader:shouldWaitForLoadingOfRequestedResource` méthode est équivalente à ce qui se trouve dans `AVAssetResourceLoaderDelegate`.
 
-   >[!IMPORTANT] {importance=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >Dans le scénario du serveur de licences ExpressPlay, pour lire le contenu, modifiez le schéma d’URL dans l’URL de demande de licence de serveur ExpressPlay FairPlay de `skd://` à `https://` (ou `https://`).
 
