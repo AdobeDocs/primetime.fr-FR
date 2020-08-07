@@ -1,14 +1,17 @@
 ---
-seo-title: Traiter les requêtes DRM Adobe Primetime
-title: Traiter les requêtes DRM Adobe Primetime
+seo-title: Traiter les demandes DRM Adobe Primetime
+title: Traiter les demandes DRM Adobe Primetime
 uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
 
-# Traiter les requêtes DRM Adobe Primetime {#process-adobe-primetime-drm-requests}
+# Traiter les demandes DRM Adobe Primetime {#process-adobe-primetime-drm-requests}
 
 La méthode générale de gestion des requêtes consiste à créer un gestionnaire, analyser la requête, définir les données de réponse ou le code d’erreur et fermer le gestionnaire.
 
@@ -16,7 +19,7 @@ La classe de base utilisée pour gérer l&#39;interaction requête/réponse uniq
 
 Si la demande aboutit, définissez les données de la réponse ; dans le cas contraire, appelez `RequestMessageBase.setErrorData()` en cas d’échec. Mettez toujours fin à l’implémentation en appelant la `close()` méthode (il est recommandé d’ `close()` appeler dans le `finally` bloc d’une `try` instruction). Consultez la documentation de référence sur les `MessageHandlerBase` API pour un exemple d’appel du gestionnaire.
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Le code d’état HTTP 200 (OK) doit être envoyé en réponse à toutes les requêtes traitées par le gestionnaire. Si le gestionnaire n&#39;a pas pu être créé en raison d&#39;une erreur du serveur, le serveur peut répondre avec un autre code d&#39;état, tel que 500 (Erreur interne du serveur).
 
@@ -26,20 +29,20 @@ Une demande de licence peut contenir un jeton d’authentification. Si l’authe
 
 ## Utiliser des identifiants de machine {#use-machine-identifiers}
 
-Toutes les requêtes DRM Adobe Primetime (à l’exception des requêtes prenant en charge la compatibilité FMRMS) incluent des informations sur le jeton d’ordinateur qui ont été émises au client lors de l’individualisation. Le jeton machine comprend un ID machine, qui est un identifiant attribué lors de l’individualisation. Vous pouvez utiliser cet identifiant pour comptabiliser le nombre de machines à partir desquelles un utilisateur a demandé une licence ou a rejoint un domaine.
+Toutes les demandes Adobe Primetime DRM (à l’exception des demandes qui prennent en charge la compatibilité FMRMS) incluent des informations sur le jeton machine qui ont été émises au client lors de l’individualisation. Le jeton machine comprend un ID machine, qui est un identifiant attribué lors de l’individualisation. Vous pouvez utiliser cet identifiant pour comptabiliser le nombre de machines à partir desquelles un utilisateur a demandé une licence ou a rejoint un domaine.
 
 Vous pouvez utiliser un identifiant comme suit :
 
-* La `getUniqueId()` méthode renvoie une chaîne qui a été affectée à un périphérique lors de l’individualisation. Vous pouvez stocker les chaînes dans une base de données et les rechercher par identifiant. Cependant, cet identifiant change si l&#39;utilisateur reformate le disque dur et se individualise à nouveau. Cet identifiant a également une valeur différente entre Adobe AIR et Adobe Flash Player dans différents navigateurs sur le même ordinateur.
+* La `getUniqueId()` méthode renvoie une chaîne qui a été affectée à un périphérique lors de l’individualisation. Vous pouvez stocker les chaînes dans une base de données et les rechercher par identifiant. Cependant, cet identifiant change si l&#39;utilisateur reformate le disque dur et se individualise à nouveau. Cet identifiant a également une valeur différente entre Adobe AIR et Flash Player d’Adobe dans différents navigateurs sur la même machine.
 * Si vous souhaitez comptabiliser plus précisément les machines, vous pouvez utiliser `getBytes()` pour stocker l’identifiant entier. Pour déterminer si l&#39;ordinateur a déjà été vu, obtenez tous les identifiants d&#39;un nom d&#39;utilisateur et appelez `matches()` pour vérifier si une correspondance est trouvée. Étant donné que la `matches()` méthode doit être utilisée pour comparer les valeurs renvoyées par `MachineId.getBytes`, cette option n&#39;est pratique que lorsqu&#39;il y a un petit nombre de valeurs à comparer ; par exemple, les machines associées à un utilisateur particulier.
 
 ## Authentification des utilisateurs {#user-authentication}
 
-Une demande DRM Adobe Primetime peut contenir un jeton d’authentification.
+Une demande Adobe Primetime DRM peut contenir un jeton d’authentification.
 
-Si l’authentification par nom d’utilisateur/mot de passe a été utilisée, la requête peut inclure une requête `AuthenticationToken` générée par le `AuthenticationHandler`. Si vous souhaitez accéder au jeton et le vérifier, vous devez l’utiliser `RequestMessageBase.getAuthenticationToken()`. Pour lancer une demande de nom d&#39;utilisateur/mot de passe sur le client, utilisez l&#39;API `DRMManager.authenticate()` ActionScript ou iOS.
+Si l’authentification par nom d’utilisateur/mot de passe a été utilisée, la requête peut inclure une requête `AuthenticationToken` générée par le `AuthenticationHandler`. Si vous souhaitez accéder au jeton et le vérifier, vous devez l’utiliser `RequestMessageBase.getAuthenticationToken()`. Pour lancer une demande de nom d’utilisateur/mot de passe sur le client, utilisez l’ `DRMManager.authenticate()` ActionScript ou l’API iOS.
 
-Si le client et le serveur utilisent un mécanisme d&#39;authentification personnalisé, le client obtient un jeton d&#39;authentification par le biais d&#39;un autre canal et définit le jeton d&#39;authentification personnalisé à l&#39;aide de l&#39;API `DRMManager.setAuthenticationToken` ActionScript 3.0. Utilisez `RequestMessageBase.getRawAuthenticationToken()` pour obtenir le jeton d’authentification personnalisé. L’implémentation du serveur détermine si le jeton d’authentification personnalisé est valide.
+Si le client et le serveur utilisent un mécanisme d’authentification personnalisé, le client obtient un jeton d’authentification par le biais d’un autre canal et définit le jeton d’authentification personnalisé à l’aide de l’API `DRMManager.setAuthenticationToken` ActionScript 3.0. Utilisez `RequestMessageBase.getRawAuthenticationToken()` pour obtenir le jeton d’authentification personnalisé. L’implémentation du serveur détermine si le jeton d’authentification personnalisé est valide.
 
 ## Protection de relecture {#replay-protection}
 
@@ -63,7 +66,7 @@ La tolérance au retour à l’arrière-plan de l’horloge est une propriété 
 
 Si le serveur de licences est hébergé sur un domaine différent de celui du fichier SWF de lecture vidéo, un fichier de stratégie DRM interdomaines ( [!DNL crossdomain.xml]) est nécessaire pour permettre au fichier SWF de demander des licences à un serveur de licences. Un fichier de stratégie DRM interdomaines est représenté par un fichier XML qui permet au serveur d’indiquer que ses données et documents sont disponibles pour les fichiers SWF fournis à partir d’autres domaines. Tout fichier SWF diffusé à partir d’un domaine spécifié dans le fichier de stratégie DRM interdomaines du serveur de licences est autorisé à accéder aux données ou aux ressources provenant de ce serveur de licences.
 
-Adobe recommande aux développeurs de suivre les meilleures pratiques lors du déploiement du fichier de stratégie interdomaines en autorisant uniquement les domaines approuvés à accéder au serveur de licences et en limitant l’accès au sous-répertoire de licences sur le serveur Web.
+L’Adobe recommande aux développeurs de suivre les meilleures pratiques lors du déploiement du fichier de stratégie interdomaines en autorisant uniquement les domaines approuvés à accéder au serveur de licences et en limitant l’accès au sous-répertoire de licences sur le serveur Web.
 
 Pour plus d’informations sur les fichiers de stratégie DRM interdomaines, voir les emplacements suivants :
 
