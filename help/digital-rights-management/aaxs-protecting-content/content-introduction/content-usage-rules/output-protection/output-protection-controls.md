@@ -3,7 +3,10 @@ seo-title: Contrôles de protection de sortie
 title: Contrôles de protection de sortie
 uuid: 1f4cc617-7f14-4952-8e61-6acbdf01d10e
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '635'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Les options/niveaux d&#39;application suivants sont disponibles :
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoire</b> — Protection de la copie analogique (ACP) ou Système de gestion de la génération de copies - La protection de sortie analogique (CGMS-A) doit être activée pour lire le contenu sur un périphérique externe. Les clients Adobe Access doivent activer la protection de sortie à l’aide d’ACP ou de CGMS-A. Sur les périphériques qui prennent en charge les deux, les clients Adobe Access 3.0 tentent d'activer les deux. Cependant, un seul doit être activé pour lire le contenu. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoire</b> — Protection de la copie analogique (ACP) ou Système de gestion de la génération de copies - La protection de sortie analogique (CGMS-A) doit être activée pour lire le contenu sur un périphérique externe. Les clients d'Accès à l'Adobe doivent activer la protection de la sortie en utilisant le PVA ou le CGMS-A. Sur les périphériques qui prennent en charge les deux, les clients Adobe Access 3.0 tentent d'activer les deux. Cependant, un seul doit être activé pour lire le contenu. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
@@ -41,7 +44,7 @@ Les options/niveaux d&#39;application suivants sont disponibles :
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser si disponible</b> : tentez d'activer la protection de sortie ACP et CGMS-A si disponible et d'autoriser la lecture si elle n'est pas disponible. Si possible, les clients Adobe Access 3.0 tenteront d'activer à la fois ACP et CGMS-A. Les clients d'Adobe Access 2.0 ne tenteront que d'activer le protocole ACP ou CGMS-A. Par exemple, le client Adobe Access tentera d'activer le protocole ACP ou CGMS-A. Si la tentative réussit, l’autre option ne sera pas activée. Si la tentative échoue, une deuxième tentative est effectuée pour activer l’autre option. Même si les deux tentatives échouent, le contenu sera de toute façon lu. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser si disponible</b> : tentez d'activer la protection de sortie ACP et CGMS-A si disponible et d'autoriser la lecture si elle n'est pas disponible. Si possible, les clients d'Adobe Access 3.0 tenteront d'activer à la fois le PVA et le CGMS-A. Les clients d'Adobe Access 2.0 ne feront qu'essayer d'activer le PVA ou le CGMS-A. Par exemple, le client Adobe Access tentera d'activer le PVA ou le CGMS-A. Si la tentative réussit, l’autre option ne sera pas activée. Si la tentative échoue, une deuxième tentative est effectuée pour activer l’autre option. Même si les deux tentatives échouent, le contenu sera de toute façon lu. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
@@ -68,7 +71,7 @@ Les options/niveaux d&#39;application suivants sont disponibles :
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- rubrique/note &quot;}
+>[!NOTE]
 >
 >Bien que ces règles soient appliquées de manière cohérente sur toutes les plates-formes, il n’est actuellement possible d’activer la protection de sortie en toute sécurité que sur les plates-formes Windows. Sur d’autres plates-formes (telles que Macintosh et Linux), aucune fonction de système d’exploitation compatible n’est disponible pour les applications tierces.
 
