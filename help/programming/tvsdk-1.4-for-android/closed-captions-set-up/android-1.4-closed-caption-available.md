@@ -5,7 +5,10 @@ seo-title: Sélectionner une piste de sous-titrage actuelle parmi les pistes dis
 title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
@@ -41,13 +44,12 @@ Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-ti
    for (int i = 0; i < ccTracks.size(); i++) { 
        ClosedCaptionsTrack track = ccTracks.get(i); 
        if (track.getName().equals(INITIAL_CC_TRACK)) { 
-   
-<b>mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track);</b>
-selectedClosedCaptionsIndex = i;
-}}
+           mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track); 
+           selectedClosedCaptionsIndex = i; 
+       } 
+   }
+   ```
 
-```
-1. Implement a listener for the event that indicates that more tracks are available. When TVSDK dispatches the event, retrieve the current list of available tracks.
+1. Implémentez un écouteur pour le événement qui indique que davantage de pistes sont disponibles. Lorsque TVSDK distribue le événement, récupérez la liste actuelle des pistes disponibles.
 
-Retrieve the list each time that the event occurs to ensure that you always have the most current list.
-
+   Récupérez la liste chaque fois que le événement se produit pour vous assurer que vous disposez toujours de la liste la plus récente.
