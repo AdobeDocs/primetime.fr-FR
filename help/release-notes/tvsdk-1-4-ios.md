@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -35,10 +35,10 @@ Les Notes de mise à jour de TVSDK 1.4 pour iOS décrivent les nouveautés ou le
 * Expérience TV de possibilité de se joindre au milieu d’une publicité sans déclencher de suivi partiel de la publicité.\
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
 
-   * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
+   * La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
    * Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis pour la troisième publicité seulement sont déclenchés.
 
-* Propriété enableVodPreroll Ajoutée de type booléen dans l’interface PTAdMetadata. La propriété peut être utilisée pour activer le pré-roll sur un flux VoD. Si enableVodPreroll a la valeur NO, PSDK ne lit pas le pré-roll. Cela n&#39;a cependant aucun impact sur les midrolls. La valeur par défaut de enableVodPreroll est YES.
+* Propriété enableVodPreroll Ajoutée de type booléen dans l&#39;interface PTAdMetadata. La propriété peut être utilisée pour activer le pré-roll sur un flux VoD. Si enableVodPreroll a la valeur NO, PSDK ne lit pas le pré-roll. Cela n&#39;a cependant aucun impact sur les midrolls. La valeur par défaut de enableVodPreroll est YES.
 * L’API closeCaptionDisplayEnabled de l’interface PTMediaPlayer est marquée comme obsolète à partir de la version 1.4.43 d’iOS. Pour déterminer si des sous-titres sont disponibles pour un élément PTMediaPlayerItem donné, examinez la propriété subtitlesOptions de PTMediaPlayerMediaItem.
 
 **Version 1.4.42**
@@ -70,21 +70,21 @@ Intégrez et certifiez VHL 2.0 dans le SDK iOS TVSDK : Réduisez la barrière de
 
 * Informations sur les publicités réseau
 
-   Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’identifiant de publicité, le système d’annonces et les extensions d’annonce VAST sont fournis dans la `PTNetworkAdInfo` classe accessible par le biais `networkAdInfo` de la propriété sur une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plateformes Ad Analytics telles que **Moat Analytics**.
+   Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’identifiant de publicité, le système d’annonces et les extensions d’annonce VAST sont fournis dans la `PTNetworkAdInfo` classe accessible par le biais `networkAdInfo` de la propriété sur une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plates-formes d’analyses des publicités, telles que **Moat Analytics**.
 
 **Version 1.4.31**
 
-* **Mesures** de facturation Afin d’accommoder les clients qui veulent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+* **Mesures** de facturation Afin de tenir compte des clients qui veulent payer uniquement pour ce qu&#39;ils utilisent, plutôt qu&#39;un taux fixe, quelle que soit leur utilisation réelle, l&#39;Adobe collecte des mesures d&#39;utilisation et les utilise pour déterminer le montant à facturer aux clients.
 
-Chaque fois que TVSDK génère un événement de début de flux, le lecteur début à envoyer des messages HTTP périodiquement au système de facturation de Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec Adobe détermine les valeurs réelles.
+Chaque fois que TVSDK génère un événement de début de flux, le lecteur début à envoyer des messages HTTP régulièrement au système de facturation de l’Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec l’Adobe détermine les valeurs réelles.
 
-* **Prise en charge multi-CDN pour CRS** AdsTVSDK prend désormais en charge Multi-CDN pour les annonces CRS. En fournissant des détails FTP pour les annonces CRS, vous pouvez spécifier des emplacements CDN autres que le CDN par défaut détenu par Adobe, tel qu’Akamai.
+* **Prise en charge multi-CDN pour CRS** AdsTVSDK prend désormais en charge Multi-CDN pour les annonces CRS. En fournissant des détails FTP pour les annonces CRS, vous pouvez spécifier des emplacements CDN autres que le CDN par défaut détenu par l’Adobe, tel qu’Akamai.
 
 **Version 1.4.29**
 
 Dans la classe PTSDKConfig, l&#39;API forceHTTPS a été ajoutée.
 
-La classe PTSDKConfig fournit des méthodes pour appliquer SSL sur les requêtes envoyées aux serveurs Adobe Primetime et de prise de décision, DRM et Video Analytics. Pour plus d&#39;informations, consultez les méthodes `forceHTTPS` et `isForcingHTTPS` sur cette classe. Si un manifeste est chargé via HTTPS, TVSDK conserve l’utilisation du contenu HTTPS et respecte cette utilisation lors du chargement d’URL relatives à partir de ce manifeste.
+La classe PTSDKConfig fournit des méthodes pour appliquer SSL sur les demandes envoyées aux serveurs Adobe Primetime de prise de décision d’annonce, DRM et Video Analytics. Pour plus d&#39;informations, consultez les méthodes `forceHTTPS` et `isForcingHTTPS` sur cette classe. Si un manifeste est chargé via HTTPS, TVSDK conserve l’utilisation du contenu HTTPS et respecte cette utilisation lors du chargement d’URL relatives à partir de ce manifeste.
 
 **Remarque**: Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées et il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir les URL prises en charge par HTTPS.
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur VPAID 2.0, voir Prise en charge [des annonces](..
 
 * Actuellement, les fonctionnalités suivantes ne sont pas prises en charge :
 
-   * Gestion des droits numériques (DRM)
+   * Digital Rights Management (DRM)
    * Bannières publicitaires
    * TVML (TV Markup Language)
 
@@ -147,7 +147,7 @@ Dans le cadre de la mise à jour de TVSDK 1.4, nous soutenons désormais le reco
 
 * **Prise en charge de l’individualisation sur site**
 
-Prise en charge des installations sur site du serveur d’individualisation Adobe pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
+Prise en charge des installations sur site de l’Adobe Individualization Server pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
 
 * **Protection de la sortie basée sur la résolution**
 
@@ -157,10 +157,10 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.4.1.1**
 
-   * Ajouté la possibilité de regrouper différents cas d’utilisation d’analyses, provenant d’autres kits SDK ou lecteurs, avec les outils Adobe Analytics Video Essentials.
+   * ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
    * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete. La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete.
    * La propriété playhead n’est plus nécessaire lors du suivi des publicités.
-   * Prise en charge Ajoutée de l’ID de Visiteur Marketing Cloud.
+   * Prise en charge Ajoutée de l’ID de Visiteur de Marketing Cloud.
 
 * **Intégration du SDK Nielsen**
 
@@ -198,7 +198,7 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * TVSDK 1.4.28 a été certifié pour la version bêta 7 d’iOS 10.
 * Prise en charge de DRM pour forcer HTTPS en ajoutant les API forceHTTPS et isForcingHTTPS.
-* Mise à jour des bibliothèques VHL vers 1.5.8, des bibliothèques Adobe Mobile vers 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
+* Mise à jour des bibliothèques VHL vers la version 1.5.8, des bibliothèques mobiles Adobe vers la version 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
 
 **Version 1.4.19**
 
@@ -212,7 +212,7 @@ Cette version de TVSDK a été certifiée avec le support FairPlay pour iOS et t
 
    **Remarque**: Rappelez-vous des consignes de compilation suivantes :
 
-   * La prise en charge de TVSDK tvOs est limitée aux flux chiffrés DRM non-Adobe. Vous devez supprimer la référence à drmNativeInterface.framework dans vos paramètres de création tvOS. Les flux chiffrés AES sont toujours pris en charge.
+   * La prise en charge de TVSDK tvOs est limitée aux flux chiffrés DRM non Adobes. Vous devez supprimer la référence à drmNativeInterface.framework dans vos paramètres de création tvOS. Les flux chiffrés AES sont toujours pris en charge.
    * Apple exige que toutes les applications Apple TV soient activées pour le bitcode. Vous devez donc activer cet indicateur dans les paramètres de votre projet.
 
 ## Problèmes résolus dans la version 1.4 {#resolved-issues-in}
@@ -261,7 +261,7 @@ Comment Type: draft
 
 * Billet n° 35037 - Boucles de lecture avec mauvaise URL lors du retour d’une insertion d’annonces basée sur le signal.
 
-   * Correctif fourni pour le numéro fermé 34385 de la version 1.4.42. Code de contrôle et de gestion des exceptions Ajouté isAnncelled pour rendre la file d&#39;attente des opérations plus robuste.
+   * Correctif fourni pour le numéro fermé 34385 de la version 1.4.42. Code de gestion des exceptions et de vérification Ajouté isAnncelled pour rendre la file d&#39;attente des opérations plus robuste.
 
 **Version 1.4.43**
 
@@ -272,7 +272,7 @@ Comment Type: draft
 * (ZD#34684) - Lorsque la stratégie de saut d’annonce est appliquée, les images de publicité preroll s’affichent pendant quelques secondes. Une nouvelle API, enableVodPreroll, a été introduite pour désactiver la lecture preroll dans la lecture de vod. La valeur par défaut de cette API est &quot;Yes&quot;. L’API permet d’ignorer l’assemblage de contenu publicitaire dans le contenu principal.
 * (ZD#34765) - Après avoir appelé stop(), peu de segments de flux de transport sont toujours téléchargés. Amélioration de l’API Stop() pour éviter le téléchargement des segments supplémentaires.
 * (ZD#34865) - Les publicités preroll pour diffusion en continu sont tronquées sur iOS. En ce qui concerne iOS11 et l’ajout d’une vérification supplémentaire pour confirmer si le flux est pré-roll ou de contenu principal, résout ce problème.
-* (ZD#35093) - Correction d’un scénario de basculement en cas d’échec de la variante de Principal du flux au démarrage (renvoie 404), selon lequel la lecture ne passe pas au flux de sauvegarde.
+* (ZD#35093) - Correction d’un scénario de basculement en cas d’échec de la variante Principal du flux au démarrage (renvoie 404), selon lequel la lecture ne passe pas au flux de sauvegarde.
 
 **Version 1.4.42 (1.4.42.118)**
 
@@ -289,7 +289,7 @@ Comment Type: draft
 
 * (ZD#33815) - Les clients ne peuvent pas mettre à jour leurs règles CRS de hiérarchisation et de normalisation sans avoir à mettre à jour leur application.
 
-   Ajouté les API getCRSRulesJsonURL et setCRSRulesJsonURL sur le TVSDK iOS.
+   ajouté les API getCRSRulesJsonURL et setCRSRulesJsonURL sur le TVSDK iOS.
 
 **Version 1.4.41 (1.4.41.76)**
 
@@ -371,7 +371,7 @@ Comment Type: draft
 
 **Version 1.4.38** (1.4.38.860)
 
-* (ZD #29281) - iOS : Ajouter AdSystem et l’ID de création aux demandes CRS
+* (ZD #29281) - iOS : ajouter AdSystem et l’ID de création aux demandes CRS
 
 Utilisation de l’ID de création et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS
 
@@ -381,7 +381,7 @@ Le blocage dû à un AdBreak vide est maintenant géré.
 
 * (ZD #30125) - Les annonces par programmation ne fonctionnent pas sur la plate-forme iOS
 
-Prise en charge des annonces par programmation Ajoutée dans iOS.
+Prise en charge des annonces programmatiques Ajoutées dans iOS.
 
 * (ZD #30782) - #EXT-X-PROGRAMME-DATE-HEURE Notification
 
@@ -393,7 +393,7 @@ Le événement de métadonnées minutées n’est pas déclenché pour la balise
 
 Problème de lecture lorsque la balise # EXT-X-PLAYLIST-TYPE du flux est définie sur Événement plutôt que VOD
 
-* (ZD #29281) - iOS : Ajouter AdSystem et l’ID de création aux demandes CRS
+* (ZD #29281) - iOS : ajouter AdSystem et l’ID de création aux demandes CRS
 
 Utilisation de Creative Id et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS.
 
@@ -409,7 +409,7 @@ Le problème est corrigé et les débuts de lecture sont corrects.
 
 Le problème est résolu. Le TVSDK iOS génère une exception (AUDNetworkAdInfo::initWithAdId) et ne la gère pas. L&#39;exception est due à un identifiant de publicité vide.
 
-* (ZD #29281) - Ajoutez AdSystem et l’identifiant Creative ID aux demandes CRS.
+* (ZD #29281) - Ajoutez AdSystem et l’ID de création aux demandes CRS.
 
 Incluez AdSystem et CreativeId comme nouveaux paramètres dans les requêtes 1401 et 1403 (tous les autres paramètres restent les mêmes).
 
@@ -443,13 +443,13 @@ Pour un flux FER, la clé avant la coupure publicitaire est insérée après la 
 
 Activé en envoyant l’URL de création d’origine pour la demande CRS 1401 au lieu de l’URL normalisée, selon les exigences du serveur principal CRS.
 
-* (ZD# 26218) - Problème de chargement du fichier PSDKResources.bundle
+* (ZD# 26218) - Problème de chargement PSDKResources.bundle
 
 Ce problème a été résolu en mettant à jour le chargement des ressources afin de rechercher tous les lots disponibles.
 
-* (ZD# 27460) Premier appel publicitaire - POST sur cdn.auditude<span></span>.com renvoyant la valeur 403.
+* (ZD# 27460) Premier appel publicitaire - POST à cdn.auditude<span></span>.com renvoyant la valeur 403.
 
-Le nouveau compte CDN ne peut pas gérer une demande de CDN POST. Ce problème a été résolu en mettant à jour le code afin que la `cdn.auditude.com` demande d’annonce soit GET (GET) et non POST (POST).
+Le nouveau compte CDN ne peut pas gérer une demande CDN POST. Ce problème a été résolu en mettant à jour le code afin que la demande `cdn.auditude.com` d’annonce soit GET plutôt que POST.
 
 **Version 1.4.32** (1.4.32.792 pour iOS 6.0+)
 
@@ -480,6 +480,7 @@ Ce problème a été résolu en alignant les balises de discontinuité entre les
 Ce problème a été résolu en assemblant le fichier PSDKLibrary.framework comme demandé.
 
 * (ZD# 26364) Prise en charge de plusieurs CDN pour les publicités CRS
+
 <!-- 
 Comment Type: draft
 For more information, see [Multiple CDN support for CRS Ad Delivery](http://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-concept-Multiple_CDN_support_for_CRS_ad_delivery).
@@ -498,7 +499,7 @@ Un nouvel en-tête personnalisé a été ajouté à la liste autorisée TVSDK.
 
 * (ZD# 25016) Le flux de basculement est sélectionné de manière aléatoire lorsque les paramètres de contrôle ABR sont définis
 
-Ce problème a été résolu en maintenant les flux ABR dans l’ordre lorsque les paramètres ABR sont fournis avec le paramètre initialBitrate sur un flux qui inclut des URL de basculement. Cela évite de lire les flux de basculement plutôt que les flux principaux.
+Ce problème a été résolu en maintenant les flux ABR dans l’ordre lorsque les paramètres ABR sont fournis avec le paramètre initialBitrate sur un flux qui inclut des URL de basculement. Cela évite de lire les flux de basculement au lieu de Principal.
 
 * (ZD# 25076) Crash sur PTAuditudeAdResolver loadComplete
 
@@ -514,19 +515,19 @@ Lorsque le dernier début de coupure publicitaire du VMAP tombe avant que la dur
 
 * La bibliothèque Video Heartbeat (VHL) a été mise à jour vers la version 1.5.9 afin de résoudre les problèmes suivants :
 
-   * (ZD #22351) VHL - Analytics : Durée de la ressource vidéo en direct
+   * (ZD #22351) VHL - Analyses : Durée de la ressource vidéo en direct
 
 Ce problème a été résolu en ajoutant l’API assetDuration pour `PTVideoAnalyticsTrackingMetadata` mettre à jour la durée de la ressource pour les flux en direct/linéaires et fournir une logique de vérification du flux en direct.
 
-* (ZD# 22675) VHL - Analytics : Mise à jour de la durée des fichiers vidéo en direct
+* (ZD# 22675) VHL - Analyses : Mise à jour de la durée des fichiers vidéo en direct
 
 Ce problème est identique à celui du ZD #22351.
 
-* (ZD #25908) VHL - Analytics : Événement de pulsation Adobe en panne
+* (ZD #25908) VHL - Analyses : événement de pulsation d’Adobe
 
 Ce problème a été résolu en mettant à jour l’implémentation pour utiliser la dernière version de VHL pour iOS version 1.5.9 afin d’améliorer la stabilité et les performances.
 
-* (ZD #25956) VHL - Analytics : Blocage lors de la lecture répétée de vidéos
+* (ZD #25956) VHL - Analyses : Blocage lors de la lecture répétée de vidéos
 
 Ce problème est identique à celui du ZD #25908.
 
@@ -612,7 +613,7 @@ Ce problème a été résolu en ajoutant d’autres vérifications d’objets nu
 
 Ce problème est identique à (ZD #21590).
 
-* (ZD #22280) - Analytics Video Length is set to 0 (Longueur de vidéo définie sur 0)
+* (ZD #22280) - La longueur de la vidéo Analytics est définie sur 0.
 
 Ce problème est identique à (ZD #21590).
 
@@ -638,7 +639,7 @@ Ce problème a été résolu en mettant à jour la logique afin d’afficher la 
 
 Ce problème a été résolu en mettant à jour VideoAnalyticsTracker afin de détecter correctement le début/la fin du chapitre lors de la transition entre les limites de chapitre et les limites autres que les chapitres.
 
-* (ZD #20784) - Analytics : Déclenchement du contenu terminé pour les transitions de vidéo en direct
+* (ZD n° 20784) - Analyses : Déclenchement du contenu terminé pour les transitions de vidéo en direct
 
 Ce problème a été résolu en ajoutant une logique pour déclencher manuellement la fin du contenu au cours d’une session de suivi vidéo.
 
@@ -661,7 +662,7 @@ Dans la version 1.4.23, le blocage provoqué par la présence de caractères non
 
 Ce problème a été résolu en gérant les caractères non sûrs et en autorisant la lecture des publicités.
 
-* (ZD #22694) - PTMediaPlayer.  La Vue est masquée par le lecteur
+* (ZD #22694) - PTMediaPlayer.  La vue est masquée par le lecteur
 
 Ce problème a été résolu en mettant à jour la logique afin d’afficher la vue du lecteur en cas d’échec de lecture d’une publicité VPAID.
 
@@ -677,7 +678,7 @@ Ce problème a été résolu en offrant une protection supplémentaire contre le
 
 * (ZD #21782) - Code d’erreur iOS 10100
 
-Le problème en raison duquel TVSDK renvoyait une erreur 101000 lors du démarrage de la lecture sur les flux DRM Adobe Access a été résolu.
+Le problème en raison duquel TVSDK renvoyait une erreur 101000 lors du démarrage de la lecture sur les flux DRM d’accès aux Adobes a été résolu.
 
 * (ZD #21889) - Echec de la lecture des publicités en ligne et du contenu hors ligne
 
@@ -689,13 +690,13 @@ Ce problème a été résolu en améliorant la gestion des balises publicitaires
 
 * (ZD #22257) - TVSDK ne parvient pas à lire le flux DRM
 
-Le problème en raison duquel TVSDK qui renvoyait une erreur 101000 lors du démarrage de la lecture sur les flux DRM Adobe Access a été résolu.
+Le problème en raison duquel TVSDK renvoyait une erreur 101000 lors du démarrage de la lecture sur les flux DRM d’accès aux Adobes a été résolu.
 
 **Version 1.4.22** (1.4.22.627) pour iOS 6.0+
 
 * (ZD #18709) - Blocage du SDK TVSDK pour iOS
 
-Le problème d&#39;un blocage survenant sur certains flux protégés DRM d&#39;accès Adobe a été résolu.
+Le problème d&#39;un blocage survenant sur certains flux protégés DRM d&#39;accès aux Adobes a été résolu.
 
 * (ZD #18850) - Mettre à jour la logique de sélection créative en fonction des règles CRS
 
@@ -852,7 +853,7 @@ TVSDK se bloquait sur Android M OS lorsque la bibliothèque TVSDK utilisait du c
 
 * Zendesk #18072 - Android M - Crash d&#39;application
 
-Ce blocage survient lors de l’appel des API MediaCodecList et MediaCodecInfo lors de la vérification de la prise en charge du profil et du niveau. Adobe cherche à obtenir des informations supplémentaires auprès de Google. Ce problème a été résolu en fournissant une solution temporaire en chargeant toutes les informations de codec à l’avance afin d’éviter d’appeler ces API uniquement lorsque des informations de codec sont nécessaires.
+Ce blocage survient lors de l’appel des API MediaCodecList et MediaCodecInfo lors de la vérification de la prise en charge du profil et du niveau. L&#39;Adobe recherche le support de Google pour obtenir des informations complémentaires. Ce problème a été résolu en fournissant une solution temporaire en chargeant toutes les informations de codec à l’avance afin d’éviter d’appeler ces API uniquement lorsque des informations de codec sont nécessaires.
 
 * Zendesk #18074 - Sous-titres arabes ne fonctionnant pas sur Nexus avec Android 6.0
 
@@ -866,7 +867,7 @@ Ce problème a été résolu en prenant en charge la carte des polices CTS Andro
 
 Métadonnées Ajoutées pour exposer le contenu lorsque la notification M3U8_PARSER_ERROR se produit.
 
-* (ZD #4437) - Blocages dans le SDK Adobe Primetime
+* (ZD #4437) - Blocages à l’intérieur du SDK Adobe Primetime
 
 Correction d’un blocage signalé lors de la préparation de sous-titres/audio alternatif.
 
@@ -949,13 +950,13 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 
 **Version 1.4.6**(1.4.6.325)
 
-* (ZD #2197) Suivi des erreurs et des erreurs. Échec du chargement du manifeste de la notification Ajoutée pour la ressource
+* (ZD #2197) Suivi des erreurs et des erreurs. Échec du chargement du manifeste de la notification Ajoutée pour l&#39;actif
 
 **Version 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Mise en oeuvre Analytics pour l’application TreeHouse, ajout de la bibliothèque AdobeAnalyticsPlugin.a pour créer un package.
+* (ZD #2141) Mise en oeuvre d’Analytics pour l’application TreeHouse, ajout de la bibliothèque AdobeAnalyticsPlugin.a pour créer un package.
 * Mise à jour de la bibliothèque Video Heartbeats vers la version 1.4.1.2
-* [PTPALY-4226] [lié au ZD #2423) L’exécution de la réinitialisation DRM peut entraîner la suppression des données du Document d’application.
+* (PTPALY-4226) (lié au ZD #2423) L’exécution de la réinitialisation DRM peut entraîner la suppression des données du Document d’application.
 
 **Version 1.4.4** (1.4.4.242)
 
@@ -986,7 +987,7 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 * Dans ce cas, la décision d’ignorer se produit sur le événement de recherche. Cependant, puisque les durées du segment publicitaire dans le manifeste ne représentent pas exactement la durée réelle de la publicité, la recherche n’est pas précise. Vous voyez donc quelques cadres de la publicité lorsque les stratégies publicitaires sont appliquées.
 * RECORDING_ERROR : Une erreur s&#39;est produite lors de l&#39;enregistrement de l&#39;écran.
 * Il est possible que la vidéo de rotation sous licence ne soit pas lue sous iOS 11 et qu’elle soit lue correctement sous iOS 9.x et iOS 10.x.
-* Dans la prise en charge de VPAID 2.0, si la lecture est active sur AirPlay, les publicités VPAID sont ignorées.
+* Dans la prise en charge de VPAID 2.0, si la lecture est principale sur AirPlay, les publicités VPAID sont ignorées.
 * Le fichier drmNativeInterface.framework ne se lie pas correctement lorsque la cible minimale est définie sur iOS7 (ou version ultérieure).\
    Solution : Spécifiez explicitement le `libstdc++6`.  bibliothèque dylib comme suit : Accédez à Cible->Build Phases->Link Binary With Libraries et ajoutez `libstdc++.6.dylib`.
 
