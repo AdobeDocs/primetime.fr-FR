@@ -4,7 +4,10 @@ seo-description: 'Ce tableau fournit des informations détaillées sur les notif
 seo-title: Code d'optimisation des recettes
 title: Code d'optimisation des recettes
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 0%
 
 ---
 
@@ -15,16 +18,17 @@ Ce tableau fournit des informations détaillées sur les notifications d&#39;OPT
 
 ## Activer le Rapports d&#39;optimisation des recettes {#enable-revenue-optimization-reporting}
 
-Pour activer ce rapports, utilisez l’api PTMediaPlayer : `[mediaPlayer
-setRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
+Pour activer ce rapports, utilisez l’api PTMediaPlayer : `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 
-[!Nnote]: La plupart des notifications d’informations contiennent des métadonnées pertinentes, par exemple l’URL de la ressource qui n’a pas été téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
+>[!NOTE]
+>
+>La plupart des notifications d’informations contiennent des métadonnées pertinentes, par exemple l’URL de la ressource qui n’a pas été téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
 |Code |Nom |Notification interne |Clés de métadonnées |Commentaires |
 |—|—|—|—|—|||
 |401001 | REVENUE_OPTIMIZATION_RAPPORTS | Aucun | Reportez-vous au tableau ci-dessous pour les clés de métadonnées basées sur différents événements. | Aucun |
 
-| Détails du Événement | ContextMetadata |
+| Détails du événement | ContextMetadata |
 |---|---|
 | **CONTENT_RESOURCE_DÉBUT** Distribué dans TVSDK lorsque MediaPlayer::replaceCurrentResource est appelé. | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, événement, adSignalingMode, resourceUrl, creativeRepackagingFormat, delayAdLoadingTolerance, zoneID, hasLivePreroll, adRequestTimeout, delayAdLoading, resourceType, creativeRepackaging Activé, mediaId, clientId |
 | **CONTENT_PLAYBACK_DÉBUT** Distribué dans TVSDK lorsque le contenu est entré dans l’état préparé et est prêt pour la lecture. Ce événement n&#39;est pas distribué pour chaque transfert de manifeste ; il ne l&#39;est que pour le chargement initial. | clientTimestamp, contentURL, contentType, événement, isLive, clientID |
