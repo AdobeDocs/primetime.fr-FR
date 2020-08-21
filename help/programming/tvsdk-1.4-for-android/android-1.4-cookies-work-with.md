@@ -5,7 +5,10 @@ seo-title: Utilisation des cookies
 title: Utilisation des cookies
 uuid: f060b520-ceec-48ca-929f-683566fe6ae7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -45,22 +48,21 @@ Pour utiliser des cookies :
 
    Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec des requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la `NetworkConfiguration` méthode `setUseCookieHeadersForAllRequests`:
 
-   ```java
+```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
-   
+    
    Metadata cookie = new MetadataNode(); 
    cookie.setValue("reqPayload", “1234567”); 
    networkConfiguration.setCookieHeaders(cookie); 
    networkConfiguration.setUseCookieHeadersForAllRequests( true ); 
-   
+    
    // Set NetworkConfiguration as Metadata:                                                                   
-   MetadataNode resourceMetadata = new MetadataNode();  
+   MetadataNode resourceMetadata = new MetadataNode(); 
    resourceMetadata.setNode(DefaultMetadataKeys.NETWORK_CONFIGURATION.getValue(),  
                             networkConfiguration); 
-   
+    
    // Call MediaResource.createFromURL to set the metadata: 
    MediaResource resource = MediaResource.createFromURL(url, resourceMetadata); 
-    // Load the resource 
+   // Load the resource 
    mediaPlayer.replaceCurrentItem(resource);
-   ```
-
+```
