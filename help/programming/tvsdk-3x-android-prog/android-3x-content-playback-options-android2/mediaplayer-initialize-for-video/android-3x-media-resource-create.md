@@ -5,7 +5,10 @@ seo-title: Création d’une ressource multimédia
 title: Création d’une ressource multimédia
 uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
    <tbody> 
    <tr> 
       <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> Chaîne représentant l’URL du manifeste/liste de lecture du média. </td> 
+      <td colname="col2"> Chaîne représentant l’URL du manifeste/de la liste de lecture du média. </td> 
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> type </span> </td> 
@@ -43,7 +46,7 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> Une instance de la <span class="codeph"> classe de </span> métadonnées (structure de type dictionnaire), qui peut contenir des informations supplémentaires sur le contenu sur le point d’être chargé, telles que le contenu alternatif ou publicitaire à placer dans le contenu principal. Si vous utilisez la publicité, configurez <span class="codeph"> les Paramètres d’Auditude </span> avant d’utiliser ce constructeur (voir href=Métadonnées d’insertion d’annonce](../../android-3.5-pub/insertion d’annonce/métadonnées d’insertion d’annonce/android-3.5-insertion-d’annonce-métadonnées.md). </td> 
+      <td colname="col2"> Une instance de la <span class="codeph"> classe de </span> métadonnées (structure de type dictionnaire), qui peut contenir des informations supplémentaires sur le contenu sur le point d’être chargé, telles que le contenu alternatif ou publicitaire à placer dans le contenu principal. Si vous utilisez la publicité, configurez <span class="codeph"> Paramètres d’amplitude </span> avant d’utiliser les métadonnées d’insertion <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> publicitaire du constructeur </a>. </td> 
    </tr> 
    </tbody> 
    </table>
@@ -70,6 +73,7 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
 
    * Instance MediaPlayer.
    * `MediaPlayerItemLoader` Pour plus d’informations, voir [Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >Ne chargez pas la ressource multimédia sur un thread en arrière-plan. La plupart des opérations TVSDK doivent s’exécuter sur le thread principal et les exécuter sur un thread en arrière-plan peut provoquer une erreur et une fermeture.
