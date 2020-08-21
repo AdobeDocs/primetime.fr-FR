@@ -5,7 +5,10 @@ seo-title: Utiliser le comportement de lecture par défaut
 title: Utiliser le comportement de lecture par défaut
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -40,19 +43,20 @@ Pour personnaliser les comportements publicitaires :
 1. Implémentez l’ `AdPolicySelector` interface et toutes ses méthodes.
 1. Affectez l’instance de stratégie à utiliser par TVSDK via la fabrique de publicités.
 
->[!NOTE]
->classe CustomContentFactory étend ContentFactory {
->...
->@Override
->public AdPolicySelector retrieveAdPolicySelector&quot;(MediaPlayerItem mediaPlayerItem) {
->return new CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->// enregistrer la fabrique de contenu personnalisée avec le lecteur multimédia
->MediaPlayerItemConfig config = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// cette configuration doit être transmise ultérieurement lors du chargement >de la ressource
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >classe CustomContentFactory étend ContentFactory &amp;lbrace;
+   >...
+   >@Override
+   >public AdPolicySelector retrieveAdPolicySelector&quot;(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >return new CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;amp ; accolade ;
+   >...
+   >&amp;amp ; accolade ;
+   >// enregistrer la fabrique de contenu personnalisée avec le lecteur multimédia
+   >MediaPlayerItemConfig config = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// cette configuration doit être transmise ultérieurement lors du chargement >de la ressource
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Mettez en oeuvre vos personnalisations.
