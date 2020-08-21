@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '5222'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Les notes de mise à jour TVSDK for Desktop HLS décrivent les nouveautés ou le
 
 * **Prise en charge multiCDN pour les annonces CRS**
 
-   * Par défaut, toutes les ressources transcodées sont hébergées sur le CDN d’Adobe sur Akamai. Avec la dernière version, Adobe Creative Repackaging Service (CRS) permet de télécharger les éléments créatifs transcodés sur plusieurs réseaux de diffusion de contenu selon les spécifications du client.
+   * Par défaut, toutes les ressources transcodées sont hébergées sur le réseau de diffusion de contenu détenu par l’Adobe sur Akamai. Avec la dernière version, Adobe Creative Repackaging Service (CRS) permet de télécharger les éléments créatifs transcodés sur plusieurs réseaux de diffusion de contenu selon les spécifications du client.
    * De nouvelles API sont ajoutées à TVSDK pour permettre la spécification de l’URL créative CRS finale lorsque l’URL par défaut n’est pas utilisée. Consultez la documentation pour savoir comment utiliser ces nouvelles API.
 
 ### Nouvelles fonctionnalités des versions précédentes {#new-features-previous}
@@ -33,7 +36,7 @@ Les notes de mise à jour TVSDK for Desktop HLS décrivent les nouveautés ou le
 
 * **Mesures de facturation**
 
-Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, l’Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
 
 **1.4.24**
 
@@ -47,7 +50,7 @@ Dans cette version, cette fonctionnalité n’est pas prise en charge dans Apple
 **1.4.19**
 
 * Prise en charge de l’intégrité du flux pour les annonces VPAID.
-* Activation de l’option de tabulation silencieuse dans le lecteur Flash FP 20.0.0.267 pour Firefox 42 et versions ultérieures en corrigeant le problème de blocage.
+* Activation de l’option de tabulation silencieuse dans le lecteur de Flash FP 20.0.0.267 pour Firefox 42 et versions ultérieures en corrigeant le problème de blocage.
 
 **1.4.18**
 
@@ -70,11 +73,11 @@ Pour plus d’informations, voir Reprise [publicitaire pour les annonces VAST et
 
 * **Prise en charge de l’individualisation sur site**
 
-Prise en charge des installations sur site d’Adobe Individualization Server pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
+Prise en charge des installations sur site de l’Adobe Individualization Server pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
 
 **1.4.6**
 
-* **Exemple de chiffrement AES (nécessite Flash Player version 17.0.0.134)**
+* **Exemple de chiffrement AES (nécessite la version 17.0.0.134 du Flash Player)**
 
 Le chiffrement AES basé sur des exemples est désormais pris en charge.
 
@@ -82,7 +85,7 @@ Le chiffrement AES basé sur des exemples est désormais pris en charge.
 
 * **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.4.0.1**
 
-   * Ajout de la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
+   * ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
    * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete. La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete.
    * La propriété playhead n’est plus nécessaire lors du suivi des publicités.
 
@@ -129,20 +132,20 @@ Le chiffrement AES basé sur des exemples est désormais pris en charge.
    Le problème où des URL déjà reconditionnées sont demandées pour le transcodage a été corrigé, conformément aux exigences du serveur principal CRS.
 * Zendesk #26197 - Compression anamorphique non rejouée dans la résolution d’affichage souhaitée.
 
-   **Remarque**: Ce problème nécessite Flash Player 24.0.0.194 ou version ultérieure.
+   **Remarque**: Ce problème nécessite le lecteur de Flash version 24.0.0.194 ou ultérieure.
 
    Le problème d’utilisation des entrées manquantes dans les tableaux des proportions pour calculer la largeur de sortie a été corrigé.
 
-* Zendesk #26840 - Échec de la détection HDCP sur IE11 + Windows7 après la seconde tentative.
+* Zendesk #26840 - Échec de la détection HDCP sur IE11 + Windows7 après la deuxième tentative.
 
    **Remarque**: Ce problème nécessite Flash Player 24.0.0.218 ou version ultérieure.
 
    Ce problème a été résolu en modifiant le traitement de la file d’attente des messages principale d’AdobeCP afin qu’elle parcourt la file d’attente entière, plutôt que de se contenter de bloquer le tout premier message.
 
-* Zendesk #27460 - Le nouveau compte Akamai ne peut pas gérer une demande POST CDN.
+* Zendesk #27460 - Le nouveau compte Akamai ne peut pas gérer une demande CDN POST.
 
-   Le nouveau compte CDN ne peut pas gérer une demande de CDN POST. Ce problème a été résolu en mettant à jour le code afin que la demande d’annonce cdn.auditude.com soit GET au lieu de POST.
-* Zendesk #27619 - Un blocage Flash sur Windows 10
+   Le nouveau compte CDN ne peut pas gérer une demande CDN POST. Ce problème a été résolu en mettant à jour le code afin que la demande d’annonce cdn.auditude.com soit GET et non POST.
+* Zendesk #27619 - Flash crash sous Windows 10
 
    **Remarque**: Ce problème nécessite Flash Player 24.0.0.218 ou version ultérieure.
 
@@ -192,7 +195,7 @@ La bibliothèque Video Heartbeat (VHL) a été mise à jour vers la version 1.5.
 
 Ce problème a été résolu en suivant les changements de débit dans VideoAnalyticsTracker.
 
-* Ajout d’une nouvelle API, assetDuration, à PTVideoAnalyticsTrackingMetadata pour mettre à jour la durée des ressources pour les flux en direct/linéaires.
+* ajouté une nouvelle API, assetDuration, à PTVideoAnalyticsTrackingMetadata pour mettre à jour la durée des ressources pour les flux en direct/linéaires.
 
 **Version 1.4.28** (848)
 
@@ -206,15 +209,15 @@ Ce problème a été résolu en prenant en compte le fait que, en l’absence de
 
 * Zendesk #24344 - Désactivation des fichiers WebVTT pour améliorer les temps de début.
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
 Ce problème a été résolu en chargeant les fichiers WebVTT uniquement lorsque des légendes doivent être affichées.
 
 * Zendesk #24994 - Le sous-titrage fermé est retiré du lecteur en revenant d&#39;une pause commerciale.
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
-Le code EOC fallacieux a provoqué la disparition de l’affichage de la légende. Ce problème a été résolu en forçant les codes de sous-titrage 608 RU2, RU3 et RU4 à fournir la visibilité correcte dans la fenêtre active actuelle.
+Le code EOC fallacieux a provoqué la disparition de l’affichage de la légende. Ce problème a été résolu en forçant les codes de sous-titrage 608 RU2, RU3 et RU4 à fournir la visibilité correcte dans la principale fenêtre active.
 
 **Version 1.4.27** (844)
 
@@ -224,25 +227,25 @@ Ce problème a été résolu en permettant à TVSDK d’effectuer un test ping s
 
 * Zendesk #23402 - Lecture de publicité incomplète
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
 Après avoir obtenu une erreur 404 sur certaines requêtes, un blocage peut se produire. Ce problème a été résolu en s&#39;assurant que la connexion ne s&#39;arrête pas pendant que la réponse est gérée. La résolution permet de s’assurer que les fichiers d’annonce VPAID ne sont pas comptabilisés incorrectement. Ils ne sont donc pas publiés pendant le téléchargement.
 
 * Zendesk #23621 - La nouvelle tentative échoue sur les versions 400 et 404
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
 Correction d’un problème en raison duquel les métadonnées DRM étaient endommagées lors du basculement d’un profil à l’autre.
 
 * Zendesk #23705 - Blocage des publicités vidéo pendant les pauses AdStitched
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
 Ce problème est le même que dans Zendesk #23621.
 
 * Zendesk n° 23905 - Certaines coupures publicitaires ignorent les coupures publicitaires
 
-**Remarque**: Ce problème nécessite Flash Player 23 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash 23 ou une version ultérieure.
 
 Le code réseau natif Windows a été corrigé afin de s&#39;assurer que les connexions ne ferment pas les poignées actuellement utilisées par d&#39;autres connexions.
 
@@ -293,11 +296,11 @@ Les bibliothèques suivantes ont été mises à jour :
 
 Ce problème a été résolu en utilisant une fenêtre d’affichage à hauteur nulle pour remplir l’étape de lecture d’une publicité VPAID.
 
-* Zendesk #22110 - Analytics : Ajouter un champ h:sc:ssl aux appels de suivi de pulsation
+* Zendesk #22110 - Analytics : ajouter un champ h:sc:ssl aux appels de suivi de pulsation
 
 Les problèmes liés au protocole SSL ont été résolus et la bibliothèque VHL utilisée dans TVSDK a été mise à jour vers la dernière version.
 
-* Zendesk #22608 - La vidéo montre un écran noir par intermittence (nécessite Flash Player 22.0.0.175 ou une version ultérieure).
+* Zendesk #22608 - La vidéo affiche un écran noir par intermittence (nécessite le Flash Player 22.0.0.175 ou une version ultérieure)
 
 Pendant le débit adaptatif, avec la limite de débit maximale, le rechargement de la vidéo affiche par intermittence un écran noir, même si le client voit les mises à jour pour se positionner, et que le client se comporte comme s’il lisait du contenu.
 
@@ -345,7 +348,7 @@ Le problème en raison duquel le lecteur de référence ne lisait aucun flux et 
 
 * Zendesk #17580 - Erreur d’exécution Primetime avec le code 3357
 
-**Remarque**: Ce problème nécessite Flash Player 21.0.0.197 ou version ultérieure.
+**Remarque**: Ce problème nécessite le lecteur de Flash version 21.0.0.197 ou ultérieure.
 
 Les erreurs 3357 aléatoires survenues lors de l’initialisation correcte de deviceID lors de l’appel de storeVoucher() ont été corrigées.
 
@@ -398,7 +401,7 @@ Ce problème a été résolu en permettant à TVSDK d’ignorer le manifeste (so
 
 **Remarque**: Ce problème nécessite Flash Player 20.0.0.306 ou version ultérieure.
 
-* Zendesk #19286 - Un blocage de Flash Player s&#39;est produit lors de la recherche en avant et en arrière dans un flux FER.
+* Zendesk #19286 - Un Flash Player s&#39;est écrasé alors qu&#39;il faisait des allers-retours dans un flux FER.
 
 **Remarque**: Ce problème nécessite Flash Player 20.0.0.306 ou version ultérieure.
 
@@ -410,7 +413,7 @@ Les blocages occasionnels survenant lors de la recherche dans Google Chrome ont 
 
 Ce problème a été résolu par le rapports d’un avertissement.
 
-* Zendesk # 19359 - Flash Player s&#39;est écrasé en raison de la position de #EXT-X-FAXS-CM : dans le manifeste de niveau défini.
+* Zendesk # 19359 - Flash Player s&#39;est écrasé à cause de la position de #EXT-X-FAXS-CM : dans le manifeste de niveau défini.
 
 Ce problème a été résolu lorsque la balise #EXT-X-FAXS-CM apparaît dans la liste de lecture supérieure avant le débit ou les segments individuels dans la liste de lecture.
 
@@ -424,25 +427,25 @@ Ce problème a été résolu en faisant le vidage du lecteur et en rechargeant l
 
 **Version 1.4.19** (1.4.19.738)
 
-* Zendesk #18234 - Flash Player plante la lecture des flux avec des chaînes Unicode en CC
+* Zendesk #18234 - Flash Player se bloque en lisant les flux avec des chaînes Unicode en CC
 
-Ce problème nécessite Flash Player FP 20.0.0.267 ou version ultérieure et a été résolu en gérant correctement la chaîne Unicode.
+Ce problème nécessite le Flash Player FP 20.0.0.267 ou une version ultérieure et a été résolu en gérant correctement la chaîne Unicode.
 
 * Zendesk #18304 - Prise en charge de l’intégrité des flux pour les publicités VPAID
 
-Cette fonctionnalité nécessite Flash Player FP 20.0.0.267 ou version ultérieure et a été introduite dans la version 1.4.19.
+Cette fonctionnalité nécessite le Flash Player FP 20.0.0.267 ou une version ultérieure et a été introduite dans la version 1.4.19.
 
 * Zendesk #18766 - Le lecteur de référence ne peut pas afficher les caractères unicode non latins dans les noms de pistes CC
 
-Cette fonctionnalité nécessite Flash Player FP 20.0.0.267 ou version ultérieure et a été corrigée en gérant correctement la chaîne Unicode.
+Cette fonctionnalité nécessite le Flash Player FP 20.0.0.267 ou une version ultérieure et a été corrigée en gérant correctement la chaîne Unicode.
 
 * Zendesk #18804 - Accident du lecteur dans Firefox 42
 
-Ce problème nécessite Flash Player FP 20.0.0.235 ou version ultérieure et est identique à Zendesk #18723.
+Ce problème nécessite le Flash Player FP 20.0.0.235 ou une version ultérieure et est identique à celui de Zendesk #18723.
 
-* Zendesk #18864 - blocage du module externe Flash Player
+* Zendesk #18864 - Flash Player de blocage du module externe complet
 
-Ce problème nécessite Flash Player FP 20.0.0.235 ou version ultérieure et est identique à Zendesk #18723.
+Ce problème nécessite le Flash Player FP 20.0.0.235 ou supérieur et est identique à Zendesk #18723.
 
 * Zendesk #18998 - Si les horodatages audio et vidéo ne correspondent pas, un téléchargement sans fin de segments en cas de discontinuité s’est produit.
 
@@ -458,7 +461,7 @@ Ce problème a été résolu en permettant au lecteur de mettre à jour l’heur
 
 * Zendesk #19102 - Problèmes avec le mode FER et astuces
 
-Ce problème nécessite Flash Player FP 20.0.0.267 ou version ultérieure et a été résolu en définissant correctement le paramètre advertisingMetadata.adSignalingMode.
+Ce problème nécessite le Flash Player FP 20.0.0.267 ou une version ultérieure et a été résolu en définissant correctement le paramètre advertisingMetadata.adSignalingMode.
 
 * Zendesk #19175 - Parfois, les publicités preroll ne s’affichent pas la première fois que le flux est lu.
 
@@ -478,19 +481,19 @@ Ce problème a été résolu en prenant en charge la balise EXT-X-MEDIA-TIME pou
 
 * Zendesk #17983 - Le fait de ne pas télécharger de clés pour un manifeste provoque l&#39;échec de la lecture complète du manifeste
 
-**Remarque**: Vous devez disposer d&#39;au moins Flash Player FP 19.0.0.245 ou d&#39;une version ultérieure.
+**Remarque**: Vous devez avoir au moins Flash Player FP 19.0.0.245 ou supérieur.
 
 Lorsque vous lisez parfois du contenu en direct, il peut y avoir des clés non valides dans le manifeste (par exemple, pour les périodes d’interruption), mais d’autres plages de temps peuvent avoir des clés valides et seront toujours lues. Auparavant, lorsqu’une clé répertoriée dans un manifeste ne pouvait pas être téléchargée, l’intégralité du manifeste échouait. Désormais, le manifeste échoue uniquement lorsque toutes les clés répertoriées ne peuvent pas être téléchargées. Si certaines clés sont valides, mais que certaines d’entre elles n’ont pas pu être téléchargées, le contenu est lu. Nous échouerons encore si nous tentons de jouer un segment qui nécessite une clé que nous n&#39;avons pas.
 
 * Zendesk #18554 - Intégrité du flux qui réduit les cookies dans certains cas
 
-**Remarque**: Vous devez disposer d&#39;au moins Flash Player FP 19.0.0.245 ou d&#39;une version ultérieure.
+**Remarque**: Vous devez avoir au moins Flash Player FP 19.0.0.245 ou supérieur.
 
 Correction d’un bogue dans le code de manipulation des cookies qui pouvait tronquer les valeurs des cookies.
 
 **Version 1.4.16** (1.4.16.684)
 
-* Zendesk #3732 - Ajouter prise en charge des proxies dans Chrome pour l’intégrité du flux (nécessite Flash Player FP 19.0.0.207 ou version ultérieure)
+* Zendesk #3732 - Ajoutez la prise en charge des proxies dans Chrome pour l’intégrité du flux (nécessite Flash Player FP 19.0.0.207 ou version ultérieure)
 
 C&#39;est une amélioration.
 
@@ -502,37 +505,37 @@ Ce problème a été résolu en détectant le roulement et en gérant la discont
 
 Ce problème a été résolu en réinitialisant le suivi de pulsation vidéo au cours d’une session de lecture de flux linéaire.
 
-* Zendesk #17427 - L’intégrité du flux Adobe ne fonctionne pas par le biais d’un proxy sur Chrome (Win7) ()
+* Zendesk #17427 - Adobe Stream Integrity not working through a proxy on Chrome (Win7) ()
 
-**Remarque**: La résolution requiert Flash Player FP 19.0.0.207 ou version ultérieure.
+**Remarque**: La résolution requiert le Flash Player FP 19.0.0.207 ou une version ultérieure.
 
 Ce problème est le même que Zendesk #3732.
 
-* Zendesk #17907 - Pointage sur le flux en direct pHLS avec Flash Player 19
+* Zendesk #17907 - Poignardage sur le flux en direct pHLS avec le Flash Player 19
 
-**Remarque**: La résolution requiert Flash Player FP 19.0.0.207 ou version ultérieure.
+**Remarque**: La résolution requiert le Flash Player FP 19.0.0.207 ou une version ultérieure.
 
 Ce problème a été résolu en gérant les flux en direct dans lesquels les domaines des fichiers TS changent lors du rechargement du manifeste en direct et les fichiers ont été téléchargés deux fois.
 
 * Zendesk #17931 - Le contenu HLS avec ardoise au début échoue à la lecture.
 
-**Remarque**: La résolution requiert Flash Player FP 19.0.0.207 ou version ultérieure.
+**Remarque**: La résolution requiert le Flash Player FP 19.0.0.207 ou une version ultérieure.
 
 Le problème a été résolu en gérant les flux sans audio dans les 2 premières secondes du premier fichier TS.
 
-* Zendesk #17934 - Echec de la diffusion en continu en direct avec Flash 19.0.0.185
+* Zendesk #17934 - Échec de la diffusion en continu en direct avec le Flash 19.0.0.185
 
-**Remarque**: La résolution requiert Flash Player FP 19.0.0.207 ou version ultérieure.
+**Remarque**: La résolution requiert le Flash Player FP 19.0.0.207 ou une version ultérieure.
 
 Le problème a été résolu en gérant les flux en direct avec le décalage temporel entre les images audio et vidéo sur les limites des segments.
 
-* Zendesk #17973 - Dernière version de Flash Player 19.0.0.185 se bloque lors d’un blocage mi-parcours
+* Zendesk #17973 - Dernier Flash Player 19.0.0.185 crashs au milieu du rouleau
 
-**Remarque**: La résolution requiert Flash Player FP 19.0.0.207 ou version ultérieure.
+**Remarque**: La résolution requiert le Flash Player FP 19.0.0.207 ou une version ultérieure.
 
 Le problème a été résolu en gérant des fichiers audio non muxés avec insertion de publicités mid-roll. (Le commutateur d’analyseur se produit et, à tout moment de la lecture, le contenu s’transition à la publicité preroll mid, ou au milieu de la lecture de la publicité, etc.)
 
-* Zendesk #18049 - crash Flash 19 avec la version bêta de Firefox 42
+* Zendesk #18049 - crash du Flash 19 avec la version bêta de Firefox 42
 
 Ce problème est identique à celui de Zendesk #17973.
 
@@ -546,15 +549,15 @@ Le correctif consistait à ajouter AD_BREAK_SKIPPED si une publicité est ignor�
 
 Le correctif consistait à ajouter la prise en charge de la définition de la propriété AVNetworkConfiguration useCookieHeaderForAllRequests via TVSDK.
 
-* Zendesk #17179 - Flash player bloque plusieurs modifications SAP pour le contenu chiffré.
+* Zendesk #17179 - Le lecteur de Flash se bloque sur plusieurs modifications SAP pour le contenu chiffré.
 
 Un blocage au cours de la lecture de certains contenus chiffrés a été corrigé.
 
-**Remarque**: Le correctif nécessite Flash Player 19.0.0.200 ou une version ultérieure.
+**Remarque**: Le correctif nécessite le Flash Player 19.0.0.200 ou supérieur.
 
 * Zendesk #17499 - comment ne pas supprimer les midrolls après la surveillance mais supprimer les pré-péages du contenu frelaté
 
-Ajout d’un type à AdBreakTimelineItem (AdBreakTimelineItem.placementType) afin qu’AdPolicySelector puisse renvoyer une stratégie différente pour le contenu preroll, mid-roll et post-roll.
+ajouté un type à AdBreakTimelineItem (AdBreakTimelineItem.placementType) afin qu’AdPolicySelector puisse renvoyer une stratégie différente pour le contenu preroll, mid-roll et post-roll.
 
 * Zendesk #17665 - Bandwidth Throttling
 
@@ -565,7 +568,7 @@ Le correctif consistait à supprimer la logique permettant de modifier la taille
 * Zendesk #17363 - Correction de la documentation README pour le lecteur de référence
 
    * Précisez les instructions de téléchargement et d’installation de playerglobal.swc.
-   * Ajouter instructions de mise à jour de la configuration du projet avec une version spécifique du lecteur Flash.
+   * ajoutez les instructions pour mettre à jour la configuration du projet avec une version spécifique du lecteur Flash.
    * Mettez à jour la configuration du projet AdvertisingOverlay pour utiliser la version minimale du lecteur.
    * Mise à jour de la configuration de projet de base Reference pour utiliser la version 11.9 du lecteur spécifique
 
@@ -579,15 +582,15 @@ Fournissez des paramètres personnalisés pour chaque coupure publicitaire.
 
 **Version 1.4.13** (1.4.13.660)
 
-* Zendesk #4037 - Aucune erreur de Profil utilisable (nécessite Flash Player 18.0.0.232 ou version ultérieure)
+* Zendesk #4037 - Aucune erreur de Profil utilisable (nécessite le Flash Player 18.0.0.232 ou version ultérieure)
 
 correction d’un problème d’analyse d’URL lorsque le paramètre de requête contient &quot;http&quot;
 
-* Zendesk #4260 - Flash Player 18 se bloque dans IE11 (nécessite Flash Player 18.0.0.232 ou version ultérieure)
+* Zendesk #4260 - Flash Player 18 se bloque dans IE11 (nécessite le Flash Player 18.0.0.232 ou supérieur)
 
 Correction d’un blocage lors de la lecture d’une vidéo en mode plein écran avec IE11.
 
-* Zendesk #4262 - Le lecteur Adobe Primetime se bloque sur Windows 10 (nécessite Flash Player 18.0.0.232 ou version ultérieure).
+* Zendesk #4262 - Le lecteur Adobe Primetime se bloque sur Windows 10 (nécessite le Flash Player 18.0.0.232 ou supérieur)
 
 Correction d’un blocage lors de la lecture d’une vidéo en mode plein écran avec FireFox sous Windows.
 
@@ -595,11 +598,11 @@ Correction d’un blocage lors de la lecture d’une vidéo en mode plein écran
 
 Correction d’un problème en raison duquel une URL ne faisait pas reconnaître correctement son type car elle n’avait pas d’extension.
 
-* Zendesk #4306 - Flash Player se bloque lorsque vous passez en plein écran sous Windows uniquement (nécessite Flash Player 18.0.0.232 ou version ultérieure)
+* Zendesk n° 4306 - Flash Player crash lors du passage en plein écran sous Windows uniquement (nécessite le Flash Player 18.0.0.232 ou supérieur)
 
 Correction d’un blocage lors de la lecture d’une vidéo en mode plein écran sous Windows.
 
-* Zendesk #4480 - événements de balises ID3 manquants (nécessite Flash Player 18.0.0.232 ou version ultérieure)
+* Zendesk #4480 - événements de balises ID3 manquants (nécessite le Flash Player 18.0.0.232 ou version ultérieure)
 
 **1.4.12 **(1.4.12.656)
 
@@ -611,39 +614,39 @@ Mise à jour de Creative Repackaging Service afin de gérer correctement les pub
 
 La lecture de base du contenu MP4 est désormais prise en charge, y compris la lecture, la mise en pause et la recherche.
 
-Les éléments suivants nécessitent Flash Player 18.0.0.225 ou version ultérieure :
+Le Flash Player 18.0.0.225 ou supérieur est requis pour les éléments suivants :
 
 * Zendesk #3992 - Vitesses TrickPlay supplémentaires.
 
 TrickPlay accepte désormais des taux supérieurs à 16x : +/- 32, +/-64 et +/-128.
 
-* Zendesk #3113 - Le plug-in Flash Player se bloque
+* Zendesk #3113 - Le module Flash Player se bloque
 
 Correction d’un blocage lors de la tentative de lecture d’une publicité de redirection sur Mac Firefox.
 
 * Zendesk #4037 - Aucune erreur de Profil utilisable
-* Zendesk #4262 - Le lecteur Adobe Primetime se bloque sur windows 10
+* Zendesk #4262 - Le lecteur Adobe Primetime se bloque sur Windows 10
 
 Correction d’un blocage dans Windows Firefox lors de la lecture en mode plein écran.
 
 **Version 1.4.11** (1.4.11.648)
 
-* Zendesk #1869 - Problème de modification de la taille de la police (nécessite Flash Player 18.0.0.200)
+* Zendesk #1869 - Problème de modification de la taille de la police (nécessite le Flash Player 18.0.0.200)
 
 Autorisez l’utilisation des tailles de légende dans le code de légende WebVTT.
 
-* Zendesk #3113 - Le plug-in Flash Player se bloque (nécessite Flash Player 18.0.0.200)
-* Zendesk #3268 - Bureau : débuts du lecteur vidéo clignotant après +- 40/50 secondes et débuts noirs après +- 90 secondes (nécessite Flash Player 18.0.0.200)
+* Zendesk #3113 - Flash Player Plugin Crashing (nécessite Flash Player 18.0.0.200)
+* Zendesk #3268 - Bureau : Débuts du lecteur vidéo clignotant après +- 40/50 secondes et débuts noirs après +- 90 secondes (Flash Player 18.0.0.200 requis)
 
 Correction d’un bogue vidéo d’étape.
 
-* Zendesk #3670 - Erreur INVALID_PARAMETER dans VOD lors de la recherche dans le lecteur de référence (nécessite Flash Player 18.0.0.200)
+* Zendesk #3670 - Erreur INVALID_PARAMETER dans VOD lors de la recherche dans le lecteur de référence (nécessite le Flash Player 18.0.0.200)
 
 InvalidateProfiles dans ThreadSeek lorsqu’une nouvelle période est détectée.
 
-* Zendesk #3896 - Flash Player s’interrompt avec l’intégrité du flux définie sur ON (Flash Player 18.0.0.200)
+* Zendesk #3896 - Flash Player de blocage avec l’intégrité du flux définie sur ON sur ON sur Chrome (nécessite le Flash Player 18.0.0.200)
 
-Correction d&#39;un blocage en mode réseau natif dans pepper 
+Correction d&#39;un blocage en mode réseau natif dans pepper
 
 * Zendesk #3905 - Le lecteur TVSDK ne se charge pas lorsqu’il est hébergé sur CDN
 
@@ -651,13 +654,13 @@ Correction de problèmes de recherche de jeton générique lorsque pageDomain es
 
 **Version 1.4.10** (1.4.10.642)
 
-* Zendesk #3249 - Le lecteur web TVSDK bloque Flash sur Firefox
+* Zendesk #3249 - Le lecteur web TVSDK bloque le Flash sur Firefox
 
-Correction d’un blocage occasionnel de Flash Player avec Firefox sur Mac lorsqu’un flux, lu sur un moniteur externe, basculait vers un flux à débit plus élevé.(nécessite Flash Player 18.0.0.160)
+Correction d’un blocage occasionnel du Flash Player avec Firefox sur Mac lorsqu’un flux, lu sur un moniteur externe, basculait vers un flux à débit plus élevé.(nécessite le Flash Player 18.0.0.160)
 
-* Zendesk #3268 - Bureau : débuts du lecteur vidéo clignotant après `+-` 40/50 secondes et débuts noirs après `+-` 90 secondes
+* Zendesk #3268 - Bureau : Débuts du lecteur vidéo clignotant après `+-` 40/50 secondes et débuts noirs après `+-` 90 secondes
 
-Correction d’un problème sur Mac Chrome en raison duquel le flux début à scintiller et finit par devenir noir. (nécessite Flash Player 18.0.0.161)
+Correction d’un problème sur Mac Chrome en raison duquel le flux début à scintiller et finit par devenir noir. (nécessite le Flash Player 18.0.0.161)
 
 * Zendesk #3304 - Macro VAST 3.0 `[ERRORCODE]` non renseignée
 
@@ -674,11 +677,11 @@ Correction d’un problème sur Mac Chrome en raison duquel le flux début à sc
 
 * Zendesk #2615 - problème de suppression de la vue HLS de l&#39;affichage sur ordinateur de bureau
 
-Ajout de la méthode clearVideo() à MediaPlayer. Efface la trame vidéo affichée en effaçant AVStream de l&#39;objet StageVideo. Doit être appelé uniquement si la vidéo est en pause et replaceCurrentResource ou replaceCurrentItem doit être appelé avant que play() puisse être appelé à nouveau. 
+Méthode clearVideo() Ajoutée à MediaPlayer. Efface la trame vidéo affichée en effaçant AVStream de l&#39;objet StageVideo. Doit être appelé uniquement si la vidéo est en pause et replaceCurrentResource ou replaceCurrentItem doit être appelé avant que play() puisse être appelé à nouveau.
 
-* Zendesk #3169 - Mise à jour du lecteur de référence avec l’intégration d’Adobe Analytics
+* Zendesk #3169 - Mise à jour du lecteur de référence avec l’intégration Adobe Analytics
 
-Le lecteur de référence a été mis à jour avec l’intégration d’Adobe Analytics.
+Le lecteur de référence a été mis à jour avec l’intégration Adobe Analytics.
 
 * Zendesk #3296 - Desktop HLS TVSDK - Publicités tierces VAST non lues
 
@@ -686,14 +689,14 @@ les types mime pour le format HLS étaient sensibles à la casse, ce n’était 
 
 **Version 1.4.8**
 
-* Zendesk #2737 - Lecteur de bureau - Erreur 106000 (nécessite Flash Player 17.0.0.184)
-* Zendesk #3007 - Publicités preroll n’apparaissant pas après la mise à jour vers Flash Player 17 (nécessite Flash Player 17.0.0.184)
-* Zendesk #3085 - Le Lecteur HLS de bureau lance une erreur 106000 après 60 secondes (nécessite Flash Player 17.0.0.184)
+* Zendesk #2737 - Lecteur de bureau - Erreur 106000 (nécessite le Flash Player 17.0.0.184)
+* Zendesk #3007 - Publicités preroll n’apparaissant pas après la mise à jour vers le Flash Player 17 (nécessite le Flash Player 17.0.0.184)
+* Zendesk #3085 - Le lecteur HLS de bureau lance une erreur 106000 après 60 secondes (nécessite le Flash Player 17.0.0.184)
 
 **Version 1.4.7**
 
-* Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay (nécessite Flash Player version 17.0.0.158)
-* Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay (nécessite Flash Player version 17.0.0.158)
+* Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay (nécessite la version 17.0.0.158 du Flash Player)
+* Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay (nécessite la version 17.0.0.158 du Flash Player)
 
 **Version 1.4.6**
 
@@ -701,24 +704,24 @@ les types mime pour le format HLS étaient sensibles à la casse, ce n’était 
 
 **Version 1.4.5**
 
-* Zendesk #2256 - Accès à la liste de lecture principale, mise à jour du PSDK afin de distribuer des événements de métadonnées temporisées pour les balises abonnées sur la liste de lecture principale. (Flash Player version 17.0.0.134 requise)
-* Zendesk #2417 - Lecteur essayant de télécharger des sous-titres avant le début de lecture, WebVTT utilisait la variable de numéro de segment incorrecte pour la correspondance des numéros de segment. Le bogue ne s’affichait que pour les médias dont les indices de segmentation commençaient à zéro. (Flash Player version 17.0.0.134 requise)
-* Zendesk #2537 - Le lecteur Flash se bloque lors de l’utilisation du module externe pepper avec Chrome (nécessite Flash Player version 17.0.0.134)
-* Zendesk #2547 - Sous-titres arabes : Le texte doit être aligné à droite (nécessite Flash Player version 17.0.0.134).
+* Zendesk #2256 - Accès à la liste de lecture du Principal, mise à jour du PSDK pour distribuer des événements de métadonnées temporisées pour les balises abonnées sur la liste de lecture principale. (nécessite la version 17.0.0.134 du Flash Player)
+* Zendesk #2417 - Lecteur essayant de télécharger des sous-titres avant le début de lecture, WebVTT utilisait la variable de numéro de segment incorrecte pour la correspondance des numéros de segment. Le bogue ne s’affichait que pour les médias dont les indices de segmentation commençaient à zéro. (nécessite la version 17.0.0.134 du Flash Player)
+* Zendesk #2537 - Le lecteur de Flash se bloque lors de l’utilisation du module externe pepper avec Chrome (nécessite la version 17.0.0.134 du Flash Player)
+* Zendesk #2547 - Sous-titres arabes : Le texte doit être aligné à droite (nécessite la version 17.0.0.134 du Flash Player).
 
 **Version 1.4.4**
 
-* Zendesk #1561 - Objet : `[Adobe Primetime]` Mise à jour : Prise en charge du basculement sur incident basé sur le client HLS pour PROGRAMME-DATE-TIME dans le PSDK de bureau (nécessite Flash Player version 16.0.0.305 ou ultérieure)
+* Zendesk #1561 - Objet : `[Adobe Primetime]` Mise à jour : Prise en charge du basculement sur incident basé sur le client HLS pour PROGRAMME-DATE-TIME dans le PSDK de bureau (nécessite la version 16.0.0.305 du Flash Player ou ultérieure)
 * Zendesk #2197 - `[Ads]` Suivi des erreurs et des erreurs
 * Zendesk #2286 - Demande de fonctionnalités : Fournir des informations sur l&#39;état du chargement des publicités (VPAID)
 * Zendesk #2285 - Demande de fonctionnalités : Ignorer la publicité après une durée de temporisation spécifiée
-* Bogue #3921755 - Mise à jour de la bibliothèque OpenSSL vers la version 1.0.1L dans Flash Player (nécessite Flash Player version 16.0.0.305 ou supérieure)
+* Bogue #3921755 - Mise à jour de la bibliothèque OpenSSL vers la version 1.0.1L en Flash Player (nécessite la version 16.0.0.305 du Flash Player ou une version ultérieure)
 
 **Version 1.4.2**
 
-* Zendesk #1303 - Décalage vertical pour légende fermée (nécessite Flash Player version 16.0.0.235 ou supérieure, date de publication prévue : Décembre 2014)
-* Zendesk #1870 - Sous-titre fermé Activation et désactivation (nécessite Flash Player version 16.0.0.235 ou supérieure, date de publication prévue : Décembre 2014)
-* Zendesk #2110 - La lecture reste bloquée après avoir essayé d&#39;entrer en plein écran pendant une publicité VPAID (nécessite Flash Player version 16.0.0.235 ou supérieure, date de publication prévue : Décembre 2014)
+* Zendesk #1303 - Décalage vertical pour légende fermée (nécessite la version 16.0.0.235 du Flash Player ou une version ultérieure, date de publication prévue : Décembre 2014)
+* Zendesk #1870 - Sous-titrage fermé Activé et désactivé (nécessite la version 16.0.0.235 ou ultérieure du Flash Player, date de publication prévue : Décembre 2014)
+* Zendesk #2110 - La lecture reste bloquée après avoir tenté d’entrer en mode plein écran pendant une publicité VPAID (nécessite la version 16.0.0.235 ou ultérieure du Flash Player, date de publication prévue : Décembre 2014)
 * Zendesk #2199 - `[VPAID]` Le lecteur ne répond pas lorsqu’il recherche une coupure publicitaire passée
 * Zendesk #2358 - Objet : `[Analytics]` Données de chapitre incorrectes
 
@@ -729,7 +732,7 @@ les types mime pour le format HLS étaient sensibles à la casse, ce n’était 
 **Version 1.4.0**
 
 * Zendesk #1024 - Fonction permettant de supprimer une publicité du flux via un manifeste
-* Zendesk #1423 - L’échec de lecture HLS verrouille Flash Player (sans erreur signalée)
+* Zendesk #1423 - L’échec de lecture HLS verrouille le Flash Player (sans qu’aucune erreur ne soit signalée)
 * Zendesk #1674 - ClosedCaption Ne s’affiche pas, la légende 708 correcte s’affiche lorsque les codes ETX 0x03 sont manquants.
 
 </p>
@@ -742,16 +745,18 @@ Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimen
 * L’intégrité du flux est légèrement plus lente dans Google Chrome en raison des restrictions du sandbox Chrome.
 * Dans TVSDK 1.4, si vous désactivez autoPlay, une erreur DRM peut se produire lorsque le lecteur reste inactif pendant au moins une minute. Pour contourner ce problème, lorsque vous désactivez autoPlay mais que vous préchargez des ressources, modifiez `ReferenceCore.as` en modifiant le contenu de `onPlaybackManagerPrepared`:
 
->if (_playbackManager.autoPlay) {
->_playbackManager.play();
->} else {
->_playbackManager.play();
->_playbackManager.pause();
->}
+```
+if (_playbackManager.autoPlay) {
+_playbackManager.play();
+} else {
+_playbackManager.play();
+_playbackManager.pause();
+}
+```
 
 * **Version 1.4.13** PTPLAY-8501 - Lorsque VMAP renvoie deux publicités MP4 directes non transcodées, la même publicité de repli est lue deux fois.
 
-* **Version 1.4.2** Dans la version 16 de Flash Player, un problème a été identifié avec la logique ABR de &quot;basculement&quot;, une fois que le lecteur est entré dans un événement de mise en mémoire tampon vide. Le problème empêche le débit de basculer dans les environnements de bande passante inappropriés une fois que le lecteur est mis en mémoire tampon. Pour résoudre le problème, demandez à votre application de définir la valeur `BufferControlParameters.initialBufferTime` de manière à être la même que `BufferControlParameters.playbackBufferTime` temporairement pendant l’état de mise en mémoire tampon (c’est-à-dire sur un `BufferEvent.BUFFERING_BEGIN` événement), puis de la réinitialiser aux valeurs définies le `BufferEvent.BUFFERING_END` événement. Le correctif de ce problème sera disponible dans la prochaine version de correctif de Flash Player version 16.
+* **Version 1.4.2** Dans la version 16 du Flash Player, un problème a été identifié avec la logique ABR de &quot;basculement&quot;, une fois que le lecteur est entré dans un événement de mise en mémoire tampon vide. Le problème empêche le débit de basculer dans les environnements de bande passante inappropriés une fois que le lecteur est mis en mémoire tampon. Pour résoudre le problème, demandez à votre application de définir la valeur `BufferControlParameters.initialBufferTime` de manière à être la même que `BufferControlParameters.playbackBufferTime` temporairement pendant l’état de mise en mémoire tampon (c’est-à-dire sur un `BufferEvent.BUFFERING_BEGIN` événement), puis de la réinitialiser aux valeurs définies le `BufferEvent.BUFFERING_END` événement. Le correctif de ce problème sera disponible dans la prochaine version de correctif de Flash Player version 16.
 
 * **Version 1.4.0**
 
@@ -767,4 +772,4 @@ Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimen
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
