@@ -13,7 +13,10 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '2430'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
 
 ## Présentation de l’outil de débogage {#overview-of-debugging-tool}
 
-L’outil de débogage permet aux éditeurs d’étudier les problèmes d’insertion d’annonces potentiellement coûteux en examinant les informations de débogage renvoyées en temps réel par le serveur de manifeste dans les en-têtes HTTP ou, lorsque des informations plus détaillées sont nécessaires, en examinant les journaux de session après coup. Les partenaires Adobe tels qu’Akamai peuvent utiliser cet outil pour déboguer leurs intégrations avec Primetime et la prise de décision.
+L’outil de débogage permet aux éditeurs d’étudier les problèmes d’insertion d’annonces potentiellement coûteux en examinant les informations de débogage renvoyées en temps réel par le serveur de manifeste dans les en-têtes HTTP ou, lorsque des informations plus détaillées sont nécessaires, en examinant les journaux de session après coup. Les partenaires d’Adobe comme Akamai peuvent utiliser cet outil pour déboguer leurs intégrations avec Primetime et la prise de décision.
 
 L&#39;outil prend en charge les problèmes de débogage et d&#39;insertion dans n&#39;importe quelle des configurations de suivi des publicités principales du serveur de manifeste :
 
@@ -32,7 +35,7 @@ L&#39;outil prend en charge les problèmes de débogage et d&#39;insertion dans 
 
 Pour prendre en charge tous ces cas, l’outil ne nécessite pas de code d’éditeur du lecteur ou ne l’utilise pas.
 
-Lorsque vous lancez une session de serveur de manifeste, vous pouvez définir un paramètre sur l’URL de demande pour lui demander de consigner les informations de débogage. En utilisant différentes valeurs de ce paramètre, vous pouvez également demander au serveur de manifeste de renvoyer des éléments d’informations de débogage spécifiés dans les en-têtes HTTP, mais ces derniers ne peuvent contenir qu’une quantité limitée d’informations. Vous pouvez obtenir des informations d’identification d’Adobe pour accéder aux fichiers journaux complets, que le serveur de manifeste enregistre régulièrement (par exemple, toutes les heures) sur un serveur d’archives. Une fois que vous disposez des informations d’identification pour ce serveur, vous pouvez y accéder directement à tout moment.
+Lorsque vous lancez une session de serveur de manifeste, vous pouvez définir un paramètre sur l’URL de demande pour lui demander de consigner les informations de débogage. En utilisant différentes valeurs de ce paramètre, vous pouvez également demander au serveur de manifeste de renvoyer des éléments d’informations de débogage spécifiés dans les en-têtes HTTP, mais ces derniers ne peuvent contenir qu’une quantité limitée d’informations. Vous pouvez obtenir des informations d’identification de l’Adobe pour accéder aux fichiers journaux complets, que le serveur de manifeste enregistre régulièrement (par exemple, toutes les heures) sur un serveur d’archives. Une fois que vous disposez des informations d’identification pour ce serveur, vous pouvez y accéder directement à tout moment.
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
@@ -46,7 +49,7 @@ Lors de l’ouverture de la journalisation du débogage d’une session de serve
 
 * ptdebug=true Tous les enregistrements sauf `TRACE_HTTP_HEADER` et la plupart `call/response data` des enregistrements `TRACE_AD_CALL` .
 * ptdebug=AdCall Only TRACE_AD_*type* (par exemple, TRACE_AD_CALL) enregistre.
-* ptdebug=En-tête uniquement enregistrements TRACE_HTTP_HEADER.
+* ptdebug=Header Only TRACE_HTTP_HEADER records.
 
 Les options n&#39;affectent pas ce que le serveur de manifeste place dans les fichiers journaux. Vous n&#39;en avez aucun contrôle, mais les fichiers journaux sont des fichiers texte, vous pouvez donc appliquer une grande variété d&#39;outils pour extraire et reformater les informations qui vous intéressent.
 
@@ -96,7 +99,7 @@ La structure d&#39;un enregistrement de journal est la suivante :
 | record_type | string | Type de événement en cours de journalisation |
 | autres champs | *** | Dépend du type de événement |
 
-### enregistrements TRACE_REQUEST_INFO {#trace-request-info-records}
+### Enregistrements TRACE_REQUEST_INFO {#trace-request-info-records}
 
 Les enregistrements de ce type enregistrent les résultats des requêtes HTTP. Les champs situés au-delà de TRACE_REQUEST_INFO apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -125,9 +128,9 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 ?u=cecebae72a919de350b9ac52602623f3&z=189938&ptcueformat=turner& sid =yk-cnnlive-003 &ptdebug=true 0 0 0 Variant 111.22.3.44 111.22.3.45 127.0.0.1:46383
 ```
 
-### enregistrements TRACE_HTTP_HEADER {#trace-http-header-records}
+### Enregistrements TRACE_HTTP_HEADER {#trace-http-header-records}
 
-Les enregistrements de ce type consignent les en-têtes HTTP échangés lors des appels HTTP entre le serveur de manifeste et le client, le serveur d’annonces ou le serveur de contenu. Les champs situés au-delà de TRACE_HTTP_HEADER apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type consignent les en-têtes HTTP échangés lors des appels HTTP entre le serveur de manifeste et le client, le serveur d’annonces ou le serveur de contenu. Les champs situés au-delà de TRACE_HTTP_HEADER s’affichent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |--- |--- |--- |
@@ -171,7 +174,7 @@ Exemple :
     UNKNOWN RESPONSE  Via MS4xIH. . .
 ```
 
-### enregistrements TRACE_AD_CALL {#trace-ad-call-records}
+### Enregistrements TRACE_AD_CALL {#trace-ad-call-records}
 
 Les enregistrements de ce type consignent les résultats des demandes d&#39;annonce du serveur de manifeste. Les champs situés au-delà de TRACE_AD_CALL apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -192,7 +195,7 @@ Exemple :
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### enregistrements TRACE_AD_INSERT, TRACE_AD_RESOLVE et TRACE_AD_REDIRECT {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### TRACE_AD_INSERT, TRACE_AD_RESOLVE et TRACE_AD_REDIRECT enregistrements {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 Les enregistrements de ce type consignent les résultats des demandes d&#39;annonce indiquées par le type d&#39;enregistrement. Les champs situés au-delà du type d’enregistrement s’affichent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -234,13 +237,13 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 ```
 
-### enregistrements TRACE_TRACKING_URL {#trace-tracking-url-records}
+### Enregistrements TRACE_TRACKING_URL {#trace-tracking-url-records}
 
 Les enregistrements de ce type consignent les résultats des demandes d&#39;annonce du serveur de manifeste. Les champs situés au-delà de TRACE_TRACKING_URL apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |--- |--- |--- |
-| pts | nombre | Horodatage du Programme. Temps passé dans la vidéo pour appeler l’URL. |
+| pts | nombre | Horodatage du programme. Temps passé dans la vidéo pour appeler l’URL. |
 | ad_system | string | Système publicitaire (auditude ou roue libre) |
 | url | string | URL avec sabot |
 | statut | string | État HTTP renvoyé par le ping |
@@ -253,15 +256,15 @@ Exemple :
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### enregistrements TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE enregistrements {#trace-transcoding-no-media-to-transcode-records}
 
 Les enregistrements de ce type consignent un élément publicitaire manquant. Le seul champ situé au-delà de TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE apparaît dans le tableau.
 
 | Champ | Type | Description |
 |--- |--- |--- |
-| ad_id | string | ID publicitaire complet `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]`] Q_AD_ID : `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]`] PROTOCOLE : AUDITUDE, VAST) |
+| ad_id | string | ID publicitaire complet `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID : `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOCOLE : AUDITUDE, VAST`)` |
 
-### enregistrements TRACE_TRANSCODING_REQUESTED {#trace-transcoding-requested-records}
+### TRACE_TRANSCODING_REQUESTED enregistrements {#trace-transcoding-requested-records}
 
 Les enregistrements de ce type consignent les résultats des demandes de transcodage que le serveur de manifeste envoie à CRS. Les champs situés au-delà de TRACE_TRANSCODING_REQUESTED apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -271,19 +274,19 @@ Les enregistrements de ce type consignent les résultats des demandes de transco
 | ad_manifest_url | string | URL du fichier manifeste de la publicité, à partir de la réponse du serveur d’annonces |
 | creative_type | string | Type de support |
 | indicateurs | string | ID3 indique si la demande de transcodage inclut une demande d’ajout d’une balise ID3. |
-| cible_duration | string | Durée de Cible (en secondes) de l’élément créatif transcodé |
+| cible_duration | string | Durée de cible (en secondes) de l’élément créatif transcodé |
 
-### enregistrements TRACE_TRACKING_REQUEST {#trace-tracking-request-records}
+### Enregistrements TRACE_TRACKING_REQUEST {#trace-tracking-request-records}
 
 Les enregistrements de ce type indiquent une demande de suivi côté serveur. Les champs situés au-delà de TRACE_TRACKING_REQUEST apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |--- |--- |--- |
 | tracking_url_count | integer | Nombre d’URL de suivi |
-| début | flotter | début du fragment PTS (secondes avec une précision de milliseconde) |
+| début | flotter | Début du fragment PTS (secondes avec une précision de milliseconde) |
 | end | flotter | Heure de fin du fragment PTS (secondes avec une précision de milliseconde) |
 
-### enregistrements TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
+### Enregistrements TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
 
 Les enregistrements de ce type fournissent une URL de suivi pour le suivi côté serveur. Les champs situés au-delà de TRACE_TRACKING_REQUEST_URL apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -293,7 +296,7 @@ Les enregistrements de ce type fournissent une URL de suivi pour le suivi côté
 | ad_system | string | Système publicitaire (par exemple, auditude) |
 | url | string | URL vers ping |
 
-### enregistrements TRACE_WEBVTT_REQUEST {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUEST enregistrements {#trace-webvtt-request-records}
 
 Enregistrements de ce type de journal demande que le serveur manifeste crée pour les légendes WEBVTT. Les champs situés au-delà de TRACE_WEBVTT_REQUEST apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -304,16 +307,16 @@ Enregistrements de ce type de journal demande que le serveur manifeste crée pou
 | début | flotter | Temps début fractionné (secondes avec précision de milliseconde) |
 | end | flotter | Temps de fin fractionné (secondes avec précision de milliseconde) |
 
-### enregistrements TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
+### TRACE_WEBVTT_RESPONSE, enregistrements {#trace-webvtt-response-records}
 
-Records of this type log responses the manifest server sends to clients in answer to requests for WEBVTT captions. Fields beyond TRACE_WEBVTT_RESPONSE appear in the order shown in the table, separated by tabs.
+Enregistre ``of ``ce ``type ``journal ``responses ``du ``manifest ``serveur ``sends ``dans ``clients ```` `answer` ``les légendes. ``requests ```for```WEBVTT `` Les champs au-delà de TRACE_WEBVTT_RESPONSE &quot;apparaissent dans l’ordre indiqué dans le tableau, `by`onglets séparés.
 
 | Champ | Type | Description |
 |--- |--- |--- |
 | statut | string | Code d’état HTTP renvoyé |
 | réponse | string | Réponse codée en base 64 envoyée au client |
 
-### enregistrements TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
+### Enregistrements TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
 
 Enregistrements de ce type de réponses au journal des requêtes effectuées par le serveur de manifeste pour les légendes WEBVTT. Les champs situés au-delà de TRACE_WEBVTT_SOURCE apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -323,7 +326,7 @@ Enregistrements de ce type de réponses au journal des requêtes effectuées par
 | source | string | Contenu VTT d’origine codé en base 64 |
 
 
-### enregistrements TRACE_MISC {#trace-misc-records}
+### Enregistrements TRACE_MISC {#trace-misc-records}
 
 Les enregistrements de ce type permettent au serveur de manifeste de consigner les événements et les informations non planifiées lors de l&#39;assimilation de publicités. Le champ situé au-delà de TRACE_MISC se compose d’une chaîne de message. Les messages qui peuvent s’afficher sont les suivants :
 
@@ -332,8 +335,8 @@ Les enregistrements de ce type permettent au serveur de manifeste de consigner l
 * L’emplacement de la publicité a renvoyé la valeur null.
 * La publicité a été assemblée avec succès.
 * Échec de l&#39;appel de publicité : *message* d’erreur.
-* Ajout de User-Agent pour récupérer le manifeste brut : *user-agent*.
-* Ajout de cookie pour récupérer le manifeste brut : [cookie]
+* ajouter User-Agent à récupérer le manifeste brut : *user-agent*.
+* ajouter un cookie pour récupérer le manifeste brut : [cookie]
 * Message *d&#39;erreur d&#39;URL* demandé par une URL incorrecte. (Échec de l&#39;analyse de l&#39;URL de variante)
 * URL appelée : URL *renvoyée : code* de réponse. (URL active)
 * URL appelée : Code *de retour d&#39;URL : code* de réponse. (URL VOD)
@@ -345,7 +348,7 @@ Les enregistrements de ce type permettent au serveur de manifeste de consigner l
 * Échec de la récupération de la liste de lecture de la publicité pour l’URL *du manifeste de la* publicité.
 * Échec de la génération du manifeste ciblé. (HLSManifestResolver)
 * Échec de l&#39;analyse de la première réponse d&#39;appel publicitaire : *message* d’erreur.
-* Échec du traitement de la demande *GET|POST *pour le chemin d&#39;accès : *URL* de requête. (Live/VOD)
+* Échec du traitement de la *GET|POST *demande de chemin d&#39;accès : *URL* de requête. (Live/VOD)
 * Échec du traitement de la demande de manifeste en direct : *URL* de requête. (En direct)
 * Impossible de renvoyer un manifeste de variante : *message* d’erreur.
 * Échec de la validation de l&#39;identifiant de groupe : *ID* de groupe.
@@ -359,8 +362,8 @@ Les enregistrements de ce type permettent au serveur de manifeste de consigner l
 * La valeur de temps fournie n&#39;est pas valide : *time *pour availId = ID ** de valeur.
 * La valeur de durée fournie par la valeur de durée non valide a été ignorée : *duration *for availId = ID ** de valeur.
 * Initialisez une nouvelle session. (Variant)
-* Méthode HTTP non valide. Ça doit être une GET. (VOD)
-* Méthode HTTP non valide. La demande de suivi doit être une instruction GET. (En direct)
+* Méthode HTTP non valide. Ça doit être un GET. (VOD)
+* Méthode HTTP non valide. La demande de suivi doit être un GET. (En direct)
 * Message *d&#39;erreur* d&#39;URLrequis non valide. (Variant)
 * Groupe non valide. (HLSManifestResolver)
 * Demande non valide. La légende n&#39;est pas une demande de suivi valide. (VOD)
@@ -378,26 +381,26 @@ Les enregistrements de ce type permettent au serveur de manifeste de consigner l
 * Traitement de la demande de suivi. (VOD)
 * Rediriger la réponse publicitaire vide. (VASTStAX)
 * Demande : *URL*.
-* Renvoi d’une réponse d’erreur pour la demande GET car aucune session de lecture n’a été trouvée. (VOD)
-* Renvoi d’une réponse d’erreur pour la demande GET en raison d’une erreur de serveur interne.
-* Renvoi d’une réponse d’erreur pour la demande GET spécifiant une ressource non valide : *ID* de demande d&#39;annonce. (VOD)
-* Renvoi d&#39;une réponse d&#39;erreur pour la demande GET spécifiant un ID de groupe non valide ou vide : *ID* de groupe. (VOD)
-* Renvoi d&#39;une réponse d&#39;erreur pour la demande GET spécifiant une valeur de position de suivi non valide. (VOD)
-* Renvoi d’une réponse d’erreur pour la requête GET avec une syntaxe non valide - URL *de* requête. (Live/VOD)
+* Renvoi d’une réponse d’erreur pour la demande de GET, car aucune session de lecture n’a été trouvée. (VOD)
+* Renvoi d’une réponse d’erreur pour la demande de GET en raison d’une erreur de serveur interne.
+* Renvoi d’une réponse d’erreur pour la demande de GET spécifiant une ressource non valide : *ID* de demande d&#39;annonce. (VOD)
+* Renvoi d&#39;une réponse d&#39;erreur pour la demande de GET spécifiant un ID de groupe non valide ou vide : *ID* de groupe. (VOD)
+* Renvoi d&#39;une réponse d&#39;erreur pour la demande de GET spécifiant une valeur de position de suivi non valide. (VOD)
+* Renvoi d&#39;une réponse d&#39;erreur pour une requête de GET avec une syntaxe non valide - URL *de* requête. (Live/VOD)
 * Renvoi d’une réponse d’erreur pour la requête avec une méthode HTTP non prise en charge : *GET|POST*. (Live/VOD)
 * Renvoi du manifeste à partir du cache. (VOD)
 * Le serveur est surchargé. Continuer sans la demande de raccordement d’annonces. (Variant)
 * Début générant le manifeste ciblé. (HLSManifestResolver)
 * Début générant un manifeste de variante à partir de : *URL* du contenu. (Variant)
 * Début d’assemblage de publicités dans le manifeste. (Volontaire VODHLSR)
-* Tentative d&#39;assemblage de la publicité à *HH:MM:SS*: AdPlacement [URL du manifeste de la publicité&#x200B;*, duréeSeconds=* secondes *, ignorer=* ignorer *, redirigerAd=**redirect ad, priority=priority.*** (HLSManifestResolver)
+* Tentative d&#39;assemblage de la publicité à *HH:MM:SS*: AdPlacement adManifestURL=*et URL* de manifeste, durationSeconds=*secondes*, ignore=*ignore*, redirectAd=*redirect ad, priority=priority.*** (HLSManifestResolver)
 * Impossible d&#39;obtenir les publicités en raison d&#39;une chronologie incorrecte. Le contenu a été renvoyé sans publicité. (VOD)
 * Impossible d&#39;obtenir les publicités - a renvoyé le contenu sans publicité. (VOD)
 * Impossible d&#39;obtenir la requête publicitaire et aucune URL de contenu n&#39;a été fournie. (VOD)
 * URL valide reçue. (VOD/Variant)
 * Variante M3U8 introuvable. (Variant)
 
-### enregistrements TRACE_TRACKING_URL {#trace-tracking-url-records-1}
+### Enregistrements TRACE_TRACKING_URL {#trace-tracking-url-records-1}
 
 Le serveur de manifeste génère des enregistrements de ce type après avoir appelé une URL de suivi pendant le processus de suivi côté serveur. Les champs situés au-delà de TRACE_TRACKING_URL apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -408,7 +411,7 @@ Le serveur de manifeste génère des enregistrements de ce type après avoir app
 | url | string | URL avec sabot |
 | state | string | Code d’état HTTP |
 
-### enregistrements TRACE_PLAYBACK_PROGRESS {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESS, enregistrements {#trace-playback-progress-records}
 
 Le serveur de manifeste génère des enregistrements de ce type lorsqu’il reçoit un signal sur la progression de la lecture au cours du processus de suivi côté serveur. Les champs situés au-delà de TRACE_PLAYBACK_PROGRESS apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
@@ -430,4 +433,4 @@ Le serveur de manifeste génère des enregistrements de ce type lorsqu’il reç
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
