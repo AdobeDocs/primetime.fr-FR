@@ -2,7 +2,7 @@
 title: Notes de mise à jour de TVSDK 3.12 pour iOS
 description: Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -541,7 +541,7 @@ Problème de lecture lorsque la balise # EXT-X-PLAYLIST-TYPE du flux est défini
 
 Utilisation de Creative Id et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS.
 
-* [ ZD #29462) - TremorHub et les VOD A&amp;E provoquent un blocage dans les applications iOS.
+* (ZD #29462) - TremorHub et les VOD A&amp;E provoquent un blocage dans les applications iOS.
 
 **Version 1.4.36 (1.4.36.835)**
 
@@ -1098,7 +1098,7 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 
 * (ZD #2141) Mise en oeuvre d’Analytics pour l’application TreeHouse, ajout d’une bibliothèque `AdobeAnalyticsPlugin.a` pour créer un package.
 * Mise à jour de la bibliothèque Video Heartbeats vers la version 1.4.1.2
-* [PTPALY-4226] [lié au ZD #2423) L’exécution de la réinitialisation DRM peut entraîner la suppression des données du Document d’application.
+* (PTPALY-4226) (lié au ZD #2423) L’exécution de la réinitialisation DRM peut entraîner la suppression des données du Document d’application.
 
 **Version 1.4.4** (1.4.4.242)
 
