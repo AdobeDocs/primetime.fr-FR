@@ -5,7 +5,10 @@ seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Cette classe encapsule les informations de style de sous-titrage, telles que le 
 
 Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes TVSDK.
 
-1. Attendez que le lecteur de médias soit au moins en `PREPARED` état.
+1. Attendez que le lecteur multimédia soit au moins dans l’ `PREPARED` état.
 1. Créez une `TextFormatBuilder` instance.
 
    Vous pouvez fournir tous les paramètres de style de sous-titrage ou les définir ultérieurement.
@@ -123,20 +126,22 @@ Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes T
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :
+      >
+      >* FFFFF = Noir
+      >* 000000 = Blanc
+      >* FF0000 = Rouge
+      >* 00FF00 = Vert
+      >* 0000FF = Bleu
+         >etc.
 
-      **Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :
+      >
+      >Dans votre application, chaque fois que vous transmettez des informations de style de couleur à `TextFormatBuilder`, vous utilisez toujours la `Color` énumération comme auparavant, mais vous devez maintenant ajouter `getValue()` à la couleur pour obtenir la valeur sous forme de chaîne. Par exemple :
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFF = Noir
-          * 00000 = Blanc
-          * FF000 = Rouge
-          * 00FF00 = Vert
-          * 0000FF = Bleu
-      etc.
-
-      Dans votre application, chaque fois que vous transmettez des informations de style de couleur à `TextFormatBuilder`, vous utilisez toujours la `Color` énumération comme auparavant, mais vous devez maintenant ajouter `getValue()` à la couleur pour obtenir la valeur sous forme de chaîne. Par exemple :
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 La définition du style de sous-titrage est une opération asynchrone qui peut prendre jusqu’à quelques secondes pour que les modifications s’affichent à l’écran.
