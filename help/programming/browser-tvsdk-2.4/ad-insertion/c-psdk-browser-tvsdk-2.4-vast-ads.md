@@ -1,18 +1,21 @@
 ---
-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
-seo-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
+description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
+seo-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
 seo-title: Annonces VAST
 title: Annonces VAST
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
 
 # Annonces VAST {#vast-ads}
 
-Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur publicitaire principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
+Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
 
 Pour plus d’informations sur VAST, voir [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
@@ -56,14 +59,18 @@ Pour plus d&#39;informations sur les types d&#39;annonces, consultez :
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-Dans cet élément, les attributs `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`,  et  sont pris en charge.`apiFramework``type`
+
+         >[!TIP]
+         >
+         >Dans cet élément, les attributs `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`,  et  sont pris en charge.`apiFramework``type`
 
 * **Publicités** non linéaires Les éléments suivants sont pris en charge :
 
    * `Non-linear`
-      [!TIP]
-Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`,  et  sont pris en charge.`maintainAspectRatio``minSuggestedDuration`
+
+      >[!TIP]
+      >
+      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`,  et  sont pris en charge.`maintainAspectRatio``minSuggestedDuration`
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expa
 * **Publicités** complémentaires Les éléments suivants sont pris en charge :
 
    * `Companion`
-      [!TIP]
-Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework``expandedWidth`et `expandedHeight` sont pris en charge.
+
+      >[!TIP]
+      >
+      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework``expandedWidth`et `expandedHeight` sont pris en charge.
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework``expand
 
 ## Extensions {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Seules les extensions spécifiques à Auditude sont prises en charge.
+>[!TIP]
+>
+>Seules les extensions spécifiques à Auditude sont prises en charge.
 
 * `Extension`
