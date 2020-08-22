@@ -5,7 +5,10 @@ seo-title: Insérer des annonces
 title: Insérer des annonces
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -69,7 +72,7 @@ Voici quelques exemples de retours de coupures publicitaires précoces :
    Bien qu’une durée par défaut soit fournie, si le jeu reprend avant que la coupure ne se termine, la coupure publicitaire doit être quittée.
 * Signal d’urgence pendant une coupure publicitaire dans un flux en direct.
 
-La possibilité de quitter une coupure publicitaire prématurée est identifiée par une balise personnalisée dans le manifeste, appelée &quot;splice-in&quot; ou &quot;indices-in&quot;. TVSDK permet à l’application de s’abonner à ces balises de splice pour offrir une opportunité de splice.
+La possibilité de quitter une coupure publicitaire prématurée est identifiée par une balise personnalisée dans le manifeste, appelée &quot;splice-in&quot; ou &quot;indices-in&quot;. TVSDK permet à l’application de s’abonner à ces balises d’éclatement afin de fournir une opportunité d’éclatement.
 
 * Pour utiliser la `#EXT-X-CUE-IN` balise en tant qu’opportunité d’éclatement et mettre en oeuvre un retour de coupure publicitaire anticipée :
 
@@ -79,7 +82,7 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. Ajouter le résolveur d&#39;opportunités de repérage.
+   1. ajoutez le résolveur d&#39;opportunités de démarrage.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -93,11 +96,11 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
 
 1. Si l&#39;application partage le même indice pour indiquer le signal d&#39;arrêt/d&#39;éclatement et le signal d&#39;arrivée/d&#39;éclatement, étendez `PTDefaultAdOpportunityResolver` et implémentez la `preparePlacementOpportunity` méthode.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >Le code suivant suppose que l’application a une implémentation pour la `isCueInOpportunity` méthode.
 
-   Le code suivant suppose que l’application a une implémentation pour la `isCueInOpportunity` méthode.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Enregistrez le résolveur d&#39;opportunité étendu sur l&#39; `PTDefaultMediaPlayerClientFactory` instance.
 
