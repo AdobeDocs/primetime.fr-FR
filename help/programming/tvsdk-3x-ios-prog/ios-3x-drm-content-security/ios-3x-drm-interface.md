@@ -6,7 +6,7 @@ seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -46,9 +46,9 @@ TVSDK émet une `PTMediaPlayerItemDRMMetadataChanged` notification lorsque les m
 
 Si le flux protégé par DRM est encodé à débit binaire multiple (MBR), les métadonnées DRM utilisées pour la liste de lecture des variantes doivent être identiques aux métadonnées utilisées dans tous les flux de débit binaire.
 
-[!TIP]
-
-Lors du référencement des URL de ressources protégées DRM dans votre application iOS, le paramètre de chaîne de requête `?faxs=1` doit être ajouté à l’URL de niveau set M3U8 (MBR). Par exemple :
+>[!TIP]
+>
+>Lors du référencement des URL de ressources protégées DRM dans votre application iOS, le paramètre de chaîne de requête `?faxs=1` doit être ajouté à l’URL de niveau set M3U8 (MBR). Par exemple :
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
