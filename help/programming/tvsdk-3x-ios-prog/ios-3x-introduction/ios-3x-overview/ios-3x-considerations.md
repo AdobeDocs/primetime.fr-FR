@@ -5,7 +5,10 @@ seo-title: Considérations et bonnes pratiques
 title: Considérations et bonnes pratiques
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Pour utiliser TVSDK de manière efficace, vous devez prendre en compte certains 
 
 Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
 
-* Adobe Primetime ne fonctionne pas sur les simulateurs iOS.
+* adobe primetime ne fonctionne pas sur les simulateurs iOS.
 
    Vous devez utiliser des périphériques réels pour les tests.
 
@@ -54,6 +57,6 @@ Voici les pratiques recommandées pour TVSDK :
 
 Pour plus d&#39;informations, voir les méthodes forceHTTPS et isForcingHTTPS dans cette classe.
 
-[!IMPORTANT]
-
-Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées. Il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir des URL prises en charge par HTTPS.
+>[!IMPORTANT]
+>
+>Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées. Il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir des URL prises en charge par HTTPS.
