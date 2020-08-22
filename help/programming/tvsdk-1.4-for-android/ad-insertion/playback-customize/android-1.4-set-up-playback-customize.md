@@ -5,7 +5,10 @@ seo-title: Configuration de la lecture personnalisée
 title: Configuration de la lecture personnalisée
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Pour personnaliser les comportements publicitaires :
 
 1. Affectez l’instance de stratégie à utiliser par TVSDK via la fabrique de publicités.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >Les stratégies publicitaires personnalisées enregistrées au début de >la lecture sont effacées lorsque l&#39;instance MediaPlayer est >délocalisée.Votre application doit enregistrer une instance de stratégie >sélecteur chaque fois qu&#39;une nouvelle session de lecture est créée.
 
