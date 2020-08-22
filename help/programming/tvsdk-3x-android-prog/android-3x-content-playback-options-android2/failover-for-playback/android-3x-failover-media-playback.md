@@ -5,7 +5,10 @@ seo-title: Lecture et basculement du média
 title: Lecture et basculement du média
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,12 @@ Lorsque TVSDK ne parvient pas à obtenir un autre segment, il déclenche une not
 
 Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segments continus à 5, après quoi la lecture est arrêtée et TVSDK émet une erreur `NATIVE_ERROR` avec le code 5.
 
->[!Rrestrictions]
+>[!NOTE]
+>
+>**Restrictions**
 >
 >Voici quelques restrictions que vous devez connaître :
+>
 >* Les paramètres de contrôle de débit binaire adaptatif (ABR) ne sont pas pris en compte lorsqu’un basculement survient.
 >
 >  
