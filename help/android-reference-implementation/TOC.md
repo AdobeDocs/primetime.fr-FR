@@ -3,8 +3,12 @@ cloud: experience-cloud
 product: primetime
 audience: end-user
 user-guide-title: Aide sur l’implémentation des références Primetime
+user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +53,7 @@ source-git-commit: ''
    + Insérer des annonces {#insert-ads}
       + [Insertion publicitaire](insert-ads/ad-insertion.md)
       + [Types d’insertion publicitaire](insert-ads/ad-insertion-types.md)
-      + [Publicité Ajouter](insert-ads/add-advertising.md)
+      + [Publicité Ajoutée](insert-ads/add-advertising.md)
       + [Documentation sur les API connexes](insert-ads/aps-callbacks-ad-insertion.md)
    + Audio à liaison tardive {#late-binding-audio}
       + [Présentation](late-binding-audio/late-binding-audio-overview.md)
@@ -60,7 +64,7 @@ source-git-commit: ''
       + [Présentation](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Présentation du Gestionnaire de droits](paytvpass-entitlement/entitlement-overvivew.md)
       + [Intégration de l’authentification Primetime](paytvpass-entitlement/integrate-pass.md)
-      + [Configuration d’Adobe Analytics Rapports](paytvpass-entitlement/pass-analytics-setup.md)
+      + [Configuration du Rapports Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
       + [Documentation sur les API connexes](paytvpass-entitlement/pass-apis-callbacks.md)
    + Analyses vidéo {#video-analytics}
       + [Analyses vidéo](video-analytics/video-analytics-overview.md)
