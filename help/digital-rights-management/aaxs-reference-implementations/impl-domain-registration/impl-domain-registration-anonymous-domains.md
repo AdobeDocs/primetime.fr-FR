@@ -3,14 +3,17 @@ seo-title: Domaines anonymes
 title: Domaines anonymes
 uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 0%
 
 ---
 
 
 # Domaines anonymes {#anonymous-domains}
 
-Dans ce cas d’utilisation, un grand nombre de périphériques appartiennent à un seul domaine et l’authentification peut ne pas être requise. Pour utiliser ce type de domaine avec l’implémentation des références, créez la stratégie spécifiant que l’enregistrement du domaine est requis. Spécifiez l’URL du serveur de domaine en tant que [*!DNL https:// host:port/flashaccess/domainserver/domainname/*] et l’authentification anonyme.
+Dans ce cas d’utilisation, un grand nombre de périphériques appartiennent à un seul domaine et l’authentification peut ne pas être requise. Pour utiliser ce type de domaine avec l’implémentation des références, créez la stratégie spécifiant que l’enregistrement du domaine est requis. Spécifiez l’URL du serveur de domaine en tant que `https:// host:port/flashaccess/domainserver/domainname/` et l’authentification anonyme.
 
 L’implémentation de référence implémente la logique suivante pour l’enregistrement de domaine :
 
