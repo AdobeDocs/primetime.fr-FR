@@ -4,9 +4,9 @@ seo-description: 'Ce tableau fournit des informations détaillées sur les notif
 seo-title: Code d'optimisation des recettes
 title: Code d'optimisation des recettes
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Pour activer ce rapports, utilisez l’api PTMediaPlayer : `[mediaPlayersetReven
 >
 >La plupart des notifications d’informations contiennent des métadonnées pertinentes, par exemple l’URL de la ressource qui n’a pas été téléchargée. Certaines notifications contiennent des métadonnées pour indiquer si le problème s’est produit dans le contenu vidéo principal, dans l’autre contenu audio ou dans une publicité.
 
-|Code |Nom |Notification interne |Clés de métadonnées |Commentaires |
-|—|—|—|—|—|||
-|401001 | REVENUE_OPTIMIZATION_RAPPORTS | Aucun | Reportez-vous au tableau ci-dessous pour les clés de métadonnées basées sur différents événements. | Aucun |
+| Code | Nom | Notification interne | Touches de métadonnées | Commentaires |
+|---|---|---|---|---|
+| 401001 | REVENUE_OPTIMIZATION_RAPPORTS | Aucun | Reportez-vous au tableau ci-dessous pour les clés de métadonnées basées sur différents événements. | Aucun |
 
 | Détails du événement | ContextMetadata |
 |---|---|
