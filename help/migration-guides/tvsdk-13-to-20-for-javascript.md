@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: migration
 discoiquuid: c732f54d-116c-43f3-bec4-5e71af208426
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: cfd6da49e85e13e29e8458ee98231a8b476867db
+workflow-type: tm+mt
+source-wordcount: '5058'
+ht-degree: 0%
 
 ---
 
@@ -236,7 +239,7 @@ Tableaux dans cette rubrique :
    <th>API 1.3</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreak {<br /> <br /> <br /> <br /> readonly attribut doublon duration ;<br /> readonly attribut ads AdList ;<br /> <br /> <br /> readonly, attribut AdInsertionType insertType ;<br /> }; </p> </td> 
+   <td><p>interface AdBreak {<br /> <br /> <br /> <br /> readonly attribut Durée du doublon ;<br /> readonly attribut ads AdList ;<br /> <br /> <br /> readonly, attribut AdInsertionType insertType ;<br /> }; </p> </td> 
    <td><p>interface AdBreak {<br /> readonly attribut doublon time;<br /> readonly, attribut doublon replaceDuration ;<br /> <br /> durée du doublon d'attribut en lecture seule ;<br /> readonly attribut AdList adList ;<br /> <br /> readonly attribut données DomString ;<br /> <br /> }; </p> </td> 
   </tr> 
  </tbody> 
@@ -310,7 +313,7 @@ Tableaux dans cette rubrique :
   </tr> 
   <tr> 
    <td><p>interface AdBreakPolicy {<br /> readonly attribut short AD_BREAK_POLICY_SKIP;<br /> readonly attribut short AD_BREAK_POLICY_PLAY;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;<br /> };</p> </td> 
-   <td><p> interface AdPolicyConstants {<br /> readonly attribut short AD_BREAK_POLICY_SKIP;<br /> readonly attribut short AD_BREAK_POLICY_PLAY;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;<br /> ...</p> </td> 
+   <td><p> interface AdPolicyConstants {<br /> readonly attribut short AD_BREAK_POLICY_SKIP;<br /> readonly attribut short AD_BREAK_POLICY_PLAY;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE;<br /> readonly attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;}<br /> ...</p> </td> 
   </tr> 
   <tr> 
    <td><p> interface AdBreakWatchedPolicy {<br /> readonly attribut short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly attribut short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly attribut short AD_BREAK_AS_WATCHED_NEVER;<br /> }; </p> </td> 
@@ -322,7 +325,7 @@ Tableaux dans cette rubrique :
   </tr> 
   <tr> 
    <td><p>interface AdPolicyMode {<br /> readonly attribut short AD_POLICY_MODE_PLAY;<br /> readonly attribut short AD_POLICY_MODE_SEEK;<br /> readonly attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
-   <td><p> ...<br /> readonly attribut short AD_POLICY_MODE_PLAY;<br /> readonly attribut short AD_POLICY_MODE_SEEK;<br /> readonly attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribut short AD_POLICY_MODE_SEEK;<br /> readonly attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><p>interface AdPolicyInfo {<br /> readonly attribut AdBreakTimelineItemList <br /> adBreakTimelineItems;<br /> readonly attribut AdTimelineItem adTimelineItem ;<br /> readonly attribut doublon currentTime ;<br /> readonly attribut doublon searchToTime ;<br /> taux de doublon des attributs en lecture seule ;<br /> readonly attribut short mode ; //AdPolicyMode<br /> };</p> </td> 
@@ -895,7 +898,7 @@ Tableaux dans cette rubrique :
    <td> </td> 
   </tr> 
   <tr> 
-   <td>timedEvent<br /> Envoyé lorsque des événements minutés sont générés.</td> 
+   <td>timedEvent<br /> Envoyé lorsque des événements temporisés sont générés.</td> 
    <td>TimedEvent</td> 
    <td> </td> 
    <td><p>Nouveautés de la version 2.0</p> </td> 
@@ -987,7 +990,7 @@ Tableaux dans cette rubrique :
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItem {<br /> readonly attribut MediaResource ;<br /> readonly attribut long resourceId ;<br /> readonly, attribut booléen live ;<br /> <br /> readonly, attribut booléen hasAlternateAudio ;<br /> readonly attribut AudioTrackList audioTracks ;<br /> readonly, attribut AudioTrack selectedAudioTrack ;<br /> void selectAudioTrack(AudioTrack track); <br /> <br /> readonly, attribut booléen hasClosedCaptions ;<br /> readonly attribut ClosedCaptionsTrackList ClosedCaptionsTracks ;<br /> readonly attribut ClosedCaptionsTrack selectedClosedCaptionsTrack ;<br /> void selectClosedCaptionsTrack(<br /> ClosedCaptionsTrack); <br /> <br /> readonly, attribut booléen hasTimedMetadata ;<br /> readonly, attribut TimedMetadataList timedMetadata ;<br /> readonly, attribut booléen dynamique ;<br /> <br /> readonly, attribut booléen isProtected ;<br /> readonly, attribut DRMMetadataInfoList drmMetadataInfos ;<br /> les profils readonly attribute ProfileList ;<br /> readonly attribut Profil selectedProfile;<br /> <br /> readonly attribut boolean trickPlaySupported;<br /> readonly attribut FloatArray availablePlaybackRates ;<br /> readonly attribut float selectedPlaybackRate;<br /> <br /> <br /> readonly, attribut MediaPlayer mediaPlayer ;<br /> readonly, attribut MediaPlayerItemConfig;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerItem {<br /> readonly attribut MediaResource ;<br /> readonly attribut long resourceId ;<br /> readonly, attribut booléen live ;<br /> <br /> readonly, attribut booléen hasAlternateAudio ;<br /> readonly attribut AudioTrackList audioTracks ;<br /> readonly, attribut AudioTrack selectedAudioTrack ;<br /> void selectAudioTrack(AudioTrack track); <br /> <br /> readonly, attribut booléen hasClosedCaptions ;<br /> readonly attribut ClosedCaptionsTrackList ClosedCaptionsTracks ;<br /> readonly attribut ClosedCaptionsTrack selectedClosedCaptionsTrack ;<br /> void selectClosedCaptionsTrack(<br /> ClosedCaptionsTrack); <br /> <br /> readonly, attribut booléen hasTimedMetadata ;<br /> readonly, attribut TimedMetadataList timedMetadata ;<br /> readonly, attribut booléen dynamique ;<br /> <br /> readonly, attribut booléen isProtected ;<br /> readonly, attribut DRMMetadataInfoList drmMetadataInfos ;<br /> les profils readonly attribute ProfileList ;<br /> readonly attribut Profil selectedProfile;<br /> <br /> readonly attribut boolean trickPlaySupported;<br /> readonly attribut FloatArray availablePlaybackRates ;<br /> readonly attribut float selectedPlaybackRate;<br /> <br /> <br /> readonly, attribut MediaPlayer mediaPlayer ;<br /> readonly attribut MediaPlayerItemConfig;<br /> };</p> </td> 
    <td><p>interface MediaPlayerItem {<br /> readonly attribut MediaResource ;<br /> readonly attribut long resourceId ;<br /> readonly, attribut booléen live ;<br /> <br /> readonly, attribut booléen hasAlternateAudio ;<br /> readonly attribut AudioTrackList audioTracks ;<br /> attribut AudioTrack selectedAudioTrack ;<br /> <br /> <br /> readonly, attribut booléen hasClosedCaptions ;<br /> readonly attribut ClosedCaptionsTrackList ccTracks ;<br /> attribut ClosedCaptionsTrack selectedCCTrack ;<br /> <br /> <br /> <br /> readonly, attribut booléen hasTimedMetadata ;<br /> readonly, attribut TimedMetadataList timedMetadata ;<br /> readonly, attribut booléen dynamique ;<br /> <br /> readonly, attribut booléen isProtected ;<br /> readonly, attribut DRMMetadataInfoList drmMetadataInfos ;<br /> les profils readonly attribute ProfileList ;<br /> <br /> <br /> readonly attribut boolean trickPlaySupported;<br /> readonly attribut Int32Array availablePlaybackRates ;<br /> <br /> readonly attribut StringList adTags ;<br /> <br /> readonly, attribut MediaPlayer mediaPlayer ;<br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
@@ -1015,7 +1018,7 @@ Tableaux dans cette rubrique :
   </tr> 
   <tr> 
    <td><p>interface ClosedCaptionsTrack : Track<br /> {<br /> readonly attribut DomString name; //FromTrack<br /> readonly attribut DomString langue ;//FromTrack<br /> readonly attribut booléen default ; // FromTrack<br /> readonly attribut booléen autoSelect;//FromTrack<br /> const <br /> <br /> non signé short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const unsigned short SERVICE_WEB_VTT_CAPTIONS = 2;<br /> readonly attribut unsigned short serviceType ;<br /> readonly, attribut booléen forcé ;<br /> };</p> </td> 
-   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly, attribut langage DomString ;<br /> readonly, attribut booléen par défaut ;<br /> <br /> <br /> readonly attribut booléen actif ;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly, attribut langage DomString ;<br /> readonly, attribut booléen par défaut ;<br /> <br /> <br /> readonly, attribut booléen principal ;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
    <td>Aucune modification pour la version 2.0</td> 
@@ -1034,7 +1037,7 @@ Tableaux dans cette rubrique :
   </tr> 
   <tr> 
    <td>Profil : Aucune modification pour la version 2.0</td> 
-   <td><p>Profil<br /> d'interface {<br /> readonly attribut non signé int width;<br /> readonly attribut unsigned int height;<br /> readonly attribut unsigned int bitRate ;<br /> }; </p> </td> 
+   <td><p>profil<br /> d'interface {<br /> readonly attribut non signé int width;<br /> readonly attribut unsigned int height;<br /> readonly attribut unsigned int bitRate ;<br /> }; </p> </td> 
   </tr> 
   <tr> 
    <td>ProfileList : Aucune modification pour la version 2.0</td> 
@@ -1068,18 +1071,18 @@ Vous pouvez mapper des codes d’erreur C++ à des exceptions dans différentes 
 
 Le PSDK C++ a une stratégie &quot;pas de jeton&quot; pour ses API. La plupart des méthodes API renvoient une valeur PSDKErrorCode pour indiquer si la méthode a bien été exécutée. Les erreurs asynchrones sont signalées par le biais des événements d’erreur.
 
-La stratégie du PSDK ActionScript et JAVA est différente. La plupart des erreurs renvoient une exception ArgumentError ou IllegalStateException pour indiquer que la partie synchrone de la méthode n&#39;a pas pu être exécutée. Ces exceptions ne sont pas détectées et le code de l’application est responsable du traitement des exceptions. Ils contiennent généralement des informations utiles sur les raisons de l&#39;échec de l&#39;appel de méthode. Par exemple, si la commande prepareToPlay est appelée dans un état non valide, l’exception suivante est levée :
+L’ActionScript et le JAVA PSDK ont une politique différente. La plupart des erreurs renvoient une exception ArgumentError ou IllegalStateException pour indiquer que la partie synchrone de la méthode n&#39;a pas pu être exécutée. Ces exceptions ne sont pas détectées et le code de l’application est responsable du traitement des exceptions. Ils contiennent généralement des informations utiles sur les raisons de l&#39;échec de l&#39;appel de méthode. Par exemple, si la commande prepareToPlay est appelée dans un état non valide, l’exception suivante est levée :
 
 ```shell
 throw new IllegalStateException("Invalid player state. prepareToPlay method 
 must be called only once after replaceCurrentItem or replaceCurrentResource method.");
 ```
 
-Le code ActionScript/JAVA renvoie également des exceptions aux constructeurs pour indiquer que certains objets internes ont été créés de manière incorrecte. Ces exceptions sont gérées en interne et ne sont pas propagées à l’application. Les exceptions seront incluses dans une notification d&#39;avertissement envoyée à la demande.
+L’ActionScript/JAVA renvoie également des exceptions aux constructeurs pour indiquer que certains objets internes ont été créés de manière incorrecte. Ces exceptions sont gérées en interne et ne sont pas propagées à l’application. Les exceptions seront incluses dans une notification d&#39;avertissement envoyée à la demande.
 
 Par exemple, si aucun fichier multimédia valide n’a été trouvé pour la réponse à la publicité reçue, aucun objet ou publicité publicitaire valide ne peut être créé. Par conséquent, aucune publicité n&#39;est placée sur la chronologie et une notification NotificationEvent.OperationFailed est envoyée.
 
-Les codes d’erreur ou d’avertissement reçus de manière asynchrone par le moteur vidéo Adobe (AVE) sont envoyés normalement à l’application. Le événement de notification contient tous les codes d’erreur reçus et toutes les métadonnées supplémentaires, telles que l’URL, l’identifiant de ressource, le nom d’utilisateur, etc. Si l&#39;erreur est grave et que la lecture du média actuel ne peut pas se poursuivre, le événement MediaPlayer transition à l&#39;état ERROR et au rappel onStatusChanged ou MediaPlayerStatusChanged.STATUS_CHANGED est distribué. Si la lecture peut continuer, un événement de notification normal est distribué.
+Les codes d’erreur ou d’avertissement reçus de manière asynchrone par le moteur de vidéo d’Adobe (AVE) sont distribués dans l’application en tant que événements normaux. Le événement de notification contient tous les codes d’erreur reçus et toutes les métadonnées supplémentaires, telles que l’URL, l’identifiant de ressource, le nom d’utilisateur, etc. Si l&#39;erreur est grave et que la lecture du média actuel ne peut pas se poursuivre, le événement MediaPlayer transition à l&#39;état ERROR et au rappel onStatusChanged ou MediaPlayerStatusChanged.STATUS_CHANGED est distribué. Si la lecture peut continuer, un événement de notification normal est distribué.
 
 <table> 
  <tbody> 
@@ -1087,7 +1090,7 @@ Les codes d’erreur ou d’avertissement reçus de manière asynchrone par le m
    <th>Erreur C++ (code PSDKError)</th> 
    <th> </th> 
    <th>Java</th> 
-   <th>ActionScript</th> 
+   <th>actionscript</th> 
    <th>JavaScript</th> 
   </tr> 
   <tr> 
@@ -1346,7 +1349,7 @@ Tableaux dans cette rubrique :
   </tr> 
   <tr> 
    <td>Aucune modification pour la version 2.0</td> 
-   <td><p>Vue<br /> d'interface {<br /> readonly attribut unsigned short x;<br /> readonly attribut non signé short y;<br /> attribut readonly non signé short width;<br /> readonly attribut unsigned short height;<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos(unsigned short x, unsigned short y);<br /> }</p> </td> 
+   <td><p>vue<br /> d'interface {<br /> readonly attribut unsigned short x;<br /> readonly attribut non signé short y;<br /> attribut readonly non signé short width;<br /> readonly attribut unsigned short height;<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos(unsigned short x, unsigned short y);<br /> }</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1368,4 +1371,4 @@ Tableaux dans cette rubrique :
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
