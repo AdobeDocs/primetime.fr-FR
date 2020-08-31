@@ -5,7 +5,10 @@ seo-title: Gérer la recherche lors de l’utilisation de la barre de recherche
 title: Gérer la recherche lors de l’utilisation de la barre de recherche
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure
 
 1. Attendez que le navigateur TVSDK déclenche le `AdobePSDK.PSDKEventType.SEEK_END` événement, qui renvoie la position ajustée dans l’attribut `actualPosition` du événement :
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = function (événement) {
-     // événement.currentPosition
-     }
-     &quot;
-  C&#39;est important car la position réelle du début après la recherche peut être différente de la position demandée.     
-     Certaines des règles suivantes peuvent s’appliquer :
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Ceci est important car la position réelle du début après la recherche peut être différente de celle demandée. Certaines des règles suivantes peuvent s’appliquer :
+
    * Le comportement de lecture est affecté si une recherche, ou tout autre repositionnement, se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires.
    * Vous ne pouvez effectuer des recherches que dans la durée recherchée de la ressource. Pour VOD, il s’agit de 0 jusqu’à la durée de l’actif.
 
