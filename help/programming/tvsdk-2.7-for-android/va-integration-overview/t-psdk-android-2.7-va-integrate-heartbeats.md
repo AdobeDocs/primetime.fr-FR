@@ -5,7 +5,10 @@ seo-title: Initialisation et configuration des analyses vidéo
 title: Initialisation et configuration des analyses vidéo
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
 * TVSDK 2.5 pour Android.
 * Informations sur la configuration / l’initialisation
 
-   Contactez votre représentant Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
+   Contactez votre représentant d’Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -28,7 +31,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi AppMeasurement </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’Adobe Analytics (anciennement SiteCatalyst). </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale Adobe Analytics (anciennement SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi des analyses vidéo </td> 
@@ -39,7 +42,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
    <td colname="col2"> Connu également sous le nom d’identifiant de suite de rapports (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> ID d’organisation Marketing Cloud </td> 
+   <td colname="col1"> ID d'organisation Marketing Cloud </td> 
    <td colname="col2"> Valeur de chaîne requise pour instancier le composant Visiteur. </td> 
   </tr> 
  </tbody> 
@@ -49,38 +52,39 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
 1. Vérifiez que les options de temps de chargement du fichier de `ADBMobileConfig.json` ressources sont correctes.
 
-       &quot;
-     {
-     &quot;version&quot; : &quot;1.1&quot;,
-     &quot;analytics&quot; : {
-     &quot;rsids&quot; : &quot;adobedevelopment&quot;,
-     &quot;server&quot; : &quot;10.131.129.149:3000&quot;,
-     &quot;charset&quot; : &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot; : false,
-     &quot;lifecycleTimeout&quot; : 5,
-     &quot;batchLimit&quot; : 50,
-     &quot;privacyDefault&quot; : &quot;optedin&quot;,
-     &quot;poi&quot; : []
- },     
-     &quot;marketingCloud&quot; : {
-     &quot;org&quot; : &quot;VALEUR FOURNIE PAR ADOBE&quot;
-     },
-     &quot;cible&quot; : {
-     &quot;clientCode&quot; : &quot;&quot;,
-     &quot;timeout&quot; : 5
-     },
-     &quot;audienceManager&quot; : {
-     &quot;server&quot; : &quot;
- &quot;     
- }     
- }     &quot;
-  Ce fichier de configuration au format JSON est fourni en tant que ressource avec TVSDK.     
-     Votre lecteur lit ces valeurs uniquement au moment du chargement et les valeurs restent constantes pendant l’exécution de votre application.
-       
-       Pour configurer les options de temps de chargement :
-   
-   1. Vérifiez que le `ADBMobileConfig.json` fichier contient les valeurs appropriées (fournies par Adobe).
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Ce fichier de configuration au format JSON est fourni en tant que ressource avec TVSDK. Votre lecteur lit ces valeurs uniquement au moment du chargement et les valeurs restent constantes pendant l’exécution de votre application.
+
+   Pour configurer les options de temps de chargement :
+
+
+   1. Vérifiez que le `ADBMobileConfig.json` fichier contient les valeurs appropriées (fournies par l’Adobe).
    1. Vérifiez que ce fichier se trouve dans le `assets/` dossier.
 
       Ce dossier doit se trouver à la racine de l&#39;arborescence de la source de l&#39;application.
@@ -88,7 +92,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
    1. Compilez et générez votre application.
    1. Déployez et exécutez l’application assemblée.
 
-      Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo dans Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo en Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 
 1. Initialisez et configurez les métadonnées de suivi de pulsation vidéo.
 
