@@ -1,28 +1,44 @@
 ---
-title: Notes de mise à jour de PTAI 20.8.1
-description: Les notes de mise à jour de la version 20.8.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.9.1
+description: Les notes de mise à jour de la version 20.9.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.8.1
+# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.1
 
-Les notes de mise à jour de l’Ad Insertion dynamique version 20.8.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
+Les notes de mise à jour de l’Ad Insertion dynamique version 20.9.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
 
-## Nouveautés de PTAI 20.8.1
+## Nouveautés de PTAI 20.9.1
+
+**Lorsque :** Mardi 1er septembre 2020 de 3h30 à 7h30, heure de l&#39;Est
+
+**Correctifs**
+
+* Correction d’un problème pour les clients utilisant HLS/CMAF, en raison duquel EXT-X-MAP manquait parfois des jetons CDN ou des balises EXT-X-MAP parfois incorrectement déployées hors de la fenêtre DVR.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.8.4
+
+**Lorsque :** Mercredi 19 août 2020 de 03h30 à 07h30 heure de l&#39;Est
+
+**Améliorations et correctifs**
+
+Mises à jour de maintenance.
+
+#### Version 20.8.1
 
 **Lorsque :** Mardi 4 août 2020 de 3h00 à 6h00, heure de l&#39;Est
 
 **Améliorations et correctifs**
 
 Mises à jour de maintenance.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 20.7.1
 
@@ -145,7 +161,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Le service de reconditionnement d’images offre désormais une insertion publicitaire plus rapide en bloquant automatiquement la liste des créatifs malformés.
 
-* Prise en charge de la phase 1 Ajoutée pour le nouveau format de repère SCTE 35 dans l&#39;insertion publicitaire côté serveur.
+* Prise en charge de la phase 1 Ajoutée pour le nouveau format de repère SCTE 35 dans l&#39;insertion de publicités côté serveur.
 
 * Mises à niveau de maintenance.
 
