@@ -4,9 +4,9 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: ca603507f696f75a32b4a4fc8cc35f9e1c14c214
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de PTAI 20.8.1
+## Améliorations et correctifs de PTAI 20.9.1
 
-La version portait sur les mises à jour de maintenance.
+La version s&#39;est concentrée sur la résolution du problème client majeur, où EXT-X-MAP manquait des jetons CDN ou des balises EXT-X-MAP incorrectement déployées hors de la fenêtre DVR.
 
 Pour plus d’informations sur la version actuelle de l’Ad Insertion dynamique, voir Notes [de mise à jour de l’](ptai-20x-release-notes.md)API.
 
