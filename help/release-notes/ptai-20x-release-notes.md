@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 20.9.1
 description: Les notes de mise à jour de la version 20.9.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
+source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '887'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Les notes de mise à jour de l’Ad Insertion dynamique version 20.9.1 décriven
 
 **Lorsque :** Mardi 1er septembre 2020 de 3h30 à 7h30, heure de l&#39;Est
 
-**Correctifs**
+**Modifications**
 
 * Correction d’un problème pour les clients utilisant HLS/CMAF, en raison duquel EXT-X-MAP manquait parfois des jetons CDN ou des balises EXT-X-MAP parfois incorrectement déployées hors de la fenêtre DVR.
 
@@ -165,9 +165,13 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à niveau de maintenance.
 
-## Problèmes résolus
+## Problèmes résolus {#Resolved-issues}
 
-Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, `ZD#xxxxx`
+Lorsque la résolution est associée à un problème signalé, une référence Zendesk s’affiche. Par exemple, `ZD#xxxxx`.
+
+**PITA 20.9.1**
+
+* Correction d’un problème pour les clients utilisant HLS/CMAF, en raison duquel EXT-X-MAP manquait parfois des jetons CDN ou des balises EXT-X-MAP parfois incorrectement déployées hors de la fenêtre DVR.
 
 **PITA 20.6.1**
 
