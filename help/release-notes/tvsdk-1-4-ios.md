@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -164,7 +164,7 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * **Intégration du SDK Nielsen**
 
-   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 de Nielsen.
+   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 Nielsen.
 
 **Version 1.4.0**
 
@@ -198,7 +198,7 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * TVSDK 1.4.28 a été certifié pour la version bêta 7 d’iOS 10.
 * Prise en charge de DRM pour forcer HTTPS en ajoutant les API forceHTTPS et isForcingHTTPS.
-* Mise à jour des bibliothèques VHL vers la version 1.5.8, des bibliothèques mobiles Adobe vers la version 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
+* Mise à jour des bibliothèques VHL vers la version 1.5.8, des bibliothèques Adobe Mobile vers la version 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
 
 **Version 1.4.19**
 
@@ -221,10 +221,10 @@ Cette version de TVSDK a été certifiée avec le support FairPlay pour iOS et t
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
@@ -232,9 +232,9 @@ Comment Type: draft
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
 
  -->
 
@@ -247,7 +247,7 @@ Comment Type: draft
 * Billet n° 36321 - Discrétion observée dans la plage de recherche entre l’instance PTMediaPlayer et AVPlayer à l’état &quot;Lecture&quot;.
 * Billet n° 36493 - Prise en charge `libstdc++` sur iOS 12
 
-   * Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale avec iOS 7.0.
+   * Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale avec iOS 7.0
 
 **Version 1.4.44**
 
@@ -271,7 +271,7 @@ Comment Type: draft
 * (ZD#34293) - Les pré-rouleaux insérés dans les flux LINEAR ne se lancent pas correctement sur iOS11. Le problème est corrigé pour les publicités preroll.
 * (ZD#34684) - Lorsque la stratégie de saut d’annonce est appliquée, les images de publicité preroll s’affichent pendant quelques secondes. Une nouvelle API, enableVodPreroll, a été introduite pour désactiver la lecture preroll dans la lecture de vod. La valeur par défaut de cette API est &quot;Yes&quot;. L’API permet d’ignorer l’assemblage de contenu publicitaire dans le contenu principal.
 * (ZD#34765) - Après avoir appelé stop(), peu de segments de flux de transport sont toujours téléchargés. Amélioration de l’API Stop() pour éviter le téléchargement des segments supplémentaires.
-* (ZD#34865) - Les publicités preroll pour diffusion en continu sont tronquées sur iOS. En ce qui concerne iOS11 et l’ajout d’une vérification supplémentaire pour confirmer si le flux est pré-roll ou de contenu principal, résout ce problème.
+* (ZD#34865) - Les publicités preroll pour diffusion en continu sont tronquées sur iOS. En rapport avec iOS11 et l’ajout d’une vérification supplémentaire pour confirmer si le flux est pré-roll ou de contenu principal, résout ce problème.
 * (ZD#35093) - Correction d’un scénario de basculement en cas d’échec de la variante Principal du flux au démarrage (renvoie 404), selon lequel la lecture ne passe pas au flux de sauvegarde.
 
 **Version 1.4.42 (1.4.42.118)**
@@ -447,7 +447,7 @@ Activé en envoyant l’URL de création d’origine pour la demande CRS 1401 au
 
 Ce problème a été résolu en mettant à jour le chargement des ressources afin de rechercher tous les lots disponibles.
 
-* (ZD# 27460) Premier appel publicitaire - POST à cdn.auditude<span></span>.com renvoyant la valeur 403.
+* (ZD# 27460) Premier appel publicitaire - POST à cdn.auditude<span></span>.com renvoyant le 403.
 
 Le nouveau compte CDN ne peut pas gérer une demande CDN POST. Ce problème a été résolu en mettant à jour le code afin que la demande `cdn.auditude.com` d’annonce soit GET plutôt que POST.
 
@@ -892,13 +892,13 @@ Correction d’un blocage intermittent en raison de problèmes d’accès simult
 
 Correction d’un bogue en raison duquel la longueur de la vidéo était incorrectement reportée.
 
-* Mise à jour du lecteur de démonstration TVSDK pour la prise en charge d’iOS 9
+* Mise à jour du lecteur de démonstration TVSDK pour prendre en charge iOS 9
 
 Pour prendre correctement en charge iOS 9, vous devez configurer les exceptions de la sécurité du transport des applications. Aux fins de la démonstration, l&#39;ATS est complètement désactivé.
 
 **Version 1.4.12** (1.4.12.464) pour iOS 6.0+
 
-* (ZD #4521) CRS Testing Client Side and SSAI
+* (ZD #4521) CRS Test côté client et SSAI
 
 Correction d&#39;un MD5 inversé dans l&#39;URL 3P.
 
