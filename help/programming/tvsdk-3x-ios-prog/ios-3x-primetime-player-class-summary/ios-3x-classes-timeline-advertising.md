@@ -5,7 +5,10 @@ seo-title: Classes publicitaires de la chronologie
 title: Classes publicitaires de la chronologie
 uuid: df970e8f-4bf8-4367-9d70-42ebcb11c025
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '549'
+ht-degree: 0%
 
 ---
 
@@ -25,40 +28,40 @@ Ces classes fournissent des informations sur les publicités qui surviennent dan
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAd.html" format="html" scope="external"> PTAd</a> </td> 
    <td colname="2">Classe qui définit l’abstraction de la publicité et contient toutes les informations sur la publicité. Il est défini par un identifiant unique, une durée et une ressource MediaResource. MediaResource contient l’URL où réside le contenu publicitaire réel. 
-    <ph>
-      Représente un actif linéaire principal épissé dans le contenu. Il peut éventuellement contenir un tableau de ressources complémentaires qui doivent être affichées avec la ressource linéaire.
-    </ph> </td> 
+    <pre>
+      Représente un actif linéaire Principal épissé dans le contenu. Il peut éventuellement contenir un tableau de ressources complémentaires qui doivent être affichées avec la ressource linéaire.
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdAsset.html" format="html" scope="external"> PTAdAsset</a> </td> 
    <td colname="2">Classe qui représente une ressource à afficher. 
-    <ph>
+    <pre>
       Représente un fichier à afficher.
-    </ph> 
-    <ph>
+    </pre> 
+    <pre>
       Classe représentant une ressource publicitaire.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBannerView.html" format="html" scope="external"> PTAdBannerView</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Affiche un fichier de bannière. Votre application doit créer une nouvelle instance de cette classe d'utilitaires, définir le fichier de bannière et l'ajouter à une vue. Le suivi des impressions et des clics pour la bannière est géré en interne par cette classe.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
    <td colname="2">Classe qui donne une vue unifiée sur plusieurs publicités qui seront lues à un moment donné pendant la lecture. 
-    <ph>
+    <pre>
       Représente une séquence continue de publicités épissées dans le contenu.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdClick.html" format="html" scope="external"> PTAdClick</a> </td> 
    <td colname="2">Classe qui représente une instance de clic associée à une ressource. Cette instance contient des informations sur l’URL de clic publicitaire et le titre qui peuvent être utilisés pour fournir des informations supplémentaires à l’utilisateur. 
-    <ph>
+    <pre>
       Représente une instance de clic associée à une ressource. Cette instance contient des informations sur l’URL de clic publicitaire et le titre qui peuvent être utilisés pour fournir des informations supplémentaires à l’utilisateur.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdPolicyInfo.html" format="html" scope="external"> PTAdPolicyInfo</a> </td> 
@@ -74,10 +77,10 @@ Ces classes fournissent des informations sur les publicités qui surviennent dan
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 
-    <ph>
+    <pre>
      <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> , classe <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> , protocole
-    </ph> </td> 
-   <td colname="2"> Classe qui gère la partie de résolution des publicités dans le processus de prise de décision publicitaire Adobe Primetime. </td> 
+    </pre> </td> 
+   <td colname="2"> Classe qui gère la partie de résolution des publicités dans le processus de prise de décision des publicités Adobe Primetime. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
