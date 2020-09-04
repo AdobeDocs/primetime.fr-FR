@@ -3,9 +3,9 @@ seo-title: Exécution du serveur DRM pour la diffusion en flux continu protégé
 title: Exécution du serveur DRM pour la diffusion en flux continu protégée
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Vous pouvez vérifier la validité des paramètres en utilisant les utilitaires 
 
 Si vous voulez début Tomcat et le serveur de licences, vous devez exécuter [!DNL catalina.bat start] ou [!DNL catalina.sh start] à partir du [!DNL bin] répertoire de Tomcat.
 
-Une fois le serveur démarré, vous devez vérifier qu’il a été correctement configuré en ouvrant [!DNL https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1] dans une fenêtre de navigateur. Si la configuration du client a été correctement chargée, un message de confirmation s&#39;affiche.
+Une fois le serveur démarré, vous devez vérifier qu’il a été correctement configuré en ouvrant `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` une fenêtre de navigateur. Si la configuration du client a été correctement chargée, un message de confirmation s&#39;affiche.
 
 ## Fichiers journaux {#log-files}
 
@@ -54,11 +54,11 @@ Le fichier journal global [!DNL flashaccess-global.log]se trouve dans *LicenseSe
 
 ### Fichier journal de partition {#section_5660137CD6AA40519E72A4315534846B}
 
-Le fichier journal des partitions [!DNL flashaccess-partition.log]se trouve dans le [!DNL <LicenseServer.LogRoot>/flashaccesserver] répertoire. Il comprend les messages du journal qui ont été générés pendant le traitement d’une demande de licence.
+Le fichier journal des partitions [!DNL flashaccess-partition.log]se trouve dans le `<LicenseServer.LogRoot>/flashaccesserver` répertoire. Il comprend les messages du journal qui ont été générés pendant le traitement d’une demande de licence.
 
 ### Fichier journal du client {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Le fichier journal de chaque client, [!DNL flashaccess-tenant.log], se trouve dans [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/locants/<tenantname>]. Le journal du client contient des informations de contrôle décrivant chaque licence générée pour ce client.
+Le fichier journal du locataire de chaque client se trouve dans [!DNL flashaccess-tenant.log]`<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Le journal du client contient des informations de contrôle décrivant chaque licence générée pour ce client.
 
 ## Mise à jour des fichiers de configuration {#updating-configuration-files}
 
