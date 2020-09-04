@@ -5,7 +5,10 @@ seo-title: Classes QoS
 title: Classes QoS
 uuid: c1192474-d183-4995-87ef-839699844b48
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '449'
+ht-degree: 0%
 
 ---
 
@@ -46,7 +49,7 @@ Package : [package com.adobe.mediacore.qos](https://help.adobe.com/en_US/primeti
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/LoadInformationType.html" format="html" scope="external"> LoadInformationType</a></span> </td> 
-   <td colname="2"> Classe de Énumération qui liste les valeurs possibles pour la propriété de type des objets LoadInformation. </td> 
+   <td colname="2"> Classe de énumération qui liste les valeurs possibles pour la propriété de type des objets LoadInformation. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/PlaybackInformation.html" format="html" scope="external"> PlaybackInformation</a></span> </td> 
@@ -67,12 +70,12 @@ Package : [package com.adobe.mediacore.qos](https://help.adobe.com/en_US/primeti
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/qos/QOSProvider.html" format="html" scope="external"> QOSProvider</a></span> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Fournit des mesures de qualité de service essentielles pour la lecture et le périphérique.
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       Classe de fournisseur d’informations QOS.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
