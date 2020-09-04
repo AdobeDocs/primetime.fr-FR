@@ -5,7 +5,10 @@ seo-title: Codes de notification
 title: Codes de notification
 uuid: 8a332057-8fda-4497-9264-a2caac92e900
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -27,17 +30,17 @@ Les objets de notification fournissent des informations relatives à l’état d
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span></td> 
    <td colname="2">Type de notification. Selon la plate-forme, cette propriété fait référence à un type énuméré avec les valeurs possibles de 
-    <ph>
+    <pre>
       INFORMATIONS, AVERTISSEMENT ou ERREUR. Il s’agit du regroupement de niveau supérieur pour les notifications.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> code</span></td> 
    <td colname="2">Représentation numérique affectée à la notification. 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">événements de notification d'erreur, de 100000 à 199999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">événements de notification d'avertissement, de 20000 à 29999 </li> 
-     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">événements de notification des informations, de 300000 à 399999 </li> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Événements de notification d'erreur, de 100000 à 199999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Événements de notification d'avertissement, de 20000 à 29999 </li> 
+     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Événements de notification des informations, de 300000 à 399999 </li> 
     </ul> <p>Chaque plage de niveau supérieur, telle que les erreurs, est divisée en sous-plages, par exemple de 101 000 à 101 999, ce qui représente des erreurs de lecture. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
