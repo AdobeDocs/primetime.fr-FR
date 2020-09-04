@@ -5,7 +5,10 @@ seo-title: Fichier de configuration global
 title: Fichier de configuration global
 uuid: 294d6cff-be07-4b4b-8aa6-943044a1c56f
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ Le fichier de configuration global comprend :
 * Journalisation : indique le niveau de journalisation et la fréquence d&#39;enregistrement des fichiers journaux.
 * Mot de passe HSM : requis uniquement si un HSM est utilisé pour stocker les informations d&#39;identification du serveur.
 
-Reportez-vous aux commentaires de l’exemple de fichier de configuration globale situé dans [!DNL Primetime DRM. <DVD>\Adobe Primetime DRM Server for Protected Streaming\configure] pour plus d’informations.
+Pour plus d’informations, consultez les commentaires de l’exemple de fichier de configuration globale situé dans Primetime DRM `<DVD>`\Adobe Primetime DRM Server for Protected Streaming\configs.
