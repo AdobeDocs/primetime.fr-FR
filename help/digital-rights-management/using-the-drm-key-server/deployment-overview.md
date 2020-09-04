@@ -3,9 +3,9 @@ seo-title: Présentation du déploiement de Primetime DRM Key Server
 title: Présentation du déploiement de Primetime DRM Key Server
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Déploiement du serveur clé DRM Primetime {#deploy-the-primetime-drm-key-server}
 
-Avant de déployer Primetime DRM Key Server, assurez-vous d’avoir installé les versions requises de Java et Tomcat. Voir Configuration requise [pour](../../digital-rights-management/using-the-drm-key-server/requirements.md)DRM Key Server.
+Avant de déployer le serveur de clés DRM Primetime, assurez-vous d’avoir installé les versions requises de Java et de Tomcat. Voir Configuration requise [pour](../../digital-rights-management/using-the-drm-key-server/requirements.md)DRM Key Server.
 
 Le téléchargement de Primetime DRM Key Server inclut [!DNL faxsks.war]. Pour déployer ce fichier WAR, copiez-le dans le [!DNL webapps] répertoire de Tomcat. Si vous avez déjà déployé le fichier WAR, vous devrez peut-être supprimer manuellement le répertoire WAR décompressé, [!DNL faxsks] dans le [!DNL webapps] répertoire de Tomcat). Pour empêcher Tomcat de décompresser les fichiers WAR, modifiez le [!DNL server.xml] fichier dans le [!DNL conf] répertoire de Tomcat et définissez l’ `unpackWARs` attribut sur `false`.
 
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## Informations d’identification DRM Primetime {#primetime-drm-credentials}
 
-Pour traiter les requêtes clés des clients iOS DRM Primetime et Xbox 360, le serveur de clés DRM Primetime doit être configuré avec un ensemble d&#39;informations d&#39;identification émises par Adobe. Ces informations d’identification peuvent être stockées dans des fichiers PKCS#12 ( [!DNL .pfx]) ou sur un HSM.
+Pour traiter les demandes clés des clients iOS DRM Primetime et Xbox 360, le serveur de clés DRM Primetime doit être configuré avec un ensemble d&#39;informations d&#39;identification émises par l&#39;Adobe. Ces informations d’identification peuvent être stockées dans des fichiers PKCS#12 ( [!DNL .pfx]) ou sur un HSM.
 
-Les [!DNL .pfx] fichiers peuvent être localisés n&#39;importe où, mais pour faciliter la configuration, Adobe recommande de placer les [!DNL .pfx] fichiers dans le répertoire de configuration du locataire. Pour plus d’informations, voir Fichiers [de configuration du serveur de](#key-server-configuration-files)clés.
+Les [!DNL .pfx] fichiers peuvent être localisés n&#39;importe où, mais pour faciliter la configuration, l&#39;Adobe recommande de placer les [!DNL .pfx] fichiers dans le répertoire de configuration du locataire. Pour plus d’informations, voir Fichiers [de configuration du serveur de](#key-server-configuration-files)clés.
 
 ### Configuration HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Si vous choisissez d’utiliser un HSM pour stocker les informations d’identification de votre serveur, vous devez charger les clés privées et les certificats sur le HSM et créer un fichier de configuration *pkcs11.cfg* . Ce fichier doit se trouver dans le répertoire *KeyServer.ConfigRoot* . Consultez la section [!DNL <Primetime DRM Key Server>/configs] répertoire pour un exemple de fichier de configuration PKCS 11. Pour plus d’informations sur le format de [!DNL pkcs11.cfg]la bibliothèque, reportez-vous à la documentation du fournisseur Sun PKCS11.
+Si vous choisissez d’utiliser un HSM pour stocker les informations d’identification de votre serveur, vous devez charger les clés privées et les certificats sur le HSM et créer un fichier de configuration *pkcs11.cfg* . Ce fichier doit se trouver dans le répertoire *KeyServer.ConfigRoot* . Consultez le `<Primetime DRM Key Server>/configs` répertoire pour obtenir un exemple de fichier de configuration PKCS 11. Pour plus d’informations sur le format de [!DNL pkcs11.cfg]la bibliothèque, reportez-vous à la documentation du fournisseur Sun PKCS11.
 
 Pour vérifier que vos fichiers de configuration HSM et Sun PKCS11 sont correctement configurés, vous pouvez utiliser la commande suivante à partir du répertoire où se trouve le [!DNL pkcs11.cfg] fichier ( [!DNL keytool] est installé avec Java JRE et JDK) :
 
@@ -112,7 +112,7 @@ Le serveur de clés DRM Primetime nécessite deux types de fichiers de configura
 
 Si des modifications sont apportées aux fichiers de configuration, le serveur doit être redémarré pour que les modifications prennent effet.
 
-Pour éviter de rendre les mots de passe disponibles en texte clair dans les fichiers de configuration, tous les mots de passe spécifiés dans les fichiers de configuration globale et locataire doivent être chiffrés. Pour plus d’informations sur le chiffrement des mots de passe, voir [*Password Scrambler *dans* Utilisation du serveur DRM Primetime pour la diffusion en continu *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)protégée.
+Pour éviter de rendre les mots de passe disponibles en texte clair dans les fichiers de configuration, tous les mots de passe spécifiés dans les fichiers de configuration globale et locataire doivent être chiffrés. Pour plus d’informations sur le chiffrement des mots de passe, voir [*Password Scrambler* dans *Utilisation du serveur DRM Primetime pour la diffusion en continu*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) protégée.
 
 ## Structure du répertoire de configuration {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ Le fichier [!DNL flashaccess-keyserver-global.xml] de configuration contient les
 * Journalisation : indique le niveau de journalisation et la fréquence d&#39;enregistrement des fichiers journaux.
 * Mot de passe HSM : requis uniquement si un HSM est utilisé pour stocker les informations d’identification du serveur.
 
-Consultez les commentaires dans l&#39;exemple de fichier de configuration global situé dans [!DNL <Primetime DRM Key Server>/configs] pour plus de détails.
+Consultez les commentaires de l&#39;exemple de fichier de configuration globale situé dans `<Primetime DRM Key Server>/configs` pour plus de détails.
 
 ## Fichiers de configuration du client {#tenant-configuration-files}
 
@@ -146,7 +146,7 @@ Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichie
 
 Tous les fichiers de configuration de client incluent :
 
-* Informations d&#39;identification du serveur de clés - Spécifie une ou plusieurs informations d&#39;identification du serveur de clés (certificat et clé privée) émises par Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* Informations d&#39;identification du serveur de clés - Spécifie une ou plusieurs informations d&#39;identification du serveur de clés (certificat et clé privée) émises par l&#39;Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
 Le fichier de configuration du client **iOS** comprend les éléments suivants :
 
