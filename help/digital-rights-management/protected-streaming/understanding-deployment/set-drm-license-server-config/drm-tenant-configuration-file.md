@@ -5,9 +5,9 @@ seo-title: Fichier de configuration du client
 title: Fichier de configuration du client
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -17,25 +17,25 @@ ht-degree: 0%
 
 Le fichier de configuration flashaccess-locataire.xml comprend des paramètres qui s’appliquent à un client spécifique du serveur de licences.
 
-Chaque client prend en charge sa propre instance de ce fichier de configuration situé dans [!DNL &lt;LicenseServer.ConfigRoot>/flashaccessserver/locants/<tenantname>]. Consultez le répertoire [!DNL configs/flashaccessserver/tenants/sampletenant] pour un exemple de fichier de configuration de client.
+Chaque client prend en charge sa propre instance de ce fichier de configuration situé dans `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Consultez le répertoire `configs/flashaccessserver/tenants/sampletenant` pour un exemple de fichier de configuration de client.
 
-Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichier de configuration du client sous la forme de chemins d&#39;accès absolus ou de chemins d&#39;accès relatifs au répertoire de configuration du client ( [!DNL &lt;LicenseServer.ConfigRoot>/flashaccessoserver/tenants/<tenantname>]).
+Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichier de configuration du client en tant que chemins d&#39;accès absolus ou en tant que chemins d&#39;accès relatifs au répertoire de configuration du client (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
 
 Le fichier de configuration du client comprend :
 
-* *Informations d&#39;identification* de transport : spécifie une ou plusieurs informations d&#39;identification de transport (certificat et clé privée) émises par Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* *Informations d&#39;identification* de transport : spécifie une ou plusieurs informations d&#39;identification de transport (certificat et clé privée) émises par l&#39;Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
-   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
+   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
 
-* *Informations d’identification* du serveur de licences : spécifie une ou plusieurs informations d’identification du serveur de licences (certificat et clé privée) que Adobe a émises. Vous pouvez spécifier les informations d’identification du serveur de licences en tant que chemin d’accès à un [!DNL .pfx] fichier et à un mot de passe, ou encore en tant qu’alias pour les informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* *Informations d&#39;identification* du serveur de licences : spécifie une ou plusieurs informations d&#39;identification du serveur de licences (certificat et clé privée) que l&#39;Adobe a émises. Vous pouvez spécifier les informations d’identification du serveur de licences en tant que chemin d’accès à un [!DNL .pfx] fichier et à un mot de passe, ou encore en tant qu’alias pour les informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
-   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
+   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
 
-* *Certificats* de serveur de clés : indiquez éventuellement le certificat de serveur de licences du serveur de clés émis par Adobe. Vous pouvez spécifier le certificat du serveur de licences du serveur de clés comme chemin d’accès à un [!DNL .cer] fichier ou alias d’un certificat stocké sur un HSM. Cette option doit être spécifiée pour émettre des licences pour le contenu fourni avec une stratégie DRM qui requiert une diffusion de clé à distance pour les périphériques iOS.
+* *Certificats* de serveur de clés : indiquez éventuellement le certificat de serveur de licences du serveur de clés que l&#39;Adobe a émis. Vous pouvez spécifier le certificat du serveur de licences du serveur de clés comme chemin d’accès à un [!DNL .cer] fichier ou alias d’un certificat stocké sur un HSM. Cette option doit être spécifiée pour émettre des licences pour le contenu fourni avec une stratégie DRM qui requiert une diffusion de clé à distance pour les périphériques iOS.
 
 * *Agents d&#39;autorisation* personnalisés : spécifie éventuellement les classes d&#39;agents d&#39;autorisation personnalisés à appeler pour chaque demande de licence. Si plusieurs agents d’autorisation sont spécifiés, ils sont appelés dans l’ordre indiqué.
 * *Liste des Packagers* autorisés : spécifie éventuellement des certificats qui identifient les entités autorisées à compresser du contenu pour ce serveur de licences. Si aucun certificat de packager n’est spécifié, le serveur délivre des licences pour le contenu conditionné par tout packager. Si le serveur reçoit une demande de licence d’un packager non autorisé, la demande est refusée.
-* *Version* client minimale prise en charge Voir Utilisation du SDK DRM Adobe Primetime pour la protection du contenu.
+* *Version* client minimale prise en charge Voir Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu.
 
 * *Règles d’utilisation*
 
@@ -61,6 +61,7 @@ Le fichier de configuration du client comprend :
          * `oemVendor`
          * `model`
          * `screenType`
+
          Les attributs suivants sont désormais facultatifs :
 
          * `osVersion`
