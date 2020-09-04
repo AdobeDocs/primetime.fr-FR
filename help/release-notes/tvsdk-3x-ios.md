@@ -2,7 +2,7 @@
 title: Notes de mise à jour de TVSDK 3.12 pour iOS
 description: Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -135,7 +135,7 @@ Aucune nouvelle fonctionnalité ou amélioration dans cette version.
 * Expérience TV de possibilité de se joindre au milieu d’une publicité sans déclencher de suivi partiel de la publicité.\
    Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
 
-   * La seconde publicité est lue pour la durée restante (20 s), suivie de la troisième publicité.
+   * La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
    * Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis pour la troisième publicité seulement sont déclenchés.
 
 * Propriété enableVodPreroll Ajoutée de type booléen dans l&#39;interface PTAdMetadata. La propriété peut être utilisée pour activer le pré-roll sur un flux VoD. Si enableVodPreroll a la valeur NO, PSDK ne lit pas le pré-roll. Cela n&#39;a cependant aucun impact sur les midrolls. La valeur par défaut de enableVodPreroll est YES.
@@ -288,19 +288,19 @@ Lorsque la résolution est associée à un problème signalé, une référence Z
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -379,7 +379,7 @@ Correction des demandes de duplicata effectuées pour les URL de manifeste penda
 
 * **Billet36321** - Discrépité observée dans la plage de recherche entre `PTMediaPlayer` et `AVPlayer` l’instance dans l’état &quot;Lecture&quot;.
 
-* **Billet36493** - `libstdc++` prise en charge sur iOS 12 Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale avec iOS 7.0.
+* **Billet36493** - `libstdc++` prise en charge sur iOS 12 Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale avec iOS 7.0
 
 **Version 1.4.44**
 
@@ -406,7 +406,7 @@ Correctif fourni pour le numéro fermé 34385 de la version 1.4.42. Code de gest
 
 * (ZD#34765) - Après avoir appelé stop(), peu de segments de flux de transport sont toujours téléchargés. Amélioration de l’API Stop() pour éviter le téléchargement des segments supplémentaires.
 
-* (ZD#34865) - Les publicités preroll pour diffusion en continu sont tronquées sur iOS. En ce qui concerne iOS11 et l’ajout d’une vérification supplémentaire pour confirmer si le flux est pré-roll ou de contenu principal, résout ce problème.
+* (ZD#34865) - Les publicités preroll pour diffusion en continu sont tronquées sur iOS. En rapport avec iOS11 et l’ajout d’une vérification supplémentaire pour confirmer si le flux est pré-roll ou de contenu principal, résout ce problème.
 
 * (ZD#35093) - Correction d’un scénario de basculement en cas d’échec de la variante Principal du flux au démarrage (renvoie 404), selon lequel la lecture ne passe pas au flux de sauvegarde.
 
@@ -587,7 +587,7 @@ Pour un flux FER, la clé avant la coupure publicitaire est insérée après la 
 
 Activé en envoyant l’URL de création d’origine pour la demande CRS 1401 au lieu de l’URL normalisée, selon les exigences du serveur principal CRS.
 
-* (ZD# 26218) - Problème de chargement du fichier PSDKResources.bundle
+* (ZD# 26218) - Problème de chargement PSDKResources.bundle
 
 Ce problème a été résolu en mettant à jour le chargement des ressources afin de rechercher tous les lots disponibles.
 
@@ -1034,13 +1034,13 @@ Correction d’un blocage intermittent en raison de problèmes d’accès simult
 
 Correction d’un bogue en raison duquel la longueur de la vidéo était incorrectement reportée.
 
-* Mise à jour du lecteur de démonstration TVSDK pour la prise en charge d’iOS 9
+* Mise à jour du lecteur de démonstration TVSDK pour prendre en charge iOS 9
 
 Pour prendre correctement en charge iOS 9, vous devez configurer les exceptions de la sécurité du transport des applications. Aux fins de la démonstration, l&#39;ATS est complètement désactivé.
 
 **Version 1.4.12** (1.4.12.464) pour iOS 6.0+
 
-* (ZD #4521) CRS Testing Client Side and SSAI
+* (ZD #4521) CRS Test côté client et SSAI
 
 Correction d&#39;un MD5 inversé dans l&#39;URL 3P.
 
@@ -1145,7 +1145,7 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 
 * TVSDK 1.4.28 a été certifié pour la version bêta 7 d’iOS 10.
 * Prise en charge de DRM pour forcer HTTPS en ajoutant `forceHTTPS` et `isForcingHTTPS` des API.
-* Mise à jour des bibliothèques VHL vers la version 1.5.8, des bibliothèques mobiles Adobe vers la version 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
+* Mise à jour des bibliothèques VHL vers la version 1.5.8, des bibliothèques Adobe Mobile vers la version 4.8.4 et de la bibliothèque d’utilitaires de journalisation vers la cible de déploiement de la version 7.0.
 
 **Version 1.4.19**
 
