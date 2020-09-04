@@ -3,7 +3,10 @@ seo-title: Présentation
 title: Présentation
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 </i class="+ topic>
 ```
 
-* `metadata` - Inclut les métadonnées DRM d’Adobe Primetime.
+* `metadata` - Inclut les métadonnées Adobe Primetime DRM.
 
    Vous pouvez récupérer ce fichier à partir d’un contenu protégé à l’aide des `-d -m` options de Media Packager.
 
@@ -112,7 +115,7 @@ Avant d’exécuter License Generator, vous devez spécifier des valeurs pour le
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> prenesegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Certificat de serveur de clés, qui est un certificat de serveur de licences émis par Adobe et utilisé par le serveur de clés. Ce certificat est appliqué uniquement si la stratégie de métadonnées/DRM indique qu’un serveur de clés est requis pour la diffusion de clés sur les périphériques iOS. </td> 
+   <td colname="2" class="- topic/entry "> Certificat de serveur de clés, qui est un certificat de serveur de licences émis par un Adobe et utilisé par le serveur de clés. Ce certificat est appliqué uniquement si la stratégie de métadonnées/DRM indique qu’un serveur de clés est requis pour la diffusion de clés sur les périphériques iOS. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> preneur de licence segen.sign.certfile</span> </td> 
@@ -123,21 +126,19 @@ Avant d’exécuter License Generator, vous devez spécifier des valeurs pour le
    <td colname="2" class="- topic/entry ">Mot de passe protégeant le fichier que vous avez spécifié avec l’option <span class="+ topic/ph pr-d/codeph codeph"> prenessegen.sign.certfile</span> . </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">prenesegen.domainca.n</span> </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licencisegen.domainca.n</span> </td> 
    <td colname="2" class="- topic/entry "> <p>Si vous générez des licences liées à un domaine, vous devez spécifier un ou plusieurs certificats d’autorité de certification de domaine pour indiquer les autorités de domaine auxquelles l’émetteur de licences peut faire confiance. </p> <p>Si le destinataire de licence est un certificat de domaine, qui n’a pas été émis par l’une des autorités de certification de domaine spécifiées, une licence ne peut pas être générée. Cette propriété spécifie un fichier <span class="filepath"> .cer</span> qui inclut le certificat au format PEM ou DER. <span class="codeph">n</span> doit augmenter monotoniquement, en commençant par 1. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">prensegen.keys.asymmetric. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fichier PKCS12 facultatif qui comprend des informations d’identification supplémentaires du serveur License Server pour le déchiffrement du CEK dans les métadonnées et la stratégie DRM. Vous pouvez configurer d’autres informations d’identification si du contenu a déjà été inclus avec un certificat du serveur de licences autre que celles qui ont été spécifiées avec <span class="codeph"> prensegen.sign.certfile</span>. Cette propriété doit faire référence à un fichier <span class="filepath"> .pfx</span> qui inclut un certificat et une clé privée. <span class="codeph">n</span> doit augmenter monotoniquement, en commençant par 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">prensegen.keys.asymmetric. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>Le mot de passe est appliqué pour protéger le fichier que vous avez spécifié avec la<span class="+ topic/ph pr-d/codeph codeph"> propriété prensegen.keys.asymmetric.licenseServerCredential.n</span> . </p> </td> 
   </tr> 
  </tbody> 
