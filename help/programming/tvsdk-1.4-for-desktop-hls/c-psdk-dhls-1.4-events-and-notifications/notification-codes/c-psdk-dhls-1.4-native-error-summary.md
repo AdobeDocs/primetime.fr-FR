@@ -3,7 +3,10 @@ seo-title: Détails de la notification NATIVE_ERROR
 title: Détails de la notification NATIVE_ERROR
 uuid: 59f6077f-8162-4755-afd8-ce95fd5d57b2
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ Lorsque TVSDK gère une erreur native, il définit certaines ou toutes les valeu
   <tr> 
    <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
    <td colname="col2"> 
-    <ph>
-      Code d’erreur natif de Flash Player. 
-    </ph> Ces codes représentent les éléments suivants : 
+    <pre>
+      Code d’erreur natif du Flash Player. 
+    </pre> Ces codes représentent les éléments suivants : 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
-     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">Erreurs DRM (codes 3300 à 3367). Il s’agit des mêmes codes d’erreur que ceux de Flash Player. </li> 
+     <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">Erreurs DRM (codes 3300 à 3367). Il s’agit des mêmes codes d’erreur de Flash Player équivalents. </li> 
      <li id="li_98A571480C154CF0AE1DC101FF0834C4">Erreurs de lecture vidéo (-1 à 89). </li> 
      <li id="li_D7C19955DEF94DA88B822C8C57D6D2F4">Erreurs de chiffrement (300 à 307). </li> 
     </ul> </td> 
@@ -38,11 +41,11 @@ Lorsque TVSDK gère une erreur native, il définit certaines ou toutes les valeu
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> Pour les erreurs DRM, les codes de sous-erreur sont également renvoyés. Ces codes correspondent au code de <span class="codeph"> sous-erreur </span> DRMErrorEvents qui est renvoyé par Flash Player. Si des erreurs de rapports sont signalées à Adobe, incluez cette valeur numérique pour obtenir de l’aide au dépannage. </td> 
+   <td colname="col2"> Pour les erreurs DRM, les codes de sous-erreur sont également renvoyés. Ces codes correspondent au code de <span class="codeph"> sous-erreur </span> DRMErrorEvents qui est renvoyé par le Flash Player. Si des erreurs de rapports sont signalées à l’Adobe, incluez cette valeur numérique pour obtenir de l’aide au dépannage. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
-   <td colname="col2"> Pour DRM, il s’agit de votre chaîne d’erreur personnalisée issue du déploiement de votre serveur DRM, si vous en avez défini une. Incluez également cette variable lorsque des erreurs de rapports sont envoyées à Adobe. </td> 
+   <td colname="col2"> Pour DRM, il s’agit de votre chaîne d’erreur personnalisée issue du déploiement de votre serveur DRM, si vous en avez défini une. Incluez également cette option lorsque des erreurs de rapports sont signalées à l’Adobe. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> DESCRIPTION </span> </td> 
@@ -67,4 +70,4 @@ TVSDK reçoit ces codes d’erreur et ces chaînes du moteur vidéo.
 
 >[!IMPORTANT]
 >
->Pour obtenir une liste complète des codes d’erreur du client DRM d’Adobe Primetime, voir Référence [des messages d’erreur du client](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)DRM.
+>Pour obtenir une liste complète des codes d’erreur client DRM Adobe Primetime, voir Référence [des messages d’erreur client](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf)DRM.
