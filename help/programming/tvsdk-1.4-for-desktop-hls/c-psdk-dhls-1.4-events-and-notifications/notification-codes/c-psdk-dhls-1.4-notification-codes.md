@@ -5,7 +5,10 @@ seo-title: Codes de notification
 title: Codes de notification
 uuid: a7b77a5c-9873-45cf-8499-aa00270a7ad6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -32,13 +35,13 @@ Les objets de notification fournissent des informations relatives à l’état d
    <td colname="1"> code </td> 
    <td colname="2">Représentation numérique affectée à la notification : 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">événements de notification d'erreur, de 100000 à 199999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">événements de notification d'avertissement, de 20000 à 29999 </li> 
-     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">événements de notification des informations, de 300000 à 399999 </li> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Événements de notification d'erreur, de 100000 à 199999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Événements de notification d'avertissement, de 20000 à 29999 </li> 
+     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Événements de notification des informations, de 300000 à 399999 </li> 
     </ul> <p>Chaque plage de niveau supérieur, telle que les erreurs, est divisée en sous-plages, par exemple de 101 000 à 101 999, ce qui représente des erreurs de lecture. </p>
-    <ph>
+    <pre>
      La énumération <span class="codeph"> mediacore.PSDKErrorCode</span> liste les valeurs possibles.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> name </td> 
