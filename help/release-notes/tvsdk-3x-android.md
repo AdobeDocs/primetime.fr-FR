@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -131,7 +131,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
    * `void alwaysUseAC3OnSupportedDevices(boolean val)` en `MediaPlayer` classe
 
-* **TVSDK prend en charge la lecture CMAF et des flux simples pour Widevine CTR crypté.**
+* **TVSDK prend en charge le CMAF et la lecture en flux continu pour les clics Widevine cryptés.**
 
 * **La lecture des flux HEVC 4K est désormais prise en charge.**
 
@@ -454,7 +454,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 **Version 3.4**
 
-* ZD#37996 - Correction d’un problème de lecture par accrochage pour les flux HEVC CMAF linéaire et VOD.
+* ZD#37996 - Correction d’un problème de lecture par pagaille pour les flux HEVC CMAF linéaires et VOD.
 * ZD#37706 - Correction d’un problème de légendes altérées.
 * ZD#37622 - Correction d’un problème lié aux erreurs URISyntaxErrors irrécupérables pour des annonces spécifiques.
 * ZD#36938 - Correction d’un problème en raison duquel le débit passait au débit moyen, puis augmentait au débit le plus élevé après avoir quitté les lectures de piège.
@@ -484,7 +484,7 @@ Cette section présente un résumé du problème résolu dans la version Android
 
 * ZD#33740 - TVSDK lance un avertissement inutile juste après la création d’un objet MediaPlayer et l’appel de replaceCurrentResource()
 
-   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état de suspension
+   * Amélioration du correctif antérieur en appelant restore uniquement lorsque le lecteur est en état suspendu
 
 * ZD#36442 - Chaque nouvelle lecture déconnecte la session de débogage à distance, rendant impossible le débogage.
 
@@ -642,7 +642,7 @@ WebViewDebbuging a la valeur False par défaut. Pour activer le débogage, défi
    La chaîne de version Adobe Primetime est ajoutée à l’agent utilisateur système.
 
 * Le événement SEEK_END manquant de Zendesk #30809 empêche l’application de passer à un état de lecture.
-* La couleur &quot;cyan&quot; de Zendesk #30415 de Closed Caption est maintenant une couleur plus sombre de bleu (turquoise), par rapport aux versions précédentes de Primetime TVSDK.
+* La couleur cyan de Zendesk #30415 de la légende fermée est maintenant une couleur bleu (turquoise) plus foncée que les versions précédentes de TVSDK Primetime.
 
    La couleur est passée de DarkCyan à Cyan.
 
