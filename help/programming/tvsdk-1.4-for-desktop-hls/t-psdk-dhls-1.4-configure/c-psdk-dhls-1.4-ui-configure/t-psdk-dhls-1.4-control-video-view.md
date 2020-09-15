@@ -5,7 +5,10 @@ seo-title: Contrôle de la position et de la taille de la vue vidéo
 title: Contrôle de la position et de la taille de la vue vidéo
 uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -32,10 +35,10 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
    >TVSDK utilise un `StageVideo` objet pour l’affichage de la vidéo. Comme `StageVideo` les objets ne figurent pas sur la liste d’affichage, le `viewPort` paramètre contient les coordonnées absolues de la vidéo.
    >
    >
-   >Par exemple:    >
+   >Par exemple :
    >
    >
-   ```>
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,10 +59,7 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
    >               [...] 
    >       } 
    >}
-   >```   >
-   >
-
-
+   >```
 
 1. Affectez votre mise en oeuvre à la `MediaPlayerView` propriété.
 
@@ -68,7 +68,7 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Ajouter votre vue à la `view` propriété du lecteur multimédia.
+1. ajoutez votre vue à la `view` propriété du lecteur multimédia.
 
    ```
    addChild(view); 
