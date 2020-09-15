@@ -5,7 +5,10 @@ seo-title: Fonctionnalités DASH prises en charge
 title: Fonctionnalités DASH prises en charge
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités DASH q
 
 >[!TIP]
 >
->Dans les tableaux de la matrice des fonctionnalités ci-dessous, ![](assets/supported15.png)>
+>Dans les tableaux de la matrice des fonctionnalités ci-dessous,  ![](assets/supported15.png)
 >signifie que la fonctionnalité est prise en charge dans la version actuelle.
 
 Les fonctionnalités suivantes sont prises en charge :
@@ -91,26 +94,26 @@ Les fonctionnalités suivantes sont prises en charge :
 
 | Catégorie | Type de contenu | Fonction | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Insertion d&#39;annonce | VOD | Publicité uniquement | Non pris en charge |
-| Insertion d&#39;annonce | VOD | Paramètres de ciblage | VOD uniquement |
-| Insertion d&#39;annonce | VOD | Paramètres personnalisés | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | Stratégie publicitaire personnalisée | Non pris en charge |
-| Insertion d&#39;annonce | VOD + Live | Chargement de publicités différé | Non pris en charge |
-| Insertion d&#39;annonce | VOD | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | Non pris en charge |
-| Insertion d&#39;annonce | VOD | VPAID 2.0 | Non pris en charge |
+| ad insertion | VOD | Publicité uniquement | Non pris en charge |
+| ad insertion | VOD | Paramètres de ciblage | VOD uniquement |
+| ad insertion | VOD | Paramètres personnalisés | VOD uniquement |
+| ad insertion | VOD + Live | Stratégie publicitaire personnalisée | Non pris en charge |
+| ad insertion | VOD + Live | Chargement de publicités différé | Non pris en charge |
+| ad insertion | VOD | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | Non pris en charge |
+| ad insertion | VOD | VPAID 2.0 | Non pris en charge |
 
 ## Fonctionnalités d’insertion d’annonces principales DASH (CSAI) {#dash-core-ad-insertion}
 
 | Catégorie | Type de contenu | Fonction | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Insertion d&#39;annonce | VOD + Live | Pré-roll | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | Mid-roll | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | Post-roll | VOD uniquement |
-| Insertion d&#39;annonce | FER VOD | Résolution et comportements des publicités | Non pris en charge |
-| Insertion d&#39;annonce | VOD + Live | Stratégie publicitaire par défaut | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | VAST 2.0/3.0 | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | VMAP 1.0 | VOD uniquement |
-| Insertion d&#39;annonce | VOD + Live | CRS v3.1 | VOD uniquement |
+| ad insertion | VOD + Live | Pré-roll | VOD uniquement |
+| ad insertion | VOD + Live | Mid-roll | VOD uniquement |
+| ad insertion | VOD + Live | Post-roll | VOD uniquement |
+| ad insertion | FER VOD | Résolution et comportements des publicités | Non pris en charge |
+| ad insertion | VOD + Live | Stratégie publicitaire par défaut | VOD uniquement |
+| ad insertion | VOD + Live | VAST 2.0/3.0 | VOD uniquement |
+| ad insertion | VOD + Live | VMAP 1.0 | VOD uniquement |
+| ad insertion | VOD + Live | CRS v3.1 | VOD uniquement |
 
 ## Fonctionnalités de protection du contenu DASH {#dash-content-protection}
 
@@ -149,13 +152,13 @@ Les fonctionnalités suivantes sont prises en charge :
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Chromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">PlayReady sur Internet Explorer sous Windows 8.1 et Edge </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe Access pour Windows Firefox (vidéo uniquement) </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Accès aux Adobes pour Windows Firefox (vidéo uniquement) </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Fonctionnalités de lecture avancées DASH {#dash-advanced-playback}
+## Fonctions de lecture avancées DASH {#dash-advanced-playback}
 
 | Catégorie | Type de contenu | Fonction | HTML5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
