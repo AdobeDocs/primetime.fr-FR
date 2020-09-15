@@ -5,7 +5,10 @@ seo-title: Contrôler la visibilité des sous-titres
 title: Contrôler la visibilité des sous-titres
 uuid: b9d48d70-2554-4948-8654-fa45093c3782
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
 >
 >Si le texte de sous-titrage s’affiche lorsque le lecteur passe en mode de recherche, le texte ne s’affiche plus une fois la recherche terminée. Au lieu de cela, après quelques secondes, TVSDK affiche le texte de sous-titrage suivant dans la vidéo après la position de fin de la recherche.
 >
->Les valeurs de visibilité des sous-titres fermés sont définies dans `MediaPlayer.Visibility`. >
+>Les valeurs de visibilité des sous-titres fermés sont définies dans `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Attendez que le `MediaPlayer` soit au moins dans l’état PRÉPARÉ.
 
