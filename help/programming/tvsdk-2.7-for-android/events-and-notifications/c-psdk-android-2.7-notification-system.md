@@ -5,14 +5,17 @@ seo-title: Notifications et événements concernant l’état, l’activité, le
 title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
 uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
 
 # Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
-Les Événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
+Les événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
 
 Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
 
@@ -55,7 +58,7 @@ Pour recevoir des notifications, écoutez les notifications comme suit :
    * `INFO`
    * `WARNING`
 
-## Ajouter journalisation et débogage en temps réel {#section_9D4004308CB243AD9B50818895D10005}
+## ajouter la journalisation et le débogage en temps réel {#section_9D4004308CB243AD9B50818895D10005}
 
 Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 
@@ -72,11 +75,10 @@ Voici un exemple de récupération des notifications :
 
    >[!NOTE]
    >
-   >Pour éviter ce débordement, effectuez l’une des opérations suivantes :    >
-   >    
-   >    
-   >    1. Réduisez l&#39;intervalle de temps qui conduit le thread qui effectue l&#39;interrogation des nouveaux événements.
-   >    1. Augmentez la taille de la liste de notification.
+   >Pour éviter ce débordement, effectuez l’une des opérations suivantes :
+   >
+   >1. Réduisez l&#39;intervalle de temps qui conduit le thread qui effectue l&#39;interrogation des nouveaux événements.
+   >1. Augmentez la taille de la liste de notification.
 
 
 1. Sérialisez les dernières entrées du événement de notification au format JSON et envoyez les entrées à un serveur distant pour post-traitement.
