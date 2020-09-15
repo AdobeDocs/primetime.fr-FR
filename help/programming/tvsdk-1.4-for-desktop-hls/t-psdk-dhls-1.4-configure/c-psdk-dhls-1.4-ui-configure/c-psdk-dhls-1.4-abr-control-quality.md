@@ -5,7 +5,10 @@ seo-title: Débit adaptatif (ABR) pour la qualité vidéo
 title: Débit adaptatif (ABR) pour la qualité vidéo
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 0%
 
 ---
 
@@ -80,20 +83,17 @@ Cette classe inclut également la méthode `toABRControlParameters()` helper. Ut
 
    >[!NOTE]
    >
-   >Par exemple, l’exemple suivant initialise tous les paramètres par défaut, puis définit uniquement la stratégie sur conservateur et limite le débit maximal à 1000000 :    >
+   >Par exemple, l’exemple suivant initialise tous les paramètres par défaut, puis définit uniquement la stratégie sur conservateur et limite le débit maximal à 1000000 :
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. Modifiez les paramètres ABR individuels au moment de l’exécution.
 
