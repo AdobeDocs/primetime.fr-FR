@@ -6,7 +6,10 @@ seo-title: Résolution de la publicité juste à temps
 title: Résolution de la publicité juste à temps
 uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '696'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,7 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
    1. TVSDK télécharge un manifeste (playlist) et *résout* toutes les publicités.
    1. TVSDK *charge* toutes les publicités et les place sur la chronologie.
    1. TVSDK déplace le lecteur dans l’état PRÉPARÉ et la lecture du contenu commence.
+
    Le lecteur utilise les URL du manifeste pour obtenir le contenu de la publicité (éléments créatifs), s’assure que le contenu de la publicité est dans un format lisible par TVSDK et TVSDK place les publicités sur la chronologie. Ce processus de base de résolution et de chargement des publicités peut provoquer un délai inacceptable pour un utilisateur attendant de lire son contenu, en particulier si le manifeste contient plusieurs URL de publicité.
 
 * *Chargement* publicitaire différé :
@@ -27,6 +31,7 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
    1. TVSDK télécharge une liste de lecture et *résout* toutes les publicités.
    1. TVSDK *charge* les publicités preroll, déplace le lecteur dans l’état PRÉPARÉ et la lecture du contenu commence.
    1. TVSDK *charge* les publicités restantes et les place sur la chronologie au fur et à mesure de la lecture.
+
    Cette fonction améliore le processus de base en plaçant le lecteur dans l’état PRÉPARÉ avant le chargement de toutes les publicités.
 
 * *Résolution* des publicités relayées :
@@ -43,7 +48,8 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
 
 >[!IMPORTANT]
 >
->**Facteurs à prendre en compte avec la résolution de publicités diffuses :** >
+>**Facteurs à prendre en compte avec la résolution de publicités diffuses :**
+>
 >* La résolution des publicités différées n&#39;est prise en charge que pour les flux VOD avec les modes SERVER_MAP et MANIFEST_CUES.
 >* La résolution des publicités différées n’est pas activée par défaut. Si cette option est désactivée, toutes les publicités sont résolues dans les flux VOD avant les débuts de lecture.
 >* La résolution des publicités différées est incompatible avec la fonction Instant On. Pour plus d’informations sur Instant On, voir Instant On.
@@ -52,6 +58,7 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
 >* Il n’est pas recommandé de réduire la valeur de *setDelayAdLoadingTolerance() *en dessous de la valeur par défaut (5 secondes). Ce faisant, le lecteur pourrait &quot;mettre en mémoire tampon&quot; inutilement.
 >* La résolution des publicités différées n’a aucune incidence sur les publicités preroll.
 >* La résolution des publicités différées est actuellement prise en charge avec le module externe Auditude. Il est recommandé de ne pas définir ** setDelayAdLoadinging sur true si vous utilisez un résolveur personnalisé.
+
 >
 
 
