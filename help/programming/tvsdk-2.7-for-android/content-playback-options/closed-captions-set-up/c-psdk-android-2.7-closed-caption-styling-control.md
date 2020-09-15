@@ -5,7 +5,10 @@ seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes T
 
       >[!IMPORTANT]
       >
-      >**Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :       >
+      >**Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :
       >
       >    * FFFFF = Noir
       >    * 000000 = Blanc
       >    * FF0000 = Rouge
       >    * 00FF00 = Vert
       >    * 0000FF = Bleu
+
       >
       >etc.
       >
       >Dans votre application, chaque fois que vous transmettez des informations de style de couleur à `TextFormatBuilder`, vous utilisez toujours la `Color` énumération comme auparavant, mais vous devez maintenant ajouter `getValue()` à la couleur pour obtenir la valeur sous forme de chaîne. Par exemple :
-      >
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->Dans les options qui définissent les valeurs par défaut (par exemple `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
+Dans les options qui définissent les valeurs par défaut (par exemple `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
