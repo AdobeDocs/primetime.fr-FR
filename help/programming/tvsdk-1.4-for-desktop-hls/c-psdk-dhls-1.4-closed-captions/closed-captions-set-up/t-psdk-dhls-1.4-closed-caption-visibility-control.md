@@ -5,7 +5,10 @@ seo-title: Contrôler la visibilité des sous-titres
 title: Contrôler la visibilité des sous-titres
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
 
 >[!NOTE]
 >
->Les valeurs de visibilité des sous-titres fermés sont définies dans `ClosedCaptionsVisibility`. >
+>Les valeurs de visibilité des sous-titres fermés sont définies dans `ClosedCaptionsVisibility`.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Attendez que le `MediaPlayer` programme ait au moins l’état PRÉPARÉ (voir [Attendre un état](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valide).
 1. Pour obtenir le paramètre de visibilité actuel pour les légendes fermées, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
