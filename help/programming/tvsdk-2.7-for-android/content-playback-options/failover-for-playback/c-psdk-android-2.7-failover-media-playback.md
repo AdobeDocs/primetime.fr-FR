@@ -5,7 +5,10 @@ seo-title: Lecture et basculement du média
 title: Lecture et basculement du média
 uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,8 @@ Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il li
 
 >[!NOTE]
 >
->Voici quelques restrictions que vous devez connaître : >
+>Voici quelques restrictions que vous devez connaître :
+>
 >* Les paramètres de contrôle de débit binaire adaptatif (ABR) ne sont pas pris en compte lorsqu’un basculement survient.
 >
 >  
