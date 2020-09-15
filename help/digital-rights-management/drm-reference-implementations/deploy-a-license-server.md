@@ -5,7 +5,10 @@ seo-title: Déploiement du serveur de licences
 title: Déploiement du serveur de licences
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Si vous avez déjà déployé des fichiers WAR de serveur de licences, vous devrez peut-être supprimer les répertoires WAR décompressés dans le répertoire [!DNL webapps] du serveur Tomcat :        >
+   >Si vous avez déjà déployé des fichiers WAR de serveur de licences, vous devrez peut-être supprimer les répertoires WAR décompressés dans le répertoire [!DNL webapps] du serveur Tomcat :
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -28,7 +31,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Ne procédez au déploiement que [!DNL edsws.war] si vous avez besoin d’une compatibilité descendante avec le contenu FMRMS (Flash Media Rights Management) v1.5. (Il s&#39;agit d&#39;une exigence très rare.)
+   >Ne déployez pas [!DNL edsws.war] à moins que vous n’ayez besoin d’une compatibilité ascendante avec le contenu FMRMS (Flash Media Rights Management) v1.5. (Il s&#39;agit d&#39;une exigence très rare.)
    >
    >Si vous préférez empêcher Tomcat de décompresser les fichiers WAR, modifiez `server.xml` le répertoire `conf` et définissez `unpackWARs` sur `false`.
 
@@ -39,7 +42,8 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] - Fichier de propriétés du serveur de licences.
    * [!DNL log4j.xml] - Configuration de la journalisation du serveur de licences
    * [!DNL *.pol] - Exemples de fichiers de stratégie DRM.
-   En outre, vous pouvez également choisir de copier les fichiers de certification Adobe à cet emplacement.
+
+   De plus, vous pouvez également choisir de copier les fichiers de certification d&#39;Adobe à cet emplacement.
 
 1. Modifiez les paramètres du serveur de licences dans [!DNL flashaccesstools.properties] pour refléter la configuration de votre serveur.
 
