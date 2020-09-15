@@ -5,7 +5,10 @@ seo-title: Habillages personnalisés
 title: Habillages personnalisés
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -41,14 +44,11 @@ Vous pouvez effectuer les types de modifications suivants :
 
       >[!TIP]
       >
-      >Pour utiliser l&#39;une des variables de mise en mémoire tampon, vous devez ajouter la classe dans l&#39;élément de mise en mémoire tampon-recouvrement. Par exemple, pour utiliser `overlay-text`, ajoutez les lignes suivantes dans le `BufferOverlay.js` fichier :       >
+      >Pour utiliser l&#39;une des versions de mise en mémoire tampon, vous devez ajouter la classe dans l&#39;élément de mise en mémoire tampon-recouvrement. Par exemple, pour utiliser `overlay-text`, ajoutez les lignes suivantes dans le `BufferOverlay.js` fichier :
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 
