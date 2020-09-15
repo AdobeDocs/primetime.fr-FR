@@ -5,7 +5,10 @@ seo-title: Classe de métadonnées minutées
 title: Classe de métadonnées minutées
 uuid: d1ac6b0b-163f-4968-9160-0f60ff439c09
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -60,16 +63,13 @@ Souvenez-vous des points suivants :
 
    >[!TIP]
    >
-   >Les données complexes contenues dans les balises personnalisées du manifeste, telles que les chaînes contenant des caractères spéciaux, doivent être placées entre guillemets. Par exemple:   >
+   >Les données complexes contenues dans les balises personnalisées du manifeste, telles que les chaînes contenant des caractères spéciaux, doivent être placées entre guillemets. Par exemple :
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Si l’extraction échoue en raison d’un format de balise personnalisé, la propriété de contenu contient toujours les données brutes de la balise, c’est-à-dire la chaîne située après les deux-points. Aucune erreur n’est générée dans ce cas.
 
