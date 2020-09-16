@@ -1,28 +1,43 @@
 ---
-title: Notes de mise à jour de PTAI 20.9.1
-description: Les notes de mise à jour de la version 20.9.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.9.2
+description: Les notes de mise à jour de la version 20.9.2 de l’IALP décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.1
+# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.2
 
-Les notes de mise à jour de l’Ad Insertion dynamique version 20.9.1 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
+Les notes de mise à jour de l’Ad Insertion dynamique version 20.9.2 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
 
-## Nouveautés de PTAI 20.9.1
+## Nouveautés de PTAI 20.9.2
+
+**Lorsque :** Mardi 15 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
+
+**Améliorations**
+
+* Prise en charge de l’inclusion de types d’annonces non linéaires à l’aide de `EXT-X-MARKER` balises.
+Pour plus d&#39;informations ou pour activer cette fonctionnalité, contactez votre représentant du support technique.
+
+* Prise en charge de la limitation du temps global de résolution des publicités si les fournisseurs mettent trop de temps à répondre. Pour activer la limitation, définissez le paramètre de l’API d’amorçage `ptadtimeout` sur une valeur en millisecondes.
+
+   >[!NOTE]
+   >
+   >Ce délai d’attente s’applique uniquement aux requêtes publicitaires, et non aux requêtes créatives publicitaires.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.9.1
 
 **Lorsque :** Mardi 1er septembre 2020 de 3h30 à 7h30, heure de l&#39;Est
 
 **Modifications**
 
 * Correction d’un problème pour les clients utilisant HLS/CMAF, en raison duquel EXT-X-MAP manquait parfois des jetons CDN ou des balises EXT-X-MAP parfois incorrectement déployées hors de la fenêtre DVR.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 20.8.4
 
