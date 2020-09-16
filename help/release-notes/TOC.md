@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 user-guide-description: Provides release-specific information, system requirements, limitations, fixed issues, and known issues.
 translation-type: tm+mt
-source-git-commit: f94569b6e2f12d8aa75993099be3f8a85fbb3572
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 + [Présentation des notes de mise à jour](home.md)
 + Ad Insertion dynamique Primetime {#ptai}
-   + [Notes de mise à jour de PTAI 20.9.1](ptai-20x-release-notes.md)
+   + [Notes de mise à jour de PTAI 20.9.2](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK pour iOS {#tvsdk-ios}
    + [Notes de mise à jour de TVSDK 3.12 pour iOS](tvsdk-3x-ios.md)
