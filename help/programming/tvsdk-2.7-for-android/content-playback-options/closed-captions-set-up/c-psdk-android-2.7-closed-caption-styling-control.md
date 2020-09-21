@@ -5,7 +5,7 @@ seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes T
       >
       >**Paramètres de couleurs :** Dans Android TVSDK 2.X, le style colorimétrique des légendes fermées a été amélioré. L’amélioration permet de définir les couleurs de sous-titrage à l’aide d’une chaîne hexadécimale représentant les valeurs de couleur RVB. La représentation en couleur hexadécimale RVB est la chaîne de 6 octets que vous utilisez habituellement dans des applications telles que Photoshop :
       >
-      >    * FFFFF = Noir
-      >    * 000000 = Blanc
-      >    * FF0000 = Rouge
-      >    * 00FF00 = Vert
-      >    * 0000FF = Bleu
+      >* FFFFF = Noir
+      >* 000000 = Blanc
+      >* FF0000 = Rouge
+      >* 00FF00 = Vert
+      >* 0000FF = Bleu
 
       >
       >etc.
