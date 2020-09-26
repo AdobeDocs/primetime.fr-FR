@@ -1,20 +1,30 @@
 ---
-title: Notes de mise à jour de PTAI 20.9.2
-description: Les notes de mise à jour de la version 20.9.2 de l’IALP décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.9.3
+description: Les notes de mise à jour de la version 20.9.3 de l’IALP décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.2
+# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.3
 
-Les notes de mise à jour de l’Ad Insertion dynamique version 20.9.2 décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
+Les notes de mise à jour de la version 20.9.3 de l’Ad Insertion dynamique décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
 
-## Nouveautés de PTAI 20.9.2
+## Nouveautés de PTAI 20.9.3
+
+**Lorsque :** Mercredi 30 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
+
+**Modifications**
+
+* Paramètre d&#39;API Bootstrap Ajouté `ptparallelstream`. Cela permet aux clients ayant des lecteurs qui demandent des flux audio ou vidéo déuxés CMAF en parallèle de s&#39;assurer que les publicités des pistes audio et vidéo sont cohérentes. Définissez la valeur du paramètre sur true pour activer cette fonction ou omettez de la désactiver.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.9.2
 
 **Lorsque :** Mardi 15 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
 
@@ -28,8 +38,6 @@ Pour plus d&#39;informations ou pour activer cette fonctionnalité, contactez vo
    >[!NOTE]
    >
    >Ce délai d’attente s’applique uniquement aux requêtes publicitaires, et non aux requêtes créatives publicitaires.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 20.9.1
 
