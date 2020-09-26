@@ -5,9 +5,9 @@ seo-title: Paramètres de requête du serveur de manifeste
 title: Paramètres de requête du serveur de manifeste
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Les paramètres de requête indiquent au serveur de manifeste quel type de client a envoyé la demande et ce que ce client souhaite que le serveur de manifeste fasse. Certains sont requis et d&#39;autres ont des formats ou des valeurs acceptables spécifiques.
 
-L’URL complète se compose de l’URL de base suivie d’un point d’interrogation, puis d’arguments, séparés par des esperluettes : `parameterName=value` `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+L’URL complète se compose de l’URL de base suivie d’un point d’interrogation, puis d’arguments, séparés par des esperluettes : `parameterName=value` `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Paramètres reconnus {#section_072845B7FA94468C8068E9092983C9E6}
+## Paramètres reconnus {#recognized-parameters}
 
 Le serveur de manifeste reconnaît les paramètres suivants. Il les traite ou les transmet, avec tous les paramètres non reconnus, au serveur d’annonces.
 
@@ -50,3 +50,5 @@ Le serveur de manifeste reconnaît les paramètres suivants. Il les traite ou le
 | scteTracking | Récupérez M3U8 avant de récupérer les informations de suivi SCTE dans le sidecar JSON V2.  <br/>Ce paramètre indique au serveur de manifeste que le lecteur qui récupère le M3U8 a besoin des informations de balise SCTE pour être récupéré. | Non (par défaut :  false ) | true ou false Remarque :  Les données SCTE-35 sont renvoyées dans le fichier annexe JSON avec la combinaison suivante de valeurs de paramètre de requête : <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultiplicateur | Le nombre de segments à partir du point d’activation Le décalage de pré-roulage est configuré à l’aide :   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Remarque**:  En direct/Linéaire uniquement | Non (par défaut :  3.0 ) | Flottant |
 | vebufferLength | Nombre de secondes écoulées depuis le point de production Remarque :  En direct/Linéaire uniquement | Non (par défaut :  3.0 ) | Flottant |
+| ptadtimeout | Pour limiter le temps global de résolution des publicités, si les fournisseurs mettent trop de temps à répondre. | Oui, pour activer | valeur en milliseconde |
+| ptparallelstream | Permet aux clients disposant de lecteurs qui demandent des flux audio ou vidéo déuxés CMAF en parallèle de s’assurer que les publicités des pistes audio et vidéo sont cohérentes. | Oui, pour activer la fonction ou ne pas la désactiver. | true |
