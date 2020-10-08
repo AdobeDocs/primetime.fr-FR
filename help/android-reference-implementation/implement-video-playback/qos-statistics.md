@@ -5,7 +5,10 @@ seo-title: Affichage des statistiques de lecture de la qualité de service et de
 title: Affichage des statistiques de lecture de la qualité de service et des périphériques
 uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,11 @@ Il `QoSManager` suit les statistiques de la qualité de service en obtenant les 
 
    * Pour créer un QosManager :
       * Cette application doit utiliser la fonction de processus publicitaire
+
    QoSManager qosManager = new QosManagerOn();
 
    * Pour utiliser ManagerFactory pour activer l’affichage des statistiques de qualité de service :
+
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>, config, mediaPlayer);
 
@@ -38,7 +43,7 @@ Il `QoSManager` suit les statistiques de la qualité de service en obtenant les 
    >
    >La modification de la valeur booléenne pour `false` désactive le rapports QoS.
 
-2. Ajouter auditeurs de événement :
+2. Ajouter les auditeurs de événement :
 
    `qosManager.addEventListener(qosManagerEventListener);`
 
