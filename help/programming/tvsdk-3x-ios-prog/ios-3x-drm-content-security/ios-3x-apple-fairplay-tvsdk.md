@@ -5,7 +5,10 @@ seo-title: Apple FairPlay dans les applications TVSDK
 title: Apple FairPlay dans les applications TVSDK
 uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Le code Resource Loader est responsable des tâches suivantes :
 1. Mettez en forme la requête.
 1. Fournissez les informations nécessaires au serveur afin que celui-ci puisse décider si la demande doit être autorisée.
 
-Par exemple, si vous utilisez le DRM Primetime Cloud d’Adobe optimisé par ExpressPlay, votre chargeur de ressources envoie la demande à :
+Par exemple, si vous utilisez Adobe Primetime Cloud DRM optimisé par ExpressPlay, votre chargeur de ressources envoie la demande à :
 
 ```
 https://fp-gen.service.expressplay.com
