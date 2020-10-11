@@ -4,9 +4,9 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de PTAI 20.9.3
+## Améliorations et correctifs de PTAI 20.10.1
 
-La version était axée sur la fourniture d&#39;un paramètre d&#39;API d&#39;amorçage `ptparallelstream`, afin de permettre aux clients disposant de lecteurs qui demandent des flux audio ou vidéo déuxés CMAF en parallèle pour s&#39;assurer que les publicités dans les pistes audio et vidéo sont cohérentes.
+La version portait sur les mises à jour de maintenance.
 
 ## Correctifs dans TVSDK 3.12 Android
 
