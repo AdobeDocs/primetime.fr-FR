@@ -1,18 +1,18 @@
 ---
 title: Notes de mise à jour de PTAI 19.11.1
-description: Les notes de mise à jour de la version 19.11.1 de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de Primetime Dynamic Ad Insertion en 2019.
+description: Les notes de mise à jour de la version 19.11.1 de l’API décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion Primetime en 2019.
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de Primetime Dynamic Ad Insertion 19.11.1
+# Notes de mise à jour de Primetime Ad Insertion 19.11.1
 
-Les notes de mise à jour de la version 19.11.1 de l’insertion dynamique des publicités décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’insertion dynamique des publicités Primetime en 2019.
+Les notes de mise à jour de l’Ad Insertion de Primetime 19.11.1 décrivent ce qui est nouveau ou modifié, les problèmes résolus et les problèmes connus de l’Ad Insertion de Primetime en 2019.
 
 ## Nouveautés de la version 19.11.1 de l’ITAP
 
@@ -88,6 +88,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
    * Règle de normalisation des URL créatives Ajoutée pour Innovid, utilisée par SSAI
    * La règle de normalisation utilisée par CRS a été ajoutée dans une version antérieure.
    * TVSDK : La règle de normalisation à ajouter dans le fichier JSON des règles CRS a été fournie après une version antérieure, mais pour être sûr, contactez votre gestionnaire de compte technique pour examiner toutes les règles de normalisation que vous avez en place.
+
       >[!NOTE]
       >
       >La plupart des URL créatives innovid seront transcodées et assemblées avec succès sans la règle de normalisation. Il arrive toutefois que des URL créatives innovid avec des paramètres dynamiques soient détectées. La règle de normalisation est nécessaire pour gérer ces instances.
@@ -103,7 +104,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 * SSAI : Correction d’un problème qui empêchait l’insertion de publicités non muxes dans du contenu non muxé lorsque le contenu et la publicité n’avaient pas de flux audio uniquement (EXT-X-STREAM-INF).
 * SSAI : Prise en charge Ajoutée des jetons d’authentification CDN Limelight (LLNW) pour les segments de contenu
    * Lorsque `pttoken=limelight` ou `pttoken=llnw` est ajouté à l’URL d’amorçage, nous ajouterons un en-tête secret lors de la récupération de la liste de lecture principale source, puis nous ajouterons les paramètres de requête de l’en-tête X-Adobe-Sig de LLNW aux segments de contenu.
-* SSAI : Ajouté une autre valeur de jeton (`pttoken=centurylink`) pour la prise en charge des jetons d’authentification CDN CenturyLink, publiée le 30 juillet 2018
+* SSAI : Une autre valeur de jeton (`pttoken=centurylink`) a été Ajoutée pour la prise en charge des jetons d’authentification CDN CenturyLink, publiée le 30 juillet 2018
    * `pttoken=centurylink` a le même comportement que `pttoken=level3`et les deux valeurs sont valides
 
 ### Version 19.5.1
@@ -111,7 +112,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 **Lorsque :** Jeudi 9 mai 02h30 heure de l&#39;Est au jeudi 9 mai 04h30 heure de l&#39;Est
 
 * SSAI : Mises à jour de sécurité
-* Tableau de bord CRS : La chaîne &quot;Exemple FqAdId&quot; a été tronquée à 255 caractères en raison de contraintes d’enregistrement des données (8 bits).
+* TABLEAU DE BORD CRS : La chaîne &quot;Exemple FqAdId&quot; a été tronquée à 255 caractères en raison de contraintes d’enregistrement des données (8 bits).
    * La chaîne &quot;Exemple FqAdId&quot; comprend le système publicitaire et l’identifiant de publicité de chaque réponse XML de la chaîne Wrapper de l’annonce pour les insertions de toutes les publicités CRS avec l’interface SSAI (section Statistiques créatives du Tableau de bord CRS).
 * Tableaux de bord SSAI et CRS : Mises à jour des versions logicielles
 
@@ -119,9 +120,9 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 **Lorsque :** Mercredi, 10 avril 02h30 heure de l&#39;Est au mercredi 10 avril 04h30 heure de l&#39;Est
 
-* CRS : L&#39;API de reconditionnement CRS ne prend plus en charge les commandes HTTP POST. L&#39;API de reconditionnement CRS redirige automatiquement (301) les commandes HTTP POST vers HTTPS.
-   * A compter du 20 mai, la redirection HTTP->HTTPS pour les commandes HTTP POST sera désactivée.
-   * Si vous utilisez l&#39;API de reconditionnement CRS pour recompresser les publicités à l&#39;avance, basculez vos commandes POST sur HTTPS d&#39;ici le 20 mai.
+* CRS : L&#39;API de reconditionnement CRS ne prend plus en charge les commandes du POST HTTP. L&#39;API de retraitement CRS redirige automatiquement (301) les commandes du POST HTTP vers HTTPS.
+   * A compter du 20 mai, la redirection HTTP->HTTPS pour les commandes du POST HTTP sera désactivée.
+   * Si vous utilisez l&#39;API de reconditionnement CRS pour recompresser les publicités à l&#39;avance, basculez vos commandes de POST sur HTTPS d&#39;ici le 20 mai.
 * CRS : Nouvelle architecture et processus de transfert des ressources CRS vers les origines CDN des clients
    * Les processus de la tâche par origine CDN sont séparés, de sorte que les goulets d’étranglement de transfert pour une origine CDN n’affectent pas les téléchargements vers d’autres origines CDN.
    * Autres avantages : Les délais de traitement des tâches CRS et les taux de transfert vers les origines CDN des clients sont améliorés
@@ -178,7 +179,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
    >Note
    >
-   >Adobe ajoute des règles de liste bloquée lorsque des fournisseurs d’annonces avec des valeurs dynamiques (par exemple, un paramètre dynamique dans l’URL) pour la même publicité sont détectés. Ces règles de liste bloquée seront désactivées une fois le composant dynamique résolu, soit par le fournisseur, soit par le biais d’une règle de normalisation.
+   >L’Adobe ajoute des règles de liste bloquée lorsque des fournisseurs d’annonces avec des valeurs dynamiques (par exemple, un paramètre dynamique dans l’URL) pour la même publicité sont détectés. Ces règles de liste bloquée seront désactivées une fois le composant dynamique résolu, soit par le fournisseur, soit par le biais d’une règle de normalisation.
 
    * Si vous souhaitez ajouter une règle de liste bloquée ou de liste autorisée pour votre zone, contactez votre gestionnaire de compte technique pour obtenir de l’aide.
 
