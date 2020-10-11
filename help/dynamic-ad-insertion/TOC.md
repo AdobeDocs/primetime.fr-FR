@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Aide de l’Ad Insertion dynamique Primetime
 user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,14 @@ ht-degree: 0%
 # Aide pour les Ad Insertion dynamiques {#ad-insertion}
 
 + [Présentation des Ad Insertion dynamiques](home.md)
++ Commencer avec l’Ad Insertion Primetime{#get-started}
+   + [Présentation](get-started-ptai.md)
+   + [Préparation à l’utilisation de l’Ad Insertion Primetime](setup-ptai.md)
+   + [Intégration de votre serveur d’annonces](integrate-ad-server.md)
+   + [Intégration de votre CDN](integrate-cdn.md)
+   + [Utiliser l’insertion publicitaire dans les flux dynamiques/linéaires](ad-insertion-live-linear-stream.md)
+   + [Utiliser l&#39;insertion publicitaire pour VOD](ad-insertion-vod.md)
+   + [Configuration du suivi des publicités](set-up-ad-tracking.md)
 + [Notes de mise à jour des Ad Insertion dynamiques](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Outil de débogage du serveur Manifest](manifest-server-debugging-tool.md)
 
