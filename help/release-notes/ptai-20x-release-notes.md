@@ -1,28 +1,36 @@
 ---
-title: Notes de mise à jour de PTAI 20.9.3
-description: Les notes de mise à jour de la version 20.9.3 de l’IALP décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion dynamique Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.10.1
+description: Les notes de mise à jour de la version 20.10.1 de l’IPAM décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de l’Ad Insertion dynamique Primetime 20.9.3
+# Notes de mise à jour de Primetime Ad Insertion 20.10.1
 
-Les notes de mise à jour de la version 20.9.3 de l’Ad Insertion dynamique décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion dynamique Primetime en 2020.
+Les notes de mise à jour de l’Ad Insertion Primetime 20.10.1 décrivent ce qui est nouveau ou modifié, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2020.
 
-## Nouveautés de PTAI 20.9.3
+## Nouveautés de la version 20.10.1 de l’IPAM
+
+**Lorsque :** Mardi 13 octobre 2020 de 03:00 à 07:00 AM, heure de l&#39;Est
+
+**Modifications**
+
+* Mises à jour de maintenance.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 20.9.3
 
 **Lorsque :** Mercredi 30 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
 
 **Modifications**
 
 * Paramètre d&#39;API Bootstrap Ajouté `ptparallelstream`. Cela permet aux clients ayant des lecteurs qui demandent des flux audio ou vidéo déuxés CMAF en parallèle de s&#39;assurer que les publicités des pistes audio et vidéo sont cohérentes. Définissez la valeur du paramètre sur true pour activer cette fonction ou omettez de la désactiver.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 20.9.2
 
@@ -220,6 +228,6 @@ Lorsque la résolution est associée à un problème signalé, une référence Z
 
 ## Problèmes et limites connus
 
-**PTAI 20.3.3**
+**PITA 20.10.1**
 
 Aucune nouvelle limitation n&#39;a été ajoutée.
