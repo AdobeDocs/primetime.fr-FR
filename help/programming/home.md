@@ -4,14 +4,17 @@ seo-title: Aide sur la programmation Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 60931be251ea07e5c2200d8e8b16c14b18d908c2
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 41%
 
 ---
 
 
-# Aide sur la programmation Primetime
+# Aide à la programmation sur Primetime
 
-Bienvenue dans l’aide sur la programmation Android et iOS pour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche vous permettent d’apprendre à développer des applications et des lecteurs vidéo en utilisant Java sur les appareils Android et Objective-C sur les appareils iOS.
+Bienvenue dans l&#39;aide sur la programmation Android et iOS pour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche vous permettent d’apprendre à développer des applications et des lecteurs vidéo en utilisant Java sur les appareils Android et Objective-C sur les appareils iOS.
 
 Consultez pour en savoir plus sur la version [](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)actuelle.
 
@@ -19,12 +22,12 @@ Consultez pour en savoir plus sur la version [](tvsdk-3x-ios-prog/ios-3x-introdu
 
 | Guide de l’utilisateur | Description |
 |---|---|
-| [Notes de mise à jour de Primetime](/help/release-notes/home.md) | Fournit des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus. |
-| [Aide sur la migration et les conversions de Primetime](/help/migration-guides/home.md) | Explique le processus de conversion et de migration pour passer de votre suite TVSDK Primetime existante à la suite de nouvelle génération. |
-| [Implémentation de référence](/help/android-reference-implementation/home.md) | Permet de comprendre TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
-| [Aide sur l&#39;insertion d&#39;annonces dynamiques](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser le contenu en insérant sur le serveur des annonces dynamiques ciblées par les utilisateurs et en sollicitant l&#39;audience avec des annonces personnalisées. |
-| [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en savoir plus sur divers scénarios d’utilisation dans Digital Rights Management (DRM). |
-| [Références API Primetime](/help/reference/api-references.md) | Fournit des informations détaillées sur les fonctions TVSDK, les structures de données et autres éléments de programmation. |
+| [Notes de mise à jour de Primetime](/help/release-notes/home.md) | Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus. |
+| [Aide sur la migration et les conversions de Primetime](/help/migration-guides/home.md) | Décrit le processus de conversion et de migration permettant de passer de la suite Primetime TVSDK existante à la suite de nouvelle génération. |
+| [Implémentation de référence](/help/android-reference-implementation/home.md) | Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
+| [Aide de l’Ad Insertion Primetime](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
+| [Références API Primetime](/help/reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
 | [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez des fichiers PDF de la documentation archivée. |
 
 ## Ressources utiles
@@ -35,6 +38,6 @@ Consultez pour en savoir plus sur la version [](tvsdk-3x-ios-prog/ios-3x-introdu
 
 * [Authentification Primetime](https://tve.helpdocsonline.com/home)
 
-* [Forums DRM d’Adobe Primetime](https://forums.adobe.com/community/adobe_access)
+* [Forums DRM Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
 * [Ressources pour les développeurs Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
