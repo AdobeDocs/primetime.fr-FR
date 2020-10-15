@@ -2,20 +2,20 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide de l’Ad Insertion dynamique Primetime
-user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
+user-guide-title: Aide sur Primetime Ad Insertion
+user-guide-description: Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '250'
+ht-degree: 9%
 
 ---
 
 
-# Aide pour les Ad Insertion dynamiques {#ad-insertion}
+# Primetime Ad Insertion Help {#ad-insertion}
 
-+ [Présentation des Ad Insertion dynamiques](home.md)
++ [Présentation de l’Ad Insertion Primetime](home.md)
 + Commencer avec l’Ad Insertion Primetime{#get-started}
    + [Présentation](get-started-ptai.md)
    + [Préparation à l’utilisation de l’Ad Insertion Primetime](setup-ptai.md)
@@ -24,7 +24,7 @@ ht-degree: 0%
    + [Utiliser l’insertion publicitaire dans les flux dynamiques/linéaires](ad-insertion-live-linear-stream.md)
    + [Utiliser l&#39;insertion publicitaire pour VOD](ad-insertion-vod.md)
    + [Configuration du suivi des publicités](set-up-ad-tracking.md)
-+ [Notes de mise à jour des Ad Insertion dynamiques](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
++ [Notes de mise à jour de l’Ad Insertion Primetime](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Outil de débogage du serveur Manifest](manifest-server-debugging-tool.md)
 
 <!-- + [Server Side Ad Insertion debugging dashboard](ssai-debugging-dashboard.md)-->
