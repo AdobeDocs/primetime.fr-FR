@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide du Digital Rights Management Primetime
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-title: Aide de Primetime Digital Rights Management
+user-guide-description: Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM).
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
 
 
-# Aide sur le Digital Rights Management {#drm}
+# Digital Rights Management Help {#drm}
 
 + [Présentation de DRM](home.md)
 + Guide d&#39;inscription de certificat {#certificate-enrollment-guide}
@@ -34,7 +34,7 @@ ht-degree: 0%
       + [Déploiement de certificats](certificate-enrollment-guide/deploy-certs/deploying-certs.md)
    + [Clés de stockage](certificate-enrollment-guide/storing-keys.md)
    + [Renouveler les certificats](certificate-enrollment-guide/renewing-certs.md)
-+ adobe primetime DRM SDK 5.3.1 {#drm-sdk-5-3-1}
++ Adobe Primetime DRM SDK 5.3.1 {#drm-sdk-5-3-1}
    + [SDK DRM Adobe Primetime - Présentation](drm-sdk-overview/overview.md)
    + [A propos de Adobe Primetime DRM](drm-sdk-overview/about-adobe-access.md)
    + [Principales fonctionnalités](drm-sdk-overview/key-features.md)
@@ -45,9 +45,9 @@ ht-degree: 0%
    + Composants DRM Adobe Primetime {#adobe-access-components}
       + [Présentation](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
       + [SDK DRM Adobe Primetime](drm-sdk-overview/adobe-access-components/drm-sdk.md)
-      + [adobe primetime DRM Server pour la diffusion en flux continu protégée](drm-sdk-overview/adobe-access-components/protected-streaming.md)
-      + [flash player Adobe](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
-      + [adobe air](drm-sdk-overview/adobe-access-components/adobe-air.md)
+      + [Adobe Primetime DRM Server pour la diffusion en flux continu protégée](drm-sdk-overview/adobe-access-components/protected-streaming.md)
+      + [Flash Player Adobe](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
+      + [Adobe AIR](drm-sdk-overview/adobe-access-components/adobe-air.md)
       + [Applications iOS et Android natives](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
    + [Déploiement de Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
    + Scénarios de déploiement supplémentaires {#additional-deployment-scenarios}
@@ -375,7 +375,7 @@ ht-degree: 0%
       + [Mise à jour du fichier de configuration global](aaxs-protected-streaming/updating-configuration-files/updating-global-configuration.md)
       + [Mise à jour du fichier de configuration du client](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
    + [Création d’un package de contenu](aaxs-protected-streaming/packaging-content.md)
-   + adobe access server pour utilitaires de diffusion en flux continu protégés {#aaxs-protected-streaming-utilities}
+   + Adobe Access Server pour utilitaires de diffusion en flux continu protégés {#aaxs-protected-streaming-utilities}
       + [Validation de configuration](aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)
       + [Paramètre de mot de passe](aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)
       + [Calculatrice de hachage SWF](aaxs-protected-streaming/aaxs-protected-streaming-utilities/swf-hash-calculator.md)
@@ -558,7 +558,7 @@ ht-degree: 0%
       + [Présentation de la mise en oeuvre des modèles d’utilisation](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
       + [Téléchargement en direct](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-download-to-own.md)
       + [Location/Vidéo à la demande](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-rental-vod.md)
-      + [abonnement](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-subscription.md)
+      + [Abonnement](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-subscription.md)
       + [Publicités financées](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-ad-funded.md)
    + Implémentation de l’enregistrement de domaine {#domain-registration}
       + [Mise en oeuvre de l’enregistrement des domaines](aaxs-reference-implementations/impl-domain-registration/impl-domain-registration.md)
