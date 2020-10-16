@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide sur la programmation Primetime
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-title: Aide à la programmation sur Primetime
+user-guide-description: Ce guide vous apprend à développer des applications et des lecteurs vidéo à l’aide de Java pour les appareils Android et d’Objective-C pour les appareils iOS.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
 
 
-# Aide sur la programmation Primetime {#programming}
+# Aide à la programmation sur Primetime {#programming}
 
 + [Présentation de la programmation](home.md)
 + TVSDK 3x pour Android {#tvsdk-3x-android-prog}
@@ -29,7 +29,7 @@ ht-degree: 0%
          + [Cycle de vie et états de l’objet MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-object-lifecycle-states.md)
          + [Méthodes MediaPlayerItem pour accéder aux informations MediaResource](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayeritem-accessing-mediaresource.md)
          + [Réutilisation ou suppression d’une instance MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-mediaplayer-reuse-or-remove.md)
-         + [inspect de la chronologie de la lecture](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
+         + [Inspect de la chronologie de la lecture](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-timeline-inspect-playback.md)
          + [Suspension et restauration de MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + Écoute des événements du lecteur Primetime {#listen-primetime-player-events}
          + [Présentation](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
@@ -128,13 +128,13 @@ ht-degree: 0%
          + [Config des méthodes de classe pour les balises](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-psdkconfig-methods.md)
          + [Classe de métadonnées minutées](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-timedmetadata-class.md)
          + [S’abonner à des balises personnalisées](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
-         + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
+         + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
          + [Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
       + Prise en charge des publicités VPAID 2.0 {#vpaid-ad-support}
          + [Présentation](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [Mise en oeuvre de l’intégration VPAID 2.0](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
       + [Mesures publicitaires de Moat](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
-      + ajouter des marqueurs publicitaires personnalisés {#add-custom-ad}
+      + Ajouter des marqueurs publicitaires personnalisés {#add-custom-ad}
          + [Présentation](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-add-custom.md)
          + [TimeRange, classe](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-timerange-class.md)
          + [Classes MediaPlayer et MediaResource](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-mediaplayer-mediaresource-classes.md)
@@ -231,7 +231,7 @@ ht-degree: 0%
       + [Config des méthodes de classe pour les balises](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-psdkconfig-methods.md)
       + [Classe de métadonnées minutées](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-timedmetadata-class.md)
       + [S’abonner à des balises personnalisées](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)
-      + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
+      + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
       + [Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
       + [Utiliser des métadonnées minutées](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-use.md)
    + Mettre à jour les règles de sélection publicitaire {#update-rules}
@@ -304,7 +304,7 @@ ht-degree: 0%
          + [Cycle de vie et états de l’objet MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-object-lifecycle-states.md)
          + [Méthodes MediaPlayerItem pour accéder aux informations MediaResource](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/r-psdk-android-2.7-mediaplayeritem-methods-for-accessing-mediaresource.md)
          + [Réutilisation ou suppression d’une instance MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
-         + [inspect de la chronologie de la lecture](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
+         + [Inspect de la chronologie de la lecture](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [Suspension et restauration de MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
       + Écoute des événements du lecteur Primetime   {#listen-primetime-player-events}
          + [Présentation](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
@@ -401,13 +401,13 @@ ht-degree: 0%
          + [Config des méthodes de classe pour les balises](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-psdkconfig-methods.md)
          + [Classe de métadonnées minutées](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/r-psdk-android-2.7-custom-tags-timedmetadata-class.md)
          + [S’abonner à des balises personnalisées](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
-         + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
+         + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
          + [Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
       + Prise en charge des publicités VPAID 2.0 {#vpaid-ad-support}
          + [Présentation](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [Mise en oeuvre de l’intégration VPAID 2.0](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
       + [Mesures publicitaires de Moat](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
-      + ajouter des marqueurs publicitaires personnalisés {#add-custom-markers}
+      + Ajouter des marqueurs publicitaires personnalisés {#add-custom-markers}
          + [Présentation](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/c-psdk-android-2.7-ad-markers-add-custom.md)
          + [TimeRange, classe](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-timerange-class.md)
          + [Classes MediaPlayer et MediaResource](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-mediaplayer-mediaresource-classes.md)
@@ -503,7 +503,7 @@ ht-degree: 0%
          + [Cycle de vie des objets MediaPlayer](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-object-lifecycle-states.md)
          + [Méthodes MediaPlayer pour l’accès aux informations MediaResource](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-mediaplayer-mediaresource.md)
          + [Réinitialiser, réutiliser ou supprimer une instance MediaPlayer](tvsdk-1.4-for-android/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/android-1.4-mediaplayer-reset-reuse-instance.md)
-         + [inspect de la chronologie de la lecture](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
+         + [Inspect de la chronologie de la lecture](tvsdk-1.4-for-android/mediaplayerobjects-working-with/android-1.4-timeline-inspect-playback.md)
       + [Balises ID3](tvsdk-1.4-for-android/notification-system/android-1.4-id3-metadata-retrieve.md)
       + [Mise en mémoire tampon](tvsdk-1.4-for-android/buffering-configuration/android-1.4-buffering-times-set.md)
       + [Instant le](tvsdk-1.4-for-android/buffering-configuration/instant-on/android-1.4-instant-on.md)
@@ -548,10 +548,10 @@ ht-degree: 0%
          + [Config des méthodes de classe pour les balises](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-psdkconfig.md)
          + [Classe de métadonnées minutées](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-timedmetadata.md)
          + [S’abonner à des balises personnalisées](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-subscribe.md)
-         + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
+         + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
          + [Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
          + [Utiliser des métadonnées minutées](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-use.md)
-      + ajouter des marqueurs publicitaires personnalisés {#ad-markers}
+      + Ajouter des marqueurs publicitaires personnalisés {#ad-markers}
          + [Présentation](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-add-custom.md)
          + [TimeRange, classe](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-class.md)
          + [Classes MediaPlayer et MediaResource](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-mediaplayer-mediaresource-classes.md)
@@ -685,7 +685,7 @@ ht-degree: 0%
       + [Config des méthodes de classe pour les balises](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-psdkconfig-methods.md)
       + [Classe de métadonnées minutées](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/r-psdk-ios-1.4-custom-tags-timedmetadata-class.md)
       + [S’abonner à des balises personnalisées](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md)
-      + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
+      + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
       + [Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
       + [Utiliser des métadonnées minutées](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-use.md)
    + Mettre à jour les règles de sélection publicitaire {#update-rules}
@@ -799,7 +799,7 @@ ht-degree: 0%
       + Réutilisation ou suppression d’une instance MediaPlayer {#reuse-or-remove-mediaplayer}
          + [Réinitialisation ou réutilisation d’une instance MediaPlayer](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-reset-reuse-instance.md)
          + [Publication d’une instance et de ressources MediaPlayer](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/mediaplayer-reuse-or-remove/t-psdk-dhls-1.4-mediaplayer-release-instance.md)
-      + [inspect de la chronologie de la lecture](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
+      + [Inspect de la chronologie de la lecture](tvsdk-1.4-for-desktop-hls/mediaplayerobjects-working-with/t-psdk-dhls-1.4-timeline-inspect-playback.md)
    + Mise en mémoire tampon {#buffering}
       + [Mise en mémoire tampon des stratégies de temps](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/c-psdk-dhls-1.4-buffering-policies.md)
       + [Définition des heures de mise en mémoire tampon](tvsdk-1.4-for-desktop-hls/buffering-configuration/buffering-policies/t-psdk-dhls-1.4-buffering-times-set.md)
@@ -831,14 +831,14 @@ ht-degree: 0%
          + [Classe de métadonnées minutées](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/r-psdk-dhls-1.4-custom-tags-timedmetadata-class.md)
          + [Notifications pour les balises de manifeste](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-notifications.md)
          + [S’abonner à des balises personnalisées](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-subscribe.md)
-         + [ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
+         + [Ajouter des écouteurs pour les notifications de métadonnées minutées](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
       + [Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
       + [Reprise publicitaire pour les annonces VAST et VMAP](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-fallback/c-psdk-dhls-1.4-ad-fallback.md)
       + Publicités personnalisées {#custom-ads}
          + [Configuration requise pour les publicités personnalisées](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
          + [Événements publicitaires personnalisés](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/r-psdk-dhls-1.4-custom-ad-events.md)
          + [Afficher des publicités VPAID linéaires dans une coupure publicitaire](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/t-psdk-dhls-1.4-display-linear-vpaid-ads.md)
-      + ajouter des marqueurs publicitaires personnalisés {#add-markers}
+      + Ajouter des marqueurs publicitaires personnalisés {#add-markers}
          + [Présentation](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/c-psdk-dhls-1.4-ad-markers-add-custom.md)
          + [TimeRange, classe](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerange-class.md)
          + [Classes MediaPlayer et MediaResource](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-mediaplayer-mediaresource-classes.md)
@@ -897,7 +897,7 @@ ht-degree: 0%
       + [Présentation](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-system.md)
       + [Contenu de la notification](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-content.md)
       + [Configuration de votre système de notification](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-setup.md)
-      + [ajouter la journalisation et le débogage en temps réel](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
+      + [Ajouter la journalisation et le débogage en temps réel](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
       + [Balises ID3](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)
       + [Suivi des avertissements AVE dans votre lecteur](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-track-ave-warnings-in-player.md)
    + Lecture et basculement {#playback-and-failover}
@@ -970,7 +970,7 @@ ht-degree: 0%
       + [Légendes](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-captions.md)
       + Publicités {#ads}
          + [Présentation des publicités](browser-tvsdk-2.4/getting-started/about-ads/c-psdk-browser-tvsdk-2.4-ads.md)
-         + [ajouter la publicité](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
+         + [Ajouter la publicité](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
       + [Digital Rights Management](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
       + [Mise en mémoire tampon](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-buffering.md)
       + [Mesures](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-metrics.md)
@@ -1019,8 +1019,8 @@ ht-degree: 0%
          + [Cycle de vie et états de l’objet MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-object-lifecycle-states.md)
          + [Attributs MediaPlayer pour accéder aux informations MediaResource](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
          + [Réutilisation ou suppression d’une instance MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
-         + [inspect de la chronologie de la lecture](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
-         + [ajouter des écouteurs pour TimelineUpdateEvent](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
+         + [Inspect de la chronologie de la lecture](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
+         + [Ajouter des écouteurs pour TimelineUpdateEvent](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
       + Utilisation de sous-titres fermés {#closed-captions}
          + [Présentation](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
          + [Contrôler la visibilité des sous-titres](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
@@ -1050,7 +1050,7 @@ ht-degree: 0%
          + [Classe de métadonnées minutées](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-custom-tags-timedmetadata-class.md)
          + [Notifications pour les balises de manifeste](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-manifest-tag-notifications.md)
          + [S’abonner à des balises publicitaires personnalisées](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-subscribe.md)
-         + [ajouter des écouteurs pour les notifications de métadonnées minutées](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
+         + [Ajouter des écouteurs pour les notifications de métadonnées minutées](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
       + Personnaliser les détecteurs d&#39;opportunités et les résolveurs de contenu {#customize}
          + [Présentation](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver.md)
          + [Générateurs d’opportunités et résolveurs de contenu](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver-about.md)
