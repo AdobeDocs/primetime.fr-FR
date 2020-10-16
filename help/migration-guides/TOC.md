@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide sur la migration Primetime
-user-guide-description: Explains the conversion and migration process to move from your existing Primetime TVSDK Suite to the next-generation suite.
+user-guide-title: Aide à la migration vers Primetime
+user-guide-description: Décrit le processus de conversion et de migration permettant de passer de la suite Primetime TVSDK existante à la suite de nouvelle génération.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 0%
+source-wordcount: '37'
+ht-degree: 64%
 
 ---
 
 
-# Aide sur la migration Primetime {#migration}
+# Aide à la migration vers Primetime {#migration}
 
 + [Présentation de l’aide sur la migration](home.md)
 + [TVSDK 1.4 à 2.5 pour Android (Java)](tvsdk-14-25-android.md)
