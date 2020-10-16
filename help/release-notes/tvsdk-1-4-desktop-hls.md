@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Le chiffrement AES basé sur des exemples est désormais pris en charge.
 
 * **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.4.0.1**
 
-   * ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
+   * Ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
    * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete. La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete.
    * La propriété playhead n’est plus nécessaire lors du suivi des publicités.
 
@@ -195,7 +195,7 @@ La bibliothèque Video Heartbeat (VHL) a été mise à jour vers la version 1.5.
 
 Ce problème a été résolu en suivant les changements de débit dans VideoAnalyticsTracker.
 
-* ajouté une nouvelle API, assetDuration, à PTVideoAnalyticsTrackingMetadata pour mettre à jour la durée des ressources pour les flux en direct/linéaires.
+* Ajouté une nouvelle API, assetDuration, à PTVideoAnalyticsTrackingMetadata pour mettre à jour la durée des ressources pour les flux en direct/linéaires.
 
 **Version 1.4.28** (848)
 
@@ -296,7 +296,7 @@ Les bibliothèques suivantes ont été mises à jour :
 
 Ce problème a été résolu en utilisant une fenêtre d’affichage à hauteur nulle pour remplir l’étape de lecture d’une publicité VPAID.
 
-* Zendesk #22110 - Analytics : ajouter un champ h:sc:ssl aux appels de suivi de pulsation
+* Zendesk #22110 - Analytics : Ajouter un champ h:sc:ssl aux appels de suivi de pulsation
 
 Les problèmes liés au protocole SSL ont été résolus et la bibliothèque VHL utilisée dans TVSDK a été mise à jour vers la dernière version.
 
@@ -557,7 +557,7 @@ Un blocage au cours de la lecture de certains contenus chiffrés a été corrig�
 
 * Zendesk #17499 - comment ne pas supprimer les midrolls après la surveillance mais supprimer les pré-péages du contenu frelaté
 
-ajouté un type à AdBreakTimelineItem (AdBreakTimelineItem.placementType) afin qu’AdPolicySelector puisse renvoyer une stratégie différente pour le contenu preroll, mid-roll et post-roll.
+Ajouté un type à AdBreakTimelineItem (AdBreakTimelineItem.placementType) afin qu’AdPolicySelector puisse renvoyer une stratégie différente pour le contenu preroll, mid-roll et post-roll.
 
 * Zendesk #17665 - Bandwidth Throttling
 
@@ -568,7 +568,7 @@ Le correctif consistait à supprimer la logique permettant de modifier la taille
 * Zendesk #17363 - Correction de la documentation README pour le lecteur de référence
 
    * Précisez les instructions de téléchargement et d’installation de playerglobal.swc.
-   * ajoutez les instructions pour mettre à jour la configuration du projet avec une version spécifique du lecteur Flash.
+   * Ajoutez les instructions pour mettre à jour la configuration du projet avec une version spécifique du lecteur Flash.
    * Mettez à jour la configuration du projet AdvertisingOverlay pour utiliser la version minimale du lecteur.
    * Mise à jour de la configuration de projet de base Reference pour utiliser la version 11.9 du lecteur spécifique
 
@@ -734,9 +734,6 @@ les types mime pour le format HLS étaient sensibles à la casse, ce n’était 
 * Zendesk #1024 - Fonction permettant de supprimer une publicité du flux via un manifeste
 * Zendesk #1423 - L’échec de lecture HLS verrouille le Flash Player (sans qu’aucune erreur ne soit signalée)
 * Zendesk #1674 - ClosedCaption Ne s’affiche pas, la légende 708 correcte s’affiche lorsque les codes ETX 0x03 sont manquants.
-
-</p>
-</details>
 
 ## Problèmes connus {#known-issues}
 
