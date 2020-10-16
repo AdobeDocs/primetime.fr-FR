@@ -2,13 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Aide sur l’implémentation des références Primetime
-user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
+user-guide-title: Aide à l’implémentation des références Primetime
+user-guide-description: Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 
