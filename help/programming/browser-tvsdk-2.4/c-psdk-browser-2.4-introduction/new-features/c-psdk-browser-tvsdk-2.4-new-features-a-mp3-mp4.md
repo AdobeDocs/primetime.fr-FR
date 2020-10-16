@@ -5,7 +5,10 @@ seo-title: Fonctionnalités MP3 et MP4 prises en charge
 title: Fonctionnalités MP3 et MP4 prises en charge
 uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications.
 * [Fonctionnalités audio MP3 - Lecture principale](#core-playback)
 * [Fonctionnalités audio MP4 - Lecture principale](#mp4-audio-features)
-* [Fonctionnalités vidéo MP4 - Insertion d’annonce principale](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
+* [Fonctionnalités vidéo MP4 - Ad Insertion principal](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
 
 >[!TIP]
 >
@@ -31,7 +34,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 ## Fonctionnalités audio MP4 {#mp4-audio-features}
 
-### Lecture principale
+### Lecture principale {#mp4-core-playback}
 
 | Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -43,5 +46,5 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 | Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Insertion d&#39;annonce | MP4 VOD | Pré-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Insertion d&#39;annonce | MP4 VOD | Post-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | MP4 VOD | Pré-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | MP4 VOD | Post-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
