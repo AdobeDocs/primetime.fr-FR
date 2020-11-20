@@ -37,8 +37,7 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
    >
    >Par exemple :
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
