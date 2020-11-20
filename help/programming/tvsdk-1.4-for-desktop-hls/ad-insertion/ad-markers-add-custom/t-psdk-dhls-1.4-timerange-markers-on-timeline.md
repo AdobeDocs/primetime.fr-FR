@@ -5,7 +5,10 @@ seo-title: Placer des marqueurs publicitaires de la plage de temps sur le plan d
 title: Placer des marqueurs publicitaires de la plage de temps sur le plan de montage chronologique
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
@@ -26,10 +29,9 @@ Cet exemple montre la méthode recommandée pour inclure des spécifications Tim
 
 * On suppose que l’élément du lecteur multimédia en cours de chargement pointe vers une ressource VOD. TVSDK le vérifie chaque fois que votre application tente de charger une ressource multimédia dont les métadonnées contiennent `TimeRange` des spécifications qui peuvent être utilisées uniquement dans le contexte de la fonction de marques publicitaires personnalisées. Si la ressource sous-jacente n’est pas de type VOD, la bibliothèque TVSDK renvoie une exception.
 
-* Lorsqu’il s’agit de marques publicitaires personnalisées, TVSDK désactive d’autres mécanismes de résolution de publicités (par le biais de la prise de décision publicitaire Adobe Primetime (précédemment connue sous le nom d’Auditude) ou d’un autre système d’approvisionnement publicitaire). Vous pouvez utiliser l’un des divers modules de résolution d’annonces fournis par TVSDK ou le mécanisme de balisage publicitaire personnalisé. Lors de l’utilisation de l’API des marqueurs publicitaires personnalisés, le contenu de la publicité est considéré comme déjà résolu et placé sur la chronologie.
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
+* Lorsqu’il s’agit de marques publicitaires personnalisées, TVSDK désactive d’autres mécanismes de résolution de publicités (par le biais de la prise de décision d’annonce Adobe Primetime (précédemment connue sous le nom d’Auditude) ou d’un autre système d’approvisionnement d’annonce). Vous pouvez utiliser l’un des divers modules de résolution d’annonces fournis par TVSDK ou le mécanisme de balisage publicitaire personnalisé. Lors de l’utilisation de l’API des marqueurs publicitaires personnalisés, le contenu de la publicité est considéré comme déjà résolu et placé sur la chronologie.
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 Le fragment de code suivant fournit un exemple simple où un ensemble de trois `TimeRange` spécifications est placé sur le plan de montage chronologique en tant que marques publicitaires personnalisées.
 
