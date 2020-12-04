@@ -6,11 +6,14 @@ title: Mise en oeuvre de la gestion des interruptions de service
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre de la gestion des interruptions de service{#implement-blackout-handling}
+# Mise en oeuvre de la gestion du blocage{#implement-blackout-handling}
 
 TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
 
@@ -75,7 +78,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }; 
    ```
 
-1. Gérez `TimedMetadata` les objets lorsque `MediaPlayer` le temps s’exécute.
+1. Gérez les objets `TimedMetadata` lorsque l&#39;heure `MediaPlayer` s&#39;exécute.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
