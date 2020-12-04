@@ -5,12 +5,15 @@ seo-title: Mise en oeuvre d’un outil personnalisé de résolution de contenu/d
 title: Mise en oeuvre d’un outil personnalisé de résolution de contenu/d’opportunités
 uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre d’un outil personnalisé de résolution de contenu/d’opportunités{#implement-a-custom-opportunity-content-resolver}
+# Implémenter un outil personnalisé de résolution de contenu/opportunité{#implement-a-custom-opportunity-content-resolver}
 
 Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par défaut.
 
@@ -18,13 +21,13 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Développez un outil de résolution d’annonces personnalisé en étendant la classe `PTContentResolver` abstraite.
+1. Développez un outil de résolution d&#39;annonces personnalisé en étendant la classe abstraite `PTContentResolver`.
 
    `PTContentResolver` est une interface qui doit être implémentée par une classe de résolveur de contenu. Une classe abstraite portant le même nom est également disponible et traite automatiquement la configuration (en obtenant le délégué).
 
    >[!TIP]
    >
-   >`PTContentResolver` est exposée à travers la `PTDefaultMediaPlayerClientFactory` classe. Les clients peuvent enregistrer un nouveau résolveur de contenu en étendant la classe `PTContentResolver` abstraite. Par défaut, et à moins qu’il ne soit spécifiquement supprimé, un `PTDefaultAdContentResolver` est enregistré dans le `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` est exposée à travers la  `PTDefaultMediaPlayerClientFactory` classe. Les clients peuvent enregistrer un nouveau résolveur de contenu en étendant la classe abstraite `PTContentResolver`. Par défaut, et à moins d&#39;être spécifiquement supprimé, un `PTDefaultAdContentResolver` est enregistré dans le `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
    @end
    ```
 
-1. Mettez en oeuvre `shouldResolveOpportunity` et renvoyez `YES` s’il doit gérer la réception `PTPlacementOpportunity`.
-1. Mise en oeuvre `resolvePlacementOpportunity`, qui début le chargement du ou des publicités de remplacement.
-1. Une fois les publicités chargées, préparez une `PTTimeline` avec les informations sur le contenu à insérer.
+1. Implémentez `shouldResolveOpportunity` et renvoyez `YES` s&#39;il doit gérer le `PTPlacementOpportunity` reçu.
+1. Implémentez `resolvePlacementOpportunity`, qui début le chargement du contenu ou des publicités alternatif.
+1. Une fois les publicités chargées, préparez un `PTTimeline` contenant les informations sur le contenu à insérer.
 
        Voici quelques informations utiles sur les calendriers :
    
-   * Il peut y avoir plusieurs `PTAdBreak`types de pré-roulis, mid-roll et post-roll.
+   * Il peut y avoir plusieurs `PTAdBreak`s de types pre-roll, mid-roll et post-roll.
 
       * Un `PTAdBreak` comporte les éléments suivants :
 
-         * A `CMTimeRange` avec l’heure et la durée de début de la pause.
+         * `CMTimeRange` avec l&#39;heure et la durée de début de la coupure.
 
             Il s’agit de la propriété range de `PTAdBreak`.
 
-         * `NSArray` de `PTAd`s.
+         * `NSArray` de  `PTAd`s.
 
-            Il est défini comme propriété publicitaire de `PTAdBreak`.
-   * Un `PTAd` représente la publicité et chacun `PTAd` possède les éléments suivants :
+            Il s’agit de la propriété ads de `PTAdBreak`.
+   * Un `PTAd` représente la publicité et chaque `PTAd` possède les éléments suivants :
 
-      * Un `PTAdHLSAsset` jeu en tant que propriété principale de l’élément publicitaire.
-      * Il peut s’agir de plusieurs `PTAdAsset` instances sous la forme de publicités cliquables ou de bannières publicitaires.
+      * `PTAdHLSAsset` est défini comme la Principale propriété de l&#39;actif de la publicité.
+      * Vous pouvez créer plusieurs instances `PTAdAsset` en tant que publicités ou bannières cliquables.
+
    Par exemple :
 
    ```
@@ -102,7 +106,7 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Appel `didFinishResolvingPlacementOpportunity`, qui fournit le `PTTimeline`.
+1. Appelez `didFinishResolvingPlacementOpportunity`, qui fournit `PTTimeline`.
 1. Enregistrez votre outil de résolution de contenu/publicités personnalisé dans la fabrique de lecteur de médias par défaut en appelant `registerContentResolver`.
 
    ```
