@@ -6,13 +6,16 @@ title: Configuration du mode de démonstration du modèle d’utilisation
 uuid: f818c7fc-e88f-4fa4-926e-08a1337b28d3
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
 
-# Configuration du mode de démonstration du modèle d’utilisation{#configure-usage-model-demo-mode}
+# Configurer le mode de démonstration du modèle d’utilisation {#configure-usage-model-demo-mode}
 
-Avant que le serveur d’implémentation de référence puisse émettre des licences pour la démonstration du modèle d’utilisation, vous devez configurer le serveur pour spécifier comment les licences sont générées pour chacun des quatre modèles d’utilisation. Cela signifie que vous devez spécifier une stratégie DRM pour chaque modèle d&#39;utilisation. L’implémentation de référence comprend les exemples de stratégies DRM suivants dans le [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] répertoire :
+Avant que le serveur d’implémentation de référence puisse émettre des licences pour la démonstration du modèle d’utilisation, vous devez configurer le serveur pour spécifier comment les licences sont générées pour chacun des quatre modèles d’utilisation. Cela signifie que vous devez spécifier une stratégie DRM pour chaque modèle d&#39;utilisation. L&#39;implémentation de référence comprend les exemples de stratégies DRM suivants dans le répertoire [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] :
 
 * `dto-policy.pol` - (Téléchargement par site)
 * `vod-policy.pol` - (Location/Vidéo à la demande)
@@ -36,4 +39,4 @@ Avant que le serveur d’implémentation de référence puisse émettre des lice
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. Copiez les exemples de fichiers de stratégie dans le répertoire que vous spécifiez dans la `config.resourcesDirectory` propriété de [!DNL flashaccess-refimpl.properties].
+1. Copiez vos exemples de fichiers de stratégie dans le répertoire que vous spécifiez dans la propriété `config.resourcesDirectory` de [!DNL flashaccess-refimpl.properties].
