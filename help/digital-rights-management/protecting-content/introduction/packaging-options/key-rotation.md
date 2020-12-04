@@ -6,11 +6,14 @@ title: Rotation clé
 uuid: 6ac3b828-2cd1-42df-b9ee-4daa8e553d5e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# Rotation clé {#key-rotation}
+# Rotation des clés {#key-rotation}
 
 Vous pouvez sélectionner les options de chiffrement suivantes lorsque vous créez un pack. Cependant, vous ne pouvez pas modifier les options de chiffrement lors de l’acquisition de la licence :
 
@@ -22,4 +25,4 @@ L’implémentation de Packager peut contrôler la clé de chiffrement de conten
 
 >[!NOTE]
 >
->Le contenu assemblé à l’aide de la rotation clé ne peut être lu que sur les clients DRM Primetime version 3.0 ou ultérieure. Il se peut que les clients plus âgés aient besoin d’effectuer une mise à niveau pour lire ce contenu.
+>Le contenu assemblé à l’aide de la rotation clé ne peut être lu que sur les clients DRM Primetime version 3.0 ou ultérieure. Il se peut que les clients plus âgés aient besoin d’effectuer la mise à niveau pour lire ce contenu.
