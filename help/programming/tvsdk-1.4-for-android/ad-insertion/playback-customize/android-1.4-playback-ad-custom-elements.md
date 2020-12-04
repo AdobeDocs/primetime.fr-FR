@@ -6,6 +6,9 @@ title: Eléments d’API pour la lecture de publicités
 uuid: 6d0ab181-9c50-431f-97bf-32e6684a7df1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Les éléments d’API suivants sont utiles pour personnaliser la lecture :
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
-   <td colname="col2">Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de <span class="codeph"> setAdBreakAsWatched</span> et <span class="codeph"> getAdBreakAsWatched</span>. </td> 
+   <td colname="col2">Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle en utilisant <span class="codeph"> setAdBreakAsWatched</span> et <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
@@ -51,11 +54,11 @@ Les éléments d’API suivants sont utiles pour personnaliser la lecture :
      <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span>. <p>Il s’agit de l’heure locale de lecture, à l’exclusion des pauses publicitaires importées. </p> </li> 
      <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> searchToLocal</span>. <p>Ici, la recherche se produit par rapport à une heure locale du flux. </p> </li> 
      <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>La position virtuelle sur la chronologie est convertie en position locale. </p> </li> 
-    </ul> <p>Important :  <span class="codeph"> getLocalTime</span> dans <span class="codeph"> MediaPlayer</span> renvoie l’heure actuelle par rapport au contenu d’origine, sans publicité épissée de manière dynamique. <span class="codeph"> getLocalTime</span> dans <span class="codeph"> AdBreak</span> renvoie l’heure de début de la coupure par rapport au contenu d’origine. </p> </td> 
+    </ul> <p>Important :  <span class="codeph"> getLocalTime</span> dans <span class="codeph"> MediaPlayer</span> renvoie l’heure actuelle par rapport au contenu d’origine, sans publicités épissées dynamiquement. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakdown renvoie l’heure de début de la coupure par rapport au contenu d’origine. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> isWatched</span> , propriété. Indique si le lecteur a regardé la publicité. </td> 
+   <td colname="col2"><span class="codeph"> </span> isWatchedproperty. Indique si le lecteur a regardé la publicité. </td> 
   </tr> 
  </tbody> 
 </table>
