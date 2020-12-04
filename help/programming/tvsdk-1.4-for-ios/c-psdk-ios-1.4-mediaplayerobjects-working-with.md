@@ -6,6 +6,9 @@ title: Utilisation d’objets MediaPlayer
 uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ L’objet PTMediaPlayer représente votre lecteur multimédia. Un objet PTMediaP
 
 ## A propos de la classe MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-Une fois qu’une ressource multimédia a été chargée, TVSDK crée une instance de la `PTMediaPlayerItem` classe pour fournir l’accès à cette ressource.
+Une fois qu’une ressource multimédia a été chargée, TVSDK crée une instance de la classe `PTMediaPlayerItem` pour fournir l’accès à cette ressource.
 
-Le `PTMediaPlayer` résout la ressource média, charge le fichier manifeste associé et analyse le manifeste. Il s&#39;agit de la partie asynchrone du processus de chargement des ressources. L&#39; `PTMediaPlayerItem` instance est générée une fois la ressource résolue, et cette instance est une version résolue d&#39;une ressource média. TVSDK permet d’accéder à l’ `PTMediaPlayerItem` instance nouvellement créée par le biais `PTMediaPlayer.currentItem`.
+`PTMediaPlayer` résout la ressource média, charge le fichier manifeste associé et analyse le manifeste. Il s&#39;agit de la partie asynchrone du processus de chargement des ressources. L&#39;instance `PTMediaPlayerItem` est générée une fois la ressource résolue, et cette instance est une version résolue d&#39;une ressource média. TVSDK permet d’accéder à l’instance `PTMediaPlayerItem` nouvellement créée par `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
@@ -26,9 +29,9 @@ Le `PTMediaPlayer` résout la ressource média, charge le fichier manifeste asso
 
 ## Cycle de vie des objets MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-Depuis le moment où vous créez l’ `PTMediaPlayer` instance jusqu’au moment où vous la terminez (réutilisez ou supprimez), cette instance effectue une série de transitions d’un état à l’autre.
+Depuis le moment où vous créez l&#39;instance `PTMediaPlayer` jusqu&#39;au moment où vous l&#39;arrêtez (réutilisez ou supprimez), cette instance complète une série de transitions d&#39;un état à l&#39;autre.
 
-Certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, l’appel `play` à l’entrée `PTMediaPlayerStatusCreated` n’est pas autorisé. Vous ne pouvez appeler cet état qu’une fois que le lecteur a atteint l’ `PTMediaPlayerStatusReady` état.
+Certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, l&#39;appel de `play` dans `PTMediaPlayerStatusCreated` n&#39;est pas autorisé. Vous ne pouvez appeler cet état qu&#39;une fois que le lecteur a atteint l&#39;état `PTMediaPlayerStatusReady`.
 
 Pour utiliser des états :
 
@@ -56,7 +59,7 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>Votre application appelle <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>et le lecteur multimédia est en cours de chargement. </p> </td> 
+   <td colname="col2"> <p>Votre application appelle <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span> et le lecteur multimédia est en cours de chargement. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
@@ -68,7 +71,7 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPlaying</span> </p> </td> 
-   <td colname="col2"> <p>Votre application a appelé <span class="codeph"> play</span>, donc TVSDK essaie de lire la vidéo. Une mise en mémoire tampon peut se produire avant la lecture de la vidéo. </p> </td> 
+   <td colname="col2"> <p>Votre application a appelé <span class="codeph"> play</span>, de sorte que TVSDK tente de lire la vidéo. Une mise en mémoire tampon peut se produire avant la lecture de la vidéo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
