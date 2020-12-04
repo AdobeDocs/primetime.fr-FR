@@ -6,6 +6,9 @@ title: Mise en oeuvre de l’intégration VPAID 2.0
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +19,7 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire perso
 
 Pour ajouter la prise en charge de VPAID 2.0 :
 
-1. Ajouter la vue publicitaire personnalisée à l’interface du lecteur lorsque celui-ci est à l’état PRÉPARÉ.
+1. Ajoutez la vue publicitaire personnalisée à l’interface du lecteur lorsque celui-ci est à l’état PRÉPARÉ.
 
    ```java
    ... 
@@ -37,7 +40,7 @@ Pour ajouter la prise en charge de VPAID 2.0 :
 
    >[!IMPORTANT]
    >
-   >Dans un flux de travail VPAID 2.0, pour les vues publicitaires personnalisées, il est très important de conserver votre `CustomAdView` instance dans `AdBreak` les débuts (événement `AD_BREAK_START`) et `AdBreak` se termine (événement `AD_BREAK_COMPLETE`), du moment où vous créez la vue publicitaire personnalisée au moment où vous en disposez. En d’autres termes, ne créez pas de vue publicitaire personnalisée sur chaque début de coupure publicitaire et supprimez-la à chaque coupure publicitaire terminée.
+   >Dans un flux de travail VPAID 2.0, pour les vues publicitaires personnalisées, il est très important de conserver votre instance `CustomAdView` sur les débuts `AdBreak` (événement `AD_BREAK_START`) et `AdBreak` terminés (événement `AD_BREAK_COMPLETE`), du moment où vous créez la vue publicitaire personnalisée jusqu&#39;au moment où vous en disposez. En d’autres termes, ne créez pas de vue publicitaire personnalisée sur chaque début de coupure publicitaire et supprimez-la à chaque coupure publicitaire terminée.
    >
    >
    >En outre, vous ne devez créer votre vue publicitaire personnalisée que lorsque votre lecteur est à l’état PRÉPARÉ,
@@ -54,7 +57,7 @@ Pour ajouter la prise en charge de VPAID 2.0 :
    >} 
    >```
    >
-   >Enfin, avant de disposer de votre vue publicitaire personnalisée, vous devez la supprimer de la `FrameLayout`. Par exemple :
+   >Enfin, avant de disposer de votre vue publicitaire personnalisée, vous devez la supprimer du `FrameLayout`. Par exemple :
    >
    >
    ```
