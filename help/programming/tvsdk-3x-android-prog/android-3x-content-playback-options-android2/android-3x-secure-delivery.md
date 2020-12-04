@@ -5,11 +5,14 @@ seo-title: Diffusion sécurisée via HTTPS
 title: Diffusion sécurisée via HTTPS
 translation-type: tm+mt
 source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
 
-# Diffusion sécurisée via HTTPS {#secure-delivery-https}
+# Sécuriser la Diffusion via HTTPS {#secure-delivery-https}
 
 Adobe Primetime TVSDK prend en charge la diffusion HTTPS pour tous les appels provenant de TVSDK, notamment :
 
@@ -21,7 +24,7 @@ Adobe Primetime TVSDK prend en charge la diffusion HTTPS pour tous les appels pr
 
 Pour utiliser cette fonctionnalité, assurez-vous que les serveurs configurés pour répondre aux demandes ci-dessus prennent en charge HTTPS.
 
-Ce nouveau comportement n’est pas activé par défaut. Utilisez ce qui suit pour activer la diffusion sécurisée avant d’appeler à `MediaPlayer.replaceCurrentResource()`
+Ce nouveau comportement n’est pas activé par défaut. Utilisez ce qui suit pour activer la diffusion sécurisée avant d&#39;appeler `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);
