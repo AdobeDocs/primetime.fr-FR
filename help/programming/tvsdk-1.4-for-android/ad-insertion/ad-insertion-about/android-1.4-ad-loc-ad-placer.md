@@ -6,15 +6,18 @@ title: Insertion et placement de publicités
 uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 
-# Insertion et placement de publicités{#ad-insertion-and-placement}
+# Insertion et emplacement des publicités {#ad-insertion-and-placement}
 
 Il existe plusieurs méthodes pour déterminer l&#39;insertion et l&#39;emplacement des publicités.
 
-## Insertion publicitaire {#section_1F7581B987704E318E064082190E8243}
+## Insertion d&#39;annonce {#section_1F7581B987704E318E064082190E8243}
 
 Voici un aperçu du processus utilisé pour déterminer l&#39;insertion publicitaire :
 
