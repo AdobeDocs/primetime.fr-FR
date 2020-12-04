@@ -30,20 +30,20 @@ L’acquisition de licence anonyme ne nécessite pas l’exécution de la base d
 
 Pour exécuter le serveur de licences, vous devez installer et configurer MySQL :
 
-1. Sur le DVD, accédez au [!DNL Third Party\MySQL\Installer\5.1] dossier et début du programme d’installation.
+1. Sur le DVD, accédez au dossier [!DNL Third Party\MySQL\Installer\5.1] et début le programme d’installation.
 1. Exécutez l’installation de MySQL.
-1. Sélectionnez **[!UICONTROL Configure MySQL Server Now]** pour début l&#39;assistant de configuration.
+1. Sélectionnez **[!UICONTROL Configure MySQL Server Now]** pour début à l&#39;assistant de configuration.
 1. Jusqu’au cinquième écran, utilisez les paramètres par défaut ou sélectionnez des paramètres spécifiques pour votre test.
 1. Dans le cinquième écran, sélectionnez **[!UICONTROL Online Transaction Processing (OLTP)]** ou **[!UICONTROL Manual Setting]** et entrez le nombre maximal de connexions autorisées.
 1. Notez le mot de passe racine.
 1. Pour réinstaller MySQL, si vous devez début le serveur ultérieurement, procédez comme suit :
-   1. Supprimez le lecteur *système :* dossier.
+   1. Supprimez le dossier *lecteur système:*.
 
       Ce dossier se trouve dans [!DNL \Documents and Settings\All Users\Application Data\MySQL].
    1. Supprimez l’ancien dossier d’installation de MySQL.
 
-      Par exemple, *system drive:*, qui se trouve dans [!DNL \Program Files\MySQL\MySQL Server 5.1].
-1. Pour installer MySQL JDBC Driver 5.1.7, copiez le [!DNL mysql-connector-java-5.1.7-bin.jar] fichier situé dans le [!DNL Third Party\MySQL\Installer\5.1] dossier du DVD dans le répertoire [!DNL ...\Tomcat6.0\lib] du serveur Tomcat.
+      Par exemple, *lecteur système:*, situé dans [!DNL \Program Files\MySQL\MySQL Server 5.1].
+1. Pour installer MySQL JDBC Driver 5.1.7, copiez le fichier [!DNL mysql-connector-java-5.1.7-bin.jar] dans le dossier [!DNL Third Party\MySQL\Installer\5.1] du DVD dans le répertoire [!DNL ...\Tomcat6.0\lib] du serveur Tomcat.
 
    >[!NOTE]
    >
