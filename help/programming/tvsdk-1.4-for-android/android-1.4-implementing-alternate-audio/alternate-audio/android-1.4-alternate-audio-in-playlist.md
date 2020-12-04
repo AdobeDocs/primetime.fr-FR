@@ -6,11 +6,14 @@ title: Autres pistes audio de la liste de lecture
 uuid: 56720bc8-795d-4a12-ae40-2095d6392666
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
 
-# Autres pistes audio de la liste de lecture{#alternate-audio-tracks-in-the-playlist}
+# Autres pistes audio dans la liste de lecture{#alternate-audio-tracks-in-the-playlist}
 
 La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez souhaiter ajouter différentes langues à votre contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son périphérique pendant la lecture du contenu.
 
@@ -20,7 +23,7 @@ Les autres pistes audio, ou les fichiers audio à liaison tardive, permettent au
 >
 >Pour que l’audio alternatif soit mélangé à la piste vidéo du média principal, les horodatages de la piste alternative doivent correspondre aux horodatages de l’audio dans la piste principale.
 
-La piste audio principale est incluse dans la collection de pistes audio avec le `default` libellé. Les métadonnées des autres flux audio sont incluses dans la liste de lecture dans les `#EXT-X-MEDIA` balises contenant `TYPE=AUDIO`.
+La piste audio principale est incluse dans la collection de pistes audio avec le libellé `default`. Les métadonnées des autres flux audio sont incluses dans la liste de lecture des balises `#EXT-X-MEDIA` avec `TYPE=AUDIO`.
 
 Par exemple, un manifeste M3U8 spécifiant plusieurs flux audio alternatifs peut ressembler à ceci :
 
