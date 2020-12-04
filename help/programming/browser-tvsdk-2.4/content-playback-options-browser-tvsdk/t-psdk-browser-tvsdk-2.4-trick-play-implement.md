@@ -6,6 +6,9 @@ title: Mise en oeuvre rapide de l’avance et du rembobinage
 uuid: c1992757-d067-4c11-8d08-fec09099476f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '528'
+ht-degree: 0%
 
 ---
 
@@ -19,15 +22,16 @@ Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers
 >* Le mode de lecture des images par bandes est pris en charge uniquement pour le contenu VOD MPEG et HLS.
 >* Le mode de lecture de la vidéo n’est pas pris en charge pour les flux en direct ou les publicités.
 >* Lorsque vous passez du contenu principal à une publicité, le navigateur TVSDK quitte le mode de lecture des astuces.
+
 >
 
 
 
 Pour changer de vitesse, vous devez définir une valeur.
 
-1. Passez du mode de lecture normal (1x) au mode de lecture par astuces en définissant le taux sur le `MediaPlayer` à une valeur autorisée.
+1. Passez du mode de lecture normal (1x) au mode de lecture fictive en définissant le taux sur `MediaPlayer` à une valeur autorisée.
 
-   * La `MediaPlayerItem` classe définit les taux de lecture autorisés.
+   * La classe `MediaPlayerItem` définit les taux de lecture autorisés.
    * Le navigateur TVSDK sélectionne le taux autorisé le plus proche si le taux spécifié n’est pas autorisé.
 
       L’exemple de fonction suivant définit le taux :
@@ -52,7 +56,7 @@ Pour changer de vitesse, vous devez définir une valeur.
 
        Le navigateur TVSDK distribue les événements suivants liés à la lecture de l’astuce :
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` lorsque la `rate` valeur change.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` lorsque la  `rate` valeur change.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` lorsque la lecture reprend au rythme sélectionné.
 
@@ -73,8 +77,8 @@ Utilisez les éléments d’API suivants pour modifier les taux de lecture :
    |---|---|
    | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0 | Bascule en mode avance rapide avec le multiplicateur spécifié plus rapide que la normale (par exemple, 4 fois plus rapide que la normale) |
    | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 | Bascule en mode de rembobinage rapide |
-   | 1.0 | Bascule en mode de lecture normal (appeler `play` revient à définir la propriété rate sur 1,0) |
-   | 0.0 | Interruptions (l’appel `pause` est identique à la définition de la propriété rate sur 0,0) |
+   | 1,0 | Bascule en mode de lecture normal (appeler `play` revient à définir la propriété rate sur 1.0) |
+   | 0,0 | Interruptions (appeler `pause` revient à définir la propriété rate sur 0,0) |
 
 ## Limites et comportement pour le jeu vidéo {#limitations-and-behavior-trick-play}
 
