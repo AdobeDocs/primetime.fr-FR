@@ -6,15 +6,18 @@ title: Mise en oeuvre d’un générateur d’opportunités personnalisé
 uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
 
-# Mise en oeuvre d’un générateur d’opportunités personnalisé {#implement-a-custom-opportunity-generator}
+# Implémenter un générateur d&#39;opportunités personnalisé {#implement-a-custom-opportunity-generator}
 
 Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en implémentant la classe OpportunityGenerator.
 
-1. Mettez en oeuvre votre personnalisation `ContentFactory` en implémentant l’ `ContentFactory` interface et en remplaçant `retrieveGenerators`.
+1. Mettez en oeuvre votre `ContentFactory` personnalisé en implémentant l&#39;interface `ContentFactory` et en remplaçant `retrieveGenerators`.
 
    Par exemple :
 
@@ -30,7 +33,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
    }
    ```
 
-1. Enregistrez le `ContentFactory` au `MediaPlayer`.
+1. Enregistrez le `ContentFactory` dans le `MediaPlayer`.
 
    Par exemple :
 
@@ -47,14 +50,14 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
    itemLoader.load(resource, id, config);
    ```
 
-1. Créez une classe de générateur d&#39;opportunités personnalisée qui implémente la `OpportunityGenerator` classe.
+1. Créez une classe de générateur d&#39;opportunités personnalisée qui implémente la classe `OpportunityGenerator`.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Dans le générateur d’opportunités personnalisé, remplacez `doConfigure`, `doUpdate` et `doCleanup`:
+   1. Dans le générateur d’opportunités personnalisé, remplacez `doConfigure`, `doUpdate` et `doCleanup` :
 
       ```java
       @Override 
@@ -75,7 +78,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Pour chaque `TimedMetadata` ou groupe de `TimedMetadata`clients, créez une opportunité avec les attributs suivants :
+   1. Pour chaque `TimedMetadata` ou groupe de `TimedMetadata`, créez une opportunité avec les attributs suivants :
 
       ```java
       Opportunity( 
@@ -86,7 +89,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
       ); 
       ```
 
-   1. Pour chaque opportunité créée, faites appel `resolve` au `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Pour chaque opportunité créée, appelez `resolve` sur le `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
