@@ -5,7 +5,10 @@ seo-title: Supprimer des plages
 title: Supprimer des plages
 uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Vous pouvez supprimer de la chronologie les plages de temps comprises entre le d
 
 >[!TIP]
 >
->Pour supprimer uniquement certaines plages du contenu, créez une `CustomRangeMetadata` instance et spécifiez le type comme une `DELETE` opération avec les plages personnalisées définies.
+>Pour supprimer uniquement certaines plages du contenu, créez une instance `CustomRangeMetadata` et spécifiez le type en tant qu&#39;opération `DELETE` avec les plages personnalisées définies.
 
 Le mappage publicitaire doit être utilisé comme défini par le serveur publicitaire.
 
-1. Pour supprimer des plages à l’aide d’une publicité de prise de décision publicitaire Adobe Primetime, procédez comme suit :
+1. Pour supprimer des plages avec une annonce de décision publicitaire Adobe Primetime :
 
    ```
    {   
