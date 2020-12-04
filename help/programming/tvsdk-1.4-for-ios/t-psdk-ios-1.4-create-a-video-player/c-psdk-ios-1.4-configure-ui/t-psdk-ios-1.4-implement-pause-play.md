@@ -5,12 +5,15 @@ seo-title: Mise en oeuvre d’un bouton Lecture/Pause
 title: Mise en oeuvre d’un bouton Lecture/Pause
 uuid: eccdce4b-0114-4389-b5ee-74fe62d38ed8
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre d’un bouton Lecture/Pause{#implement-a-play-pause-button}
+# Mise en oeuvre d’un bouton de lecture/pause{#implement-a-play-pause-button}
 
 Vous pouvez configurer des boutons qui appellent les méthodes TVSDK pour suspendre et lire le média.
 
