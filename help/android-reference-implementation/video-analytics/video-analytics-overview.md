@@ -6,15 +6,18 @@ title: Présentation
 uuid: 19ef7bf6-951b-44c5-b899-d14f6c8047a2
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
 Vous pouvez facilement effectuer un suivi vidéo en intégrant une application basée sur TVSDK à votre compte Adobe Analytics.
 
-L’intégration d’Adobe Primetime TVSDK à Adobe Analytics vous permet de suivre les données vidéo dans vos applications Android. Cette intégration entre TVSDK est désignée ici sous le nom d’analyse ** vidéo.
+L’intégration de Adobe Primetime TVSDK avec Adobe Analytics vous permet de suivre les données vidéo dans vos applications Android. Cette intégration entre TVSDK est appelée *analyse vidéo*.
 
 Cette section du guide de mise en oeuvre des références résume la manière dont les analyses vidéo ont été implémentées dans la mise en oeuvre des références Android de Primetime et décrit comment vous pouvez activer et configurer les analyses vidéo dans votre lecteur basé sur TVSDK en fonction de l’implémentation des références.
 
