@@ -6,17 +6,20 @@ title: Personnalisation de la lecture avec des publicités
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#customize-playback-with-ads-overview}
+# Aperçu {#customize-playback-with-ads-overview}
 
 Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
 
 >[!TIP]
 >
->Vous pouvez remplacer le comportement par défaut en utilisant la `AdBreakPolicySelector` classe.
+>Vous pouvez remplacer le comportement par défaut en utilisant la classe `AdBreakPolicySelector`.
 
 Le comportement par défaut varie selon que l’utilisateur franchit la coupure publicitaire au cours de la lecture normale ou en effectuant une recherche dans une vidéo ou en la repositionnant avec une avance rapide ou un rembobinage (lecture de l’astuce).
 
