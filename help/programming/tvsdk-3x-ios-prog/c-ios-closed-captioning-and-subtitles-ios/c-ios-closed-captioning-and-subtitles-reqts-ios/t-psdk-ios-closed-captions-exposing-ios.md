@@ -6,6 +6,9 @@ title: Exposer les sous-titres fermés
 uuid: 7057014a-b14a-4790-8f7f-37d7a1fb8194
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Pour que les sous-titres soient accessibles au lecteur client, vous devez les ac
 
 Pour exposer des sous-titres fermés :
 
-1. Dans `PTMediaPlayer` l’objet, définissez la `closedCaptionDisplayEnabled` propriété.
+1. Dans l&#39;objet `PTMediaPlayer`, définissez la propriété `closedCaptionDisplayEnabled`.
 
    Si l’utilisateur a activé les sous-titres, cette étape affiche le texte.
 
@@ -26,4 +29,4 @@ Pour exposer des sous-titres fermés :
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` est désapprouvée. Utilisez `subtitlesOptions` la propriété de `PTMediaPlayerItem`. Voir [Exposer les sous-titres](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) pour utiliser des sous-titres fermés.
+   >`closedCaptionDisplayEnabled` est désapprouvée. Utilisez la propriété `subtitlesOptions` de `PTMediaPlayerItem`. Voir [Exposer les sous-titres](../../../tvsdk-3x-ios-prog/c-ios-closed-captioning-and-subtitles-ios/c-ios-closed-captioning-and-subtitles-reqts-ios/t-ios-subtitles-exposing-ios.md) pour utiliser des sous-titres fermés.
