@@ -6,19 +6,22 @@ title: Configuration des débits adaptatifs à l'aide des paramètres ABRControl
 uuid: 283ccd3d-535b-43ca-8ca5-82d12df31798
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
 
-# Configuration des débits adaptatifs à l&#39;aide des paramètres ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
+# Configurez les débits adaptatifs à l&#39;aide de ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
 Vous pouvez définir des valeurs de contrôle ABR uniquement avec ABRControlParameters, mais vous pouvez en construire une nouvelle à tout moment.
 
-Les conditions suivantes s&#39;appliquent à `ABRControlParameters`:
+Les conditions suivantes s&#39;appliquent à `ABRControlParameters` :
 
 * Au moment de la construction, vous devez fournir des valeurs pour tous les paramètres.
 * Après la construction, vous ne pouvez plus modifier les valeurs individuelles.
-* Si les paramètres que vous spécifiez se trouvent en dehors de la plage autorisée, un `ArgumentError` est généré.
+* Si les paramètres que vous spécifiez sont en dehors de la plage autorisée, un `ArgumentError` est généré.
 
 1. Déterminez vos débits initiaux, minimaux et maximaux.
 1. Déterminez la stratégie ABR :
@@ -27,7 +30,7 @@ Les conditions suivantes s&#39;appliquent à `ABRControlParameters`:
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Définissez les valeurs des paramètres ABR dans le `ABRControlParameters` constructeur et affectez-les au lecteur multimédia.
+1. Définissez les valeurs du paramètre ABR dans le constructeur `ABRControlParameters` et affectez-les au lecteur Media.
 
    ```
    public ABRControlParameters(int initialBitRate, 
