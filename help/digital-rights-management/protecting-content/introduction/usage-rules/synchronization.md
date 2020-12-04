@@ -19,9 +19,9 @@ Les conditions requises pour la synchronisation indiquent la fréquence à laque
 
 Le comportement de synchronisation est défini à l’aide des paramètres suivants :
 
-* **Intervalle** de début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
-* **Intervalle** d’arrêt dur - (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
-* **Forcer la probabilité** de synchronisation - (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
+* **Intervalle**  de début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
+* **Intervalle**  d’arrêt dur - (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
+* **Forcer la probabilité**  de synchronisation - (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
 
 >[!NOTE]
 >
