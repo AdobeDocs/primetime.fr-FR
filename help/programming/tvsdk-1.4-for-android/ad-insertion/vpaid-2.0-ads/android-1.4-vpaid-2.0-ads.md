@@ -6,6 +6,9 @@ title: Prise en charge des publicités VPAID 2.0
 uuid: 7168a6e4-9c5e-4d3a-8710-867cf98e4445
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Les fonctionnalités suivantes sont prises en charge :
 * Publicités VPAID linéaires sur du contenu vidéo à la demande (VOD)
 * Publicités VPAID JavaScript
 
-   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`étant.
+   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`.
 
 Les fonctionnalités suivantes ne sont pas prises en charge :
 
@@ -31,19 +34,19 @@ Les fonctionnalités suivantes ne sont pas prises en charge :
 * Publicités non linéaires, telles que publicités superposées, publicités complémentaires dynamiques, publicités pouvant être réduites au minimum, publicités réductibles et publicités extensibles
 * Prévisualisation de publicités VPAID
 * Publicités VPAID dans du contenu en direct
-* Publicités Flash VPAID
+* Publicités VPAID Flash
 
-## Modifications des API {#section_D62F3E059C6C493592D34534B0BFC150}
+## Modifications de l&#39;API {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Les modifications suivantes ont été apportées à l’API :
 
-* Une `getCustomAdView` fonction a été ajoutée dans `MediaPlayer` et renvoie la vue Web qui effectue le rendu de la publicité VPAID.
+* Une fonction `getCustomAdView` a été ajoutée dans `MediaPlayer` et renvoie la vue Web qui effectue le rendu de la publicité VPAID.
 
-   Pour plus d&#39;informations sur l&#39; `CustomAdView` objet renvoyé par cette fonction, consultez Références [](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html)API.
+   Pour plus d&#39;informations sur l&#39;objet `CustomAdView` renvoyé par cette fonction, voir [Références API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
 
-* Un `CUSTOM_AD` événement est distribué à partir de l’instance du lecteur multimédia.
+* Un événement `CUSTOM_AD` est distribué à partir de l’instance du lecteur multimédia.
 
-   L’application peut enregistrer un rappel de événement en implémentant `CustomAdEventListener`.
+   L&#39;application peut enregistrer un rappel de événement en implémentant `CustomAdEventListener`.
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` vous permet de modifier le délai d’expiration par défaut sur le processus de chargement VPAID.
 
@@ -54,7 +57,7 @@ Les modifications suivantes ont été apportées à l’API :
 Pendant la lecture de la publicité VPAID :
 
 * La publicité VPAID est affichée dans un conteneur de vue au-dessus de la vue du lecteur. Par conséquent, le code qui repose sur les clics effectués par les utilisateurs sur la vue du lecteur ne fonctionne pas.
-* Le lecteur de contenu principal est en pause et les appels à `pause` et à l’instance `play` du lecteur sont utilisés pour mettre en pause et reprendre la publicité VPAID.
+* Le lecteur de contenu principal est suspendu et les appels à `pause` et `play` sur l’instance du lecteur sont utilisés pour interrompre et reprendre la publicité VPAID.
 
 * Les publicités VPAID n’ont pas de durée prédéfinie, car elles peuvent être interactives.
 
@@ -66,13 +69,13 @@ Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire perso
 
 Pour ajouter la prise en charge de VPAID 2.0 :
 
-1. Ajouter la vue publicitaire personnalisée à l’interface du lecteur.
+1. Ajoutez la vue publicitaire personnalisée à l’interface du lecteur.
 
    ```java
    _playerFrame.addView(mediaPlayer.createCustomAdView());
    ```
 
-1. Ajouter un écouteur pour les événements publicitaires personnalisés.
+1. Ajoutez un écouteur pour les événements publicitaires personnalisés.
 
    ```java
    mediaplayer.addEventListener(MediaPlayer.Event.CUSTOM_AD,  
