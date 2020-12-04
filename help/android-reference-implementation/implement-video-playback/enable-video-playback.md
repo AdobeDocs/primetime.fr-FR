@@ -6,6 +6,9 @@ title: Activer la lecture vidéo
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
 
-1. Créez l’objet du lecteur multimédia en vous assurant que le code suivant existe dans [!DNL PlayerFragment.java]:
+1. Créez l’objet du lecteur multimédia en vous assurant que le code suivant existe dans [!DNL PlayerFragment.java] :
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,7 +27,7 @@ Créez un PlaybackManager qui gère l’opération de configuration et de lectur
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Créez le gestionnaire de lecture à l’aide de `ManagerFactory`:
+1. Créez le gestionnaire de lecture à l’aide du `ManagerFactory` :
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
@@ -37,7 +40,7 @@ Créez un PlaybackManager qui gère l’opération de configuration et de lectur
      new PlaybackManagerEventListener() 
    ```
 
-1. Enregistrez l’écouteur de événement dans `PlayerFragment`:
+1. Enregistrez l&#39;écouteur de événement dans le `PlayerFragment` :
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -49,7 +52,7 @@ Créez un PlaybackManager qui gère l’opération de configuration et de lectur
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configurez les opérations de la barre de contrôle dans `PlayerFragment`:
+1. Configurez les opérations de la barre de contrôle dans le `PlayerFragment` :
 
    ```
    controlBar.pressPlay() { 
@@ -57,7 +60,7 @@ Créez un PlaybackManager qui gère l’opération de configuration et de lectur
    }
    ```
 
-## Documentation sur les API connexes {#related-api-documentation}
+## Documentation de l&#39;API associée {#related-api-documentation}
 
 * [Gestionnaire de lecture de classe](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.html)
 * [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html)
