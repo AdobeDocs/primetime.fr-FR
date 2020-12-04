@@ -4,6 +4,9 @@ title: Diffusion de code / Contenu du package
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Le package Adobe Primetime DRM On Premises Individualization Server contient les
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe d&#39;identification du serveur
-* [!DNL ROOT] - contient un [!DNL crossdomain.xml] fichier
+* [!DNL ROOT] - contient un  [!DNL crossdomain.xml] fichier
 
 * Fichiers cache ECI - Prétéléchargés
 * [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d&#39;un serveur de licences pour la prise en charge des individualisations sur site
