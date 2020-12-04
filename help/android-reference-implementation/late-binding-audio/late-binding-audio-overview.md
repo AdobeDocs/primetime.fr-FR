@@ -6,11 +6,14 @@ title: Présentation
 uuid: 7656f930-f426-426e-bcd4-dfa9d39e7ae4
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
 Vous pouvez activer et créer des commandes pour les fichiers audio à liaison tardive.
 
@@ -20,6 +23,6 @@ Vous pouvez mettre en oeuvre divers workflows, en fonction de l’interface util
 
 1. Lorsque l&#39;utilisateur final sélectionne une vidéo, une liste de pistes audio disponibles pour cet élément multimédia est renseignée.
 1. Lorsque l’utilisateur touche le bouton Paramètres de l’interface utilisateur, les options de la piste audio s’affichent.
-1. Lorsqu’une piste audio est sélectionnée, elle devient la piste audio active.
+1. Lorsqu’une piste audio est sélectionnée, elle devient la principale piste audio.
 1. L’utilisateur final peut appuyer sur le bouton Paramètres pour revenir à la piste audio d’origine.
 
