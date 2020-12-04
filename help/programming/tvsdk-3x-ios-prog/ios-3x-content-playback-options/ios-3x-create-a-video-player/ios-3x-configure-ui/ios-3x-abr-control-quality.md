@@ -6,6 +6,9 @@ title: Débit adaptatif (ABR) pour la qualité vidéo
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -42,15 +45,15 @@ Gardez à l’esprit les informations suivantes :
 
 Par exemple, si un flux comporte les profils suivants :
 
-* 1: 300000
-* 2: 700000
-* 3: 1500000
-* 4: 2400000
-* 5: 4000000
+* 1 : 300000
+* 2 : 700000
+* 3 : 1500000
+* 4 : 2400000
+* 5 : 4000000
 
 Si vous spécifiez une plage de 300000 à 2000000, TVSDK ne prend en compte que les profils 1, 2 et 3. Cela permet aux applications de s&#39;adapter à diverses conditions réseau, telles que le passage du Wi-Fi à la technologie 3G ou à divers périphériques tels qu&#39;un téléphone, une tablette ou un ordinateur de bureau.
 
-## Configuration des débits adaptatifs {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
+## Configurer les débits adaptatifs {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
 
 Pour configurer les paramètres de débit binaire adaptatif TVSDK :
 
@@ -72,7 +75,7 @@ Pour configurer les paramètres de débit binaire adaptatif TVSDK :
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Mettez à jour votre `PTMediaPlayer` instance avec l’ `PTABRControlParameters` instance configurée.
+1. Mettez à jour votre instance `PTMediaPlayer` avec l&#39;instance `PTABRControlParameters` configurée.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Pour configurer les paramètres de débit binaire adaptatif TVSDK :
 
 Souvenez-vous des points suivants :
 
-* L’application doit définir la `abrControlParameters` propriété sur `PTMediaPlayer` avant de configurer une `PTMediaPlayerItem` instance pour que les paramètres de débit initial et minimal soient appliqués.
+* L&#39;application doit définir la propriété `abrControlParameters` sur `PTMediaPlayer` avant de configurer une instance `PTMediaPlayerItem` pour que les paramètres de débit initial et minimal soient appliqués.
 
    Après les débuts de lecture du contenu, la définition d’une nouvelle instance affecte uniquement le paramètre de débit maximal.
 
-* Pour mettre à jour le paramètre de débit maximal pendant la lecture, créez une `PTABRControlParameters` instance et définissez-la sur l’instance du lecteur.
-* Vous pouvez mettre à jour le paramètre de débit maximal pendant la lecture uniquement sur iOS 8.0 et versions ultérieures. Pour les versions antérieures, la `maxBitrate` valeur définie avant le démarrage de la lecture du contenu est utilisée.
+* Pour mettre à jour le paramètre de débit maximal pendant la lecture, créez une instance `PTABRControlParameters` et définissez-la sur l’instance du lecteur.
+* Vous pouvez mettre à jour le paramètre de débit maximal pendant la lecture uniquement sur iOS 8.0 et versions ultérieures. Pour les versions antérieures, la valeur `maxBitrate` définie avant le démarrage de la lecture du contenu est utilisée.
