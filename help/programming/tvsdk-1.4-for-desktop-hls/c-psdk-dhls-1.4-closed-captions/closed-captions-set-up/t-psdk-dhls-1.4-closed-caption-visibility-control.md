@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Contrôler la visibilité des sous-titres{#control-closed-caption-visibility}
+# Contrôler la visibilité de la légende fermée{#control-closed-caption-visibility}
 
 Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
 
@@ -31,7 +31,7 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
 >public static const VISIBLE:String = visible;
 >```
 
-1. Attendez que le `MediaPlayer` programme ait au moins l’état PRÉPARÉ (voir [Attendre un état](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valide).
+1. Attendez que `MediaPlayer` ait au moins l’état PRÉPARÉ (voir [Attendre un état valide](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Pour obtenir le paramètre de visibilité actuel pour les légendes fermées, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
 
    ```
