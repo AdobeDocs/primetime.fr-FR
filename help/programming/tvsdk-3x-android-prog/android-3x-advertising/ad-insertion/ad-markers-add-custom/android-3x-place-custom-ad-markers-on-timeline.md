@@ -6,27 +6,30 @@ title: Placez des marqueurs publicitaires personnalisés sur le plan de montage 
 uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
 source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# Placez des marqueurs publicitaires personnalisés sur le plan de montage chronologique. {#place-custom-ad-markers-on-the-timeline}
+# Placez des marqueurs publicitaires personnalisés sur la chronologie {#place-custom-ad-markers-on-the-timeline}
 
 Cet exemple montre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans le plan de montage chronologique de lecture.
 
-1. Traduisez les informations de positionnement publicitaire out-of-band dans une liste/baie de `RepaceTimeRange` classe.
-1. Créez une instance de `CustomRangeMetadata` classe et utilisez sa `setTimeRangeList` méthode avec la liste/le tableau comme argument pour définir sa liste de plage de temps.
-1. Utilisez sa `setType` méthode pour définir le type sur `MARK_RANGE`.
-1. Utilisez la `MediaPlayerItemConfig.setCustomRangeMetadata` méthode avec l’ `CustomRangeMetadata` instance comme argument pour définir les métadonnées de plage personnalisée.
-1. Utilisez la `MediaPlayer.replaceCurrentResource` méthode avec l&#39; `MediaPlayerItemConfig` instance comme argument pour définir la nouvelle ressource comme ressource active.
-1. Attendez un `STATE_CHANGED` événement, qui indique que le lecteur est à l’ `PREPARED` état.
+1. Traduisez les informations de positionnement publicitaire out-of-band dans une liste/un tableau de classe `RepaceTimeRange`.
+1. Créez une instance de la classe `CustomRangeMetadata` et utilisez sa méthode `setTimeRangeList` avec la liste/le tableau comme argument pour définir sa liste de plage de temps.
+1. Utilisez sa méthode `setType` pour définir le type sur `MARK_RANGE`.
+1. Utilisez la méthode `MediaPlayerItemConfig.setCustomRangeMetadata` avec l&#39;instance `CustomRangeMetadata` comme argument pour définir les métadonnées de plage personnalisée.
+1. Utilisez la méthode `MediaPlayer.replaceCurrentResource` avec l&#39;instance `MediaPlayerItemConfig` comme argument pour définir la nouvelle ressource comme ressource active.
+1. Attendez un événement `STATE_CHANGED` qui indique que le lecteur est à l’état `PREPARED`.
 1. Début de la lecture vidéo en appelant `MediaPlayer.play`.
 
 Voici le résultat de l’exécution des tâches dans cet exemple :
 
-* Si une `ReplaceTimeRange` séquence se superpose à une autre sur le plan de montage chronologique de la lecture, par exemple si la position de début d’une `ReplaceTimeRange` séquence est antérieure à la position de fin déjà placée, TVSDK ajuste en silence le début de l’élément incriminé `ReplaceTimeRange` pour éviter le conflit.
+* Si un `ReplaceTimeRange` chevauche un autre élément du plan de montage chronologique de lecture, par exemple, la position de début d’un `ReplaceTimeRange` est antérieure à la position de fin déjà placée, TVSDK ajuste en silence le début du `ReplaceTimeRange` incriminé pour éviter le conflit.
 
-   Le réglage est donc `ReplaceTimeRange` plus court que celui initialement spécifié. Si l’ajustement conduit à une durée de zéro, TVSDK supprime en silence l’élément incriminé `ReplaceTimeRange`.
+   Ceci raccourcit le `ReplaceTimeRange` ajusté par rapport à celui spécifié initialement. Si l’ajustement conduit à une durée de zéro, TVSDK supprime en silence l’élément `ReplaceTimeRange` incriminé.
 
 * TVSDK recherche des plages horaires adjacentes pour les coupures publicitaires personnalisées et les regroupe en sauts publicitaires distincts.
 
@@ -34,7 +37,7 @@ Les plages temporelles qui ne sont adjacentes à aucune autre plage temporelle s
 
 * Si l’application tente de charger une ressource multimédia dont la configuration contient `CustomRangeMetadata` qui ne peut être utilisée que dans les marqueurs publicitaires personnalisés contextuels, TVSDK renvoie une exception si la ressource sous-jacente n’est pas de type VOD.
 
-* Lorsqu’il s’agit de marques publicitaires personnalisées, TVSDK désactive d’autres mécanismes de résolution des publicités (par exemple, la prise de décision et la prise de décision dans Adobe Primetime).
+* Lorsqu’il s’agit de marques publicitaires personnalisées, TVSDK désactive d’autres mécanismes de résolution de publicités (par exemple, la prise de décision publicitaire Adobe Primetime).
 
    Vous pouvez utiliser n’importe quel module de résolution de publicités TVSDK ou le mécanisme de balisage publicitaire personnalisé. Lorsque vous utilisez des marqueurs publicitaires personnalisés, le contenu de la publicité est considéré comme résolu et est placé sur le plan de montage chronologique.
 
