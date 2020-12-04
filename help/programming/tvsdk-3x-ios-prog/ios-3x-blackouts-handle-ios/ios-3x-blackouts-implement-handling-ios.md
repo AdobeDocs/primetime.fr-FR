@@ -6,6 +6,9 @@ title: Mise en oeuvre de la gestion des interruptions de service
 uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Ajouter un écouteur de notification pour `PTTimedMetadataChangedNotification`.
+1. Ajoutez un écouteur de notification pour `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +40,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Implémentez une méthode d’écouteur pour `PTTimedMetadata` les objets au premier plan.
+1. Mettez en oeuvre une méthode d’écouteur pour les objets `PTTimedMetadata` au premier plan.
 
    Par exemple :
 
@@ -61,7 +64,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Gérez `TimedMetadata` les objets avec des mises à jour constantes pendant la lecture.
+1. Gérez les objets `TimedMetadata` avec des mises à jour constantes pendant la lecture.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Ajouter le `PTTimedMetadata` gestionnaire pour passer au contenu alternatif et revenir au contenu principal comme indiqué par l’ `PTTimedMetadata` objet et son temps de lecture.
+1. Ajoutez le gestionnaire `PTTimedMetadata` pour passer à un autre contenu et revenir au contenu principal comme indiqué par l&#39;objet `PTTimedMetadata` et son temps de lecture.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Implémentez une méthode d’écouteur pour `PTTimedMetadata` les objets en arrière-plan.
+1. Implémentez une méthode d’écouteur pour les objets `PTTimedMetadata` en arrière-plan.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
