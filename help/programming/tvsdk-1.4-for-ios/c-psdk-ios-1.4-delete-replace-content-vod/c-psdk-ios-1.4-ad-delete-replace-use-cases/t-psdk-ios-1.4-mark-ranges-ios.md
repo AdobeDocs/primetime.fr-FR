@@ -5,16 +5,19 @@ seo-title: Marquer les plages
 title: Marquer les plages
 uuid: 994a8f07-0951-47ec-b21a-d74c9eeefd74
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
 # Marquer les plages{#mark-ranges}
 
-Pour mettre en oeuvre les plages `PTTimeRangeCollection` de contenu et les marquer comme publicités :
+Pour mettre en oeuvre `PTTimeRangeCollection` et marquer les plages de contenu comme des publicités :
 1. Préparez le `PTTimeRangeCollection`.
-1. Définissez le type du `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeMarkRanges`.
+1. Définissez le type de `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeMarkRanges`.
 
    Cette étape avertit TVSDK que les plages personnalisées doivent être traitées comme des publicités.
 
@@ -35,7 +38,7 @@ Pour mettre en oeuvre les plages `PTTimeRangeCollection` de contenu et les marqu
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. Créez le fichier `PTAdMetadata` et définissez-le `PTTimeRangeCollection`.
+1. Créez le `PTAdMetadata` et définissez le `PTTimeRangeCollection`.
 
    ```
    // Create the PTPlayerItem metadata 
@@ -67,11 +70,11 @@ Pour mettre en oeuvre les plages `PTTimeRangeCollection` de contenu et les marqu
    [player play];
    ```
 
-## Remplacement des plages{#replace-ranges}
+## Remplacer les plages{#replace-ranges}
 
 Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu en tant que publicités :
-1. Préparez-vous `PTTimeRangeCollection`.
-1. Définissez le type du `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeReplaceRanges`.
+1. Préparez `PTTimeRangeCollection`.
+1. Définissez le type de `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeReplaceRanges`.
 
    Cette étape avertit TVSDK que les plages fournies doivent être remplacées par du contenu alternatif (publicités).
 
@@ -94,9 +97,9 @@ Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu
 
    >[!TIP]
    >
-   >L&#39;argument `replacementDuration` est facultatif. Si elle n’est pas définie, la variable `AdServer` détermine la durée de la coupure publicitaire.
+   >L&#39;argument `replacementDuration` est facultatif. Si elle n’est pas définie, le `AdServer` détermine la durée de la coupure publicitaire.
 
-1. Créez le fichier `PTAdMetadata` et définissez-le `PTTimeRangeCollection`.
+1. Créez le `PTAdMetadata` et définissez le `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -120,7 +123,7 @@ Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu
 
    >[!TIP]
    >
-   >Bien que le `signalingMode` paramètre soit défini comme `PTAdSignalingModeCustomRanges`, ce mode de signalisation publicitaire est défini automatiquement lors de la définition `PTTimeRangeCollection` du type `PTTimeRangeCollectionTypeReplace`.
+   >Bien que `signalingMode` soit défini sur `PTAdSignalingModeCustomRanges`, ce mode de signalisation publicitaire est défini automatiquement lors de la définition de `PTTimeRangeCollection` de type `PTTimeRangeCollectionTypeReplace`.
 
 1. Créez le lecteur et la lecture de début.
 
@@ -139,7 +142,7 @@ Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu
 
 Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu en tant que publicités :
 1. Préparez le `PTTimeRangeCollection`.
-1. Définissez le type de la `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeDeleteRanges`, qui avertit TVSDK que les plages fournies doivent être supprimées.
+1. Définissez le type de `PTTimeRangeCollection` sur `PTTimeRangeCollectionTypeDeleteRanges`, qui avertit TVSDK que les plages fournies doivent être supprimées.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -156,7 +159,7 @@ Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. Créez le fichier `PTAdMetadata` et définissez-le `PTTimeRangeCollection`.
+1. Créez le `PTAdMetadata` et définissez le `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -180,7 +183,7 @@ Pour mettre en oeuvre `PTTimeRangeCollection` et supprimer des plages de contenu
 
    >[!TIP]
    >
-   >L’insertion d’une publicité se produit après la suppression des plages personnalisées en fonction de la `PTAdMetadata` et de la plage active `PTAdSignalingMode`.
+   >L’insertion d’une publicité se produit après la suppression des plages personnalisées en fonction de `PTAdMetadata` et de l’élément `PTAdSignalingMode` actuel.
 
 1. Créez le lecteur et la lecture de début.
 
