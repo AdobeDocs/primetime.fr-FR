@@ -5,7 +5,10 @@ seo-title: Modifications apportées à VOD
 title: Modifications apportées à VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ Les situations dans lesquelles vous souhaitez peut-être remplacer une chronolog
 * Remplacez dynamiquement les anciennes publicités C3 par des publicités plus récentes de plus longue durée.
 * Insérez moins de publicités ou aucune du tout.
 
-Vous pouvez remplacer la chronologie de la publicité en envoyant une nouvelle demande d&#39;insertion de publicité avec le fichier M3U8 d&#39;origine et une autre valeur du paramètre de `pttimeline` requête.
+Vous pouvez remplacer la chronologie de la publicité en envoyant une nouvelle demande d&#39;insertion de publicité avec le fichier M3U8 d&#39;origine et une autre valeur du paramètre de requête `pttimeline`.
