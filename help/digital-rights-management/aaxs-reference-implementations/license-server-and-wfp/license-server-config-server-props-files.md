@@ -21,7 +21,7 @@ Pour garantir la sécurité du mot de passe de vos informations d’identificati
 
 Pour préparer correctement le mot de passe de vos informations d’identification :
 
-1. Allez à [!DNL Reference Implementation\Server\refimpl\scrambler].
+1. Accédez à [!DNL Reference Implementation\Server\refimpl\scrambler].
 1. Dans l&#39;invite de commande, saisissez la commande suivante :
 
    ```
@@ -39,4 +39,4 @@ Pour préparer correctement le mot de passe de vos informations d’identificati
 >
 >L’exemple précédent utilise un point-virgule (;) comme séparateur. Pour les plates-formes autres que Microsoft Windows, utilisez un deux-points (:) comme délimiteur.
 
-L&#39;utilitaire génère le mot de passe chiffré que vous devez copier dans le [!DNL .properties] fichier.
+L&#39;utilitaire génère le mot de passe chiffré que vous devez copier dans le fichier [!DNL .properties].
