@@ -13,7 +13,7 @@ ht-degree: 15%
 ---
 
 
-# Notes de mise à jour de Primetime {#release-notes}
+# Notes de mise à jour de Primetime  {#release-notes}
 
 + [Présentation des notes de mise à jour](home.md)
 + Ad Insertion Primetime {#ptai}
