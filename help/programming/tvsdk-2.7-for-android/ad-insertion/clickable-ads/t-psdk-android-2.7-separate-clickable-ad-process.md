@@ -6,15 +6,18 @@ title: Séparer le processus publicitaire cliquable
 uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Séparer le processus publicitaire cliquable {#separate-the-clickable-ad-process}
+# Séparer le processus d&#39;annonce cliquable {#separate-the-clickable-ad-process}
 
 Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une activité.
 
-1. Implémentez un fragment pour le contenir `MediaPlayer`.
+1. Implémentez un fragment pour contenir le `MediaPlayer`.
 
    Ce fragment doit appeler `notifyClick()` et sera responsable de la lecture vidéo.
 
@@ -30,7 +33,7 @@ Vous devez séparer la logique de l’interface utilisateur de votre lecteur du 
 
 1. Implémentez un autre fragment pour afficher un élément d’interface utilisateur qui indique qu’une publicité peut faire l’objet d’un clic, surveiller cet élément d’interface et communiquer les clics de l’utilisateur au fragment qui contient le `MediaPlayer`.
 
-   Ce fragment doit déclarer une interface pour la communication des fragments. Le fragment capture l’implémentation de l’interface au cours de sa méthode de `onAttach()` cycle de vie et peut appeler les méthodes de l’interface pour communiquer avec l’activité.
+   Ce fragment doit déclarer une interface pour la communication des fragments. Le fragment capture l’implémentation de l’interface au cours de sa méthode de cycle de vie `onAttach()` et peut appeler les méthodes de l’interface pour communiquer avec l’activité.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
