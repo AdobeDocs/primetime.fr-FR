@@ -1,16 +1,19 @@
 ---
 description: Ces classes décrivent les événements que TVSDK envoie à votre lecteur multimédia en réponse à diverses activités.
 seo-description: Ces classes décrivent les événements que TVSDK envoie à votre lecteur multimédia en réponse à diverses activités.
-seo-title: Classe Événements
-title: Classe Événements
+seo-title: Classe événements
+title: Classe événements
 uuid: 5e63d43c-6112-4958-b8cd-ccf123affd08
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 
-# Classe Événements {#events-classes}
+# Événements, classe {#events-classes}
 
 Ces classes décrivent les événements que TVSDK envoie à votre lecteur multimédia en réponse à diverses activités.
 
@@ -28,7 +31,7 @@ Package : [com.adobe.mediacore.événements](https://help.adobe.com/en_US/primet
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Classe. Un élément du lecteur multimédia a été créé. |
 | [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Classe. Une opération de chargement est terminée. Distribué par `MediaPlayerItemLoader` pour avertir ses clients. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Classe. L’état du lecteur multimédia a changé. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. On `MediaPlayerView` a cliqué sur la photo. |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. L&#39;utilisateur a cliqué sur `MediaPlayerView`. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Classe. Le taux de lecture du lecteur multimédia change. |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Classe. L’algorithme de commutation de débit adaptatif du lecteur multimédia est passé à un autre profil en raison des conditions réseau ou de l’ordinateur. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Classe. Le lecteur a commencé la recherche ou l&#39;opération de recherche s&#39;est terminée. |
