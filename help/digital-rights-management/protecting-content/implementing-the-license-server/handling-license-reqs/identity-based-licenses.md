@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Licences basées sur les identités{#identity-based-licenses}
+# Licences basées sur l’identité{#identity-based-licenses}
 
 Si une licence basée sur l’identité est utilisée, le serveur recherche un jeton d’authentification valide avant d’émettre une licence.
 
-Voir Authentification [des](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) utilisateurs pour en savoir plus sur la gestion des jetons d’authentification.
+Voir [Authentification des utilisateurs](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) pour plus d&#39;informations sur la gestion des jetons d&#39;authentification.
 
 >[!NOTE]
 >
