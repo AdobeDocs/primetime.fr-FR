@@ -23,7 +23,7 @@ Une version client DRM Primetime peut être identifiée par les attributs spéci
 
 | **Attribut** | **Valeurs prises en charge** | **Critères de correspondance** | **Description** |
 |---|---|---|---|
-| environnement | `“PC”, “PortingKit”` | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
+| Environnement | `“PC”, “PortingKit”` | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
 | SE | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Correspondance exacte | Plateforme |
 | Architecture | `“32”, “64”` | Correspondance exacte | 32 bits ou 64 bits |
 | Type d’écran | `“PC”, “Mobile”, “TV”` | Correspondance exacte |  |
