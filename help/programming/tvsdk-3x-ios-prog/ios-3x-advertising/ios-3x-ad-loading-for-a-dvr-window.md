@@ -6,6 +6,9 @@ title: Charger la publicité pour une fenêtre DVR
 uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Lorsqu’un utilisateur début le contenu de la vue au début d’un flux d’en
 >
 >Il est plus rapide de résoudre les publicités une fois le point d’accès actif, mais si l’utilisateur effectue une recherche en amont, cette option empêche le lecteur de lire les publicités qui s’affichaient plus tôt.
 
-## Contrôler le chargement des publicités pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Contrôler le chargement de la publicité pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Pour contrôler le chargement des publicités pour une fenêtre DVR :
 
@@ -28,7 +31,7 @@ Pour contrôler le chargement des publicités pour une fenêtre DVR :
 
 >[!NOTE]
 >
->La valeur par défaut est `NO`définie et cette option charge les publicités uniquement à partir du point d’activation actuel.
+>La valeur par défaut est `NO`, et cette option charge les publicités uniquement à partir du point de production actuel.
 
 Par exemple :
 
