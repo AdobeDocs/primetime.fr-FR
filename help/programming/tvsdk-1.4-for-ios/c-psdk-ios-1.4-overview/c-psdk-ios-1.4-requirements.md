@@ -6,11 +6,14 @@ title: Conditions requises
 uuid: 7e5fb176-4c3f-4c12-9080-3afced28627b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 
-# Conditions requises {#requirements}
+# Exigences {#requirements}
 
 TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
 
@@ -30,15 +33,15 @@ Vérifiez les restrictions et les exigences relatives aux flux et aux listes de 
 
 ## #EXT-X-VERSION requirements {#section_C03D3DCE1D244E26BBD2C1D7144FDFBD}
 
-La version du `#EXT-X-VERSION` fichier [!DNL .m3u8] affecte les fonctionnalités disponibles pour votre application et les `EXT` balises valides dans votre liste de lecture/manifeste.
+La version de `#EXT-X-VERSION` dans le fichier [!DNL .m3u8] affecte les fonctionnalités disponibles pour votre application et les balises `EXT` valides dans votre liste de lecture/manifeste.
 
-Voici quelques informations sur la `#EXT-X-VERSION` balise, qui spécifie la version du protocole HLS :
+Voici quelques informations sur la balise `#EXT-X-VERSION`, qui spécifie la version du protocole HLS :
 
 * La version doit correspondre aux fonctionnalités et aux attributs de la liste de lecture HLS ; sinon, des erreurs de lecture peuvent se produire.
 
-   Pour plus d’informations, voir Spécification [de diffusion en flux continu en direct](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1)HTTP.
+   Pour plus d’informations, voir [HTTP Live Streaming Specification](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Si la balise n’est pas incluse dans les listes de lecture du contenu principal ou multimédia, ou si aucune version n’est spécifiée, la version 1 est utilisée par défaut. Le contenu non conforme à la version 1 ne sera pas lu.
-* Adobe recommande d’utiliser au moins la version 2 pour la lecture sur des clients basés sur TVSDK.
+* Adobe recommande d’utiliser au moins la version 2 pour la lecture sur les clients basés sur TVSDK.
 
 Les clients et les serveurs doivent implémenter les versions de la manière suivante :
 
@@ -51,26 +54,26 @@ Les clients et les serveurs doivent implémenter les versions de la manière sui
  </thead>
  <tbody> 
   <tr> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2 </span> </td> 
-   <td colname="2"> Attribut IV de la <span class="codeph"> balise EXT-X-KEY </span> . </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:2  </span> </td> 
+   <td colname="2"> Attribut IV de la balise <span class="codeph"> EXT-X-KEY </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
+   <td colname="1"> <span class="codeph"> EXT-X-VERSION:3  </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valeurs de <span class="codeph"> </span> durée EXTINF à virgule flottante <p>Les balises de durée ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) dans la version 2 ont été arrondis à des valeurs entières. Les versions 3 et ultérieures exigent que les durées soient exactes en virgule flottante. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Valeurs de durée de point flottant <span class="codeph"> EXTINF </span> <p>Les balises de durée ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) dans la version 2 ont été arrondis à des valeurs entières. Les versions 3 et ultérieures exigent que les durées soient exactes en virgule flottante. </p> </li> 
      <li id="li_8DF5E91F1D5D4E19894595E1FE0A5EDE"> Fonctionnalités TVSDK telles que l’insertion de publicités et l’ABR transparent </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="1"> <p> <span class="codeph"> EXT-X-VERSION:4 </span> </p> </td> 
+   <td colname="1"> <p> <span class="codeph"> EXT-X-VERSION:4  </span> </p> </td> 
    <td colname="2"> <p> 
      <ul id="ul_99E24D013E3141308B5A57446A9B8033"> 
-      <li id="li_F36E65ADD2CA451C82FF18DBD5667927">La <span class="codeph"> balise EXT-X-BYTERANGE </span> </li> 
-      <li id="li_8C653168A7B84D11AC233E7548A8D2EF">La <span class="codeph"> balise EXT-X-I-FRAME-STREAM-INF </span> </li> 
-      <li id="li_2922B34717CB4F6189068529CDBE6D10">La <span class="codeph"> balise </span> EXT-X-I-FRAMES-ONLY </li> 
+      <li id="li_F36E65ADD2CA451C82FF18DBD5667927">La balise <span class="codeph"> EXT-X-BYTERANGE </span> </li> 
+      <li id="li_8C653168A7B84D11AC233E7548A8D2EF">La balise <span class="codeph"> EXT-X-I-FRAME-STREAM-INF </span> </li> 
+      <li id="li_2922B34717CB4F6189068529CDBE6D10">La balise <span class="codeph"> EXT-X-I-FRAMES-ONLY </span> </li> 
       <li id="li_D015D78E217641D7867EB509E9F9EEE2">La balise <span class="codeph"> EXT-X-MEDIA </span> </li> 
-      <li id="li_CA068EA381984F5497FE67617CA8BB34">Attributs <span class="codeph"> AUDIO </span> et <span class="codeph"> VIDEO </span> de la balise <span class="codeph"> </span> EXT-X-STREAM-INF </li> 
+      <li id="li_CA068EA381984F5497FE67617CA8BB34">Les attributs <span class="codeph"> AUDIO </span> et <span class="codeph"> VIDEO </span> de la balise <span class="codeph"> EXT-X-STREAM-INF </span> </li> 
       <li id="li_EE78CC7D194A4EB2897F9AE8E4B081B8"> Audio alternatif TVSDK </li> 
      </ul> </p> </td> 
   </tr> 
