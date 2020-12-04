@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Utilisation de la ligne de commande {#command-line-usage}
 
-Avant d’utiliser Media Packager, assurez-vous de respecter les exigences répertoriées dans la section Conditions requises et assurez-vous que le fichier de configuration contient les informations requises (voir Fichier de configuration dans la section *Utilisation des implémentations* de référence d’accès à l’Adobe).
+Avant d’utiliser Media Packager, assurez-vous de satisfaire aux exigences répertoriées dans la section Conditions requises et assurez-vous que le fichier de configuration contient les informations requises (voir Fichier de configuration dans le *Utilisation des implémentations de référence d’accès à l’Adobe*.
 
-Media Packager se trouve dans le [!DNL \Reference Implementation\Command Line tools] répertoire du DVD. Pour chiffrer un fichier unique, utilisez la syntaxe suivante :
+Media Packager se trouve dans le répertoire [!DNL \Reference Implementation\Command Line tools] du DVD. Pour chiffrer un fichier unique, utilisez la syntaxe suivante :
 
 ```
 java -jar AdobePackager.jar  
@@ -68,11 +68,11 @@ Pour vue des informations sur un fichier de métadonnées, utilisez la syntaxe s
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` est un [!DNL .metadata] fichier contenant les métadonnées DRM.
+* `metadatafile` est un  [!DNL .metadata] fichier contenant les métadonnées DRM.
 
 >[!NOTE]
 >
->Lors de l’assemblage, Media Packager ne génère plus par défaut un fichier .header. Pour générer ce fichier, utilisez l’ `-h` option lors de l’assemblage.
+>Lors de l’assemblage, Media Packager ne génère plus par défaut un fichier .header. Pour générer ce fichier, utilisez l&#39;option `-h` lors de la création de package.
 
 Le tableau suivant contient la description des options de ligne de commande affichées dans la syntaxe ci-dessus :
 
@@ -93,7 +93,7 @@ Le tableau suivant contient la description des options de ligne de commande affi
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur un fichier déjà compressé. Les fichiers source et de destination ne sont pas requis. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm, fichier <span class="+ topic/ph pr-d/codeph codeph"> de métadonnées </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> fichier de métadonnées </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur les métadonnées existantes. Les fichiers source et de destination ne sont pas requis. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -102,14 +102,14 @@ Le tableau suivant contient la description des options de ligne de commande affi
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez avec <span class="codeph"> -d </span> pour extraire l’en-tête DRM d’un fichier compressé. Un fichier est créé dans le même répertoire que le fichier chiffré, en utilisant le nom de fichier et l’extension <span class="filepath"> .header. </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez <span class="codeph"> -d </span> pour extraire l’en-tête DRM d’un fichier compressé. Un fichier est créé dans le même répertoire que le fichier chiffré, en utilisant le nom de fichier et l’extension <span class="filepath"> .header </span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique un identifiant unique pour cet élément de contenu. Si aucun identifiant n’est spécifié, le nom du fichier destfile est utilisé. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= valeur <span class="+ topic/ph pr-d/codeph codeph"> </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> clé </span>= <span class="+ topic/ph pr-d/codeph codeph"> valeur </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Spécifie une clé/valeur personnalisée à ajouter aux métadonnées de contenu. Plusieurs options <span class="codeph"> -k </span> peuvent être spécifiées. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -125,8 +125,8 @@ Le tableau suivant contient la description des options de ligne de commande affi
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Remplace le fichier de destination sans invite, s’il existe déjà. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p nom <span class="+ topic/ph pr-d/codeph codeph"> de fichier [domaine-transport-cert] </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique le nom du fichier contenant la stratégie. Si la stratégie requiert l’enregistrement de domaine auprès d’un serveur qui utilise un certificat de transport différent de celui spécifié dans le fichier de propriétés, le certificat de transport de domaine doit également être fourni. </p> <p class="- topic/p ">Plusieurs <span class="codeph"> options </span> -p peuvent être spécifiées et le client utilisera la première par défaut. Les valeurs spécifiées sur la ligne de commande sont prioritaires sur celles spécifiées dans le fichier de configuration. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nom de fichier [domaine-transport-cert] </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique le nom du fichier contenant la stratégie. Si la stratégie requiert l’enregistrement de domaine auprès d’un serveur qui utilise un certificat de transport différent de celui spécifié dans le fichier de propriétés, le certificat de transport de domaine doit également être fourni. </p> <p class="- topic/p ">Plusieurs options <span class="codeph"> -p </span> peuvent être spécifiées et le client utilisera la première par défaut. Les valeurs spécifiées sur la ligne de commande sont prioritaires sur celles spécifiées dans le fichier de configuration. </p> </td> 
   </tr> 
  </tbody> 
 </table>
