@@ -6,6 +6,9 @@ title: Effet sur l’insertion et la suppression d’une publicité à partir du
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Le tableau suivant fournit des détails sur le mode de signalisation et les comp
 
 **Carte du serveur**
 
-| **Métadonnées de la publicité** | **Résolveurs créés** | **`PlacementInformations`créé&#x200B;** | **Comportement résultant** |
+| **Métadonnées de la publicité** | **Résolveurs créés** | **`PlacementInformations`créé** | **Comportement résultant** |
 |--- |--- |--- |--- |
 |  | Supprimer | Supprimer | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | Plages supprimées |
 | Supprimer, Auditude | Supprimer, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | Plages supprimées, Publicités insérées |
