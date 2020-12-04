@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Liste bloquée des runtimes d&#39;application limitée à l&#39;accès au contenu protégé {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
-Indique la version de Primetime ou Flash Runtime qui ne peut pas accéder au contenu. Spécifiez le runtime restreint (Flash Player, AIR ou iOS), la plate-forme et la version.
+Indique la version du Primetime ou du Flash Runtime qui ne peut pas accéder au contenu. Spécifiez le runtime restreint (Flash Player, AIR ou iOS), la plate-forme et la version.
 
-Exemple de cas d’utilisation : Tout comme la liste bloquée client DRM, la dernière version des runtimes Flash Player, AIR ou iOS peut être spécifiée comme version minimale requise pour l&#39;acquisition de licence et la lecture de contenu.
+Exemple de cas d’utilisation : Tout comme la liste bloquée client DRM, la dernière version des runtimes Flash Player, AIR ou iOS peut être spécifiée comme version minimale requise pour l’acquisition de licence et la lecture de contenu.
 
 Le runtime de l&#39;application peut être identifié par l&#39;un des attributs pris en charge pour les versions client DRM, en plus des attributs suivants :
 
