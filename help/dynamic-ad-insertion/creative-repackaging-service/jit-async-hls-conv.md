@@ -6,6 +6,9 @@ title: Principales utilisations des SIR
 uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Lors d’un reconditionnement asynchrone, la création publicitaire est transcod
 
 Lors de la conversion HLS/HLS, CRS reformate un fichier HLS et un fichier créatif en blocs de taille appropriée afin d’assurer une lecture cohérente.
 
-## Correction juste à temps {#section_1BA344F2300B49F291865A7461EDFEAE}
+## Restauration juste à temps {#section_1BA344F2300B49F291865A7461EDFEAE}
 
 La séquence pour le reconditionnement JIT est la suivante :
 
@@ -32,9 +35,9 @@ La séquence pour le reconditionnement JIT est la suivante :
 
 ## Réparation asynchrone {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-Vous pouvez utiliser l&#39;API décrite dans l&#39;API [de](../creative-repackaging-service/api-repackage.md) retraitement pour prétranscoder un élément créatif non HLS afin de minimiser les pertes d&#39;impressions et d&#39;optimiser la monétisation.
+Vous pouvez utiliser l&#39;API décrite dans [API de retraitement](../creative-repackaging-service/api-repackage.md) pour prétranscoder un élément créatif non HLS afin de minimiser la perte d&#39;impressions et d&#39;optimiser la monétisation.
 
-## Conversion HLS en HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
+## Conversion HLS-en-HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
 Pour éviter la mise en mémoire tampon et les retards, un client télécharge une vidéo en petits morceaux. Si les tailles des blocs sont incohérentes, la lecture peut être risquée. La conversion HLS/HLS garantit que les blocs de données sont tous de la même durée (par exemple, 6 secondes).
 
