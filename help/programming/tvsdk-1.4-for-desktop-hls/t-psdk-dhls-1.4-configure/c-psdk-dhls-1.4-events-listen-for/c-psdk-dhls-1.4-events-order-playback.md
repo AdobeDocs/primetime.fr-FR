@@ -6,6 +6,9 @@ title: Ordre des événements de lecture
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
@@ -18,19 +21,19 @@ TVSDK distribue des événements/notifications dans des séquences généralemen
 
 Les exemples suivants montrent l’ordre de certains événements incluant des événements de lecture.
 
-* Lors du chargement réussi d&#39;une ressource multimédia par `MediaPlayer.replaceCurrentResource`l&#39;intermédiaire de, l&#39;ordre des événements est le suivant :
+* Lors du chargement réussi d&#39;une ressource multimédia via `MediaPlayer.replaceCurrentResource`, l&#39;ordre des événements est le suivant :
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état  `MediaPlayerStatus.INITIALIZED`
 
-* Lors de la préparation de la lecture à travers `MediaPlayer.prepareToPlay`la vidéo, l’ordre des événements est le suivant :
+* Lors de la préparation de la lecture via `MediaPlayer.prepareToPlay`, l’ordre des événements est le suivant :
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` si des publicités ont été insérées
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` avec état  `MediaPlayerStatus.PREPARED`
 
 * Pour les flux en direct/linéaires, pendant la lecture, à mesure que la fenêtre de lecture avance et que des opportunités supplémentaires sont résolues, l’ordre des événements est le suivant :
 
