@@ -6,11 +6,14 @@ title: Modifications de l’API de suppression et de remplacement des publicité
 uuid: 3689d31f-4feb-4ea5-ac49-ef2e71472f4b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
 
-# Modifications de l’API de suppression et de remplacement des publicités {#ad-deletion-and-replacement-api-changes}
+# Modifications de l&#39;API de suppression et de remplacement des publicités {#ad-deletion-and-replacement-api-changes}
 
 TVSDK prend en charge la suppression et le remplacement programmatiques du contenu publicitaire dans les flux VOD.
 
@@ -33,21 +36,21 @@ Les modifications suivantes dans TVSDK prennent en charge la suppression et le r
       >
       >Tous les objets du tableau doivent être du même type.
 
-   * `PTTimeRangeCollectionType` est un enum qui définit le comportement des plages définies dans le `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` est un enum qui définit le comportement des plages définies dans le  `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`: Le type des plages est *Mark*. Les plages servent à marquer les plages du contenu en tant que publicités.
+      * `PTTimeRangeCollectionTypeMarkRanges`: Le type des plages est  *Mark*. Les plages servent à marquer les plages du contenu en tant que publicités.
 
       * `PTTimeRangeCollectionTypeDeleteRanges`: Le type des plages est Supprimer. Les plages définies sont supprimées du contenu principal avant l’insertion de la publicité.
       * `PTTimeRangeCollectionTypeReplaceRanges`: Le type des plages est Remplacer. Les plages définies sont remplacées à partir de l’élément principal par des publicités (le mode de signalisation publicitaire est défini sur `PTAdSignalingModeCustomTimeRanges`).
 
-* `PTReplacementTimeRange` - Nouvelle classe publique qui définit une plage unique de `PTTimeRangeCollection`:
+* `PTReplacementTimeRange` - Nouvelle classe publique qui définit une plage unique de  `PTTimeRangeCollection`:
 
    * `property CMTimeRange range` - Définit le début et la durée de la plage.
-   * `property long replacementDuration` - Si le type de la `TimeRangeCollection` est `PTTimeRangeCollectionTypeReplaceRanges`, la `replacementDuration` est utilisée pour créer une opportunité de placement (insertion publicitaire) avec une durée de `replacementDuration`. Si le `replacementDuration` paramètre n’est pas défini, le serveur d’annonces détermine la durée et le nombre de publicités pour cette opportunité d’emplacement.
+   * `property long replacementDuration` - Si le type de la  `TimeRangeCollection` est  `PTTimeRangeCollectionTypeReplaceRanges`, la  `replacementDuration` est utilisée pour créer une opportunité de placement (insertion publicitaire) avec une durée de  `replacementDuration`. Si `replacementDuration` n&#39;est pas défini, le serveur d&#39;annonces détermine la durée et le nombre de publicités pour cette opportunité d&#39;emplacement.
 
 * `PTAdSignalingMode`:
 
-   * `PTAdSignalingModeCustomTimeRanges` - Ajout d’un nouveau type de `PTAdSignalingMode`. Ce mode est utilisé conjointement avec le type `PTTimeRangeCollection` avec `PTTimeRangeCollectionReplace` pour l’insertion d’annonces en fonction des plages de remplacement.
+   * `PTAdSignalingModeCustomTimeRanges` - Ajouté un nouveau type de  `PTAdSignalingMode`. Ce mode est utilisé conjointement avec le `PTTimeRangeCollection` avec le type `PTTimeRangeCollectionReplace` pour l&#39;insertion d&#39;annonces publicitaires en fonction des plages de remplacement.
 
 * `PTAdMetadata`:
 
