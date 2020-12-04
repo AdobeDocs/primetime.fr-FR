@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Le fichier de configuration de l&#39;outil de ligne de commande Adobe Access Media Packager requiert des informations d&#39;identification PKCS12 utilisées lors de la création de packs.
 
-Dans les outils de ligne de commande d’implémentation de référence, le mot de passe du fichier d’informations d’identification PKCS12 est stocké dans le fichier flashaccess.properties en clair. Pour cette raison, assurez-vous de sécuriser l&#39;ordinateur hébergeant ce fichier et assurez-vous qu&#39;il se trouve dans un environnement sécurisé. (voir Sécurité [physique et accès](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
+Dans les outils de ligne de commande d’implémentation de référence, le mot de passe du fichier d’informations d’identification PKCS12 est stocké dans le fichier flashaccess.properties en clair. Pour cette raison, assurez-vous de sécuriser l&#39;ordinateur hébergeant ce fichier et assurez-vous qu&#39;il se trouve dans un environnement sécurisé. (Voir [Sécurité physique et accès](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
 
-Il utilise également les certificats License Server et License Server Transport. L&#39;intégrité et la confidentialité de ces renseignements doivent être protégées. Seules les entités autorisées doivent être autorisées à utiliser l&#39;emballeur. Si l’une de vos clés privées est compromise, informez immédiatement Adobe Systems Incorporated afin que le certificat puisse être révoqué.
+Il utilise également les certificats License Server et License Server Transport. L&#39;intégrité et la confidentialité de ces informations doivent être protégées. Seules les entités autorisées doivent être autorisées à utiliser l&#39;emballeur. Si l’une de vos clés privées est compromise, informez immédiatement Adobe Systems Incorporated afin que le certificat puisse être révoqué.
 
 >[!NOTE]
 >
