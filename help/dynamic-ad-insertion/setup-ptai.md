@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Le processus de configuration de l’Ad Insertion Primetime est le suivant :
 
-1. Intégrez votre serveur d’annonces à l’Ad Insertion Primetime en vous connectant à la console de l’Ad Insertion Primetime et en définissant des règles de redirection. Pour plus d’informations, voir [Intégration de votre serveur](integrate-ad-server.md)publicitaire.
+1. Intégrez votre serveur d’annonces à l’Ad Insertion Primetime en vous connectant à la console de l’Ad Insertion Primetime et en définissant des règles de redirection. Pour plus d’informations, voir [Intégration de votre serveur d’annonces ](integrate-ad-server.md).
 
 1. Configurez des canaux ou des plateformes dans la console Ad Insertion Primetime pour garantir des dimensions de rapports appropriées.
 
@@ -22,8 +22,8 @@ Le processus de configuration de l’Ad Insertion Primetime est le suivant :
 
 1. Déterminez si un réassemblage publicitaire juste à temps est nécessaire pour votre processus publicitaire. Contactez votre représentant du service d’assistance de Primetime pour activer le service.
 
-1. Mettez à jour votre application afin d’utiliser l’API [du](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap pour effectuer et recevoir des demandes pour l’Ad Insertion Primetime, et configurez votre application pour qu’elle soit prise en charge. Pour plus d’informations, voir Suivi [des](set-up-ad-tracking.md)publicités.
+1. Mettez à jour votre application afin d’utiliser l’[API du Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) pour envoyer et recevoir des demandes pour l’Ad Insertion Primetime et configurez votre application pour qu’elle soit prise en charge. Pour plus d’informations, voir [Suivi des publicités](set-up-ad-tracking.md).
 
 1. Testez votre application pour vous assurer que la lecture des publicités est correcte. <!-- using the [Debugging tools](troubleshoot-and-debug.md).-->
 
-1. Testez vos applications pour vérifier le déclenchement correct des balises de suivi des publicités et d’impression.<!-- using the [Reporting](reporting-and-billing.md).-->
+1. Testez vos applications pour vérifier le déclenchement correct des balises de suivi des publicités et d&#39;impression.<!-- using the [Reporting](reporting-and-billing.md).-->
