@@ -4,6 +4,9 @@ title: Utilisation de la ligne de commande
 uuid: 72117619-a723-49d3-9aa9-5eefcf5b0916
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
@@ -33,19 +36,19 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l nom_fichier_licence </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l nom_fichier_licence  </span> </td> 
    <td colname="2" class="- topic/entry "> Nom du fichier contenant la licence à incorporer. Plusieurs options <span class="codeph"> -l </span> peuvent être spécifiées pour incorporer plusieurs licences. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m nom_fichier_métadonnées </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m nom_fichier_métadonnées  </span> </td> 
    <td colname="2" class="- topic/entry "> Spécifiez les métadonnées de contenu pour lesquelles générer une licence. (Obligatoire pour générer une licence) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
    <td colname="2" class="- topic/entry "> Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que <span class="codeph"> -o </span> n'est pas défini, une erreur est renvoyée. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> Si le fichier de destination existe déjà, remplacez-le sans invite. </td> 
   </tr> 
  </tbody> 
