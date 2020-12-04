@@ -6,6 +6,9 @@ title: Flux de travaux multiDRM pour Windows et PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Primetime TVSDK prend en charge la lecture de contenu DASH chiffré par Widevine
 >
 >Aucun plan n&#39;a été fait pour renvoyer vers Android TVSDK 1.X la lecture du contenu DASH chiffré à l&#39;aide de la technologie Widevine.
 
-## Contenu DASH et chiffrement commun en un coup d’oeil {#section_33A881158F724835B4B89AAE97302B17}
+## Contenu DASH et chiffrement commun en un coup d&#39;oeil {#section_33A881158F724835B4B89AAE97302B17}
 
 Le contenu du tiret est constitué d’un manifeste principal, écrit en xml, qui pointe vers les fichiers vidéo et audio à lire. Dans l’exemple ci-dessous, le manifeste DASH pointe vers une URL de vidéo, video/1080_30.mp4, et une URL audio, audio/1080_30.mp4, par rapport à l’URL du manifeste.
 
@@ -44,7 +47,7 @@ Le contenu du tiret est constitué d’un manifeste principal, écrit en xml, qu
 </MPD>
 ```
 
-Vous trouverez ci-dessous un exemple de manifeste auquel le chiffrement commun est appliqué. Les éléments XML de protection de contenu Widevine (les `<ContentProtection>` blocs) dans le manifeste contiennent une zone pssh codée en base 64 (en-tête spécifique au système de protection). La zone Pssh contient les données nécessaires à l’initialisation du déchiffrement du contenu. Ces données sont également intégrées au contenu vidéo/audio auquel le manifeste fait référence. Le contenu DASH peut comporter plusieurs éléments de protection du contenu, par exemple 1 pour PlayReady et 1 pour Widevine.
+Vous trouverez ci-dessous un exemple de manifeste auquel le chiffrement commun est appliqué. Les éléments XML de protection de contenu Widevine (les blocs `<ContentProtection>`) du manifeste contiennent une zone pssh codée en base64 (en-tête spécifique du système de protection). La zone Pssh contient les données nécessaires à l’initialisation du déchiffrement du contenu. Ces données sont également intégrées au contenu vidéo/audio auquel le manifeste fait référence. Le contenu DASH peut comporter plusieurs éléments de protection du contenu, par exemple 1 pour PlayReady et 1 pour Widevine.
 
 ```
 <?xml version="1.0" ?>
