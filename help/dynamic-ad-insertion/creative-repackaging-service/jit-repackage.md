@@ -6,6 +6,9 @@ title: Workflows détaillés pour la restauration JIT
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Le processus de reconditionnement JIT côté serveur de manifeste est le suivant
 
    >[!NOTE]
    >
-   >Dans une configuration multi-CDN, le serveur de manifeste utilise le `ptcdn` paramètre de l’URL d’amorçage pour identifier le serveur CDN.
+   >Dans une configuration multi-CDN, le serveur de manifeste utilise le paramètre `ptcdn` de l’URL d’amorçage pour identifier le serveur CDN.
 
 1. Le serveur manifeste vérifie la réponse :
 
@@ -54,7 +57,7 @@ Un client basé sur TVSDK ou disposant de capacités similaires peut interagir a
 
       >[!NOTE]
       >
-      >Dans une configuration multi-CDN, le serveur de manifeste utilise le `ptcdn` paramètre de l’URL d’amorçage pour identifier le serveur CDN.
+      >Dans une configuration multi-CDN, le serveur de manifeste utilise le paramètre `ptcdn` de l’URL d’amorçage pour identifier le serveur CDN.
 
 1. Le client vérifie la réponse du serveur CDN.
 
