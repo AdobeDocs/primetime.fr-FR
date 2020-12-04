@@ -6,11 +6,14 @@ title: Supprimer des plages avec l’annonce de prise de décision et Primetime
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
 
-# Supprimer des plages avec l’annonce de prise de décision et Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Supprimer des plages avec Primetime et prise de décision et {#delete-ranges-with-primetime-ad-decisioning-ad}
 
 Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
 
