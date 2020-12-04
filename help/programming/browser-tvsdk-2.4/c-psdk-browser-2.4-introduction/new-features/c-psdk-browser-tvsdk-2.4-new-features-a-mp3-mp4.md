@@ -22,7 +22,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 >[!TIP]
 >
->Dans les tableaux de la matrice des fonctionnalités ci-dessous, une icône ![](assets/supported15.png) prise en charge signifie que la fonctionnalité est prise en charge dans la version actuelle.
+>Dans les tableaux de la matrice des fonctionnalités ci-dessous, ![icône prise en charge](assets/supported15.png) signifie que la fonctionnalité est prise en charge dans la version actuelle.
 
 ## Fonctionnalités audio MP3 {#section_C900C301291A40529D02EACC3CD4D55A}
 
