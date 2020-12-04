@@ -6,11 +6,14 @@ title: Résolveurs de contenu pour suppression/remplacement d’annonces
 uuid: ed168c52-ab7b-4fe6-8775-eb18018dc249
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# Résolveurs de contenu pour suppression/remplacement d’annonces  {#content-resolvers-for-ad-deletion-replacement}
+# Résolveurs de contenu pour la suppression et le remplacement des publicités {#content-resolvers-for-ad-deletion-replacement}
 
 Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
 
