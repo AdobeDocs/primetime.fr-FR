@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Eléments d’API pour la lecture de publicités{#api-elements-for-ad-playback}
+# Eléments d’API pour la lecture de publicités {#api-elements-for-ad-playback}
 
 TVSDK fournit des classes et des méthodes que vous pouvez utiliser pour personnaliser le comportement de lecture du contenu qui contient de la publicité.
 
@@ -31,7 +31,8 @@ Les éléments d’API suivants sont utiles pour personnaliser la lecture :
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de 
     <pre>
-     la propriété <span class="codeph"> adBreakAsWatched</span> .
+     the 
+     <span class="codeph"> propriété adBreakAsWatched</span>.
     </pre> </td> 
   </tr> 
   <tr> 
