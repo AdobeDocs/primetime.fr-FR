@@ -6,6 +6,9 @@ title: Considérations et bonnes pratiques
 uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
 * Actuellement, vous devez exécuter la plupart des opérations de l’API TVSDK sur le thread d’interface utilisateur, qui est le thread Android principal.
 
    Les opérations qui s&#39;exécutent correctement sur le thread principal peuvent générer une erreur et se fermer lors de l&#39;exécution sur un thread en arrière-plan.
-* La lecture vidéo nécessite Adobe Video Engine (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
+* La lecture vidéo nécessite le moteur de vidéo d’Adobe (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
 
    * Le sous-titrage est pris en charge dans la mesure prévue par l&#39;AVE.
    * Selon la précision de l’encodeur, la durée réelle du support codé peut différer des durées enregistrées dans le manifeste de ressources de diffusion en continu.
