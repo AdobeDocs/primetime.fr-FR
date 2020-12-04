@@ -6,6 +6,9 @@ title: Format de chronologie VOD
 uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,10 @@ B,duration,maximum_number_of_ads,position
 ```
 
 La durée est en secondes, avec une précision de 0,001 (millisecondes); nombre de publicités est un entier. La position est l’une des suivantes :
-* **n** Aucun — aucune publicité* **p** Pré-roll — avant le contenu* **m** Mid-roll — dans le contenu* **t Post-roll — après le contenu**
+* **n** Aucun — aucune publicité
+* **p** Avant le lancement — avant le contenu
+* **m** Mid-roll — dans le contenu
+* **t** Post-roll — après le contenu
 
 Par exemple, `B,60,2,p` représente une coupure d’une minute pour un maximum de 2 publicités avant le contenu.
 
