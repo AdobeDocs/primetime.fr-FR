@@ -5,7 +5,10 @@ seo-title: Résumé des événements du lecteur Primetime
 title: Résumé des événements du lecteur Primetime
 uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '632'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ TVSDK vous avertit lorsque des événements auxquels votre application doit rép
 
 >[!TIP]
 >
->Les codes de événement sont les constantes de l&#39; `MediaPlayerEvent` enum.
+>Les codes de événement sont les constantes de l&#39;énumération `MediaPlayerEvent`.
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
