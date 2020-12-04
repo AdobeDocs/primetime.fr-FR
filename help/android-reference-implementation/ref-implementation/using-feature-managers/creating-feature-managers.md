@@ -6,11 +6,14 @@ title: Création de gestionnaires de fonctionnalités en transmettant les inform
 uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au lecteur Media {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
+# Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
 Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées via MediaPlayer.
 
@@ -26,7 +29,7 @@ Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées
 
 Chaque fonction possède une interface de configuration correspondante. Par exemple, `CCManager` utilise `ICCConfig` pour récupérer la configuration. `ICCConfig` contient les méthodes permettant d’obtenir les informations de configuration relatives au sous-titrage uniquement.
 
-L’exemple suivant montre le [!DNL ICCConfig.java] fichier, configuré pour recevoir des informations sur la visibilité de la légende fermée, le style et le bord de la police à partir du `MediaPlayer`:
+L’exemple suivant montre le fichier [!DNL ICCConfig.java], configuré pour recevoir des informations sur la visibilité de la légende fermée, le style et le bord de la police à partir de `MediaPlayer` :
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +67,7 @@ L’exemple suivant montre le [!DNL ICCConfig.java] fichier, configuré pour rec
 }
 ```
 
-Une application qui utilise une fonction TVSDK peut créer son gestionnaire de fonctionnalités avec un fournisseur de configuration et un `MediaPlayer` objet. Par exemple :
+Une application qui utilise une fonction TVSDK peut créer son gestionnaire de fonctionnalités avec un fournisseur de configuration et un objet `MediaPlayer`. Par exemple :
 
 ```java
 // This application needs to use the advertising workflow feature 
