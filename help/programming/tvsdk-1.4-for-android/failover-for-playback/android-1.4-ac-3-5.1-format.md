@@ -6,6 +6,9 @@ title: Format AC-3 5.1
 uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 La diffusion en continu sur Internet nécessite une connexion constante et stable pour lire un flux à partir d&#39;un serveur distant. Cependant, la variabilité de la connexion Internet ou de la lecture en flux continu d’une visionneuse signifie que la lecture à distance peut ne pas avoir la qualité de lecture du média en local.
 
-Primetime ne peut pas se protéger contre des pannes telles qu&#39;une panne de FAI ou une déconnexion de câble. Cependant, la diffusion en flux continu Primetime assure une protection contre le basculement afin de protéger la lecture de certaines défaillances du serveur distant ou de certains échecs opérationnels, ce qui améliore l’expérience des lecteurs. TVSDK met en oeuvre une protection contre le basculement afin de minimiser les interruptions de lecture et d’obtenir une lecture transparente malgré les problèmes de transmission. Le lecteur vidéo bascule automatiquement sur une visionneuse de supports de sauvegarde lorsque des rendus ou des fragments entiers ne sont pas disponibles.
+Primetime ne peut pas se protéger contre des pannes telles qu&#39;une panne de FAI ou une déconnexion de câble. Cependant, la diffusion en flux continu Primetime assure une protection contre le basculement afin de protéger la lecture de certaines défaillances du serveur distant ou de certaines défaillances opérationnelles, ce qui améliore l’expérience des visionneuses. TVSDK met en oeuvre une protection contre le basculement afin de minimiser les interruptions de lecture et d’obtenir une lecture transparente malgré les problèmes de transmission. Le lecteur vidéo bascule automatiquement sur une visionneuse de supports de sauvegarde lorsque des rendus ou des fragments entiers ne sont pas disponibles.
 
 Le format Audio Codec 3 (AC-3, également appelé Dolby Digital®) 5.1, permet aux fournisseurs de contenu de compresser la taille des fichiers audio multicanaux sans nuire à la qualité du son. AC-3 est un format 5.1, ce qui signifie qu’il fournit cinq canaux de bande passante complète pour une expérience utilisateur plus riche.
 
@@ -35,7 +38,7 @@ TVSDK prend en charge les fonctionnalités AC-3 5.1 suivantes :
 
    En mode passthrough, au lieu de décoder le support du format AC-3 5.1 vers un format PCM (multicanal pulse-code modulation), TVSDK est modifié ou non modifié (selon l&#39;appareil) par le support Dolby du décodeur. Ce média est envoyé au périphérique audio (haut-parleur ou récepteur) afin que le périphérique audio puisse décoder et lire le flux Dolby surround.
 
-TVSDK prend en charge les fonctionnalités AC-3 5.1 uniquement sur l’appareil Amazon Fire TV 1ère génération.
+TVSDK ne prend en charge les fonctionnalités AC-3 5.1 que sur l’appareil Amazon Fire TV 1ère génération.
 
 Les fonctionnalités AC-3 5.1 suivantes ne sont pas prises en charge :
 
@@ -44,9 +47,9 @@ Les fonctionnalités AC-3 5.1 suivantes ne sont pas prises en charge :
 
 ## Sélection du support pris en charge {#section_E1DFA1F472EA4BDE846C71A3343E275A}
 
-Voici le flux de travail typique qui se produit lorsque TVSDK trouve un manifeste avec un média AC-3 et AAC :
+Voici le flux de travaux typique qui se produit lorsque TVSDK trouve un manifeste avec un média AC-3 et AAC :
 
-1. requêtes TVSDK qui codent le périphérique peut prendre en charge.
+1. REQUÊTES TVSDK qui codent le périphérique peut prendre en charge.
 1. Le codec de meilleure qualité est sélectionné.
 
    L&#39;ordre de qualité est AC-3 > AAC.
