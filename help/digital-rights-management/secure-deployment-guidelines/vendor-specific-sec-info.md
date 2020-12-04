@@ -1,22 +1,25 @@
 ---
-description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution DRM Adobe Primetime.
-seo-description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution DRM Adobe Primetime.
+description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution Adobe Primetime DRM.
+seo-description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution Adobe Primetime DRM.
 seo-title: Informations de sécurité spécifiques au fournisseur
 title: Informations de sécurité spécifiques au fournisseur
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
 # Informations de sécurité spécifiques au fournisseur{#vendor-specific-security-information}
 
-Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution DRM Adobe Primetime.
+Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution Adobe Primetime DRM.
 
-Pour obtenir des informations de sécurité spécifiques au fournisseur pour votre système d’exploitation et votre serveur d’applications, voir Utilisation du serveur de clés DRM d’Adobe Primetime.
+Pour obtenir des informations de sécurité spécifiques au fournisseur pour votre système d’exploitation et votre serveur d’applications, voir Utilisation du serveur de clés DRM Adobe Primetime.
 
-## Informations de sécurité du système d’exploitation {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
+## Informations de sécurité du système d&#39;exploitation {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
 Lorsque vous sécurisez votre système d’exploitation, vous devez mettre en oeuvre les mesures décrites par le fournisseur de votre système d’exploitation.
 
