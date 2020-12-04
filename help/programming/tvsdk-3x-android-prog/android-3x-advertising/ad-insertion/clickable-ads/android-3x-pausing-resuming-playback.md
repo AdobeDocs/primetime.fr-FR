@@ -6,6 +6,9 @@ title: Pause et reprise de la lecture
 uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
 
-1. Remplacez l’Activité `onPause` et `onResume` depuis Android.
+1. Remplacez `onPause` et `onResume` de l&#39;Activité Android.
 
    ```java
    @Override 
