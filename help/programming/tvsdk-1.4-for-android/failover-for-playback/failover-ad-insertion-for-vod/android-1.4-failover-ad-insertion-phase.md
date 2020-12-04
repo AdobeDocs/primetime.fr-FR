@@ -6,11 +6,14 @@ title: Phase d'insertion publicitaire
 uuid: 4a8e9578-6e95-44c0-b045-ae3c20da75e9
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '234'
+ht-degree: 0%
 
 ---
 
 
-# Phase d&#39;insertion publicitaire{#ad-insertion-phase}
+# Phase d’insertion publicitaire{#ad-insertion-phase}
 
 TVSDK insère le contenu alternatif (publicités) dans la chronologie qui correspond au contenu principal.
 
