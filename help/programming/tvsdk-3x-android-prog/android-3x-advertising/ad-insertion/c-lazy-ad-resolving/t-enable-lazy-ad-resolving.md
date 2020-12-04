@@ -7,20 +7,23 @@ title: Activer la résolution des annonces parentes
 uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
 
-# Activer la résolution des annonces parentes {#enable-lazy-ad-resolving}
+# Activer la résolution des publicités parentes {#enable-lazy-ad-resolving}
 
 Vous pouvez activer ou désactiver la fonction Résolution des publicités en différé à l’aide du mécanisme de chargement des publicités en différé existant (la résolution des publicités en différé est désactivée par défaut).
 
 Vous pouvez activer ou désactiver la résolution de publicités diffuses en appelant [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) avec true ou false.
 
-* Utilisez les méthodes Boolean *hasDelayAdLoading* et *setDelayAdLoading* dans AdvertisingMetadata pour contrôler le timing de la résolution de la publicité et le positionnement des publicités dans la chronologie :
+* Utilisez les méthodes booléennes *hasDelayAdLoading* et *setDelayAdLoading* dans AdvertisingMetadata pour contrôler le timing de la résolution de la publicité et le positionnement des publicités sur le plan de montage chronologique :
 
    * Si *hasDelayAdLoading* renvoie false, TVSDK attend que toutes les publicités soient résolues et placées avant de passer à l’état PRÉPARÉ.
-   * Si *hasDelayAdLoading* renvoie true, TVSDK résout uniquement les publicités et transitions initiales à l’état PRÉPARÉ.
+   * Si *hasDelayAdLoading* renvoie true, TVSDK résout uniquement les publicités et les transitions initiales à l’état PRÉPARÉ.
 
       * Les publicités restantes sont résolues et placées pendant la lecture.
    * Lorsque *hasPreroll *ou *hasLivePreroll* renvoie false, TVSDK suppose qu’il n’y a aucune publicité preroll et début la lecture du contenu immédiatement. Il s’agit par défaut de la valeur true.
@@ -46,9 +49,9 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Pour représenter précisément les publicités comme des indices sur une barre de défilement, écoutez le `TimelineEvent`événement et redessinez la barre de défilement chaque fois que vous recevez ce événement.
+Pour représenter précisément les publicités comme des indices sur une barre de défilement, écoutez le `TimelineEvent`événement et retracez la barre de défilement chaque fois que vous recevez ce événement.
 
-Lorsque l’option Résolution des publicités différées est activée pour les flux VOD, toutes les coupures publicitaires sont placées sur la chronologie, mais la plupart des coupures publicitaires ne seront pas encore résolues. L’application peut déterminer s’il convient ou non de dessiner ces marqueurs en vérifiant la `TimelineMarker::getDuration()`variable. Si la valeur est supérieure à zéro, les publicités au sein de la coupure publicitaire ont été résolues.
+Lorsque l’option Résolution des publicités différées est activée pour les flux VOD, toutes les coupures publicitaires sont placées sur la chronologie, mais la plupart des coupures publicitaires ne seront pas encore résolues. L&#39;application peut déterminer si ces marqueurs doivent être dessinés ou non en vérifiant le `TimelineMarker::getDuration()`. Si la valeur est supérieure à zéro, les publicités au sein de la coupure publicitaire ont été résolues.
 
 TVSDK distribue ce événement lorsqu’une coupure publicitaire a été résolue, ainsi que lorsque le lecteur transition à l’état PRÉPARÉ.
 
