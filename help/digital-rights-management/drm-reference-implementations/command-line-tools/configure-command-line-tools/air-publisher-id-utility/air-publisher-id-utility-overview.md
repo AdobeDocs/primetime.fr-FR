@@ -19,9 +19,9 @@ L’ID d’éditeur est unique au certificat que vous utilisez pour créer un fi
 
 >[!NOTE]
 >
->L’ID d’éditeur utilisé pour l’application de la liste autorisée AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier de l’application.
+>L’ID d’éditeur utilisé pour l’application de la liste autorisée AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le fichier [!DNL application.xml] de l’application.
 
-## Utilisation de la ligne de commande de l’utilitaire d’identification de l’éditeur AIR {#air-publisher-id-utility-command-line-usage}
+## Utilitaire d’identification de l’éditeur AIR, utilisation de ligne de commande {#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -37,10 +37,10 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* indique un chemin d’accès au [!DNL signatures.xml] fichier de l’application AIR, situé dans le [!DNL META-INF] répertoire des applications.
+   * `signaturefile`* indique un chemin d’accès au  [!DNL signatures.xml] fichier de l’application AIR, situé dans le  [!DNL META-INF] répertoire des applications.
 
 * `signingcert` spécifie le certificat utilisé pour signer une application AIR
 
 >[!NOTE]
 >
->Pour déterminer l&#39;ID d&#39;éditeur d&#39;une application Android, vous devez utiliser l&#39; `-s` option pour spécifier le certificat utilisé pour signer le package d&#39;application Android (APK). Primetime DRM est nécessaire pour créer des applications Android capables de lire du contenu protégé par DRM Primetime.
+>Pour déterminer l&#39;ID d&#39;éditeur d&#39;une application Android, vous devez utiliser l&#39;option `-s` pour spécifier le certificat utilisé pour signer le package d&#39;application Android (APK). Primetime DRM est nécessaire pour créer des applications Android capables de lire du contenu protégé par DRM Primetime.
