@@ -6,6 +6,9 @@ title: Utilisation de CRS pour injecter des balises de métadonnées minutées I
 uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
 source-git-commit: c2216a5089d23ca1fcbb77c87b4a01a6fa1807ff
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -20,10 +23,10 @@ Le lecteur client lit les métadonnées ID3 pour activer le suivi des publicité
 >
 >L’injection de métadonnées minutées ID3 fonctionne uniquement sur Safari sur iOS.
 
-## Workflow pour CRS pour l&#39;injection ID3 {#workflow-for-crs-for-id3-injection}
+## Processus de CRS pour l&#39;injection ID3 {#workflow-for-crs-for-id3-injection}
 
-Le flux de travaux pour l’injection ID3 est identique à celui des Workflows [détaillés pour la restauration JIT.](../creative-repackaging-service/jit-repackage.md) Si le serveur de manifeste reçoit le `ptplayer=ios-mobileweb` paramètre, il indique à CRS d’injecter des paquets ID3 dans la publicité transcodée et créative avant de la télécharger sur le serveur CDN.
+Le flux de travaux pour l’injection ID3 est identique à celui de [Workflows détaillés pour la correction JIT.](../creative-repackaging-service/jit-repackage.md) Si le serveur de manifeste reçoit le  `ptplayer=ios-mobileweb` paramètre, il indique à CRS d’injecter des paquets ID3 dans la publicité transcodée et créative avant de la télécharger sur le serveur CDN.
 
 >[!NOTE]
 >
->Dans une configuration multiCDN, le serveur de manifeste utilise le `ptcdn` paramètre de l’URL d’amorçage pour identifier le serveur CDN à utiliser pour télécharger la création publicitaire.
+>Dans une configuration multi-CDN, le serveur de manifeste utilise le paramètre `ptcdn` de l’URL d’amorçage pour identifier le serveur CDN qui téléchargera la création publicitaire.
