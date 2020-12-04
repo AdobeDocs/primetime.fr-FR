@@ -4,6 +4,9 @@ title: Utilisation des stratégies de protection d’Output
 uuid: f00d2a97-0036-41a6-ab44-391cc40b146e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +24,6 @@ Expressplay ne prend actuellement pas en charge l’attachement de restrictions 
 
 **Stratégies de protection de sortie PlayReady**
 
-PlayReady prend également en charge de manière native les restrictions de protection de sortie analogique et numérique. Valeurs de niveau de protection de sortie que vous pouvez définir. La page Niveaux [de protection](https://msdn.microsoft.com/en-us/library/dn468831.aspx) de sortie documents les valeurs que vous pouvez définir et le comportement attendu du client.
+PlayReady prend également en charge de manière native les restrictions de protection de sortie analogique et numérique. Valeurs de niveau de protection de sortie que vous pouvez définir. La page [Niveaux de protection de sortie](https://msdn.microsoft.com/en-us/library/dn468831.aspx) documents les valeurs que vous pouvez définir et le comportement attendu du client.
 
-Si vous utilisez Expressplay, associez des valeurs de niveau de protection de sortie au moment de la génération du jeton par le biais de l’indicateur compresséDigitalAudioOPL, uncompresséDigitalAudioOPL, compresséDigitalVideoOPL, uncompresséDigitalVideoOPL et de l’indicateur unknownOutputBehavior. Ces informations figurent dans la demande de jeton de licence [PlayReady.](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
+Si vous utilisez Expressplay, associez des valeurs de niveau de protection de sortie au moment de la génération du jeton par le biais de l’indicateur compresséDigitalAudioOPL, uncompresséDigitalAudioOPL, compresséDigitalVideoOPL, uncompresséDigitalVideoOPL et de l’indicateur unknownOutputBehavior. Ils sont répertoriés à l’adresse [Demande de jeton de licence PlayReady](https://www.expressplay.com/developer/restapi/#playready-license-token-request).
