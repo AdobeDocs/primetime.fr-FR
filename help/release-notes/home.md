@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -24,13 +24,13 @@ La version portait sur les mises à jour de maintenance.
 
 Cette version était axée sur la mise à jour de la version graduelle de l’application de référence Primetime vers la version 5.6.4.
 
-Pour plus d’informations sur la version actuelle d’ [Android](../release-notes/tvsdk-3x-android.md), consultez la section.
+Consultez pour plus d’informations sur la version actuelle pour [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Améliorations et correctifs des notes de mise à jour de TVSDK 3.12 iOS
 
 Cette version s’est concentrée sur la résolution des principaux problèmes des clients.
 
-Pour plus d’informations sur la version actuelle d’ [iOS](../release-notes/tvsdk-3x-ios.md), reportez-vous à la section.
+Consultez pour plus d’informations sur la version actuelle de [iOS](../release-notes/tvsdk-3x-ios.md).
 
 ## Voir aussi
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur la version actuelle d’ [iOS](../release-notes/t
 | [Implémentation de référence](/help/android-reference-implementation/home.md) | Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
 | [Références API Primetime](/help/reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
-| [Aide de l’Ad Insertion Primetime](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
+| [Aide sur Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
 | [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez des fichiers PDF de la documentation archivée. |
 
 ## Ressources utiles
