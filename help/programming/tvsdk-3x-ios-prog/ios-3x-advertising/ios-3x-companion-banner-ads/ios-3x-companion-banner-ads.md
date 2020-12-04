@@ -6,6 +6,9 @@ title: Bannières publicitaires d’accompagnement
 uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
@@ -35,8 +38,8 @@ Le contenu d’un fichier PTAdAsset décrit une bannière connexe.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-La `PTMediaPlayerAdStartedNotification` notification renvoie une `PTAd` instance contenant une `companionAssets` propriété (tableau de `PtAdAsset`).
-Chacune `PtAdAsset` fournit des informations sur l’affichage de la ressource.
+La notification `PTMediaPlayerAdStartedNotification` renvoie une instance `PTAd` contenant une propriété `companionAssets` (tableau de `PtAdAsset`).
+Chaque `PtAdAsset` fournit des informations sur l&#39;affichage de la ressource.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -65,7 +68,7 @@ Chacune `PtAdAsset` fournit des informations sur l’affichage de la ressource.
   </tr> 
   <tr> 
    <td colname="col1"> data </td> 
-   <td colname="col2"> Données du type spécifié par <span class="codeph">resourceType</span> pour cette bannière complémentaire. </td> 
+   <td colname="col2"> Données du type spécifié par <span class="codeph">resourceType</span> pour cette bannière d'accompagnement. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -74,35 +77,35 @@ Chacune `PtAdAsset` fournit des informations sur l’affichage de la ressource.
 
 Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
 
-TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire par le biais du événement de `PTMediaPlayerAdPlayStartedNotification` notification.
+TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement de notification `PTMediaPlayerAdPlayStartedNotification`.
 
 Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
 
 * Un extrait de code HTML
 * URL d’une page iFrame
-* URL d’une image statique ou d’un fichier SWF Adobe Flash
+* URL d’une image statique ou d’un fichier SWF de Flash d’Adobe
 
 Pour chaque publicité connexe, TVSDK indique les types disponibles pour votre application.
 
-1. Créez une `PTAdBannerView` instance pour chaque emplacement publicitaire secondaire sur votre page.
+1. Créez une instance `PTAdBannerView` pour chaque emplacement publicitaire secondaire sur votre page.
 
        Assurez-vous que les informations suivantes ont été fournies :
    
    * Pour empêcher la récupération des publicités complémentaires de différentes tailles, une instance de bannière qui spécifie la largeur et la hauteur.
    * Taille standard des bannières.
 
-1. Ajouter un observateur pour `PTMediaPlayerAdStartedNotification` qui effectue les opérations suivantes :
+1. Ajoutez un observateur pour le `PTMediaPlayerAdStartedNotification` qui effectue les tâches suivantes :
    1. Efface les publicités existantes dans l’instance de bannière.
-   1. Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets``PTAd.companionAssets`.
+   1. Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets` `PTAd.companionAssets`.
    1. Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
 
-      Chaque instance de bannière ( a `PTAdAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
+      Chaque instance de bannière ( `PTAdAsset`) contient des informations telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
    1. Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
 
       Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire standard DFP (DoubleClick for Publishers) dans l’instance de bannière appropriée.
    1. Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
 
-      Il s’agit généralement d’un `div`et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
+      Il s&#39;agit généralement d&#39;un `div` et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
