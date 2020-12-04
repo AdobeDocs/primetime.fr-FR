@@ -6,6 +6,9 @@ title: Considérations relatives à la sécurité
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Certaines considérations de sécurité doivent être prises en compte pour le SDK du navigateur.
 
-* **Adobe Flash Player**
+* **Flash Player Adobe**
 
-   * Flash Player n’autorise pas l’accès aux données résidant en dehors du domaine d’origine du fichier SWF.
+   * Le Flash Player n’autorise pas l’accès aux données résidant en dehors du domaine d’origine du fichier SWF.
 
-      Pour autoriser l’accès, hébergez un fichier de stratégie interdomaines avec les autorisations appropriées à la racine du serveur qui héberge les données. En mode de secours Flash dans le navigateur TVSDK (Flash Player version 23 et ultérieure), vous avez besoin du jeton d’autorisation pour votre domaine. Pour générer le jeton, contactez votre représentant Adobe.
+      Pour autoriser l’accès, hébergez un fichier de stratégie interdomaines avec les autorisations appropriées à la racine du serveur qui héberge les données. En mode Flash de secours dans le navigateur TVSDK (Flash Player version 23 et ultérieure), vous avez besoin du jeton d’autorisation pour votre domaine. Pour générer le jeton, contactez votre représentant d’Adobe.
 
 * **JavaScript**
 
