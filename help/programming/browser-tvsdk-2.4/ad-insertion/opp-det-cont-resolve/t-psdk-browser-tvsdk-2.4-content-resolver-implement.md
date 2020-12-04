@@ -6,15 +6,18 @@ title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
 uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre d’un outil de résolution de contenu personnalisé{#implement-a-custom-content-resolver}
+# Mise en oeuvre d’un résolveur de contenu personnalisé{#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque le navigateur TVSDK détecte une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité en utilisant la `canResolve` méthode. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de la notification du SDK du navigateur une fois le processus terminé.
+Lorsque le navigateur TVSDK détecte une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité en utilisant la méthode `canResolve`. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de la notification du SDK du navigateur une fois le processus terminé.
 
 Rappelez-vous des informations suivantes :
 
@@ -22,7 +25,7 @@ Rappelez-vous des informations suivantes :
 
    L’opération est généralement un emplacement de coupure publicitaire.
 
-* Le résolveur de contenu appelle `client.notifyCompleted` si le processus de résolution est réussi ou `client.notifyFailed` si le processus échoue.
+* Le résolveur de contenu appelle `client.notifyCompleted` si le processus de résolution a réussi ou `client.notifyFailed` si le processus a échoué.
 
 1. Créez un résolveur d&#39;opportunités personnalisé.
 
