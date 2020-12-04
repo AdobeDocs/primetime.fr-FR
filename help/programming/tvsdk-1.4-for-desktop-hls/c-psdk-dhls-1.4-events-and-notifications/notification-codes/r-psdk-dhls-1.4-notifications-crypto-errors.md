@@ -1,18 +1,21 @@
 ---
-description: Le module de chiffrement du moteur vidéo Adobe renvoie ces notifications dans l’objet de métadonnées NATIVE_ERROR.
-seo-description: Le module de chiffrement du moteur vidéo Adobe renvoie ces notifications dans l’objet de métadonnées NATIVE_ERROR.
+description: Le module de chiffrement du moteur de vidéo d'Adobe renvoie ces notifications dans l'objet de métadonnées NATIVE_ERROR.
+seo-description: Le module de chiffrement du moteur de vidéo d'Adobe renvoie ces notifications dans l'objet de métadonnées NATIVE_ERROR.
 seo-title: Valeurs Crypto NATIVE_ERROR
 title: Valeurs Crypto NATIVE_ERROR
 uuid: 6f5cea7d-688f-421e-bba6-62aeae1ec9ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 6%
 
 ---
 
 
 # NATIVE_ERROR : Valeurs Crypto{#native-error-crypto-values}
 
-Le module de chiffrement du moteur vidéo Adobe renvoie ces notifications dans l’objet de métadonnées NATIVE_ERROR.
+Le module de chiffrement du moteur de vidéo d&#39;Adobe renvoie ces notifications dans l&#39;objet de métadonnées NATIVE_ERROR.
 
 | Valeur de la clé de métadonnées RUNTIME_CODE | Valeur de la clé de métadonnées RUNTIME_CODE_MESSAGE | Signification |
 |---|---|---|
