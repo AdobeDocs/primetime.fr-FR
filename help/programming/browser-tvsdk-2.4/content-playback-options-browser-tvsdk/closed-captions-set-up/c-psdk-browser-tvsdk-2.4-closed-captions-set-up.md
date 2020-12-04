@@ -6,6 +6,9 @@ title: Utilisation de sous-titres fermés
 uuid: bc069e04-3ea3-4cdf-a8a6-d8aef91ece91
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,6 @@ Le navigateur TVSDK prend en charge le rendu des formats suivants :
 Vous pouvez :
 
 * Sélectionnez une piste de sous-titrage disponible pour être la piste actuelle et écoutez les événements qui indiquent d&#39;autres pistes disponibles.
-* Activez ou désactivez le sous-titrage (visible ou non visible) à l’aide de l’ `MediaPlayer` interface.
-* Sélectionnez des options de mise en forme qui déterminent le mode de rendu des sous-titres par le moteur vidéo sous-jacent. Utilisez l’ `MediaPlayerItem` interface pour sélectionner des formats tels que la police ou la couleur de la police.
+* Activez ou désactivez le sous-titrage fermé (visible ou non visible) à l’aide de l’interface `MediaPlayer`.
+* Sélectionnez des options de mise en forme qui déterminent le mode de rendu des sous-titres par le moteur vidéo sous-jacent. Utilisez l&#39;interface `MediaPlayerItem` pour sélectionner des formats tels que la police ou la couleur de la police.
 
