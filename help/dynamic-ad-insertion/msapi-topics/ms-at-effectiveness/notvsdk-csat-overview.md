@@ -6,6 +6,9 @@ title: Présentation du suivi côté client non TVSDK
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
@@ -21,14 +24,14 @@ Le serveur de manifeste fournit une API permettant aux lecteurs personnalisés d
 * Progression de la publicité
 * Progression de la capsule de contenu
 
-L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise respecte la configuration minimale requise. Pour plus d’informations, voir Configuration requise [pour le lecteur](../../msapi-topics/ms-player-req.md) vidéo.
+L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise respecte la configuration minimale requise. Voir [Configuration requise pour le lecteur vidéo](../../msapi-topics/ms-player-req.md) pour plus de détails.
 
 ## Processus de suivi côté client {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
 1. Le lecteur obtient une URL de serveur de manifeste de l’éditeur.
-1. Le lecteur ajoute des paramètres de requête spécifiques à ses exigences d’insertion publicitaire et envoie une requête HTTP GET à l’URL d’amorçage qui en résulte. L’URL d’amorçage présente la syntaxe suivante :
+1. Le lecteur ajoute des paramètres de requête spécifiques à ses exigences d’insertion publicitaire et envoie une requête de GET HTTP à l’URL du Bootstrap qui en résulte. L’URL du Bootstrap présente la syntaxe suivante :
 
    ```
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -39,7 +42,7 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   L&#39;URL comprend les éléments décrits dans la section [Envoyer une commande au serveur](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)de manifeste.
+   L&#39;URL comprend les éléments décrits dans [Envoyer une commande au serveur de manifeste](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
 1. Le serveur de manifeste établit une session pour ce lecteur et génère un ID de session unique. Il crée une nouvelle URL de liste de lecture M3U8 de variante, qu’il renvoie au lecteur en tant que réponse JSON. La syntaxe JSON est la suivante :
 
@@ -114,7 +117,7 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
 
    >[!NOTE]
    >
-   >Le lecteur sélectionne l’URL de la liste de lecture au niveau du flux pour obtenir le flux de contenu. Le serveur de manifeste récupère la liste de lecture d’origine sur le réseau de diffusion de contenu. Certains encodeurs peuvent injecter des détails supplémentaires dans l’attribut `#EXTINF` de titre, par exemple :
+   >Le lecteur sélectionne l’URL de la liste de lecture au niveau du flux pour obtenir le flux de contenu. Le serveur de manifeste récupère la liste de lecture d’origine sur le réseau de diffusion de contenu. Certains encodeurs peuvent injecter des détails supplémentaires dans l&#39;attribut de titre `#EXTINF`, par exemple :
    >
    >
    ```
@@ -131,7 +134,7 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. Le serveur de manifeste renvoie le fichier playlist rempli avec un objet [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) contenant les données de suivi des publicités pour le fichier m3u8 de niveau flux actuellement demandé.
+1. Le serveur de manifeste renvoie le fichier playlist rempli avec un objet [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) contenant les données de suivi publicitaire pour le fichier m3u8 de niveau flux actuellement demandé.
 
    >[!NOTE]
    >
@@ -139,7 +142,7 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
 
    >[!NOTE]
    >
-   >Le serveur de manifeste génère l&#39;objet de suivi des publicités en fonction de la `pttrackingversion` valeur de l&#39;URL d&#39;amorçage. Si la valeur `pttrackingversion` est omise ou contient une valeur non valide, le serveur de manifeste renseigne automatiquement les informations de suivi des publicités dans les balises `#EXT-X-MARKER` de chaque liste de lecture de niveau flux demandée. Voir [pour plus de détails](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >Le serveur de manifeste génère l&#39;objet de suivi des publicités en fonction de la valeur `pttrackingversion` de l&#39;URL du Bootstrap. Si `pttrackingversion` est omis ou possède une valeur non valide, le serveur de manifeste renseigne automatiquement les informations de suivi des publicités dans les balises `#EXT-X-MARKER` de chaque liste de lecture de niveau flux demandée. Voir [pour plus de détails](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. Le lecteur demande chaque URL de suivi de publicité pour chaque événement de suivi de publicité au moment approprié.
 
