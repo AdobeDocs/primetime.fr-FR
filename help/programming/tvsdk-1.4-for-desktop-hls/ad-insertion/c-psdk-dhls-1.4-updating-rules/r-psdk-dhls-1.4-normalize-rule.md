@@ -7,11 +7,14 @@ title: Normalisation des règles
 uuid: b3ca2c8e-133a-4630-8109-17bf0a91843d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
 
-# Normalisation des règles{#normalize-rules}
+# Normaliser les règles{#normalize-rules}
 
 La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
 
@@ -31,13 +34,13 @@ La règle de normalisation définit une transformation d’URL à appliquer à u
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> normaliser</span></td> 
-   <td>La valeur doit toujours être <span class="codeph"> normalisée</span>.</td> 
+   <td>La valeur doit toujours être <span class="codeph"> normaliser</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> hôte</span></td> 
-   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque des <span class="codeph"> correspondances</span> et des attributs de <span class="codeph"> valeurs</span> sont définis.</td> 
+   <td>Actuellement, seul <span class="codeph"> hôte</span> est pris en charge. Cet attribut doit être présent lorsque les attributs <span class="codeph"> correspondent à </span> et <span class="codeph"> valeurs</span> sont définis.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> correspond</span></td> 
@@ -48,7 +51,7 @@ La règle de normalisation définit une transformation d’URL à appliquer à u
      <li><span class="codeph"> eq</span> - est égal à</li> 
      <li><span class="codeph"> ne</span> - pas égal à</li> 
      <li><span class="codeph"> co</span> - contient</li> 
-     <li><span class="codeph"> nc</span> - non contient</li> 
+     <li><span class="codeph"> nc</span> - ne contient pas</li> 
      <li><span class="codeph"> sw</span> - débuts avec</li> 
      <li><span class="codeph"> ew</span> - se termine par</li> 
     </ul></td> 
@@ -57,19 +60,19 @@ La règle de normalisation définit une transformation d’URL à appliquer à u
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Tableau</span></td> 
    <td></td> 
-   <td>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"></span> du créatif source et fera une correspondance avec les valeurs définies dans ce tableau.</td> 
+   <td>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"> </span> du créatif source et fera correspondre les valeurs définies dans ce tableau.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rechercher</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> expression régulière à appliquer sur l’URL de création source à faire correspondre.</td> 
+   <td> Expression régulière à appliquer sur l’URL de création source à faire correspondre.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> remplacer</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> expression régulière à appliquer sur l’URL de création source à remplacer en fonction de la correspondance.</td> 
+   <td> Expression régulière à appliquer sur l’URL de création source à remplacer en fonction de la correspondance.</td> 
   </tr> 
  </tbody> 
 </table>
