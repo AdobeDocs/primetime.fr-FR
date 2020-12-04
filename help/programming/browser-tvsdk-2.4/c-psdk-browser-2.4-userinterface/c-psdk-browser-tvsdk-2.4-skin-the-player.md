@@ -6,6 +6,9 @@ title: Esquisse du lecteur
 uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ Vous pouvez utiliser les informations suivantes pour vous aider à habiller votr
 >
 >Les détails d’habillage de ce document concernent les éléments d’interface utilisateur par défaut créés par la structure de l’interface utilisateur. Si votre lecteur a modifié ces éléments, les éléments d’habillage doivent également être modifiés.
 
-## divisions de Conteneur {#section_99B0D598219D4150B57E97D5381B118F}
+## divisions de conteneur {#section_99B0D598219D4150B57E97D5381B118F}
 
 Voici les styles des divisions de conteneur :
 
 >[!TIP]
 >
->Ces divisions sont répertoriées dans le `common-styles.css` fichier.
+>Ces divisions sont répertoriées dans le fichier `common-styles.css`.
 
 Voici les styles de la div principale :
 
@@ -45,8 +48,8 @@ Voici les styles de la div principale :
    <td colname="col2"> <p>Style de la div principale dans laquelle la vidéo est lue. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .pip-mode-active</span> </td> 
-   <td colname="col2"> <p>Utilisé lorsque le mode PIP est actif. </p> </td> 
+   <td colname="col1"><span class="codeph"> .pip-mode-principal</span> </td> 
+   <td colname="col2"> <p>Utilisé lorsque le mode PIP est principal. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Le comportement par défaut est <span class="codeph"> videoBehavior</span>. </td> 
@@ -74,7 +77,7 @@ Voici les styles de la div principale :
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-multi-vue-vue</span> </td> 
-   <td colname="col2"> <p>Style CSS commun placé sur chaque vidéo dans la vue multiple. </p> </td> 
+   <td colname="col2"> <p>Un style CSS commun placé sur chaque vidéo dans la vue multiple. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .multiview</span> </td> 
@@ -83,13 +86,13 @@ Voici les styles de la div principale :
  </tbody> 
 </table>
 
-## Contrôles variés {#section_E9E4A8E3AEBF4BDC89840B84B3B0E737}
+## Divers contrôles {#section_E9E4A8E3AEBF4BDC89840B84B3B0E737}
 
 Voici les styles des commandes génériques du lecteur :
 
 >[!TIP]
 >
->Ces styles sont répertoriés dans le `default-controls.css` fichier.
+>Ces styles sont répertoriés dans le fichier `default-controls.css`.
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -113,7 +116,7 @@ Voici les styles des commandes génériques du lecteur :
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-vertical-liste-menu-élément</span> </td> 
-   <td colname="col2"> <p>liste de menu dans le style vertical </p> </td> 
+   <td colname="col2"> <p>Liste de menu dans le style vertical </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-fill-spacer</span> </td> 
@@ -155,13 +158,13 @@ Voici les styles de la barre de contrôle :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-control-bar</span> (comportement par défaut)</td>
+   <td colname="col1"><span class="codeph"> ptp-control-bar</span>  (comportement par défaut)</td>
    <td colname="col2"> <p>Applicable à la barre de contrôle </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Boutons Fonctionnalités {#section_57FFD242FF674EA2867BCF6CA7F6B855}
+## Boutons de fonctionnalités {#section_57FFD242FF674EA2867BCF6CA7F6B855}
 
 >[!NOTE]
 >
@@ -234,11 +237,11 @@ Voici les styles du bouton Lecture/Pause :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> dans l’état de mise en pause </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausein état pause </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> dans l'état de lecture </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausein the play state </p> </td>
   </tr>
  </tbody>
 </table>
@@ -435,7 +438,7 @@ Voici le style du bouton Avance rapide :
 
 Le comportement par défaut est `fastForwardButtonBehavior`.
 
-## Suivi audio {#section_1CDF4FA5A1C14DB6B9C96579FFA1057C}
+## Piste audio {#section_1CDF4FA5A1C14DB6B9C96579FFA1057C}
 
 Voici les styles pour configurer la piste audio :
 
@@ -485,7 +488,7 @@ Voici les styles pour configurer la piste audio :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
-   <td colname="col2"> <p>Les options de menu dans le <span class="codeph"> panneau</span>ptp-audio-track-selection-panel. </p> </td>
+   <td colname="col2"> <p>Les options de menu dans le <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -508,7 +511,7 @@ Voici les styles pour configurer le partage :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>Bouton de partage sur les réseaux sociaux sur la barre de contrôle qui ouvre <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
+   <td colname="col2"> <p>Bouton de partage sur les réseaux sociaux sur la barre de contrôle qui s’ouvre <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Le comportement par défaut est <span class="codeph"> shareVideoButtonBehavior</span>. </td>
@@ -535,11 +538,11 @@ Voici les styles pour configurer le partage :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
-   <td colname="col2"> <p>Le menu du panneau <span class="codeph"></span> ptp-share-videoaffiche toutes les options de partage de contenu sur les réseaux sociaux. </p> </td>
+   <td colname="col2"> <p>Le menu de <span class="codeph"> ptp-share-video-panel</span> qui affiche toutes les options de partage de contenu sur les réseaux sociaux. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
-   <td colname="col2"> <p>Option de menu dans le menu <span class="codeph"></span>partagé-vidéo-panneau-vidéo. </p> </td>
+   <td colname="col2"> <p>L'option de menu dans le <span class="codeph"> menu-partage-vidéo-panneau-vidéo</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-facebook</span> </td>
@@ -578,7 +581,7 @@ Voici les styles de configuration des légendes fermées :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-close-caption</span> </td>
-   <td colname="col2"> <p>Bouton <span class="uicontrol"> Sous-titres</span> fermés sur la barre de contrôle. </p> </td>
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Closed Captions</span> de la barre de contrôle. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Le comportement par défaut est <span class="codeph"> closeCaptionButtonBehavior</span>. </td>
@@ -609,7 +612,7 @@ Voici les styles de configuration des légendes fermées :
    <td colname="col2"> <p>En-tête du <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-close-caption-language-menu : </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-close-caption-language-menu :  </span> </td>
    <td colname="col2"> <p>Menu dans le panneau sous-titres fermé. </p> </td>
   </tr>
   <tr>
@@ -618,7 +621,7 @@ Voici les styles de configuration des légendes fermées :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-btn</span> </td>
-   <td colname="col2"> <p>Bouton <span class="uicontrol"> Options</span> dans le panneau d’options des sous-titres fermés. </p> </td>
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Options</span> dans le panneau d’options des sous-titres fermé. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-panel</span> </td>
@@ -634,7 +637,7 @@ Voici les styles de configuration des légendes fermées :
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>Bouton <span class="uicontrol"> Terminé</span> dans l’en-tête du panneau d’options des sous-titres fermés. </p> </td> 
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Terminé</span> dans l’en-tête du panneau d’options des sous-titres fermés. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-menu</span> </td> 
@@ -658,7 +661,7 @@ Voici les styles de configuration des légendes fermées :
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>Option <span class="uicontrol"> de menu</span> de sous-titrage fermé. </p> </td> 
+   <td colname="col2"> <p>Option <span class="uicontrol"> de la légende fermée </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-prévisualisation-panel</span> </td> 
@@ -670,11 +673,11 @@ Voici les styles de configuration des légendes fermées :
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Réinitialiser</span> dans le pied de page du panneau d’options de sous-titrage fermé. </p> </td> 
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Réinitialiser</span> dans le pied de page du panneau des options de sous-titrage fermé. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-appliquer-bouton</span> </td> 
-   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Appliquer</span> dans le pied de page du panneau d’options de sous-titrage fermé. </p> </td> 
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Appliquer</span> dans le pied de page du panneau des options de sous-titrage fermé. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Le comportement par défaut est <span class="codeph"> closeCaptionOptionsPanelBehavior</span>. </td> 
@@ -696,11 +699,11 @@ Voici les styles pour configurer d’autres options :
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Plus d'options</span> . </p> </td> 
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> Autres options</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-plus-options.ptp-contrôle-bar-btn</span> </td> 
-   <td colname="col2"> <p>Les options <span class="codeph"></span> ptp-btn-more utilisées dans la barre de contrôle. </p> </td> 
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-more-options</span> utilisées dans la barre de contrôle. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -721,7 +724,7 @@ Le comportement par défaut est `moreOptionsButtonBehavior`.
 
 ## Bouton PIP (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-Voici le style du [!UICONTROL PIP<] bouton :
+Voici le style du bouton [!UICONTROL PIP<] :
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -763,7 +766,7 @@ Voici le style de configuration du plein écran :
 
 Le comportement par défaut est `fullScreenButtonBehavior`.
 
-## Lecture de l&#39;empreinte (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
+## Lecture de la vidéo (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
 
 Voici le style de configuration du jeu vidéo :
 
@@ -784,7 +787,7 @@ Voici le style de configuration du jeu vidéo :
 
 Le comportement par défaut est `trickPlayRateDisplayBehavior`.
 
-## Multivue (Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
+## Multiview (Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
 
 Voici le style de configuration de plusieurs vues :
 
@@ -798,7 +801,7 @@ Voici le style de configuration de plusieurs vues :
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>Bouton <span class="uicontrol"> MultiView</span> sur la barre de contrôle et état initial du bouton <span class="uicontrol"> Multiview</span> . </p> </td> 
+   <td colname="col2"> <p>Le bouton <span class="uicontrol"> MultiView</span> sur la barre de contrôle et l'état initial du bouton <span class="uicontrol"> Multiview</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Le comportement par défaut est <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -900,11 +903,11 @@ Voici le style du bouton Avance rapide :
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-lentforward</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-lentforward</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-ralenti</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-close-caption </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-close-caption  </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-Chercher à Barre</span> </li> 
@@ -924,7 +927,7 @@ Voici le style du bouton Avance rapide :
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
    <td colname="col2"> <p>Le lecteur est en mode plein écran. </p> <p>S’applique aux éléments suivants : 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 
