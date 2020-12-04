@@ -6,6 +6,9 @@ title: Affichage d’une barre de défilement de recherche avec la position de l
 uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 0%
 
 ---
 
@@ -30,12 +33,12 @@ TVSDK prend en charge la recherche à une position spécifique (temps) où le fl
 
    Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING.
 
-1. Utilisez la barre de recherche native pour définir `OnSeekBarChangeListener` le moment où l’utilisateur fait défiler les données.
-1. Prêtez attention `QOSEventListener.onOperationFailed` et prenez les mesures appropriées.
+1. Utilisez la barre de recherche native pour définir `OnSeekBarChangeListener` pour déterminer quand l’utilisateur fait défiler les données.
+1. Prêtez attention à `QOSEventListener.onOperationFailed` et prenez les mesures appropriées.
 
    Ce événement transmet l&#39;avertissement approprié. Votre application détermine comment procéder, par exemple, en essayant de relancer la recherche ou en continuant la lecture à partir de la position précédente.
 
-1. Attendez que TVSDK appelle le `QOSEventListener.onSeekComplete` rappel.
+1. Attendez que TVSDK appelle le rappel `QOSEventListener.onSeekComplete`.
 1. Récupérez la position de lecture modifiée finale à l’aide du paramètre de position du rappel.
 
    Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Le comportement de lecture peut être affecté si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires.
