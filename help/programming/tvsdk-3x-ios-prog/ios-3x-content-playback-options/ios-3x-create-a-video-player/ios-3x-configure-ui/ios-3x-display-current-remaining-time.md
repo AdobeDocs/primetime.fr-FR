@@ -6,15 +6,18 @@ title: Affiche l'heure actuelle et la durée restante
 uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
-# Affiche l&#39;heure actuelle et la durée restante {#display-the-current-time-and-remaining-time}
+# Affiche l&#39;heure actuelle et l&#39;heure restante {#display-the-current-time-and-remaining-time}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
-1. Pour mettre en oeuvre un affichage qui affiche la durée actuelle et restante du contenu actif, utilisez l’exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche la durée actuelle et restante du contenu principal, utilisez l’exemple de code suivant :
 
    * 
 
