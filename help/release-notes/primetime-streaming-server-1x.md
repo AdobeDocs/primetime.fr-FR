@@ -34,7 +34,7 @@ Nouveautés des versions 1.3 et 1.4 de Primetime Streaming Server.
 
 * Le chiffrement AES HLS est disponible pour les workflows en direct et VOD. L’Origine Primetime peut appliquer le chiffrement HLS AES à des flux HLS entrants ou à des fichiers MP4.
 * Il peut également appliquer le chiffrement JIT HLS AES lorsqu’il est utilisé pour convertir des flux HDS entrants en flux HLS.
-* L&#39;Origine Primetime prend désormais en charge les fichiers SWF permettant l&#39;inscription des flux PHLS. Auparavant, il était pris en charge uniquement pour les flux de SPHD.
+* L&#39;Origine Primetime prend désormais en charge les fichiers SWF permettant l&#39;inscription des flux PHLS. Auparavant, elle était prise en charge uniquement pour les flux de SPHD.
 
 **Primetime Live Packager**
 
@@ -55,7 +55,7 @@ Les certificats PHDS/PHLS ont été actualisés. La même date d&#39;expiration 
 
 * PTPUB- 645 Le mode Imple est imposé même lorsque le mode DPIScte35 est spécifié lorsque les signaux de ligne de commande et les signaux in-stream sont tous deux fournis dans la configuration du gestionnaire de package hors ligne.
 
-## Nouveautés de la version 1.3.1 de Primetime Streaming Server (MAY Release) {#what-s-new-in-primetime-streaming-server-may-release}
+## Nouveautés de Primetime Streaming Server 1.3.1 (MAY Release) {#what-s-new-in-primetime-streaming-server-may-release}
 
 La version 1.3.1 fait référence au correctif logiciel. Les améliorations suivantes en font une mise à niveau recommandée pour les clients, car elle consiste en des améliorations de performances clés pour les cas d’utilisation du format JIT MP4 :
 
@@ -146,14 +146,14 @@ Plusieurs améliorations de performances ont été apportées aux fonctionnalit�
 
 **Configuration logicielle requise**
 
-* Oracle Java JRE 1.7 (Recommandé : JVM Sun/Oracle Hotspot). Le JDK est requis pour l’accès de JConsole aux API JMX.
+* Oracle Java JRE 1.7 (Recommandé : JVM Hotspot Sun/Oracle). Le JDK est requis pour l’accès de JConsole aux API JMX.
 
-### Installation et configuration de Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
+### Installer et configurer Primetime Streaming Server {#install-and-configure-primetime-streaming-server}
 
 **Installation du serveur de flux continu**
 
-1. Téléchargez le logiciel Java SE et JDK sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d’installation.
-2. Extrayez le fichier d’archive Adobe Primetime-Streaming Server 1.4 `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sur votre disque.
+1. Téléchargez le logiciel Java SE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
+2. Extrayez le fichier d’archive Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sur votre disque.
 
 **Début du serveur de flux continu Primetime**
 
@@ -223,23 +223,23 @@ Cette section s’applique lorsque Primetime Streaming Server n’est pas utilis
 
 **Configuration logicielle requise**
 
-* Oracle Java JRE 1.7 (Recommandé : JVM Sun/Oracle Hotspot). Le JDK est requis pour l’accès de JConsole aux API JMX.
+* Oracle Java JRE 1.7 (Recommandé : JVM Hotspot Sun/Oracle). Le JDK est requis pour l’accès de JConsole aux API JMX.
 
 La configuration minimale requise ci-dessus est vraie pour Origine Server et Live Packager.
 
-### Installation et configuration de Live Packager {#install-and-configure-the-live-packager}
+### Installer et configurer Live Packager {#install-and-configure-the-live-packager}
 
 **Installation de Live Packager**
 
-1. Téléchargez le logiciel Java SE et JDK sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d’installation.
+1. Téléchargez le logiciel Java SE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
 1. Extrayez le fichier d’archive Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sur votre disque.
 
 **Installation du serveur d’Origines HTTP**
 
-1. Téléchargez le logiciel Java JRE et JDK sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d’installation.
-1. Extrayez sur votre disque le fichier d’archive Adobe Primetime - HTTP Origine Server 1.4 `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`.
+1. Téléchargez le logiciel Java JRE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
+1. Extrayez le fichier d’archive Adobe Primetime - HTTP Origine Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, sur votre disque.
 
-**Pour début à Live Packager** Pour début à l’outil de création de package, exécutez la commande suivante à partir du répertoire racine de l’outil de création de package :\
+**Pour début à Live** PackagerPour début au gestionnaire de package, exécutez la commande suivante à partir du répertoire racine du gestionnaire de package :\
 `$packager_start.sh`
 
 **Pour début du serveur d’Origines HTTP**
@@ -261,7 +261,7 @@ Pour arrêter le serveur d’Origines HTTP, exécutez la commande suivante dans 
 
 Pour redémarrer le gestionnaire de package, arrêtez-le et début-le.
 
-**Remarque**: Lorsque l’outil de création de package début, il tente d’initialiser les informations d’amorçage à partir de la cible de fragments dans le répertoire temporaire. Si les informations d’amorçage se trouvent à la cible du fragment, cela signifie que le packager a été redémarré. En cas de redémarrage, l’outil de création de package attend la limite de fragment suivante, puis début la création de package. Le gestionnaire de package insère une entrée d’espace dans l’amorçage pour indiquer qu’il manque des fragments.
+**Remarque** : Lorsque l’outil de création de package début, il tente d’initialiser les informations d’amorçage à partir de la cible de fragments dans le répertoire temporaire. Si les informations d’amorçage se trouvent à la cible du fragment, cela signifie que le packager a été redémarré. En cas de redémarrage, l’outil de création de package attend la limite de fragment suivante, puis début la création de package. Le gestionnaire de package insère une entrée d’espace dans l’amorçage pour indiquer qu’il manque des fragments.
 
 **Redémarrage du serveur d’Origines HTTP**
 
@@ -271,7 +271,7 @@ Pour redémarrer le serveur d’Origines HTTP, arrêtez et début le serveur d�
 
 Le fichier de distribution contient un exemple de configuration qui peut être utilisé pour tester l’outil de création de package.
 
-Après avoir extrait l’archive Adobe Primetime - Live Packager 1.4, remplacez les répertoires par le répertoire packager et exécutez le script packager_début.sh. L’exemple de configuration écoute l’adresse de multidiffusion 239.235.0.3:14000 et exécute le serveur d’origine local sur le port 8080. La sortie est configurée pour être écrite dans le `packager/webroot/_default_/_default_/ directory`.
+Après avoir extrait l’archive Adobe Primetime - Live Packager 1.4, remplacez les répertoires par le répertoire packager et exécutez le script packager_début.sh. L’exemple de configuration écoute l’adresse de multidiffusion 239.235.0.3:14000 et exécute le serveur d’origine local sur le port 8080. La sortie est configurée pour être écrite dans `packager/webroot/_default_/_default_/ directory`.
 
 <!-- 
 
@@ -316,15 +316,15 @@ Pour désinstaller le serveur d’Origines HTTP, arrêtez le serveur d’Origine
 
 * Oracle Java JRE 1.7 ou version ultérieure.
 
-### Installation et configuration de Offline Packager {#install-and-configure-offline-packager}
+### Installer et configurer Offline Packager {#install-and-configure-offline-packager}
 
 Pour installer Offline Packager, procédez comme suit :
 
-1. Téléchargez le logiciel Java SE sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d&#39;installation.
-1. Extrayez le fichier d’archive Adobe Primetime - Offline Packager 1.4 `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`sur votre disque.
+1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Extrayez le fichier d’archive Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sur votre disque.
 
 Reportez-vous au document de prise en main de Primetime Offline Packager pour obtenir les détails de configuration disponibles [ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète à la [page Apprentissage et support Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
