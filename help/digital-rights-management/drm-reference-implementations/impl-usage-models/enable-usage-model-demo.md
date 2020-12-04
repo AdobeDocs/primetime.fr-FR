@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Activer la démonstration du modèle d’utilisation{#enable-the-usage-model-demo}
+# Activez le modèle d’utilisation demo{#enable-the-usage-model-demo}
 
-1. Spécifiez la propriété personnalisée `RI_UsageModelDemo=true` au moment de la création du pack.
+1. Spécifiez la propriété personnalisée `RI_UsageModelDemo=true` au moment du conditionnement.
 
    Si vous assemblez du contenu à l’aide de l’outil de ligne de commande Media Packager, saisissez :
 
