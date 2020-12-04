@@ -6,6 +6,9 @@ title: Charger la publicité pour une fenêtre DVR
 uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -20,15 +23,15 @@ Lorsqu’un utilisateur début le contenu de la vue au début d’un flux d’en
 >
 >Il est plus rapide de résoudre les publicités une fois le point d’accès actif, mais si l’utilisateur effectue une recherche en amont, cette option empêche le lecteur de lire les publicités qui s’affichaient plus tôt.
 
-## Contrôler le chargement des publicités pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Contrôler le chargement de la publicité pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Pour contrôler le chargement des publicités pour une fenêtre DVR :
 
-Pour charger toutes les publicités pour l’ensemble du flux, définissez la `PTAdMetadata.enableDVRAds` propriété sur `YES`.
+Pour charger toutes les publicités pour l’ensemble du flux, définissez la propriété `PTAdMetadata.enableDVRAds` sur `YES`.
 
 >[!NOTE]
 >
->La valeur par défaut est `NO`définie et cette option charge les publicités uniquement à partir du point d’activation actuel.
+>La valeur par défaut est `NO`, et cette option charge les publicités uniquement à partir du point de production actuel.
 
 Par exemple :
 
