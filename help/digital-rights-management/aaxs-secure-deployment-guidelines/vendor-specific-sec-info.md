@@ -4,17 +4,20 @@ title: Informations de sécurité spécifiques au fournisseur
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
 
 # Informations de sécurité spécifiques au fournisseur{#vendor-specific-security-information}
 
-Cette section contient des informations relatives à la sécurité des systèmes d’exploitation et des serveurs d’applications intégrés à votre solution Adobe Access.
+Cette section contient des informations de sécurité sur les systèmes d’exploitation et les serveurs d’applications intégrés à votre solution Adobe Access.
 
 Utilisez les liens fournis dans cette section pour rechercher des informations de sécurité spécifiques au fournisseur pour votre système d’exploitation et votre serveur d’applications.
 
-## Informations de sécurité du système d’exploitation {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
+## Informations de sécurité du système d&#39;exploitation {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
 
 Lorsque vous sécurisez votre système d’exploitation, mettez en oeuvre avec soin les mesures décrites par le fournisseur de votre système d’exploitation, notamment :
 
@@ -23,7 +26,7 @@ Lorsque vous sécurisez votre système d’exploitation, mettez en oeuvre avec s
 * Suppression des services et applications inutiles
 * Sauvegarde de fichiers
 
-Pour plus d&#39;informations sur la sécurité des systèmes d&#39;exploitation pris en charge par Adobe Access, reportez-vous aux ressources indiquées dans le tableau ci-dessous.
+Pour plus d&#39;informations sur la sécurité des systèmes d&#39;exploitation pris en charge par Adobe Access, reportez-vous aux ressources indiquées dans ce tableau.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-ugl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -64,7 +67,7 @@ Le tableau ci-dessous décrit certaines approches possibles pour réduire au min
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">NTP (Network Time Protocol) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour assurer le bon fonctionnement et l’analyse de la médecine légale, veillez à ce que les serveurs Adobe Access et les packs Adobe Access restent à l’heure exacte. Utilisez une version sécurisée de NTP pour synchroniser l'heure sur tous les systèmes connectés à Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour assurer le bon fonctionnement et l'analyse médico-légale, veillez à ce que les serveurs d'accès à l'Adobe et les conditionneurs d'accès à l'Adobe soient à jour. Utilisez une version sécurisée de NTP pour synchroniser l'heure sur tous les systèmes connectés à Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
