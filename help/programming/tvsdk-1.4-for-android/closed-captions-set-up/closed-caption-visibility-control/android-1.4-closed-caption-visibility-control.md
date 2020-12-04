@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#control-closed-caption-visibility}
+# Aperçu {#control-closed-caption-visibility}
 
 Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
 
@@ -33,7 +33,7 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
 >}
 >```
 
-1. Attendez que MediaPlayer ait au moins l’état PRÉPARÉ (voir [Attendre un état](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)valide).
+1. Attendez que MediaPlayer ait au moins l’état PRÉPARÉ (voir [Attendre un état valide](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Pour obtenir le paramètre de visibilité actuel pour les sous-titres fermés, utilisez la méthode getter dans MediaPlayer, qui renvoie une valeur de visibilité.
 
    ```java
