@@ -6,11 +6,14 @@ title: Gestion des pannes de courant
 uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
 
-# Gestion des pannes de courant {#handle-blackouts}
+# Gestion des pannes {#handle-blackouts}
 
 TVSDK gère les coupures d’électricité dans les flux vidéo en direct et fournit du contenu alternatif lors d’une coupure d’Internet.
 
@@ -21,19 +24,19 @@ Pour mettre en oeuvre la solution pour ce cas d’utilisation :
 1. Configurez votre application pour vous abonner à des balises d’arrêt dans un manifeste de flux en direct.
 
    TVSDK n’est pas directement conscient des balises d’arrêt, mais il permet à votre application de s’abonner à des notifications lorsque des balises spécifiques sont rencontrées lors de l’analyse des fichiers de manifeste.
-1. Ajouter un écouteur de notification pour `PTTimedMetadataChangedNotification`.
+1. Ajoutez un écouteur de notification pour `PTTimedMetadataChangedNotification`.
 
    Cette notification est envoyée chaque fois qu’une balise abonnée est analysée dans le manifeste et qu’une nouvelle balise `PTTimedMetadata` est préparée à partir de celle-ci.
 
-1. Mettez en oeuvre une méthode d’écouteur, telle que `onMediaPlayerSubscribedTagIdentified`, pour `PTTimedMetadata` les objets au premier plan.
+1. Mettez en oeuvre une méthode d’écouteur, telle que `onMediaPlayerSubscribedTagIdentified`, pour les objets `PTTimedMetadata` au premier plan.
 
-1. Chaque fois qu’une mise à jour est effectuée pendant la lecture, utilisez l’ `PTMediaPlayerTimeChangeNotification` écouteur pour gérer `PTTimedMetadata` les objets.
+1. Chaque fois qu’une mise à jour est effectuée au cours de la lecture, utilisez l’écouteur `PTMediaPlayerTimeChangeNotification` pour gérer les objets `PTTimedMetadata`.
 
-1. Ajouter le `PTTimedMetadata` gestionnaire.
+1. Ajoutez le gestionnaire `PTTimedMetadata`.
 
-   Ce gestionnaire vous permet de passer à un autre contenu et de revenir au contenu principal comme indiqué par l’ `PTTimedMetadata` objet et son temps de lecture.
+   Ce gestionnaire vous permet de passer à un autre contenu et de revenir au contenu principal comme indiqué par l’objet `PTTimedMetadata` et son temps de lecture.
 
-1. Utilisez `onSubscribedTagInBackground` la méthode listener pour `PTTimedMetadata` les objets en arrière-plan.
+1. Utilisez `onSubscribedTagInBackground` pour implémenter la méthode d’écouteur pour les objets `PTTimedMetadata` en arrière-plan.
 
    Cette méthode surveille le timing du flux d’arrière-plan, ce qui vous permet de déterminer à quel moment vous pouvez revenir d’un autre contenu au contenu principal.
 
