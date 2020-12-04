@@ -6,6 +6,9 @@ title: Lire les statistiques de lecture, de mise en mémoire tampon et de périp
 uuid: 19228a50-3721-4dc1-89b6-97458518e272
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK, l’ID du périphérique du fabricant et la taille/densité d’écran.
 
 1. Instanciez un lecteur multimédia.
-1. Créez un `QOSProvider` objet et joignez-le au lecteur de médias.
+1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
 
-   Le `QOSProvider` constructeur prend un contexte de lecteur afin de pouvoir récupérer des informations spécifiques au périphérique.
+   Le constructeur `QOSProvider` prend en compte le contexte du lecteur afin de pouvoir récupérer des informations spécifiques au périphérique.
 
    ```java
    // Create Media Player. 
@@ -31,7 +34,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
