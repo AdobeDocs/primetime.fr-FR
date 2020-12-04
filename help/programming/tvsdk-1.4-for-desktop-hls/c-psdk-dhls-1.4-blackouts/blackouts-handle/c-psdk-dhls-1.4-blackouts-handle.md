@@ -6,17 +6,20 @@ title: Gestion des pannes de courant en direct
 uuid: df933087-c8a8-49eb-a016-6dfd971c219c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 0%
 
 ---
 
 
-# Gestion des pannes de courant en direct{#handle-blackouts-in-live-streams}
+# Gérer les pannes de courant en direct {#handle-blackouts-in-live-streams}
 
 Vous pouvez gérer les coupures de courant dans les flux vidéo en direct et fournir un autre contenu pendant une coupure de courant.
 
 Lorsqu’une panne survient dans un flux en direct, votre lecteur utilise des gestionnaires de événement pour détecter la panne et fournir un autre contenu aux utilisateurs qui ne sont pas admissibles pour regarder le flux principal. Votre lecteur détecte le début et la fin de la période d’interruption, bascule la lecture du flux principal vers un flux alternatif et revient au flux principal à la fin de la période d’interruption.
 
-Dans votre application cliente, vous vous abonnez aux balises blackout dans TVSDK. Lorsque vous êtes informé de nouveaux objets de métadonnées ** minutés, vous analysez les données de l’objet de métadonnées minutées afin de déterminer si l’objet indique une entrée ou une sortie de panne. Pour les pannes identifiées, vous appelez les éléments TVSDK pertinents pour passer à un autre contenu au début de la panne, puis de nouveau pour revenir au contenu principal lorsque la panne est terminée.
+Dans votre application cliente, vous vous abonnez aux balises blackout dans TVSDK. Après avoir été averti de nouveaux objets *de métadonnées minutées*, vous analysez les données de l’objet de métadonnées minutées afin de déterminer si l’objet indique une entrée ou une sortie de panne. Pour les pannes identifiées, vous appelez les éléments TVSDK pertinents pour passer à un autre contenu au début de la panne, puis de nouveau pour revenir au contenu principal lorsque la panne est terminée.
 
 >[!TIP]
 >
@@ -35,13 +38,13 @@ Pour gérer les pannes de courant en direct :
    TVSDK ne détecte pas de balises d’interruption de service par ses propres moyens ; vous devez vous abonner à des balises d&#39;arrêt pour recevoir une notification lorsque les balises sont rencontrées lors de l&#39;analyse du fichier manifeste.
 1. Créez des écouteurs de événement pour les balises auxquelles votre lecteur est abonné.
 
-   Lorsqu’une balise se produit à laquelle votre lecteur s’est abonné (par exemple, une balise d’arrêt) dans le flux de premier plan (contenu principal) ou d’arrière-plan (contenu alternatif), TVSDK distribue une balise `TimedMetadataEvent` et crée une balise `TimedMetadataObject` pour le `TimedMetadataEvent`.
+   Lorsqu’une balise se produit à laquelle votre lecteur s’est abonné (par exemple, une balise d’arrêt) dans le flux de premier plan (contenu principal) ou d’arrière-plan (contenu alternatif), TVSDK distribue une balise `TimedMetadataEvent` et crée une balise `TimedMetadataObject` pour `TimedMetadataEvent`.
 1. Mettez en oeuvre des gestionnaires pour les événements de métadonnées temporisés pour les flux de premier plan et d’arrière-plan.
 
    Dans ces gestionnaires, récupérez les heures de début et de fin de la période d’arrêt à partir des objets de événement de métadonnées minutés.
-1. Préparez-les `MediaPlayer` aux pannes d&#39;électricité.
+1. Préparez le `MediaPlayer` pour les pannes d&#39;électricité.
 
-   Lorsque le `MediaPlayer` paramètre entre dans l’état PRÉPARÉ, vous calculez et préparez les plages d’interruptions et les définissez sur l’ `MediaPlayer` objet.
+   Lorsque `MediaPlayer` entre en état PRÉPARÉ, vous calculez et préparez les plages d&#39;interruption et les définissez sur l&#39;objet `MediaPlayer`.
 
 1. Pour chaque mise à jour de la position du curseur de lecture, vérifiez la liste de `TimedMetadataObjects`.
 
