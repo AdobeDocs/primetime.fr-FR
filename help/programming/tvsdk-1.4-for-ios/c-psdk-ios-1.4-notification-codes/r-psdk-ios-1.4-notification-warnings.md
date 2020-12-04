@@ -13,7 +13,7 @@ ht-degree: 3%
 ---
 
 
-# AVERTISSEMENT des codes de notification{#warning-notification-codes}
+# Codes de notification d&#39;AVERTISSEMENT{#warning-notification-codes}
 
 Ce tableau fournit des informations détaillées sur les notifications de type WARN.
 
@@ -61,14 +61,14 @@ La plupart des avertissements contiennent des métadonnées pertinentes, par exe
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> ARRIÈRE-PLAN_MANIFEST_AVERTISSEMENT</span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
-   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_ WARNING_NAME</span> <span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> Erreur lors du téléchargement du manifeste en arrière-plan. Tout problème de mise à jour du manifeste en arrière-plan est distribué en tant qu’avertissement TVSDK et n’entraîne pas l’arrêt de la lecture. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNING</span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIPTION</span> </td> 
@@ -82,17 +82,17 @@ La plupart des avertissements contiennent des métadonnées pertinentes, par exe
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
    <td colname="4"> Aucun </td> 
    <td colname="5"> Le mode de signalisation de la publicité est défini comme des plages personnalisées, mais aucune plage n’est définie. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="5"> <p> Une ou plusieurs plages de temps ne sont pas valides et seront ignorées ou modifiées. </p> <p> DESCRIPTION est une chaîne contenant la description des plages non valides. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -103,52 +103,52 @@ La plupart des avertissements contiennent des métadonnées pertinentes, par exe
    <td colname="5"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
+   <td colname="1"><span class="codeph"> 270000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_NOT_READY  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270001  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
    <td colname="5"> <p>AD n'a pas été inséré dans le flux. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270002 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MANSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270002  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MANSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
    <td colname="5"> <p>La publicité ne contient pas de flux audio uniquement </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270003 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MANSING </span> </td> 
-   <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
+   <td colname="1"><span class="codeph"> 270003  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MANSING  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_NOT_INSERTED  </span> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
    <td colname="5"> <p>Aucun flux publicitaire correspondant n’a été trouvé pour le débit actuel du contenu. </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270005 </span> </td> 
-   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
-   <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270005  </span> </td> 
+   <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE  </span> </td> 
+   <td colname="3"><span class="codeph"> PLAYBACK_ERROR  </span> </td> 
    <td colname="4"> <p>Aucun </p> </td> 
    <td colname="5"> <p>Erreur lors de la création de l'ensemble AVA. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270006 </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_WARNING </span> </td> 
+   <td colname="1"><span class="codeph"> 270006  </span> </td> 
+   <td colname="2"><span class="codeph"> SITECATALYST_WARNING  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
-   <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="5"> <p>Avertissement : Voir la description de l’avertissement de sitecatalyst. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 270007 </span> </td> 
-   <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
+   <td colname="1"><span class="codeph"> 270007  </span> </td> 
+   <td colname="2"><span class="codeph"> NETWORK_ERROR  </span> </td> 
    <td colname="3"> <p>Aucun </p> </td> 
-   <td colname="4"><span class="codeph"> URL </span> </td> 
+   <td colname="4"><span class="codeph"> URL  </span> </td> 
    <td colname="5"> <p>Erreur lors de l'obtention des données du réseau. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -171,4 +171,4 @@ La plupart des avertissements contiennent des métadonnées pertinentes, par exe
 
 >[!NOTE]
 >
->L’ID d’annonce et l’URL peuvent être récupérés via PTAdAsset dans les métadonnées de notification avec la `AD_ASSET` clé.
+>L&#39;ID d&#39;annonce et l&#39;URL peuvent être récupérés via PTAdAsset dans les métadonnées de notification avec la clé `AD_ASSET`.
