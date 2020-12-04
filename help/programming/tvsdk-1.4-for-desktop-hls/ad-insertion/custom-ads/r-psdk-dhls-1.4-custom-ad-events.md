@@ -1,16 +1,19 @@
 ---
 description: Le lecteur TVSDK distribue des événements pour afficher l’état de chargement personnalisé de la publicité ou pour ignorer une publicité dont le chargement prend trop de temps ou comporte des erreurs. Ces événements sont définis dans événements.CustomAdEvents.
 seo-description: Le lecteur TVSDK distribue des événements pour afficher l’état de chargement personnalisé de la publicité ou pour ignorer une publicité dont le chargement prend trop de temps ou comporte des erreurs. Ces événements sont définis dans événements.CustomAdEvents.
-seo-title: événements publicitaires personnalisés
-title: événements publicitaires personnalisés
+seo-title: Événements publicitaires personnalisés
+title: Événements publicitaires personnalisés
 uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# événements publicitaires personnalisés{#custom-ad-events}
+# Événements publicitaires personnalisés{#custom-ad-events}
 
 Le lecteur TVSDK distribue des événements pour afficher l’état de chargement personnalisé de la publicité ou pour ignorer une publicité dont le chargement prend trop de temps ou comporte des erreurs. Ces événements sont définis dans événements.CustomAdEvents.
 
@@ -23,36 +26,36 @@ Le lecteur TVSDK distribue des événements pour afficher l’état de chargemen
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdClickThru </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdClickThru  </span> </td> 
    <td colname="col2"> Nombre de fois où le lecteur a cliqué sur une publicité personnalisée. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdError </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdError  </span> </td> 
    <td colname="col2"> Une erreur s'est produite avec l'annonce personnalisée. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdLoaded </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdLoaded  </span> </td> 
    <td colname="col2"> La publicité personnalisée a été chargée.  </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdLoading </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdLoading  </span> </td> 
    <td colname="col2"> La publicité personnalisée est en cours de chargement. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdPaused </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdPaused  </span> </td> 
    <td colname="col2"> La publicité personnalisée est en pause. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdResumed </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdResumed  </span> </td> 
    <td colname="col2"> La lecture de la publicité personnalisée s’est poursuivie après une pause. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdPlaying </span> </td> 
+   <td colname="col1"> <span class="codeph"> AdPlaying  </span> </td> 
    <td colname="col2"> La publicité personnalisée est en cours de lecture. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> AdProgress </span> </td> 
-   <td colname="col2"> <p>Le lecteur d’annonce personnalisé informe le lecteur TVSDK de la progression de l’annonce personnalisée. &amp;nbsp; </p> <p>L’heure <span class="codeph"> actuelle </span> et l’heure <span class="codeph"> totale </span> de la publicité sont transmises avec ce événement. </p> </td> 
+   <td colname="col1"> <span class="codeph"> AdProgress  </span> </td> 
+   <td colname="col2"> <p>Le lecteur d’annonce personnalisé informe le lecteur TVSDK de la progression de l’annonce personnalisée. &amp;nbsp; </p> <p>Les <span class="codeph"> currentTime </span> et <span class="codeph"> totalTime </span> de la publicité sont transmis avec ce événement. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AdStarted </td> 
