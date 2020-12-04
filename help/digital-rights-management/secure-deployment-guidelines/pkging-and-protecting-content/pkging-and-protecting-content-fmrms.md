@@ -1,11 +1,14 @@
 ---
 description: Flash Media Rights Management Server 1.x et Adobe Primetime DRM utilisent des métadonnées différentes pour regrouper le contenu et demander des licences. Pour que Primetime DRM utilise le contenu FMRMS version 1.x, les métadonnées doivent être converties.
 seo-description: Flash Media Rights Management Server 1.x et Adobe Primetime DRM utilisent des métadonnées différentes pour regrouper le contenu et demander des licences. Pour que Primetime DRM utilise le contenu FMRMS version 1.x, les métadonnées doivent être converties.
-seo-title: Assurer la compatibilité avec Flash Media Rights Management Server 1.x
-title: Assurer la compatibilité avec Flash Media Rights Management Server 1.x
+seo-title: Compatibilité avec Flash Media Rights Management Server 1.x
+title: Compatibilité avec Flash Media Rights Management Server 1.x
 uuid: dd70941e-9015-4fb0-b265-557b6252e051
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +30,6 @@ Le SDK DRM de Primetime prend en charge les options suivantes pour la conversion
    >
    >Les métadonnées DRM 1.x de Primetime n’incluent pas le CEK.
 
-   Pour convertir les métadonnées, Primetime DRM nécessite l’accès aux clés de chiffrement de contenu DRM 1.x de Primetime. Lorsque vous effectuez une migration à partir de Flash Media Rights Management Server 1.x, vous pouvez continuer à stocker les clés de chiffrement de contenu dans la base de données LiveCycle ES ou mettre en oeuvre une solution personnalisée pour stocker en toute sécurité les clés de chiffrement de contenu à un autre emplacement. Si vous décidez de stocker les clés de chiffrement du contenu dans la base de données LiveCycle ES, suivez les recommandations décrites dans la section *Protection de l’accès au contenu sensible dans la base de données* dans **Renforcement et sécurité de LiveCycle® ES2**.
+   Pour convertir les métadonnées, Primetime DRM nécessite l’accès aux clés de chiffrement de contenu DRM 1.x de Primetime. Lorsque vous effectuez une migration depuis Flash Media Rights Management Server 1.x, vous pouvez continuer à stocker les clés de chiffrement de contenu dans la base de données LiveCycle ES ou mettre en oeuvre une solution personnalisée pour stocker en toute sécurité les clés de chiffrement de contenu à un autre emplacement. Si vous décidez de stocker les clés de chiffrement de contenu dans la base de données de LiveCycle ES, suivez les recommandations décrites dans *Protection de l&#39;accès au contenu sensible dans la base de données* dans **Renforcement et sécurité des LiveCycle® ES2**.
 
-Pour plus d’informations sur la compatibilité avec le contenu compressé à l’aide de Flash Media Rights Management Server 1.x, voir les API DRM d’Adobe Primetime sur Références [de l’API](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)Adobe Primetime.
+Pour plus d’informations sur la compatibilité avec le contenu conditionné à l’aide de Flash Media Rights Management Server 1.x, voir les API Adobe Primetime DRM sur [Adobe Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
