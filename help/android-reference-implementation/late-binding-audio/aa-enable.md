@@ -6,11 +6,14 @@ title: Intégration d’un fichier audio à liaison tardive
 uuid: cd2e259a-2af4-4d7b-a856-79bd087e8ca6
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '92'
+ht-degree: 0%
 
 ---
 
 
-# Intégration d’un fichier audio à liaison tardive {#integrate-late-binding-audio}
+# Intégrer le fichier audio à liaison tardive {#integrate-late-binding-audio}
 
 Vous pouvez intégrer des flux audio de liaison tardive ou alternatifs dans votre lecteur en créant un autre gestionnaire de fonctionnalités audio.
 
@@ -20,7 +23,7 @@ Vous pouvez intégrer des flux audio de liaison tardive ou alternatifs dans votr
    AAManager aaManager = new AAManagerOn(); 
    ```
 
-* Pour utiliser ManagerFactory pour activer des fichiers audio de remplacement, assurez-vous que la ligne de code suivante figure dans le `PlayerFragment.java` fichier :
+* Pour utiliser ManagerFactory pour activer des fichiers audio de remplacement, assurez-vous que la ligne de code suivante figure dans le fichier `PlayerFragment.java` :
 
    ```java
    aaManager = ManagerFactory.getAAManager( 
