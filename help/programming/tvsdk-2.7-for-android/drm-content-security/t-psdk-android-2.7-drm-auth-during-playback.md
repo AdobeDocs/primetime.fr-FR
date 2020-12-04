@@ -6,6 +6,9 @@ title: Authentification DRM pendant la lecture
 uuid: b3ff8edd-a3d4-470e-8899-580eca9fff4a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, vous pouvez effectuer une authentification pendant la lecture.
 
-Avec la rotation des licences, un fichier est chiffré avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, les `DRMHelper` méthodes sont utilisées pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
+Avec la rotation des licences, un fichier est chiffré avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, les méthodes `DRMHelper` sont utilisées pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
 
 >[!TIP]
 >
@@ -35,7 +38,7 @@ Avec la rotation des licences, un fichier est chiffré avec plusieurs licences D
    };
    ```
 
-1. Utilisez le `DRMMetadata` pour vérifier si une authentification est nécessaire.
+1. Utilisez `DRMMetadata` pour vérifier si une authentification est nécessaire.
 
    * Si l’authentification n’est pas requise, vous n’avez rien à faire et la lecture se poursuit sans interruption.
    * Si l&#39;authentification est requise, effectuez l&#39;authentification DRM.
