@@ -6,6 +6,9 @@ title: Authentification DRM avant lecture
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
 source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 1%
 
 ---
 
@@ -19,9 +22,9 @@ Un fichier vidéo peut être associé à un fichier de métadonnées DRM, par ex
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour télécharger le contenu du fichier de métadonnées DRM, l’analyser et vérifier si l’authentification DRM est nécessaire.
+Dans cet exemple, vous pouvez utiliser les méthodes `DRMHelper` pour télécharger le contenu du fichier de métadonnées DRM, l’analyser et vérifier si l’authentification DRM est nécessaire.
 
-1. Utilisez `loadDRMMetadata` pour charger le contenu de l’URL de métadonnées et analyser les octets téléchargés en `DRMMetadata`un.
+1. Utilisez `loadDRMMetadata` pour charger le contenu de l’URL de métadonnées et analyser les octets téléchargés dans `DRMMetadata`.
 
    >[!TIP]
    >
@@ -46,9 +49,9 @@ Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour téléchar
 
    Si les utilisateurs ne savent pas que l’opération est asynchrone, ils peuvent se demander pourquoi la lecture n’a pas encore commencé. Vous pouvez, par exemple, afficher une roue dentée pendant que les métadonnées DRM sont téléchargées et analysées.
 
-1. Implémentez les rappels dans le `DRMLoadMetadataListener`.
+1. Mettez en oeuvre les rappels dans `DRMLoadMetadataListener`.
 
-   Ils `loadDRMMetadata` appellent ces gestionnaires de événement.
+   `loadDRMMetadata` appelle ces gestionnaires de événement.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -71,7 +74,7 @@ Dans cet exemple, vous pouvez utiliser `DRMHelper` des méthodes pour téléchar
    * `onLoadMetadataUrlComplete` détecte la fin du chargement de l’URL de métadonnées.
    * `onLoadMetadataUrlError` indique que le chargement des métadonnées a échoué.
 
-1. Une fois le chargement terminé, examinez l’ `DRMMetadata` objet pour déterminer si l’authentification DRM est requise.
+1. Une fois le chargement terminé, examinez l&#39;objet `DRMMetadata` pour déterminer si l&#39;authentification DRM est requise.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
