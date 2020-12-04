@@ -6,6 +6,9 @@ title: Publicités cliquables
 uuid: 8b257483-8b90-47cf-be2a-095b6d5b8883
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -28,8 +31,8 @@ Lorsqu’un utilisateur clique sur une publicité, une bannière publicitaire as
 
 1. Surveillez les interactions des utilisateurs sur les annonces cliquables.
 1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, utilisez `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Prêtez attention au `PTMediaPlayerAdClickNotification` événement de TVSDK.
-1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez l’ `PTMediaPlayerAdClickURLKey` objet.
+1. Prêtez attention au événement `PTMediaPlayerAdClickNotification` de TVSDK.
+1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez l’objet `PTMediaPlayerAdClickURLKey`.
 1. Mettez la vidéo en pause.
 1. Utilisez les informations de clic publicitaire pour afficher l’URL de clic publicitaire et les informations associées.
 
