@@ -42,12 +42,12 @@ Les répertoires de journaux sont structurés pour faciliter leur utilisation. L
 
 ## Fichier journal global {#section_1CFA90748142439C9F3BE380969539DA}
 
-Le fichier journal global `flashaccess-global.log`se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal que le SDK Java DRM d&#39;Adobe Primetime ou des messages de journal peuvent avoir générés au moment de l&#39;initialisation du serveur.
+Le fichier journal global, `flashaccess-global.log`, se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal que le SDK Java DRM d&#39;Adobe Primetime ou des messages de journal peuvent avoir générés au moment de l&#39;initialisation du serveur.
 
 ## Fichier journal de partition {#section_5660137CD6AA40519E72A4315534846B}
 
-Le fichier journal des partitions `flashaccess-partition.log`se trouve dans le `<LicenseServer.LogRoot>/flashaccesserver` répertoire. Il comprend les messages du journal qui ont été générés pendant le traitement d’une demande de licence.
+Le fichier journal des partitions, `flashaccess-partition.log`, se trouve dans le répertoire `<LicenseServer.LogRoot>/flashaccesserver`. Il comprend les messages du journal qui ont été générés pendant le traitement d’une demande de licence.
 
 ## Fichier journal du client {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Le fichier journal du locataire de chaque client se trouve dans `flashaccess-tenant.log``<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Le journal du client contient des informations de contrôle décrivant chaque licence générée pour ce client.
+Le fichier journal du client de chaque client, `flashaccess-tenant.log`, se trouve dans `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Le journal du client contient des informations de contrôle décrivant chaque licence générée pour ce client.
