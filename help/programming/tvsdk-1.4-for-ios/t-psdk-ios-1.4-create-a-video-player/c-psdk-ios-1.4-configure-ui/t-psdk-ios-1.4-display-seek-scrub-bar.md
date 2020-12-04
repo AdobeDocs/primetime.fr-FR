@@ -6,11 +6,14 @@ title: Affichage d’une barre de défilement de recherche avec la position de t
 uuid: db57eb6f-3c67-4a64-a0f4-7e39027eb3e0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# Affichage d’une barre de défilement de recherche avec la position de temps de lecture actuelle {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Affichage d’une barre de défilement de recherche avec la position actuelle de temps de lecture {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
