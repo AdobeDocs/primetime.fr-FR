@@ -6,6 +6,9 @@ title: Cycle de vie et états de l’objet MediaPlayer
 uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
@@ -16,38 +19,38 @@ Depuis le moment où l’instance MediaPlayer est créée jusqu’au moment où 
 
 Voici quelques exemples :
 
-* **IDLE**: `MediaPlayerStatus.IDLE`
+* **IDLE** :  `MediaPlayerStatus.IDLE`
 
-* **INITIALISATION**: `MediaPlayerStatus.INITIALIZING`
+* **INITIALISATION** :  `MediaPlayerStatus.INITIALIZING`
 
-* **INITIALISÉ**: `MediaPlayerStatus.INITIALIZED`
+* **INITIALISÉ** :  `MediaPlayerStatus.INITIALIZED`
 
-* **PRÉPARATION**: `MediaPlayerStatus.PREPARING`
+* **PRÉPARATION** :  `MediaPlayerStatus.PREPARING`
 
-* **PRÉPARÉ**: `MediaPlayerStatus.PREPARED`
+* **PRÉPARÉ** :  `MediaPlayerStatus.PREPARED`
 
-* **LECTURE**: `MediaPlayerStatus.PLAYING`
+* **LECTURE** :  `MediaPlayerStatus.PLAYING`
 
-* **EN PAUSE**: `MediaPlayerStatus.PAUSED`
+* **EN PAUSE** :  `MediaPlayerStatus.PAUSED`
 
-* **RECHERCHE**: `MediaPlayerStatus.SEEKING`
+* **RECHERCHE** :  `MediaPlayerStatus.SEEKING`
 
-* **TERMINÉ**: `MediaPlayerStatus.COMPLETE`
+* **TERMINÉ** :  `MediaPlayerStatus.COMPLETE`
 
-* **ERREUR**: `MediaPlayerStatus.ERROR`
+* **ERREUR** :  `MediaPlayerStatus.ERROR`
 
-* **PUBLIÉ**: `MediaPlayerStatus.RELEASED`
+* **PUBLIÉ** :  `MediaPlayerStatus.RELEASED`
 
 La liste complète des états est définie dans `MediaPlayerStatus`.
 
-Il est utile de connaître l’état du lecteur car certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, `play` il est impossible d’appeler lorsque l’état IDLE est actif. Elle doit être appelée après avoir atteint l’état PRÉPARÉ. L’état ERROR modifie également ce qui peut se passer ensuite.
+Il est utile de connaître l’état du lecteur car certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, `play` ne peut pas être appelé pendant l&#39;état IDLE. Elle doit être appelée après avoir atteint l’état PRÉPARÉ. L’état ERROR modifie également ce qui peut se passer ensuite.
 
 Lorsqu’une ressource multimédia est chargée et lue, le lecteur se transition de la manière suivante :
 
 1. L’état initial est IDLE.
 1. Votre application appelle `MediaPlayer.replaceCurrentResource`, ce qui déplace le lecteur à l’état INITIALISATION.
 1. Si le navigateur TVSDK charge correctement la ressource, l’état devient INITIALISÉ.
-1. Votre application appelle `MediaPlayer.prepareToPlay`et l’état devient PRÉPARATION.
+1. Votre application appelle `MediaPlayer.prepareToPlay` et l&#39;état devient PRÉPARATION.
 1. Le navigateur TVSDK prépare le flux média et début la résolution et l’insertion de publicités (si activé).
 
    Une fois cette étape terminée, les publicités sont insérées dans la chronologie ou la procédure publicitaire a échoué et l&#39;état du lecteur devient PRÉPARÉ.
