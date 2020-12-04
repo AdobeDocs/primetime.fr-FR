@@ -6,6 +6,9 @@ title: Formats JSON pour le suivi des URL
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Si le client demande des informations de suivi au format JSON, le serveur de man
 
 ## Format JSON pour le suivi de la version 1 {#json_v1}
 
-Fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v1` le format général suivant est utilisé :
+Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v1` possède le format général suivant :
 
 ```
 { 
@@ -34,7 +37,7 @@ Fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v1` le fo
 
 ## Format JSON pour le suivi de la version 2 {#json_v2}
 
-Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v2` possède le format de l’exemple suivant, qui provient d’un bloc JSON type.
+Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v2` a le format de l’exemple suivant, qui provient d’un bloc JSON type.
 
 Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier JSON.
 
@@ -364,11 +367,11 @@ Il a été raccourci pour éviter toute répétition inutile, de sorte que la st
 
 >[!NOTE]
 >
->La `offset` valeur de l’ `scte35` attribut telle qu’elle est extraite `ad breaks` peut être négative. En effet, le fichier annexe JSON V2 contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture active. Ainsi, l’ `scte35` attribut contient également des informations sur ces coupures publicitaires.
+>La valeur `offset` de l&#39;attribut `scte35` extrait de `ad breaks` peut être négative. En effet, le fichier annexe JSON V2 contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture active. L&#39;attribut `scte35` contient donc également des informations sur ces coupures publicitaires.
 
 ## Format JSON pour le suivi de la version 3 {#json_v3}
 
-Fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v3` le format général suivant est utilisé :
+Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v3` possède le format général suivant :
 
 ```
 { 
