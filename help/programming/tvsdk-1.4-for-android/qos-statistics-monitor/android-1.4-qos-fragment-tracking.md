@@ -6,6 +6,9 @@ title: Suivi au niveau du fragment à l’aide des informations de chargement
 uuid: a6572823-d525-4ce0-806a-3feb20678cb0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '358'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
 1. Fragments de fichier
 1. Suivi des informations relatives aux fichiers
 
-   Vous pouvez lire les informations de qualité de service (QoS) sur les ressources téléchargées, telles que les fragments et les pistes, à partir de la `LoadInfo` classe.
+   Vous pouvez lire les informations de qualité de service (QoS) sur les ressources téléchargées, telles que les fragments et les pistes, à partir de la classe `LoadInfo`.
 
-1. Mettez en oeuvre l’écouteur de événement de rappel. `onLoadInfo`
+1. Mettez en oeuvre l’écouteur de événement de rappel `onLoadInfo`.
 1. Enregistrez l’écouteur de événement, que TVSDK appelle chaque fois qu’un fragment est téléchargé.
-1. Lisez les données présentant un intérêt à partir du `LoadInfo` paramètre transmis au rappel.
+1. Lisez les données présentant un intérêt à partir du paramètre `LoadInfo` transmis au rappel.
 
    <table id="table_06BD536A23AB4A73B510998426BAE143"> 
     <thead> 
@@ -36,43 +39,43 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
     </thead>
     <tbody> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
-      <td colname="col1"> <span class="codeph"> long </span> </td> 
-      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes de plus pour télécharger l’intégralité du fragment. </p> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
+      <td colname="col1"> <span class="codeph"> long  </span> </td> 
+      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes supplémentaires pour télécharger l’intégralité du fragment. </p> </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
-      <td colname="col1"> <span class="codeph"> long </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
+      <td colname="col1"> <span class="codeph"> long  </span> </td> 
       <td colname="col2"> Durée du média des fragments téléchargés en millisecondes. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> periodIndex </span> </td> 
-      <td colname="col1"> <span class="codeph"> int </span> </td> 
+      <td colname="col01"> <span class="codeph"> periodIndex  </span> </td> 
+      <td colname="col1"> <span class="codeph"> int  </span> </td> 
       <td colname="col2"> Index de période de chronologie associé à la ressource téléchargée. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> taille </span> </td> 
-      <td colname="col1"> <span class="codeph"> long </span> </td> 
+      <td colname="col01"> <span class="codeph"> taille  </span> </td> 
+      <td colname="col1"> <span class="codeph"> long  </span> </td> 
       <td colname="col2"> Taille de la ressource téléchargée en octets. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
-      <td colname="col1"> <span class="codeph"> int </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
+      <td colname="col1"> <span class="codeph"> int  </span> </td> 
       <td colname="col2"> L'index de la voie correspondante, s'il est connu ; sinon, 0. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
-      <td colname="col1"> <span class="codeph"> Chaîne </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
+      <td colname="col1"> <span class="codeph"> Chaîne  </span> </td> 
       <td colname="col2"> Le nom de la voie correspondante, s'il est connu ; sinon, nul. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
-      <td colname="col1"> <span class="codeph"> Chaîne </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
+      <td colname="col1"> <span class="codeph"> Chaîne  </span> </td> 
       <td colname="col2"> le type de la voie correspondante, s'il est connu ; sinon, nul. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> type </span> </td> 
-      <td colname="col1"> <span class="codeph"> Chaîne </span> </td> 
+      <td colname="col01"> <span class="codeph"> type  </span> </td> 
+      <td colname="col1"> <span class="codeph"> Chaîne  </span> </td> 
       <td colname="col2"> Contenu téléchargé par TVSDK. L'un des éléments suivants : 
       <ul id="ul_9C3BDEBD878544DA95C7FF81114F9B5C"> 
       <li id="li_A093552B492A44FD8B30785E465F6886">MANIFEST - Liste de lecture/manifeste </li> 
@@ -81,8 +84,8 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
       </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, FILE est renvoyé. </td> 
       </tr> 
       <tr> 
-      <td colname="col01"> <span class="codeph"> url </span> </td> 
-      <td colname="col1"> <span class="codeph"> Chaîne </span> </td> 
+      <td colname="col01"> <span class="codeph"> url  </span> </td> 
+      <td colname="col1"> <span class="codeph"> Chaîne  </span> </td> 
       <td colname="col2"> URL pointant vers la ressource téléchargée. </td> 
       </tr> 
     </tbody> 
