@@ -6,6 +6,9 @@ title: Reprise publicitaire pour les annonces VAST et VMAP
 uuid: ca65f349-012d-49e3-8c23-fd041c5362ee
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '555'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Dans le cas des annonces (ou créatives) à modèle de diffusion de vidéo numérique pour lesquelles la règle de secours est activée, TVSDK traite une publicité avec un type de média non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
 
-La spécification VAST/Digital Video Multiple Ad Playlist (VMAP) indique que pour les publicités pour lesquelles la reprise VAST est activée, les publicités vides déclenchent automatiquement l’utilisation des publicités de secours. Lorsqu’une publicité VAST est vide, TVSDK recherche un remplacement de type de média HLS valide parmi les annonces de secours. Lorsqu’une publicité VAST dans un wrapper a un type de média non valide, TVSDK traite cette publicité comme vide. Vous pouvez déterminer si TVSDK doit faire de même pour les publicités intégrées dans un VMAP. Pour plus d’informations sur la `fallbackOnNoAd` fonction VAST, voir Modèle de diffusion de publicités vidéo [numériques (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+La spécification VAST/Digital Video Multiple Ad Playlist (VMAP) indique que pour les publicités pour lesquelles la fonction de secours VAST est activée, les publicités vides déclenchent automatiquement l’utilisation des publicités de secours. Lorsqu’une publicité VAST est vide, TVSDK recherche un remplacement de type de média HLS valide parmi les annonces de secours. Lorsqu’une publicité VAST dans un wrapper a un type de média non valide, TVSDK traite cette publicité comme vide. Vous pouvez déterminer si TVSDK doit faire de même pour les publicités intégrées dans un VMAP. Pour plus d’informations sur la fonctionnalité VAST `fallbackOnNoAd`, voir [Modèle de diffusion d’annonces vidéo numérique (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
-## Définir le comportement des annonces de secours pour les annonces VMAP intégrées {#section_D90BB3C6E539472EABF000C0F616DBE2}
+## Définir le comportement des publicités de secours pour les annonces VMAP intégrées {#section_D90BB3C6E539472EABF000C0F616DBE2}
 
 Vous pouvez activer la reprise lorsqu’une publicité VMAP intégrée contient un type de média non valide.
 
-1. Définissez cette variable sur `FallbackOnInvalidCreativeEnabled` `YES` une réduction VMAP lorsque le type de média pour une publicité linéaire/intégrée n&#39;est pas valide pour HLS.
+1. Définissez `FallbackOnInvalidCreativeEnabled` sur `YES` pour que VMAP soit rétabli lorsque le type de média pour une publicité linéaire/intégrée n&#39;est pas valide pour HLS.
 
    >[!NOTE]
    >
