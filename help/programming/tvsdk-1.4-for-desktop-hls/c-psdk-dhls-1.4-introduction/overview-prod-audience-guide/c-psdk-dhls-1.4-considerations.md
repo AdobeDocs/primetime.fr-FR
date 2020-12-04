@@ -6,6 +6,9 @@ title: Considérations et bonnes pratiques
 uuid: 62a5d641-6f37-4e4d-bbc2-414bf3681d9c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
@@ -23,8 +26,8 @@ Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
    Vous devez utiliser des périphériques réels pour les tests.
 * La lecture n’est prise en charge que pour le contenu HLS (HTTP Live Streaming).
 * Le contenu vidéo principal peut être multiplexé, où les flux vidéo et audio se trouvent dans le même rendu, ou non multiplexé, où les flux vidéo et audio se trouvent dans des rendus distincts.
-* L’API TVSDK est implémentée dans ActionScript.
-* La lecture vidéo nécessite Adobe Video Engine (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
+* L’API TVSDK est implémentée dans l’ActionScript.
+* La lecture vidéo nécessite le moteur de vidéo d’Adobe (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
 
    * Le sous-titrage est pris en charge dans la mesure prévue par l&#39;AVE.
    * Selon la précision de l’encodeur, la durée réelle du support codé peut différer des durées enregistrées dans le manifeste de ressources de diffusion en continu.
@@ -43,5 +46,5 @@ Voici les pratiques recommandées pour TVSDK :
 * Utilisez HLS version 3.0 ou ultérieure pour le contenu du programme.
 * Pour TVSDK 1.4 pour DHLS, le chargement différé des publicités est activé par défaut.
 
-   Pour le contenu sans preroll ou mid-roll, vous pouvez l’utiliser `AdvertisingMetadata.delayAdLoading` pour accélérer encore plus le chargement du contenu.
+   Pour le contenu sans preroll ou mid-roll, vous pouvez utiliser `AdvertisingMetadata.delayAdLoading` pour accélérer encore plus le chargement du contenu.
 
