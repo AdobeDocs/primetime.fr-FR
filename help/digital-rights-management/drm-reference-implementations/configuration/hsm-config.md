@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l&#39;utilisation d&#39;un HSM ne soit pas nécessaire, elle est recommandée.
 
-Pour utiliser des informations d’identification sur un HSM, vous devez créer un fichier de configuration pour le fournisseur Sun PKCS#11. Pour plus d&#39;informations, consultez le Guide [de référence](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html)Java PCKS#11.
+Pour utiliser des informations d’identification sur un HSM, vous devez créer un fichier de configuration pour le fournisseur Sun PKCS#11. Pour plus d&#39;informations, consultez le [Guide de référence Java PCKS#11](https://docs.oracle.com/javase/1.5.0/docs/guide/security/p11guide.html).
 
 Pour vérifier que votre fichier de configuration HSM et Sun PKCS#11 est configuré, tapez la commande suivante à l’aide de l’outil de commande de clés installé avec le JDK Java :
 
