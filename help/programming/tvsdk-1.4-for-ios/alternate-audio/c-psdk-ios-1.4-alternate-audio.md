@@ -6,29 +6,32 @@ title: Autre son
 uuid: 9dc3bec6-2135-4083-8db2-50a492e6bd67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#alternate-audio-overview}
+# Aperçu {#alternate-audio-overview}
 
 Le son alternatif, ou à liaison tardive, vous permet de basculer entre les pistes audio disponibles pour une piste vidéo. Ainsi, les utilisateurs peuvent sélectionner un suivi de langue lors de la lecture de la vidéo.
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Lorsque TVSDK crée l’ `MediaPlayerItem` instance de la vidéo active, il crée un `AudioTrack` élément pour chaque piste audio disponible. L’élément contient une `name` propriété, une chaîne contenant généralement une description reconnaissable par l’utilisateur de la langue de ce suivi. L’élément contient également des informations sur l’utilisation de ce suivi par défaut.
+Lorsque TVSDK crée l’instance `MediaPlayerItem` pour la vidéo en cours, il crée un élément `AudioTrack` pour chaque piste audio disponible. L’élément contient une propriété `name`, une chaîne contenant généralement une description reconnaissable par l’utilisateur de la langue de ce suivi. L’élément contient également des informations sur l’utilisation de ce suivi par défaut.
 
 Quand il est temps de lire la vidéo, vous pouvez demander une liste des pistes audio disponibles, laisser l&#39;utilisateur en choisir une, et configurer la lecture de la vidéo pour la lecture avec la piste sélectionnée.
 
-Bien que rare, si une piste audio supplémentaire devient disponible après sa création `MediaPlayerItem`, TVSDK déclenche un `MediaPlayerItem.AUDIO_UPDATED` événement.
+Bien que rare, si une autre piste audio devient disponible après avoir créé `MediaPlayerItem`, TVSDK déclenche un événement `MediaPlayerItem.AUDIO_UPDATED`.
 
-## Ajout d’API {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## API Ajoutées {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
 Les API suivantes ont été ajoutées pour prendre en charge les fichiers audio alternatifs :
 
 `hasAlternateAudio`
 
-Si le média spécifié comporte une autre piste audio, autre que la piste par défaut, cette fonction booléenne renvoie `true`. S’il n’existe aucune autre piste audio, la fonction renvoie `false`.
+Si le média spécifié possède une autre piste audio, autre que la piste par défaut, cette fonction booléenne renvoie `true`. S&#39;il n&#39;existe aucune autre piste audio, la fonction renvoie `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const 
