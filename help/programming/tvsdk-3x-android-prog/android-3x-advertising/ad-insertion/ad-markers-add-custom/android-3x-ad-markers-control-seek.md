@@ -6,6 +6,9 @@ title: Contrôler le comportement de lecture pour la recherche sur les marques p
 uuid: ec95a22f-0143-4c80-826f-d6b40e77cf26
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Vous pouvez remplacer le comportement par défaut de la façon dont TVSDK traite
 
 Par défaut, lorsqu’un utilisateur effectue des recherches dans ou après des sections d’annonces résultant de l’emplacement de marques publicitaires personnalisées, TVSDK ignore les publicités. Ceci peut différer du comportement de lecture actuel pour les pauses publicitaires standard. Vous pouvez définir TVSDK pour repositionner le curseur de lecture au début de la dernière publicité personnalisée ignorée lorsque l’utilisateur recherche au-delà d’une ou plusieurs publicités personnalisées.
 
-1. Appelle `CustomRangeMetadata.setAdjustSeekPosition` avec `true`.
+1. Appelez `CustomRangeMetadata.setAdjustSeekPosition` avec `true`.
 
    ```java
    customRangeMetadata.setAdjustSeekPosition (true);
