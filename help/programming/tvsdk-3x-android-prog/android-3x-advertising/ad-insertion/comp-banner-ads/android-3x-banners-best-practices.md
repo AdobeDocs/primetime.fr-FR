@@ -6,11 +6,14 @@ title: Recommandations relatives aux bannières publicitaires d’accompagnement
 uuid: 0e4c98cd-5e16-4c84-848f-02bc6f1b0d6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
 
-# Recommandations relatives aux bannières publicitaires d’accompagnement {#best-practices-for-companion-banner-ads}
+# Meilleures pratiques pour les bannières publicitaires complémentaires {#best-practices-for-companion-banner-ads}
 
 TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l&#39;affichage des bannières d&#39;accompagnement fournies avec une publicité linéaire.
 
