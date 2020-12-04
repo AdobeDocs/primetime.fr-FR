@@ -4,6 +4,9 @@ title: Création d’une stratégie DRM à l’aide de l’API Java
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +15,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Pour créer une stratégie DRM avec l’API Java :
 
-1. Configurez votre environnement de développement et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configuration de votre environnement de développement.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Créez un `com.adobe.flashaccess.sdk.policy.Policy` objet et spécifiez ses propriétés, notamment les droits, la durée de mise en cache des licences et la date de fin de la stratégie DRM.
+1. Configurez votre environnement de développement et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configurez votre environnement de développement.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Créez un objet `com.adobe.flashaccess.sdk.policy.Policy` et spécifiez ses propriétés, notamment les droits, la durée de mise en cache des licences et la date de fin de la stratégie DRM.
 
    ```java
    // Create a new DRM policy object.  
