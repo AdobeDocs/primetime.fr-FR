@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# Déploiement de l’implémentation de référence BEES {#deploy-the-bees-reference-implementation}
+# Déployer l&#39;implémentation de référence BEES {#deploy-the-bees-reference-implementation}
 
 1. Configurez votre serveur d’applications Tomcat. (Consultez votre documentation Tomcat.)
-1. Copiez le `[!DNL bees.war]` fichier dans le [!DNL webapps/] dossier de Tomcat.
+1. Copiez le fichier `[!DNL bees.war]` dans le dossier [!DNL webapps/] de Tomcat.
 1. Envoyez une demande à `https://localhost:8080/bees`.
 
    Si le message &quot;BEES is Operational&quot; s’affiche, le déploiement est terminé.
