@@ -13,14 +13,14 @@ ht-degree: 0%
 
 # Définition de règles temporelles {#defining-time-based-rules}
 
-adobe Access utilise une &quot;application souple&quot; des restrictions de licence temporelles. Si un droit de lecture expire au cours de la lecture d’une vidéo, le comportement par défaut d’Accès Adobe consiste à ne pas restreindre la lecture jusqu’à la prochaine recréation du flux vidéo (en appelant `Netstream.stop()` et `Netstream.play()`).
+Adobe Access utilise une &quot;application souple&quot; des restrictions de licence temporelles. Si un droit temporel expire lors de la lecture d’une vidéo, le comportement par défaut d’Accès Adobe est de ne pas restreindre la lecture jusqu’à la prochaine recréation du flux vidéo (en appelant `Netstream.stop()` et `Netstream.play()`).
 
 Bien que l’application souple soit le comportement par défaut, vous pouvez également activer l’application stricte en exécutant l’une des tâches suivantes :
 
-* Demandez à votre lecteur vidéo d’interroger régulièrement la licence afin de s’assurer qu’aucune des restrictions de temps n’a expiré. Pour ce faire, appelez `DRMManager.loadVoucher(LOCAL_ONLY).`un code d&#39;erreur indiquant que la licence stockée en local n&#39;est plus valide.
+* Demandez à votre lecteur vidéo d’interroger régulièrement la licence afin de s’assurer qu’aucune des restrictions de temps n’a expiré. Pour ce faire, appelez `DRMManager.loadVoucher(LOCAL_ONLY).`Un code d&#39;erreur indique que la licence stockée localement n&#39;est plus valide.
 * Chaque fois que l’utilisateur clique sur le bouton Pause, vous pouvez enregistrer l’horodatage de la vidéo en cours, puis appeler `Netstream.stop().`Lorsque l’utilisateur clique sur le bouton Lecture, vous pouvez rechercher l’emplacement enregistré, puis appeler `Netstream.play()`.
 
-## Date début {#start-date}
+## Date du début {#start-date}
 
 Indique la date à laquelle une licence est valide.
 
@@ -64,4 +64,4 @@ Le comportement de synchronisation est défini à l’aide des paramètres suiva
 
 >[!NOTE]
 >
->Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 3.0 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)minimale du client.
+>Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 3.0 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir [Version minimale du client](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
