@@ -99,7 +99,7 @@ Configurez votre pare-feu externe de sorte qu’il n’expose que les URL des fo
 
 Le serveur de licences nécessite un accès via le pare-feu pour télécharger les listes de révocation des certificats suivantes à partir de l’Adobe :
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
