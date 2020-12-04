@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Réparer des annonces incompatibles à l’aide du service de reconditionnement d’Adobe Creative Repackaging Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Réparer les annonces incompatibles à l’aide du service de reconditionnement créatif d’Adobe (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
 Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
 
@@ -27,7 +27,7 @@ Pour activer cette fonction CRS facultative, contactez votre représentant d’A
 >
 >Pour les clients CRS version 3.0 (et antérieure), les modifications suivantes, à commencer par CRS version 3.1, ont amélioré à la fois la sécurité et les performances :
 >
->* L’élément CRS 3.1 continue d’être utilisé `https:` si le contenu en cours de réemballage est utilisé `https:`. Cela réduit la possibilité pour certains lecteurs de présenter du contenu non sécurisé.
+>* CRS 3.1 continue avec `https:` si le contenu reconditionné utilise `https:`. Cela réduit la possibilité pour certains lecteurs de présenter du contenu non sécurisé.
    >
    >
 * CRS 3.1 réduit considérablement les appels réseau, améliorant ainsi le temps de démarrage de la vidéo.
@@ -36,7 +36,7 @@ Pour activer cette fonction CRS facultative, contactez votre représentant d’A
 
 
 
-Pour plus d’informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
+Pour plus d&#39;informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
 
 ## Activer CRS dans les applications TVSDK{#enable-crs-in-tvsdk-applications}
 
