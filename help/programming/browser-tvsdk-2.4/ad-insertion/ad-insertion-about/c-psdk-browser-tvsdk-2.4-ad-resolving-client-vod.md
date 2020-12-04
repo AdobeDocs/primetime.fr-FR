@@ -5,7 +5,10 @@ seo-title: Résolution et insertion de publicités VOD
 title: Résolution et insertion de publicités VOD
 uuid: 34a30ae5-d553-4c5d-9829-8e5eaa41c104
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: ''
 
 Pour le contenu vidéo à la demande (VOD), le navigateur TVSDK insère des coupures publicitaires en épinglant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
 
-Avant la lecture, le navigateur TVSDK résout les publicités connues, insère les coupures publicitaires dans le contenu principal, comme décrit par une chronologie qui est renvoyée à partir de la prise de décision publicitaire Adobe Primetime, et recalcule la chronologie virtuelle, si nécessaire.
+Avant la lecture, le navigateur TVSDK résout les publicités connues, insère les coupures publicitaires dans le contenu principal, comme décrit par une chronologie qui est renvoyée à partir de la prise de décision de publicité Adobe Primetime, et recalcule la chronologie virtuelle, si nécessaire.
 
 Le navigateur TVSDK insère les publicités de différentes manières :
 
