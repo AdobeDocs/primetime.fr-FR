@@ -6,18 +6,21 @@ title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponi
 uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
 
-# Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles {#select-a-current-caption-track-from-among-available-tracks}
+# Sélectionnez une piste de légende actuelle parmi les pistes disponibles {#select-a-current-caption-track-from-among-available-tracks}
 
 Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d&#39;autres sont devenues disponibles.
 
-1. Attendez que le lecteur de médias soit au moins en `PREPARED` état.
+1. Attendez que le lecteur multimédia soit au moins dans l’état `PREPARED`.
 1. Prêtez attention aux événements suivants :
 
-   * `MediaPlayerEvent.STATUS_CHANGED` avec le statut `MediaPlayerStatus.INITIALIZED`: La liste initiale des pistes de sous-titrage est disponible.
+   * `MediaPlayerEvent.STATUS_CHANGED` avec le statut  `MediaPlayerStatus.INITIALIZED`: La liste initiale des pistes de sous-titrage est disponible.
 
 1. Obtenez une liste de toutes les pistes de sous-titrage actuellement disponibles.
 
