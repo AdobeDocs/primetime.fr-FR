@@ -6,6 +6,9 @@ title: Application Google Cast pour le navigateur TVSDK
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -57,7 +60,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Établissement d’une connexion {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Établissement d&#39;une connexion {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -65,7 +68,7 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 Pour établir une connexion, l&#39;expéditeur et le destinataire doivent effectuer les tâches suivantes :
 
-* L’expéditeur doit consulter la documentation relative à la plate-forme sur le site [Sender App Development](https://developers.google.com/cast/docs/sender_apps).
+* L’expéditeur doit consulter la documentation de la plate-forme à l’adresse [Développement de l’application de l’expéditeur](https://developers.google.com/cast/docs/sender_apps).
 * Le destinataire utilise les API de réception Cast pour établir une connexion avec l&#39;application d&#39;expéditeur. Par exemple :
 
    ```js
