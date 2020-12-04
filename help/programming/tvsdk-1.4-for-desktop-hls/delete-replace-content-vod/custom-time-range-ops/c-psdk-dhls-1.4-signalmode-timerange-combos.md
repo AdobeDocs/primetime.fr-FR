@@ -6,24 +6,27 @@ title: Mode de signalisation et période
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
 
-# Mode de signalisation et période {#signaling-mode-and-time-range}
+# Mode de signature et plage de temps {#signaling-mode-and-time-range}
 
 <table> 
  <thead> 
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARQUE </th> 
-   <th class="entry"> SUPPRIMER </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> REMPLACER </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Générateur d'opportunité de plage personnalisée </span> </td> 
+   <td> <span class="codeph"> Générateur d'opportunité de plage personnalisée  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -42,7 +45,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature ServerMap </td> 
+   <td> <span class="codeph"> Mode  </span> de signature de ServerMap </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -65,7 +68,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> S/O (mode de signalisation automatique CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature de ManifestCue </td> 
+   <td> <span class="codeph"> Mode  </span> de signature de ManifestCue </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> S/O (mode de signalisation automatique CustomRange) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature de plage personnalisée </td> 
+   <td> <span class="codeph"> Mode de  </span> signature de plage personnalisée </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,13 +139,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARQUE </th> 
-   <th class="entry"> SUPPRIMER </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> REMPLACER </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -161,7 +164,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature de ServerMap </td> 
+   <td> <span class="codeph"> Mode  </span> de signature de ServerMap </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> 
     <code>
@@ -172,10 +175,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> personnaliséRange </span> ) </td> 
+   <td> S/O (mode de signalisation automatique <span class="codeph"> CustomRange </span>) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature de ManifestCue </td> 
+   <td> <span class="codeph"> Mode  </span> de signature de ManifestCue </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> 
     <code>
@@ -186,10 +189,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> personnaliséRange </span> ) </td> 
+   <td> S/O (mode de signalisation automatique <span class="codeph"> CustomRange </span>) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode </span> de signature de plage personnalisée </td> 
+   <td> <span class="codeph"> Mode de  </span> signature de plage personnalisée </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> Aucun </td> 
    <td> Aucun (pris en charge dans <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
