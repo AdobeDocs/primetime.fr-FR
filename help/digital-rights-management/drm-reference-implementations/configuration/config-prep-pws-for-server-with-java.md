@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Préparation des mots de passe à l’aide de Java{#prepare-passwords-using-java}
 
-Exécutez le fichier `ScrambleUtil.class` avec Java :
+Exécutez `ScrambleUtil.class` avec Java :
 
 1. Accédez à `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. Dans la ligne de commande, tapez :
