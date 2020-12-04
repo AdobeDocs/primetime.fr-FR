@@ -6,6 +6,9 @@ title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
 uuid: 5f63cc1e-3f4b-460c-9151-2b9d364800e2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité. Le premier qui revient `true` est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’avertissement de TVSDK une fois le processus terminé.
+Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité. Le premier qui renvoie `true` est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’avertissement de TVSDK une fois le processus terminé.
 
-1. Mettez en oeuvre votre propre personnalisation `ContentFactory`en étendant l’ `ContentFactory` interface et en remplaçant `retrieveResolvers`.
+1. Mettez en oeuvre votre propre `ContentFactory` personnalisé en étendant l&#39;interface `ContentFactory` et en remplaçant `retrieveResolvers`.
 
    Par exemple :
 
@@ -51,7 +54,7 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
    } 
    ```
 
-1. Enregistrez le `ContentFactory` au `MediaPlayer`.
+1. Enregistrez le `ContentFactory` dans le `MediaPlayer`.
 
    Par exemple :
 
@@ -68,9 +71,9 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
    itemLoader.load(resource, id, config);
    ```
 
-1. Transmettez un `AdvertisingMetadata` objet à TVSDK comme suit :
-   1. Créez un `AdvertisingMetadata` objet.
-   1. Enregistrez l&#39; `AdvertisingMetadata` objet dans `MediaPlayerItemConfig`.
+1. Transmettez un objet `AdvertisingMetadata` à TVSDK comme suit :
+   1. Créez un objet `AdvertisingMetadata`.
+   1. Enregistrez l&#39;objet `AdvertisingMetadata` dans `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +84,8 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Créez une classe personnalisée de résolution d’annonces qui étend la `ContentResolver` classe.
-   1. Dans le résolveur d’annonces personnalisé, remplacez `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
+1. Créez une classe de résolution d&#39;annonces personnalisée qui étend la classe `ContentResolver`.
+   1. Dans le résolveur d’annonces personnalisé, remplacez `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup` :
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +94,7 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
       void doCleanup();
       ```
 
-      Vous obtenez votre `advertisingMetadata` part de l&#39;élément transmis `doConfigure`:
+      Vous obtenez votre `advertisingMetadata` de l&#39;élément transmis dans `doConfigure` :
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -102,7 +105,7 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
 
    1. Pour chaque opportunité de placement, créez un `List<TimelineOperation>`.
 
-      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement`:
+      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement` :
 
       ```java
       AdBreakPlacement( 
@@ -115,14 +118,14 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
 
    1. Une fois les publicités résolues, appelez l’une des fonctions suivantes :
 
-      * Si la résolution de la publicité réussit, appelez `process(List<TimelineOperation> proposals)` et `notifyCompleted(Opportunity opportunity)` sur la variable `ContentResolverClient`
+      * Si la résolution de la publicité réussit, appelez `process(List<TimelineOperation> proposals)` et `notifyCompleted(Opportunity opportunity)` sur le `ContentResolverClient`
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Si la résolution de la publicité échoue, appelez `notifyResolveError` la fonction `ContentResolverClient`
+      * Si la résolution de la publicité échoue, appelez `notifyResolveError` sur la `ContentResolverClient`
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
