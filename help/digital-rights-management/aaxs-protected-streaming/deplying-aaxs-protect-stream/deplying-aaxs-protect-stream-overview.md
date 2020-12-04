@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Avant de déployer Adobe Access Server for Protected Streaming, assurez-vous d’avoir installé les versions de Java et Tomcat répertoriées dans la section Conditions requises.
 
-Le package Adobe Access Server for Protected Streaming inclut [!DNL flashaccesserver.war]. Pour déployer ce fichier WAR, copiez-le dans le [!DNL webapps] répertoire de Tomcat. Si vous avez déjà déployé le fichier WAR, vous devrez peut-être supprimer manuellement le répertoire WAR décompressé ( [!DNL flashaccessserver] dans le [!DNL webapps] répertoire de Tomcat). Pour empêcher Tomcat de décompresser les fichiers WAR, modifiez le [!DNL server.xml] fichier dans le [!DNL conf] répertoire de Tomcat et définissez l’ `unpackWARs` attribut sur `false`.
+Le package Adobe Access Server for Protected Streaming inclut [!DNL flashaccesserver.war]. Pour déployer ce fichier WAR, copiez-le dans le répertoire [!DNL webapps] de Tomcat. Si vous avez déjà déployé le fichier WAR, vous devrez peut-être supprimer manuellement le répertoire WAR non compressé ( [!DNL flashaccessserver] dans le répertoire [!DNL webapps] de Tomcat). Pour empêcher Tomcat de décompresser les fichiers WAR, modifiez le fichier [!DNL server.xml] dans le répertoire [!DNL conf] de Tomcat et définissez l&#39;attribut `unpackWARs` sur `false`.
 
 >[!NOTE]
 >
->Si vous avez configuré Tomcat pour inclure [!DNL commons-logging.jar] le chemin de classe System (non requis pour la diffusion en flux continu protégée Adobe Access Server), la journalisation des ressources communes doit être configurée pour utiliser Log4J.
+>Si vous avez configuré Tomcat pour inclure [!DNL commons-logging.jar] sur le chemin de classe du système (non requis pour la diffusion en flux continu protégée Adobe Access Server), la journalisation des biens communs doit être configurée pour utiliser Log4J.
 
-Le serveur utilise éventuellement une bibliothèque spécifique à la plate-forme ( [!DNL jsafe.dll] sous Microsoft Windows ou [!DNL libjsafe.so] sous Linux) pour des performances optimales. Copiez la bibliothèque appropriée pour votre plateforme de la [!DNL thirdparty/cryptoj/]*plateforme *vers un emplacement spécifié par la variable d’`PATH`environnement (ou`LD_LIBRARY_PATH`sous Linux).
+Le serveur utilise éventuellement une bibliothèque spécifique à la plate-forme ( [!DNL jsafe.dll] sous Microsoft Windows ou [!DNL libjsafe.so] sous Linux) pour des performances optimales. Copiez la bibliothèque appropriée pour votre plateforme de [!DNL thirdparty/cryptoj/]*plateforme* vers un emplacement spécifié par la variable d&#39;environnement `PATH` (ou `LD_LIBRARY_PATH` sous Linux).
 
 >[!NOTE]
 >
