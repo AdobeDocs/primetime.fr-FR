@@ -6,6 +6,9 @@ description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l
 seo-description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne de texte simple.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
