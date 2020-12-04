@@ -6,6 +6,9 @@ title: Affichage d’une barre de défilement de recherche avec la position de l
 uuid: df045a10-8d74-4874-8fa5-7e9571c8678d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,8 @@ TVSDK prend en charge la recherche à une position spécifique (temps) où le fl
 1. Attendez que le lecteur ait un état valide pour la recherche.
 
    Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING.
-1. Utilisez le paramètre natif `SeekBar` à définir `OnSeekBarChangeListener`, qui détermine le moment où l’utilisateur effectue un défilement.
-1. Transmettez la position de recherche demandée (millisecondes) à la `MediaPlayer.seek` méthode.
+1. Utilisez l’élément natif `SeekBar` pour définir `OnSeekBarChangeListener`, qui détermine le moment où l’utilisateur fait défiler les données.
+1. Transmettez la position de recherche demandée (millisecondes) à la méthode `MediaPlayer.seek`.
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -42,11 +45,11 @@ TVSDK prend en charge la recherche à une position spécifique (temps) où le fl
    >
    >Cette étape déplace la tête de lecture vers une nouvelle position dans le flux, mais la position finale calculée peut différer de la position de recherche spécifiée.
 
-1. Prêtez attention `MediaPlayerEvent.OPERATION_FAILED` et prenez les mesures appropriées.
+1. Prêtez attention à `MediaPlayerEvent.OPERATION_FAILED` et prenez les mesures appropriées.
 
    Ce événement transmet l&#39;avertissement approprié. Votre application détermine comment procéder et les options incluent la tentative de nouvelle recherche ou la poursuite de la lecture à partir de la position précédente.
 
-1. Attendez que TVSDK appelle le `MediaPlayerEvent.SEEK_END` rappel.
+1. Attendez que TVSDK appelle le rappel `MediaPlayerEvent.SEEK_END`.
 1. Récupérez la position de lecture modifiée finale à l’aide du paramètre de position du rappel.
 
    Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Des règles, y compris le comportement de lecture, sont affectées si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires, peuvent s’appliquer.
