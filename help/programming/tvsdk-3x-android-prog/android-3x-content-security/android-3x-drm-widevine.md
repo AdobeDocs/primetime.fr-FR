@@ -1,18 +1,21 @@
 ---
-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée d’Adobe.
-seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée d’Adobe.
+description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée Adobe.
+seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée Adobe.
 seo-title: DRM sans fil
 title: DRM sans fil
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
 source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 0%
 
 ---
 
 
 # DRM sans fil {#widevine-drm}
 
-Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée d’Adobe.
+Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée Adobe.
 
 Contactez votre représentant Adobe pour obtenir les informations les plus récentes sur la disponibilité de solutions DRM tierces.
 
@@ -26,9 +29,9 @@ Vous pouvez utiliser le DRM Android natif Widevine avec les flux CMAF HLS.
 >
 > Widevine CBCS Scheme requiert un minimum d&#39;Android version 7.1 (API Niveau 25).
 
-## Définition des détails du serveur de licences {#license-server-details}
+## Définir les détails du serveur de licences {#license-server-details}
 
-Appelez l’ `com.adobe.mediacore.drm.DRMManager` API suivante avant de charger la ressource MediaPlayer :
+Appelez l&#39;API `com.adobe.mediacore.drm.DRMManager` suivante avant de charger la ressource MediaPlayer :
 
 ```java
 public static void setProtectionData(
@@ -39,7 +42,7 @@ Map<String, String> requestProperties)
 
 ### Arguments {#arguments-license-server}
 
-* `drm` - `"com.widevine.alpha"` pour Widevine.
+* `drm` -  `"com.widevine.alpha"` pour Widevine.
 
 * `licenseServerURL` - URL du serveur de licences Widevine qui reçoit les demandes de licence.
 
@@ -57,7 +60,7 @@ DRMManager.setProtectionData(
 
 ## Fournir un rappel personnalisé {#custom-callback}
 
-Appelez l’ `com.adobe.mediacore.drm.DRMManager` API suivante avant de charger la ressource MediaPlayer.
+Appelez l&#39;API `com.adobe.mediacore.drm.DRMManager` suivante avant de charger la ressource MediaPlayer.
 
 ```java
 public static void setMediaDrmCallback(
@@ -66,13 +69,13 @@ MediaDrmCallback callback)
 
 ### Arguments {#arguments-custom-callback}
 
-* `callback` - mise en oeuvre personnalisée de MediaDrmCallback à utiliser à la place de la mise en oeuvre par défaut `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+* `callback` - mise en oeuvre personnalisée de MediaDrmCallback à utiliser à la place de la mise en oeuvre par défaut  `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-Pour plus d’informations, reportez-vous à la documentation [de l’API TVSDK 3.11](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)Android.
+Pour plus d’informations, reportez-vous à la [documentation de l’API TVSDK 3.11 Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html).
 
 ## Récupérer la zone PSSH de la ressource MediaPlayer actuellement chargée {#pssh-box-mediaplayer-resoource}
 
-Appelez l’ `com.adobe.mediacore.drm.DRMManager` API suivante, de préférence dans l’implémentation de rappel personnalisé.
+Appelez l’API `com.adobe.mediacore.drm.DRMManager` suivante, de préférence dans l’implémentation de rappel personnalisé.
 
 ```java
 public static byte[] getPSSH()
