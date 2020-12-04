@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Diffusion clé iOS locale et distante{#remote-and-local-ios-key-delivery}
+# Diffusion de clé iOS locale et distante{#remote-and-local-ios-key-delivery}
 
-adobe primetime prend en charge deux options de diffusion clé pour les clients iOS :
+Adobe Primetime prend en charge deux options de diffusion clé pour les clients iOS :
 
 * Distant - Exactement comme spécifié dans la spécification HLS, le manifeste M3U8 spécifie un chemin HTTPS qui contient une clé AES qui doit être utilisée pour déchiffrer les segments chiffrés suivants dans le flux. Lorsque &quot;Remote&quot; est spécifié, le périphérique client se rend sur un serveur HTTPS distant pour récupérer la clé AES.
 * Local - Lorsque &quot;Local&quot; est spécifié, au lieu de contacter Internet/réseau pour la clé AES, un serveur HTTPS local est intégré dans l&#39;application iOS qui traitera toutes les requêtes de clés AES. Le serveur HTTPS incorporé est automatiquement configuré et configuré dans l’application Primetime. Aucune intervention n’est requise de la part du développeur d’applications.
@@ -24,4 +24,4 @@ La diffusion des clés distantes est activée par le biais de la stratégie util
 >
 >La sélection de la diffusion clé n’affecte que les clients iOS. Tous les autres périphériques qui utilisent le contenu HLS utiliseront toujours la diffusion de clé &quot;Local&quot;, même si &quot;Remote&quot; a été spécifié.
 
-Pour plus d’informations, voir *Utilisation du serveur* clé d’accès à l’Adobe.
+Pour plus d&#39;informations, voir *Utilisation du serveur clé d&#39;accès à l&#39;Adobe*.
