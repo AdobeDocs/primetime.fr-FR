@@ -4,6 +4,9 @@ title: Fichier de configuration global
 uuid: 10370bc0-36ab-4e43-9e75-c46a7177874c
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ Le fichier de configuration flashaccess-global.xml contient des paramètres qui 
 * Journalisation : indique le niveau de journalisation et la fréquence d&#39;enregistrement des fichiers journaux.
 * Mot de passe HSM : requis uniquement si un HSM est utilisé pour stocker les informations d&#39;identification du serveur.
 
-Consultez les commentaires de l&#39;exemple de fichier de configuration globale situé dans `<AdobeAccessDVD>\Adobe Access Server for Protected Streaming\configs` pour plus de détails.
+Pour plus d&#39;informations, consultez les commentaires de l&#39;exemple de fichier de configuration globale situé dans `<AdobeAccessDVD>\Adobe Access Server for Protected Streaming\configs`.
