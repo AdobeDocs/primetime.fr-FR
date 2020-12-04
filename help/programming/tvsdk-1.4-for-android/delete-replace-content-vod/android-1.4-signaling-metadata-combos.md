@@ -6,6 +6,9 @@ title: Effet sur l’insertion et la suppression d’une publicité à partir du
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
    <th class="entry"> Mode de signature de publicité </th> 
    <th class="entry"> Métadonnées de la publicité </th> 
    <th class="entry"> Résolveurs créés </th> 
-   <th class="entry"><span class="codeph"> PlacementInformations</span> créées </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformations créées </th> 
    <th class="entry"> Comportement résultant </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
    <td> Supprimer, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Plages supprimées, Publicités insérées </td> 
