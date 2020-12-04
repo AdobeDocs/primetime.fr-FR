@@ -17,18 +17,18 @@ ht-degree: 1%
 
 Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
 
-Pour utiliser ces objets enregistrés `TimedMetadata` pendant la lecture, utilisez les objets enregistrés `ArrayList` à partir d’objets [Stocker les métadonnées temporisées au moment de leur distribution](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
+Pour utiliser ces objets `TimedMetadata` enregistrés au cours de la lecture, utilisez les `ArrayList` enregistrés de [Stocker les objets de métadonnées minutées au fur et à mesure qu&#39;ils sont distribués](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
 1. Exécutez un minuteur et requête à plusieurs reprises le temps de lecture actuel.
-1. Recherchez tous les `TimedMetadata` objets dont l’heure de début correspond à l’heure de lecture actuelle.
+1. Recherchez tous les objets `TimedMetadata` dont les heures de début correspondent à l’heure de lecture actuelle.
 
    Vous pouvez utiliser ces objets pour effectuer diverses actions.
 
    >[!IMPORTANT]
    >
-   >Lorsque vous vérifiez si le temps de lecture actuel correspond à un `TimedMetadata` objet, incluez `shouldTriggerSubscribedTagEvent` comme condition.
+   >Lorsque vous vérifiez si l’heure de lecture actuelle correspond à un objet `TimedMetadata`, incluez `shouldTriggerSubscribedTagEvent` comme condition.
 
-   La chronologie peut changer en raison de divers comportements publicitaires. Par exemple, une ou plusieurs coupures publicitaires peuvent être déplacées de leur position d’origine sur le plan de montage chronologique, mais `shouldTriggerSubscribedTagEvent` `TimeMetadata` s’assurent que le début de l’objet correspond au temps de lecture actuel.
+   La chronologie peut changer en raison de divers comportements publicitaires. Par exemple, une ou plusieurs coupures publicitaires peuvent être déplacées de leur position d’origine sur la chronologie, mais `shouldTriggerSubscribedTagEvent` s’assure que l’heure de début de l’objet `TimeMetadata` correspond à l’heure de lecture actuelle.
 
    Par exemple :
 
@@ -62,4 +62,4 @@ Pour utiliser ces objets enregistrés `TimedMetadata` pendant la lecture, utilis
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Éliminez régulièrement `TimedMetadata` les instances obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
+1. Éliminez régulièrement les instances `TimedMetadata` obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
