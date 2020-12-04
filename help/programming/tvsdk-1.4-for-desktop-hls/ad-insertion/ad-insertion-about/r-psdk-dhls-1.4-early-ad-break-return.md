@@ -13,31 +13,31 @@ ht-degree: 0%
 ---
 
 
-# Mise en oeuvre d’un retour anticipé de coupures publicitaires{#implementing-an-early-ad-break-return}
+# Implémentation d’un retour de coupure publicitaire anticipée {#implementing-an-early-ad-break-return}
 
 Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
 
 >[!NOTE]
 >
->Vous devez vous abonner aux marqueurs d’affichage/d’affichage publicitaire ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`et `#EXT-X-CUE`).
+>Vous devez vous abonner aux marqueurs d’annonce de début/fin ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` et `#EXT-X-CUE`).
 
 Voici quelques éléments à prendre en compte :
 
-* Analyser les marqueurs tels que `EXT-X-CUE-IN` (ou balise de marqueur équivalente) qui apparaissent dans les flux linéaires ou FER.
+* Marques d’analyse telles que `EXT-X-CUE-IN` (ou balise de marqueur équivalente) qui apparaissent dans les flux linéaires ou FER.
 
-   Enregistrez les marqueurs comme étant le marqueur du point de retour anticipé. Lecture uniquement `adBreaks` jusqu’à ce que cette position du marqueur soit définie pendant la lecture, ce qui remplace la durée du `adBreak` marqueur par le marqueur `EXE-X-CUE-OUT` de début.
+   Enregistrez les marqueurs comme étant le marqueur du point de retour anticipé. Lecture de `adBreaks` uniquement jusqu’à ce que cette position de marqueur soit définie au cours de la lecture, ce qui remplace la durée de `adBreak` marquée par le marqueur `EXE-X-CUE-OUT` de début.
 
-* S’il existe deux `EXT-X-CUE-IN` marqueurs pour le même `EXT-X-CUE-OUT` marqueur, le premier `EXT-X-CUE-IN` marqueur qui s’affiche est celui qui compte.
+* Si deux marqueurs `EXT-X-CUE-IN` existent pour le même marqueur `EXT-X-CUE-OUT`, le premier marqueur `EXT-X-CUE-IN` qui apparaît est celui qui compte.
 
-* Si le `EXE-X-CUE-IN` marqueur apparaît dans le plan de montage chronologique sans `EXT-X-CUE-OUT` marqueur de début, le marqueur `EXE-X-CUE-IN` est ignoré.
+* Si le marqueur `EXE-X-CUE-IN` apparaît dans le plan de montage chronologique sans un marqueur `EXT-X-CUE-OUT` de début, le marqueur `EXE-X-CUE-IN` est ignoré.
 
-   Dans un flux en direct, si le marqueur principal vient de sortir de la fenêtre, TVSDK ne lui répondra pas. `EXT-X-CUE-OUT`
+   Dans un flux en direct, si le marqueur `EXT-X-CUE-OUT` de début vient de sortir de la fenêtre, TVSDK ne lui répondra pas.
 
-* En cas de retour anticipé d’une coupure publicitaire, la `adBreak` lecture se produit jusqu’à ce que le curseur de lecture revienne à la position d’origine lorsque la coupure publicitaire devait se terminer et reprend la lecture du contenu principal à partir de cette position.
+* En cas de retour anticipé d’une coupure publicitaire, `adBreak` est lu jusqu’à ce que le curseur de lecture revienne à la position d’origine lorsque la coupure publicitaire était censée se terminer et reprend la lecture du contenu principal à partir de cette position.
 
 ## SpliceOut et SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` et `SpliceIn` les marqueurs marquent le début et la fin de la coupure publicitaire. La durée du `SpliceOut` type du `EXE-X-CUE` marqueur peut être égale à zéro et le `SpliceIn` type du marqueur `EXE-X-CUE` marque la fin de la coupure publicitaire. Elles apparaissent dans une balise et diffèrent par type.
+`SpliceOut` et les  `SpliceIn` marqueurs marquent le début et la fin de la coupure publicitaire. La durée du type `SpliceOut` du marqueur `EXE-X-CUE` peut être égale à zéro et le type `SpliceIn` du marqueur `EXE-X-CUE` marque la fin de la coupure publicitaire. Elles apparaissent dans une balise et diffèrent par type.
 
 **Un marqueur avec différents types**
 
@@ -68,11 +68,11 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-Dans l’exemple d’un marqueur de différents types, si la durée du `SpliceOut` type est égale à zéro, le marqueur `SpliceOut` et `SpliceIn` doivent fonctionner ensemble pour chaque coupure publicitaire. Actuellement, un `SpliceOut` marqueur d’une durée non nulle et n’ayant pas besoin de `SpliceIn` marqueurs d’appariement est plus typique.
+Dans l’exemple d’un marqueur avec différents types, si la durée du type `SpliceOut` est égale à zéro, les balises `SpliceOut` et `SpliceIn` doivent fonctionner ensemble pour chaque coupure publicitaire. Actuellement, un marqueur `SpliceOut` avec une durée non nulle et qui n’a pas besoin d’apparier des marqueurs `SpliceIn` est plus typique.
 
 **Deux marqueurs distincts**
 
-Le scénario le plus courant est un `SpliceOut` marqueur de durée non nulle qui n’a pas besoin des `SpliceIn` marqueurs d’appariement. Ici, un `SpliceIn` marqueur d’appariement marque la fin de la coupure publicitaire pendant la lecture de la coupure publicitaire, mais la coupure publicitaire est raccourcie à la position du `SpliceIn` marqueur et les principaux débuts de contenu jouent à cette position.
+Le scénario le plus courant est un marqueur `SpliceOut` avec une durée non nulle et qui n&#39;a pas besoin des marqueurs `SpliceIn` d&#39;appariement. Ici, un marqueur d’appariement `SpliceIn` marque la fin de la coupure publicitaire pendant la lecture de la coupure publicitaire, mais la coupure publicitaire est coupée en deux à la position du marqueur `SpliceIn`, et les principaux débuts de contenu jouent à cette position.
 
 Par exemple, il existe deux marqueurs distincts :
 
