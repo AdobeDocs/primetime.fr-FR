@@ -5,12 +5,15 @@ seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
 uuid: 01714ee6-a937-4ca3-b535-6a6ef681ee6d
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
-# Présentation de l’interface DRM de Primetime{#primetime-drm-interface-overview}
+# Présentation de l’interface DRM Primetime{#primetime-drm-interface-overview}
 
 L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
 
@@ -18,7 +21,7 @@ L’élément clé côté client du système de gestion des droits numériques (
 
 Primetime DRM offre un flux de travail évolutif et efficace pour mettre en oeuvre la protection du contenu dans les applications TVSDK. Vous protégez et gérez les droits sur votre contenu vidéo en créant une licence pour chaque fichier multimédia numérique.
 
-TVSDK prend en charge l’intégration DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux en utilisant Flash `DRMManager`. Pour activer cette fonctionnalité, le gestionnaire de gestion des droits numériques `MediaPlayer` vous fournit le gestionnaire d’authentification des droits numériques.
+TVSDK prend en charge l’intégration DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit implémenter les workflows d’authentification DRM avant de lire le flux en utilisant le Flash `DRMManager`. Pour activer cette fonction, le `MediaPlayer` fournit le gestionnaire DRM pour l&#39;authentification.
 
 Il s’agit des éléments d’API les plus importants pour travailler avec DRM :
 
@@ -41,4 +44,4 @@ Autres éléments d’API pertinents :
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Pour plus d’informations sur DRM, voir la documentation d’Adobe Primetime DRM.
+Pour plus d’informations sur DRM, consultez la documentation Adobe Primetime DRM.
