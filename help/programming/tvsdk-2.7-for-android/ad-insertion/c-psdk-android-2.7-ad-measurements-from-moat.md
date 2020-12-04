@@ -6,6 +6,9 @@ title: Mesures publicitaires de Moat
 uuid: b89f900f-50ab-4152-9c0f-11f82d92bffa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ TVSDK récupère les informations de FreeWheel et d’autres serveurs d’annonc
 
 Moat est un service permettant de mesurer et d’afficher les données à plusieurs fins, des navigateurs aux applications. Moat génère des données d’analyse marketing en temps réel sur plusieurs plates-formes.
 
-La réponse VAST XML comporte une propriété et un élément que votre code peut lire, la propriété la plus éloignée `Ad id` et l’ `Extension` élément le plus éloigné. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer à la fois les `Ad id` informations et les `Extension` informations, puis organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à n’importe quel emplacement. La valeur de la propriété ultrapériphérique `Ad id` permet au code de coordonner les informations de la campagne associée.
+La réponse VAST XML comporte une propriété et un élément que votre code peut lire, la propriété la plus éloignée `Ad id` et l&#39;élément le plus éloigné `Extension`. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer les informations `Ad id` et `Extension`, puis organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à n’importe quel emplacement. La valeur de la propriété la plus à l&#39;extérieur `Ad id` permet au code de coordonner les informations de la campagne associée.
 
 Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions. Vous trouverez ci-dessous un exemple d’élément.
 
@@ -36,10 +39,10 @@ Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions. 
 </Extensions> 
 ```
 
-La roue libre peut également définir la `id` propriété dans l’ `Ad` élément, comme illustré dans l’exemple ci-dessous.
+La roue libre peut également définir la propriété `id` dans l&#39;élément `Ad`, comme indiqué dans l&#39;exemple ci-dessous.
 
 ```xml
 <Ad id="118566" sequence="1">
 ```
 
-Pour plus d’informations sur l’API, voir la documentation de l’API de la classe [NetworkAdInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)
+Pour plus d’informations sur l’API, voir la documentation de l’API pour la classe [NetworkAdInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
