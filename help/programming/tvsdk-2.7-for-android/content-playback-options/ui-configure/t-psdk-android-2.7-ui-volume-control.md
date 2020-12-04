@@ -6,11 +6,14 @@ title: Contrôler le volume
 uuid: f1e959e0-1817-4ccb-8adc-3eba09c91887
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# Contrôler le volume {#provide-volume-control}
+# Fournir un contrôle de volume {#provide-volume-control}
 
 Vous pouvez configurer un contrôle d’interface utilisateur pour régler le volume de la vidéo.
 
