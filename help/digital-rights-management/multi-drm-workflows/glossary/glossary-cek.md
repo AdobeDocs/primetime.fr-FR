@@ -2,6 +2,9 @@
 uuid: 2d927ae8-4c4b-4b64-88b8-9c86430e226c
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Le CEK lui-même peut être stocké dans un système de gestion des clés ainsi 
 Certains appels utilisent à la fois le CEK et le CEKSID d’ID d’Enregistrement du CEK, et le CEK récupéré de l’enregistrement doit correspondre au CEK fourni dans l’appel.
 Pour HLS Offline avec FairPlay, il existe également un `persistentContentKey` qui peut être défini pour expirer.
 
-## ID d’Enregistrement clé de chiffrement de contenu {#content-encryption-key-storage-id}
+## ID d&#39;Enregistrement clé de chiffrement de contenu {#content-encryption-key-storage-id}
 
 L’Enregistrement de clé de chiffrement de contenu (CEKSID) est un identifiant permettant de récupérer une clé de chiffrement de contenu à partir d’un système de gestion des clés.
 
