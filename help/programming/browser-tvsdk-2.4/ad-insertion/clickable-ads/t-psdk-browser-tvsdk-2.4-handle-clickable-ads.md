@@ -6,6 +6,9 @@ title: Gérer les publicités cliquables
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -20,12 +23,12 @@ MediaPlayer déclenche les événements suivants lorsqu’une publicité cliquab
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-Le `AdClickedEvent` contient les informations nécessaires au traitement de la fonction de clic publicitaire.
+`AdClickedEvent` contient les informations nécessaires au traitement de la fonction de clic publicitaire.
 
 1. Fournissez un contrôle sur votre lecteur pour permettre aux utilisateurs de cliquer sur des publicités cliquables.
 
    Il peut s’agir d’un bouton ou de tout autre élément permettant de capturer le clic de l’utilisateur.
-1. Ajouter un écouteur de événement pour le événement de clics publicitaires de l’utilisateur.
+1. Ajoutez un écouteur de événement pour le événement de clics publicitaires de l’utilisateur.
 
    Par exemple :
 
@@ -34,9 +37,9 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. Ajouter un gestionnaire pour le événement de clics de l’utilisateur.
+1. Ajoutez un gestionnaire pour le événement de clics de l’utilisateur.
 
-   Ce gestionnaire doit demander au MediaPlayer de déclencher le `AdClicked` événement.
+   Ce gestionnaire doit demander au MediaPlayer de déclencher le événement `AdClicked`.
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +53,7 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
    } 
    ```
 
-1. Ajouter écouteurs de événement pour le début publicitaire MediaPlayer, la publicité sur laquelle l’utilisateur a cliqué et les notifications terminées.
+1. Ajoutez des écouteurs de événement pour le début publicitaire MediaPlayer, puis cliquez sur la publicité et effectuez des notifications.
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,7 +63,7 @@ Le `AdClickedEvent` contient les informations nécessaires au traitement de la f
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. Ajouter gestionnaires de événements.
+1. Ajouter des gestionnaires de événement.
 a. Gérez le événement du début publicitaire.
 Cela peut tout faire, comme la configuration de l’interface utilisateur pour l’utilisateur.
 
