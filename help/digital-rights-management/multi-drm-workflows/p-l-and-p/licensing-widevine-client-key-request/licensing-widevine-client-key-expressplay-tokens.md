@@ -6,6 +6,9 @@ title: Jetons Expressplay
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-L’ID d’enregistrement de la clé de chiffrement de contenu ou le CEKSID attribué au `kid` paramètre et la clé de chiffrement de contenu ou le CEK attribué au `contentKey` paramètre doivent correspondre à l’ID d’enregistrement de la clé de chiffrement de contenu et à la clé de chiffrement de contenu utilisée pour le conditionnement. Le texte suivant est un exemple de réponse du serveur de jetons :
+L’ID d’enregistrement de clé de chiffrement de contenu ou le CEKSID attribué au paramètre `kid` et la clé de chiffrement de contenu ou le CEK attribué au paramètre `contentKey` doivent correspondre à l’ID d’enregistrement de clé de chiffrement de contenu et à la clé de chiffrement de contenu utilisés pour le pack. Le texte suivant est un exemple de réponse du serveur de jetons :
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -37,4 +40,4 @@ https://wv.service.expressplay.com/hms/wv/rights/
 Vous pouvez alors
 
 * utiliser l’URL et la requête renvoyées comme URL du serveur de licences, ou
-* retirez la requête de l’URL et transmettez l’ExpressPlayToken séparément sous forme d’en-tête HTTP POST.
+* retirez la requête de l’URL et transmettez l’ExpressPlayToken séparément en tant qu’en-tête de POST HTTP.
