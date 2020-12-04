@@ -1,16 +1,19 @@
 ---
-seo-title: Gestion des mises à jour de certificats lorsque vos certificats émis par Adobe arrivent à expiration
-title: Gestion des mises à jour de certificats lorsque vos certificats émis par Adobe arrivent à expiration
+seo-title: Gestion des mises à jour des certificats lorsque vos certificats émis par Adobe arrivent à expiration
+title: Gestion des mises à jour des certificats lorsque vos certificats émis par Adobe arrivent à expiration
 uuid: 5151ef15-daf6-4fb3-bf83-25ebac1d003b
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '514'
+ht-degree: 0%
 
 ---
 
 
 # Gestion des mises à jour de certificats lorsque vos certificats émis par Adobe arrivent à expiration {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
 
-Il peut arriver que vous deviez obtenir un nouveau certificat d’Adobe. Par exemple, lorsqu’un certificat de production expire, un certificat d’évaluation expire ou lorsque vous passez d’une évaluation à un certificat de production. Lorsqu’un certificat expire et que vous ne souhaitez pas recompresser le contenu qui utilisait l’ancien certificat. Vous pouvez informer le serveur de licences des anciens et des nouveaux certificats.
+Il peut arriver que vous deviez obtenir un nouveau certificat de l&#39;Adobe. Par exemple, lorsqu’un certificat de production expire, un certificat d’évaluation expire ou lorsque vous passez d’une évaluation à un certificat de production. Lorsqu’un certificat expire et que vous ne souhaitez pas recompresser le contenu qui utilisait l’ancien certificat. Vous pouvez informer le serveur de licences des anciens et des nouveaux certificats.
 
 Procédez comme suit pour mettre à jour votre serveur avec les nouveaux certificats :
 
@@ -40,24 +43,25 @@ Procédez comme suit pour mettre à jour votre serveur avec les nouveaux certifi
 
    Pour les informations d’identification du serveur de licences :
 
-   * Assurez-vous que les informations d’identification actuelles sont transmises au `LicenseHandler` constructeur :
+   * Assurez-vous que les informations d’identification actuelles sont transmises au constructeur `LicenseHandler` :
 
-      * Dans l’implémentation de référence, définissez-la via la `LicenseHandler.ServerCredential` propriété.
-      * Dans Adobe Access Server for Protected Streaming, les informations d’identification actuelles doivent être les premières à être spécifiées dans l’ `LicenseServerCredential` élément du fichier flashaccess-locataire.xml.
-   * Assurez-vous que les informations d’identification actuelles et anciennes sont fournies à `AsymmetricKeyRetrieval`
+      * Dans l’implémentation de référence, définissez-la via la propriété `LicenseHandler.ServerCredential`.
+      * Dans Adobe Access Server for Protected Streaming, les informations d’identification actuelles doivent être les premières à être spécifiées dans l’élément `LicenseServerCredential` du fichier flashaccess-locataire.xml.
+   * Vérifier que les informations d’identification actuelles et anciennes sont fournies à `AsymmetricKeyRetrieval`
 
-      * Dans l’implémentation de référence, définissez-la par le biais des propriétés `LicenseHandler.ServerCredential` et `AsymmetricKeyRetrieval.ServerCredential. n` .
-      * Dans Adobe Access Server for Protected Streaming, les anciennes informations d’identification sont spécifiées après les premières informations d’identification dans l’ `LicenseServerCredential` élément du fichier flashaccess-locataire.xml.
+      * Dans l’implémentation de référence, définissez-la via les propriétés `LicenseHandler.ServerCredential` et `AsymmetricKeyRetrieval.ServerCredential. n`.
+      * Dans Adobe Access Server for Protected Streaming, les anciennes informations d’identification sont spécifiées après les premières informations d’identification dans l’élément `LicenseServerCredential` du fichier flashaccess-locataire.xml.
+
    Pour les informations d&#39;identification de transport :
 
-   * Assurez-vous que les informations d’identification actuelles sont transmises à la `HandlerConfiguration.setServerTransportCredential()` méthode :
+   * Assurez-vous que les informations d’identification actuelles sont transmises à la méthode `HandlerConfiguration.setServerTransportCredential()` :
 
-      * Dans l’implémentation de référence, définissez-la via la `HandlerConfiguration.ServerTransportCredential` propriété.
-      * Dans Adobe Access Server pour la diffusion en flux continu protégée, les informations d’identification actuelles doivent être les premières à être spécifiées dans l’ `TransportCredential` élément du fichier flashaccess-locataire.xml.
+      * Dans l’implémentation de référence, définissez-la via la propriété `HandlerConfiguration.ServerTransportCredential`.
+      * Dans l’Adobe Access Server pour la diffusion en flux continu protégée, les informations d’identification actuelles doivent être les premières à être spécifiées dans l’élément `TransportCredential` du fichier flashaccess-locataire.xml.
    * Assurez-vous que les anciennes informations d’identification sont fournies à `HandlerConfiguration.setAdditionalServerTransportCredentials`() :
 
-      * Dans l’implémentation de référence, définissez-la via les `HandlerConfiguration.AdditionalServerTransportCredential. n` propriétés.
-      * Dans Adobe Access Server pour la diffusion en flux continu protégée, cette valeur est spécifiée après les premières informations d’identification dans l’ `TransportCredential` élément du fichier flashaccess-locataire.xml.
+      * Dans l’implémentation de référence, définissez-la via les propriétés `HandlerConfiguration.AdditionalServerTransportCredential. n`.
+      * Dans l’Adobe Access Server pour la diffusion en flux continu protégée, cette valeur est spécifiée après les premières informations d’identification dans l’élément `TransportCredential` du fichier flashaccess-locataire.xml.
 
 
 
@@ -65,9 +69,9 @@ Procédez comme suit pour mettre à jour votre serveur avec les nouveaux certifi
 1. Mettez à jour les outils de création de package pour vous assurer qu’ils emballent le contenu avec les informations d’identification actuelles. Assurez-vous que le dernier certificat de serveur de licences, le certificat de transport et les informations d’identification de packager sont utilisés pour le pack.
 1. Pour mettre à jour le certificat du serveur de licences du serveur de clés :
 
-   * Mettez à jour les informations d’identification dans le fichier de configuration du client Adobe Access Key Server. Incluez les anciennes et les nouvelles informations d’identification du serveur de clés dans flashaccess-keyserver-locataire.xml.
-   * Assurez-vous que le certificat actuel est transmis à la `HandlerConfiguration.setKeyServerCertificate()` méthode.
+   * Mettez à jour les informations d&#39;identification dans le fichier de configuration du client Adobe Access Key Server. Incluez les anciennes et les nouvelles informations d’identification du serveur de clés dans flashaccess-keyserver-locataire.xml.
+   * Assurez-vous que le certificat actuel est transmis à la méthode `HandlerConfiguration.setKeyServerCertificate()`.
 
-      * Dans l’implémentation de référence, définissez-la via la `HandlerConfiguration.KeyServerCertificate` propriété.
-      * Dans Adobe Access Server for Protected Streaming, spécifiez le certificat du serveur de clés dans l’élément Configuration/Tenant/Certificates/KeyServer.
+      * Dans l’implémentation de référence, définissez-la via la propriété `HandlerConfiguration.KeyServerCertificate`.
+      * Dans l’Adobe Access Server for Protected Streaming, spécifiez le certificat du serveur de clés dans l’élément Configuration/Tenant/Certificates/KeyServer.
 
