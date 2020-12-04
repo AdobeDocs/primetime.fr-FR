@@ -6,6 +6,9 @@ title: DRM sans fil
 uuid: ceb2f18f-9e53-47d6-9d4b-7004ac1d22c9
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '85'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
 
-Appelez l’ `com.adobe.mediacore.drm.DRMManager` API suivante avant de commencer la lecture :
+Appelez l&#39;API `com.adobe.mediacore.drm.DRMManager` suivante avant de commencer la lecture :
 
 ```java
 public static void setProtectionData( 
@@ -25,7 +28,7 @@ public static void setProtectionData(
 
 Arguments :
 
-* `drm` - `"com.widevine.alpha"` pour Widevine.
+* `drm` -  `"com.widevine.alpha"` pour Widevine.
 
 * `licenseServerURL` - URL du serveur de licences Widevine qui reçoit les demandes de licence.
 * `requestProperties` - Contient des en-têtes supplémentaires à inclure dans la demande de licence sortante.
