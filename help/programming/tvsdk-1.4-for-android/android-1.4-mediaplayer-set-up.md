@@ -6,6 +6,9 @@ title: Configuration de MediaPlayer
 uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,29 +17,29 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
 
-TVSDK fournit une implémentation de l’ `MediaPlayer` interface, la `DefaultMediaPlayer` classe. Lorsque vous avez besoin de la fonctionnalité de lecture vidéo, instanciez `DefaultMediaPlayer`.
+TVSDK fournit une implémentation de l&#39;interface `MediaPlayer`, la classe `DefaultMediaPlayer`. Si vous avez besoin de la fonctionnalité de lecture vidéo, instanciez `DefaultMediaPlayer`.
 
 >[!TIP]
 >
->N&#39;interagissez avec l&#39; `DefaultMediaPlayer` instance qu&#39;avec les méthodes exposées par l&#39; `MediaPlayer` interface.
+>N&#39;interagissez avec l&#39;instance `DefaultMediaPlayer` qu&#39;avec les méthodes exposées par l&#39;interface `MediaPlayer`.
 
-1. Instanciez MediaPlayer à l’aide de la méthode `DefaultMediaPlayer.create` usine publique, en transmettant un objet contextuel d’application Java Android.
+1. Instanciez MediaPlayer à l’aide de la méthode d’usine publique `DefaultMediaPlayer.create`, en transmettant un objet contextuel d’application Java Android.
 
    ```java
    public static MediaPlayer create(Context context) 
    ```
 
-1. Appelez `MediaPlayer.getView` pour obtenir une référence à l&#39; `MediaPlayerView` instance.
+1. Appelez `MediaPlayer.getView` pour obtenir une référence à l&#39;instance `MediaPlayerView`.
 
    ```java
    MediaPlayerView getView() throws IllegalStateException; 
    ```
 
-1. Placez l’ `MediaPlayerView` instance dans une `FrameLayout` instance qui place la vidéo sur l’écran du périphérique.
+1. Placez l’instance `MediaPlayerView` dans une instance `FrameLayout`, qui place la vidéo sur l’écran du périphérique.
 
    ```java
    FrameLayout playerFrame = (FrameLayout) view.findViewById(R.id.playerFrame); 
    playerFrame.addView(mediaPlayer.getView()); 
    ```
 
-L’ `MediaPlayer` instance est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l’écran du périphérique.
+L&#39;instance `MediaPlayer` est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l&#39;écran du périphérique.
