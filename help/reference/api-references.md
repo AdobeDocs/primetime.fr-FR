@@ -1,6 +1,6 @@
 ---
-title: Références de l’API Adobe Primetime
-seo-title: Références de l’API Adobe Primetime
+title: Références à l’API Adobe Primetime
+seo-title: Références à l’API Adobe Primetime
 description: Les API vous aident à créer rapidement et facilement une application ou une intégration fonctionnelle.
 seo-description: Les API vous aident à créer rapidement et facilement une application ou une intégration fonctionnelle.
 topic-tags: API-references
@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Références de l’API Adobe Primetime {#api-references}
+# Références de l&#39;API Adobe Primetime {#api-references}
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 pour Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
