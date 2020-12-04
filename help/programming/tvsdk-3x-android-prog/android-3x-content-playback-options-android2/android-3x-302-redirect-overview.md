@@ -6,6 +6,9 @@ title: Optimisation de la redirection HTTP 302
 uuid: 91ed8919-a3c1-4e57-9eaf-e3ba430de35f
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 1%
 
 ---
 
@@ -16,9 +19,9 @@ L’optimisation de la redirection 302 réduit le nombre de 302 réponses de red
 
 Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires. Cette fonction est activée par défaut et vous pouvez modifier ce paramètre.
 
-## Désactivation ou activation de l’optimisation de la redirection 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
+## Désactivation ou activation de l&#39;optimisation de la redirection 302 {#section_8977448B268E41D69A8F75B60EB9DA3B}
 
-Utilisez la `useRedirectedUrl` propriété pour activer la redirection 302 ( `true`) ou la désactiver ( `false`).
+Utilisez la propriété `useRedirectedUrl` pour activer la redirection 302 ( `true`) ou la désactiver ( `false`).
 
 <!--<a id="example_888749F70C8A43279D06A29BD68E7E4D"></a>-->
 
