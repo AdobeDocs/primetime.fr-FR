@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Chaîne améliorée de licence {#enhanced-license-chaining}
+# Chaîne de licence améliorée {#enhanced-license-chaining}
 
 Permet la mise à jour d’une licence à l’aide d’une licence racine parent pour la mise à jour par lots des licences.
 
-adobe Access 2.0 prend en charge le chaînage de licences dans lequel les licences feuille et racine sont liées à un ordinateur spécifique. adobe Access 3.0, prend en charge le chaînage de licences amélioré, dans lequel une feuille est liée à une licence racine, et seule la licence racine est liée à un ordinateur ou domaine spécifique. Le chaînage de licences amélioré prend en charge l’intégration de la licence feuille au contenu, et le client doit uniquement acquérir la licence racine auprès du serveur de licences afin de consommer le contenu protégé.
+Adobe Access 2.0 prend en charge le chaînage de licences dans lequel les licences feuille et racine sont liées à un ordinateur spécifique. Adobe Access 3.0, prend en charge le chaînage de licences amélioré, dans lequel une feuille est liée à une licence racine, et seule la licence racine est liée à un ordinateur ou domaine spécifique. Le chaînage de licences amélioré prend en charge l’intégration de la licence feuille au contenu, et le client doit uniquement acquérir la licence racine auprès du serveur de licences afin de consommer le contenu protégé.
 
 Pour activer la chaîne de licence améliorée, une clé de chiffrement racine est affectée à la stratégie. La clé de chiffrement racine est utilisée pour lier de façon cryptographique la licence feuille à la licence racine.
 
