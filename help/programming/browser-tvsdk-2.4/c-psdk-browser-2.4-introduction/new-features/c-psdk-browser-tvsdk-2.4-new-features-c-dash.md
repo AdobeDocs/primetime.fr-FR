@@ -26,7 +26,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités DASH q
 
 >[!TIP]
 >
->Dans les tableaux de la matrice des fonctionnalités ci-dessous,  ![](assets/supported15.png)
+>Dans les tableaux de la matrice des fonctionnalités ci-dessous, ![](assets/supported15.png)
 >signifie que la fonctionnalité est prise en charge dans la version actuelle.
 
 Les fonctionnalités suivantes sont prises en charge :
@@ -90,30 +90,30 @@ Les fonctionnalités suivantes sont prises en charge :
 | Intégrations | VOD + Live | Facturation | ![](assets/supported15.png) |
 | Intégrations | VOD + Live | Naviguer | ![](assets/supported15.png) |
 
-## Fonctions DASH avancées d’insertion d’annonces (CSAI) {#dash-advanced-insertion-features}
+## Fonctionnalités avancées d’insertion de publicités DASH (CSAI) {#dash-advanced-insertion-features}
 
 | Catégorie | Type de contenu | Fonction | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| ad insertion | VOD | Publicité uniquement | Non pris en charge |
-| ad insertion | VOD | Paramètres de ciblage | VOD uniquement |
-| ad insertion | VOD | Paramètres personnalisés | VOD uniquement |
-| ad insertion | VOD + Live | Stratégie publicitaire personnalisée | Non pris en charge |
-| ad insertion | VOD + Live | Chargement de publicités différé | Non pris en charge |
-| ad insertion | VOD | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | Non pris en charge |
-| ad insertion | VOD | VPAID 2.0 | Non pris en charge |
+| Ad Insertion | VOD | Publicité uniquement | Non pris en charge |
+| Ad Insertion | VOD | Paramètres de ciblage | VOD uniquement |
+| Ad Insertion | VOD | Paramètres personnalisés | VOD uniquement |
+| Ad Insertion | VOD + Live | Stratégie publicitaire personnalisée | Non pris en charge |
+| Ad Insertion | VOD + Live | Chargement de publicités différé | Non pris en charge |
+| Ad Insertion | VOD | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | Non pris en charge |
+| Ad Insertion | VOD | VPAID 2.0 | Non pris en charge |
 
-## Fonctionnalités d’insertion d’annonces principales DASH (CSAI) {#dash-core-ad-insertion}
+## Fonctionnalités d’insertion d’annonces de base DASH (CSAI) {#dash-core-ad-insertion}
 
 | Catégorie | Type de contenu | Fonction | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| ad insertion | VOD + Live | Pré-roll | VOD uniquement |
-| ad insertion | VOD + Live | Mid-roll | VOD uniquement |
-| ad insertion | VOD + Live | Post-roll | VOD uniquement |
-| ad insertion | FER VOD | Résolution et comportements des publicités | Non pris en charge |
-| ad insertion | VOD + Live | Stratégie publicitaire par défaut | VOD uniquement |
-| ad insertion | VOD + Live | VAST 2.0/3.0 | VOD uniquement |
-| ad insertion | VOD + Live | VMAP 1.0 | VOD uniquement |
-| ad insertion | VOD + Live | CRS v3.1 | VOD uniquement |
+| Ad Insertion | VOD + Live | Pré-roll | VOD uniquement |
+| Ad Insertion | VOD + Live | Mid-roll | VOD uniquement |
+| Ad Insertion | VOD + Live | Post-roll | VOD uniquement |
+| Ad Insertion | FER VOD | Résolution et comportements des publicités | Non pris en charge |
+| Ad Insertion | VOD + Live | Stratégie publicitaire par défaut | VOD uniquement |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | VOD uniquement |
+| Ad Insertion | VOD + Live | VMAP 1.0 | VOD uniquement |
+| Ad Insertion | VOD + Live | CRS v3.1 | VOD uniquement |
 
 ## Fonctionnalités de protection du contenu DASH {#dash-content-protection}
 
@@ -172,7 +172,7 @@ Les fonctionnalités suivantes sont prises en charge :
 | Lecture | VOD + Live | Facturation | ![](assets/supported15.png) |
 | Lecture | VOD + Live | Naviguer | ![](assets/supported15.png) |
 
-## Fonctionnalités de lecture de base DASH {#dash-core-playback}
+## Fonctions de lecture de base DASH {#dash-core-playback}
 
 | Catégorie | Type de contenu | Fonction | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
