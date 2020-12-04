@@ -1,20 +1,23 @@
 ---
-description: Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
-seo-description: Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
+description: Utilisez la commande GET HTTP pour interagir avec le serveur de manifeste.
+seo-description: Utilisez la commande GET HTTP pour interagir avec le serveur de manifeste.
 seo-title: Envoyer une commande au serveur de manifeste
 title: Envoyer une commande au serveur de manifeste
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
 # Envoyer une commande au serveur de manifeste {#send-a-command-to-the-manifest-server}
 
-Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
+Utilisez la commande GET HTTP pour interagir avec le serveur de manifeste.
 
-1. Envoyez une `HTTP GET` demande d’URL d’amorçage construite à l’aide du modèle suivant :
+1. Envoyez une demande `HTTP GET` pour une URL d’amorçage construite à l’aide du modèle suivant :
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ Utilisez la commande HTTP GET pour interagir avec le serveur de manifeste.
     ?{query parameters}
    ```
 
-* **PublisherAssetID** Requis. ID unique de l’éditeur pour le contenu spécifique.
+* **** PublisherAssetIDRrequired. ID unique de l’éditeur pour le contenu spécifique.
 
-* **URL** de contenu obligatoire. URL du fichier de contenu M3U8, codé Base64 pour être sécurisé dans l&#39;URL du serveur de manifeste. L’URL de contenu doit pointer vers un fichier variante M3U8, même s’il n’y a qu’un seul flux de débit binaire.
+* **Contenu** URLRrequired. URL du fichier de contenu M3U8, codé Base64 pour être sécurisé dans l&#39;URL du serveur de manifeste. L’URL de contenu doit pointer vers un fichier variante M3U8, même s’il n’y a qu’un seul flux de débit binaire.
 
-* **Paramètres** de Requête Certains sont obligatoires, d&#39;autres facultatifs. Il s&#39;agit de la partie la plus variée de la demande. Ils indiquent au serveur de manifeste quel type de client effectue la demande et ce qu&#39;il souhaite que le serveur de manifeste fasse.
+* **** Paramètres de requêteCertains sont obligatoires, d&#39;autres facultatifs. Il s&#39;agit de la partie la plus variée de la demande. Ils indiquent au serveur de manifeste quel type de client effectue la demande et ce qu&#39;il souhaite que le serveur de manifeste fasse.
 
    Par exemple :
 
