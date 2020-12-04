@@ -26,7 +26,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
    <td colname="col2"> <p>Important :  Ce nom de fichier de configuration JSON doit rester <span class="filepath"> ADBMobileConfig.json </span>. Impossible de modifier le nom et le chemin d'accès de ce fichier de configuration. Le chemin d’accès à ce fichier doit être <span class="filepath"> &lt;racine source&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
@@ -35,7 +35,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi des analyses vidéo </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur la mise en oeuvre du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur l’implémentation du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nom du compte </td> 
@@ -50,7 +50,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous dis
 
 Pour configurer le suivi vidéo dans votre lecteur :
 
-1. Vérifiez que les options de temps de chargement du fichier de `ADBMobileConfig.json` ressources sont correctes.
+1. Vérifiez que les options de temps de chargement du fichier de ressources `ADBMobileConfig.json` sont correctes.
 
    ```
    { 
@@ -84,8 +84,8 @@ Pour configurer le suivi vidéo dans votre lecteur :
    Pour configurer les options de temps de chargement :
 
 
-   1. Vérifiez que le `ADBMobileConfig.json` fichier contient les valeurs appropriées (fournies par l’Adobe).
-   1. Vérifiez que ce fichier se trouve dans le `assets/` dossier.
+   1. Vérifiez que le fichier `ADBMobileConfig.json` contient les valeurs appropriées (fournies par l’Adobe).
+   1. Vérifiez que ce fichier se trouve dans le dossier `assets/`.
 
       Ce dossier doit se trouver à la racine de l&#39;arborescence de la source de l&#39;application.
 
@@ -135,13 +135,13 @@ Pour configurer le suivi vidéo dans votre lecteur :
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Définissez les métadonnées des analyses vidéo sur l’ `videoAnalyticsProvider` instance.
+   1. Définissez les métadonnées des analyses vidéo sur l’instance `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Joignez l’instance du lecteur multimédia à l’ `videoAnalyticsProvider` instance :
+   1. Joignez l’instance du lecteur multimédia à l’instance `videoAnalyticsProvider` :
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
