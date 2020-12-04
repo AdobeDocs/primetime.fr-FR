@@ -4,19 +4,22 @@ title: Activer l’audio en arrière-plan
 uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
 
-# Activer l’audio en arrière-plan {#enable-background-audio}
+# Activer l&#39;audio en arrière-plan {#enable-background-audio}
 
-Pour activer la lecture audio lorsque l’application est en arrière-plan, l’application doit appeler `enableAudioPlaybackInBackground` l’API de MediaPlayer avec la valeur true en tant qu’argument lorsque le lecteur est à l’état PRÉPARÉ.
+Pour activer la lecture audio lorsque l’application est en arrière-plan, l’application doit appeler l’API `enableAudioPlaybackInBackground` de MediaPlayer avec la valeur true en tant qu’argument lorsque le lecteur est à l’état PRÉPARÉ.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-L’application doit interrompre la lecture lorsqu’elle perd son contrôle sur la mise au point audio pendant les événements, par exemple en répondant au téléphone, etc. Le fragment de code suivant montre comment implémenter le `OnAudioFocusChangeListener`:
+L’application doit interrompre la lecture lorsqu’elle perd son contrôle sur la mise au point audio pendant les événements, par exemple en répondant au téléphone, etc. Le fragment de code suivant montre comment implémenter `OnAudioFocusChangeListener` :
 
 ```
 /** 
