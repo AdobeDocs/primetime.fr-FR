@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# Intégration de votre CDN {#integrating-cdn}
+# Intégrer votre CDN {#integrating-cdn}
 
 L’Ad Insertion Primetime sert de proxy entre votre application cliente et les manifestes, et non les découpages vidéo eux-mêmes. Déployez votre contenu sur le CDN de votre choix et transmettez l’URL à l’Ad Insertion Primetime à l’aide de l’API du Bootstrap.<!-- For integration details, see [Supported CDNs](supported-cdns.md).-->
 
-## Systèmes de segmentation en jetons CDN pris en charge {#cdn-tokenization-schemes}
+## Schémas de segmentation en jetons CDN pris en charge {#cdn-tokenization-schemes}
 
 Les réseaux CDN ont souvent différents schémas de segmentation pour l’autorisation de fragments. L’Ad Insertion Primetime prend en charge nativement les principaux réseaux CDN, notamment :
 
@@ -23,9 +23,9 @@ Les réseaux CDN ont souvent différents schémas de segmentation pour l’autor
 * Centurylink / Level3
 * Contactez votre représentant d’assistance Primetime pour obtenir une liste complète des réseaux de diffusion de contenu pris en charge.
 
-Pour plus d’informations sur le `pttoken` paramètre, voir la description [du paramètre de l’API du](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)Bootstrap.
+Pour plus d&#39;informations sur le paramètre `pttoken`, voir [description du paramètre de l&#39;API du Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
-## Configuration des publicités à diffuser à partir du CDN de contenu {#configure-ad-deliver-from-cdn}
+## Configurez les publicités à diffuser à partir du contenu CDN {#configure-ad-deliver-from-cdn}
 
 Vous pouvez diffuser des publicités et du contenu à partir du même réseau de diffusion de contenu afin de conserver l’affinité du contenu, de contourner le blocage des publicités et/ou d’optimiser le nombre de connexions requises à partir de l’application cliente. L’Ad Insertion Primetime prend en charge les règles de réécriture de fragments afin de mapper les fragments à votre CDN de contenu.
 
