@@ -6,6 +6,9 @@ title: Configuration requise pour le lecteur vidéo
 uuid: 29593d67-2901-4d9e-a08f-23c8a7667283
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Pour utiliser l’API d’insertion et Primetime, un lecteur vidéo doit satisfa
 * Peut demander des URL de suivi aux moments spécifiés.
 * S’exécute sur une plate-forme de périphérique qui prend en charge HLS v3 ou version ultérieure, notamment :
 
-   * Discontinuations PTS marquées par `EXT-X-DISCONTINUITY` des balises
+   * Discontinuations PTS marquées par des balises `EXT-X-DISCONTINUITY`
    * `EXT-X-DISCONTINUITY-SEQUENCE`
    * `EXT-X-PROGRAM-DATE-TIME`
    * `EXT-X-START`
