@@ -6,6 +6,9 @@ title: Mise en mémoire tampon
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
 
-Écoute `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END` les événements. Par exemple :
+Prêtez attention aux événements `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END`. Par exemple :
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
