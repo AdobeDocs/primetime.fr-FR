@@ -4,6 +4,9 @@ title: Sécurité de la couche réseau
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Ce tableau décrit des techniques courantes qui réduisent les vulnérabilités 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Adresses IP privées </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez la traduction d’adresses réseau (NAT) avec des adresses IP privées RFC 1918 sur les serveurs d’applications Adobe Access. Attribuez des adresses IP privées (10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16) pour rendre plus difficile pour un attaquant d'acheminer le trafic vers et depuis un hôte interne NAT par Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez la traduction d’adresses réseau (NAT) avec des adresses IP privées RFC 1918 sur les serveurs d’applications d’accès aux Adobes. Attribuez des adresses IP privées (10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16) pour rendre plus difficile pour un attaquant d'acheminer le trafic vers et depuis un hôte interne NAT par Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Pare-feu </p> </td> 
