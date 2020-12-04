@@ -4,6 +4,9 @@ title: Mise à jour d’une stratégie à l’aide de l’API Java
 uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Pour mettre à jour une stratégie à l’aide de l’API Java, procédez comme suit :
 
-1. Configurez votre environnement de développement et incluez tous les fichiers JAR mentionnés dans [Configuration de l’environnement](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) de développement dans votre projet.
-1. Créez une `Policy` instance et lisez la stratégie à partir d’un fichier ou d’une base de données.
+1. Configurez votre environnement de développement et incluez tous les fichiers JAR mentionnés dans [Configuration de l&#39;environnement de développement](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dans votre projet.
+1. Créez une instance `Policy` et lisez la stratégie à partir d&#39;un fichier ou d&#39;une base de données.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Mettez à jour l’ `Policy` objet en définissant ses propriétés, telles que son nom et ses règles d’utilisation.
+1. Mettez à jour l&#39;objet `Policy` en définissant ses propriétés, telles que son nom et ses règles d&#39;utilisation.
 
    ```java
      // Change the policy name.  
@@ -44,7 +47,7 @@ Pour mettre à jour une stratégie à l’aide de l’API Java, procédez comme 
      }
    ```
 
-1. Sérialisez l’ `Policy` objet mis à jour et stockez-le dans un fichier ou une base de données.
+1. Sérialisez l&#39;objet `Policy` mis à jour et stockez-le dans un fichier ou une base de données.
 
    ```java
       // Serialize the policy.  
@@ -58,4 +61,4 @@ Pour mettre à jour une stratégie à l’aide de l’API Java, procédez comme 
       out.close(); 
    ```
 
-Pour obtenir la source complète de cet exemple de code, voir `com.adobe.flashaccess.samples.policy.UpdatePolicy` dans le répertoire &quot;samples&quot; des outils de ligne de commande de mise en oeuvre de référence.
+Pour obtenir la source complète de cet exemple de code, voir `com.adobe.flashaccess.samples.policy.UpdatePolicy` dans le répertoire Reference Implementation Command Line Tools &quot;samples&quot;.
