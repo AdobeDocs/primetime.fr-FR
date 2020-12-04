@@ -6,11 +6,14 @@ title: Limites et comportement pour le jeu par astuces
 uuid: c28cc8db-3f45-488e-ab72-b102b3a1fab2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Limites et comportement pour le jeu par astuces {#limitations-and-behavior-for-trick-play}
+# Limites et comportement pour le jeu vidéo {#limitations-and-behavior-for-trick-play}
 
 <!--<a id="section_2BC43539C5C142E085D06A7E35C76726"></a>-->
 
@@ -30,7 +33,7 @@ Limites du mode de lecture des astuces :
    * La valeur d’heure actuelle saute vers l’avant (en avant rapide) ou vers l’arrière (en arrière rapide) avec la durée de la coupure publicitaire ignorée.
 
       Ce comportement de saut pour l’heure actuelle permet à la durée du flux de rester inchangée pendant la lecture de l’astuce. Votre lecteur peut suivre l’heure par rapport au contenu principal uniquement. Les sauts de temps ne sont pas effectués sur les valeurs renvoyées pour l’heure locale lors de l’abandon d’une publicité.
-   * Le `MediaPlayerEvent.AD_BREAK_SKIPPED` événement est distribué immédiatement avant qu’une coupure publicitaire ne soit sur le point d’être ignorée.
+   * Le événement `MediaPlayerEvent.AD_BREAK_SKIPPED` est distribué immédiatement avant qu’une coupure publicitaire ne soit sur le point d’être ignorée.
 
       Votre lecteur peut utiliser ce événement pour implémenter une logique personnalisée liée aux coupures publicitaires ignorées.
 
