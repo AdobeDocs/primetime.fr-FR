@@ -6,6 +6,9 @@ title: Considérations et bonnes pratiques
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
 * Actuellement, vous devez exécuter la plupart des opérations de l’API TVSDK sur le thread d’interface utilisateur, qui est le thread Android principal.
 
    Les opérations qui s&#39;exécutent correctement sur le thread principal peuvent générer une erreur et se fermer lors de l&#39;exécution sur un thread en arrière-plan.
-* La lecture vidéo nécessite Adobe Video Engine (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
+* La lecture vidéo nécessite le moteur de vidéo d’Adobe (AVE). Cela a une incidence sur le mode et le moment d’accès aux ressources multimédia :
 
    * Le sous-titrage est pris en charge dans la mesure prévue par l&#39;AVE.
    * Selon la précision de l’encodeur, la durée réelle du support codé peut différer des durées enregistrées dans le manifeste de ressources de diffusion en continu.
@@ -49,4 +52,4 @@ Voici les pratiques recommandées pour TVSDK :
 * Exécutez la plupart des opérations TVSDK sur le thread principal (IU), et non sur les threads en arrière-plan.
 * Pour TVSDK 3.0 pour Android, la résolution différée des publicités est activée par défaut.
 
-Pour le contenu sans preroll ou mid-roll, vous pouvez l’utiliser `AdvertisingMetadata.setPreroll(false)` pour accélérer le chargement du contenu.
+Pour le contenu sans preroll ou mid-roll, vous pouvez utiliser `AdvertisingMetadata.setPreroll(false)` pour accélérer le chargement du contenu.
