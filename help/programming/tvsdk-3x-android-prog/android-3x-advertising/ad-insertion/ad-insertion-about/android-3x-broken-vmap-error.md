@@ -7,6 +7,9 @@ title: Gestion des erreurs du client pour le VMAP endommagé
 uuid: ab2c567d-d945-4ebe-b65a-c1f13518a576
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ En fonction de la nature de la réponse du serveur d’annonces et des paramètr
 
 Examinons un scénario dans lequel la réponse du serveur d’annonces pointe vers le fichier XML VMAP. Supposons également que la réponse du serveur d’annonces comporte quatre emplacements d’annonces disponibles, chacun pointant vers le même VMAP. Enfin, disons que ce VMAP est cassé.
 
-Dans ce scénario, si la résolution des publicités paresseuses est activée ([Activer la résolution](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)des publicités paresseuses), TVSDK distribuera deux erreurs 1109 (pas une comme prévu) : une erreur est envoyée sur chaque passe d’analyse sur la chronologie. En effet, lorsque la résolution différée des publicités est activée, TVSDK analyse les publicités en 2 passes : la première passe se produit juste avant les débuts de lecture du contenu pour les publicités preroll, et la seconde passe après les débuts de lecture, pour les publicités mid-roll et post-roll.
+Dans ce scénario, si la résolution des publicités parentes est activée ([Activer la résolution des publicités paresseuses](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)), TVSDK enverra deux erreurs 1109 (et non une erreur comme prévu) : une erreur est envoyée sur chaque passe d’analyse sur la chronologie. En effet, lorsque la résolution différée des publicités est activée, TVSDK analyse les publicités en 2 passes : la première passe se produit juste avant les débuts de lecture du contenu pour les publicités preroll, et la seconde passe après les débuts de lecture, pour les publicités mid-roll et post-roll.
 
 >[!NOTE]
 >
