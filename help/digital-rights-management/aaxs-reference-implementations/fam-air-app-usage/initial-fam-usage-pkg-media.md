@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Package media {#package-media}
+# Support du package {#package-media}
 
 Utilisez l’onglet Package Media pour regrouper du contenu. La section Propriétés de Packager affiche les paramètres de Packager entrés dans l’onglet Préférences. Pour modifier ces paramètres, accédez à l&#39;onglet Préférences, modifiez les paramètres et enregistrez.
 
-Si vous souhaitez compresser un seul fichier FLV ou F4V, choisissez l’ **[!UICONTROL Select Single File]** option et saisissez le chemin d’accès complet au fichier source et le chemin d’accès complet où le fichier chiffré doit être enregistré.
+Si vous souhaitez compresser un seul fichier FLV ou F4V, choisissez l’option **[!UICONTROL Select Single File]** et saisissez le chemin d’accès complet au fichier source et le chemin d’accès complet où le fichier chiffré doit être enregistré.
 
-Si vous souhaitez compresser tous les fichiers d’un dossier, choisissez l’ **[!UICONTROL Select Single Folder]** option. Spécifiez le dossier contenant les fichiers source. Seuls les fichiers du dossier d’entrée correspondant aux **[!UICONTROL Input Media File Selection]** critères sont compressés (les fichiers des sous-dossiers ne sont pas compressés). Choisissez de chiffrer [!DNL .flv] des fichiers, [!DNL .f4v] des fichiers ou de saisir une expression régulière personnalisée (par exemple &quot;.*&quot; chiffre tous les fichiers du dossier). Les fichiers chiffrés seront enregistrés dans le dossier de sortie spécifié, en utilisant le même nom de fichier que le fichier d’origine.
+Si vous souhaitez compresser tous les fichiers d’un dossier, choisissez l’option **[!UICONTROL Select Single Folder]**. Spécifiez le dossier contenant les fichiers source. Seuls les fichiers du dossier d’entrée correspondant aux critères **[!UICONTROL Input Media File Selection]** seront compressés (les fichiers des sous-dossiers ne sont pas compressés). Choisissez de chiffrer des fichiers [!DNL .flv], des fichiers [!DNL .f4v] ou de saisir une expression régulière personnalisée (par exemple &quot;.*&quot; chiffre tous les fichiers du dossier). Les fichiers chiffrés seront enregistrés dans le dossier de sortie spécifié, en utilisant le même nom de fichier que le fichier d’origine.
 
 >[!NOTE]
 >
@@ -35,4 +35,4 @@ Le tableau suivant décrit les préférences de Package Media :
 | Chiffrer le script | Cochez cette case pour chiffrer les données de script (FLV uniquement). |
 | Propriétés personnalisées | Spécifiez les propriétés personnalisées à inclure dans le contenu assemblé. Ces propriétés seront disponibles pour le serveur de licences lors de l’émission d’une licence. (Facultatif) |
 
-Une fois les options d’assemblage sélectionnées, cliquez sur le **[!UICONTROL Package Media]** bouton pour commencer à assembler les fichiers.
+Une fois les options d’emballage sélectionnées, cliquez sur le bouton **[!UICONTROL Package Media]** pour commencer à créer un pack pour les fichiers.
