@@ -6,6 +6,9 @@ title: Classe de métadonnées minutées
 uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Lorsque le navigateur TVSDK détecte une balise abonnée dans la liste de lecture/le manifeste, le lecteur tente automatiquement de traiter la balise et de l’exposer en tant qu’objet TimedMetadata.
 
-La `TimedMetadata` classe fournit les éléments suivants :
+La classe `TimedMetadata` fournit les éléments suivants :
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
