@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Liste bloquée des exécutions d’applications {#blocklist-of-application-runtimes}
+# Liste bloquée des runtimes d&#39;application {#blocklist-of-application-runtimes}
 
-La Liste bloquée des runtimes d&#39;application spécifie la version du client Primetime ou du Flash Runtime qui ne peut pas accéder au contenu. Spécifiez le runtime restreint (Flash Player, AIR ou iOS), la plate-forme et la version.
+La liste bloquée des runtimes d&#39;application spécifie la version du client Primetime ou de l&#39;Runtime Flash qui ne peut pas accéder au contenu. Spécifiez le runtime restreint (Flash Player, AIR ou iOS), la plate-forme et la version.
 
-Exemple de cas d’utilisation : Tout comme la liste bloquée client DRM Primetime, la dernière version des runtimes Flash Player, AIR ou iOS peut être spécifiée comme la version minimale requise pour l&#39;acquisition de licence et la lecture de contenu.
+Exemple de cas d’utilisation : Tout comme la liste bloquée client DRM de Primetime, la dernière version des runtimes Flash Player, AIR ou iOS peut être spécifiée comme la version minimale requise pour l&#39;acquisition de licence et la lecture de contenu.
 
 Vous pouvez identifier l’exécution de l’application en fonction de l’un des attributs pris en charge pour les versions client DRM Primetime, en plus des attributs suivants :
 
