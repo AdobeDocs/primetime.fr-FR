@@ -6,6 +6,9 @@ title: Fonctionnalités de TVSDK Primetime
 uuid: 20ef9abf-1a33-4afc-bb2e-4910e3398a7a
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Fonctionnalités de TVSDK :
    * Prise en charge de la relecture en événement complet
    * Sous-titrage (608, 708, WebVTT) et autres formes audio pour une accessibilité accrue
    * Commandes de style de texte dans les légendes
-   * Fonctionnalités DVR, avance rapide et retour rapide (ces deux dernières sont connues sous le nom de mode *de* jeu par astuces)
+   * Fonctionnalités DVR, avance rapide et retour rapide (ces deux dernières sont connues sous le nom de *mode de lecture de l’astuce*)
    * Logique de débit adaptatif (ABR) et configuration initiale des contrôles ABR
    * Prise en charge du basculement du manifeste en direct
    * Tampons de lecture réglables
