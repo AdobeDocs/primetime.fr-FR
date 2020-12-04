@@ -1,16 +1,19 @@
 ---
 description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné qui est lu par le navigateur TVSDK. Cette description est utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
 seo-description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné qui est lu par le navigateur TVSDK. Cette description est utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
-seo-title: Contrôler la chronologie de la lecture
-title: Contrôler la chronologie de la lecture
+seo-title: Inspect de la chronologie de la lecture
+title: Inspect de la chronologie de la lecture
 uuid: b2049e53-7c78-40f9-a43f-7ff7ee5581d0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
 
-# Contrôler la chronologie de la lecture{#inspect-the-playback-timeline}
+# Inspect de la chronologie de lecture{#inspect-the-playback-timeline}
 
 Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné qui est lu par le navigateur TVSDK. Cette description est utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
 
