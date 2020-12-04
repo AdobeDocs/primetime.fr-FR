@@ -6,6 +6,9 @@ title: Ordre des événements de lecture
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,16 @@ Le navigateur TVSDK distribue des événements/notifications dans des séquences
 
 Les exemples suivants montrent l’ordre de certains événements incluant des événements de lecture.
 
-* Lors du chargement réussi d&#39;une ressource multimédia par `replaceCurrentResource`l&#39;intermédiaire de, l&#39;ordre des événements est le suivant :
+* Lors du chargement réussi d&#39;une ressource multimédia via `replaceCurrentResource`, l&#39;ordre des événements est le suivant :
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Lors de la préparation de la lecture à travers `MediaPlayer.prepareToPlay`la vidéo, l’ordre des événements est le suivant :
+* Lors de la préparation de la lecture via `MediaPlayer.prepareToPlay`, l’ordre des événements est le suivant :
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
