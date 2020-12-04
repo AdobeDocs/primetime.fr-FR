@@ -6,6 +6,9 @@ title: Exemple de configuration RBOP
 uuid: fa5ead93-36c5-4ad1-947b-c4f1f2632d9b
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ L’exemple de configuration JSON suivant définit une stratégie de sortie de p
 
 Tenez compte des points suivants concernant l’exemple de configuration ci-dessus :
 
-* Les `pixelCount` spécifications sont un niveau inférieur dans la structure JSON, dans la `pixelConstraints` section.
+* Les spécifications `pixelCount` sont un niveau inférieur dans la structure JSON, dans la section `pixelConstraints`.
 
 * Dans chaque spécification de nombre de pixels, la protection de sortie est spécifiée pour la sortie numérique et analogique.
 * Dans les spécifications de sortie numérique, les versions HDCP sont spécifiées, bien que le client ne prenne pas actuellement en charge le contrôle de version HDCP. Consultez la FAQ pour plus d&#39;informations.
