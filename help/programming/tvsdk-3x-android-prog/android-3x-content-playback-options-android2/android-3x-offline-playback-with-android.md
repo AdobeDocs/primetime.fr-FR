@@ -4,7 +4,10 @@ seo-description: 'De nouvelles API ont été introduites, qui demanderont à TVS
 seo-title: Lecture hors ligne avec Android
 title: Lecture hors ligne avec Android
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ boolean NetworkConfiguration::getOfflinePlayback()
 
 Vous pouvez activer ce paramètre et ignorer la connectivité réseau.
 
-Définissez `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` la valeur sur true. La valeur par défaut d’une valeur booléenne est false.
+Définissez `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` sur true. La valeur par défaut d’une valeur booléenne est false.
 
 ```
 // example of NetworkConfiguration
