@@ -6,6 +6,9 @@ title: Mise en oeuvre de la prise en charge des métadonnées personnalisées
 uuid: 4d1a8f6e-c2f6-4d7a-804d-c128adb5ae6f
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Vous pouvez fournir des métadonnées personnalisées sur le contenu, les publicités et les appels de suivi de chapitre en utilisant les fonctions de rappel.
 
-Les fonctions de rappel sont invoquées juste avant l’appel de suivi, de sorte que votre application peut joindre les métadonnées spécifiques à une publicité ou à un chapitre.
+Les fonctions de rappel sont invoquées juste avant l’appel de suivi, de sorte que votre application puisse joindre les métadonnées spécifiques à une publicité ou à un chapitre.
 
 1. Appelez des fonctions de rappel pour le contenu, les publicités et les chapitres.
 
