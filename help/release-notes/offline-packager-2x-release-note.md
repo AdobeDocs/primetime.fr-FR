@@ -10,6 +10,9 @@ topic-tags: release-notes
 discoiquuid: 933a0711-846a-4bb7-bf51-b300822a93d4
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
 
 Nouveautés des versions 2.1 et 2.3.1 de Primetime Offline Packager
 
-## Nouveautés de Primetime Offline Packager 2.3.1 (octobre 2016)  {#what-s-new-in-primetime-offline-packager-oct}
+## Nouveautés de Primetime Offline Packager 2.3.1 (octobre 2016) {#what-s-new-in-primetime-offline-packager-oct}
 
-La version active le Profil à la demande pour MPEG-DASH, ajoute la prise en charge de l’ `validate` option de l’outil PlaylistCreator et comporte quelques correctifs clés pour les scénarios Multi-DRM répertoriés ci-dessous.
+La version active le Profil à la demande pour MPEG-DASH, ajoute la prise en charge de l’option `validate` pour l’outil PlaylistCreator et comporte quelques correctifs clés pour les scénarios Multi-DRM répertoriés ci-dessous.
 
 | **Numéro de publication** | **Description** |
 |---|---|
@@ -40,8 +43,8 @@ Cette version présente les problèmes suivants.
 |---|---|
 | PTPUB-1005 | PlaylistCreator ne fournit pas l’URL correcte pour le fichier .pssh dans le fichier .mpd de dernier niveau généré pour le DRM AAXS. |
 | PTPUB-1001 | PlaylistCreator doit renvoyer une erreur lorsque le chemin d’accès vide est fourni via le paramètre in_path. |
-| PTPUB-990 | Pour DASH, Hors ligne Packager n’écrit pas de package généré IV sur le disque lorsque les paramètres `log_vi` &amp; `iv_out_path` sont spécifiés. |
-| PTPUB-980 | Lorsque le fichier de configuration est utilisé pour le conditionnement, l’utilisation du paramètre `key_url` ne supprime pas les guillemets des entrées fournies. |
+| PTPUB-990 | Pour DASH, Offline Packager n’écrit pas de package généré IV sur le disque lorsque les paramètres `log_vi` et `iv_out_path` sont spécifiés. |
+| PTPUB-980 | Lorsque le fichier de configuration est utilisé pour le conditionnement, l&#39;utilisation du paramètre `key_url` ne supprime pas les guillemets des entrées fournies. |
 
 ## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
 
@@ -71,24 +74,24 @@ Configuration logicielle requise
 
 ### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. Téléchargez le logiciel Java SE sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d&#39;installation.
-1. Extrayez sur le disque le fichier d’archive Adobe Primetime Offline Packager 2.3.1 portant le nom `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` du disque.
+1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Extrayez sur le disque le fichier d&#39;archive Adobe Primetime Offline Packager 2.3.1 nommé `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`.
 
 ### Configuration de Offline Packager 2.3.1 {#configuring-the-offline-packager}
 
-Les instructions de configuration sont disponibles dans le guide de prise en main de Primetime Offline Packager à l’adresse [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
+Les instructions de configuration sont disponibles dans le guide de prise en main de Primetime Offline Packager à l’adresse [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Nouveautés de Primetime Offline Packager 2.1 (juillet 2015) {#what-s-new-in-primetime-offline-packager-july}
 
-Prise en charge de PlayReady BuyDRM (pour DASH). Pour plus d&#39;informations, reportez-vous à la documentation d&#39;aide [disponible ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Prise en charge de PlayReady BuyDRM (pour DASH). Pour plus d&#39;informations, consultez la documentation d&#39;aide [disponible ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 L’amélioration suivante a également été apportée à l’outil de création de package hors ligne.
 
-PTPUB-780 Ajout de la prise en charge de la balise EXT-X-DÉBUT
+PTPUB-780 Prise en charge Ajoutée de la balise EXT-X-DÉBUT
 
 ## Nouveautés de Primetime Offline Packager 2.0 (juin 2015) {#what-s-new-in-primetime-offline-packager-june}
 
-La prise en charge de la sortie DASH a été ajoutée. Consultez la documentation du produit [ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) pour plus de détails.
+La prise en charge de la sortie DASH a été ajoutée. Pour plus d&#39;informations, consultez la documentation du produit [ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 Les problèmes suivants ont également été corrigés dans cette version.
 
@@ -123,13 +126,13 @@ Les problèmes suivants ont également été corrigés dans cette version.
 
 ### Installation de Offline Packager 2.1 {#installing-offline-packager}
 
-1. Téléchargez le logiciel Java SE sur le site [](https://www.oracle.com/technetwork/java/javase/downloads/index.html) Oracle et suivez les instructions d&#39;installation.
-1. Extrayez le `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`, sur votre disque.
+1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Extrayez le `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip` sur votre disque.
 
 ### Configuration de Offline Packager 2.1 {#configuring-the-offline-packager-1}
 
-Reportez-vous au document de prise en main de Primetime Offline Packager pour obtenir les détails de configuration disponibles ici [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
+Reportez-vous au document de prise en main de Primetime Offline Packager pour obtenir les détails de configuration disponibles ici [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [d’](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète à la [page Apprentissage et support Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
