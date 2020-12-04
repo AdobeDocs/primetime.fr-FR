@@ -6,6 +6,9 @@ title: VOIR API publique
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
 
 La demande de droits et la réponse sont transmises via une connexion SSL mutuellement authentifiée entre le serveur de licences et le service de droits du client.
 
-Le schéma URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) est utilisé pour définir le point de terminaison des droits et la méthode de requête HTTP POST ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) est utilisée pour la requête. Le point de terminaison des droits, ainsi qu’un indicateur indiquant les droits dorsaux, sont obligatoires et doivent être inclus dans la stratégie au moment de l’assemblage.
+Le schéma URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) est utilisé pour définir le point de terminaison des droits et la méthode de requête du POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) est utilisée pour la requête. Le point de terminaison des droits, ainsi qu’un indicateur indiquant les droits dorsaux, sont obligatoires et doivent être inclus dans la stratégie au moment de l’assemblage.
 
 ## Demande de droits {#section_BFBFEF0795CA46D6842C479256B95F95}
 
