@@ -6,6 +6,9 @@ title: Format AC-3 5.1
 uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 0%
 
 ---
 
@@ -29,18 +32,18 @@ TVSDK prend en charge les fonctionnalités AC-3 5.1 suivantes :
 
 >[!IMPORTANT]
 >
->TVSDK prend en charge les fonctionnalités AC-3 5.1 uniquement sur l’appareil Amazon Fire TV 1ère génération.
+>TVSDK ne prend en charge les fonctionnalités AC-3 5.1 que sur l’appareil Amazon Fire TV 1ère génération.
 
 Les fonctionnalités AC-3 5.1 suivantes ne sont pas prises en charge :
 
 * Audio AAC multicanal
 * ABR sur différents codecs (AAC - AC3)
 
-## Sélectionner le média pris en charge {#section_0D7E717BE18B418D817EE017EF2375D1}
+## Sélectionner le support pris en charge {#section_0D7E717BE18B418D817EE017EF2375D1}
 
 Voici le flux de travail typique qui se produit lorsque TVSDK trouve un manifeste avec un média AC-3 et AAC :
 
-1. requêtes TVSDK qui codent le périphérique peut prendre en charge.
+1. REQUÊTES TVSDK qui codent le périphérique peut prendre en charge.
 1. Le codec de meilleure qualité est sélectionné.
 
    Voici l&#39;ordre dans lequel la qualité est sélectionnée :
@@ -54,7 +57,7 @@ Voici le flux de travail typique qui se produit lorsque TVSDK trouve un manifest
 >
 >L&#39;application ne peut pas obtenir d&#39;informations sur les profils ignorés.
 
-## Détermination du mode de sortie {#section_D2AFBF33D3904AC2A7C653A60C3A0CD3}
+## Déterminer le mode de sortie {#section_D2AFBF33D3904AC2A7C653A60C3A0CD3}
 
 Lors du traitement d’un média AC-3, si un périphérique Android est connecté au système de haut-parleur, la décision de lire le contenu en mode surround ou stéréo dépend de la manière dont le périphérique est configuré.
 
