@@ -6,13 +6,16 @@ title: Mise en oeuvre de la prise en charge des chapitres
 uuid: 6e2c3994-d28b-489f-ae60-9b876125a871
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
 # Mise en oeuvre de la prise en charge des chapitres {#implement-chapter-support}
 
-Vous pouvez définir et suivre des chapitres *personnalisés* pour le suivi vidéo dans les applications basées sur TVSDK.
+Vous pouvez définir et suivre *des chapitres personnalisés* pour le suivi vidéo dans les applications basées sur TVSDK.
 
 Les chapitres personnalisés sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
 
