@@ -6,6 +6,9 @@ title: Publicités cliquables
 uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 TVSDK fournit des informations vous permettant d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
 
-Pour TVSDK for Flash Runtime, seules les publicités linéaires peuvent être cliquées.
+Pour TVSDK pour l’exécution du Flash, seules les publicités linéaires peuvent être cliquées.
 
 ## Répondre aux clics sur les publicités {#respond-to-clicks-on-ads}
 
@@ -22,7 +25,7 @@ Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre a
 
 Cet exemple présente une méthode possible de gestion des clics publicitaires.
 
-1. Chaque fois qu’une publicité est lue, un bouton s’affiche au-dessus du lecteur multimédia. Un utilisateur qui clique sur la publicité est redirigé vers l’URL de la publicité. Ce bouton fait partie du [!DNL ClickableAdsOverlay.xml]bouton.
+1. Chaque fois qu’une publicité est lue, un bouton s’affiche au-dessus du lecteur multimédia. Un utilisateur qui clique sur la publicité est redirigé vers l’URL de la publicité. Ce bouton fait partie du [!DNL ClickableAdsOverlay.xml].
 
    ```xml
       <?xml version="1.0"?> 
@@ -35,7 +38,7 @@ Cet exemple présente une méthode possible de gestion des clics publicitaires.
    </s:VGroup>
    ```
 
-1. Insérez cette incrustation sur l’exemple de lecteur multimédia [!DNL psdkdemo.xml].
+1. Insérez cette incrustation sur l’exemple de lecteur multimédia, [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +48,7 @@ Cet exemple présente une méthode possible de gestion des clics publicitaires.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Pour rendre la vue visible uniquement lorsqu’une publicité est en cours de lecture, écoutez les `onAdStart` et les `onAdComplete` événements distribués par .
+1. Pour rendre la vue visible uniquement lors de la lecture d’une publicité, écoutez les événements `onAdStart` et `onAdComplete` distribués par .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -72,9 +75,9 @@ Cet exemple présente une méthode possible de gestion des clics publicitaires.
    }
    ```
 
-1. Écoute le `AdclickEvent.AD_CLICK` événement.
+1. Prêtez attention au événement `AdclickEvent.AD_CLICK`.
 
-   Si une publicité est en cours de lecture, TVSDK distribue le `AdClickEvent.AD_CLICK` événement, à partir duquel vous pouvez récupérer l’URL de clic publicitaire et les informations connexes.
+   Si une publicité est en cours de lecture, TVSDK distribue le événement `AdClickEvent.AD_CLICK`, à partir duquel vous pouvez récupérer l’URL de clic publicitaire et les informations connexes.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
