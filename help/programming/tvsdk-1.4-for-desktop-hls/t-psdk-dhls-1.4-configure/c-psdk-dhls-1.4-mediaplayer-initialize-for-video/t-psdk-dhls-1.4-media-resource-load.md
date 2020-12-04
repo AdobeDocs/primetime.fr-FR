@@ -6,17 +6,20 @@ title: Chargement d’une ressource multimédia dans MediaPlayer
 uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
 translation-type: tm+mt
 source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
 
-# Chargement d’une ressource multimédia dans MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
+# Charger une ressource multimédia dans MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
 
 Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s&#39;agit d&#39;une façon de charger une ressource multimédia.
 
-1. Définissez l’élément jouable de votre `MediaPlayer` objet avec la nouvelle ressource à lire.
+1. Définissez l&#39;élément jouable de l&#39;objet `MediaPlayer` avec la nouvelle ressource à lire.
 
-   Remplacez l’élément MediaPlayer actuellement lisible par votre instance existante en appelant `MediaPlayer.replaceCurrentResource` et en transmettant une `MediaResource` instance existante.
+   Remplacez l’élément MediaPlayer actuellement lisible par l’appel de `MediaPlayer.replaceCurrentResource` et par une instance `MediaResource` existante.
 
 1. Recherchez au moins les modifications suivantes :
 
@@ -24,22 +27,22 @@ Chargez une ressource en instanciant directement une ressource MediaResource et 
    * PRÉPARÉ
    * ERREUR
 
-      Grâce à ces événements, l’ `MediaPlayer` objet peut avertir votre application lorsque la ressource multimédia est chargée avec succès.
+      Grâce à ces événements, l&#39;objet `MediaPlayer` peut avertir votre application lorsque la ressource multimédia est chargée avec succès.
 
-1. Lorsque l’état du lecteur multimédia devient INITIALISÉ, vous pouvez appeler `MediaPlayer.prepareToPlay`
+1. Lorsque l&#39;état du lecteur multimédia devient INITIALISÉ, vous pouvez appeler `MediaPlayer.prepareToPlay`
 
-   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
+   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel de `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
 
 1. Lorsque l’état du lecteur multimédia devient PRÉPARÉ, le flux multimédia est chargé correctement et préparé pour la lecture.
 
    Lorsque le flux média est chargé, un `MediaPlayerItem` est créé.
 
-En cas d’échec, MediaPlayer passe à l’état ERROR. Il informe également votre application en envoyant le `STATUS_CHANGED` événement à votre `MediaPlayerStatusChangeEvent` rappel.
+En cas d’échec, MediaPlayer passe à l’état ERROR. Il informe également votre application en envoyant le événement `STATUS_CHANGED` à votre rappel `MediaPlayerStatusChangeEvent`.
 
 Il transmet plusieurs paramètres :
-* Un `type` paramètre de type chaîne avec la valeur `ERROR`.
+* Un paramètre `type` de type chaîne avec la valeur `ERROR`.
 
-* Paramètre `MediaError` que vous pouvez utiliser pour obtenir une notification contenant des informations de diagnostic sur le événement d’erreur.
+* Paramètre `MediaError` que vous pouvez utiliser pour obtenir une notification contenant des informations de diagnostic sur le événement d&#39;erreur.
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
