@@ -6,6 +6,9 @@ title: Marquer les plages
 uuid: eb99a1c2-6c0c-40a4-bac2-98dce45acfad
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '95'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Vous pouvez désigner des intervalles de temps dans le contenu VOD comme coupures publicitaires.
 
-Dans ce cas, `TimeRanges` entre le `begin` et `end` le sera `localTime` sera marqué comme un `AdBreak` dans la chronologie. Les autres paramètres de publicité sont ignorés.
+Dans ce cas, `TimeRanges` entre `begin` et `end` dans `localTime` sera marqué comme `AdBreak` dans la chronologie. Les autres paramètres de publicité sont ignorés.
 
 >[!NOTE]
 >
->Si vous souhaitez uniquement marquer certaines plages du contenu comme des publicités (sans insertion d’annonces dynamiques), créez une `CustomRangeMetadata` instance et spécifiez le type en tant qu’opération MARK avec les plages personnalisées définies.
+>Si vous souhaitez uniquement marquer certaines plages du contenu comme des publicités (sans insertion d&#39;annonces dynamiques), créez une instance `CustomRangeMetadata` et spécifiez le type en tant qu&#39;opération MARK avec les plages personnalisées définies.
 
 1. Marquer les plages.
 
