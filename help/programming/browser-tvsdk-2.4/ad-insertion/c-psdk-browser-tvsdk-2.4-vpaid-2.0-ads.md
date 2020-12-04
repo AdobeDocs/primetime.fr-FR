@@ -6,6 +6,9 @@ title: Prise en charge des publicités VPAID 2.0
 uuid: 462692b5-c4b3-4488-adb3-f309809d64ad
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
@@ -21,10 +24,10 @@ Les fonctionnalités suivantes sont prises en charge :
    Pour plus d’informations, voir [IAB VPAID 2.0](https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/).
 * Publicités VPAID linéaires avec contenu vidéo à la demande (VOD)
 * Dans le contenu en direct, le navigateur TVSDK prend en charge les annonces VPAID JavaScript preroll.
-* En mode de secours Flash, le navigateur TVSDK ne prend en charge que les annonces VPAID Flash.
+* En mode Flash de secours, le navigateur TVSDK ne prend en charge que les annonces VPAID basées sur un Flash.
 * Publicités VPAID JavaScript linéaires
 
-   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`étant.
+   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`.
 
 Les fonctionnalités suivantes ne sont pas prises en charge :
 
@@ -33,21 +36,21 @@ Les fonctionnalités suivantes ne sont pas prises en charge :
 * Publicités non linéaires, telles que les publicités superposées, les publicités complémentaires dynamiques, les publicités pouvant être réduites au minimum, les publicités réductibles et les publicités extensibles.
 * Prévisualisation de publicités VPAID
 * Publicités VPAID dans du contenu en direct
-* Publicités Flash VPAID
+* Publicités VPAID Flash
 
 ## API {#section_0DB1D383CA5047B281BC808BC082C69B}
 
 Les éléments d&#39;API suivants prennent en charge les annonces VPAID 2.0 :
 
-* La `getCustomAdView` méthode de `MediaPlayer` renvoie un `CustomAdView` objet, qui représente la vue Web qui effectue le rendu de la publicité VPAID.
+* La méthode `getCustomAdView` de `MediaPlayer` renvoie un objet `CustomAdView`, qui représente la vue Web qui effectue le rendu de la publicité VPAID.
 
-   Pour plus d’informations sur la `getCustomAdView` méthode, voir la documentation [de l’API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html)MediaPlayer.
+   Pour plus d&#39;informations sur la méthode `getCustomAdView`, consultez la [documentation de l&#39;API MediaPlayer](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` définit le délai d’expiration sur le processus de chargement VPAID.
 
    Le délai d’expiration par défaut est de 10 secondes.
 
-* L’API `auditudeSettings.ignoreVPAIDAds`vous permet d’ignorer les annonces VPAID reçues du serveur Auditude. L’API ne fonctionne pas pour les secours Flash.
+* L’API `auditudeSettings.ignoreVPAIDAds` vous permet d’ignorer les annonces VPAID reçues du serveur Auditude. L&#39;API ne fonctionne pas pour le Flash de secours.
 
 Pendant la lecture de la publicité VPAID :
 
