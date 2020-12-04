@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#primetime-ad-server-metadata-overview}
+# Aperçu {#primetime-ad-server-metadata-overview}
 
 TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et les flux vidéo/linéaires.
 
@@ -21,7 +21,7 @@ TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et
 >
 >Avant d’inclure de la publicité dans votre contenu vidéo, fournissez les métadonnées suivantes :
 >
->* Un `mediaID`, qui identifie le contenu spécifique à lire.
+>* `mediaID`, qui identifie le contenu spécifique à lire.
 >* Votre `zoneID`, qui identifie votre société ou votre site Web.
 >* Le domaine de votre serveur d’annonces, qui spécifie le domaine de votre serveur d’annonces affecté.
 >* Autres paramètres de ciblage.
@@ -30,9 +30,9 @@ TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et
 
 
 
-## Configuration des métadonnées de serveur et Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurer les métadonnées de serveur et Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Votre application doit fournir à TVSDK les `PTAuditudeMetadata` informations requises pour la connexion au serveur d’annonces.
+Votre application doit fournir à TVSDK les informations `PTAuditudeMetadata` requises pour se connecter au serveur d’annonces.
 
 Pour configurer les métadonnées du serveur d’annonces :
 
@@ -46,7 +46,7 @@ Pour configurer les métadonnées du serveur d’annonces :
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Définissez l’ `PTAuditudeMetadata` instance en tant que métadonnées pour les `PTMediaPlayerItem` métadonnées actives à l’aide `PTAdResolvingMetadataKey`.
+1. Définissez l&#39;instance `PTAuditudeMetadata` comme métadonnées pour les métadonnées `PTMediaPlayerItem` actuelles à l&#39;aide de `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -74,13 +74,13 @@ Pour configurer les métadonnées du serveur d’annonces :
    }
    ```
 
-## Activer les publicités en lecture événement complet {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## Activer les publicités dans la relecture en événement complet {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
 La relecture en événement complet (FER) est une ressource VOD qui agit comme une ressource en direct/DVR. Votre application doit donc prendre des mesures pour s’assurer que les publicités sont placées correctement.
 
-Pour le contenu en direct, TVSDK utilise les métadonnées/indices du manifeste pour déterminer l’emplacement des publicités. Cependant, il arrive que le contenu en direct/linéaire ressemble au contenu VOD. Par exemple, lorsque le contenu en direct se termine, une `EXT-X-ENDLIST` balise est ajoutée au manifeste en direct. Pour HLS, la `EXT-X-ENDLIST` balise signifie que le flux est un flux VOD. TVSDK ne peut pas automatiquement différencier ce flux d’un flux VOD normal pour insérer correctement des publicités.
+Pour le contenu en direct, TVSDK utilise les métadonnées/indices du manifeste pour déterminer l’emplacement des publicités. Cependant, il arrive que le contenu en direct/linéaire ressemble au contenu VOD. Par exemple, lorsque le contenu en direct se termine, une balise `EXT-X-ENDLIST` est ajoutée au manifeste en direct. Pour HLS, la balise `EXT-X-ENDLIST` signifie que le flux est un flux VOD. TVSDK ne peut pas automatiquement différencier ce flux d’un flux VOD normal pour insérer correctement des publicités.
 
-Votre application doit indiquer à TVSDK si le contenu est actif ou VOD en spécifiant le `PTAdSignalingMode`.
+Votre application doit indiquer à TVSDK si le contenu est actif ou VOD en spécifiant `PTAdSignalingMode`.
 
 Dans le cas d’un flux FER, le serveur de prise de décision publicitaire Adobe Primetime ne doit pas fournir la liste des coupures publicitaires qui doivent être insérées dans la chronologie avant de commencer la lecture. Il s’agit du processus typique pour le contenu VOD. Au lieu de cela, en spécifiant un mode de signalisation différent, TVSDK lit tous les indices du manifeste FER et va au serveur d’annonces pour chaque indice pour demander une coupure publicitaire. Ce processus est similaire au contenu en direct/DVR.
 
@@ -88,9 +88,9 @@ Outre chaque demande associée à un point de repère, TVSDK effectue une demand
 
 1. A partir d’une source externe, telle que vCMS, obtenez le mode de signalisation à utiliser.
 1. Créez les métadonnées liées à la publicité.
-1. Si le comportement par défaut doit être remplacé, spécifiez le comportement `PTAdSignalingMode` en utilisant `PTAdMetadata.signalingMode`.
+1. Si le comportement par défaut doit être remplacé, spécifiez `PTAdSignalingMode` en utilisant `PTAdMetadata.signalingMode`.
 
-   Les valeurs valides sont `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`et `PTAdSignalingModeServerMap`.
+   Les valeurs valides sont `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` et `PTAdSignalingModeServerMap`.
 
    Vous devez définir le mode de signalisation de la publicité avant d&#39;appeler `prepareToPlay`. Après les débuts TVSDK de résolution et de placement des publicités dans la chronologie, les modifications apportées au mode de signalisation publicitaire sont ignorées. Définissez le mode lorsque vous créez les métadonnées publicitaires pour la ressource.
 
