@@ -6,11 +6,14 @@ title: Utilisation des cookies
 uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
 
-# Utilisation des cookies{#work-with-cookies}
+# Utilisation des cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
@@ -23,7 +26,7 @@ Voici un exemple avec un certain type d’authentification lors de l’envoi de 
 
 Pour utiliser des cookies :
 
-1. Utilisez la `cookieHeaders` propriété dans `NetworkConfiguration` pour définir un cookie. La `cookieHeaders` propriété est un objet de métadonnées et vous pouvez ajouter des paires clé-valeur à cet objet pour l’inclure dans l’en-tête du cookie.
+1. Utilisez la propriété `cookieHeaders` dans `NetworkConfiguration` pour définir un cookie. La propriété `cookieHeaders` est un objet de métadonnées et vous pouvez ajouter des paires clé-valeur à cet objet pour qu’il soit inclus dans l’en-tête du cookie.
 
    Par exemple :
 
@@ -35,7 +38,7 @@ Pour utiliser des cookies :
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   Par défaut, les en-têtes de cookie sont envoyés uniquement avec des requêtes de clé. Pour envoyer des en-têtes de cookie avec toutes les requêtes, définissez la `NetworkConfiguration` propriété `useCookieHeadersForAllRequests` sur true.
+   Par défaut, les en-têtes de cookie sont envoyés uniquement avec des requêtes de clé. Pour envoyer des en-têtes de cookie avec toutes les requêtes, définissez la propriété `NetworkConfiguration` `useCookieHeadersForAllRequests` sur true.
 
 1. Pour vous assurer que `NetworkConfiguration` fonctionne, définissez-le comme métadonnées :
 
@@ -47,9 +50,9 @@ Pour utiliser des cookies :
                                 networkConfiguration);
    ```
 
-1. Fournissez les métadonnées de l’étape précédente lorsque vous créez un `MediaResource`fichier.
+1. Fournissez les métadonnées de l’étape précédente lorsque vous créez un `MediaResource`.
 
-   Par exemple, si vous utilisez la `createFromURL` méthode, entrez les informations suivantes :
+   Par exemple, si vous utilisez la méthode `createFromURL`, saisissez les informations suivantes :
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
