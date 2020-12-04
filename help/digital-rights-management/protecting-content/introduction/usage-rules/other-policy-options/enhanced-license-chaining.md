@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Chaîne améliorée de licence {#enhanced-license-chaining}
+# Chaîne de licence améliorée {#enhanced-license-chaining}
 
 Vous pouvez utiliser le chaînage de licences amélioré pour mettre à jour une licence en utilisant une licence racine parente pour la mise à jour par lots des licences.
 
