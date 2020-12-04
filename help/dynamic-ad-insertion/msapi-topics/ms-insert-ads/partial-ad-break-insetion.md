@@ -6,11 +6,14 @@ title: Insertion partielle de coupures publicitaires
 uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Insertion partielle de coupures publicitaires {#partial-ad-break-insertion}
+# Insertion de coupures publicitaires partielles {#partial-ad-break-insertion}
 
 La fonction d’insertion de coupures publicitaires partielles (PABI) imite une expérience de type TV dans laquelle, si l’utilisateur rejoint un flux en direct au cours d’une coupure intermédiaire, des publicités intermédiaires sont affichées à l’écran plutôt qu’une publicité preroll ou une ardoise.
 
@@ -28,9 +31,9 @@ La fonction PABI indique au serveur de manifeste d’ignorer la coupure publicit
 
 >[!NOTE]
 >
->Le DÉBUT [](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) EXT-X est une balise HLS standard qui indique un point de départ privilégié dans la liste de lecture.
+>[EXT-X-DÉBUT](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) est une balise HLS standard qui indique un point de départ privilégié dans la liste de lecture.
 
-## Recommandations {#section_4CF0733B14504F2A99690310B9F3B130}
+## Recommendations {#section_4CF0733B14504F2A99690310B9F3B130}
 
 * Utilisez le suivi côté client car le client dispose d’un meilleur contrôle sur le déclenchement des balises de suivi.
 * Les coupures publicitaires partielles ne doivent être utilisées avec le mode de suivi côté serveur que si le lecteur prend en charge le DÉBUT EXT-X.
