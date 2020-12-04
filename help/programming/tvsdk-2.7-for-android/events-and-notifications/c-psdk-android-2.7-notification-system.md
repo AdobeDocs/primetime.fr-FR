@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur {#notifications-and-events-for-player-status-activity-errors-and-logging}
+# Notifications et événements concernant l’état du lecteur, l’activité, les erreurs et la journalisation {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
 Les événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
 
@@ -25,7 +25,7 @@ Votre application peut récupérer les informations de notification et d’état
 
 `MediaPlayerNotification` fournit des informations relatives à l’état du lecteur.
 
-TVSDK fournit une liste chronologique des `MediaPlayerNotification` notifications et chaque notification contient les informations suivantes :
+TVSDK fournit une liste chronologique de `MediaPlayerNotification` notifications et chaque notification contient les informations suivantes :
 
 * Horodatage
 * Métadonnées de diagnostic comprenant les éléments suivants :
@@ -35,7 +35,7 @@ TVSDK fournit une liste chronologique des `MediaPlayerNotification` notification
    * `name`: Description lisible de la notification, telle que SEEK_ERROR
    * `metadata`: paires clé/valeur qui contient des informations pertinentes sur la notification. Par exemple, une clé nommée `URL` fournit une valeur qui est une URL liée à la notification.
 
-   * `innerNotification`: Référence à un autre `MediaPlayerNotification` objet qui a un impact direct sur cette notification.
+   * `innerNotification`: Référence à un autre  `MediaPlayerNotification` objet qui a un impact direct sur cette notification.
 
 Vous pouvez stocker ces informations localement pour une analyse ultérieure ou les envoyer à un serveur distant pour consigner et représenter graphiquement.
 
@@ -43,22 +43,22 @@ Vous pouvez stocker ces informations localement pour une analyse ultérieure ou 
 
 Vous pouvez écouter les notifications.
 
-Le coeur du système de notification de Primetime Player est la `Notification` classe, qui représente une notification autonome.
+Le coeur du système de notification de Primetime Player est la classe `Notification`, qui représente une notification autonome.
 
 Pour recevoir des notifications, écoutez les notifications comme suit :
 
-1. Implémentez le `NotificationEventListener.onNotification()` rappel.
-1. TVSDK transmet un `NotificationEvent` objet au rappel.
+1. Implémentez le rappel `NotificationEventListener.onNotification()`.
+1. TVSDK transmet un objet `NotificationEvent` au rappel.
 
    >[!NOTE]
    >
-   >Les types de notifications sont énumérés dans l&#39; `Notification.Type` énumération :
+   >Les types de notifications sont énumérés dans l&#39;énumération `Notification.Type` :
 
    * `ERROR`
    * `INFO`
    * `WARNING`
 
-## ajouter la journalisation et le débogage en temps réel {#section_9D4004308CB243AD9B50818895D10005}
+## Ajouter la journalisation et le débogage en temps réel {#section_9D4004308CB243AD9B50818895D10005}
 
 Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 
