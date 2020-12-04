@@ -46,5 +46,5 @@ Les attributs suivants peuvent identifier les fonctionnalités du périphérique
 >
 >Cette règle d’utilisation est prise en charge par les clients DRM d’Adobe Primetime version 2.0.2 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences.
 >
->Voir Version [](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)minimale du client.
+>Voir [Version minimale du client](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
