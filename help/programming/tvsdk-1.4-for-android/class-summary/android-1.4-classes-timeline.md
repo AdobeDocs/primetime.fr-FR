@@ -6,6 +6,9 @@ title: Classes de chronologie
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
