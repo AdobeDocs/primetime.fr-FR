@@ -6,6 +6,9 @@ title: Prise en charge des publicités VPAID 2.0
 uuid: 6485e387-2a13-476f-a0fd-91c6e19fd385
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Les fonctionnalités suivantes sont prises en charge :
 * Publicités VPAID linéaires avec contenu vidéo à la demande (VOD)
 * Publicités VPAID JavaScript
 
-   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`étant.
+   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`.
 
 Les fonctionnalités suivantes ne sont pas prises en charge :
 
@@ -31,20 +34,20 @@ Les fonctionnalités suivantes ne sont pas prises en charge :
 * Publicités non linéaires, telles que publicités d’incrustation, publicités compagnons dynamiques, publicités pouvant être réduites, publicités réductibles et annonces extensibles
 * Prévisualisation de publicités VPAID
 * Publicités VPAID dans du contenu en direct
-* Publicités Flash VPAID
+* Publicités VPAID Flash
 
 ## API
 
 Les éléments d&#39;API suivants prennent en charge les annonces VPAID 2.0 :
 
-* La `getCustomAdView` méthode de `MediaPlayer` renvoie un `CustomAdView` objet, représentant la vue Web qui effectue le rendu de la publicité VPAID (voir Références [](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)API).
+* La méthode `getCustomAdView` de `MediaPlayer` renvoie un objet `CustomAdView` représentant la vue Web qui effectue le rendu de la publicité VPAID (voir [Références API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` définit le délai d’expiration sur le processus de chargement VPAID. Le délai d’expiration par défaut est de 10 secondes.
 
 Pendant la lecture de la publicité VPAID :
 
 * La publicité VPAID est affichée dans un conteneur de vue au-dessus de la vue du lecteur. Par conséquent, le code qui repose sur les clics effectués par les utilisateurs sur la vue du lecteur ne fonctionne pas.
-* Les appels à `pause` et à `play` l’instance du lecteur s’arrêtent et reprennent la publicité VPAID.
+* Les appels à `pause` et `play` sur l’instance du lecteur s’interrompent et reprennent la publicité VPAID.
 
 * Les publicités VPAID n’ont pas de durée prédéfinie, car elles peuvent être interactives.
 
