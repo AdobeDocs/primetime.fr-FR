@@ -6,6 +6,9 @@ title: Répondre aux clics sur les publicités
 uuid: 58efaba5-d0f6-4ddd-9628-6bc065cc95d8
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ TVSDK fournit des informations vous permettant d’agir sur les publicités par 
 Pour TVSDK pour Android, seules les publicités linéaires peuvent être cliquées.
 Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
 
-1. Pour configurer un écouteur de événement pour TVSDK et fournir les informations de clic publicitaire, enregistrez-vous `AdClickedEventListener.onAdClicked`.
+1. Pour configurer un écouteur de événement pour TVSDK et fournir les informations de clic publicitaire, enregistrez `AdClickedEventListener.onAdClicked`.
 
    Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, TVSDK envoie cette notification, y compris des informations sur la destination du clic.
 1. Surveillez les interactions des utilisateurs sur les annonces cliquables.
-1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, appelez `notifyClick` le `MediaPlayerView`.
-1. Prêtez attention au `onAdClick(AdClickEvent event)` événement de TVSDK.
-1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour l’ `AdClickEvent` instance.
+1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, appelez `notifyClick` sur le `MediaPlayerView`.
+1. Prêtez attention au événement `onAdClick(AdClickEvent event)` de TVSDK.
+1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour l’instance `AdClickEvent`.
 1. Mettez la vidéo en pause.
 
    Pour plus d’informations sur la mise en pause de la vidéo, voir reprise de la lecture.
