@@ -6,6 +6,9 @@ title: Insertion et basculement publicitaires pour VOD
 uuid: 74cc35e6-6479-4572-a3b3-05ff6344272a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Le processus d’insertion publicitaire vidéo à la demande (VOD) comprend les 
 
 ## Phase de résolution des publicités {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
-TVSDK contacte un service de diffusion publicitaire, tel qu’Adobe Primetime, et tente d’obtenir le fichier de liste de lecture principal correspondant au flux vidéo de la publicité. Au cours de la phase de résolution des publicités, TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
+TVSDK contacte un service de diffusion publicitaire, tel que la prise de décision publicitaire Adobe Primetime, et tente d’obtenir le fichier de liste de lecture Principal qui correspond au flux vidéo de la publicité. Au cours de la phase de résolution des publicités, TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
 
 TVSDK prend en charge les types de fournisseurs d’annonces suivants :
 
@@ -39,7 +42,7 @@ Une des situations de basculement suivantes peut se produire pendant cette phase
 
 TVSDK émet une notification d’avertissement concernant l’erreur et poursuit le traitement.
 
-## Phase d&#39;insertion publicitaire {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
+## Phase d&#39;insertion de la publicité {#section_29F7F7756C8B40B99AD4C3DD16B72B5B}
 
 TVSDK insère le contenu alternatif (publicités) dans la chronologie qui correspond au contenu principal.
 
@@ -49,7 +52,7 @@ Le basculement peut survenir au cours de cette phase avec des conflits qui peuve
 
 TVSDK émet une notification d’avertissement concernant l’erreur et poursuit le traitement.
 
-## Phase de lecture publicitaire {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
+## Phase de lecture de la publicité {#section_DA816F88AF8A4A5A8FD0DE2D54A86031}
 
 TVSDK télécharge les segments d’annonce et les rend sur l’écran du périphérique.
 
@@ -69,4 +72,4 @@ TVSDK transmet les événements déclenchés à votre application, y compris les
 
    Votre application doit prendre les mesures appropriées.
 
-Que des erreurs se produisent ou non, TVSDK appelle `onAdBreakComplete` pour chaque `onAdBreakStart` et `onAdComplete` pour chaque `onAdStart`variable. Cependant, si les segments n’ont pas pu être téléchargés, la chronologie peut présenter des lacunes. Lorsque les espaces sont suffisamment grands, les valeurs de la position du curseur de lecture et de la progression de la publicité signalée peuvent présenter des discontinuités.
+Que des erreurs se produisent ou non, TVSDK appelle `onAdBreakComplete` pour chaque `onAdBreakStart` et `onAdComplete` pour chaque `onAdStart`. Cependant, si les segments n’ont pas pu être téléchargés, la chronologie peut présenter des lacunes. Lorsque les espaces sont suffisamment grands, les valeurs de la position du curseur de lecture et de la progression de la publicité signalée peuvent présenter des discontinuités.
