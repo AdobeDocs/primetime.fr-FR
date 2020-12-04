@@ -6,11 +6,14 @@ title: Lecture et mise en pause d’une vidéo
 uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
 
-# Lecture et mise en pause d’une vidéo{#play-and-pause-a-video}
+# Lecture et mise en pause d’une vidéo {#play-and-pause-a-video}
 
 Vous pouvez ajouter le comportement du navigateur TVSDK pour mettre en pause et lire les boutons.
 
@@ -28,7 +31,7 @@ Vous pouvez ajouter le comportement du navigateur TVSDK pour mettre en pause et 
       void pause() throws IllegalStateException;
       ```
 
-1. Prêtez attention au `AdobePSDK.MediaPlayerStatusChangeEvent` événement pour rechercher les erreurs ou prendre d’autres mesures appropriées.
+1. Prêtez attention au événement `AdobePSDK.MediaPlayerStatusChangeEvent` pour rechercher les erreurs ou prendre d&#39;autres mesures appropriées.
 
-   Le navigateur TVSDK déclenche ce événement lorsque des méthodes de mise en pause ou de lecture sont appelées et transmet des informations sur l’objet de événement, y compris le nouvel état, tel que `MediaPlayerStatus.PLAYING` ou `MediaPlayerStatus.PAUSED`.
+   Le navigateur TVSDK déclenche ce événement lorsque des méthodes pause ou play sont appelées et transmet des informations sur l’objet événement, y compris le nouvel état, tel que `MediaPlayerStatus.PLAYING` ou `MediaPlayerStatus.PAUSED`.
 
