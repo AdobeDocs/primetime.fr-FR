@@ -6,6 +6,9 @@ title: TimeRange, classe
 uuid: af3ce5e6-44b5-457f-a6e7-aa232defb91e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -16,15 +19,15 @@ Les marqueurs publicitaires personnalisés vous permettent de transmettre à TVS
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Chaque `TimeRange` spécification de la visionneuse représente un segment de la chronologie de la lecture qui est conservé en interne par TVSDK et qui doit être marqué de manière appropriée comme une période liée à la publicité.
+Chaque spécification `TimeRange` de la visionneuse représente un segment sur la chronologie de la lecture qui est conservé en interne par TVSDK et qui doit être marqué comme une période liée à la publicité.
 
-La `TimeRange` classe est une structure de données simple qui expose la position du début et la position finale sur la chronologie. Ces deux propriétés en lecture seule abstraient l’idée d’une plage de temps dans la chronologie de lecture.
+La classe `TimeRange` est une structure de données simple qui expose la position du début et la position de fin sur la chronologie. Ces deux propriétés en lecture seule abstraient l’idée d’une plage de temps dans la chronologie de lecture.
 
 >[!TIP]
 >
 >Les deux valeurs sont exprimées en millisecondes.
 
-Voici un résumé de la `TimeRange` classe :
+Voici un résumé de la classe `TimeRange` :
 
 ```java
 public final class TimeRange {
