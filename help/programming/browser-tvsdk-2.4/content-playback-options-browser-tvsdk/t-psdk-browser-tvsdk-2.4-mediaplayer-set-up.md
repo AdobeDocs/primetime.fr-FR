@@ -6,6 +6,9 @@ title: Configuration de MediaPlayer
 uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
 source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
@@ -14,19 +17,19 @@ source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
 
 Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un lecteur multimédia.
 
-1. Instanciez une `MediaPlayer` application à l’aide des éléments suivants :
+1. Instanciez un `MediaPlayer` à l&#39;aide des éléments suivants :
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Créez une `MediaPlayerView` instance :
+1. Créez une instance `MediaPlayerView` :
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   où `container` est l’élément de cible `div` qui contient votre `HTMLMediaElement`élément.
+   où `container` est l’élément de cible `div` qui contient votre `HTMLMediaElement`.
 
    Par exemple, sur une page HTML :
 
@@ -50,13 +53,13 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
          document.getElementById("videoDiv"));  
    ```
 
-1. Joignez votre `MediaPlayerView` instance à votre `MediaPlayer` instance :
+1. Joignez votre instance `MediaPlayerView` à votre instance `MediaPlayer` :
 
    ```js
    player.view = view;
    ```
 
-1. Joignez l’élément de contrôle personnalisé `div` à votre instance MediaPlayer.
+1. Joignez l’élément `div` contrôles personnalisés à votre instance MediaPlayer.
 
    Par exemple, en HTML :
 
@@ -77,4 +80,4 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    }
    ```
 
-L’ `MediaPlayer` instance est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l’écran du périphérique.
+L&#39;instance `MediaPlayer` est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l&#39;écran du périphérique.
