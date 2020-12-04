@@ -6,6 +6,9 @@ title: Exemples de règles de sélection créative
 uuid: 0342de7e-b9cd-48e3-8bd1-e463bd6d0495
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Dans le fichier AdobeTVSDKConfig.json, vous pouvez spécifier des règles par d�
 
 ## Exemples de règles par défaut {#section_xy4_3fx_hz}
 
-Voici un exemple de [!DNL AdobeTVSDKConfig.json] fichier qui définit uniquement les règles par défaut :
+Voici un exemple de fichier [!DNL AdobeTVSDKConfig.json] qui définit uniquement les règles par défaut :
 
 ```
 {
@@ -66,7 +69,7 @@ Voici un exemple de [!DNL AdobeTVSDKConfig.json] fichier qui définit uniquement
 
 ## Exemples de règles par défaut avec des règles de zone supplémentaires {#section_ocv_3fx_hz}
 
-Voici un exemple de [!DNL AdobeTVSDKConfig.json] fichier qui définit des règles par défaut, ainsi que des règles supplémentaires pour un identifiant de zone spécifique (dans ce cas, zone **&quot;1234&quot;**) :
+Voici un exemple de fichier [!DNL AdobeTVSDKConfig.json] qui définit des règles par défaut, ainsi que des règles supplémentaires pour un identifiant de zone spécifique (dans ce cas, zone **&quot;1234&quot;**) :
 
 ```
 {
