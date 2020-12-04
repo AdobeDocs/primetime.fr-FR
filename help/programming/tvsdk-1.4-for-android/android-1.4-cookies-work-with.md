@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Utilisation des cookies{#work-with-cookies}
+# Utilisation des cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
@@ -26,7 +26,7 @@ Voici un exemple avec un certain type d’authentification lors de l’envoi de 
 
 Pour utiliser des cookies :
 
-1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre `cookieStore`application.
+1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre `cookieStore`.
 
    Par exemple :
 
@@ -46,7 +46,7 @@ Pour utiliser des cookies :
 
    TVSDK requête ce cookieManager au moment de l’exécution, vérifie s’il existe des cookies associés à l’URL et les utilise automatiquement.
 
-   Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec des requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la `NetworkConfiguration` méthode `setUseCookieHeadersForAllRequests`:
+   Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec des requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la méthode `NetworkConfiguration` `setUseCookieHeadersForAllRequests` :
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
