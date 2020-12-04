@@ -4,6 +4,9 @@ title: Générer une demande de signature de certificat (demandeur)
 uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
    >[!NOTE]
    >
-   >Adobe recommande d’inclure le type de certificat (lic, pkgr, trans, trial ou eval) dans le nom de clé. Cette convention d’affectation des noms facilite leur déploiement sur votre serveur de licences. Cet exemple utilise &quot;mycompany-license.key&quot;. Pour les versions d’évaluation et d’évaluation, utilisez &quot;mycompany-eval.key&quot; et &quot;mycompany-trial.key&quot;.
+   >Adobe recommande d&#39;inclure le type de certificat (lic, pkgr, trans, trial ou eval) dans le nom de clé. Cette convention d’affectation des noms facilite leur déploiement sur votre serveur de licences. Cet exemple utilise &quot;mycompany-license.key&quot;. Pour les versions d’évaluation et d’évaluation, utilisez &quot;mycompany-eval.key&quot; et &quot;mycompany-trial.key&quot;.
 
 1. Entrez un mot de passe pour protéger la clé privée.
 
@@ -39,7 +42,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 1. Vous êtes invité à saisir le mot de passe de la clé privée.
 1. Créez une copie de sauvegarde de votre clé privée et de votre mot de passe.
 
-   Si vous perdez la clé privée ou si elle est compromise, contactez l’administrateur de certificats Adobe pour révoquer votre certificat et en demander un nouveau.
+   Si vous perdez la clé privée ou si elle est compromise, contactez l’administrateur de certificats d’Adobe pour révoquer votre certificat et en demander un nouveau.
 
    >[!NOTE]
    >
