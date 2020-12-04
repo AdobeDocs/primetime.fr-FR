@@ -6,11 +6,14 @@ title: Lecture multimédia
 uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
 
-# Lecture multimédia {#media-playback}
+# Lecture du média {#media-playback}
 
 Pour les médias en direct et VOD, le navigateur TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution intermédiaire, puis en téléchargeant les segments du support de débit de résolution intermédiaire définis par la liste de lecture.
 
