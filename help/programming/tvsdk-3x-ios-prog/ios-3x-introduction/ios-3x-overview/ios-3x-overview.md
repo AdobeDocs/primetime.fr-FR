@@ -4,15 +4,18 @@ title: Introduction
 uuid: 7c7d5fb0-bc4d-47e9-8856-53df57b8c6d3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '215'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
-Le kit de développement logiciel d’Adobe Primetime (TVSDK) est un ensemble d’outils qui vous permet d’ajouter des fonctionnalités de lecture vidéo avancées à vos applications.
+Le kit de développement logiciel Adobe Primetime (TVSDK) est un ensemble d’outils qui vous permet d’ajouter des fonctionnalités de lecture vidéo avancées à vos applications.
 
-* Pour une liste des fonctionnalités prises en charge par TVSDK, voir Fonctionnalités [de TVSDK du Lecteur](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md)Primetime.
+* Pour une liste des fonctionnalités prises en charge par TVSDK, voir [Fonctionnalités de TVSDK du Lecteur Primetime](../../ios-3x-introduction/ios-3x-overview/ios-3x-overview-of-the-player.md).
 * Pour connaître la configuration matérielle et logicielle requise pour l’utilisation de TVSDK, voir [Exigences](../../ios-3x-introduction/ios-3x-requirements.md).
 
 Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour iOS, qui est mis en oeuvre dans Objective-C.
@@ -27,6 +30,6 @@ Pour connaître la configuration matérielle et logicielle requise pour l’util
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de Objective-C. Vous implémentez une interface utilisateur de lecteur vidéo en utilisant cette langue et incorporez des fonctionnalités TVSDK.
 
-## A propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
+## À propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
 Ce guide fournit des informations qui vous permettent d’incorporer des fonctionnalités TVSDK dans un lecteur vidéo en utilisant Objective-C sur les périphériques iOS.
