@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Expiration de la publicité {#ad-timeout}
+# Délai d’expiration de la publicité {#ad-timeout}
 
 ## Exigences de la fondation AV {#av-foundation-requirements}
 
@@ -40,7 +40,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-Suivez ensuite la section : [Métadonnées](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)du serveur et de Primetime.
+Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
 **API relatives au délai d’expiration d’AdManifest**
 
@@ -62,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-Suivez ensuite la section : [Métadonnées](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)du serveur et de Primetime.
+Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
