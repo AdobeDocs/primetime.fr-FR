@@ -6,11 +6,14 @@ title: Config des méthodes de classe pour les balises
 uuid: 1d3651a0-3b70-4d3a-8ced-663a9dad7205
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
 
-# Config des méthodes de classe pour les balises{#config-class-methods-for-tags}
+# Configurez les méthodes de classe pour les balises {#config-class-methods-for-tags}
 
 Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe PTSDKConfig.
 
