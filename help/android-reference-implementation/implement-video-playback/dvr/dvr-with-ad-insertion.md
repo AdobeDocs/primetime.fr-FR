@@ -6,11 +6,14 @@ title: DVR avec insertion publicitaire
 uuid: ed6cd8fe-ceb2-45c8-a76d-bc0532babd99
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# DVR avec insertion publicitaire {#dvr-with-ad-insertion}
+# DVR avec insertion de publicité {#dvr-with-ad-insertion}
 
 Par défaut, un flux en direct avec prise en charge du DVR expose une plage de recherche dans laquelle le lecteur peut s’arrêter et effectuer des recherches.
 
