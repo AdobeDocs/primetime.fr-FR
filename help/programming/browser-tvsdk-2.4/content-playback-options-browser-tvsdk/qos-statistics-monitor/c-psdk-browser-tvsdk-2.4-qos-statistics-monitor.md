@@ -6,11 +6,14 @@ title: Statistiques sur la qualité des services
 uuid: e4bb2617-d8a7-4da7-b669-d6ffab2864bb
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
 
-# Statistiques sur la qualité des services{#quality-of-service-statistics}
+# Statistiques sur la qualité du service{#quality-of-service-statistics}
 
 La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
 
@@ -18,10 +21,10 @@ La qualité de service (QoS) offre une vue détaillée sur les performances du m
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 1. Instanciez un lecteur multimédia.
-1. Créez un `QOSProvider` objet et joignez-le au lecteur de médias.
+1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
 
    ```js
    // Create Media Player.qosProvider =  
@@ -31,7 +34,7 @@ La `QOSProvider` classe fournit diverses statistiques, notamment des information
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
 
    ```js
    var qosTimer = (function () { 
