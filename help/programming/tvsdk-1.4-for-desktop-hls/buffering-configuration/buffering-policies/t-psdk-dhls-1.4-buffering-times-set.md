@@ -6,6 +6,9 @@ title: Définition des heures de mise en mémoire tampon
 uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ MediaPlayer fournit des méthodes pour définir et obtenir la mise en mémoire t
 >
 >Si vous ne définissez pas les paramètres de contrôle de la mémoire tampon avant de commencer la lecture, le lecteur multimédia prend par défaut 2 secondes pour la mémoire tampon initiale et 30 secondes pour la durée de la mémoire tampon de lecture en cours.
 
-1. Configurez l’ `BufferControlParameters` objet, qui encapsule les paramètres de contrôle de la durée de la mémoire tampon initiale et de la durée de la mémoire tampon de lecture :
+1. Configurez l&#39;objet `BufferControlParameters`, qui encapsule les paramètres de contrôle de la durée de la mémoire tampon initiale et de la durée de la mémoire tampon de lecture :
 
        Cette classe fournit les méthodes de fabrique suivantes :
    
@@ -39,13 +42,13 @@ MediaPlayer fournit des méthodes pour définir et obtenir la mise en mémoire t
    * Le temps de mémoire tampon initial est inférieur à zéro.
    * La durée initiale de la mémoire tampon est supérieure à la durée de la mémoire tampon.
 
-1. Pour définir les valeurs des paramètres de mémoire tampon, utilisez cette `MediaPlayer` méthode :
+1. Pour définir les valeurs des paramètres de mémoire tampon, utilisez la méthode `MediaPlayer` suivante :
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Pour obtenir les valeurs des paramètres de mémoire tampon actuels, utilisez cette `MediaPlayer` méthode :
+1. Pour obtenir les valeurs de paramètre de mémoire tampon actuelles, utilisez la méthode `MediaPlayer` suivante :
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +62,4 @@ Par exemple, pour définir la mémoire tampon initiale sur 2 secondes et la dur�
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-Le `psdkdemo` montre cette fonctionnalité. utilisez les paramètres de l&#39;application pour définir les valeurs de la mémoire tampon.
+`psdkdemo` illustre cette fonction ; utilisez les paramètres de l&#39;application pour définir les valeurs de la mémoire tampon.
