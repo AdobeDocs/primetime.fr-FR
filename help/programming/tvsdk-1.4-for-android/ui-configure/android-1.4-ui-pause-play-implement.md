@@ -6,11 +6,14 @@ title: Lecture et mise en pause d’une vidéo
 uuid: 24b26364-5cb8-4a95-9574-cc52ddfa876b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Lecture et mise en pause d’une vidéo{#play-and-pause-a-video}
+# Lecture et mise en pause d’une vidéo {#play-and-pause-a-video}
 
 Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
 
@@ -28,7 +31,7 @@ Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des bouto
       void pause() throws IllegalStateException;
       ```
 
-1. Utilisez le `MediaPlayer.PlaybackEventListener.onStateChanged` rappel pour rechercher les erreurs ou pour effectuer d’autres actions appropriées.
+1. Utilisez le rappel `MediaPlayer.PlaybackEventListener.onStateChanged` pour rechercher les erreurs ou pour effectuer d&#39;autres actions appropriées.
 
    TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur la modification de l’état dans le rappel, y compris le nouvel état, tel que PAUSED ou PLAYING.
 
