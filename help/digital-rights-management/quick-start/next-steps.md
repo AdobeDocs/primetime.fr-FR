@@ -6,6 +6,9 @@ title: Étapes suivantes
 uuid: 489060e8-5f5e-4fcb-a210-a0d0b797816a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '79'
+ht-degree: 0%
 
 ---
 
@@ -18,4 +21,4 @@ Vous pouvez effectuer les étapes facultatives suivantes :
 
    Pour plus d’informations, voir *Utilisation des implémentations de référence DRM d’Adobe Primetime.*
 1. Utilisez un Flash Media Server (FMS) pour la diffusion en flux continu de contenu.
-1. Utilisez Adobe Open Screen Media Framework pour créer un lecteur vidéo prenant en charge la gestion des droits numériques Primetime afin d’offrir à l’utilisateur une expérience plus conviviale.
+1. Utilisez l’Adobe Open Screen Media Framework pour créer un lecteur vidéo prenant en charge la gestion des droits numériques Primetime pour une expérience utilisateur plus attrayante.
