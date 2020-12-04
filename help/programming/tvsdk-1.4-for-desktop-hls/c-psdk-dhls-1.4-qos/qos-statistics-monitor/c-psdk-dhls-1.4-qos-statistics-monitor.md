@@ -5,12 +5,15 @@ seo-title: Statistiques sur la qualité des services
 title: Statistiques sur la qualité des services
 uuid: 5c9d09a9-0e0b-44f2-98ca-2eeb8a830ec6
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# Statistiques sur la qualité des services {#quality-of-service-statistics}
+# Statistiques sur la qualité du service {#quality-of-service-statistics}
 
 La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
 
@@ -24,7 +27,7 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
 
 Vous pouvez lire des informations sur la qualité du service (QoS) à propos des ressources téléchargées, telles que des fragments et des pistes, à partir de la classe LoadInformation.
 
-1. Mettez en oeuvre l’écouteur de événement de rappel. `onLoadInformationAvailable`
+1. Mettez en oeuvre l’écouteur de événement de rappel `onLoadInformationAvailable`.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -40,7 +43,7 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
                                     onLoadInformationAvailable);
    ```
 
-1. Lisez les données présentant un intérêt provenant du `LoadInformation` qui est transmis au rappel.
+1. Lisez les données présentant un intérêt à partir du `LoadInformation` transmis au rappel.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -52,37 +55,37 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
-      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes de plus pour télécharger l’intégralité du fragment. </p> </td> 
+      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes supplémentaires pour télécharger l’intégralité du fragment. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
       <td colname="col2"> Durée du média des fragments téléchargés en millisecondes. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> taille </span> </td> 
+      <td colname="col01"> <span class="codeph"> taille  </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
       <td colname="col2"> Taille de la ressource téléchargée en octets. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
       <td colname="col2"> L'index de la voie correspondante, s'il est connu ; sinon, 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
       <td colname="col2"> Le nom de la voie correspondante, s'il est connu ; sinon, nul. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
       <td colname="col2"> le type de la voie correspondante, s'il est connu ; sinon, nul. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type </span> </td> 
+      <td colname="col01"> <span class="codeph"> type  </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
       <td colname="col2"> Contenu téléchargé par TVSDK. L'un des éléments suivants : 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
@@ -92,7 +95,7 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
       </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, FILE est renvoyé. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url </span> </td> 
+      <td colname="col01"> <span class="codeph"> url  </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
       <td colname="col2"> URL pointant vers la ressource téléchargée. </td> 
    </tr> 
@@ -103,12 +106,12 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK et la taille/densité d’écran.
 
 1. Instanciez un lecteur multimédia.
-1. Créez un `QOSProvider` objet et joignez-le au lecteur de médias.
+1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
 
    ```
    // Create Media Player. 
@@ -118,7 +121,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
