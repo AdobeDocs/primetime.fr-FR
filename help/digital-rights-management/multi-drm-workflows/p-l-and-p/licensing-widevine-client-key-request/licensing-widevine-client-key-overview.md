@@ -6,6 +6,9 @@ title: Présentation du processus de demande de clé client
 uuid: 2f01f0ae-adbf-42fa-a908-4b5b9410a26d
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Pour lire le contenu DASH résultant de l’assemblage du contenu, le client TVS
 Pour obtenir la clé de déchiffrement du contenu, le client PSDK doit effectuer les opérations suivantes :
 
 * Saisissez la zone de message du contenu, donnez-la à la plate-forme et obtenez-la en réponse à une demande de clé.
-* Envoyez la demande de clé au serveur de licences Widevine/PlayReady approprié par le biais d’un POST HTTP.
+* Envoyez la demande de clé au serveur de licences Widevine/PlayReady approprié par l’intermédiaire d’un POST HTTP.
 * Transmettez la réponse du serveur à la plateforme qui extraira la clé de déchiffrement du contenu client de la réponse et l’utilisera pour le déchiffrement du contenu.
 
-Pour envoyer le HTTP POST pour la demande de clé, votre code doit transmettre au client PSDK l’URL du serveur de licences ainsi que toutes les données supplémentaires à joindre à la publication. Le choix de l&#39;URL et des données à transmettre dépend du prestataire Widevine/PlayReady avec lequel vous travaillez. Par exemple, si vous utilisez ExpressPlay pour fournir le service, vous transmettez l’URL du serveur de licences ExpressPlay Widevine/PlayReady appropriée et vous joignez à la demande de clé sortante le jeton ExpressPlay associé à la clé de chiffrement du contenu. Vous pouvez obtenir l’URL appropriée du serveur de licences ExpressPlay Widevine/PlayReady à partir de la documentation ExpressPlay.
+Pour envoyer le POST HTTP pour la demande de clé, votre code doit transmettre au client PSDK l’URL du serveur de licences ainsi que toute donnée supplémentaire à joindre à la publication. Le choix de l&#39;URL et des données à transmettre dépend du prestataire Widevine/PlayReady avec lequel vous travaillez. Par exemple, si vous utilisez ExpressPlay pour fournir le service, vous transmettez l’URL du serveur de licences ExpressPlay Widevine/PlayReady appropriée et vous joignez à la demande de clé sortante le jeton ExpressPlay associé à la clé de chiffrement du contenu. Vous pouvez obtenir l’URL appropriée du serveur de licences ExpressPlay Widevine/PlayReady à partir de la documentation ExpressPlay.
