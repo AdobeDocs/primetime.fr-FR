@@ -6,11 +6,14 @@ title: Enregistrer la position de la vidéo et reprendre ultérieurement
 uuid: cff1715e-c7a9-4eda-ad71-31892c3c1e78
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
 
-# Enregistrer la position de la vidéo et reprendre ultérieurement {#save-the-video-position-and-resume-later}
+# Enregistrez la position de la vidéo et reprenez ultérieurement {#save-the-video-position-and-resume-later}
 
 Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
 
@@ -24,11 +27,11 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
    Les coupures publicitaires peuvent varier d’une session à l’autre en raison de modèles publicitaires, d’un plafonnement de fréquence, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
 
-   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `getCurrentTime` renvoie 1 200 secondes, tandis qu’ `getLocalTime` à cette position renvoie 900 secondes.
+   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `getCurrentTime` renvoie 1 200 secondes, tandis que `getLocalTime` à cette position renvoie 900 secondes.
 
    >[!IMPORTANT]
    >
-   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, cela `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
+   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
 
    ```java
    // Save the user session when player activity stops 
@@ -72,15 +75,15 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
 1. Pour reprendre la vidéo à la même position :
 
-   * Pour reprendre la lecture de la vidéo à partir de la position enregistrée lors d’une session précédente, utilisez `seekToLocalTime`.
+   * Pour reprendre la lecture de la vidéo à partir de la position enregistrée lors d&#39;une session précédente, utilisez `seekToLocalTime`.
 
       >[!TIP]
       >
       >Cette méthode est appelée uniquement avec des valeurs d’heure locales. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
 
-   * Pour rechercher l’heure actuelle, utilisez `seek`.
+   * Pour rechercher l&#39;heure actuelle, utilisez `seek`.
 
-1. Lorsque votre application reçoit le événement de modification de l’ `onStatusChanged` état, recherchez l’heure locale enregistrée.
+1. Lorsque votre application reçoit le événement de modification d&#39;état `onStatusChanged`, recherchez l&#39;heure locale enregistrée.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -101,6 +104,6 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
 1. Fournissez les coupures publicitaires comme spécifié dans l’interface de stratégie publicitaire.
 1. Implémentez un sélecteur de stratégies publicitaires personnalisé en étendant le sélecteur de stratégies publicitaires par défaut.
-1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur en mettant en oeuvre `selectAdBreaksToPlay`.
+1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur en implémentant `selectAdBreaksToPlay`.
 
    Cette méthode comprend une coupure publicitaire preroll et des coupures publicitaires mid-roll avant la position horaire locale. Votre application peut décider de lire une coupure publicitaire preroll et de reprendre à l’heure locale spécifiée, de lire une coupure publicitaire mid-roll et de reprendre à l’heure locale spécifiée, ou de ne pas lire de coupures publicitaires.
