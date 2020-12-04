@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Insérer des annonces {#insert-ads}
+# Insérer des publicités {#insert-ads}
 
 L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
 
-Un *`ad break`* contient une ou plusieurs publicités qui sont lues en séquence. TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
+Un *`ad break`* contient une ou plusieurs publicités lues en séquence. TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
 
 >[!TIP]
 >
@@ -33,7 +33,7 @@ TVSDK prend en charge plusieurs cas d’utilisation pour la résolution et l’i
 
 TVSDK résout les publicités, les insère dans les emplacements définis par le serveur d’annonces et calcule la chronologie virtuelle avant les débuts de lecture. Après les débuts de lecture, aucune modification, telle que les publicités insérées ou insérées supprimées, ne peut se produire.
 
-## Résoudre et insérer des publicités en direct et linéaires {#section_A6A1BB262D084462A1D134083556B7CC}
+## Résoudre et insérer une publicité directe et linéaire {#section_A6A1BB262D084462A1D134083556B7CC}
 
 TVSDK prend en charge plusieurs cas d’utilisation pour la résolution et l’insertion de publicités en direct et linéaire.
 
@@ -47,21 +47,21 @@ TVSDK résout les publicités et les insère lorsqu’un point de repère est d�
 * # EXT-X-CUE
 * # EXT-X-CUE-OUT
 
-Ces marqueurs nécessitent les champs de métadonnées en secondes `DURATION` et l’identifiant unique du signal. Par exemple :
+Ces marqueurs nécessitent en secondes `DURATION` du champ de métadonnées et l’identifiant unique du signal. Par exemple :
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Pour plus d’informations sur d’autres indices, voir [S’abonner à des balises](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)personnalisées.
+Pour plus d&#39;informations sur d&#39;autres indices, voir [S&#39;abonner à des balises personnalisées](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
 
-## Suivi de la publicité cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
+## Suivre la publicité cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
 TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
 
 Les notifications sont utilisées pour informer votre application de l&#39;avancement d&#39;une publicité, y compris des informations sur le moment où une publicité commence et se termine.
 
-## Mise en oeuvre d’un retour anticipé de coupures publicitaires {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Mettre en oeuvre un retour de coupure publicitaire anticipée {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
 Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
 
@@ -74,7 +74,7 @@ Voici quelques exemples de retours de coupures publicitaires précoces :
 
 La possibilité de quitter une coupure publicitaire prématurée est identifiée par une balise personnalisée dans le manifeste, appelée &quot;splice-in&quot; ou &quot;indices-in&quot;. TVSDK permet à l’application de s’abonner à ces balises d’éclatement afin de fournir une opportunité d’éclatement.
 
-* Pour utiliser la `#EXT-X-CUE-IN` balise en tant qu’opportunité d’éclatement et mettre en oeuvre un retour de coupure publicitaire anticipée :
+* Pour utiliser la balise `#EXT-X-CUE-IN` en tant qu’opportunité de division et implémenter un retour de coupure publicitaire anticipée :
 
    1. Abonnez-vous à la balise .
 
@@ -82,7 +82,7 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. ajoutez le résolveur d&#39;opportunités de démarrage.
+   1. Ajoutez le résolveur d&#39;opportunités de démarrage.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -94,11 +94,11 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
 
 * Pour partager la même balise pour la division et la division :
 
-1. Si l&#39;application partage le même indice pour indiquer le signal d&#39;arrêt/d&#39;éclatement et le signal d&#39;arrivée/d&#39;éclatement, étendez `PTDefaultAdOpportunityResolver` et implémentez la `preparePlacementOpportunity` méthode.
+1. Si l&#39;application partage le même indice pour indiquer le signal de départ/de sortie et le signal d&#39;arrivée/de sortie, étendez `PTDefaultAdOpportunityResolver` et implémentez la méthode `preparePlacementOpportunity`.
 
    >[!TIP]
    >
-   >Le code suivant suppose que l’application a une implémentation pour la `isCueInOpportunity` méthode.
+   >Le code suivant suppose que l’application a une implémentation pour la méthode `isCueInOpportunity`.
 
    ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
@@ -114,7 +114,7 @@ La possibilité de quitter une coupure publicitaire prématurée est identifiée
    }
    ```
 
-1. Enregistrez le résolveur d&#39;opportunité étendu sur l&#39; `PTDefaultMediaPlayerClientFactory` instance.
+1. Enregistrez le résolveur d&#39;opportunité étendu sur l&#39;instance `PTDefaultMediaPlayerClientFactory`.
 
 ```
    // self.player is the PTMediaPlayer instance created for content and ad playback 
