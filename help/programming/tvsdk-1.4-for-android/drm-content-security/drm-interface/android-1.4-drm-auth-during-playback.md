@@ -6,6 +6,9 @@ title: Authentification DRM pendant la lecture
 uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, effectuez l’authentification pendant la lecture.
 
-Prenons l’exemple de la fonction de rotation des licences, qui consiste à chiffrer un fichier avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, utilisez `DRMHelper` des méthodes pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
+Prenons l’exemple de la fonction de rotation des licences, qui consiste à chiffrer un fichier avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, utilisez les méthodes `DRMHelper` pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
 
 >[!NOTE]
 >
@@ -34,7 +37,7 @@ Prenons l’exemple de la fonction de rotation des licences, qui consiste à chi
    };
    ```
 
-1. Utilisez le `DRMMetadata` pour vérifier si une authentification est nécessaire. Dans le cas contraire, ne rien faire ; la lecture se poursuit sans interruption.
+1. Utilisez `DRMMetadata` pour vérifier si une authentification est nécessaire. Dans le cas contraire, ne rien faire ; la lecture se poursuit sans interruption.
 1. Sinon, effectuez l’authentification DRM. Cette opération étant asynchrone et gérée dans un thread différent, elle n’a aucun impact sur l’interface utilisateur ni sur la lecture vidéo.
 1. Si l’authentification échoue, l’utilisateur ne peut pas continuer à regarder la vidéo et la lecture cesse. Sinon, la lecture se poursuit sans interruption.
 
