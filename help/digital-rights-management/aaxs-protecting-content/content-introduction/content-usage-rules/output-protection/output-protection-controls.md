@@ -29,42 +29,42 @@ Les options/niveaux d&#39;application suivants sont disponibles :
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoire</b> — Protection de la copie analogique (ACP) ou Système de gestion de la génération de copies - La protection de sortie analogique (CGMS-A) doit être activée pour lire le contenu sur un périphérique externe. Les clients d'Accès à l'Adobe doivent activer la protection de la sortie en utilisant le PVA ou le CGMS-A. Sur les périphériques qui prennent en charge les deux, les clients Adobe Access 3.0 tentent d'activer les deux. Cependant, un seul doit être activé pour lire le contenu. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Obligatoire</b>  - Protection analogique de la copie (ACP) ou Système de gestion de la génération de copies - La protection de sortie analogique (CGMS-A) doit être activée pour lire le contenu sur un périphérique externe. Les clients d'Accès à l'Adobe doivent activer la protection de la sortie en utilisant le PVA ou le CGMS-A. Sur les périphériques qui prennent en charge les deux, les clients Adobe Access 3.0 tentent d'activer les deux. Cependant, un seul doit être activé pour lire le contenu. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">PVA requis</b> — La protection de la sortie PVA est requise. La lecture n'est pas autorisée sur CGMS-A. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. Si elle est définie, un client Adobe Access 2.0 se comporte comme si l'option "Aucune lecture" était spécifiée. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">PVA requis</b>  : la protection de sortie PVA est requise. La lecture n'est pas autorisée sur CGMS-A. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. Si elle est définie, un client Adobe Access 2.0 se comporte comme si l'option "Aucune lecture" était spécifiée. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A Obligatoire</b> — CGMS-A La protection de sortie est requise. La lecture n'est pas autorisée sur ACP. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. Si elle est définie, un client Adobe Access 2.0 se comporte comme si l'option "Aucune lecture" était spécifiée. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">CGMS-A Obligatoire</b> — CGMS-A Protection de sortie requise. La lecture n'est pas autorisée sur ACP. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. Si elle est définie, un client Adobe Access 2.0 se comporte comme si l'option "Aucune lecture" était spécifiée. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser si disponible</b> : tentez d'activer la protection de sortie ACP et CGMS-A si disponible et d'autoriser la lecture si elle n'est pas disponible. Si possible, les clients d'Adobe Access 3.0 tenteront d'activer à la fois le PVA et le CGMS-A. Les clients d'Adobe Access 2.0 ne feront qu'essayer d'activer le PVA ou le CGMS-A. Par exemple, le client Adobe Access tentera d'activer le PVA ou le CGMS-A. Si la tentative réussit, l’autre option ne sera pas activée. Si la tentative échoue, une deuxième tentative est effectuée pour activer l’autre option. Même si les deux tentatives échouent, le contenu sera de toute façon lu. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser si disponible</b>  : tentez d'activer la protection de sortie ACP et CGMS-A si disponible et d'autoriser la lecture si elle n'est pas disponible. Si possible, les clients d'Adobe Access 3.0 tenteront d'activer à la fois le PVA et le CGMS-A. Les clients d'Adobe Access 2.0 ne feront qu'essayer d'activer le PVA ou le CGMS-A. Par exemple, le client Adobe Access tentera d'activer le PVA ou le CGMS-A. Si la tentative réussit, l’autre option ne sera pas activée. Si la tentative échoue, une deuxième tentative est effectuée pour activer l’autre option. Même si les deux tentatives échouent, le contenu sera de toute façon lu. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser ACP si disponible</b> : tentez d'activer la protection de sortie ACP si disponible, mais autorisez la lecture si elle n'est pas disponible. La protection n'est pas disponible sur CGMS-A. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. S'il est défini, un client Adobe Access 2.0 se comporte comme si l'option "Aucune protection" était spécifiée. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utiliser ACP si disponible</b>  : tentez d'activer la protection de sortie ACP si disponible, mais autorisez la lecture si elle n'est pas disponible. La protection n'est pas disponible sur CGMS-A. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. S'il est défini, un client Adobe Access 2.0 se comporte comme si l'option "Aucune protection" était spécifiée. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilisez CGMS-A si disponible </b>— Tentez d'activer la protection de sortie CGMS-A si disponible, mais autorisez la lecture si elle n'est pas disponible. La protection n'est pas disponible sur ACP. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. S'il est défini, un client Adobe Access 2.0 se comporte comme si l'option "Aucune protection" était spécifiée. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Utilisez CGMS-A si disponible  </b>— Tentez d'activer la protection de sortie CGMS-A si disponible, mais autorisez la lecture si elle n'est pas disponible. La protection n'est pas disponible sur ACP. Les clients Adobe Access 2.0 ne prennent pas en charge cette option. S'il est défini, un client Adobe Access 2.0 se comporte comme si l'option "Aucune protection" était spécifiée. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">- </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Aucune protection</b> : aucune activation de la protection de sortie n’est appliquée pour les sorties analogiques et numériques. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Aucune protection</b>  : aucune activation de protection de sortie n’est appliquée pour les sorties analogiques et numériques. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Aucune lecture</b> : n’autorisez pas la lecture sur un périphérique externe pour les sorties analogiques et numériques. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "><b class="+ topic/ph hi-d/b ">Aucune lecture</b>  : n’autorisez pas la lecture sur un périphérique externe pour les sorties analogiques et numériques. </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">OUI </p> </td> 
   </tr> 
