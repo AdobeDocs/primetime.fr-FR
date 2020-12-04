@@ -6,6 +6,9 @@ title: Contenu de la notification
 uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Les objets MediaPlayerNotification fournissent des informations sur les modifica
 
 Votre application peut récupérer la notification et les informations d’état. Vous pouvez également créer un système de journalisation pour les diagnostics et la validation à l’aide des informations de notification.
 
-Vous implémentez des écouteurs de événement pour capturer les événements et y répondre. De nombreux événements fournissent des notifications `MediaPlayerNotification` d’état.
+Vous implémentez des écouteurs de événement pour capturer les événements et y répondre. De nombreux événements fournissent des notifications d’état `MediaPlayerNotification`.
 
 `MediaPlayerNotification` fournit des informations relatives à l’état du lecteur.
 
-TVSDK fournit une liste chronologique des `MediaPlayerNotification` notifications. Chaque notification contient les informations suivantes :
+TVSDK fournit une liste chronologique de `MediaPlayerNotification` notifications. Chaque notification contient les informations suivantes :
 
 * Horodatage
 * Métadonnées de diagnostic comprenant les éléments suivants :
@@ -30,7 +33,7 @@ TVSDK fournit une liste chronologique des `MediaPlayerNotification` notification
    * `name`: Description lisible de la notification, telle que SEEK_ERROR
    * `metadata`: paires clé/valeur qui contient des informations pertinentes sur la notification. Par exemple, une clé nommée `URL` fournit une valeur qui est une URL liée à la notification.
 
-   * `innerNotification`: Référence à un autre `MediaPlayerNotification` objet qui a un impact direct sur cette notification.
+   * `innerNotification`: Référence à un autre  `MediaPlayerNotification` objet qui a un impact direct sur cette notification.
 
 Vous pouvez stocker ces informations localement pour une analyse ultérieure ou les envoyer à un serveur distant pour consigner et représenter graphiquement.
 
@@ -38,23 +41,23 @@ Vous pouvez stocker ces informations localement pour une analyse ultérieure ou 
 
 Vous pouvez écouter les notifications et ajouter vos propres notifications à l’historique des notifications.
 
-Le coeur du système de notification de Primetime Player est la `Notification` classe, qui représente une notification autonome.
+Le coeur du système de notification de Primetime Player est la classe `Notification`, qui représente une notification autonome.
 
-La `NotificationHistory` classe fournit un mécanisme permettant d&#39;accumuler des notifications. Il stocke un journal des objets Notification (NotificationHistoryItem) qui représente une collection de notifications.
+La classe `NotificationHistory` fournit un mécanisme permettant d&#39;accumuler des notifications. Il stocke un journal des objets Notification (NotificationHistoryItem) qui représente une collection de notifications.
 
 Pour recevoir des notifications :
 
 * Écoute des notifications
-* Ajouter notifications à l’historique des notifications
+* Ajouter des notifications à l’historique des notifications
 
 1. Prêtez attention aux changements d’état.
-1. Implémentez le `MediaPlayer.PlaybackEventListener.onStateChanged` rappel.
+1. Implémentez le rappel `MediaPlayer.PlaybackEventListener.onStateChanged`.
 1. TVSDK transmet deux paramètres au rappel :
 
-   * Le nouvel état ( `MediaPlayer.PlayerState`)
-   * Un `MediaPlayerNotification` objet
+   * Nouvel état ( `MediaPlayer.PlayerState`)
+   * Un objet `MediaPlayerNotification`
 
-## Ajouter journalisation et débogage en temps réel {#add-real-time-logging-and-debugging}
+## Ajouter la journalisation et le débogage en temps réel {#add-real-time-logging-and-debugging}
 
 Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 
@@ -78,7 +81,7 @@ Voici un exemple de récupération des notifications.
    Le serveur distant peut alors afficher les données fournies sous forme graphique en temps réel.
 1. Pour détecter la perte de événements de notification, recherchez des lacunes dans la séquence de valeurs d’index de événement.
 
-   Chaque événement de notification comporte une valeur d’index automatiquement incrémentée par la `session.NotificationHistory` classe.
+   Chaque événement de notification possède une valeur d&#39;index automatiquement incrémentée par la classe `session.NotificationHistory`.
 
 ## Balises ID3 {#id-tags}
 
@@ -95,13 +98,13 @@ Lorsque TVSDK détecte les métadonnées ID3, il émet une notification contenan
 * NOM = absent
 * ID = 0
 
-1. Implémentez un écouteur de événement pour `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l’ `MediaPlayer` objet.
+1. Implémentez un écouteur de événement pour `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l&#39;objet `MediaPlayer`.
 
    TVSDK appelle cet écouteur lorsqu’il détecte les métadonnées ID3.
 
    >[!NOTE]
    >
-   >Les indices publicitaires personnalisés utilisent le même `onTimedMetadata` événement pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir custom-tags-configure .
+   >Les indices publicitaires personnalisés utilisent le même événement `onTimedMetadata` pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir custom-tags-configure .
 
 1. Récupérez les métadonnées.
 
