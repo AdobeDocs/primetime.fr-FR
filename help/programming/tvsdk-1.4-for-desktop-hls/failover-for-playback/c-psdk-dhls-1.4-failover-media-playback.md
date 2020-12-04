@@ -6,11 +6,14 @@ title: Lecture et basculement du média
 uuid: 197a6ee0-f1ff-40ac-bd49-eafeae6167d4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
 
-# Lecture et basculement du média{#media-playback-and-failover}
+# Lecture du média et basculement{#media-playback-and-failover}
 
 Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et en téléchargeant les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture des débits haute résolution et les médias associés et poursuit le processus de téléchargement.
 
@@ -18,11 +21,11 @@ Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lectur
 
 Lorsqu’une sélection complète est absente, par exemple, lorsque le fichier M3U8 spécifié dans un fichier manifeste de niveau supérieur n’est pas téléchargé, TVSDK tente de récupérer. S’il est impossible de le récupérer, votre application détermine l’étape suivante.
 
-Si la liste de lecture associée au débit de résolution moyenne est manquante, TVSDK recherche une liste de lecture de variante à la même résolution. S’il trouve la même résolution, il début de télécharger la liste de lecture des variantes et les segments à partir de la position correspondante. Si TVSDK ne trouve pas la même liste de lecture de résolution, il tentera de passer en revue d’autres listes de lecture à débit binaire et leurs variantes. Un débit immédiatement inférieur est le premier choix, puis sa variante, et ainsi de suite. Si toutes les listes de lecture à débit inférieur et leurs variantes sont épuisées dans la tentative de trouver une liste de lecture valide, TVSDK va aller au débit supérieur et compter à partir de là. Si une liste de lecture valide est introuvable, le processus échoue et le lecteur passe à l’état ERROR.
+Si la liste de lecture associée au débit de résolution moyenne est manquante, TVSDK recherche une liste de lecture de variante à la même résolution. S’il trouve la même résolution, il début de télécharger la liste de lecture de variantes et les segments à partir de la position correspondante. Si TVSDK ne trouve pas la même liste de lecture de résolution, il tentera de passer en revue d’autres listes de lecture à débit binaire et leurs variantes. Un débit immédiatement inférieur est le premier choix, puis sa variante, et ainsi de suite. Si toutes les listes de lecture à débit inférieur et leurs variantes sont épuisées dans la tentative de trouver une liste de lecture valide, TVSDK va aller au débit supérieur et compter à partir de là. Si une liste de lecture valide est introuvable, le processus échoue et le lecteur passe à l’état ERROR.
 
-Votre application peut déterminer comment gérer cette situation. Par exemple, vous pouvez fermer l’activité du lecteur et diriger l’utilisateur vers l’activité du catalogue. Le événement d’intérêt est le `STATUS_CHANGED` événement et le rappel correspondant est la `onStatusChange` méthode. Voici le code qui surveille si le lecteur change son état interne en ERROR :
+Votre application peut déterminer comment gérer cette situation. Par exemple, vous pouvez fermer l’activité du lecteur et diriger l’utilisateur vers l’activité du catalogue. Le événement d&#39;intérêt est le événement `STATUS_CHANGED` et le rappel correspondant est la méthode `onStatusChange`. Voici le code qui surveille si le lecteur change son état interne en ERROR :
 
-Pour plus d&#39;informations, consultez le `PSDKDemo` fichier. Les écouteurs de Événement sont attachés à l’instance MediaPlayer.
+Pour plus d&#39;informations, consultez le fichier `PSDKDemo`. Les écouteurs de événement sont attachés à l’instance MediaPlayer.
 
 ```
 case MediaPlayerStatus.ERROR: 
@@ -59,9 +62,9 @@ Si un segment est manquant sur le serveur, car, par exemple, le fichier manifest
 1. Parcourez chaque débit disponible dans chaque variante disponible.
 1. Ignorez le segment et émettez un avertissement.
 
-Lorsque TVSDK ne parvient pas à obtenir un autre segment, il déclenche une notification d’ `CONTENT_ERROR` erreur. Cette notification contient une notification interne avec le `DOWNLOAD_ERROR` code de code. Si le flux présentant le problème est une autre piste audio, TVSDK génère la notification d’ `AUDIO_TRACK_ERROR` erreur.
+Lorsque TVSDK ne peut pas obtenir un autre segment, il déclenche une notification d’erreur `CONTENT_ERROR`. Cette notification contient une notification interne avec le code `DOWNLOAD_ERROR`. Si le flux présentant le problème est une autre piste audio, TVSDK génère la notification d’erreur `AUDIO_TRACK_ERROR`.
 
-Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segments continus à 5, après quoi la lecture est arrêtée et TVSDK émet une erreur `NATIVE_ERROR` avec le code 5.
+Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segment continus à 5, après quoi la lecture est arrêtée et TVSDK émet un `NATIVE_ERROR` &lt;a0/> avec le code 5.
 
 >[!NOTE]
 >
