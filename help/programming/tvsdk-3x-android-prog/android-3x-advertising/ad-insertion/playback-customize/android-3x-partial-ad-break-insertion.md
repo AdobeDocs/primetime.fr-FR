@@ -6,11 +6,14 @@ title: Insertion partielle d’une coupure publicitaire
 uuid: a81295b8-77fe-4475-a472-080ee7804d7a
 translation-type: tm+mt
 source-git-commit: fe9d7d1b2b23a70eb4e212de3d9bda47fc11d8f1
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 0%
 
 ---
 
 
-# Insertion partielle d’une coupure publicitaire {#partial-ad-break-insertion}
+# Insertion partielle de coupure publicitaire {#partial-ad-break-insertion}
 
 Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct. La fonction de coupure publicitaire partielle vous permet d’imiter une expérience TV où, si le client début un flux en direct dans un milieu, il début dans ce milieu. Il est similaire à passer à un canal de télévision et les publicités fonctionnent sans accroc.
 
@@ -21,7 +24,7 @@ Par exemple, si un utilisateur se joint au milieu d’une coupure publicitaire d
 
 Ce comportement n’est pas activé par défaut. Pour activer cette fonctionnalité dans votre application, procédez comme suit :
 
-Activez la préférence pour l’insertion partielle de coupures publicitaires. Utilisez la nouvelle méthode `setPartialAdBreakPref` de l’interface de MediaPlayer pour activer cette fonction. Utilisez `getPartialAdBreakPref` la méthode pour trouver l&#39;état actuel de cette préférence.
+Activez la préférence pour l’insertion partielle de coupures publicitaires. Utilisez la nouvelle méthode `setPartialAdBreakPref` dans l’interface de MediaPlayer pour activer cette fonction. Utilisez la méthode `getPartialAdBreakPref` pour trouver l&#39;état actuel de cette préférence.
 
 ```
     MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); 
