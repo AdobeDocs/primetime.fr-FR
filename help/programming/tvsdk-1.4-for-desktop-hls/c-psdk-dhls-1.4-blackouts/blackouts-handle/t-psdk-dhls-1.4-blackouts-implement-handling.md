@@ -6,11 +6,14 @@ title: Mise en oeuvre de la gestion des interruptions de service
 uuid: 3b4e3f53-0e27-4369-85f2-940380ed16ac
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre de la gestion des interruptions de service{#implement-blackout-handling}
+# Mise en oeuvre de la gestion du blocage{#implement-blackout-handling}
 
 TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
 
