@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Application des peines d&#39;emprisonnement (nécessite l&#39;Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
+# Application de la loi sur les jailbreak (requiert l&#39;Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-Sur les plates-formes prenant en charge la détection de jailbreak (comme les périphériques mobiles Android et iOS), l’activation de l’application de jailbreak empêche la lecture du contenu si [!DNL jailbreak/root] celui-ci a été détecté.
+Sur les plates-formes prenant en charge la détection de jailbreak (comme les périphériques mobiles Android et iOS), l’activation de l’application de jailbreak empêche la lecture du contenu si [!DNL jailbreak/root] a été détecté sur le périphérique.
 
 >[!NOTE]
 >
