@@ -6,6 +6,9 @@ title: Insertion et basculement publicitaires pour VOD
 uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
@@ -16,16 +19,16 @@ Le processus d’insertion publicitaire vidéo à la demande (VOD) comprend les 
 
 ## Phase de résolution des publicités {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
-Le navigateur TVSDK contacte un service de diffusion publicitaire, tel qu’Adobe Primetime, et tente d’obtenir le fichier de liste de lecture principal correspondant au flux vidéo de la publicité. Pendant la phase de résolution des publicités, le navigateur TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
+Le navigateur TVSDK contacte un service de diffusion publicitaire, tel que la prise de décision publicitaire Adobe Primetime, et tente d’obtenir le fichier de liste de lecture Principal qui correspond au flux vidéo de la publicité. Pendant la phase de résolution des publicités, le navigateur TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
 
 Le kit TVSDK du navigateur prend en charge les types de fournisseurs d’annonces suivants :
 
 * Fournisseur d’annonces de métadonnées
 
    Les données publicitaires sont codées dans des fichiers JSON en texte brut.
-* Fournisseur publicitaire Adobe Primetime pour la prise de décision publicitaire
+* Fournisseur d’annonces publicitaires de prise de décision Adobe Primetime
 
-   Le navigateur TVSDK envoie une requête, y compris un ensemble de paramètres de ciblage et un numéro d’identification de fichier, au serveur principal Adobe Primetime et de prise de décision. La prise de décision publicitaire d’Adobe Primetime répond par un document SMIL (langage d’intégration multimédia synchronisé) qui contient les informations publicitaires requises.
+   Le navigateur TVSDK envoie une requête, y compris un ensemble de paramètres de ciblage et un numéro d’identification des ressources, au serveur principal de prise de décision publicitaire Adobe Primetime. La prise de décision d’une publicité Adobe Primetime répond à un document SMIL (synchronized multimédia integration language) qui contient les informations requises sur la publicité.
 
    Une des situations de basculement suivantes peut se produire pendant cette phase :
 
@@ -35,7 +38,7 @@ Le kit TVSDK du navigateur prend en charge les types de fournisseurs d’annonce
       Cela peut se produire en raison, par exemple, de l’échec de l’analyse des données entrantes.
    Le navigateur TVSDK émet une notification d’avertissement concernant l’erreur et poursuit le traitement.
 
-## Phase d&#39;insertion publicitaire {#section_88A0E4FA12394717A9D85689BD11D59F}
+## Phase d&#39;insertion de la publicité {#section_88A0E4FA12394717A9D85689BD11D59F}
 
 Le navigateur TVSDK insère le contenu alternatif (publicités) dans la chronologie qui correspond au contenu principal.
 
@@ -45,7 +48,7 @@ Le basculement peut survenir au cours de cette phase avec des conflits qui peuve
 
 Le navigateur TVSDK émet une notification d’avertissement concernant l’erreur et poursuit le traitement.
 
-## Phase de lecture publicitaire {#section_7B0073BE9A744C74929263182C1243FC}
+## Phase de lecture de la publicité {#section_7B0073BE9A744C74929263182C1243FC}
 
 Le navigateur TVSDK télécharge les segments d’annonce et les rend sur l’écran du périphérique.
 
@@ -59,9 +62,9 @@ Les principales classes d&#39;erreurs suivantes peuvent se produire au cours de 
 
 Pour les trois classes d’erreur, le navigateur TVSDK a déclenché des événements dans votre application, notamment :
 
-* événements de notification déclenchés en cas de basculement.
+* Événements de notification déclenchés en cas de basculement.
 * La notification s’événement lorsque le profil est modifié en raison de l’algorithme de basculement.
-* événements de notification déclenchés lorsque toutes les options de basculement ont été prises en compte et qu&#39;aucune action supplémentaire ne peut être exécutée automatiquement.
+* Événements de notification déclenchés lorsque toutes les options de basculement ont été prises en compte et qu&#39;aucune action supplémentaire ne peut être exécutée automatiquement.
 
    Votre application doit prendre les mesures appropriées.
 
