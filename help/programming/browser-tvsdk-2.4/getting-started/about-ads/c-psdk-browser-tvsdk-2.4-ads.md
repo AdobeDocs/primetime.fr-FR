@@ -6,15 +6,18 @@ title: Publicités
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#ads-overview}
+# Aperçu {#ads-overview}
 
 Lors de la lecture du contenu, le navigateur TVSDK peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource.
 
-Vous pouvez éventuellement appeler la `prepareToPlay` fonction après réception `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Vous pouvez éventuellement appeler la fonction `prepareToPlay` après avoir reçu `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Pour plus d’informations sur les informations requises `AuditudeSettings`, voir Métadonnées [d’insertion](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md)d’annonce.
+Pour plus d’informations sur les `AuditudeSettings` requises, voir [Métadonnées d’insertion d’annonce](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
