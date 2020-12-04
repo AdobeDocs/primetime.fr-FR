@@ -6,11 +6,14 @@ title: Utilisation des cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
 
-# Utilisation des cookies {#work-with-cookies}
+# Utilisation de cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
@@ -27,7 +30,7 @@ Voici un exemple de demande au serveur clé avec une certaine authentification :
 
 Pour utiliser des cookies :
 
-1. Créez un cookie `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
+1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
 
    Par exemple :
 
@@ -45,9 +48,9 @@ Pour utiliser des cookies :
    >
    >Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
-   TVSDK la requête `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
+   TVSDK requête ce `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
 
-   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas `networkConfiguration.setCookieHeaders` l’API car la mise à jour aura lieu dans la banque de cookies JAVA.
+   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas l’API `networkConfiguration.setCookieHeaders` car la mise à jour aura lieu dans la banque de cookies JAVA.
 
    `networkConfiguration.setCookieHeaders` L’API définit les cookies sur le CookieStore C++ de TVSDK.
 
