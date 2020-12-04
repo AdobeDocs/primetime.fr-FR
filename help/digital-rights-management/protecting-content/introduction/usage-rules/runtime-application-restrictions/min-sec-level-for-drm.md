@@ -6,11 +6,14 @@ title: Niveau de sécurité minimal pour la gestion des droits numériques et le
 uuid: 0df2a285-309d-4f49-912c-7a0562637424
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
 
-# Niveau de sécurité minimal pour la gestion des droits numériques et les runtimes{#minimum-security-level-for-drm-and-runtimes}
+# Niveau de sécurité minimal pour DRM et runtimes{#minimum-security-level-for-drm-and-runtimes}
 
 Le niveau de sécurité minimum spécifie le niveau de sécurité requis pour accéder au contenu. Vous spécifiez des niveaux de sécurité individuels pour chaque composant.
 
