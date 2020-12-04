@@ -6,11 +6,14 @@ title: Exemples de flux HLS chiffrés AES
 uuid: 32c1f87b-eb81-4e1c-92ea-ec37260a7ecb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
 
-# Exemples de flux HLS chiffrés AES{#sample-aes-encrypted-hls-streams}
+# Exemple de flux HLS chiffrés AES{#sample-aes-encrypted-hls-streams}
 
 Bien que la méthode de chiffrement AES-128 chiffre l’ensemble du conteneur de flux de transport (TS), y compris les en-têtes, le chiffrement SAMPLE-AES ne chiffre que l’audio et une partie des données vidéo.
 
