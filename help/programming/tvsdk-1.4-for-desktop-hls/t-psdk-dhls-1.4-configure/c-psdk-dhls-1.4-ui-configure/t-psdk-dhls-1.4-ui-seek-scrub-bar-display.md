@@ -6,11 +6,14 @@ title: Affichage d’une barre de défilement de recherche avec la position de l
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
 
-# Affichage d’une barre de défilement de recherche avec la position de lecture actuelle{#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Afficher une barre de défilement de recherche avec la position de lecture actuelle{#display-a-seek-scrub-bar-with-the-current-playback-position}
 
 TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une playlist de fenêtre coulissante, à la fois dans la vidéo à la demande (VOD) et les flux en direct.
 
@@ -31,7 +34,7 @@ TVSDK prend en charge la recherche à une position spécifique (temps) où le fl
    Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING.
 
 1. Prêtez attention au événement approprié pour savoir quand l’utilisateur effectue un balayage.
-1. Transmettez la position de recherche demandée (millisecondes) à la `MediaPlayer.seek` méthode.
+1. Transmettez la position de recherche demandée (millisecondes) à la méthode `MediaPlayer.seek`.
 
    ```
    function seek(position:Number):void;
@@ -43,10 +46,10 @@ TVSDK prend en charge la recherche à une position spécifique (temps) où le fl
    >
    >Cela déplace la tête de lecture à une nouvelle position dans le flux, mais la position finale calculée peut différer de la position de recherche spécifiée.
 
-1. Attendez que TVSDK distribue le `SeekEvent.SEEK_END` événement.
+1. Attendez que TVSDK distribue le événement `SeekEvent.SEEK_END`.
 1. Récupérez la position de lecture modifiée finale à l’aide de événement.currentPosition.
 
-       Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Diverses règles pourraient s&#39;appliquer, notamment :
+       Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Diverses règles peuvent s&#39;appliquer, notamment :
    
    * Le comportement de lecture est affecté si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires.
    * Si vous effectuez une recherche près d’une limite de segment, la position de recherche est ajustée au début du segment.
