@@ -1,18 +1,21 @@
 ---
-description: Dans Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
-seo-description: Dans Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
+description: En Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
+seo-description: En Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
 seo-title: Informations de ciblage
 title: Informations de ciblage
 uuid: 72114bef-36a1-4f2d-92e8-59f4885d70d2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
 # Informations de ciblage{#targeting-information}
 
-Dans Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
+En Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
 
 Pour transmettre ces paires clé-valeur au navigateur TVSDK :
 
