@@ -6,24 +6,27 @@ title: Utilisation de DRMContentData pour précharger des licences
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
 # Utilisation de DRMContentData pour précharger des licences{#using-drmcontentdata-to-pre-load-licenses}
 
-Les étapes suivantes décrivent le processus de pré-chargement de la licence d’un fichier multimédia protégé à l’aide d’un `DRMContentData` objet.
+Les étapes suivantes décrivent le processus de pré-chargement de la licence d&#39;un fichier multimédia protégé à l&#39;aide d&#39;un objet `DRMContentData`.
 
 1. Obtenez les métadonnées DRM binaires pour le contenu assemblé.
 
-   Si vous utilisez Primetime DRM Java Reference Implementations Packager, ce fichier de métadonnées est généré automatiquement avec une [!DNL .metadata] extension. Vous pouvez, par exemple, télécharger ces métadonnées à l’aide de la `URLLoader` classe. Si vous utilisez du contenu HLS ou HDS, les métadonnées sont référencées dans le fichier manifeste de contenu ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluses *dans* le fichier manifeste sous la forme d’une chaîne codée en Base64 (qui doit être décodée en Base64 avant consommation).
-1. Créez un `DRMContentData` objet en transmettant les métadonnées à la fonction constructeur :
+   Si vous utilisez Primetime DRM Java Reference Implementations Packager, ce fichier de métadonnées est généré automatiquement avec une extension [!DNL .metadata]. Vous pouvez, par exemple, télécharger ces métadonnées à l’aide de la classe `URLLoader`. Si vous utilisez du contenu HLS ou HDS, les métadonnées sont référencées dans le fichier manifeste de contenu ( [!DNL .m3u8] ou [!DNL .f4m]) ou incluses *dans* le fichier manifeste sous la forme d&#39;une chaîne codée en Base64 (qui doit être décodée en Base64 avant consommation).
+1. Créez un objet `DRMContentData`, en transmettant les métadonnées à la fonction constructeur :
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. Le reste des étapes est identique au processus décrit dans la section Détails *du processus de protection du* contenu.
+1. Le reste des étapes est identique au processus décrit dans *Détails du processus de protection du contenu*.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
