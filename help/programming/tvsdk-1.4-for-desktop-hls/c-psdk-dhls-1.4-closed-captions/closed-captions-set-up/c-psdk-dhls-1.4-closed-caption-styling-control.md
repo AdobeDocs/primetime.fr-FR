@@ -6,6 +6,9 @@ title: Contrôler le style de sous-titrage
 uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
 source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+workflow-type: tm+mt
+source-wordcount: '594'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
 
 Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe ClosedCaptionStyles. Cela définit le style de toutes les sous-titres fermés qui sont affichés par votre lecteur.
 
-Cette classe encapsule les informations de style de sous-titrage, telles que le type de police, la taille, la couleur et l’opacité de l’arrière-plan. Une classe d’assistance associée `ClosedCaptionStylesBuilder`facilite l’utilisation des paramètres de style de sous-titrage.
+Cette classe encapsule les informations de style de sous-titrage, telles que le type de police, la taille, la couleur et l’opacité de l’arrière-plan. Une classe d’assistance associée, `ClosedCaptionStylesBuilder`, facilite l’utilisation des paramètres de style de sous-titrage.
 
-## Définition des styles de sous-titrage {#section_DAE84659D1964DB1B518F91B59AF29D9}
+## Définir les styles de sous-titrage {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
 Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes TVSDK.
 
-1. Attendez que MediaPlayer ait au moins l’état PRÉPARÉ (voir [Attendre un état](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)valide).
+1. Attendez que MediaPlayer ait au moins l’état PRÉPARÉ (voir [Attendre un état valide](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Pour modifier les paramètres de style, effectuez l’une des opérations suivantes :
 
-   * Utilisez la classe `ClosedCaptionStylesBuilder` helper (fonctionne en `ClosedCaptionStyles` coulisses).
-   * Utilisez la `ClosedCaptionStyles` classe directement.
+   * Utilisez la classe d&#39;assistance `ClosedCaptionStylesBuilder` (fonctionne sur `ClosedCaptionStyles` en arrière-plan).
+   * Utilisez directement la classe `ClosedCaptionStyles`.
 
 >[!NOTE]
 >
@@ -32,7 +35,7 @@ Vous pouvez mettre en forme le texte de sous-titrage à l’aide des méthodes T
 
 ## Options de style de sous-titrage {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la `ClosedCaptionStyles` classe. Cela définit le style de toutes les sous-titres fermés qui sont affichés par votre lecteur.
+Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe `ClosedCaptionStyles`. Cela définit le style de toutes les sous-titres fermés qui sont affichés par votre lecteur.
 
 ```
 public function TextFormat( 
@@ -50,7 +53,7 @@ public function TextFormat(
 
 >[!TIP]
 >
->Dans les options qui définissent les valeurs par défaut (par exemple `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
+>Dans les options qui définissent les valeurs par défaut (par exemple, `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -62,7 +65,7 @@ public function TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Police </td> 
-   <td colname="2"> <p>Type de police. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> tableau ClosedCaptionStyles.FONT </span> et représente, par exemple, un espacement monochrome avec ou sans sérifs. 
+   <td colname="2"> <p>Type de police. </p> <p>Ne peut être définie que sur une valeur définie par le tableau <span class="codeph"> ClosedCaptionStyles.FONT </span> et représente, par exemple, un espacement monoespace avec ou sans sérifs. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -80,15 +83,15 @@ public function TextFormat(
    <td colname="1"> Taille </td> 
    <td colname="2"> <p>La taille de la légende. </p> <p> Peut uniquement être définie sur une valeur définie par le <span class="codeph"> tableau ClosedCaptionStyles.FONT_SIZE </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MOYEN </span> - Taille standard </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRAND </span> - Environ 30 % plus grand que moyen </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PETITE </span> - Environ 30 % inférieure à moyenne </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> DEFAULT </span> - Taille par défaut de la légende ; identique à medium </li> 
-     </ul> </p> <p>Conseil :  Vous pouvez modifier la taille de police des légendes WebVTT en modifiant le paramètre de taille de la <span class="codeph"> fonction de définition </span> DefaultMediaPlayer.ccStyles. </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MOYEN  </span> - Taille standard </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRAND  </span> - Environ 30 % plus grand que moyen </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PETITE  </span> - Environ 30 % inférieure à moyenne </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PAR DÉFAUT  </span> - Taille par défaut de la légende ; identique à medium </li> 
+     </ul> </p> <p>Conseil :  Vous pouvez modifier la taille de police des légendes WebVTT en modifiant le paramètre de taille pour la fonction <span class="codeph"> DefaultMediaPlayer.ccStyles setter </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Bordure de la police </td> 
-   <td colname="2"> <p>Effet utilisé pour le bord de la police, par exemple relevé ou aucun. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> tableau </span> ClosedCaptionStyles.FONT_EDGE. 
+   <td colname="2"> <p>Effet utilisé pour le bord de la police, par exemple relevé ou aucun. </p> <p>Peut uniquement être définie sur une valeur définie par le tableau <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +106,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Couleur de police </td> 
-   <td colname="2"> <p>Couleur de la police. </p> <p>Peut uniquement être définie sur une valeur définie par le <span class="codeph"> tableau ClosedCaptionStyles.COLOR </span> . 
+   <td colname="2"> <p>Couleur de la police. </p> <p>Peut uniquement être définie sur une valeur définie par le tableau <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -145,15 +148,15 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité des polices </td> 
-   <td colname="2"> <p>Opacité du texte. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour la police est 100. </p> </td> 
+   <td colname="2"> <p>Opacité du texte. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY  </span> pour la police est 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité du fond </td> 
-   <td colname="2"> <p>Opacité de la cellule de caractère d’arrière-plan. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour l'arrière-plan est 100. </p> </td> 
+   <td colname="2"> <p>Opacité de la cellule de caractère d’arrière-plan. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY  </span> pour l'arrière-plan est 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité du remplissage </td> 
-   <td colname="2"> <p>Opacité de l’arrière-plan de la fenêtre de sous-titrage. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour le remplissage est égal à 0. </p> </td> 
+   <td colname="2"> <p>Opacité de l’arrière-plan de la fenêtre de sous-titrage. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY  </span> pour le remplissage est égal à 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -181,7 +184,7 @@ private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
 } 
 ```
 
-## Exemple 2 : Spécification des valeurs de format dans les paramètres {#section_147036D7C31C4010A5A7DF49997014A9}
+## Exemple 2 : Spécifier les valeurs de format dans les paramètres {#section_147036D7C31C4010A5A7DF49997014A9}
 
 ```
 /** 
