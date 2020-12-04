@@ -6,6 +6,9 @@ title: Optimisation de la redirection HTTP 302
 uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
@@ -18,14 +21,14 @@ Si une requête de manifeste principale est redirigée et que l’optimisation d
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité est uniquement prise en charge dans les navigateurs certifiés qui prennent en charge la `responseURL` propriété dans l’ `XMLHttpRequest` objet.
+>Cette fonctionnalité est uniquement prise en charge dans les navigateurs certifiés qui prennent en charge la propriété `responseURL` dans l&#39;objet `XMLHttpRequest`.
 
-Pour la reprise Flash, tenez compte des informations suivantes :
+Pour les Flashs de secours, tenez compte des informations suivantes :
 
 * Les utilisateurs finaux doivent avoir installé Adobe Flash Player version 23 ou ultérieure.
 * Si l’intégrité du flux est désactivée, la redirection 302 est prise en charge uniquement sur les navigateurs certifiés.
 
-## Désactivation de l’optimisation de la redirection 302 {#disabling-redirect-optimization}
+## Désactivation de l&#39;optimisation de la redirection 302 {#disabling-redirect-optimization}
 
 Vous pouvez utiliser la propriété useRedirectUrl pour activer la redirection 302 (true) ou la désactivation (false).
 
