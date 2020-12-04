@@ -6,6 +6,9 @@ title: Bannières publicitaires d’accompagnement
 uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
@@ -35,8 +38,8 @@ Le contenu d’un AdBannerAsset décrit une bannière connexe.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Le `AdPlaybackEvent.AD_STARTED` événement renvoie une `Ad` instance contenant une `companionAssets` propriété ( `Vector.<AdAsset>`).
-Chacune `AdAsset` fournit des informations sur l’affichage de la ressource.
+Le événement `AdPlaybackEvent.AD_STARTED` renvoie une instance `Ad` contenant une propriété `companionAssets` ( `Vector.<AdAsset>`).
+Chaque `AdAsset` fournit des informations sur l&#39;affichage de la ressource.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -64,11 +67,11 @@ Chacune `AdAsset` fournit des informations sur l’affichage de la ressource.
   </tr> 
   <tr> 
    <td colname="col1"> données de bannière </td> 
-   <td colname="col2"> Données du type spécifié par <span class="codeph"> resourceType</span> pour cette bannière complémentaire. </td> 
+   <td colname="col2"> Données du type spécifié par <span class="codeph"> resourceType</span> pour cette bannière d'accompagnement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> URL statique </td> 
-   <td colname="col2"> <p>Parfois, la bannière associée comporte également un staticURL qui est une URL directe vers l’image ou vers un <span class="filepath"> .swf</span> (bannière Flash). </p> <p>Si vous ne souhaitez pas utiliser de code html ou iframe, vous pouvez utiliser une URL directe vers une image ou un fichier swf pour afficher la bannière dans la scène Flash à la place. Dans ce cas, vous pouvez utiliser staticURL pour afficher la bannière. </p> <p>Important :  Vous devez vérifier si l’URL statique est une chaîne valide, car cette propriété n’est pas toujours disponible. </p> </td> 
+   <td colname="col2"> <p>Parfois, la bannière associée comporte également un staticURL qui est une URL directe vers l’image ou vers une <span class="filepath"> .swf</span> (bannière Flash). </p> <p>Si vous ne souhaitez pas utiliser de code html ou iframe, vous pouvez utiliser une URL directe vers une image ou un fichier swf pour afficher la bannière sur la scène du Flash. Dans ce cas, vous pouvez utiliser staticURL pour afficher la bannière. </p> <p>Important :  Vous devez vérifier si l’URL statique est une chaîne valide, car cette propriété n’est pas toujours disponible. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -77,17 +80,17 @@ Chacune `AdAsset` fournit des informations sur l’affichage de la ressource.
 
 Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
 
-TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement de `AdPlaybackEvent.AD_STARTED` événement.
+TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement de événement `AdPlaybackEvent.AD_STARTED`.
 
 Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
 
 * Un extrait de code HTML
 * URL d’une page iFrame
-* URL d’une image statique ou d’un fichier SWF Adobe Flash
+* URL d’une image statique ou d’un fichier SWF de Flash d’Adobe
 
 Pour chaque publicité connexe, TVSDK indique les types disponibles pour votre application.
 
-Ajouter un écouteur pour le `AdPlaybackEvent.AD_STARTED` événement qui effectue les opérations suivantes :
+Ajoutez un écouteur pour le événement `AdPlaybackEvent.AD_STARTED` qui effectue les opérations suivantes :
 
 1. Efface les publicités existantes dans l’instance de bannière.
 
@@ -95,17 +98,17 @@ Ajouter un écouteur pour le `AdPlaybackEvent.AD_STARTED` événement qui effect
 
 1. Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
 
-   Chaque instance de bannière (une `AdBannerAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
+   Chaque instance de bannière ( `AdBannerAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
 
 1. Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
 
    Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire standard DFP (DoubleClick for Publishers) dans l’instance de bannière appropriée.
 
-1. Envoie les informations de la bannière à une fonction sur votre page, en général du code JavaScript, à l’aide `ExternalInterface`de laquelle les bannières sont affichées à l’emplacement approprié.
+1. Envoie les informations de la bannière à une fonction sur votre page, en général du code JavaScript, à l’aide de `ExternalInterface`, qui affiche les bannières à l’emplacement approprié.
 
-   Il s’agit généralement d’un `div`et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
+   Il s&#39;agit généralement d&#39;un `div` et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
 
-   Ajouter l’écouteur de événement :
+   Ajoutez l’écouteur de événement :
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
