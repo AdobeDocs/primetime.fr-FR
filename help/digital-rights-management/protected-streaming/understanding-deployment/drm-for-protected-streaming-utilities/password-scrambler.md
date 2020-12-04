@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Défileur de mots de passe {#password-scrambler}
+# Défileur de mot de passe {#password-scrambler}
 
 L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur Adobe Primetime DRM Server pour les fichiers de configuration de diffusion en flux continu protégé.
 
