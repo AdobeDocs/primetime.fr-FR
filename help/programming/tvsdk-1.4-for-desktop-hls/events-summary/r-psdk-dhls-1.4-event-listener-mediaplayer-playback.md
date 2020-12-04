@@ -1,20 +1,23 @@
 ---
 description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements envoyés par TVSDK.
 seo-description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements envoyés par TVSDK.
-seo-title: événements de lecture
-title: événements de lecture
+seo-title: Événements de lecture
+title: Événements de lecture
 uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
 
-# événements de lecture {#playback-events}
+# Événements de lecture {#playback-events}
 
 Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements envoyés par TVSDK.
 
-TVSDK distribue des événements de lecture lorsque des opérations de lecture multimédia se produisent, par exemple lorsqu’une vidéo commence à se lire. Pour être averti de tous les événements liés à la lecture, enregistrez les écouteurs avec l’ `MediaPlayer` objet pour les événements suivants.
+TVSDK distribue des événements de lecture lorsque des opérations de lecture multimédia se produisent, par exemple lorsqu’une vidéo commence à se lire. Pour être averti de tous les événements liés à la lecture, enregistrez les écouteurs avec l’objet `MediaPlayer` pour les événements suivants.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -58,7 +61,7 @@ TVSDK distribue des événements de lecture lorsque des opérations de lecture m
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">Événement MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_CREATED" format="html" scope="external"> ITEM_CREATED</a> </td> 
-   <td colname="2">Un <span class="codeph"> MediaPlayerItem</span> a été créé. </td> 
+   <td colname="2">Un élément <span class="codeph"> MediaPlayerItem</span> a été créé. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">Événement MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#ITEM_UPDATED" format="html" scope="external"> ITEM_UPDATED</a> </td> 
@@ -74,7 +77,7 @@ TVSDK distribue des événements de lecture lorsque des opérations de lecture m
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Événement MediaPlayerItem.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Une nouvelle piste de sous-titrage fermée a été détectée dans le flux média et la collection <span class="codeph"> closeCaptionsTracks</span> a été mise à jour. </td> 
+   <td colname="2">Une nouvelle piste de sous-titrage a été détectée dans le flux média et la collection <span class="codeph"> ClotionsTracks</span> a été mise à jour. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Manifeste et chronologie</b> </td> 
