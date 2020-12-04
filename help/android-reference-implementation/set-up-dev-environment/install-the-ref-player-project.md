@@ -6,11 +6,14 @@ title: Création de l’implémentation de référence Primetime
 uuid: ab12660a-1563-49a4-82d9-1ab13f8a92be
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '236'
+ht-degree: 1%
 
 ---
 
 
-# Création de l’implémentation de référence Primetime {#build-the-primetime-reference-implementation}
+# Créez l’implémentation de référence Primetime {#build-the-primetime-reference-implementation}
 
 La référence Primetime de TVSDK est une application Android conçue autour des structures TVSDK et AVE.
 
@@ -21,7 +24,7 @@ Pour configurer et générer le projet de référence Primetime dans Eclipse :
 1. Sélectionnez **[!UICONTROL File]** > **[!UICONTROL Import]**.
 1. Sélectionnez **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**.
 1. Cliquez sur **[!UICONTROL Next]**.
-1. Utilisez le **[!UICONTROL Browse]** bouton pour remplir le **[!UICONTROL Root Directory]** champ avec le répertoire sous [!DNL samples/PrimetimeReference/src] lequel vous avez décompressé le fichier compressé Android TVSDK.
+1. Utilisez le bouton **[!UICONTROL Browse]** pour remplir le champ **[!UICONTROL Root Directory]** avec le répertoire sous [!DNL samples/PrimetimeReference/src] dans lequel vous avez décompressé le fichier compressé Android TVSDK.
 1. Sélectionnez les projets suivants à importer : **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**.
 1. Cliquez sur **[!UICONTROL Finish]**.
 1. Sélectionnez **[!UICONTROL Project]** > **[!UICONTROL Build Project]** pour créer le projet.
@@ -33,8 +36,8 @@ Pour configurer et générer le projet de référence Primetime dans Eclipse :
    1. Cliquez sur **[!UICONTROL Finish]**.
 
       Le projet de tests est dépendant du projet CatalogActivity. Vous devez donc associer le projet de tests au projet CatalogActivity.
-   1. Cliquez avec le bouton droit **[!UICONTROL tests]** de la souris, puis choisissez **[!UICONTROL Properties]**.
-   1. Sélectionnez l’ **[!UICONTROL Projects]** onglet sous Chemin de version Java.
+   1. Cliquez avec le bouton droit de la souris sur **[!UICONTROL tests]** et choisissez **[!UICONTROL Properties]**.
+   1. Sélectionnez l’onglet **[!UICONTROL Projects]** sous Chemin de version Java.
    1. Cliquez sur **[!UICONTROL Add...]**
    1. Sélectionnez CatalogActivity.
    1. Cliquez sur **[!UICONTROL OK]** pour ajouter le projet.
