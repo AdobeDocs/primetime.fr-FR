@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur de vidéo d’Adobe (AVE).
 
-Votre application de lecteur peut effectuer le suivi des avertissements de lecture et des erreurs générés par AVE, tels que les événements de basculement ou de panne réseau, qui n’interrompent pas la lecture et ne nécessitent pas nécessairement d’action de votre application. Bien que certaines erreurs AVE soient traitées par TVSDK, `NotificationEvent` sert de mécanisme général de transmission à votre couche d&#39;application pour les avertissements AVE. Après avoir reçu des avertissements AVE, vous pouvez choisir d’effectuer certaines actions, telles que l’arrêt proactif de la lecture, l’activation d’un plan d’urgence, la consignation des messages, etc.
+Votre application de lecteur peut effectuer le suivi des avertissements de lecture et des erreurs générés par AVE, tels que les événements de basculement ou de panne réseau, qui n’interrompent pas la lecture et ne nécessitent pas nécessairement d’action de votre application. Bien que certaines erreurs AVE soient traitées par TVSDK, `NotificationEvent` sert de mécanisme général de transmission à la couche d&#39;application pour les avertissements AVE. Après avoir reçu des avertissements AVE, vous pouvez choisir d’effectuer certaines actions, telles que l’arrêt proactif de la lecture, l’activation d’un plan d’urgence, la consignation des messages, etc.
 
 Utilisez les éléments d’API suivants pour effectuer le suivi des avertissements AVE dans votre lecteur :
 
@@ -79,7 +79,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-ajoutez un écouteur de événement à votre lecteur pour intercepter les avertissements AVE.
+Ajoutez un écouteur de événement à votre lecteur pour intercepter les avertissements AVE.
 
 Par exemple :
 
@@ -102,7 +102,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Voici un exemple d’avertissements AVE qui ont été suivis à l’aide de `NotificationEvent`:
+Voici un exemple d’avertissements AVE qui ont été suivis à l’aide de `NotificationEvent` :
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
