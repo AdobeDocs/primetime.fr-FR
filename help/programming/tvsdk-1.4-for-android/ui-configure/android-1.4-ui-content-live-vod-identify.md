@@ -6,6 +6,9 @@ title: Déterminer si le contenu est actif ou VOD
 uuid: cd71b8d3-259a-48f8-a6ad-02b57da146a7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 Dans certains cas, vous devez savoir si le contenu multimédia est actif ou VOD.
 
 1. Assurez-vous que le lecteur est à au moins l’état PRÉPARÉ.
-1. Déterminez si le `MediaPlayerItem` contenu est actif (true) ou VOD (false).
+1. Déterminez si le contenu `MediaPlayerItem` est actif (true) ou VOD (false).
 
    ```java
    boolean isLive();
