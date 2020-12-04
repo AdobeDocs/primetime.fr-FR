@@ -6,6 +6,9 @@ title: Classes du lecteur multimédia
 uuid: 705c71b6-4e5e-46b5-a59d-13df977b04f2
 translation-type: tm+mt
 source-git-commit: b13f2d3f083a6ca333a4edba1c8d7261f7d448ad
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
