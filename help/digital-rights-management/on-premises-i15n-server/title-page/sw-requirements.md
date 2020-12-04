@@ -6,6 +6,9 @@ title: Configuration logicielle requise
 uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Le package Adobe Primetime DRM On Premises Individualization Server contient les
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe d&#39;identification du serveur
-* [!DNL ROOT] - contient un [!DNL crossdomain.xml] fichier
+* [!DNL ROOT] - contient un  [!DNL crossdomain.xml] fichier
 
 * Fichiers cache ECI - Prétéléchargés
 * [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d&#39;un serveur de licences pour la prise en charge des individualisations sur site
@@ -44,8 +47,8 @@ Le package Adobe Primetime DRM On Premises Individualization Server contient les
 
 Pour utiliser le serveur d’individualisation sur site, vous devez d’abord obtenir deux informations d’identification numériques (certificats) :
 
-* *Informations d’identification* de transport d’individualisation - émises par Adobe
-* *Informations d&#39;identification* d&#39;autorité de certification d&#39;individualisation - émises par Symantec (VeriSign)
+* *Informations d&#39;identification*  de transport d&#39;individualisation - émises par l&#39;Adobe
+* *Informations d&#39;identification*  d&#39;autorité de certification d&#39;individualisation - émises par Symantec (VeriSign)
 
 Pour obtenir ces certificats, envoyez une demande via un ticket Zendesk à : [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
