@@ -6,11 +6,14 @@ title: Construire une barre de contrôle améliorée pour le magnétoscope numé
 uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Construire une barre de contrôle améliorée pour le magnétoscope numérique{#construct-a-control-bar-enhanced-for-dvr}
+# Construire une barre de contrôle améliorée pour DVR{#construct-a-control-bar-enhanced-for-dvr}
 
 Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du DVR pour la diffusion VOD et en direct. Le support DVR inclut le concept d&#39;une fenêtre pouvant être recherchée et le point de vie du client.
 
@@ -23,6 +26,6 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
 
 Pour une barre de contrôle :
 
-1. Ajouter une incrustation sur la barre de contrôle qui représente la plage de lecture.
+1. Ajoutez une incrustation sur la barre de contrôle qui représente la plage de lecture.
 
 1. Lorsque l’utilisateur début effectuer une recherche, vérifiez si la position de recherche souhaitée se trouve dans la plage recherchée.
