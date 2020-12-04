@@ -6,6 +6,9 @@ title: Présentation du produit, audience et ce guide
 uuid: 638bafbe-e518-4891-b792-29f765c3c0d7
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Ce guide explique comment développer des applications de lecteurs vidéo en uti
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Pour une liste des fonctionnalités prises en charge par TVSDK, voir Fonctionnalités [de TVSDK](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md)Primetime.
+* Pour une liste des fonctionnalités prises en charge par TVSDK, voir [Fonctionnalités de TVSDK Primetime](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
 * Pour connaître la configuration matérielle et logicielle requise pour l’utilisation de TVSDK, voir [Exigences](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
-* Pour obtenir une liste des API disponibles, voir API [Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/)TVSDK.
+* Pour une liste des API disponibles, voir [API Android TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
 ## Présentation du produit {#section_9664959F25C948878F2F7EF3D360CA95}
 
@@ -28,7 +31,7 @@ TVSDK comprend des descriptions d’API et des exemples de code pour vous aider 
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de Java. Vous mettez en oeuvre l’interface utilisateur de votre lecteur vidéo en Java et incorporez les fonctionnalités TVSDK dont vous avez besoin.
 
-## A propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
+## À propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
 Ce guide fournit des informations qui vous permettent d’incorporer des fonctionnalités TVSDK dans un lecteur vidéo à l’aide de Java sur les périphériques Android.
 
@@ -36,6 +39,6 @@ Ce guide fournit des informations qui vous permettent d’incorporer des fonctio
 
 >[!TIP]
 >
->Le préfixe d’espace de nommage de l’API TVSDK [!DNL com.adobe.mediacore] est souvent omis pour des raisons de concision.
+>Le préfixe d’espace de nommage d’API TVSDK [!DNL com.adobe.mediacore] est souvent omis pour des raisons de concision.
 >
 >De nombreux éléments d’API sont référencés sans leur indicateur de classe parent si le contexte est clair.
