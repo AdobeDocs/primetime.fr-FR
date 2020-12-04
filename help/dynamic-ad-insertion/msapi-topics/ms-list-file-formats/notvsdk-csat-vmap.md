@@ -6,6 +6,9 @@ title: Format VMAP pour les URL de suivi
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Si le client demande des informations de suivi, le serveur de manifeste renvoie 
 
 ## Format VMAP unique {#vmap}
 
-Le fichier VMAP que le serveur de manifeste envoie si `pttrackingversion=vmap` possède le format de l&#39;exemple suivant, qui provient d&#39;un bloc VMAP type. Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier VMAP.
+Le fichier VMAP que le serveur de manifeste envoie si `pttrackingversion=vmap` a le format de l&#39;exemple suivant, qui provient d&#39;un bloc VMAP type. Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
