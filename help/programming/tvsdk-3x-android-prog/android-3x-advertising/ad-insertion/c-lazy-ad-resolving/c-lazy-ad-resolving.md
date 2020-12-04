@@ -14,14 +14,14 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#just-in-time-ad-resolving-overview}
+# Aperçu {#just-in-time-ad-resolving-overview}
 
 La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Lors du chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
 
 * Processus de base de résolution et de chargement des publicités :
 
    1. TVSDK télécharge un manifeste (playlist) et *résout* toutes les publicités.
-   1. TVSDK *charge* toutes les publicités et les place sur la chronologie.
+   1. TVSDK *charge* toutes les publicités et les place dans la chronologie.
    1. TVSDK déplace le lecteur dans l’état PRÉPARÉ et la lecture du contenu commence.
 
    Le lecteur utilise les URL du manifeste pour obtenir le contenu de la publicité (éléments créatifs), s’assure que le contenu de la publicité est dans un format lisible par TVSDK et TVSDK place les publicités sur la chronologie. Ce processus de base de résolution et de chargement des publicités peut provoquer un délai inacceptable pour un utilisateur attendant de lire son contenu, en particulier si le manifeste contient plusieurs URL de publicité.
@@ -57,7 +57,7 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
 >* Avec la résolution des publicités différées, s’il existe plusieurs coupures publicitaires en même temps (VMAP), elles seront résolues en même temps.
 >* Il n’est pas recommandé de réduire la valeur de *setDelayAdLoadingTolerance() *en dessous de la valeur par défaut (5 secondes). Ce faisant, le lecteur pourrait &quot;mettre en mémoire tampon&quot; inutilement.
 >* La résolution des publicités différées n’a aucune incidence sur les publicités preroll.
->* La résolution des publicités différées est actuellement prise en charge avec le module externe Auditude. Il est recommandé de ne pas définir ** setDelayAdLoadinging sur true si vous utilisez un résolveur personnalisé.
+>* La résolution des publicités différées est actuellement prise en charge avec le module externe Auditude. Il est recommandé de ne pas définir *setDelayAdLoading* sur true si vous utilisez un résolveur personnalisé.
 
 >
 
