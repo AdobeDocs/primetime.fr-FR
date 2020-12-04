@@ -6,11 +6,14 @@ title: Résolveurs d’annonces
 uuid: 705df232-4adc-4f3a-b4aa-dafbd2b8fe4c
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '8'
+ht-degree: 0%
 
 ---
 
 
-# Résolveurs d’annonces {#ad-resolvers}
+# Résolveurs d&#39;annonces {#ad-resolvers}
 
 ```
 if (resource.metadata != null) { 
