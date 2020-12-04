@@ -6,6 +6,9 @@ title: Prise en charge des légendes WebVTT
 uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Le processus des flux de contenu VOD est le suivant :
 
 >[!NOTE]
 >
->Si un segment de sous-titrage WebVTT se trouve dans une publicité preroll mid-roll, le lecteur voit cette légende se lire avant et après cette coupure publicitaire mid-roll. Par exemple, dans un segment de sous-titrage de 10 secondes avec une publicité à mi-parcours de 30 secondes à la marque de 5 secondes, le lecteur voit ce segment de sous-titrage pendant 5 secondes avant la coupure publicitaire à mi-parcours et pendant 5 secondes après la coupure publicitaire à mi-parcours.
+>Si un segment de sous-titrage WebVTT se trouve dans une publicité preroll mid-roll, le lecteur voit cette légende jouer avant et après cette coupure publicitaire mid-roll. Par exemple, dans un segment de sous-titrage de 10 secondes avec une publicité à mi-parcours de 30 secondes à la marque de 5 secondes, le lecteur voit ce segment de sous-titrage pendant 5 secondes avant la coupure publicitaire à mi-parcours et pendant 5 secondes après la coupure publicitaire à mi-parcours.
 
 >[!NOTE]
 >
