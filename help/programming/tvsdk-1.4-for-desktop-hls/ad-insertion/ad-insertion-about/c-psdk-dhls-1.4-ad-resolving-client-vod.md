@@ -6,6 +6,9 @@ title: Résolution et insertion de publicités VOD
 uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ TVSDK insère des publicités de différentes manières :
 
 >[!IMPORTANT]
 >
->Lors de l’implémentation d’une personnalisation `AdPolicySelector`, une stratégie différente peut être donnée à chaque type de `AdBreakTimelineItem` (pré-roll, mid-roll ou post-roll) dans `AdPolicyInfo`, en fonction du type de la `AdBreakTimelineItem`. Par exemple, vous pouvez conserver le contenu de milieu de gamme après sa lecture, mais supprimer le contenu de pré-lecture après sa lecture.
+>Lors de l&#39;implémentation d&#39;une stratégie personnalisée `AdPolicySelector`, une stratégie différente peut être donnée à chaque type de `AdBreakTimelineItem` (pré-roll, mid-roll ou post-roll) dans `AdPolicyInfo`, en fonction du type de `AdBreakTimelineItem`. Par exemple, vous pouvez conserver le contenu de milieu de gamme après sa lecture, mais supprimer le contenu de pré-lecture après sa lecture.
 
 Après les débuts de lecture, aucune modification supplémentaire ne peut être apportée au contenu. Les publicités ne peuvent pas être :
 
