@@ -6,11 +6,14 @@ title: Processus standard
 uuid: aafe0030-8a59-4090-aeac-76867777eaa5
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
 
-# Processus standard{#typical-workflow}
+# Flux de travaux standard{#typical-workflow}
 
 Il s’agit d’un processus standard d’implémentations de référence DRM de Primetime qui comprend à la fois les outils de ligne de commande et le serveur de licences :
 
