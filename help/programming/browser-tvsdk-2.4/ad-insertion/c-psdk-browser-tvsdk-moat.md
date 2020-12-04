@@ -6,11 +6,14 @@ title: Mesure des publicités à partir de Mois
 uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
-# Mesure des publicités à partir de Mois {#ad-measurement-from-moat}
+# Mesure publicitaire de Moat {#ad-measurement-from-moat}
 
 TVSDK récupère les informations de FreeWheel et d&#39;autres serveurs qui fournissent des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux que les créatifs capturent ou négligent les intérêts d’une audience.
 
