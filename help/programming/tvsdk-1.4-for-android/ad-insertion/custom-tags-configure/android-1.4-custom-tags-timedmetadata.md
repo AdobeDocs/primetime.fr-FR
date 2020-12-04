@@ -29,12 +29,12 @@ La classe fournit les éléments suivants :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> Identificateur unique des métadonnées temporisées. Cette valeur est généralement extraite de l’attribut ID de balise/indice. Sinon, une valeur aléatoire unique est fournie. Utilisez <span class="codeph"> getId </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> Métadonnées </td> 
    <td colname="col2"> Informations traitées/extraites de la liste de lecture/balise personnalisée manifest. Utilisez <span class="codeph"> getMetadata </span>. </td> 
   </tr> 
@@ -44,12 +44,12 @@ La classe fournit les éléments suivants :
    <td colname="col2"> Nom des métadonnées temporisées. Si le type est <span class="codeph"> TAG </span>, la valeur représente le nom de la balise/indice. Si le type est <span class="codeph"> ID3 </span>, il est nul. Utilisez <span class="codeph"> getName </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> Position temporelle, en millisecondes, par rapport au début du contenu principal où ces métadonnées temporisées sont présentes dans le flux. Utilisez <span class="codeph"> getTime </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Type </td> 
    <td colname="col2"> Type des métadonnées temporisées. Utilisez <span class="codeph"> getType </span>. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
