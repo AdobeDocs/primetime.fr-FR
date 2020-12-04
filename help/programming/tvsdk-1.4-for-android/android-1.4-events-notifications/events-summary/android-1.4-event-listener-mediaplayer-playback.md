@@ -1,20 +1,23 @@
 ---
 description: TVSDK distribue des événements de lecture lorsque des opérations de lecture multimédia se produisent, par exemple lorsqu’une vidéo commence à se lire.
 seo-description: TVSDK distribue des événements de lecture lorsque des opérations de lecture multimédia se produisent, par exemple lorsqu’une vidéo commence à se lire.
-seo-title: événements de lecture
-title: événements de lecture
+seo-title: Événements de lecture
+title: Événements de lecture
 uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
 
-# événements de lecture{#playback-events}
+# Événements de lecture{#playback-events}
 
 TVSDK distribue des événements de lecture lorsque des opérations de lecture multimédia se produisent, par exemple lorsqu’une vidéo commence à se lire.
 
-Pour être averti de tous les événements liés à la lecture, enregistrez une mise en oeuvre de `MediaPlayer.PlaybackEventListener`, y compris les rappels de événement suivants.
+Pour être averti de tous les événements liés à la lecture, enregistrez une implémentation de `MediaPlayer.PlaybackEventListener`, y compris les rappels de événement suivants.
 
 <table frame="all" colsep="1" rowsep="1"> 
  <thead> 
@@ -37,11 +40,11 @@ Pour être averti de tous les événements liés à la lecture, enregistrez une 
    <td colname="2"> La lecture d’une source multimédia a commencé. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (taux en virgule flottante) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a>  (taux de flottement) </td> 
    <td colname="2"> L’utilisateur ou TVSDK a sélectionné un nouveau taux de lecture, tel qu’une lecture rapide en amont, en arrière ou en reprise, à une vitesse normale. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (taux en virgule flottante) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a>  (taux de flottement) </td> 
    <td colname="2"> Un nouveau taux de lecture est visible à l’écran. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -53,7 +56,7 @@ Pour être averti de tous les événements liés à la lecture, enregistrez une 
    <td colname="2"> Le lecteur multimédia a préparé le média avec succès. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a> (longue hauteur, longue largeur) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onSizeAvailable%28long,%20long%29" format="html" scope="external"> onSizeAvailable</a>  (longue hauteur, longue largeur) </td> 
    <td colname="2"> La taille du média est disponible. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -61,11 +64,11 @@ Pour être averti de tous les événements liés à la lecture, enregistrez une 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> état MediaPlayer.PlayerState</a> , <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> notification MediaPlayerNotification</a> ) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerStatstate,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationnotification) </td> 
    <td colname="2"> L’état du lecteur multimédia a changé. Votre application doit gérer les erreurs de ce rappel. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a> (long profil, long terme) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a>  (long profil, long terme) </td> 
    <td colname="2"> Le profil actuel du lecteur multimédia a changé. Utilisez la propriété <span class="codeph"> Profil</span> pour obtenir le nouveau profil en cours de lecture. Utilisez la propriété <span class="codeph"> time</span> pour obtenir l’heure à laquelle ce événement s’est produit. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -85,7 +88,7 @@ Pour être averti de tous les événements liés à la lecture, enregistrez une 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> TimedMetadata</a> timedMetadata) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatatimedMetadata) </td> 
    <td colname="2"> Une nouvelle métadonnée minutée est découverte dans le manifeste. </td> 
   </tr> 
   <tr rowsep="0"> 
