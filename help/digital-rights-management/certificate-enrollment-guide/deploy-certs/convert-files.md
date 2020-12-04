@@ -4,11 +4,14 @@ title: Conversion de fichiers
 uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Conversion de fichiers{#convert-files}
+# Convertir les fichiers{#convert-files}
 
 En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur génère les fichiers PKCS#12 (pfx) et PEM/DER en saisissant les commandes suivantes à partir d’une fenêtre de commande :
 
@@ -44,7 +47,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Bien qu’il ne soit pas obligatoire, Adobe recommande d’utiliser des mots de passe différents pour la clé privée (private_key_password) et le PFX (pfx_password).
+   >Bien que non requis, l’Adobe recommande d’utiliser des mots de passe différents pour la clé privée (private_key_password) et le PFX (pfx_password).
 
    Ce fichier PEM final contient uniquement votre certificat.
 
@@ -58,5 +61,5 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Les fichiers DER sont requis uniquement pour le module HTTP Dynamic Streaming Packager.
+   >Les fichiers DER ne sont requis que pour HTTP Dynamic Streaming packager.
 
