@@ -1,11 +1,14 @@
 ---
 description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
 seo-description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
-seo-title: Réparer les publicités incompatibles à l’aide d’Adobe Creative Repackaging Service
-title: Réparer les publicités incompatibles à l’aide d’Adobe Creative Repackaging Service
+seo-title: Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe
+title: Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe
 uuid: e8be1ed2-3ee3-4ee7-a75c-b804ab398568
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ Les publicités diffusées par divers tiers, tels qu’un serveur d’annonces d
 
 Lorsque TVSDK rencontre pour la première fois une publicité incompatible, le lecteur ignore la publicité et envoie une demande au service de reconditionnement de la création (CRS), qui fait partie du serveur principal Primetime et d’insertion, afin de reconditionner la publicité dans un format compatible. CRS tente de générer des rendus M3U8 à débit multiple de la publicité et stocke ces rendus sur le réseau de Diffusion de contenu Primetime (CDN). La prochaine fois que TVSDK recevra une réponse publicitaire pointant vers cette publicité, le lecteur utilisera la version compatible HLS M3U8 du CDN.
 
-Pour activer cette fonctionnalité facultative, contactez votre représentant Adobe.
+Pour activer cette fonctionnalité facultative, contactez votre représentant d’Adobe.
 
-Pour plus d’informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
+Pour plus d&#39;informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
 
-## Prise en charge de plusieurs réseaux CDN pour CRS et diffusion {#section_900FDDA5454143718F1EB4C9732C8E1C}
+## Prise en charge de plusieurs CDN pour CRS et diffusion {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
 Bien que le scénario par défaut de Creative Repackaging Service (CRS) consiste à utiliser un réseau de données de contenu (CDN), vous pouvez déployer des ressources CRS sur plusieurs CDN.
 
@@ -37,15 +40,15 @@ Voici les ajouts d’API dans TVSDK :
 
 * `PTURLTransformer` Protocole décrivant les méthodes requises pour transformer les CRS et les URL demandées par TVSDK. Les applications peuvent implémenter ce protocole et fournir des implémentations pour les méthodes requises.
 
-* `PTDefaultURLTransformer` Instance de transformateur d’URL par défaut créée dans TVSDK et qui implémente le `PTURLTransformer` protocole. Les applications peuvent remplacer cette classe ou ajouter un gestionnaire de transformation post URL. Ce gestionnaire est utile lorsque l’application souhaite apporter des modifications à la demande d’URL après l’application de la transformation par défaut.
+* `PTDefaultURLTransformer` Instance de transformateur d’URL par défaut créée dans TVSDK et qui implémente le  `PTURLTransformer` protocole. Les applications peuvent remplacer cette classe ou ajouter un gestionnaire de transformation post URL. Ce gestionnaire est utile lorsque l’application souhaite apporter des modifications à la demande d’URL après l’application de la transformation par défaut.
 
-* `PTNetworkConfiguration setURLTransformer:defaultTransformer` Méthode setter fournie sur l’instance de `PTNetworkConfiguration` métadonnées pour définir l’ `PTURLTransformer` implémentation.
+* `PTNetworkConfiguration setURLTransformer:defaultTransformer` Méthode setter fournie sur l’instance de  `PTNetworkConfiguration` métadonnées pour définir l’ `PTURLTransformer` implémentation.
 
 >[!IMPORTANT]
 >
->Les implémentations de votre application doivent rechercher la `PTURLTransformerInputType` énumération et transformer uniquement les URL de type `PTURLTransformerInputTypeCRSCreative` CRS.
+>Les implémentations de votre application doivent rechercher la énumération `PTURLTransformerInputType` et uniquement transformer les URL de type `PTURLTransformerInputTypeCRSCreative` pour CRS.
 
-L’exemple de code suivant montre comment votre application peut modifier le composant hôte par défaut en une autre chaîne (par exemple `cdn.mycrsdomain.com`) :
+L&#39;exemple de code suivant montre comment votre application peut changer le composant hôte par défaut en une autre chaîne (par exemple, `cdn.mycrsdomain.com`) :
 
 ```
 // The sample code below uses Non-ARC code 
