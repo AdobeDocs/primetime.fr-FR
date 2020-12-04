@@ -6,6 +6,9 @@ title: Mode de signalisation publicitaire
 uuid: 947544f9-667e-4d81-af83-155f0db7788e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -14,17 +17,17 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Le mode de signalisation de la publicité indique où le flux vidéo doit obtenir des informations publicitaires.
 
-Les valeurs valides sont `DEFAULT`, `SERVER_MAP`et `MANIFEST_CUES`.
+Les valeurs valides sont `DEFAULT`, `SERVER_MAP` et `MANIFEST_CUES`.
 
-Le tableau suivant décrit l’effet des `AdSignalingMode` valeurs pour les différents types de flux HLS :
+Le tableau suivant décrit l&#39;effet des valeurs `AdSignalingMode` pour les différents types de flux HLS :
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> </th> 
-   <th colname="2" class="entry"> <b>Par défaut </b></th> 
+   <th colname="2" class="entry"> <b>Par défaut  </b></th> 
    <th colname="3" class="entry"><b> Repères de manifeste</b> </th> 
-   <th colname="4" class="entry"> <b>Carte du serveur d’annonces </b></th> 
+   <th colname="4" class="entry"> <b>Carte du serveur d’annonces  </b></th> 
   </tr> 
  </thead>
  <tbody> 
