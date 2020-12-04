@@ -6,6 +6,9 @@ title: Eléments API de changement de taux
 uuid: c2bcd20c-0641-4d75-802c-08098786d572
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 2%
 
 ---
 
@@ -27,6 +30,6 @@ Utilisez les éléments d’API suivants pour modifier les taux de lecture :
 | **Valeur de taux** | **Effet sur la lecture** |
 |---|---|
 | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0 | Bascule en mode avance rapide avec le multiplicateur spécifié plus rapide que la normale (par exemple, 4 fois plus rapide que la normale) |
-| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 , -128.0 | Bascule en mode de rembobinage rapide |
-| 1.0 | Bascule en mode de lecture normal (appeler `play` revient à définir la propriété rate sur 1,0) |
-| 0.0 | Interruptions (l’appel `pause` est identique à la définition de la propriété rate sur 0,0) |
+| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0, -128.0 | Bascule en mode de rembobinage rapide |
+| 1,0 | Bascule en mode de lecture normal (appeler `play` revient à définir la propriété rate sur 1.0) |
+| 0,0 | Interruptions (appeler `pause` revient à définir la propriété rate sur 0,0) |
