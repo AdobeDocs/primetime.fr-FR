@@ -6,6 +6,9 @@ title: Sous-titres et sous-titres
 uuid: 91daf0be-087a-4be5-86c2-f8b83da43a8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -29,10 +32,10 @@ Vous devez connaître les exigences suivantes pour les sous-titres et sous-titre
    * Les sous-titres sont généralement rédigés dans une autre langue et n’incluent pas de sons d’arrière-plan.
    * Les sous-titres se trouvent dans des flux qui s’exécutent en parallèle avec le contenu principal.
 
-      Le `PTMediaPlayer` lit le contenu principal et les publicités, où le contenu principal peut être en direct/linéaire ou VOD, et les publicités peuvent être preroll, mid-roll ou post-roll.
+      `PTMediaPlayer` lit le contenu principal et les publicités, où le contenu principal peut être en direct/linéaire ou VOD, et les publicités peuvent être preroll, mid-roll ou post-roll.
    Voici quelques autres conditions requises pour les sous-titres dans iOS :
 
-   * Pour les horodatages, la `X-TIMESTAMP-MAP` valeur, spécifiée dans la section d’en-tête du `WebVTT` fichier, doit correspondre à l’horodatage vidéo.
+   * Pour les horodatages, la valeur `X-TIMESTAMP-MAP`, spécifiée dans la section d’en-tête du fichier `WebVTT`, doit correspondre à l’horodatage vidéo.
 
    * Pour le système, vous devez utiliser iOS 6.1 ou une version ultérieure.
 
