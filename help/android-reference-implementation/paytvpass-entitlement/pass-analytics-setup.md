@@ -1,20 +1,23 @@
 ---
-description: Vous pouvez configurer l’implémentation des références pour utiliser le rapports Adobe Analytics.
-seo-description: Vous pouvez configurer l’implémentation des références pour utiliser le rapports Adobe Analytics.
-seo-title: Configuration d’Adobe Analytics Rapports
-title: Configuration d’Adobe Analytics Rapports
+description: Vous pouvez configurer la mise en oeuvre des références pour utiliser Adobe Analytics rapports.
+seo-description: Vous pouvez configurer la mise en oeuvre des références pour utiliser Adobe Analytics rapports.
+seo-title: Configuration du Rapports Adobe Analytics
+title: Configuration du Rapports Adobe Analytics
 uuid: bdf8bb7f-a0c8-48a2-a632-0b872687f3fe
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
-# Configuration d’Adobe Analytics Rapports {#configure-adobe-analytics-reporting}
+# Configurer le Rapports Adobe Analytics {#configure-adobe-analytics-reporting}
 
-Vous pouvez configurer l’implémentation des références pour utiliser le rapports Adobe Analytics.
+Vous pouvez configurer la mise en oeuvre des références pour utiliser Adobe Analytics rapports.
 
-L’implémentation de référence est configurée pour envoyer les données du événement d’authentification Primetime à Adobe Analytics à l’aide de la bibliothèque mobile Adobe intégrée dans le SDK Primetime. Pour activer et utiliser les données de événement envoyées à partir de l’application, vous devez d’abord créer un compte Adobe Analytics. Une fois le compte créé :
+L’implémentation de référence est configurée pour envoyer les données du événement d’authentification Primetime à Adobe Analytics à l’aide de la bibliothèque mobile d’Adobes fournie dans le SDK Primetime. Pour activer et utiliser les données de événement envoyées à partir de l’application, vous devez d’abord créer un compte Adobe Analytics. Une fois le compte créé :
 
 1. Configurez l&#39;application avec les informations de votre compte ; et
 1. Créez des règles de traitement pour personnaliser la manière dont les données du événement sont affichées dans vos rapports.
@@ -44,7 +47,7 @@ Le tableau ci-dessous présente les données envoyées à Adobe Analytics :
 
 1. Configurez l’application en vue de l’utiliser avec Adobe Marketing Cloud.
 
-   Pour permettre l’envoi des données d’authentification Primetime à Adobe Analytics, un fichier [!DNL `ADBMobileConfig.json`] de configuration doit être ajouté à l’implémentation de référence au moment de la compilation. Notez qu’il s’agit exactement du même fichier de configuration utilisé par le SDK Primetime pour envoyer les données d’analyse vidéo à Marketing Cloud. Pour plus d’informations sur la configuration d’une application avec votre compte Adobe Analytics, consultez la documentation [d’](https://microsite.omniture.com/t2/help/en_US/reference/) Adobe Marketing Cloud.
+   Pour permettre l’envoi des données d’authentification Primetime à Adobe Analytics, un fichier de configuration [!DNL `ADBMobileConfig.json`] doit être ajouté à l’implémentation de référence au moment de la compilation. Notez qu’il s’agit exactement du même fichier de configuration utilisé par le SDK Primetime pour envoyer les données d’analyse vidéo au Marketing Cloud. Consultez la [documentation de Adobe Marketing Cloud](https://microsite.omniture.com/t2/help/en_US/reference/) pour plus d&#39;informations sur la configuration d&#39;une application avec votre compte Adobe Analytics.
 1. Créez des règles de traitement.
 
-   Les données du événement d’authentification Primetime envoyées par l’implémentation de référence n’apparaîtront pas automatiquement dans vos rapports d’analyse. Vous devez d’abord utiliser les données en créant des règles de traitement. Consultez la documentation d’ [Adobe Analytics sur la création de règles](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html)de traitement.
+   Les données du événement d’authentification Primetime envoyées par l’implémentation de référence n’apparaîtront pas automatiquement dans vos rapports d’analyse. Vous devez d’abord utiliser les données en créant des règles de traitement. Consultez la [documentation Adobe Analytics sur la création de règles de traitement](https://microsite.omniture.com/t2/help/en_US/reference/processing_rules.html).
