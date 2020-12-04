@@ -6,11 +6,14 @@ title: Classes d’informations
 uuid: 491ea40b-5a8d-4b6a-b369-a8848c6bd9b6
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
 
-# Classes d’informations{#info-classes}
+# Classes d&#39;informations{#info-classes}
 
 Ces classes fournissent des informations sur les médias.
 
@@ -30,7 +33,7 @@ Package : [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> ClosedCaptionsTrack</a></span></td> 
-   <td colname="2"> Classe qui étend Track pour définir l’abstraction de la légende fermée. Un suivi de sous-titres fermés est défini de manière unique par son nom ET son type de service. Différents types de service peuvent partager le même nom.</td> 
+   <td colname="2"> Classe qui étend Track pour définir l’abstraction de sous-titrage. Un suivi de sous-titres fermés est défini de manière unique par son nom ET son type de service. Différents types de service peuvent partager le même nom.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/DefaultCCTypes.html" format="html" scope="external"> DefaultCCTypes</a></span> </td> 
@@ -50,7 +53,7 @@ Package : [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Piste</a></span></td> 
-   <td colname="2">Classe qui définit l'abstraction de la piste à utiliser pour définir <span class="codeph"> AudioTrack</span> et <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
+   <td colname="2">Classe qui définit l'abstraction de suivi à utiliser pour définir <span class="codeph"> AudioTrack</span> et <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
   </tr> 
  </tbody> 
 </table>
