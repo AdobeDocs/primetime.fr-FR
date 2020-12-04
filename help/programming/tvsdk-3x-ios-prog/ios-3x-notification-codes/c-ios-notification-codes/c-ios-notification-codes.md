@@ -6,6 +6,9 @@ title: Système de notification TVSDK
 uuid: cace3b4d-ac2b-4fb2-854e-ce6db17544f5
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -32,9 +35,9 @@ Les objets de notification fournissent des informations relatives à l’état d
    <td colname="1"><span class="codeph"> code</span> </td> 
    <td colname="2">Représentation numérique affectée à la notification. 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">événements de notification d'erreur, de 100000 à 199999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">événements de notification d'avertissement, de 20000 à 29999 </li> 
-     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">événements de notification des informations, de 300000 à 399999 </li> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Événements de notification d'erreur, de 100000 à 199999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Événements de notification d'avertissement, de 20000 à 29999 </li> 
+     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Événements de notification des informations, de 300000 à 399999 </li> 
     </ul> <p>Chaque plage de niveau supérieur, telle que les erreurs, est divisée en sous-plages, par exemple de 101 000 à 101 999, ce qui représente des erreurs de lecture. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -43,7 +46,7 @@ Les objets de notification fournissent des informations relatives à l’état d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> serait associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui provoquait une erreur. </td> 
+   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> sera associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui a provoqué une erreur. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
