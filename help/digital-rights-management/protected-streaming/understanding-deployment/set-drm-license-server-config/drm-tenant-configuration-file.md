@@ -17,44 +17,44 @@ ht-degree: 0%
 
 Le fichier de configuration flashaccess-locataire.xml comprend des paramètres qui s’appliquent à un client spécifique du serveur de licences.
 
-Chaque client prend en charge sa propre instance de ce fichier de configuration situé dans `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Consultez le répertoire `configs/flashaccessserver/tenants/sampletenant` pour un exemple de fichier de configuration de client.
+Chaque client prend en charge sa propre instance de ce fichier de configuration situé dans `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Voir le répertoire `configs/flashaccessserver/tenants/sampletenant` pour un exemple de fichier de configuration de client.
 
-Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichier de configuration du client en tant que chemins d&#39;accès absolus ou en tant que chemins d&#39;accès relatifs au répertoire de configuration du client (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
+Vous pouvez spécifier tous les chemins d&#39;accès aux fichiers dans le fichier de configuration du client sous la forme de chemins d&#39;accès absolus ou de chemins d&#39;accès relatifs au répertoire de configuration du client (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
 
 Le fichier de configuration du client comprend :
 
-* *Informations d&#39;identification* de transport : spécifie une ou plusieurs informations d&#39;identification de transport (certificat et clé privée) émises par l&#39;Adobe. Peut être spécifié sous la forme d’un chemin d’accès à un [!DNL .pfx] fichier et d’un mot de passe, ou d’un alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* *Informations d&#39;identification*  de transport : spécifie une ou plusieurs informations d&#39;identification de transport (certificat et clé privée) émises par l&#39;Adobe. Peut être spécifié en tant que chemin d’accès à un fichier [!DNL .pfx] et à un mot de passe, ou en tant qu’alias pour des informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
-   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
+   Voir *Gestion des mises à jour de certificats* dans *Utilisation du SDK DRM Adobe Primetime pour la protection du contenu* pour plus d’informations sur les informations d’identification supplémentaires nécessaires.
 
-* *Informations d&#39;identification* du serveur de licences : spécifie une ou plusieurs informations d&#39;identification du serveur de licences (certificat et clé privée) que l&#39;Adobe a émises. Vous pouvez spécifier les informations d’identification du serveur de licences en tant que chemin d’accès à un [!DNL .pfx] fichier et à un mot de passe, ou encore en tant qu’alias pour les informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
+* *Informations d&#39;identification*  du serveur de licences : spécifie une ou plusieurs informations d&#39;identification du serveur de licences (certificat et clé privée) que l&#39;Adobe a émises. Vous pouvez spécifier les informations d’identification du serveur de licences comme chemin d’accès à un fichier [!DNL .pfx] et à un mot de passe, ou comme alias pour les informations d’identification stockées sur un HSM. Plusieurs informations d’identification de ce type peuvent être spécifiées ici, par exemple chemins d’accès aux fichiers ou alias clés, ou les deux.
 
-   Voir *Gestion des mises à jour* des certificats dans *Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu* pour en savoir plus sur les informations d’identification supplémentaires nécessaires.
+   Voir *Gestion des mises à jour de certificats* dans *Utilisation du SDK DRM Adobe Primetime pour la protection du contenu* pour plus d’informations sur les informations d’identification supplémentaires nécessaires.
 
-* *Certificats* de serveur de clés : indiquez éventuellement le certificat de serveur de licences du serveur de clés que l&#39;Adobe a émis. Vous pouvez spécifier le certificat du serveur de licences du serveur de clés comme chemin d’accès à un [!DNL .cer] fichier ou alias d’un certificat stocké sur un HSM. Cette option doit être spécifiée pour émettre des licences pour le contenu fourni avec une stratégie DRM qui requiert une diffusion de clé à distance pour les périphériques iOS.
+* *Certificats*  de serveur de clés : indiquez éventuellement le certificat de serveur de licences du serveur de clés que l&#39;Adobe a émis. Vous pouvez spécifier le certificat du serveur de licences du serveur de clés comme chemin d&#39;accès à un fichier [!DNL .cer] ou comme alias à un certificat stocké sur un HSM. Cette option doit être spécifiée pour émettre des licences pour le contenu fourni avec une stratégie DRM qui requiert une diffusion de clé à distance pour les périphériques iOS.
 
-* *Agents d&#39;autorisation* personnalisés : spécifie éventuellement les classes d&#39;agents d&#39;autorisation personnalisés à appeler pour chaque demande de licence. Si plusieurs agents d’autorisation sont spécifiés, ils sont appelés dans l’ordre indiqué.
-* *Liste des Packagers* autorisés : spécifie éventuellement des certificats qui identifient les entités autorisées à compresser du contenu pour ce serveur de licences. Si aucun certificat de packager n’est spécifié, le serveur délivre des licences pour le contenu conditionné par tout packager. Si le serveur reçoit une demande de licence d’un packager non autorisé, la demande est refusée.
-* *Version* client minimale prise en charge Voir Utilisation du SDK DRM d’Adobe Primetime pour la protection du contenu.
+* *Autorisations*  personnalisées : spécifie éventuellement les classes d&#39;autorisation personnalisées à appeler pour chaque demande de licence. Si plusieurs agents d’autorisation sont spécifiés, ils sont appelés dans l’ordre indiqué.
+* *Liste des Packagers*  autorisés : spécifie éventuellement des certificats qui identifient les entités autorisées à compresser du contenu pour ce serveur de licences. Si aucun certificat de packager n’est spécifié, le serveur délivre des licences pour le contenu conditionné par tout packager. Si le serveur reçoit une demande de licence d’un packager non autorisé, la demande est refusée.
+* *Version minimale du client prise en chargeReportez-vous à la page Utilisation du SDK DRM Adobe Primetime pour la protection du contenu.* 
 
 * *Règles d’utilisation*
 
-   * *Mise en cache* des licences : indique éventuellement la durée pendant laquelle vous pouvez stocker la licence sur le client. Par défaut, la mise en cache des licences est désactivée. Si vous souhaitez activer la mise en cache des licences pendant une période limitée, vous devez définir la date de fin ou le nombre de secondes pendant lesquelles la licence doit être stockée (à partir de la date de délivrance de la licence). La définition du nombre de secondes sur 0 désactive la mise en cache des licences.
+   * *Mise en cache*  de la licence : indiquez éventuellement la durée pendant laquelle vous pouvez stocker la licence sur le client. Par défaut, la mise en cache des licences est désactivée. Si vous souhaitez activer la mise en cache des licences pendant une période limitée, vous devez définir la date de fin ou le nombre de secondes pendant lesquelles la licence doit être stockée (à partir de la date de délivrance de la licence). La définition du nombre de secondes sur 0 désactive la mise en cache des licences.
 
       >[!NOTE]
       >
       >Toutes les licences que le serveur de diffusion en flux continu protégé a délivrées comprennent une période d’expiration de 24 heures (86 400 secondes). Cette valeur s’applique implicitement en tant que limite supérieure à la date ou la durée de fin définie pour la mise en cache des licences, avec une valeur maximale de 86 400 secondes, même si le schéma impose des limites plus élevées.
 
-   * *Lecture droite* : un minimum d&#39;un droit doit être spécifié. Si vous spécifiez plusieurs droits, le client utilise alors le premier droit qui répond à toutes les exigences.
+   * *Lecture droite*  : un minimum d&#39;un droit doit être spécifié. Si vous spécifiez plusieurs droits, le client utilise alors le premier droit qui répond à toutes les exigences.
 
-      * *Protection* de sortie : contrôle si la sortie sur des périphériques de rendu externes doit être protégée.
-      * *Restrictions* des applications AIR et SWF : liste autorisée facultative des applications SWF et AIR pouvant lire le contenu (par exemple, seules les applications spécifiées sont autorisées). Les applications SWF sont identifiées par une URL ou par le résumé du fichier SWF et le temps maximal de téléchargement et de vérification du fichier digest.
+      * *Protection*  de sortie : contrôle si la sortie sur des périphériques de rendu externes doit être protégée.
+      * *Restrictions*  des applications AIR et SWF : liste autorisée facultative des applications SWF et AIR pouvant lire le contenu (par exemple, seules les applications spécifiées sont autorisées). Les applications SWF sont identifiées par une URL ou par le résumé du fichier SWF et le temps maximal de téléchargement et de vérification du fichier digest.
 
-         Voir Calculateur *de hachage* SWF pour en savoir plus sur la méthode de calcul du digest SWF.
+         Voir *Calculateur de hachage SWF* pour plus d’informations sur la façon de calculer le digest SWF.
 
          Un ID d’éditeur et un ID de l&#39;application facultatif, une version minimale et une version maximale identifient les applications AIR et iOS. Si vous ne spécifiez aucune restriction d’application, tout fichier SWF ou toute application AIR peut lire le contenu.
 
-      * *Restrictions* du module DRM et d&#39;exécution : indique le niveau de sécurité minimum requis pour le module DRM/Runtime. Vous pouvez éventuellement inclure une liste bloquée de versions qui ne sont pas autorisées à lire le contenu. Les versions des modules sont identifiées par des attributs, tels que le système d’exploitation et/ou un numéro de version.
+      * *Restrictions*  du module DRM et d&#39;exécution : indique le niveau de sécurité minimum requis pour le module DRM/Runtime. Vous pouvez éventuellement inclure une liste bloquée de versions qui ne sont pas autorisées à lire le contenu. Les versions des modules sont identifiées par des attributs, tels que le système d’exploitation et/ou un numéro de version.
 
          Les restrictions des modules DRM et les restrictions des modules d’exécution prennent désormais en charge les attributs supplémentaires suivants :
 
@@ -66,8 +66,8 @@ Le fichier de configuration du client comprend :
 
          * `osVersion`
          * `version`
-      * *Exigences* en matière de capacités du périphérique : spécifie éventuellement les capacités matérielles requises pour accéder au contenu.
-      * *Exigences* de détection de jailbreak : spécifie (facultatif) que la lecture n&#39;est pas autorisée pour les périphériques sur lesquels un jailbreak est détecté.
+      * *Exigences*  en matière de capacités du périphérique : spécifie éventuellement les capacités matérielles requises pour accéder au contenu.
+      * *Exigences*  de détection de jailbreak : spécifie (facultatif) que la lecture n&#39;est pas autorisée pour les périphériques sur lesquels un jailbreak est détecté.
 
 
 
