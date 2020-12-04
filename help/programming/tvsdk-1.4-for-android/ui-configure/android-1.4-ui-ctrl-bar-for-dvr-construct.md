@@ -6,11 +6,14 @@ title: Construire une barre de contrôle améliorée pour le magnétoscope numé
 uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '355'
+ht-degree: 0%
 
 ---
 
 
-# Construire une barre de contrôle améliorée pour le magnétoscope numérique{#construct-a-control-bar-enhanced-for-dvr}
+# Construire une barre de contrôle améliorée pour DVR{#construct-a-control-bar-enhanced-for-dvr}
 
 Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du DVR pour la diffusion VOD et en direct. Le support DVR inclut le concept d&#39;une fenêtre pouvant être recherchée et le point de vie du client.
 
@@ -30,11 +33,11 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
 1. Pour mettre en oeuvre une barre de contrôle avec prise en charge DVR, suivez les étapes pour afficher une barre de défilement de recherche, avec quelques différences mineures :
 
    * Vous pouvez choisir d’implémenter une barre de contrôle qui est mappée uniquement pour la plage de lecture à rechercher plutôt que pour la plage de lecture. Toute interaction de l’utilisateur pour la recherche peut être considérée comme sécurisée dans la plage recherchée.
-   * Vous pouvez choisir de mettre en oeuvre une barre de contrôle mappée pour la plage de lecture mais qui affiche également la plage de valeurs recherchée.
+   * Vous pouvez choisir de mettre en oeuvre une barre de contrôle mappée pour la plage de lecture, mais qui affiche également la plage de valeurs recherchée.
 
       Pour une barre de contrôle :
-   1. Ajouter une incrustation sur la barre de contrôle qui représente la plage de lecture.
-   1. Lorsque l’utilisateur début effectuer une recherche, vérifiez si la position de la recherche souhaitée se trouve dans la plage recherchée à l’aide de `MediaPlayer.getSeekableRange`.
+   1. Ajoutez une incrustation sur la barre de contrôle qui représente la plage de lecture.
+   1. Lorsque l&#39;utilisateur début effectuer une recherche, vérifiez si la position de recherche souhaitée se trouve dans la plage recherchée à l&#39;aide de `MediaPlayer.getSeekableRange`.
 
       Par exemple :
 
@@ -45,7 +48,7 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
       }
       ```
 
-      Vous pouvez également choisir d’atteindre le point d’activation du client à l’aide de la `MediaPlayer.LIVE_POINT` constante.
+      Vous pouvez également choisir d’accéder au point d’activation du client à l’aide de la constante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
