@@ -6,6 +6,9 @@ title: Lire les statistiques de lecture, de mise en mémoire tampon et de périp
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
@@ -14,12 +17,12 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
 
-La `QOSProvider` classe fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
 
 Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK et la taille/densité d’écran.
 
 1. Instanciez un lecteur multimédia.
-1. Créez un `QOSProvider` objet et joignez-le au lecteur de médias.
+1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
 
    ```
    // Create Media Player. 
@@ -29,7 +32,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs de QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
