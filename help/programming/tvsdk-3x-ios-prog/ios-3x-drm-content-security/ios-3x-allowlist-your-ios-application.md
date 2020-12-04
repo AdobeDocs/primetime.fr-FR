@@ -33,11 +33,11 @@ Avant d’envoyer une application iOS, vous devez la signer et la publier sur Ap
 
 En raison de la nouvelle signature, les informations d’inscription que vous avez générées avant de les envoyer à l’App Store d’Apple ne sont pas utilisables.
 
-Pour utiliser cette stratégie d’envoi, l’Adobe a créé un `machotools` outil qui permet d’empreintes digitales dans votre application iOS pour créer une valeur digest, la signer et l’insérer dans votre application iOS. Une fois votre application iOS empreinte digitale identifiée, vous pouvez la soumettre à l’Apple App Store. Lorsqu’un utilisateur exécute votre application à partir de l’App Store, Primetime DRM effectue un calcul à l’exécution de l’empreinte digitale de l’application et la confirme avec la valeur digest qui a été précédemment injectée dans l’application. Si l’empreinte correspond, l’application est confirmée comme étant autorisée à être répertoriée et le contenu protégé est autorisé à lire.
+Pour utiliser cette stratégie d’envoi, l’Adobe a créé un outil `machotools` qui imprime votre application iOS pour créer une valeur digest, la signer et l’injecter dans votre application iOS. Une fois votre application iOS empreinte digitale identifiée, vous pouvez la soumettre à l’Apple App Store. Lorsqu’un utilisateur exécute votre application à partir de l’App Store, Primetime DRM effectue un calcul à l’exécution de l’empreinte digitale de l’application et la confirme avec la valeur digest qui a été précédemment injectée dans l’application. Si l’empreinte correspond, l’application est confirmée comme étant autorisée à être répertoriée et le contenu protégé est autorisé à lire.
 
-L’outil d’Adobe `machotools` est inclus dans le SDK iOS TVSDK, dans le [ ! DNL [...]/tools/DRM].
+L&#39;outil d&#39;Adobe `machotools` est inclus dans le SDK TVSDK iOS, dans le [ ! DNL [...dossier ]/tools/DRM].
 
-Pour utiliser `machotools`:
+Pour utiliser `machotools` :
 
 1. Générez une paire de clés.
 
@@ -100,7 +100,7 @@ Pour utiliser `machotools`:
    ```
 
 1. Créez une nouvelle stratégie DRM ou mettez à jour votre stratégie existante afin d’inclure la valeur de hachage de l’ID d’éditeur renvoyée.
-1. A l’aide de la [!DNL AdobePolicyManager.jar], créez une nouvelle stratégie DRM (mettez à jour votre stratégie existante) afin d’inclure la valeur de hachage de l’ID d’éditeur renvoyée, un ID d’application facultatif et les attributs de version minimale et maximale dans le [!DNL flashaccess-tools.properties] fichier inclus.
+1. A l&#39;aide de [!DNL AdobePolicyManager.jar], créez une nouvelle stratégie DRM (mettez à jour votre stratégie existante) afin d&#39;inclure la valeur de hachage de l&#39;ID d&#39;éditeur renvoyée, un ID d&#39;application facultatif et les attributs de version minimale et maximale dans le fichier [!DNL flashaccess-tools.properties] inclus.
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
