@@ -6,17 +6,20 @@ title: Balises ID3
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
 
-# Balises ID3{#id-tags}
+# ID3 balises{#id-tags}
 
 Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. Le navigateur TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
 
-Lorsqu’une nouvelle métadonnées ID3 est trouvée dans le flux HLS sous-jacent, le navigateur TVSDK déclenche un `AdobePSDK.TimedMetadataEvent` événement.
+Lorsqu’une nouvelle métadonnées ID3 est trouvée dans le flux HLS sous-jacent, le navigateur TVSDK déclenche un événement `AdobePSDK.TimedMetadataEvent`.
 
-L’ `TimedMetadata` objet ID3 possède les propriétés suivantes :
+L’objet `TimedMetadata` pour ID3 possède les propriétés suivantes :
 
 <table id="table_6C61886187FB44B4B9821E4B00200018"> 
  <thead> 
@@ -27,28 +30,28 @@ L’ `TimedMetadata` objet ID3 possède les propriétés suivantes :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>Type d’ <span class="codeph"> objet </span> TimedMetadata. </p> <p>Pour les métadonnées ID3, la valeur est <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
+   <td colname="col2"> <p>Type d’objet <span class="codeph"> TimedMetadata </span>. </p> <p>Pour les métadonnées ID3, la valeur est <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> time </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> time  </span> </p> </td> 
    <td colname="col2"> <p> Heure du lecteur à laquelle ces métadonnées temporisées ont été détectées. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>ID de l’ <span class="codeph"> objet </span> TimedMetadata. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
+   <td colname="col2"> <p>ID de l’objet <span class="codeph"> TimedMetadata </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>Nom de l’ <span class="codeph"> objet </span> TimedMetadata. Pour les métadonnées ID3, la valeur est "ID3". </p> </td> 
+   <td colname="col2"> <p>Nom de l’objet <span class="codeph"> TimedMetadata </span>. Pour les métadonnées ID3, la valeur est "ID3". </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> content </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> content  </span> </p> </td> 
    <td colname="col2"> <p>Contenu des métadonnées temporisées. Pour les balises ID3, cette valeur représente le tableau d’octets sérialisés. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> metadata </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> Informations </span> traitées TimedMetadata, qui est une instance d’ <span class="codeph"> AdobePSDK.Metadata </span> où les images ID3 sont stockées. </p> <p> <p>Remarque :  Pour la balise <span class="codeph"> vidéo Safari </span> , les données d’image particulières de la balise ID3 sont exposées sous la forme d’un objet par le biais d’un <span class="codeph"> objet AdobePSDK.Metadata, tandis que pour les autres navigateurs, les données d’image de la balise ID3 sont exposées sous la forme d’un tableau d’octets par le biais de l’objet </span> Adobe PSDK.Metadata <span class="codeph"> </span> . </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadata  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> Informations  </span> traitées TimedMetadata, qui est une instance d’ <span class="codeph"> AdobePSDK.Metadata  </span> où les images ID3 sont stockées. </p> <p> <p>Remarque :  Pour la balise Safari <span class="codeph"> video </span>, les données d’image particulières de la balise ID3 sont exposées sous la forme d’un objet par le biais d’un objet <span class="codeph"> AdobePSDK.Metadata </span> tandis que pour les autres navigateurs, les données d’image de la balise ID3 sont exposées sous la forme d’un tableau d’octets par le biais de l’objet <span class="codeph"> AdobePSDK.Metadata </span>. </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -114,7 +117,7 @@ Les différentes balises ID3 stockées dans `TimedMetadata` peuvent être récup
    }); 
    ```
 
-* Utilisation de la `MediaPlayerItem`propriété `timedMetadata` de.
+* Utilisation de la propriété `timedMetadata` de `MediaPlayerItem`.
 
    ```
    var isSafari = function () { 
