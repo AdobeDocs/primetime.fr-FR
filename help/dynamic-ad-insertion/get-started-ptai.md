@@ -18,7 +18,7 @@ L’Ad Insertion Primetime interagit avec les applications clientes de diffusion
 
 Une fois le système correctement configuré, un processus type peut se présenter comme suit :
 
-1. L’application cliente génère une URL [de](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap contenant des informations sur le flux vidéo et envoie une demande de GET à l’Ad Insertion Primetime.
+1. L’application cliente génère une [URL du Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) contenant des informations sur le flux vidéo et envoie une demande de GET à l’Ad Insertion Primetime.
 
 1. L’Ad Insertion Primetime répond en renvoyant le manifeste de contenu du CDN de l’éditeur à l’application cliente.
 
@@ -32,6 +32,6 @@ Une fois le système correctement configuré, un processus type peut se présent
 
 1. L’Ad Insertion Primetime diffuse les manifestes assemblés finaux, y compris les publicités, à l’application cliente pour lecture.
 
-1. La diffusion et la capacité d’affichage des publicités peuvent être mesurées au moyen du suivi des publicités côté client ou côté serveur, voir [Configuration du suivi](set-up-ad-tracking.md)des publicités.
+1. La diffusion et la capacité d&#39;affichage des publicités peuvent être mesurées via le suivi des publicités côté client ou côté serveur, voir [Configuration du suivi des publicités](set-up-ad-tracking.md).
 
 L’Ad Insertion Primetime prend en charge la plupart des configurations client pour HLS/DASH.
