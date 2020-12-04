@@ -19,8 +19,8 @@ Le contenu d’un AdBannerAsset décrit une bannière connexe.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Le `AdobePSDK.PSDKEventType.AD_STARTED` événement renvoie une `Ad` instance contenant une `companionAssets` propriété ( `Array<AdBannerAsset>`).
-Chacune `AdBannerAsset` fournit des informations sur l’affichage de la ressource.
+Le événement `AdobePSDK.PSDKEventType.AD_STARTED` renvoie une instance `Ad` contenant une propriété `companionAssets` ( `Array<AdBannerAsset>`).
+Chaque `AdBannerAsset` fournit des informations sur l&#39;affichage de la ressource.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -52,7 +52,7 @@ Chacune `AdBannerAsset` fournit des informations sur l’affichage de la ressour
     <pre>
       données de bannière
     </pre> </td> 
-   <td colname="col2"> Données du type spécifié par <span class="codeph"> resourceType</span> pour cette bannière complémentaire. </td> 
+   <td colname="col2"> Données du type spécifié par <span class="codeph"> resourceType</span> pour cette bannière d'accompagnement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> URL statique </td> 
