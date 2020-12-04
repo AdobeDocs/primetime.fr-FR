@@ -6,6 +6,9 @@ title: S’abonner à des balises personnalisées
 uuid: 43480265-4951-466a-a347-6debfb6935ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
 
 Avant les débuts de lecture, vous devez vous abonner aux balises .
-Pour vous abonner à des balises, affectez à la `subscribedTags` propriété un vecteur contenant les noms de balise personnalisés. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez à la `adTags` propriété un vecteur contenant les noms de balises publicitaires personnalisées.
+Pour vous abonner à des balises, affectez un vecteur contenant les noms de balise personnalisés à la propriété `subscribedTags`. Si vous devez également modifier les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la propriété `adTags`.
 
 Pour être averti des balises personnalisées dans les manifestes HLS :
 
@@ -23,7 +26,7 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
 
    >[!IMPORTANT]
    >
-   >Vous devez inclure le `#` préfixe lors de l’utilisation des flux HLS.
+   >Vous devez inclure le préfixe `#` lorsque vous utilisez des flux HLS.
 
    Par exemple :
 
@@ -34,7 +37,7 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Pour modifier globalement les balises publicitaires utilisées par le générateur d’opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété dans `PSDKConfig`.
+1. Pour modifier globalement les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la propriété `adTags` dans `PSDKConfig`.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -55,7 +58,7 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
       >
       >La méthode la plus simple consiste à créer une configuration d’élément par défaut du lecteur multimédia.
 
-   1. Affectez un vecteur contenant les balises personnalisées à `subscribeTags` entrer `MediaPlayerItemConfig`.
+   1. Affectez un vecteur contenant les balises personnalisées à `subscribeTags` dans `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +70,7 @@ Pour être averti des balises personnalisées dans les manifestes HLS :
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Pour modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut dans le flux spécifié, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la `adTags` propriété dans `mediaPlayerItemConfig`
+1. Pour modifier les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut dans le flux spécifié, affectez un vecteur contenant les noms de balises publicitaires personnalisées à la propriété `adTags` dans `mediaPlayerItemConfig`
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
