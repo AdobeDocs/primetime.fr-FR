@@ -24,7 +24,7 @@ Les Notes de mise à jour de TVSDK 1.4 pour iOS décrivent les nouveautés ou le
 
 **Version 1.4.45**
 
-* Afin de se conformer à Xcode10, TVSDK est passé de &quot;`libstdc++`&quot; à &quot;`libc++`&quot; et, par conséquent, la version minimale prise en charge est iOS 7. Auparavant, il s’agissait d’iOS 6.
+* Afin de se conformer à Xcode10, TVSDK est passé de &quot;`libstdc++`&quot; à &quot;`libc++`&quot;, ce qui signifie que la version minimale prise en charge est iOS 7. Auparavant, il s’agissait d’iOS 6.
 
 **Version 1.4.44**
 
@@ -49,8 +49,8 @@ Aucune nouvelle fonctionnalité n’est ajoutée dans cette version. Pour une li
 
 Modifications de l&#39;API :
 
-* **isSecure**: Une nouvelle API est introduite dans isSecure pour empêcher le lecteur d’enregistrer et de lancer une erreur. La valeur par défaut est true.
-* **allowExternalRecording**: Une nouvelle API est introduite pour permettre la mise en miroir des diffusions pour un contenu sécurisé. La mise en miroir des écoutes est traitée comme un enregistrement. Par conséquent, la valeur allowExternalRecording doit être définie sur &quot;True&quot;, pour autoriser la mise en miroir des écoutes ou sur &quot;False&quot; pour arrêter la mise en miroir des écoutes pour le contenu sécurisé. Par défaut, la valeur est true.
+* **isSecure** : Une nouvelle API est introduite dans isSecure pour empêcher le lecteur d’enregistrer et de lancer une erreur. La valeur par défaut est true.
+* **allowExternalRecording** : Une nouvelle API est introduite pour permettre la mise en miroir des diffusions pour un contenu sécurisé. La mise en miroir des écoutes est traitée comme un enregistrement. Par conséquent, la valeur allowExternalRecording doit être définie sur &quot;True&quot;, pour autoriser la mise en miroir des écoutes ou sur &quot;False&quot; pour arrêter la mise en miroir des écoutes pour le contenu sécurisé. Par défaut, la valeur est true.
 
 **Version 1.4.40**
 
@@ -70,11 +70,11 @@ Intégrez et certifiez VHL 2.0 dans le SDK iOS TVSDK : Réduisez la barrière de
 
 * Informations sur les publicités réseau
 
-   Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’identifiant de publicité, le système d’annonces et les extensions d’annonce VAST sont fournis dans la `PTNetworkAdInfo` classe accessible par le biais `networkAdInfo` de la propriété sur une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plates-formes d’analyses des publicités, telles que **Moat Analytics**.
+   Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’ID de publicité, le système d’annonce et les extensions d’annonce VAST sont fournis dans la classe `PTNetworkAdInfo` accessible par l’intermédiaire de la propriété `networkAdInfo` d’une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plates-formes d’analyses d’annonces, telles que **Analyses de douleurs**.
 
 **Version 1.4.31**
 
-* **Mesures** de facturation Afin de tenir compte des clients qui veulent payer uniquement pour ce qu&#39;ils utilisent, plutôt qu&#39;un taux fixe, quelle que soit leur utilisation réelle, l&#39;Adobe collecte des mesures d&#39;utilisation et les utilise pour déterminer le montant à facturer aux clients.
+* **Mesures de facturationPour tenir compte des clients qui veulent payer uniquement pour ce qu&#39;ils utilisent, plutôt qu&#39;un taux fixe, quelle que soit leur utilisation réelle, l&#39;Adobe collecte des mesures d&#39;utilisation et les utilise pour déterminer le montant à facturer aux clients.** 
 
 Chaque fois que TVSDK génère un événement de début de flux, le lecteur début à envoyer des messages HTTP régulièrement au système de facturation de l’Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec l’Adobe détermine les valeurs réelles.
 
@@ -86,13 +86,13 @@ Dans la classe PTSDKConfig, l&#39;API forceHTTPS a été ajoutée.
 
 La classe PTSDKConfig fournit des méthodes pour appliquer SSL sur les demandes envoyées aux serveurs Adobe Primetime de prise de décision d’annonce, DRM et Video Analytics. Pour plus d&#39;informations, consultez les méthodes `forceHTTPS` et `isForcingHTTPS` sur cette classe. Si un manifeste est chargé via HTTPS, TVSDK conserve l’utilisation du contenu HTTPS et respecte cette utilisation lors du chargement d’URL relatives à partir de ce manifeste.
 
-**Remarque**: Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées et il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir les URL prises en charge par HTTPS.
+**Remarque** : Les requêtes envoyées à des domaines tiers tels que les pixels de suivi des publicités, les URL de contenu et de publicité et les requêtes similaires ne sont pas modifiées et il incombe aux fournisseurs de contenu et aux serveurs d’annonces de fournir les URL prises en charge par HTTPS.
 
 **Version 1.4.18**
 
 Primetime iOS TVSDK prend désormais en charge les éléments créatifs JavaScript VPAID 2.0 pour permettre une expérience publicitaire interactive riche en flux continu.
 
-Pour plus d’informations sur VPAID 2.0, voir Prise en charge [des annonces](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)VPAID.
+Pour plus d&#39;informations sur VPAID 2.0, voir [Prise en charge des publicités VPAID](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md).
 
 **Version 1.4.17**
 
@@ -122,13 +122,13 @@ Pour plus d’informations sur VPAID 2.0, voir Prise en charge [des annonces](..
 
 **Version 1.4.13**
 
-**Remarque**: Le module Nielsen a été supprimé de la version TVSDK, TVSDK sera mis à jour prochainement avec un nouveau module d’intégration Nielsen.
+**Remarque** : Le module Nielsen a été supprimé de la version TVSDK, TVSDK sera mis à jour prochainement avec un nouveau module d’intégration Nielsen.
 
 * **Abandon de publicité, chaînement de la marguerite dans la logique de sélection des publicités (Zendesk #3103)**
 
 Pour les publicités VAST (créatives) avec la règle de secours activée, TVSDK traite une publicité avec un type MIME non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
 
-Pour plus d’informations, voir Reprise [publicitaire pour les annonces VAST et VMAP](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
+Pour plus d’informations, voir [Reprise publicitaire pour les annonces VAST et VMAP](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
 
 **Version 1.4.9**
 
@@ -157,14 +157,14 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.4.1.1**
 
-   * ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
+   * Ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
    * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete. La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete.
    * La propriété playhead n’est plus nécessaire lors du suivi des publicités.
    * Prise en charge Ajoutée de l’ID de Visiteur de Marketing Cloud.
 
 * **Intégration du SDK Nielsen**
 
-   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 Nielsen.
+   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 de Nielsen.
 
 **Version 1.4.0**
 
@@ -210,7 +210,7 @@ Cette version de TVSDK a été certifiée avec le support FairPlay pour iOS et t
 
    Cette version de TVSDK inclut la prise en charge de tvOS et a été certifiée pour les flux HLS non chiffrés.
 
-   **Remarque**: Rappelez-vous des consignes de compilation suivantes :
+   **Remarque** : Rappelez-vous des consignes de compilation suivantes :
 
    * La prise en charge de TVSDK tvOs est limitée aux flux chiffrés DRM non Adobes. Vous devez supprimer la référence à drmNativeInterface.framework dans vos paramètres de création tvOS. Les flux chiffrés AES sont toujours pris en charge.
    * Apple exige que toutes les applications Apple TV soient activées pour le bitcode. Vous devez donc activer cet indicateur dans les paramètres de votre projet.
@@ -240,7 +240,7 @@ Comment Type: draft
    * Correction des problèmes de compilation avec TVSDK sur XCode 10. En raison de la configuration requise pour XCode 10, les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale en tant qu’iOS 7.0.
 
 * Billet n° 36321 - Discrétion observée dans la plage de recherche entre l’instance PTMediaPlayer et AVPlayer à l’état &quot;Lecture&quot;.
-* Billet n° 36493 - Prise en charge `libstdc++` sur iOS 12
+* Billet 36493 - `libstdc++` prise en charge sur iOS 12
 
    * Correction des problèmes de compilation avec TVSDK sur iOS 12. Les applications créées à partir de TVSDK pour iOS 1.4.45 nécessitent une cible de déploiement minimale avec iOS 7.0
 
@@ -284,7 +284,7 @@ Comment Type: draft
 
 * (ZD#33815) - Les clients ne peuvent pas mettre à jour leurs règles CRS de hiérarchisation et de normalisation sans avoir à mettre à jour leur application.
 
-   ajouté les API getCRSRulesJsonURL et setCRSRulesJsonURL sur le TVSDK iOS.
+   Ajouté les API getCRSRulesJsonURL et setCRSRulesJsonURL sur le TVSDK iOS.
 
 **Version 1.4.41 (1.4.41.76)**
 
@@ -330,7 +330,7 @@ Comment Type: draft
 * (ZD #31951) - Ecran vierge au sein d’une coupure publicitaire et sans fin de coupure publicitaire.
 
    Correction d’un problème en raison duquel les publicités Facebook VPAID renvoyaient souvent plusieurs blocs CDATA dans un \&amp;lt;AdParameters\&amp;gt; Noeud VAST.
-* (ZD #33336) - TVSDK [iOS] - Les capsules publicitaires ne sont pas remplies, bien que suffisamment de publicités aient été renvoyées par la roue libre.
+* (ZD #33336) - [iOS] TVSDK - Les capsules publicitaires ne sont pas remplies, bien que suffisamment de publicités aient été renvoyées par la roue libre.
 
    Création d’une relation parent-enfant entre la publicité de séquence et la publicité de secours et tri basé sur la séquence et l’index parents.
 
@@ -366,7 +366,7 @@ Comment Type: draft
 
 **Version 1.4.38** (1.4.38.860)
 
-* (ZD #29281) - iOS : ajouter AdSystem et l’ID de création aux demandes CRS
+* (ZD #29281) - iOS : Ajouter AdSystem et l’ID de création aux demandes CRS
 
 Utilisation de l’ID de création et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS
 
@@ -388,7 +388,7 @@ Le événement de métadonnées minutées n’est pas déclenché pour la balise
 
 Problème de lecture lorsque la balise # EXT-X-PLAYLIST-TYPE du flux est définie sur Événement plutôt que VOD
 
-* (ZD #29281) - iOS : ajouter AdSystem et l’ID de création aux demandes CRS
+* (ZD #29281) - iOS : Ajouter AdSystem et l’ID de création aux demandes CRS
 
 Utilisation de Creative Id et d’AdSystem dans la requête CRS en fonction des règles de normalisation CRS.
 
@@ -430,7 +430,7 @@ Correction de plusieurs blocages liés à la synchronisation.
 
 * (ZD# 28481) - Fermeture régulière en raison de l’ajout d’une clé incorrecte à la fin d’une coupure publicitaire pour ces flux FER
 
-Pour un flux FER, la clé avant la coupure publicitaire est insérée après la fin de la coupure publicitaire. Ce problème a été résolu en ajoutant la *dernière clé* affichée à la fin de la coupure publicitaire.
+Pour un flux FER, la clé avant la coupure publicitaire est insérée après la fin de la coupure publicitaire. Ce problème a été résolu en ajoutant la *dernière clé vue* à la fin de la coupure publicitaire.
 
 **Version 1.4.33** (1.4.33.803 pour iOS 6.0+)
 
@@ -444,7 +444,7 @@ Ce problème a été résolu en mettant à jour le chargement des ressources afi
 
 * (ZD# 27460) Premier appel publicitaire - POST à cdn.auditude<span></span>.com renvoyant le 403.
 
-Le nouveau compte CDN ne peut pas gérer une demande CDN POST. Ce problème a été résolu en mettant à jour le code afin que la demande `cdn.auditude.com` d’annonce soit GET plutôt que POST.
+Le nouveau compte CDN ne peut pas gérer une demande CDN POST. Ce problème a été résolu en mettant à jour le code pour que la demande d&#39;annonce `cdn.auditude.com` soit GET et non POST.
 
 **Version 1.4.32** (1.4.32.792 pour iOS 6.0+)
 
@@ -460,7 +460,7 @@ Le problème a été résolu en plaçant la balise au début de la liste de lect
 
 * (ZD# 24528) Mise en oeuvre des mesures d’utilisation du SDK TVSDK pour la facturation
 
-Pour plus d’informations, voir Mesures [de](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md)facturation.
+Pour plus d’informations, voir [Mesures de facturation](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
 
 * (ZD# 24642) Prise en charge de l’image pour TVSDK
 
@@ -512,13 +512,13 @@ Lorsque le dernier début de coupure publicitaire du VMAP tombe avant que la dur
 
    * (ZD #22351) VHL - Analyses : Durée de la ressource vidéo en direct
 
-Ce problème a été résolu en ajoutant l’API assetDuration pour `PTVideoAnalyticsTrackingMetadata` mettre à jour la durée de la ressource pour les flux en direct/linéaires et fournir une logique de vérification du flux en direct.
+Ce problème a été résolu en ajoutant l’API assetDuration à `PTVideoAnalyticsTrackingMetadata` pour mettre à jour la durée de la ressource pour les flux en direct/linéaires et fournir une logique de vérification du flux en direct.
 
 * (ZD# 22675) VHL - Analyses : Mise à jour de la durée des fichiers vidéo en direct
 
 Ce problème est identique à celui du ZD #22351.
 
-* (ZD #25908) VHL - Analyses : événement de pulsation d’Adobe
+* (ZD #25908) VHL - Analyses : Événement de pulsation d’Adobe
 
 Ce problème a été résolu en mettant à jour l’implémentation pour utiliser la dernière version de VHL pour iOS version 1.5.9 afin d’améliorer la stabilité et les performances.
 
@@ -746,7 +746,7 @@ Ce problème a été résolu en fournissant un événement de temporisation (req
 Ce problème a été résolu en permettant à l&#39;application de s&#39;abonner à EXT-X-PROGRAMME-DATE-TIME sur les flux en direct.
 
 * (ZD #19459) - Blocage lors de la préparation d’un fichier audio alternatif avec PTMediaPlayerItem prepareAudioOptionsWithAVMediaSelectionOptions
-* (ZD #19460) - Blocage - [PTMediaPlayerItem prepareSubtitlesOptionsWithAVMediaSelectionOptions:nonForcedOptions :]
+* (ZD #19460) - Blocage - [PTMediaPlayerItem prepareSubtitlesOptionsWithAVMediaSelectionOptions:nonForcedOptions:]
 
 Ce problème est le même que Zendesk #19459.
 
@@ -790,13 +790,13 @@ Ce problème a été résolu en optimisant la réécriture de la liste de lectur
 
 Ce problème a été résolu en mettant à jour l’implémentation de l’API PTMediaPlayer.drmManager pour récupérer DRMManager depuis la structure DRM.
 
-**Version 1.4.18** (1.4.18.557) pour iOS 6.0+
+**Version 1.4.18** ( 1.4.18.557) pour iOS 6.0+
 
 * (ZD #18844) Suivi du curseur de lecture pour le contenu en direct dans le lecteur iOS.
 
 Ce problème a été résolu en permettant aux applications de définir leur propre valeur de curseur de lecture.
 
-* Zendesk #18518 - Si le nom de la vidéo n’est pas spécifié, le nom de TVSDK est défini par défaut sur Lecteur *PSDK.*
+* Zendesk #18518 - Si le nom de la vidéo n’est pas spécifié, le nom du SDK TVSDK prend par défaut la valeur *Lecteur PSDK.*
 
 Ce problème a été résolu en supprimant la valeur par défaut du nom du lecteur.
 
@@ -826,7 +826,7 @@ Les flux jetés d’Akamai nécessitent l’envoi de cookies sur les requêtes d
 
 Tous les avertissements ont été résolus.
 
-**Remarque**: Des bibliothèques compatibles tvOS ont été ajoutées pour TVSDK.
+**Remarque** : Des bibliothèques compatibles tvOS ont été ajoutées pour TVSDK.
 
 **Version 1.4.16** (1.4.16.1454)
 
@@ -856,7 +856,7 @@ Ce problème a été résolu en prenant en charge la carte des polices CTS Andro
 
 **Version 1.4.15** (1.4.15.512) pour iOS 6.0+
 
-**Remarque**: Le module Nielsen a été supprimé de la version TVSDK, mais TVSDK sera mis à jour prochainement avec un nouveau module d’intégration Nielsen.
+**Remarque** : Le module Nielsen a été supprimé de la version TVSDK, mais TVSDK sera mis à jour prochainement avec un nouveau module d’intégration Nielsen.
 
 * (ZD #2228) - Erreur renvoyée en raison de la récupération du manifeste non disponible dans MediaPlayerNotification.
 
@@ -876,11 +876,11 @@ Réinitialisation autorisée de l’outil de suivi de pulsation vidéo pendant u
 
 Correction d’un blocage intermittent en raison de problèmes d’accès simultané.
 
-**Version 1.4.13** (iOS 6.0+)
+**Version 1.4.13**  (iOS 6.0+)
 
 * (ZD #3304) - Macro VAST 3.0 `[ERRORCODE]` non renseignée
 
-   * Le code d’erreur 400 sera affiché si la publicité intégrée comporte un élément créatif incorrect.
+   * Le code d&#39;erreur 400 sera affiché si la ligne est insérée   la publicité a un mauvais élément créatif.
    * `[ERRORCODE]` sera codée en URL.
 
 * (ZD #3865) Intégration de la pulsation avec les annonces IMA
@@ -984,7 +984,7 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 * Il est possible que la vidéo de rotation sous licence ne soit pas lue sous iOS 11 et qu’elle soit lue correctement sous iOS 9.x et iOS 10.x.
 * Dans la prise en charge de VPAID 2.0, si la lecture est principale sur AirPlay, les publicités VPAID sont ignorées.
 * Le fichier drmNativeInterface.framework ne se lie pas correctement lorsque la cible minimale est définie sur iOS7 (ou version ultérieure).\
-   Solution : Spécifiez explicitement le `libstdc++6`.  bibliothèque dylib comme suit : Accédez à Cible->Build Phases->Link Binary With Libraries et ajoutez `libstdc++.6.dylib`.
+   Solution : Spécifiez explicitement `libstdc++6`.  bibliothèque dylib comme suit : Accédez à Cible->Build Phases->Link Binary With Libraries et ajoutez `libstdc++.6.dylib`.
 
 * La publicité post-restauration n&#39;est pas insérée pour remplacer l&#39;API.
 * La recherche d’une coupure publicitaire (sans en sortir) génère un duplicata et un début de notification de coupure publicitaire.
@@ -994,4 +994,4 @@ Prise en charge de la prise en charge des URL de suivi des coupures publicitaire
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète sur la page de formation et d’assistance [](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consultez la documentation d’aide complète à la [page Apprentissage et support Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
