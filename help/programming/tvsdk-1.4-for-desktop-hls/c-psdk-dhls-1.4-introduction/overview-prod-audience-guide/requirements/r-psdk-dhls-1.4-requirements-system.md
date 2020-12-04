@@ -6,11 +6,14 @@ title: Configuration système et logiciel requise
 uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
 source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
 
-# Configuration système et logiciel requise{#system-and-software-requirements}
+# Configuration requise pour le système et les logiciels{#system-and-software-requirements}
 
 TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste, la gestion des droits numériques et les versions logicielles.
 
