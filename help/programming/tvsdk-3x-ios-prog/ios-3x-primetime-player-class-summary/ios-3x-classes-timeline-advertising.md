@@ -78,13 +78,14 @@ Ces classes fournissent des informations sur les publicités qui surviennent dan
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> , classe <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> , protocole
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> Classe qui gère la partie de résolution des publicités dans le processus de prise de décision des publicités Adobe Primetime. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
-   <td colname="2"> Protocole décrivant les méthodes que le résolveur de contenu personnalisé ( <span class="codeph"> PTContentResolver</span> ) doit utiliser pour communiquer au délégué l’état de la résolution du contenu. </td> 
+   <td colname="2"> Protocole décrivant les méthodes que le résolveur de contenu personnalisé ( <span class="codeph"> PTContentResolver</span> ) doit utiliser pour communiquer au délégué l'état de la résolution du contenu. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 
