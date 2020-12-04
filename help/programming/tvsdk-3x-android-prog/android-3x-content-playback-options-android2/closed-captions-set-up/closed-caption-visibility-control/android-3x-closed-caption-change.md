@@ -6,6 +6,9 @@ title: Autoriser les utilisateurs à modifier le suivi des légendes
 uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 
-1. Créez un bouton pour modifier le suivi des sous-titres fermés.
+1. Créez un bouton pour modifier le suivi de la légende fermée.
 
    ```xml
    <Button 
