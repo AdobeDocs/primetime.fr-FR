@@ -6,6 +6,9 @@ title: Implémentation de rappels DRM
 uuid: a54c5ec2-299f-47b0-b65b-eed5656ab6aa
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Les nouvelles API suivantes vous permettent de définir des rappels DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Vous pouvez définir une fonction de rappel (par exemple `parseContentIdCallback`) pour analyser l’ID de contenu et le définir sur `drmManager` à l’aide de l’ `setParseContentIdCallback` API.
+Vous pouvez définir une fonction de rappel (par exemple, `parseContentIdCallback`) pour analyser l’ID de contenu et le définir sur `drmManager` à l’aide de l’API `setParseContentIdCallback`.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +42,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Vous pouvez définir une fonction de rappel (par exemple `onCertificateResponseCallback`) pour traiter une réponse de certificat texte et définir la fonction sur `drmManager` à l’aide de l’ `setCertificateResponseCallback` API. Vous pouvez définir `setCertificateResponseCallback` pour remplacer le comportement par défaut. Si, par exemple, vous avez un `certificateResponseType` autre type que `ArrayBuffer`celui-ci, vous pouvez utiliser ce rappel pour convertir la réponse au certificat en `ArrayBuffer` type.
+Vous pouvez définir une fonction de rappel (par exemple, `onCertificateResponseCallback`) pour traiter une réponse de certificat de texte et définir la fonction sur `drmManager` à l&#39;aide de l&#39;API `setCertificateResponseCallback`. Vous pouvez définir `setCertificateResponseCallback` pour remplacer le comportement par défaut. Par exemple, si vous avez `certificateResponseType` qui n&#39;est pas `ArrayBuffer`, vous pouvez utiliser ce rappel pour convertir la réponse du certificat au type `ArrayBuffer`.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -121,7 +124,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-Dans les données de protection, le nouveau **[!UICONTROL certificateResponseType]** champ est utilisé pour définir le type de réponse du certificat. Voici un exemple de données de protection :
+Dans les données de protection, le nouveau champ **[!UICONTROL certificateResponseType]** est utilisé pour définir le type de réponse du certificat. Voici un exemple de données de protection :
 
 ```js
 { 
@@ -137,4 +140,4 @@ Dans les données de protection, le nouveau **[!UICONTROL certificateResponseTyp
 }
 ```
 
-L’utilisation du `certificateResponseType` champ est facultative. S’il n’est pas utilisé, la valeur est supposée être `ArrayBuffer`.
+L&#39;utilisation du champ `certificateResponseType` est facultative. Si elle n’est pas utilisée, la valeur est supposée être `ArrayBuffer`.
