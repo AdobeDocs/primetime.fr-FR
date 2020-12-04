@@ -6,6 +6,9 @@ title: S’abonner à des balises publicitaires personnalisées
 uuid: 208f61f4-dc33-4363-aa71-878458740a8d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 Le navigateur TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont détectés dans le fichier MPD (Media Presentation Description).
 
 Vous devez vous abonner aux balises avant les débuts de lecture.
-Pour vous abonner à des balises, définissez un vecteur contenant les noms de balise personnalisés sur la `subscribedTags` propriété. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, définissez un vecteur contenant les noms de balises publicitaires personnalisées sur la `adTags` propriété.
+Pour vous abonner à des balises, définissez un vecteur contenant les noms de balise personnalisés sur la propriété `subscribedTags`. Si vous devez également modifier les balises publicitaires utilisées par le générateur d’opportunités par défaut, définissez un vecteur contenant les noms de balises publicitaires personnalisées sur la propriété `adTags`.
 
 Pour vous abonner à des balises personnalisées :
 
@@ -31,18 +34,18 @@ Pour vous abonner à des balises personnalisées :
    var subscribeTags = [];
    ```
 
-1. Ajouter les noms des balises personnalisées à ce vecteur.
+1. Ajoutez les noms des balises personnalisées sur ce vecteur.
 
    >[!IMPORTANT]
    >
-   >Si vous traitez de flux HLS, pensez à inclure le `#` préfixe.
+   >Si vous traitez de flux HLS, n&#39;oubliez pas d&#39;inclure le préfixe `#`.
 
    ```js
    subscribeTags.push("urn:mpeg:dash:event:2012"); 
    subscribeTags.push("urn:com:adobe:dpi:simple:2015"); 
    ```
 
-1. Affectez le vecteur mis à jour à la `mediaPlayerItemConfig.subscribeTags` propriété.
+1. Affectez le vecteur mis à jour à la propriété `mediaPlayerItemConfig.subscribeTags`.
 
    ```js
    mediaPlayerItemConfig.subscribeTags = subscribeTags;
@@ -54,13 +57,13 @@ Pour vous abonner à des balises personnalisées :
    var adTags= [];
    ```
 
-1. Ajouter le nom de la balise publicitaire personnalisée à ce vecteur.
+1. Ajoutez le nom de la balise d&#39;annonce personnalisée sur ce vecteur.
 
    ```js
    adTags.push("urn:com:adobe:dpi:simple:2015");
    ```
 
-1. Affectez le vecteur mis à jour à la `mediaPlayerItemConfig.adTags` propriété.
+1. Affectez le vecteur mis à jour à la propriété `mediaPlayerItemConfig.adTags`.
 
    ```js
    mediaPlayerItemConfig.adTags = adTags;
