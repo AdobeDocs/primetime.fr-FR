@@ -6,18 +6,21 @@ title: Contrôler le volume
 uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Contrôler le volume{#provide-volume-control}
+# Fournir un contrôle de volume{#provide-volume-control}
 
 Vous pouvez configurer un contrôle d&#39;interface utilisateur pour le volume sonore.
 
 1. Attendez que l’instance MediaPlayer ait un état valide pour cette commande.
 
    Tout état sauf RELEASED est valide.
-1. Appelez la méthode de définition de volume sur l&#39; `MediaPlayer` instance pour définir le volume audio.
+1. Appelez la méthode de définition de volume sur l&#39;instance `MediaPlayer` pour définir le volume audio.
 
    ```
    public function set volume(value:Number):void
@@ -47,7 +50,8 @@ Vous pouvez configurer un contrôle d&#39;interface utilisateur pour le volume s
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">Résultat s’il est compris entre 0 et 1 </li> 
       <li id="li_03B7F30662554F299320040CAC2DEB7A">1 si le résultat est supérieur à 1 </li> 
-      </ul> <p>Conseil :  Cette logique gère les valeurs fournies par les clients en fonction des versions antérieures des <span class="codeph">expressions/primetime-sdk-name</span>, où les valeurs de volume variaient de 0 à 100. </p> </td> 
+      </ul> <p>Conseil :  Cette logique gère les valeurs fournies par les clients en fonction des versions antérieures de la variable 
+      <span class="codeph">phrases/primetime-sdk-name</span>, où les valeurs de volume variaient de 0 à 100. </p> </td> 
    </tr> 
    </tbody> 
    </table>
