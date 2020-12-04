@@ -6,6 +6,9 @@ title: S’abonner à des balises personnalisées
 uuid: f1a934bd-772e-435f-84b5-cb48db23c06e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +19,11 @@ TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois q
 
 Avant les débuts de lecture, vous devez vous abonner aux balises . Pour être averti des balises personnalisées dans les manifestes HLS :
 
-1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` entrer `MediaPlayerItemConfig`.
+1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` dans `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Vous devez inclure le `#` préfixe lors de l’utilisation des flux HLS.
+   >Vous devez inclure le préfixe `#` lorsque vous utilisez des flux HLS.
 
    Par exemple :
 
