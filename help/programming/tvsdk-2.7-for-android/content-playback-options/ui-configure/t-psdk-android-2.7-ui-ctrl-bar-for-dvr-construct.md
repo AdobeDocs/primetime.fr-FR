@@ -5,12 +5,15 @@ seo-title: Construire une barre de contrôle améliorée pour le magnétoscope n
 title: Construire une barre de contrôle améliorée pour le magnétoscope numérique
 uuid: 71bfceef-baf0-40ad-a7a0-fa2e22d24e31
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# Construire une barre de contrôle améliorée pour le magnétoscope numérique {#construct-a-control-bar-enhanced-for-dvr}
+# Construire une barre de contrôle améliorée pour DVR {#construct-a-control-bar-enhanced-for-dvr}
 
 Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du DVR pour la diffusion VOD et en direct. Le support DVR inclut le concept d&#39;une fenêtre pouvant être recherchée et le point de vie du client.
 
@@ -29,7 +32,7 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. Pour mettre en oeuvre une barre de contrôle avec prise en charge du magnétoscope numérique, suivez les étapes de la section [Affichage d’une barre de défilement de recherche avec la position de lecture actuelle...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) avec les différences suivantes :
+1. Pour mettre en oeuvre une barre de contrôle avec prise en charge du magnétoscope numérique, suivez les étapes décrites dans [Afficher une barre de défilement de recherche avec la position de lecture actuelle...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) avec les différences suivantes :
 
    * Vous pouvez mettre en oeuvre une barre de contrôle qui est mappée uniquement pour la plage recherchée et non pour la plage de lecture.
 
@@ -37,8 +40,8 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
    * Vous pouvez mettre en oeuvre une barre de contrôle mappée pour la plage de lecture, mais qui affiche également la plage de valeurs recherchée.
 
       Pour une barre de contrôle :
-   1. Ajouter une incrustation sur la barre de contrôle qui représente la plage de lecture.
-   1. Lorsque l’utilisateur début effectuer une recherche, vérifiez si la position de la recherche souhaitée se trouve dans la plage recherchée à l’aide de `MediaPlayer.getSeekableRange`.
+   1. Ajoutez une incrustation sur la barre de contrôle qui représente la plage de lecture.
+   1. Lorsque l&#39;utilisateur début effectuer une recherche, vérifiez si la position de recherche souhaitée se trouve dans la plage recherchée à l&#39;aide de `MediaPlayer.getSeekableRange`.
 
       Par exemple :
 
@@ -49,7 +52,7 @@ Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du D
       }
       ```
 
-      Vous pouvez également choisir d’atteindre le point d’activation du client à l’aide de la `MediaPlayer.LIVE_POINT` constante.
+      Vous pouvez également choisir d’accéder au point d’activation du client à l’aide de la constante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
