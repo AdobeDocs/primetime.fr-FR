@@ -13,13 +13,13 @@ ht-degree: 1%
 ---
 
 
-# Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles{#select-a-current-caption-track-from-among-available-tracks}
+# Sélectionnez une piste de légende actuelle parmi les pistes disponibles{#select-a-current-caption-track-from-among-available-tracks}
 
 Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d&#39;autres sont devenues disponibles.
 
 >[!TIP]
 >
->Les légendes fermées sont toujours activées. Toutes les pistes de sous-titrage par défaut sont considérées comme présentes. Les pistes par défaut (telles que CC1-CC4, CS1-CS6) sont énumérées dans `ClosedCaptionsTrack.DefaultCCTypes`. Lorsque la lecture commence, TVSDK recherche l’activité sur l’un de ces canaux. S’il détecte l’activité, il définit la `isActive` méthode de ce suivi et répartit le `MediaPlayer.PlaybackEventListener.onUpdated` événement.
+>Les légendes fermées sont toujours activées. Toutes les pistes de sous-titrage par défaut sont considérées comme présentes. Les pistes par défaut (telles que CC1-CC4, CS1-CS6) sont énumérées dans `ClosedCaptionsTrack.DefaultCCTypes`. Lorsque la lecture commence, TVSDK recherche l’activité sur l’un de ces canaux. S&#39;il détecte l&#39;activité, il définit la méthode `isActive` pour cette piste et distribue le événement `MediaPlayer.PlaybackEventListener.onUpdated`.
 
 1. Attendez que le lecteur multimédia soit au moins à l’état PRÉPARÉ.
 1. Prêtez attention aux événements suivants :
