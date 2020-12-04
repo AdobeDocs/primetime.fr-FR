@@ -6,11 +6,14 @@ title: Classes des générateurs de chronologie
 uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '214'
+ht-degree: 0%
 
 ---
 
 
-# Classes des générateurs de chronologie{#timeline-generators-classes}
+# Générateurs de chronologie, classes{#timeline-generators-classes}
 
 Ces classes permettent de détecter les opportunités de placement de contenu dans une chronologie, telles que les publicités.
 
