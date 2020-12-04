@@ -6,11 +6,14 @@ title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponi
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#work-with-closed-captions}
+# Aperçu {#work-with-closed-captions}
 
 Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
 
@@ -24,5 +27,5 @@ TVSDK prend en charge le rendu des formats suivants :
 Vous pouvez :
 
 * Sélectionnez une piste de sous-titrage disponible pour être la piste actuelle et écoutez les événements qui indiquent d&#39;autres pistes disponibles.
-* Activez ou désactivez le sous-titrage (visible ou non visible) à l’aide de l’ `MediaPlayer` interface.
-* Sélectionnez des options de mise en forme qui déterminent le mode de rendu des sous-titres par le moteur vidéo sous-jacent. Utilisez l’ `MediaPlayerItem` interface pour sélectionner des formats tels que la police ou la couleur de la police.
+* Activez ou désactivez le sous-titrage fermé (visible ou non visible) à l’aide de l’interface `MediaPlayer`.
+* Sélectionnez des options de mise en forme qui déterminent le mode de rendu des sous-titres par le moteur vidéo sous-jacent. Utilisez l&#39;interface `MediaPlayerItem` pour sélectionner des formats tels que la police ou la couleur de la police.
