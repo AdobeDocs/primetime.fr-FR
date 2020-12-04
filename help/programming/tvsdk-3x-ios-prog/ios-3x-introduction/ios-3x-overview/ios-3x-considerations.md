@@ -21,7 +21,7 @@ Pour utiliser TVSDK de manière efficace, vous devez prendre en compte certains 
 
 Rappelez-vous des informations suivantes lorsque vous utilisez TVSDK :
 
-* adobe primetime ne fonctionne pas sur les simulateurs iOS.
+* Adobe Primetime ne fonctionne pas sur les simulateurs iOS.
 
    Vous devez utiliser des périphériques réels pour les tests.
 
