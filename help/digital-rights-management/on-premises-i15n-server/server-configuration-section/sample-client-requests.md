@@ -4,6 +4,9 @@ title: Exemples de requêtes client
 uuid: 330d5e3c-1711-4375-bd11-e7702f0cde31
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 1%
 
 ---
 
