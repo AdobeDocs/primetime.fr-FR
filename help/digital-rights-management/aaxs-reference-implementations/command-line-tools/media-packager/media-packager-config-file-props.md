@@ -4,11 +4,14 @@ title: Propriétés du fichier de configuration
 uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 0%
 
 ---
 
 
-# Propriétés du fichier de configuration {#configuration-file-properties}
+# Propriétés de fichier de configuration {#configuration-file-properties}
 
 Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés de Media Packager. Le fichier de configuration spécifie les propriétés suivantes. Pour les noms de propriété qui incluent* n*, *n* représente un entier commençant par 1 et augmentant pour chaque instance de la propriété.
 
@@ -30,7 +33,7 @@ Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry ">Indique si les données de script doivent être chiffrées dans les fichiers FLV. <i class="+ topic/ph hi-d/i ">Les balises de données de script onMetaData</i> et <i class="+ topic/ph hi-d/i ">onXMP</i> ne sont jamais chiffrées, même si cette option est activée. </td> 
+   <td colname="2" class="- topic/entry ">Indique si les données de script doivent être chiffrées dans les fichiers FLV. <i class="+ topic/ph hi-d/i ">Les balises de données </i> onMetaData et  <i class="+ topic/ph hi-d/i "></i> onXMPscript ne sont jamais chiffrées, même si cette option est activée. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
@@ -42,11 +45,11 @@ Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fichier de certificat du serveur de licences utilisé pour chiffrer la clé. La propriété <span class="codeph"> encrypt.keys.asymmetric.certfile</span> spécifie un fichier qui contient le certificat uniquement (le format PEM ou DER est acceptable). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fichier de certificat du serveur de licences utilisé pour chiffrer la clé. La propriété <span class="codeph"> encrypt.keys.asymmetric.certfile</span> spécifie un fichier contenant uniquement le certificat (le format PEM ou DER est acceptable). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Cette propriété est utilisée à plusieurs reprises pour créer une liste de stratégies à appliquer au contenu. <span class="codeph"> n</span> est un entier dont la valeur est supérieure ou égale à 1. Le client utilisera la première instance par défaut. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Cette propriété est utilisée à plusieurs reprises pour créer une liste de stratégies à appliquer au contenu. <span class="codeph"> </span> contient un entier dont la valeur est supérieure ou égale à 1. Le client utilisera la première instance par défaut. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -58,11 +61,11 @@ Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fichier PKCS12 contenant les informations d’identification du gestionnaire de package pour la signature de contenu. Le <span class="codeph"> fichier encrypt.sign.certfile</span> doit faire référence à un fichier <span class="filepath"> .pfx</span> contenant un certificat et une clé privée. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fichier PKCS12 contenant les informations d’identification du gestionnaire de package pour la signature de contenu. <span class="codeph"> encrypt.sign.certfile</span> doit faire référence à un fichier <span class="filepath"> .pfx</span> contenant un certificat et une clé privée. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">mot de passe utilisé pour protéger le fichier spécifié par <span class="codeph"> encrypt.sign.certfile</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Mot de passe utilisé pour protéger le fichier spécifié par <span class="codeph"> encrypt.sign.certfile</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.minServerVersion</span> </td> 
@@ -70,7 +73,7 @@ Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si une stratégie <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> requiert l’enregistrement de domaine auprès d’un serveur qui utilise un certificat de transport différent de celui spécifié dans <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, le certificat de transport de domaine doit être fourni. </p> <p class="- topic/p ">Cette propriété spécifie un fichier contenant uniquement le certificat (le format PEM ou DER est acceptable). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si une stratégie <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> nécessite l'enregistrement du domaine avec un serveur qui utilise un certificat de transport différent de celui spécifié dans <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, le certificat de transport de domaine doit être fourni. </p> <p class="- topic/p ">Cette propriété spécifie un fichier contenant uniquement le certificat (le format PEM ou DER est acceptable). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
@@ -82,7 +85,7 @@ Avant d’exécuter Media Packager, spécifiez des valeurs pour les propriétés
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rotation.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Séquence de clés pivotées utilisées pour chiffrer le contenu lorsque la rotation des clés est activée. Si aucune clé n’est spécifiée, les clés sont générées de manière aléatoire. Les clés doivent avoir une longueur de 16 octets et être spécifiées en tant que valeurs hexadécimales. </p> <p class="- topic/p ">L’espace entre les valeurs hexadécimales est facultatif. <i class="+ topic/ph hi-d/i ">n</i> doit augmenter monotoniquement, en commençant par 1. Lorsque plusieurs clés sont spécifiées, les clés sont parcourues dans l'ordre indiqué. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Séquence de clés pivotées utilisées pour chiffrer le contenu lorsque la rotation des clés est activée. Si aucune clé n’est spécifiée, les clés sont générées de manière aléatoire. Les clés doivent avoir une longueur de 16 octets et être spécifiées en tant que valeurs hexadécimales. </p> <p class="- topic/p ">L’espace entre les valeurs hexadécimales est facultatif. <i class="+ topic/ph hi-d/i "></i> ne doit pas augmenter monotoniquement, en commençant par 1. Lorsque plusieurs clés sont spécifiées, les clés sont parcourues dans l'ordre indiqué. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rotation.interval</span> </td> 
