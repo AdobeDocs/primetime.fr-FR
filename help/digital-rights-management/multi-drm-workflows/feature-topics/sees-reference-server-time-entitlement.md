@@ -6,19 +6,22 @@ title: Droits basés sur le temps du service de référence
 uuid: dd937299-a271-49a9-9b26-eec16f1484df
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
 
 
-# Service de référence : Droits basés sur le temps {#reference-service-time-based-entitlement}
+# Service de référence : Droit fondé sur le temps {#reference-service-time-based-entitlement}
 
 Consultez le site SEES pour savoir comment activer un service de droits temporels à l&#39;aide d&#39;ExpressPlay.
 
-Le SEES reçoit une demande de droits (voir la section API publique) du client. Le serveur SEES recherche le CEK et le IV en fonction du `contentID`, ajoute le `expirationTime`et transfère la requête au serveur ExpressPlay. Le jeton final ExpressPlay est lié au temps. Voir le diagramme de séquence de droits temporels ci-dessous. ![](assets/fees-time-based.png)
+Le SEES reçoit une demande de droits (voir la section API publique) du client. Le serveur SEES recherche le CEK et IV en fonction de `contentID`, ajoute le `expirationTime` et transfère la requête au serveur ExpressPlay. Le jeton final ExpressPlay est lié au temps. Voir le diagramme de séquence de droits temporels ci-dessous. ![](assets/fees-time-based.png)
 
 **Tableau 1 : Paramètres de licence envoyés par le client**
 
-| Paramètre de Requête | Description | Obligatoire |
+| Paramètre de requête | Description | Obligatoire |
 |---|---|---|
 | `contentKey` | Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement du contenu | Oui |
 | `iv` | Une représentation de chaîne hexadécimale de 16 octets du chiffrement de contenu IV | Oui |
@@ -29,7 +32,7 @@ Le SEES reçoit une demande de droits (voir la section API publique) du client. 
 <table id="table_E979FAD7A61A4832A46667301939FAEB">  
  <thead> 
   <tr> 
-   <th class="entry"> Paramètre de Requête </th> 
+   <th class="entry"> Paramètre de requête </th> 
    <th class="entry"> Description </th> 
    <th class="entry"> Obligatoire ? </th> 
   </tr> 
@@ -37,7 +40,7 @@ Le SEES reçoit une demande de droits (voir la section API publique) du client. 
  <tbody> 
   <tr> 
    <td><span class="codeph"> expirationTime</span> </td> 
-   <td>Heure d’expiration de ce jeton. Cette valeur doit être une chaîne au format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" type="external"> RFC 3339</a> date/heure dans l'indicateur de zone "Z" ("heure Zulu"), ou un entier précédé d'un signe "+". Un exemple de date/heure RFC 3339 est le <span class="codeph"> 2006-04-14T12:01:10Z</span>. <p>Si la valeur est une chaîne au format date/heure RFC 3339, elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un entier précédé d’un signe "+", le jeton est interprété comme un nombre relatif de secondes après l’émission. Par exemple, <span class="codeph"> +60</span> indique une minute. La durée de vie maximale (et par défaut, si elle n’est pas spécifiée) du jeton est de 30 jours. Utilisez le formulaire codé "%2B" lors de la spécification du signe "+". </p> </td> 
+   <td>Heure d’expiration de ce jeton. Cette valeur doit être une chaîne au format de date/heure <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" type="external"> RFC 3339</a> dans l'indicateur de zone 'Z' ("heure Zulu"), ou un entier précédé d'un signe '+'. Un exemple de date/heure RFC 3339 est <span class="codeph"> 2006-04-14T12:01:10Z</span>. <p>Si la valeur est une chaîne au format date/heure RFC 3339, elle représente une date/heure d’expiration absolue pour le jeton. Si la valeur est un entier précédé d’un signe "+", le jeton est interprété comme un nombre relatif de secondes après l’émission. Par exemple, <span class="codeph"> +60</span> spécifie une minute. La durée de vie maximale (et par défaut, si elle n’est pas spécifiée) du jeton est de 30 jours. Utilisez le formulaire codé "%2B" lors de la spécification du signe "+". </p> </td> 
    <td> Non </td> 
   </tr> 
  </tbody> 
