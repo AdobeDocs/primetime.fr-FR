@@ -5,7 +5,10 @@ seo-title: Insertion partielle de coupures publicitaires
 title: Insertion partielle de coupures publicitaires
 uuid: 799acdd8-fbb9-43b4-955a-3f56825d1e87
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Par exemple, si un utilisateur se joint au milieu d’une coupure publicitaire d
 
 Les suivis publicitaires pour la publicité partiellement lue (la deuxième publicité) ne sont pas déclenchés. Dans l’exemple ci-dessus, seul le suivi de la troisième publicité est déclenché.
 
-## Comportement avec pré-lecture {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
+## Comportement avec le paramètre preroll {#section_7DFBFB12E63343D1A0C614F0CF9F1714}
 
 La fonction fonctionne lorsqu’une publicité preroll est lue avec du contenu en direct. La lecture du flux s’effectue à partir du point de production après la fin de la publicité preroll.
 
