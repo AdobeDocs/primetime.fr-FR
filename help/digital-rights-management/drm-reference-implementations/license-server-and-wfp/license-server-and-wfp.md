@@ -36,21 +36,21 @@ Après avoir installé Tomcat et MySQL, contactez l’Adobe pour obtenir les inf
 >
 >La création du serveur de licences n’est nécessaire que si vous avez l’intention de modifier le code source. À des fins d&#39;évaluation, vous pouvez simplement utiliser les fichiers WAR tels qu&#39;expédiés.
 
-Le serveur de licences d’implémentation de référence comprend l’ensemble du code source du serveur de licences ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), ainsi qu’un script de version Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) avec lequel vous pouvez personnaliser le serveur de licences en fonction de vos besoins professionnels.
+Le serveur de licences d’implémentation de référence comprend l’ensemble du code source du serveur de licences ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\src/`), ainsi qu’un script de configuration Ant ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/build-refimpl.xml`) avec lequel vous pouvez personnaliser le serveur de licences en fonction de vos besoins professionnels.
 
 1. Modifiez le script de génération Ant pour spécifier les emplacements de votre SDK DRM Primetime, Tomcat, MySQL et Log4J.
 
-   Ouvrez le [!DNL build-refimpl.xml] fichier dans un éditeur de texte et définissez les valeurs de propriété suivantes :
+   Ouvrez le fichier [!DNL build-refimpl.xml] dans un éditeur de texte et définissez les valeurs de propriété suivantes :
 
    * `sdkdir`
    * `tomcatdir`
    * `mysqldir`
    * `log4jdir`
 
-1. Exécutez le script de génération Ant avec la `all` propriété, dans le répertoire où se trouve le script de génération Ant.
+1. Exécutez le script de génération Ant avec la propriété `all`, dans le répertoire où se trouve le script de génération Ant.
 
    ```
    ant -f build-refimpl.xml all
    ```
 
-   Le script de génération Ant crée un [!DNL refimpl-build/wars] répertoire qui inclut les fichiers WAR du serveur.
+   Le script de génération Ant crée un répertoire [!DNL refimpl-build/wars] qui inclut les fichiers WAR du serveur.
