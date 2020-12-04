@@ -17,4 +17,4 @@ Dans le cadre du processus de création d’un fichier AIR, l’outil ADT (AIR D
 
 >[!NOTE]
 >
->L’ID d’éditeur, utilisé pour l’application de la liste autorisée AIR, n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier de l’application.
+>L’ID d’éditeur, utilisé pour l’application de la liste autorisée AIR, n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le fichier [!DNL application.xml] de l’application.
