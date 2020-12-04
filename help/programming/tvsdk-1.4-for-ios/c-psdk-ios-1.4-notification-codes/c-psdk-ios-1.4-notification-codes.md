@@ -49,7 +49,7 @@ Les objets de notification fournissent des informations relatives à l’état d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> serait associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui provoquait une erreur. </td> 
+   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> sera associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui a provoqué une erreur. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
