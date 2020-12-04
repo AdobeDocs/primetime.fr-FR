@@ -6,11 +6,14 @@ title: Lecture et basculement
 uuid: 511f16b9-2b86-42c1-8d89-09b26534200b
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#playback-and-failover-overview}
+# Aperçu {#playback-and-failover-overview}
 
 La diffusion en continu sur Internet nécessite une connexion constante et stable pour lire un flux à partir d&#39;un serveur distant. Cependant, la variabilité de la connexion Internet ou de la lecture en flux continu d’une visionneuse signifie que la lecture à distance peut ne pas avoir la qualité du média lu localement.
 
