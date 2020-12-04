@@ -6,17 +6,20 @@ title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
 uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
+# Charger une ressource multimédia à l&#39;aide de MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
 MediaPlayerItemLoader permet également de résoudre une ressource multimédia. Cela s’avère utile lorsque vous souhaitez obtenir des informations sur un flux multimédia particulier sans instancier une instance MediaPlayer.
 
-Par le biais de la `MediaPlayerItemLoader` classe, vous pouvez échanger une ressource média pour la ressource correspondante `MediaPlayerItem` sans attacher une vue à une `MediaPlayer` instance, ce qui entraînerait l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d’obtention de l’ `MediaPlayerItem` instance est asynchrone.
+Par l&#39;intermédiaire de la classe `MediaPlayerItemLoader`, vous pouvez échanger une ressource média pour le `MediaPlayerItem` correspondant sans attacher une vue à une instance `MediaPlayer`, ce qui conduirait à l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d&#39;obtention de l&#39;instance `MediaPlayerItem` est asynchrone.
 
-1. Implémentez l’interface de `MediaPlayerItemLoader.LoaderListener` rappel.
+1. Implémentez l&#39;interface de rappel `MediaPlayerItemLoader.LoaderListener`.
 
        Cette interface définit deux méthodes :
    
@@ -26,12 +29,12 @@ Par le biais de la `MediaPlayerItemLoader` classe, vous pouvez échanger une res
 
    * `LoaderListener.onError` fonction de rappel
 
-      TVSDK l’utilise pour informer votre application que les informations demandées sont disponibles sous la forme d’une `MediaPlayerItem` instance transmise en tant que paramètre au rappel.
+      TVSDK l’utilise pour informer votre application que les informations demandées sont disponibles sous la forme d’une instance `MediaPlayerItem` transmise en tant que paramètre au rappel.
 
-1. Enregistrez cette instance à TVSDK en la transmettant comme paramètre au constructeur du `MediaPlayerItemLoader`.
-1. Appel `MediaPlayerItemLoader.load`, transmission d’une instance d’un `MediaResource` objet.
+1. Enregistrez cette instance auprès de TVSDK en la transmettant en tant que paramètre au constructeur de `MediaPlayerItemLoader`.
+1. Appelez `MediaPlayerItemLoader.load`, en transmettant une instance d&#39;un objet `MediaResource`.
 
-   L’URL de l’ `MediaResource` objet doit pointer vers le flux pour lequel vous souhaitez obtenir des informations. Par exemple :
+   L&#39;URL de l&#39;objet `MediaResource` doit pointer vers le flux pour lequel vous souhaitez obtenir des informations. Par exemple :
 
    ```java
    // instantiate the listener interface 
