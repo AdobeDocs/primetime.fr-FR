@@ -17,13 +17,13 @@ Le SDK prend en charge plusieurs méthodes de stockage des informations d’iden
 
 >[!NOTE]
 >
->adobe recommande d’utiliser un module HSM pour une sécurité maximale. Pour plus d&#39;informations, consultez les consignes de déploiement sécurisé d&#39;Accès aux Adobes.
+>Adobe recommande d’utiliser un module HSM pour une sécurité maximale. Pour plus d&#39;informations, consultez les consignes de déploiement sécurisé d&#39;Accès aux Adobes.
 
 >[!NOTE]
 >
 >Depuis Java1.7, Sun Java 64 bits pour Windows ne prend pas en charge les interfaces PKCS11 dont Adobe Access DRM a besoin pour communiquer avec les périphériques HSM. Si vous prévoyez d’utiliser un module HSM, utilisez une version 32 bits de Java ou utilisez un JDK qui prend en charge les interfaces PKCS11 complètes.
 
-Vous pouvez conserver une clé privée sur un module de sécurité matérielle (HSM) et utiliser le SDK pour transmettre les informations d’identification que vous obtenez du HSM. Pour utiliser des informations d’identification stockées sur un HSM, utilisez un fournisseur JCE qui peut communiquer avec un HSM pour obtenir une poignée de la clé privée. Ensuite, transmettez la clé privée, le nom du fournisseur et le certificat contenant la clé publique à `ServerCredentialFactory.getServerCredential()`.
+Vous pouvez conserver une clé privée sur un module de sécurité matérielle (HSM) et utiliser le SDK pour transmettre les informations d’identification que vous obtenez du HSM. Pour utiliser des informations d’identification stockées sur un HSM, utilisez un fournisseur JCE qui peut communiquer avec un HSM pour obtenir une poignée de la clé privée. Ensuite, transmettez à `ServerCredentialFactory.getServerCredential()` le nom de la clé privée, le nom du fournisseur et le certificat contenant la clé publique.
 
 Le fournisseur SunPKCS11 est un exemple de fournisseur JCE qui peut être utilisé pour accéder à une clé privée sur un HSM (voir la documentation Sun Java pour obtenir des instructions sur l’utilisation de ce fournisseur). Certains HSM sont également fournis avec un SDK Java incluant un fournisseur JCE.
 
