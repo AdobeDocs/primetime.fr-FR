@@ -6,17 +6,20 @@ title: Création d’une ressource multimédia
 uuid: 3d03d92f-69b3-4da8-9b16-25a264115ae5
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
 
-# Création d’une ressource multimédia {#create-a-media-resource}
+# Créer une ressource média {#create-a-media-resource}
 
 Pour chaque nouveau contenu vidéo, initialisez une instance MediaResource avec des informations sur le contenu vidéo et chargez la ressource multimédia.
 
 La classe MediaResource représente le contenu à charger par l&#39;instance MediaPlayer.
 
-1. Créez un `MediaResource` en transmettant des informations sur le support au `MediaResource` constructeur.
+1. Créez un `MediaResource` en transmettant des informations sur le média au constructeur `MediaResource`.
 
    <table id="table_DD0D5D9129D54F73881399B9B4FF546A"> 
     <thead> 
@@ -34,13 +37,13 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
       <td colname="col1"><span class="codeph"> type</span> </td> 
       <td colname="col2"> <p>L’une des valeurs de chaîne suivantes correspond au type de fichier indiqué : 
         <ul id="ul_7512E90B7B294EF9BFBA2D68DE678CBB"> 
-        <li id="li_AA84434E84184A3D909552794B425ABD"><span class="codeph"> MP4</span> - Format de fichier multimédia de base ISO (MP4) </li> 
+        <li id="li_AA84434E84184A3D909552794B425ABD"><span class="codeph"> MP4</span>  - Format de fichier multimédia de base ISO (MP4) </li> 
         <li id="li_8A2F3752569344B59EE30303A8393488"><span class="codeph"> HLS</span> - M3U8 </li> 
         </ul> </p> </td> 
       </tr> 
       <tr> 
       <td colname="col1"><span class="codeph"> metadata</span> </td> 
-      <td colname="col2"> <p>Instance de la classe <span class="codeph"> Metadata</span> , qui peut contenir des informations personnalisées sur le contenu à charger. </p> <p>Par exemple, le contenu alternatif ou publicitaire à placer dans le contenu principal. Si vous utilisez la publicité, configurez <span class="codeph"> AuditudeSettings</span> avant d’utiliser ce constructeur. Pour plus d’informations, voir Métadonnées <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> d’insertion</a>d’annonce. </p> </td> 
+      <td colname="col2"> <p>Une instance de la classe <span class="codeph"> Metadata</span>, qui peut contenir des informations personnalisées sur le contenu à charger. </p> <p>Par exemple, le contenu alternatif ou publicitaire à placer dans le contenu principal. Si vous utilisez la publicité, configurez <span class="codeph"> AuditudeSettings</span> avant d’utiliser ce constructeur. Pour plus d’informations, voir <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> Métadonnées Ad Insertion</a>. </p> </td> 
       </tr> 
     </tbody> 
    </table>
@@ -51,7 +54,7 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
    >
    >Pour le contenu vidéo à la demande (VOD) MP4, TVSDK ne prend pas en charge les jeux vidéo, la diffusion en flux continu (ABR) adaptatif (adaptive bit rate), l’insertion de publicités, les sous-titres fermés ou la gestion des droits numériques.
 
-   Le code suivant crée une `MediaResource` instance :
+   Le code suivant crée une instance `MediaResource` :
 
    ```
    // To do: Create metadata here
@@ -63,12 +66,12 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
 
    >[!TIP]
    >
-   >A ce stade, vous pouvez utiliser `MediaResource` des accesseurs (getters) pour examiner le type, l’URL et les métadonnées de la ressource.
+   >A ce stade, vous pouvez utiliser des accesseurs `MediaResource` (getters) pour examiner le type, l&#39;URL et les métadonnées de la ressource.
 
 1. Chargez la ressource multimédia en utilisant l&#39;une des méthodes suivantes :
 
    * Votre instance MediaPlayer.
 
-      Pour plus d’informations, voir [Chargement d’une ressource multimédia dans Media Player](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
-   * R `MediaPlayerItemLoader` Pour plus d’informations, voir [Chargement d’une ressource multimédia dans Media Player](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+      Pour plus d’informations, voir [Chargement d’une ressource multimédia dans MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+   * A `MediaPlayerItemLoader` Pour plus d&#39;informations, voir [Chargement d&#39;une ressource média dans Mediaplayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
 
