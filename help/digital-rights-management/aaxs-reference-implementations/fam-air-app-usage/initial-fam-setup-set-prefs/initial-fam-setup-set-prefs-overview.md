@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Présentation des préférences {#setting-preferences-overview}
+# Présentation des préférences de paramétrage {#setting-preferences-overview}
 
-A l’exception de l’URL de Packager Server, toutes les préférences spécifiées ci-dessous sont stockées dans le [!DNL flashaccess-refimpl-packager.properties] fichier sur le serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Tapez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
+A l’exception de l’URL de Packager Server, toutes les préférences spécifiées ci-dessous sont stockées dans le fichier [!DNL flashaccess-refimpl-packager.properties] du serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Tapez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
 
 >[!NOTE]
 >
