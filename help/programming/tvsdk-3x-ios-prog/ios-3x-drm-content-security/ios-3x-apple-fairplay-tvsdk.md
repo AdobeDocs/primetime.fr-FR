@@ -31,17 +31,17 @@ https://fp-gen.service.expressplay.com
 
 Le chargeur de ressources formate la requête et associe un jeton ExpressPlay qui autorise la lecture à l’URL. Lors de l’acquisition du jeton ExpressPlay, plusieurs options s’offrent à vous. Ces options sont déterminées par la manière dont vous avez compressé votre contenu.
 
-Lorsque vous assemblez votre contenu, le gestionnaire de package insère `skd:` des URL dans votre manifeste M3U8. Après l’ `skd:` entrée, vous pouvez placer n’importe quelle donnée dans le manifeste. Vous pouvez utiliser ces données dans le code de votre application pour compléter les tâches répertoriées ci-dessus. Par exemple, vous pouvez utiliser `skd:{content_id}` cette fonction pour que votre application puisse déterminer l’identifiant du contenu en cours de lecture et demander un jeton pour cet élément de contenu spécifique. Vous pouvez également, par exemple, utiliser `skd:{entitlement_server_url}?cid={content_id}`, de sorte que votre application n’ait pas besoin que l’URL du serveur de droits soit codée en dur.
+Lorsque vous assemblez votre contenu, le gestionnaire de package insère `skd:` URL dans votre manifeste M3U8. Après l&#39;entrée `skd:`, vous pouvez placer n&#39;importe quelle donnée dans le manifeste. Vous pouvez utiliser ces données dans le code de votre application pour compléter les tâches répertoriées ci-dessus. Par exemple, vous pouvez utiliser `skd:{content_id}` afin que votre application puisse déterminer l’identifiant du contenu en cours de lecture et demander un jeton pour cette partie de contenu spécifique. Vous pouvez également, par exemple, utiliser `skd:{entitlement_server_url}?cid={content_id}`, de sorte que votre application n’ait pas besoin de coder en dur l’URL du serveur de droits.
 
-Il se peut que vous n’ayez pas besoin d’informations dans votre `skd:` URL si, lors des débuts de lecture, vous connaissez déjà l’ID de contenu par le biais d’autres canaux. Le deuxième exemple est une solution idéale pour tester votre configuration, mais vous pouvez également l’utiliser dans un environnement de production.
+Il se peut que vous n’ayez pas besoin d’informations dans votre URL `skd:` si, lors des débuts de lecture, vous connaissez déjà l’ID de contenu par le biais d’autres canaux. Le deuxième exemple est une solution idéale pour tester votre configuration, mais vous pouvez également l’utiliser dans un environnement de production.
 
 >[!TIP]
 >
 >Vous déterminez le format de `skd:`.
 
-Votre contenu est obtenu en utilisant le `skd:` protocole, mais votre demande de licence utilise `https:`. Les options les plus courantes pour traiter ces protocoles sont les suivantes :
+Votre contenu est obtenu en utilisant le protocole `skd:`, mais votre demande de licence utilise `https:`. Les options les plus courantes pour traiter ces protocoles sont les suivantes :
 
-* **Test initial de la lecture** de bout en bout Lors de la création d’un pack de contenu, sélectionnez une `skd:` URL. Lors du test de votre application, procurez-vous manuellement une licence auprès d’ExpressPlay et codez en dur la licence (une `https:` URL) et l’URL de contenu dans votre chargeur.
+* **Test initial de la** lecture de bout en boutLors de la création d’un pack de contenu, sélectionnez une  `skd:` URL. Lors du test de votre application, procurez-vous manuellement une licence à partir d’ExpressPlay et codez en dur la licence (une URL `https:`) et l’URL de contenu dans votre chargeur.
 
    Par exemple :
 
@@ -53,7 +53,7 @@ Votre contenu est obtenu en utilisant le `skd:` protocole, mais votre demande de
        ExpressPlayToken={copy_your_token_to_here}";
    ```
 
-* **Dans la plupart des autres cas** , lors de l’assemblage de votre contenu, sélectionnez une `skd:` URL qui représente de manière unique l’identifiant du contenu. Dans votre chargeur, analysez l’ `skd:` URL, envoyez-la à votre serveur pour acquérir un jeton et utilisez le jeton obtenu comme URL.
+* **La plupart des autres** casLors de la création d’un pack de contenu, sélectionnez une  `skd:` URL qui représente de manière unique l’ID du contenu. Dans votre chargeur, analysez l’URL `skd:`, envoyez-la à votre serveur pour acquérir un jeton et utilisez le jeton obtenu comme URL.
 
    Par exemple :
 
@@ -151,7 +151,7 @@ Votre contenu est obtenu en utilisant le `skd:` protocole, mais votre demande de
    }
    ```
 
-## Activation d’Apple FairPlay dans les applications TVSDK {#section_61CFA3C22FE64F52B2C8CE860B72E88B}
+## Activer Apple FairPlay dans les applications TVSDK {#section_61CFA3C22FE64F52B2C8CE860B72E88B}
 
 Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPlay, qui est la solution DRM d’Apple, dans vos applications TVSDK.
 
@@ -159,13 +159,13 @@ Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPl
 
    >[!NOTE]
    >
-   >Assurez-vous de suivre les instructions du Guide *du Programme* de diffusion en flux continu *FairPlay (* FairPlayStreaming_PG.pdf [), qui est inclus dans le SDK](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)FairPlay Server pour le développement d’une applicationcompatible FPS.
+   >Assurez-vous de suivre les instructions du *Guide du Programme de diffusion en flux continu FairPlay* ( *FairPlayStreaming_PG.pdf*), qui est inclus dans le [SDK du serveur FairPlay pour le développement d’une application compatible FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   La méthode `resourceLoader:shouldWaitForLoadingOfRequestedResource` est équivalente à ce qui se trouve dans `AVAssetResourceLoaderDelegate`.
+   La méthode `resourceLoader:shouldWaitForLoadingOfRequestedResource` est équivalente à celle de `AVAssetResourceLoaderDelegate`.
 
    >[!NOTE]
    >
-   >Dans le scénario du serveur de licences ExpressPlay, pour lire le contenu, modifiez le schéma d’URL dans l’URL de demande de licence de serveur ExpressPlay FairPlay de `skd://` à `https://` (ou `https://`).
+   >Dans le scénario du serveur de licences ExpressPlay, pour lire le contenu, modifiez le modèle d’URL dans l’URL de demande de licence de serveur ExpressPlay FairPlay de `skd://` à `https://` (ou `https://`).
 
 1. Enregistrez le chargeur de ressources client *FairPlay* avec `registerPTAVAssetResourceLoader`.
 
