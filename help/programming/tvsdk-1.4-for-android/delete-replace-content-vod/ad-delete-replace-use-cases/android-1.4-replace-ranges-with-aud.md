@@ -6,15 +6,18 @@ title: Remplacer des plages de temps par une publicité
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# Remplacer des plages de temps par une publicité{#replace-time-ranges-with-an-ad}
+# Remplacez les plages de temps par une publicité {#replace-time-ranges-with-an-ad}.
 
 Vous pouvez insérer des publicités dans du contenu VOD.
 
-Dans ce cas, `TimeRanges` entre le `begin` et `end` dans `localTime` sont supprimés du plan de montage chronologique. Ils sont remplacés par un `AdBreak` de `begin` à `begin+replaceDuration`. Si la durée de remplacement n&#39;existe pas en tant que paramètre, le serveur effectue la détermination sur l&#39;Adbreak renvoyé.
+Dans ce cas, `TimeRanges` entre `begin` et `end` dans `localTime` sont supprimés de la chronologie. Ils sont remplacés par `AdBreak` de `begin` en `begin+replaceDuration`. Si la durée de remplacement n&#39;existe pas en tant que paramètre, le serveur effectue la détermination sur l&#39;Adbreak renvoyé.
 
 >[!NOTE]
 >
