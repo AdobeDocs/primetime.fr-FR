@@ -13,9 +13,9 @@ ht-degree: 0%
 ---
 
 
-# Application de la loi sur les violations des droits d&#39;auteur (nécessite un DRM Adobe Primetime){#jailbreak-enforcement-requires-adobe-primetime-drm}
+# Application des règles de Jailbreak (nécessite Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-Sur les plates-formes qui prennent en charge la détection de jailbreak (appareils mobiles Android et iOS, par exemple), vous pouvez activer l’application de jailbreak pour interdire la lecture du contenu si [!DNL jailbreak/root] celui-ci a été détecté.
+Sur les plates-formes qui prennent en charge la détection de jailbreak, telles que les périphériques mobiles Android et iOS, vous pouvez activer l’application de jailbreak pour interdire la lecture du contenu si [!DNL jailbreak/root] a été détecté sur le périphérique.
 
 >[!NOTE]
 >
