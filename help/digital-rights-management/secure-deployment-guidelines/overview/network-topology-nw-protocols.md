@@ -1,18 +1,21 @@
 ---
-description: Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes de votre réseau d’entreprise.
-seo-description: Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes de votre réseau d’entreprise.
-seo-title: Protocoles réseau DRM d’Adobe Primetime
-title: Protocoles réseau DRM d’Adobe Primetime
+description: Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes du réseau de votre entreprise.
+seo-description: Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes du réseau de votre entreprise.
+seo-title: Protocoles réseau DRM Adobe Primetime
+title: Protocoles réseau DRM Adobe Primetime
 uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# Protocoles réseau DRM d’Adobe Primetime {#adobe-primetime-drm-network-protocols}
+# Protocoles réseau DRM Adobe Primetime {#adobe-primetime-drm-network-protocols}
 
-Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes de votre réseau d’entreprise.
+Lorsque vous configurez une architecture réseau sécurisée, des protocoles réseau sont requis pour l’interaction entre Adobe Primetime DRM et d’autres systèmes du réseau de votre entreprise.
 
 Lorsque vous configurez une architecture réseau sécurisée, les protocoles réseau suivants sont requis pour cette interaction :
 
@@ -35,9 +38,9 @@ Lorsque vous configurez une architecture réseau sécurisée, les protocoles ré
  </tbody> 
 </table>
 
-## Ports pour les serveurs d’applications {#ports-for-application-servers}
+## Ports des serveurs d’applications {#ports-for-application-servers}
 
-Vous pouvez configurer le serveur de licences DRM d’Adobe Primetime pour qu’il utilise n’importe quel port réseau.
+Vous pouvez configurer le serveur de licences DRM Adobe Primetime pour utiliser n’importe quel port réseau.
 
 Ces ports doivent être activés ou désactivés sur le pare-feu interne, selon la fonctionnalité réseau que vous souhaitez autoriser pour les clients qui se connectent au serveur d’applications qui exécute Primetime DRM.
 
@@ -45,4 +48,4 @@ Ces ports doivent être activés ou désactivés sur le pare-feu interne, selon 
 
 Le protocole SSL (Secure Sockets Layer) n’est nécessaire que si vous avez besoin de la prise en charge des clients Flash Media Rights Management Server 1.x.
 
-SSL avec authentification du client est requis pour le serveur de clés DRM d’Adobe Primetime. Pour plus d’informations, voir [Utilisation d’Adobe Primetime DRM Key Server](../../using-the-drm-key-server/requirements.md).
+SSL avec authentification du client est requis pour le serveur de clés DRM Adobe Primetime. Pour plus d’informations, voir [Utilisation du serveur de clés DRM Adobe Primetime](../../using-the-drm-key-server/requirements.md).
