@@ -6,12 +6,15 @@ title: Insertion de publicités
 uuid: ac8c33f8-0484-4c0f-a1f8-486133393e48
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#inserting-ads-overview}
+# Aperçu {#inserting-ads-overview}
 
 L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. Le navigateur TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place dans le contenu par étapes.
 
-Un *`ad break`* contient une ou plusieurs publicités qui sont lues en séquence. Le navigateur TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
+Un *`ad break`* contient une ou plusieurs publicités lues en séquence. Le navigateur TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
