@@ -4,13 +4,16 @@ title: Obtention des certificats d’autorité de certification de domaine
 uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
-# Obtention des certificats d’autorité de certification de domaine{#obtain-domain-ca-certificates}
+# Obtention des certificats d&#39;autorité de certification de domaine{#obtain-domain-ca-certificates}
 
-Contrairement au certificat License Server, Packager ou Transport, le certificat d’autorité de certification de domaine n’est pas émis par Adobe. Vous pouvez obtenir ce certificat auprès d’une autorité de certification ou générer un certificat autosigné à utiliser à cette fin.
+Contrairement au certificat License Server, Packager ou Transport, le certificat d&#39;autorité de certification de domaine n&#39;est pas émis par Adobe. Vous pouvez obtenir ce certificat auprès d’une autorité de certification ou générer un certificat autosigné à utiliser à cette fin.
 
 Le certificat d’autorité de certification de domaine doit utiliser une clé 1024 bits et contenir les attributs standard requis dans un certificat d’autorité de certification :
 
