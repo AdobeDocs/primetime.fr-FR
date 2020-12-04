@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Exigences relatives aux outils de ligne de commande {#command-line-tools-requirements}
+# Exigences des outils de ligne de commande {#command-line-tools-requirements}
 
 * Java 1.5 ou version ultérieure.
 * Informations d’identification de Packager, de transport et de serveur de licences (certificat et mot de passe) émises par l’Adobe.
