@@ -6,6 +6,9 @@ title: Initialisation et configuration des analyses vidéo
 uuid: ece5ddc1-3f7b-4878-b1bc-1fec0a459add
 translation-type: tm+mt
 source-git-commit: 6cb3463be8986d8a1dc718655bd929a0f07ac00d
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -17,33 +20,33 @@ Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de 
 Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous disposez des éléments suivants :
 
 * TVSDK pour HLS de bureau
-* Informations sur la configuration / l’initialisation - Contactez votre représentant Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
+* Informations sur la configuration / l’initialisation - Contactez votre représentant d’Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi AppMeasurement </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’Adobe Analytics (anciennement SiteCatalyst). </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale Adobe Analytics (anciennement SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi des analyses vidéo </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur la mise en oeuvre du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur l’implémentation du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nom du compte </td> 
    <td colname="col2"> Connu également sous le nom d’identifiant de suite de rapports (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> ID d’organisation Marketing Cloud </td> 
+   <td colname="col1"> ID d'organisation Marketing Cloud </td> 
    <td colname="col2"> Valeur de chaîne requise pour instancier le composant Visiteur. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Point de terminaison du serveur de suivi Visiteur </td> 
+   <td colname="col1"> Point de terminaison du serveur de suivi visiteur </td> 
    <td colname="col2"> URL du point de terminaison principal qui fournit un identifiant unique pour la visionneuse de vidéos active. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Editeur </td> 
-   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, qui est fourni aux clients par leur représentant Adobe. <p>Conseil :  Cet identifiant n'est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
+   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil :  Cet identifiant n'est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -54,7 +57,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
        Gardez à l’esprit les informations suivantes :
    
-   * L’instanciation nécessite un paramètre d’entrée d’ID d’organisation Marketing Cloud fourni par Adobe.
+   * L&#39;instanciation nécessite un paramètre d&#39;entrée d&#39;ID d&#39;organisation de Marketing Cloud fourni par Adobe.
 
       Il s’agit d’une valeur de chaîne.
    * La seule option de configuration pour la bibliothèque VisitorAPI est l’URL du point de terminaison principal qui fournit l’identifiant unique de l’utilisateur actuel.
@@ -69,7 +72,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
 1. Instanciez et configurez le composant AppMeasurement.
 
-   L’instance AppMeasurement dispose de nombreuses options de configuration. Pour plus d’informations, voir la documentation destinée aux développeurs [](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) Adobe Analytics. Les options de l’exemple de code suivant ( `account`, `visitorNamespace`et `trackingServer`) sont requises et les valeurs sont fournies par Adobe.
+   L’instance AppMeasurement dispose de nombreuses options de configuration. Pour plus d’informations, voir la documentation [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Les options de l&#39;exemple de code suivant ( `account`, `visitorNamespace` et `trackingServer`) sont requises et les valeurs sont fournies par Adobe.
 
    >[!IMPORTANT]
    >
@@ -100,7 +103,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    >[!IMPORTANT]
    >
-   >Dans votre application, veillez à ce que `appMeasurementObject.visitor` soit renseigné avant de lancer le flux d’analyses vidéo ou à ce que vous n’obteniez aucun résultat de suivi. Ces résultats sont indiqués par les messages de votre journal. Vous pouvez ajouter un appel de suivi vide ( `appMeasurementObject.track`), interroger la `visitor` propriété jusqu’à ce qu’elle soit renseignée et lancer l’analyse vidéo.
+   >Dans votre application, veillez à ce que `appMeasurementObject.visitor` soit renseigné avant de lancer le flux d’analyses vidéo ou à ce que vous n’obteniez aucun résultat de suivi. Ces résultats sont indiqués par les messages de votre journal. Vous pouvez ajouter un appel de suivi vide ( `appMeasurementObject.track`), interroger la propriété `visitor` jusqu’à ce qu’elle soit renseignée et lancer l’analyse vidéo.
 
 1. Initialisez et configurez les métadonnées de suivi de pulsation vidéo.
 
@@ -141,7 +144,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
       } 
       ```
 
-   1. Ajouter les métadonnées Analyses vidéo à l’instance de métadonnées globale.
+   1. Ajoutez les métadonnées Analyses vidéo à l’instance de métadonnées globale.
 
       Lorsque vous êtes prêt, définissez l’instance de métadonnées globale sur la ressource média ou l’élément du lecteur multimédia :
 
