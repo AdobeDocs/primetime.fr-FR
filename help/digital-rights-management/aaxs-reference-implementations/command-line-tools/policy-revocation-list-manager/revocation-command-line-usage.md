@@ -4,6 +4,9 @@ title: Utilisation de la ligne de commande
 uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +71,7 @@ Le tableau suivant contient la description des options de ligne de commande affi
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Révoque le certificat identifié par <span class="codeph"> l’émetteurName</span> et le <span class="codeph"> numéro de série</span> à la date donnée. L’ <span class="codeph"> émetteurName</span> doit suivre le format de nom 509 (par exemple, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Spécifiez des numéros de série sous forme hexadécimale. Indiquez la date de révocation comme <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj</span> ou <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj-h24:min:sec</span>, par exemple 2008-12-1 ou 2008-12-1-00:00:00 pour minuit le 1er décembre 2008. Si la date de révocation n’est pas spécifiée, la date actuelle est utilisée. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Révoque le certificat identifié par <span class="codeph"> issuerName</span> et <span class="codeph"> serialNumber</span> à la date donnée. <span class="codeph"> issuerName</span> doit respecter le format de nom 509 (par exemple, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Spécifiez des numéros de série sous forme hexadécimale. Indiquez la date de révocation comme <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj</span> ou <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj-h24:min:sec</span>, par exemple 2008-12-1 ou 2008-12-1-00:00:00 pour le 1er décembre 2008. Si la date de révocation n’est pas spécifiée, la date actuelle est utilisée. </p> </td> 
   </tr> 
  </tbody> 
 </table>
