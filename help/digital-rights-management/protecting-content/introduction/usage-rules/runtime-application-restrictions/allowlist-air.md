@@ -21,4 +21,4 @@ Exemple de cas d’utilisation : Utilisez cette règle pour limiter la lecture �
 
 >[!NOTE]
 >
->Si vous utilisez Adobe Flash Builder pour créer des applications protégées, veillez à ne pas déployer l’application en mode de débogage. Lorsque vous déployez une application en mode débogage, le Flash Builder est ajouté `.debug` au ID de l&#39;application AIR, ce qui entraîne un comportement inattendu de la fonctionnalité de liste autorisée dans Primetime DRM.
+>Si vous utilisez Adobe Flash Builder pour créer des applications protégées, veillez à ne pas déployer l’application en mode de débogage. Lorsque vous déployez une application en mode de débogage, le Flash Builder ajoute `.debug` au ID de l&#39;application AIR, ce qui entraîne le comportement inattendu de la fonctionnalité de liste autorisée dans Primetime DRM.
