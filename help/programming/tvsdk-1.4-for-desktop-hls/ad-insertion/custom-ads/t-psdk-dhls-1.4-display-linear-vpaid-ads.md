@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Afficher des publicités VPAID linéaires dans une coupure publicitaire{#display-linear-vpaid-ads-in-an-ad-break}
+# Afficher des publicités VPAID linéaires dans une coupure publicitaire {#display-linear-vpaid-ads-in-an-ad-break}
 
 TVSDK prend en charge l’affichage de publicités linéaires VPAID (Video Player-Ad Interface Definition) lors d’une coupure publicitaire. La version 1.0 de VPAID nécessite un Flash, tandis que la version 2.0 fonctionne également avec le navigateur TVSDK et JavaScript.
 
-Pour afficher correctement les publicités VPAID, vous devez fournir un conteneur publicitaire ( `AdContainerView`) au sein de l&#39; `MediaPlayerContext` instance.
+Pour afficher correctement les publicités VPAID, vous devez fournir un conteneur publicitaire ( `AdContainerView`) dans l&#39;instance `MediaPlayerContext`.
 
 Limites des publicités VPAID :
 
