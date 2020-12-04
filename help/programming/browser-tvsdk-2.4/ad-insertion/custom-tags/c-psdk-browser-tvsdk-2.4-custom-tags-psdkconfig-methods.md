@@ -6,21 +6,24 @@ title: Config des méthodes de classe pour les balises
 uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
 source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Config des méthodes de classe pour les balises{#config-class-methods-for-tags}
+# Configurez les méthodes de classe pour les balises {#config-class-methods-for-tags}
 
 Vous pouvez configurer des noms de balises personnalisés dans un flux à l’aide de la classe MediaPlayerItemConfig.
 
-To create a new `MediaPlayerItemConfig`:
+Pour créer `MediaPlayerItemConfig` :
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-Voici quelques informations sur l’utilisation des `MediaPlayerItemConfig` méthodes pour gérer les balises personnalisées :
+Voici quelques informations sur l&#39;utilisation des méthodes `MediaPlayerItemConfig` pour gérer les balises personnalisées :
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -40,10 +43,10 @@ Voici quelques informations sur l’utilisation des `MediaPlayerItemConfig` mét
     <code class="syntax javascript">
       var&nbsp;subscribeTags&nbsp;=&nbsp;["#EXT-X-PROGRAM-DATE-TIME"];mediaPlayerItemConfig.subscribeTags&nbsp;=&nbsp;subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>Définit la liste des balises abonnées exposées à l’application. </p> <p>Votre application est également automatiquement abonnée à toutes les balises transmises par le biais de <span class="codeph"> balises publicitaires </span>. </p> </td> 
+   <td colname="col2"> <p>Définit la liste des balises abonnées exposées à l’application. </p> <p>Votre application est également automatiquement abonnée à toutes les balises transmises par le biais de <span class="codeph"> adTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Personnaliser les balises publicitaires utilisées par le détecteur d'opportunités par défaut </b> </td> 
+   <td colname="col1"> <b>Personnaliser les balises publicitaires utilisées par le détecteur d'opportunités par défaut  </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -65,9 +68,9 @@ Voici quelques informations sur l’utilisation des `MediaPlayerItemConfig` mét
 
 Souvenez-vous des points suivants :
 
-* Le nom de la balise personnalisée doit contenir le `#` préfixe.
+* Le nom de la balise personnalisée doit contenir le préfixe `#`.
 
-   Par exemple, `#EXT-X-ASSET` est un nom de balise personnalisé correct, mais `EXT-X-ASSET` incorrect.
+   Par exemple, `#EXT-X-ASSET` est un nom de balise personnalisé correct, mais `EXT-X-ASSET` est incorrect.
 
 * Vous ne pouvez pas modifier la configuration après le chargement du flux média.
 
