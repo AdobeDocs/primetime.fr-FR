@@ -6,11 +6,14 @@ title: Lecteur de base
 uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#basic-player-overview}
+# Aperçu {#basic-player-overview}
 
 Pour utiliser le SDK Browser TVSDK, vous devez créer et configurer un lecteur de base. Pour lire du contenu vidéo, vous pouvez créer un lecteur de base de deux manières : à l’aide du navigateur TVSDK ou de l’interface utilisateur Framework.
 
@@ -29,12 +32,12 @@ Ce module est utilisé pour créer des instances du lecteur, où chaque instance
 La mise en oeuvre de chaque contrôle comporte deux aspects :
 
 * Un `HTMLElement`, qui est la représentation visuelle du composant à l’écran.
-* Un `Behavior`, qui gère la `HTMLElement` et fournit une API pour les interactions.
+* Un `Behavior`, qui gère le `HTMLElement` et fournit une API pour les interactions.
 
-Les détails relatifs à ces contrôles sont fournis à l’utilisateur `VideoPlayer` à l’aide d’un objet de configuration, qui est transmis au lecteur lors de son instanciation. Par défaut, chaque composant forme une hiérarchie d’objets, l’élément étant fourni à l’instance du lecteur à la racine de l’arborescence. Au fur et à mesure de sa création, chaque composant est ajouté au DOM à l’emplacement approprié.
+Les détails relatifs à ces contrôles sont fournis à `VideoPlayer` en utilisant un objet de configuration, qui est transmis au lecteur lors de son instanciation. Par défaut, chaque composant forme une hiérarchie d’objets, l’élément étant fourni à l’instance du lecteur à la racine de l’arborescence. Au fur et à mesure de sa création, chaque composant est ajouté au DOM à l’emplacement approprié.
 
-Chaque composant a un nom, qui est sa clé dans l&#39;objet de configuration lorsque l&#39;objet est enregistré. La classe CSS de l’élément DOM sous-jacent est constituée en tant que `vp-` préfixe ajouté au nom du composant.
+Chaque composant a un nom, qui est sa clé dans l&#39;objet de configuration lorsque l&#39;objet est enregistré. La classe CSS de l’élément DOM sous-jacent est constituée en tant que préfixe `vp-` ajouté au nom du composant.
 
 Les composants peuvent être étendus ou remplacés, leur configuration peut être modifiée et les propriétés initiales définies. Cela vous permet de mieux contrôler les propriétés de l’API, le nom de classe CSS et, éventuellement, certains aspects de l’implémentation du composant. Ces options peuvent être utilisées pour personnaliser les fonctionnalités et autoriser plusieurs instances d’un composant qui peuvent être définies ou configurées individuellement.
 
-Toutes les instances de composant sont accessibles avec la `.behaviors` propriété. Les instances peuvent être activées et désactivées et affichées ou masquées. Mais une fois les instances créées, elles ne peuvent plus être supprimées.
+Toutes les instances de composant sont accessibles avec la propriété `.behaviors`. Les instances peuvent être activées et désactivées et affichées ou masquées. Mais une fois les instances créées, elles ne peuvent plus être supprimées.
