@@ -16,7 +16,7 @@ Les notes de mise à jour de l’Ad Insertion de Primetime 19.11.1 décrivent ce
 
 ## Nouveautés de la version 19.11.1 de l’ITAP
 
-**Lorsque :** Lundi 4 novembre 2019 de 12h01 à 01h00 EST
+**Quand :** lundi 4 novembre 2019 de 12h01 à 01h00 EST
 
 Mises à jour de maintenance.
 
@@ -24,31 +24,31 @@ Mises à jour de maintenance.
 
 ### Version 19.10.2
 
-**Lorsque :** Jeudi 31 octobre 2019 de 01h00 à 03h00
+**Quand :** jeudi 31 octobre 2019 de 01h00 à 03h00, est
 
 Mises à jour de maintenance.
 
 ### Version 19.10.1
 
-**Lorsque :**  Mardi 22 octobre de 01h00 à 02h00 HNE
+**Quand : le**  mardi 22 octobre de 01h00 à 02h00 HNE
 
 Mises à jour de maintenance.
 
 ### Version 19.9.1
 
-**Lorsque :** Mardi 10 septembre 2019 de 12h30 à 2h00 heure de l&#39;Est
+**Quand :** mardi 10 septembre 2019 de 12h30 à 2h00, heure de l&#39;Est
 
 Mises à jour de sécurité
 
 ### Version 19.8.3
 
-**Lorsque :** Mercredi 28 août 2019, 12h30 - 01h30
+**Quand :** mercredi 28 août 2019, de 12h30 à 01h30 heure de l&#39;EST
 
 Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inopinément la lecture lorsque les segments d’annonces sortaient de la fenêtre du DVR.
 
 ### Version 19.8.2
 
-**Lorsque :** Mercredi 21 août 2019 de 2h00 à 3h00 heure de l&#39;Est
+**Quand :** mercredi 21 août 2019 de 2h00 à 3h00 heure de l&#39;Est
 
 * Tableau de bord SSAI : Section Statistiques de session. Vous pouvez exporter les événements de session via l’option Télécharger CSV.
 
@@ -56,7 +56,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.8.1
 
-**Lorsque :** Mardi 6 août 2019 000 heures, de 2 h 30, heure de l&#39;Est, au mardi 6 août 2019 000 heures, de 4 h 30, heure de l&#39;Est
+**Quand :** mardi 6 août 2019 02:30 Heure de l&#39;Est au mardi 6 août 2019 04:30 Heure de l&#39;Est
 
 * Tableau de bord SSAI : Nouvelle section Ajoutée, Statistiques de session, au Tableau de bord SSAI
    * Si l’ID de session d’une session SSAI pour laquelle le mode de débogage est activé (ptdebug=true), vous pouvez rechercher l’activité suivante qui s’est produite au cours de cette session :
@@ -69,7 +69,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.7.1
 
-**Lorsque :** Mercredi 10 juillet
+**Date:** Mercredi, 10 juillet
 
 * SSAI : Pour les valeurs ptcueformat qui prennent en charge les signaux de coupure publicitaire EXT-X-CUE-OUT dans les flux dynamiques, ajoutez une macro générique pour transmettre les données des attributs dans la balise EXT-X-ASSET Exemple : Balise accompagnant la balise #EXT-X-CUE-OUT : #EXT-X-ASSET:CAID=75BCD15,GENRE=News,Programme=NewsAt10 Macros : # peut être utilisé pour transmettre des informations (de l&#39;attribut GENRE) à une URL d&#39;appel publicitaire # peut être utilisé pour transmettre NewsAt10 (de l&#39;attribut Programme) à une exception d&#39;URL d&#39;appel publicitaire : Pour la compatibilité ascendante, # et # ont la même fonctionnalité. Les deux macros peuvent être utilisées pour transmettre la valeur de l’attribut CAID, après avoir converti la valeur de hex en long La valeur longue est 123456789 pour la valeur hexadécimale, 75BCD15, dans l’exemple ci-dessus. Les deux macros seraient utilisées pour transmettre 123456789 à une URL d’appel publicitaire La macro est toujours début avec #. La macro est sensible à la casse, mais l’attribut de la balise EXT-X-ASSET ne l’est pas. En d’autres termes, le PROGRAMME et le Programme sont tous deux autorisés dans la balise EXT-X-ASSET.
 * SSAI : Modifications de la configuration pour un client spécifique pour les éléments suivants :
@@ -79,7 +79,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.6.1
 
-**Lorsque :** Mercredi 12 juin 2019 11h30 PST au jeudi 13 juin 2019 12h30 PST
+**Quand :** mercredi 12 juin 2019 de 11h30 (heure du Pacifique) au jeudi 13 juin 2019 de 12h30 (heure du Pacifique)
 
 * CRS : Règle de normalisation pour les créatifs de RevJet
    * Règle de normalisation des URL créatives Ajoutée pour RevJet, utilisée par CRS et SSAI
@@ -95,7 +95,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.5.2
 
-**Lorsque :** Mercredi 22 mai 2012 00 h 00, heure de l&#39;Est, jusqu&#39;au mercredi 22 mai 2014 00 h 00, heure de l&#39;Est
+**Quand :** Mercredi, 22 Mai 2002 00 h, heure de l&#39;Est, au Mercredi 22 Mai 004 00 h, heure de l&#39;Est
 
 * Prise en charge Ajoutée du CMAF (contenu HLS/fMP4)
    * SSAI : Gérer les manifestes CMAF
@@ -104,12 +104,12 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 * SSAI : Correction d’un problème qui empêchait l’insertion de publicités non muxes dans du contenu non muxé lorsque le contenu et la publicité n’avaient pas de flux audio uniquement (EXT-X-STREAM-INF).
 * SSAI : Prise en charge Ajoutée des jetons d’authentification CDN Limelight (LLNW) pour les segments de contenu
    * Lorsque `pttoken=limelight` ou `pttoken=llnw` est ajouté à l’URL d’amorçage, nous ajouterons un en-tête secret lors de la récupération de la liste de lecture principale source, puis nous ajouterons les paramètres de requête de l’en-tête X-Adobe-Sig de LLNW aux segments de contenu.
-* SSAI : Une autre valeur de jeton (`pttoken=centurylink`) a été Ajoutée pour la prise en charge des jetons d’authentification CDN CenturyLink, publiée le 30 juillet 2018
-   * `pttoken=centurylink` a le même comportement que `pttoken=level3`et les deux valeurs sont valides
+* SSAI : Une autre valeur de jeton de jeton (`pttoken=centurylink`) a été Ajoutée pour la prise en charge des jetons d’authentification du CDN CenturyLink, qui a été publiée le 30 juillet 2018
+   * `pttoken=centurylink` a le même comportement que  `pttoken=level3`et les deux valeurs sont valides
 
 ### Version 19.5.1
 
-**Lorsque :** Jeudi 9 mai 02h30 heure de l&#39;Est au jeudi 9 mai 04h30 heure de l&#39;Est
+**Quand :** jeudi 9 mai 02h30 heure de l&#39;Est au jeudi 9 mai 04h30 heure de l&#39;Est
 
 * SSAI : Mises à jour de sécurité
 * TABLEAU DE BORD CRS : La chaîne &quot;Exemple FqAdId&quot; a été tronquée à 255 caractères en raison de contraintes d’enregistrement des données (8 bits).
@@ -118,10 +118,10 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.4.1
 
-**Lorsque :** Mercredi, 10 avril 02h30 heure de l&#39;Est au mercredi 10 avril 04h30 heure de l&#39;Est
+**Quand :** Mercredi, 10 Avril 02h30 Heure de l&#39;Est au Mercredi, 10 Avril 04h30 Heure de l&#39;Est
 
 * CRS : L&#39;API de reconditionnement CRS ne prend plus en charge les commandes du POST HTTP. L&#39;API de retraitement CRS redirige automatiquement (301) les commandes du POST HTTP vers HTTPS.
-   * A compter du 20 mai, la redirection HTTP->HTTPS pour les commandes du POST HTTP sera désactivée.
+   * À compter du 20 mai, la redirection HTTP->HTTPS pour les commandes du POST HTTP sera désactivée.
    * Si vous utilisez l&#39;API de reconditionnement CRS pour recompresser les publicités à l&#39;avance, basculez vos commandes de POST sur HTTPS d&#39;ici le 20 mai.
 * CRS : Nouvelle architecture et processus de transfert des ressources CRS vers les origines CDN des clients
    * Les processus de la tâche par origine CDN sont séparés, de sorte que les goulets d’étranglement de transfert pour une origine CDN n’affectent pas les téléchargements vers d’autres origines CDN.
@@ -144,7 +144,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.2.1
 
-**Lorsque :** Mercredi 20 février 2019 de 1 h 30, heure de l&#39;Est, au mercredi 20 février 2019 de 3 h 30, heure de l&#39;Est
+**Quand :** Mercredi 20 février 2019 1 h 30, heure de l&#39;Est, au mercredi 20 février 2019 3 h 30, heure de l&#39;Est
 
 * SSAI : URL de clic publicitaire et de suivi des clics Ajoutées pour les annonces vidéo au format JSON v2 sidecar
    * Sous la propriété &quot;trackingURLs&quot;, leurs noms de valeur &quot;événement&quot; seront &quot;clickthrough&quot; (clic publicitaire) et &quot;clickTracking&quot; (suivi des clics).
@@ -160,15 +160,15 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version de l’interface utilisateur Web
 
-**Lorsque :** Mercredi 13 février, de 4 h à 4 h 30 Pacifique
+**Quand :** Mercredi 13 février, de 4 h à 4 h 30 Pacifique
 
-**Quoi :** Composant IU Web de décision et de primetime
+**Quoi : composant IU Web** Primetime et de prise de décision
 
 * Correction d’un problème de l’interface utilisateur du calendrier en raison duquel l’utilisateur ne pouvait pas sélectionner une date au-delà du 31 décembre 2018 dans le composant Calendrier pendant le trafic d’une campagne ou l’extraction d’un rapport.
 
 ### Version 19.1.2
 
-**Lorsque :** Mercredi 30 janvier 2019 de 13 h 30, heure de l&#39;Est, au mercredi 30 janvier 30 à 3 h 30, heure de l&#39;Est
+**Quand :** Mercredi 30 Janvier 2019 1:30 Heure de l&#39;Est au Mercredi 30 Janvier 30:30 Heure de l&#39;Est
 
 * SSAI : Mise à jour de la structure de clé de recherche utilisée par SSAI pour stocker et récupérer des ressources CRS, afin de gérer les scénarios dans lesquels les fournisseurs d’annonces disposent d’un ID d’annonce dynamique ou d’un ID créatif pour la même publicité
    * Nouvelle structure de clé de recherche : Paramètres de zone, d’URL créative et de format (durée de cible, format de sortie, CDN de destination)
@@ -185,7 +185,7 @@ Correction d’un bogue en raison duquel les lecteurs Chromecast quittaient inop
 
 ### Version 19.1.1
 
-**Lorsque :** Mercredi 9 janvier 2019 de 13 h 30 heure de l&#39;Est au mercredi 9 janvier de 3 h 30 heure de l&#39;Est
+**Quand :** Mercredi 9 janvier 2019 1 h 30, heure de l&#39;Est, au mercredi 9 janvier 3 h 30, heure de l&#39;Est
 
 * Correction d’un problème en raison duquel une mauvaise interprétation des en-têtes HTTP de conservation pouvait entraîner une erreur lors de la validation des ressources créatives entrantes hébergées sur total-stream.net.
 * Correction d’un problème en raison duquel les guillemets simples (’) et les guillemets de doublon (&quot;) dans l’identifiant de publicité, l’identifiant créatif et d’autres champs pour une demande de reconditionnement entraînaient l’échec de la demande de reconditionnement.
