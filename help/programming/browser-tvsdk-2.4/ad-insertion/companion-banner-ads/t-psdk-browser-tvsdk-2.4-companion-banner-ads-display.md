@@ -5,7 +5,10 @@ seo-title: Afficher les bannières publicitaires
 title: Afficher les bannières publicitaires
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
@@ -14,28 +17,28 @@ source-git-commit: ''
 
 Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
 
-Le navigateur TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire par le biais du `AdobePSDK.PSDKEventType.AD_STARTED` événement.
+Le navigateur TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement `AdobePSDK.PSDKEventType.AD_STARTED`.
 
 Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
 
 * Un extrait de code HTML
 * URL d’une page iFrame
-* URL d’une image statique ou d’un fichier SWF Adobe Flash
+* URL d’une image statique ou d’un fichier SWF de Flash d’Adobe
 
 Pour chaque publicité connexe, le navigateur TVSDK indique les types disponibles pour votre application.
 
-Ajouter un écouteur pour le événement `AdobePSDK.PSDKEventType.AD_STARTED` qui effectue les opérations suivantes :
+Ajoutez un écouteur pour le événement `AdobePSDK.PSDKEventType.AD_STARTED` qui effectue les opérations suivantes :
 1. Efface les publicités existantes dans l’instance de bannière.
 1. Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets`.
 1. Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
 
-   Chaque instance de bannière (une `AdBannerAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
+   Chaque instance de bannière (une `AdBannerAsset`) contient des informations telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
 1. Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
 1. Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
 
-   Il s’agit généralement d’un `div`et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
+   Il s&#39;agit généralement d&#39;un `div` et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
 
-   Ajouter l’écouteur de événement :
+   Ajoutez l’écouteur de événement :
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
