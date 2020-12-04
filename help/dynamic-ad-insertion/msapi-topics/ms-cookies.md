@@ -6,6 +6,9 @@ title: Cookies
 uuid: 514ca7bd-e5ef-41be-ac63-52ef2d2a60bb
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
@@ -18,6 +21,6 @@ L’insertion de publicités Primetime utilise des cookies à des fins internes 
 
 L’insertion de publicités Primetime conserve les cookies suivants :
 
-* `ssaiPub` aide à récupérer les URL de contenu des flux qui nécessitent une authentification par cookie pour obtenir le `m3u8` fichier.
+* `ssaiPub` aide à récupérer les URL de contenu des flux qui nécessitent une authentification par cookie pour obtenir le  `m3u8` fichier.
 * `ssai3` contient des cookies de session pour les serveurs d’annonces qui en ont besoin.
-* `AWSELB` et `ssaiSession` contenir des informations internes.
+* `AWSELB` et  `ssaiSession` contenir des informations internes.
