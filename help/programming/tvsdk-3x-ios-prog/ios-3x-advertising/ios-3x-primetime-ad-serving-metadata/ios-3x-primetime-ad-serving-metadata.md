@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#primetime-ad-server-metadata-overview}
+# Aperçu {#primetime-ad-server-metadata-overview}
 
 TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et les flux vidéo/linéaires.
 
@@ -21,14 +21,14 @@ TVSDK prend en charge la résolution et l’insertion de publicités pour VOD et
 
 Avant d’inclure de la publicité dans votre contenu vidéo, fournissez les métadonnées suivantes :
 
-* Un `mediaID`, qui identifie le contenu spécifique à lire.
+* `mediaID`, qui identifie le contenu spécifique à lire.
 * Votre `zoneID`, qui identifie votre société ou votre site Web.
 * Le domaine de votre serveur d’annonces, qui spécifie le domaine de votre serveur d’annonces affecté.
 * Autres paramètres de ciblage.
 
-## Configuration des métadonnées de serveur et Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Configurer les métadonnées de serveur et Primetime {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Votre application doit fournir à TVSDK les `PTAuditudeMetadata` informations requises pour la connexion au serveur d’annonces.
+Votre application doit fournir à TVSDK les informations `PTAuditudeMetadata` requises pour se connecter au serveur d’annonces.
 
 Pour configurer les métadonnées du serveur d’annonces :
 
@@ -42,7 +42,7 @@ Pour configurer les métadonnées du serveur d’annonces :
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Définissez l’ `PTAuditudeMetadata` instance en tant que métadonnées pour les `PTMediaPlayerItem` métadonnées actives à l’aide `PTAdResolvingMetadataKey`.
+1. Définissez l&#39;instance `PTAuditudeMetadata` comme métadonnées pour les métadonnées `PTMediaPlayerItem` actuelles à l&#39;aide de `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
