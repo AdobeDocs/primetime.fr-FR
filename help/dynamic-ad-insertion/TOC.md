@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
-# Primetime Ad Insertion Help {#ad-insertion}
+# Aide sur Primetime Ad Insertion  {#ad-insertion}
 
 + [Présentation de l’Ad Insertion Primetime](home.md)
 + Commencer avec l’Ad Insertion Primetime{#get-started}
@@ -33,14 +33,14 @@ ht-degree: 9%
    + Commencer avec Manifest Server {#get-started}
       + [Envoyer une commande au serveur de manifeste](msapi-topics/ms-getting-started/ms-sending-cmd.md)
       + [Paramètres de requête du serveur de manifeste](msapi-topics/ms-getting-started/ms-api-query-params.md)
-   + Requêtes d’insertion publicitaire {#ad-insert}
+   + Demandes d&#39;insertion d&#39;annonce {#ad-insert}
       + [Demandes d’insertion de publicités](msapi-topics/ms-insert-ads/ms-ad-insert.md)
       + [Paramètres de requête facultatifs par client et situation](msapi-topics/ms-insert-ads/ms-api-query-param-situation.md)
       + [Faciliter le passage du lecteur HLS aux flux de basculement/sauvegarde](msapi-topics/ms-insert-ads/hls-switching-to-failover.md)
       + [Flux de débit binaire multiples](msapi-topics/ms-insert-ads/ms-api-mbr-streams.md)
       + [Insertion partielle de coupures publicitaires](msapi-topics/ms-insert-ads/partial-ad-break-insetion.md)
       + [Prise en charge de plusieurs réseaux CDN pour CRS et diffusion](msapi-topics/ms-insert-ads/ms-api-multi-cdns-for-crs.md)
-   + Remplacer les calendriers VOD {#replace-vod}
+   + Remplacer les chronologies VOD {#replace-vod}
       + [Modifications apportées à VOD](msapi-topics/ms-changes-vod-timeline/ms-replace-vod-timeline.md)
       + [Format de chronologie VOD](msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)
       + [Remplacement d’une chronologie VOD](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
