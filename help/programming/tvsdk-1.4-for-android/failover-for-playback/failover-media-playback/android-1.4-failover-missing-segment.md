@@ -6,6 +6,9 @@ title: Basculement de segment manquant
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Si un segment est manquant sur le serveur, car, par exemple, le fichier manifest
 1. Parcourez chaque débit disponible dans chaque variante disponible.
 1. Ignorez le segment et émettez un avertissement.
 
-Lorsque TVSDK ne parvient pas à obtenir un autre segment, il déclenche une notification d’ `CONTENT_ERROR` erreur. Cette notification contient une notification interne avec le `DOWNLOAD_ERROR` code de code. Si le flux présentant le problème est une autre piste audio, génère la notification d’ `AUDIO_TRACK_ERROR` erreur.
+Lorsque TVSDK ne peut pas obtenir un autre segment, il déclenche une notification d’erreur `CONTENT_ERROR`. Cette notification contient une notification interne avec le code `DOWNLOAD_ERROR`. Si le flux présentant le problème est une autre piste audio, génère la notification d&#39;erreur `AUDIO_TRACK_ERROR`.
 
-Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segments continus à 5, après quoi la lecture est arrêtée et émet une erreur `NATIVE_ERROR` avec le code 5.
+Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segment continus à 5, après quoi la lecture est arrêtée et émet un `NATIVE_ERROR` avec le code 5.
 
 >[!NOTE]
 >
