@@ -6,6 +6,9 @@ title: Fonctionnalités de TVSDK Primetime
 uuid: 0a7ebb05-7da5-49ff-928a-4d2124eaa115
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
