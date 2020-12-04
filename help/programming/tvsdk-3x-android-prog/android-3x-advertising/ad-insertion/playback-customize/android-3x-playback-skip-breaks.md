@@ -6,6 +6,9 @@ title: Ignorer les coupures publicitaires pour une période
 uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Pour remplacer le comportement de coupure publicitaire par défaut de TVSDK, vou
 
    >[!NOTE]
    >
-   >La stratégie `REMOVE` de coupure publicitaire est censée être abandonnée. Adobe recommande d’utiliser la stratégie de coupure `SKIP` publicitaire au lieu de `REMOVE`.
+   >La stratégie de coupure publicitaire `REMOVE` est censée être abandonnée. L&#39;Adobe vous recommande d&#39;utiliser la stratégie de coupure publicitaire `SKIP` au lieu de `REMOVE`.
 
 L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
 
