@@ -46,7 +46,7 @@ La classe fournit les éléments suivants :
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"> Chaîne </td> 
-   <td colname="col2">Nom des métadonnées temporisées. Si le type est <span class="codeph"> BALISE</span>, la valeur représente le nom de balise/indice. Si le type est <span class="codeph"> ID3</span>, il est nul. </td> 
+   <td colname="col2">Nom des métadonnées temporisées. Si le type est <span class="codeph"> TAG</span>, la valeur représente le nom de la balise/indice. Si le type est <span class="codeph"> ID3</span>, il est nul. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
