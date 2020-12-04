@@ -6,11 +6,14 @@ title: Ignorer les coupures publicitaires pour une période
 uuid: 1a18d5fd-c957-481b-83ae-2129590c1678
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
 
-# Ignorer les coupures publicitaires pour une période{#skip-ad-breaks-for-a-period-of-time}
+# Ignorer les coupures publicitaires pour une période {#skip-ad-breaks-for-a-period-of-time}
 
 Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 
