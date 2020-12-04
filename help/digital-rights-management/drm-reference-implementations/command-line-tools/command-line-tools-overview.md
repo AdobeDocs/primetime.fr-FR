@@ -4,15 +4,18 @@ title: Présentation
 uuid: effb6c5e-afce-4a96-8c95-041b2f183690
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
-Les outils de ligne de commande des implémentations de référence DRM d’Adobe Primetime vous permettent d’effectuer diverses tâches liées à DRM directement à partir de la ligne de commande.
+Les outils de ligne de commande des implémentations de référence DRM Adobe Primetime vous permettent d&#39;exécuter une variété de tâches liées à DRM directement à partir de la ligne de commande.
 
-L’implémentation de référence DRM de Primetime comprend les outils de ligne de commande suivants :
+La mise en oeuvre de référence DRM de Primetime comprend les outils de ligne de commande suivants :
 
 * Gestionnaire de stratégies - Crée et gère les stratégies DRM
 * Media Packager - Crée des fichiers chiffrés
