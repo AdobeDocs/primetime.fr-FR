@@ -42,5 +42,5 @@ Les capacités du périphérique peuvent être identifiées par les attributs sp
 
 >[!NOTE]
 >
->Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 2.0.2 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir Version [](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)minimale du client.
+>Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 2.0.2 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir [Version minimale du client](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
