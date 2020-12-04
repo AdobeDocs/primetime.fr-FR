@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#custom-tags-overview}
+# Aperçu {#custom-tags-overview}
 
 Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier Media Presentation Description (MPD), et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
 
@@ -65,12 +65,12 @@ seg5.ts
 
 Votre application peut configurer les scénarios suivants :
 
-* Une notification indiquant si `#EXT-X-ASSET` des balises, ou tout autre ensemble de noms de balises personnalisés auxquels vous vous êtes abonné, existent dans le fichier.
-* Insérez des publicités lorsqu’une `#EXT-X-AD` balise, ou tout autre nom de balise personnalisé, se trouve dans le flux.
+* Une notification indiquant si des balises `#EXT-X-ASSET`, ou tout autre ensemble de noms de balises personnalisés auquel vous vous êtes abonné, existent dans le fichier.
+* Insérez des publicités lorsqu’une balise `#EXT-X-AD` ou tout autre nom de balise personnalisé se trouve dans le flux.
 
-Vous pouvez vous abonner à l’une des balises suivantes en tant que balises personnalisées : `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Un `TimedMetadata` événement vous en informe lors de l’analyse des fichiers de manifeste.
+Vous pouvez vous abonner à l’une des balises suivantes en tant que balises personnalisées : `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Vous êtes averti avec un événement `TimedMetadata` lors de l&#39;analyse des fichiers de manifeste.
 
-Il existe des balises publicitaires, telles que `EXT-X-CUE`, auxquelles vous êtes déjà abonné. Ces balises publicitaires sont également utilisées par le générateur d’opportunités par défaut. Vous pouvez spécifier les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut en définissant la `adTags` propriété.
+Il existe des balises publicitaires, telles que `EXT-X-CUE`, auxquelles vous êtes déjà abonné. Ces balises publicitaires sont également utilisées par le générateur d’opportunités par défaut. Vous pouvez spécifier les balises publicitaires utilisées par le générateur d&#39;opportunités par défaut en définissant la propriété `adTags`.
 
 ## Balises de contenu DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
