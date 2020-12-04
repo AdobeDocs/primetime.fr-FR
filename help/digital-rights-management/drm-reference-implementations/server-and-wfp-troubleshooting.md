@@ -6,6 +6,9 @@ title: Dépannage
 uuid: 06b86067-1ff6-4b4e-922f-7f968260ba19
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Voici quelques problèmes et solutions que vous pouvez rencontrer lors du déplo
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Assurez-vous que le mot de passe a été chiffré avec la `ScrambleUtil` classe.
+   Assurez-vous que le mot de passe a été chiffré avec la classe `ScrambleUtil`.
 
 * Si le message d’erreur suivant s’affiche :
 
@@ -37,5 +40,5 @@ Voici quelques problèmes et solutions que vous pouvez rencontrer lors du déplo
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Assurez-vous d’utiliser la classe scrambler du mot de passe *fournie avec l’implémentation* de référence. Cet utilitaire scrambler est différent de celui fourni avec Adobe Primetime DRM Server for Protected Streaming.
+   Assurez-vous d’utiliser la classe de scrambler de mot de passe *fournie avec l’implémentation de référence*. Cet utilitaire de scrambler est différent de celui fourni avec Adobe Primetime DRM Server pour la diffusion en flux continu protégée.
 
