@@ -1,16 +1,19 @@
 ---
 description: Primetime DRM permet aux propriétaires et aux distributeurs de contenu de contrôler comment et où leur contenu peut être distribué et expérimenté, offrant ainsi une protection de bout en bout tout au long du cycle de vie du contenu. Il chiffre les fichiers vidéo, qui peuvent ensuite être diffusés en continu ou téléchargés sur les plates-formes Microsoft® Windows®, Apple® Mac OS®, Linux® et Android®, et applique des modèles d’entreprise tels que la location de vidéos en ligne. Les consommateurs peuvent profiter d'un contenu de haute qualité à leur convenance, qu'ils soient en ligne ou hors ligne. Les offres de DRM Primetime offrent des avantages clés que les propriétaires et les distributeurs de contenu peuvent utiliser pour fournir rapidement de nouveaux services qui les différencient de la concurrence.
 seo-description: Primetime DRM permet aux propriétaires et aux distributeurs de contenu de contrôler comment et où leur contenu peut être distribué et expérimenté, offrant ainsi une protection de bout en bout tout au long du cycle de vie du contenu. Il chiffre les fichiers vidéo, qui peuvent ensuite être diffusés en continu ou téléchargés sur les plates-formes Microsoft® Windows®, Apple® Mac OS®, Linux® et Android®, et applique des modèles d’entreprise tels que la location de vidéos en ligne. Les consommateurs peuvent profiter d'un contenu de haute qualité à leur convenance, qu'ils soient en ligne ou hors ligne. Les offres de DRM Primetime offrent des avantages clés que les propriétaires et les distributeurs de contenu peuvent utiliser pour fournir rapidement de nouveaux services qui les différencient de la concurrence.
-seo-title: A propos d’Adobe Primetime DRM
-title: A propos d’Adobe Primetime DRM
+seo-title: A propos de Adobe Primetime DRM
+title: A propos de Adobe Primetime DRM
 uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '436'
+ht-degree: 0%
 
 ---
 
 
-# A propos d’Adobe Primetime DRM{#about-adobe-primetime-drm}
+# A propos de Adobe Primetime DRM{#about-adobe-primetime-drm}
 
 Primetime DRM permet aux propriétaires et aux distributeurs de contenu de contrôler comment et où leur contenu peut être distribué et expérimenté, offrant ainsi une protection de bout en bout tout au long du cycle de vie du contenu. Il chiffre les fichiers vidéo, qui peuvent ensuite être diffusés en continu ou téléchargés sur les plates-formes Microsoft® Windows®, Apple® Mac OS®, Linux® et Android®, et applique des modèles d’entreprise tels que la location de vidéos en ligne. Les consommateurs peuvent profiter d&#39;un contenu de haute qualité à leur convenance, qu&#39;ils soient en ligne ou hors ligne. Les offres de DRM Primetime offrent des avantages clés que les propriétaires et les distributeurs de contenu peuvent utiliser pour fournir rapidement de nouveaux services qui les différencient de la concurrence.
 
