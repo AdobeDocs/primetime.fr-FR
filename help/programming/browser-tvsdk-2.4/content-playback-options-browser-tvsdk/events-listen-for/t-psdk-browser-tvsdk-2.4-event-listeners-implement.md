@@ -1,18 +1,21 @@
 ---
-description: Les gestionnaires de Événements permettent au navigateur TVSDK de répondre aux événements.
-seo-description: Les gestionnaires de Événements permettent au navigateur TVSDK de répondre aux événements.
+description: Les gestionnaires de événements permettent au navigateur TVSDK de répondre aux événements.
+seo-description: Les gestionnaires de événements permettent au navigateur TVSDK de répondre aux événements.
 seo-title: Mise en oeuvre des écouteurs et des rappels de événement
 title: Mise en oeuvre des écouteurs et des rappels de événement
 uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
 
-# Mise en oeuvre des écouteurs et des rappels de événement{#implement-event-listeners-and-callbacks}
+# Mettre en oeuvre des écouteurs et des rappels de événement{#implement-event-listeners-and-callbacks}
 
-Les gestionnaires de Événements permettent au navigateur TVSDK de répondre aux événements.
+Les gestionnaires de événements permettent au navigateur TVSDK de répondre aux événements.
 
 Lorsqu&#39;un événement se produit, le mécanisme de événement du navigateur TVSDK appelle votre gestionnaire de événements enregistré et transmet les informations du événement au gestionnaire.
 
@@ -20,15 +23,15 @@ Votre application doit mettre en oeuvre des écouteurs de événement pour les �
 
 1. Déterminez quels événements votre application doit écouter.
 
-   * **événements** requis : Prêtez attention à tous les événements de lecture.
+   * **Événements** requis : Prêtez attention à tous les événements de lecture.
 
       >[!IMPORTANT]
       >
       >Le événement de lecture `STATUS_CHANGED` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante de votre lecteur.
 
-   * **Autres événements**: Facultatif, selon votre application.
+   * **Autres événements** : Facultatif, selon votre application.
 
-      Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les `AdBreakPlaybackEvent` `AdPlaybackEvent` événements et tous les autres.
+      Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les événements `AdBreakPlaybackEvent` et `AdPlaybackEvent`.
 
 1. Mettez en oeuvre des écouteurs de événement pour chaque événement.
 
@@ -37,7 +40,7 @@ Votre application doit mettre en oeuvre des écouteurs de événement pour les �
    Par exemple :
 
    * Type d&#39;événement : `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Propriété du Événement : `MediaPlayerStatus.<event>` utilisé comme suit :
+   * Propriété du événement : `MediaPlayerStatus.<event>` utilisé comme suit :
 
 ```js
 player.addEventListener( 
@@ -52,7 +55,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Enregistrez vos écouteurs de rappel avec l’ `MediaPlayer` objet à l’aide de `MediaPlayer.addEventListener`.
+1. Enregistrez vos écouteurs de rappel avec l&#39;objet `MediaPlayer` en utilisant `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
