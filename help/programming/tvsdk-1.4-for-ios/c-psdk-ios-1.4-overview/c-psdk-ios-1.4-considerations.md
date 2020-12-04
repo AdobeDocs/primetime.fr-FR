@@ -6,6 +6,9 @@ title: Considérations et bonnes pratiques
 uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -42,9 +45,9 @@ Voici les pratiques recommandées pour TVSDK :
 
 * Utilisez HLS version 3.0 ou ultérieure pour le contenu du programme.
 * Utilisez l’outil mediastreamvalidator d’Apple pour valider les flux VOD.
-* La `PTSDKConfig` classe fournit des méthodes pour appliquer SSL sur les requêtes effectuées sur les serveurs Primetime de prise de décision publicitaire, DRM et Video Analytics.
+* La classe `PTSDKConfig` fournit des méthodes pour appliquer SSL sur les requêtes effectuées sur les serveurs Primetime de prise de décision publicitaire, DRM et Video Analytics.
 
-   Pour plus d&#39;informations, consultez les méthodes `forceHTTPS` et `isForcingHTTPS` dans cette classe.
+   Pour plus d&#39;informations, voir les méthodes `forceHTTPS` et `isForcingHTTPS` dans cette classe.
 
    >[!IMPORTANT]
    >
