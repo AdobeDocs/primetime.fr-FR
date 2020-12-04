@@ -1,20 +1,23 @@
 ---
 description: TVSDK distribue des événements de lecture publicitaire en réponse à des opérations liées à la publicité, telles que le début de la lecture d’une publicité.
 seo-description: TVSDK distribue des événements de lecture publicitaire en réponse à des opérations liées à la publicité, telles que le début de la lecture d’une publicité.
-seo-title: événements de lecture des publicités
-title: événements de lecture des publicités
+seo-title: Événements de lecture des publicités
+title: Événements de lecture des publicités
 uuid: 63138237-2315-45ff-914d-369da18fdff7
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
 
-# événements de lecture des publicités {#ad-playback-events}
+# Événements de lecture de publicité {#ad-playback-events}
 
 TVSDK distribue des événements de lecture publicitaire en réponse à des opérations liées à la publicité, telles que le début de la lecture d’une publicité.
 
-Pour être averti de tous les événements liés à la lecture d’une publicité, enregistrez les écouteurs avec l’ `MediaPlayer` objet pour les événements suivants.
+Pour être averti de tous les événements liés à la lecture de publicités, enregistrez les écouteurs avec l’objet `MediaPlayer` pour les événements suivants.
 
 >[!TIP]
 >
