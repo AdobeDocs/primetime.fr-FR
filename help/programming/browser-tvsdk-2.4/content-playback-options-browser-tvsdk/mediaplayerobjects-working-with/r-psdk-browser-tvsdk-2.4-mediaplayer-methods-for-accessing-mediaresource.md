@@ -28,50 +28,51 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Flux en direct </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> True si le flux est actif ; false s’il s’agit de VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Sous-titres </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> True si des pistes de sous-titrage sont disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closeCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closeCaptionsTracks  </span> </td> 
    <td colname="3"> Fournit une liste de pistes de sous-titres disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> Récupère la piste de sous-titrage fermée qui a été sélectionnée avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> Récupère la piste de sous-titrage fermée sélectionnée avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Autre son </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>True si le flux comporte d’autres pistes audio. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> Fournit une liste de pistes audio alternatives disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      Récupère la piste audio actuellement sélectionnée qui a été sélectionnée avec <span class="codeph"> select AudioTrack </span>. 
+      Récupère la piste audio actuellement sélectionnée avec 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Métadonnées minutées </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> True si le flux est associé à des métadonnées temporisées. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> Fournit une liste des objets de métadonnées minutés associés au flux. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Plusieurs profils (débit) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profils </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profils  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Ressource média </td> 
-   <td colname="2"> <span class="codeph"> ressource </span> </td> 
+   <td colname="2"> <span class="codeph"> ressource  </span> </td> 
    <td colname="3"> Renvoie la ressource média associée à cet élément. </td> 
   </tr> 
  </tbody> 
