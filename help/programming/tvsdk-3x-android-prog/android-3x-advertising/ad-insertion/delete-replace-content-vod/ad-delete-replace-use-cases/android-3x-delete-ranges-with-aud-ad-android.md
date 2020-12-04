@@ -6,21 +6,24 @@ title: Supprimer des plages
 uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 
 # Supprimer des plages {#delete-ranges}
 
-Vous pouvez supprimer `TimeRanges` entre `begin` et `end` dans `localTime` la chronologie.
+Vous pouvez supprimer `TimeRanges` entre `begin` et `end` dans `localTime` du plan de montage chronologique.
 
 >[!TIP]
 >
->Pour supprimer uniquement certaines plages du contenu, créez une `CustomRangeMetadata` instance et spécifiez le type comme une `DELETE` opération avec les plages personnalisées définies.
+>Pour supprimer uniquement certaines plages du contenu, créez une instance `CustomRangeMetadata` et spécifiez le type en tant qu&#39;opération `DELETE` avec les plages personnalisées définies.
 
 Le mappage publicitaire doit être utilisé comme défini par le serveur publicitaire.
 
-1. Pour supprimer des plages à l’aide d’une publicité de prise de décision publicitaire Adobe Primetime, procédez comme suit :
+1. Pour supprimer des plages avec une annonce de décision publicitaire Adobe Primetime :
 
    ```
    {   
