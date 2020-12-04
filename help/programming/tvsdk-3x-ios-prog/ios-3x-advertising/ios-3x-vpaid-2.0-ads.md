@@ -6,6 +6,9 @@ title: Prise en charge des publicités VPAID 2.0
 uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Les fonctionnalités suivantes sont prises en charge :
 * Publicités VPAID linéaires sur du contenu vidéo à la demande (VOD)
 * Publicités VPAID JavaScript
 
-   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`étant.
+   Les publicités VPAID doivent être basées sur JavaScript et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/javascript`.
 
 Les fonctionnalités suivantes ne sont pas prises en charge :
 
@@ -31,14 +34,14 @@ Les fonctionnalités suivantes ne sont pas prises en charge :
 * Publicités non linéaires, telles que publicités superposées, publicités complémentaires dynamiques, publicités pouvant être réduites au minimum, publicités réductibles et publicités extensibles
 * Prévisualisation de publicités VPAID
 * Publicités VPAID dans du contenu en direct
-* Publicités Flash VPAID
+* Publicités VPAID Flash
 * Annonce VPAID après publication
 
-## Modifications des API {#section_D62F3E059C6C493592D34534B0BFC150}
+## Modifications de l&#39;API {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Les modifications suivantes ont été apportées à l’API :
 
-* `PTAuditudeMetadata` possède une `customAdLoadTimeout` propriété permettant de modifier le délai d’expiration par défaut sur le processus de chargement VPAID.
+* `PTAuditudeMetadata` possède une  `customAdLoadTimeout` propriété permettant de modifier le délai d’expiration par défaut sur le processus de chargement VPAID.
 
    Le délai d’expiration par défaut est de 10 secondes.
 
@@ -49,7 +52,7 @@ Les modifications suivantes ont été apportées à l’API :
 Pendant la lecture de la publicité VPAID :
 
 * La publicité VPAID est affichée dans un conteneur de vue au-dessus de la vue du lecteur. Par conséquent, le code qui repose sur les clics effectués par les utilisateurs sur la vue du lecteur ne fonctionne pas.
-* Le lecteur de contenu principal est en pause et les appels à `pause` et à l’instance `play` du lecteur sont utilisés pour mettre en pause et reprendre la publicité VPAID.
+* Le lecteur de contenu principal est suspendu et les appels à `pause` et `play` sur l’instance du lecteur sont utilisés pour interrompre et reprendre la publicité VPAID.
 
 * Les publicités VPAID n’ont pas de durée prédéfinie, car elles peuvent être interactives.
 
@@ -59,7 +62,7 @@ Pendant la lecture de la publicité VPAID :
 
 Pour ajouter la prise en charge de VPAID 2.0 dans votre application iOS :
 
-1. (Facultatif) Ajouter un écouteur pour les événements publicitaires personnalisés.
+1. (Facultatif) Ajoutez un écouteur pour les événements publicitaires personnalisés.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerCustomAdNotification:) name:PTMediaPlayerCustomAdNotification object:self.player];
