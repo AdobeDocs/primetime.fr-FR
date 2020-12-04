@@ -4,15 +4,18 @@ title: Gestionnaire de Listes de révocation DRM
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
 # Gestionnaire de Listes de révocation DRM {#policy-revocation-list-manager}
 
-Utilisez l’outil de ligne de commande Gestionnaire de Listes de révocation DRM de Primetime ( [!DNL AdobeRevocationListManager.jar]) pour créer et gérer des listes de révocation et pour vérifier si des stratégies ont été révoquées.
+Utilisez l&#39;outil de ligne de commande Gestionnaire de Listes de révocation DRM de Primetime ( [!DNL AdobeRevocationListManager.jar]) pour créer et gérer des listes de révocation et pour vérifier si des stratégies ont été révoquées.
 
-Avant de vous exécuter [!DNL AdobeRevocationListManager.jar], vous devez définir les propriétés dans la section *Policy Update Liste Manager et Revocation Liste Manager Properties* de votre fichier de configuration.
+Avant d&#39;exécuter [!DNL AdobeRevocationListManager.jar], vous devez définir les propriétés dans la section *Gestionnaire de Listes de mise à jour de stratégie et Propriétés de Gestionnaire de Listes de révocation* de votre fichier de configuration.
 
 >[!NOTE]
 >
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Indique le nom et l’emplacement du fichier de configuration. </p><p class="- topic/p ">Si vous ne spécifiez ni nom ni emplacement, le Gestionnaire de Listes de révocation des droits DRM recherche <span class="filepath"> flashaccesstools.properties</span> dans le répertoire de travail actuel. </p><p>Remarque :  Les options que vous spécifiez sur la ligne de commande sont prioritaires sur les options que vous spécifiez dans le fichier de configuration. </p>Indique l’emplacement du fichier de configuration. Si vous n’appliquez pas cette option, le Gestionnaire de Listes de révocation recherche <span class="filepath"> flashaccesstools.properties</span> dans le répertoire de travail. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Indique le nom et l’emplacement du fichier de configuration. </p><p class="- topic/p ">Si vous ne spécifiez aucun nom ou emplacement, le Gestionnaire de Listes de révocation des droits DRM recherche <span class="filepath"> flashaccesstools.properties</span> dans le répertoire de travail actuel. </p><p>Remarque :  Les options que vous spécifiez sur la ligne de commande sont prioritaires sur les options que vous spécifiez dans le fichier de configuration. </p>Indique l’emplacement du fichier de configuration. Si vous n’appliquez pas cette option, le Gestionnaire de Listes de révocation recherche <span class="filepath"> flashaccesstools.properties</span> dans le répertoire de travail. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nom de fichier</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Révoque le certificat qui a été identifié par <span class="codeph"> issuerName</span> et <span class="codeph"> serialNumber</span> à la date spécifiée. L’ <span class="codeph"> émetteurName</span> doit utiliser le format de nom 509. Par exemple, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Vous devez spécifier les numéros de série au format hexadécimal. Vous devez également spécifier la date de révocation dans l’un des formats suivants : 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Révoque le certificat identifié par <span class="codeph"> issuerName</span> et <span class="codeph"> serialNumber</span> à la date spécifiée. <span class="codeph"> issuerName</span> doit utiliser le format de nom 509. Par exemple, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Vous devez spécifier les numéros de série au format hexadécimal. Vous devez également spécifier la date de révocation dans l’un des formats suivants : 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-jj-h24:min:s</span> </li> 
