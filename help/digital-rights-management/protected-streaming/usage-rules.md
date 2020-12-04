@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# A propos des règles d’utilisation{#about-usage-rules}
+# À propos des règles d&#39;utilisation{#about-usage-rules}
 
 Avec Adobe Primetime DRM Server for Protected Streaming, vous pouvez spécifier toutes les règles d’utilisation du serveur avec des fichiers de configuration.
 
