@@ -6,6 +6,9 @@ title: Balises ID3
 uuid: 5e5c5f89-7653-47c1-b9c1-6b9b9b1f8d73
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -25,13 +28,13 @@ Lorsque TVSDK détecte les métadonnées ID3, il émet une notification contenan
 * NOM = absent
 * ID = 0
 
-1. Implémentez un écouteur de événement pour `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l’ `MediaPlayer` objet.
+1. Implémentez un écouteur de événement pour `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l&#39;objet `MediaPlayer`.
 
    TVSDK appelle cet écouteur lorsqu’il détecte les métadonnées ID3.
 
    >[!NOTE]
    >
-   >Les indices publicitaires personnalisés utilisent le même `onTimedMetadata` événement pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir custom-tags-configure .
+   >Les indices publicitaires personnalisés utilisent le même événement `onTimedMetadata` pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir custom-tags-configure .
 
 1. Récupérez les métadonnées.
 
