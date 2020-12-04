@@ -6,20 +6,24 @@ title: Mise en oeuvre rapide de l’avance et du rembobinage
 uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#implement-fast-forward-and-rewind-overview}
+# Aperçu {#implement-fast-forward-and-rewind-overview}
 
 Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, vous devez définir le taux de lecture de MediaPlayer sur une valeur autre que 1.
 
 Pour changer de vitesse, vous devez définir une valeur.
 
-1. Passez du mode de lecture normal (1x) au mode de lecture par astuces en définissant le taux sur le `MediaPlayer` à une valeur autorisée.
+1. Passez du mode de lecture normal (1x) au mode de lecture fictive en définissant le taux sur `MediaPlayer` à une valeur autorisée.
 
-   * La `MediaPlayerItem` classe définit les taux de lecture autorisés.
+   * La classe `MediaPlayerItem` définit les taux de lecture autorisés.
    * TVSDK sélectionne le taux autorisé le plus proche si le taux spécifié n’est pas autorisé.
+
    Cet exemple montre comment définir le taux de lecture interne du lecteur sur le taux demandé.
 
    ```java
@@ -50,7 +54,7 @@ Pour changer de vitesse, vous devez définir une valeur.
 
        TVSDK distribue les événements suivants liés au jeu vidéo :
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` lorsque la `rate` valeur change.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` lorsque la  `rate` valeur change.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` lorsque la lecture reprend au rythme sélectionné.
 
