@@ -6,17 +6,20 @@ title: Exemples d’erreurs de période
 uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# Exemples d’erreurs de période {#time-range-error-examples}
+# Exemples d&#39;erreurs de période {#time-range-error-examples}
 
 TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
 
-**SUPPRIMER la période**
+**Période DELETE**
 
-Dans l&#39;exemple suivant, quatre plages de temps DELETE intersectées sont définies. TVSDK fusionne les quatre plages de temps en une, de sorte que la plage de suppression réelle se situe entre 0 et 50 s.
+Dans l’exemple suivant, quatre plages de temps DELETE croisées sont définies. TVSDK fusionne les quatre plages de temps en une, de sorte que la plage de suppression réelle se situe entre 0 et 50 s.
 
 ```
 "time-ranges": {
