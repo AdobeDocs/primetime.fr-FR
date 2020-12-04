@@ -23,11 +23,11 @@ Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure
 
 1. Attendez que le navigateur TVSDK soit dans un état valide pour la recherche.
 
-   Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING. Le fait d&#39;être dans un état valide garantit que la ressource multimédia a été chargée avec succès. Si le lecteur n’est pas dans un état de recherche valide, la tentative d’appel des méthodes suivantes renvoie une erreur `IllegalStateException`.
+   Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING. Le fait d&#39;être dans un état valide garantit que la ressource multimédia a été chargée avec succès. Si le lecteur n&#39;est pas dans un état de recherche valide, la tentative d&#39;appel des méthodes suivantes renvoie `IllegalStateException`.
 
-   Par exemple, vous pouvez attendre que le navigateur TVSDK se déclenche `AdobePSDK.MediaPlayerStatusChangeEvent` avec une valeur `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Par exemple, vous pouvez attendre que le navigateur TVSDK déclenche `AdobePSDK.MediaPlayerStatusChangeEvent` avec un `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Transmettez la position de recherche demandée à la `MediaPlayer.seek` méthode en tant que paramètre en millisecondes.
+1. Transmettez la position de recherche demandée à la méthode `MediaPlayer.seek` en tant que paramètre en millisecondes.
 
    Cette opération déplace la tête de lecture à une position différente dans le flux.
 
@@ -39,7 +39,7 @@ Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Attendez que le navigateur TVSDK déclenche le `AdobePSDK.PSDKEventType.SEEK_END` événement, qui renvoie la position ajustée dans l’attribut `actualPosition` du événement :
+1. Attendez que le navigateur TVSDK déclenche le événement `AdobePSDK.PSDKEventType.SEEK_END`, qui renvoie la position ajustée dans l&#39;attribut de événement `actualPosition` :
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -53,7 +53,7 @@ Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure
    * Le comportement de lecture est affecté si une recherche, ou tout autre repositionnement, se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires.
    * Vous ne pouvez effectuer des recherches que dans la durée recherchée de la ressource. Pour VOD, il s’agit de 0 jusqu’à la durée de l’actif.
 
-1. Pour la barre de recherche créée dans l’exemple ci-dessus, écoutez pour `setPositionChangeListener()` savoir quand l’utilisateur fait défiler :
+1. Pour la barre de recherche créée dans l’exemple ci-dessus, écoutez `setPositionChangeListener()` pour savoir quand l’utilisateur fait défiler :
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
