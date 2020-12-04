@@ -26,5 +26,5 @@ L’Adobe Access Server for Protected Streaming prend en charge les règles d’
 
 >[!NOTE]
 >
->Pour prendre en charge la diffusion des clés distantes sur les périphériques iOS, la diffusion des clés distantes doit être activée pour la stratégie utilisée au moment du pack. Ce paramètre ne peut pas être modifié via la configuration du client sur le serveur. ***adobe primetime est nécessaire pour créer des applications iOS capables de lire du contenu protégé par accès à l’Adobe.***
+>Pour prendre en charge la diffusion des clés distantes sur les périphériques iOS, la diffusion des clés distantes doit être activée pour la stratégie utilisée au moment du pack. Ce paramètre ne peut pas être modifié via la configuration du client sur le serveur. ***Adobe Primetime est nécessaire pour créer des applications iOS capables de lire du contenu protégé par accès à l’Adobe.***
 
