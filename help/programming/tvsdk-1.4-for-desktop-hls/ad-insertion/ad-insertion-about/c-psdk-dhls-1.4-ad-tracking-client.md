@@ -6,11 +6,14 @@ title: Suivi des publicités clientes
 uuid: 77e8dc80-9941-45e2-91ae-3ba9b62961ca
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
 
-# Suivi des publicités clientes{#client-ad-tracking}
+# Suivi des publicités client{#client-ad-tracking}
 
 TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
 
