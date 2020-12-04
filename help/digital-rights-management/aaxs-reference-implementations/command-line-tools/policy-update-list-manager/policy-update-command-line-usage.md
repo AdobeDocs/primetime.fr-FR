@@ -4,6 +4,9 @@ title: Utilisation de la ligne de commande
 uuid: 1c3a450d-5d9c-4437-89dd-1bd8719268b7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '392'
+ht-degree: 0%
 
 ---
 
@@ -44,39 +47,39 @@ Le tableau suivant contient la description des options de ligne de commande affi
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique l’emplacement du fichier de configuration. Si cette option n'est pas utilisée, le Gestionnaire de Listes de mise à jour des stratégies recherche <span class="filepath"> flashaccesstools.properties </span> dans le répertoire de travail. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile  </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique l’emplacement du fichier de configuration. Si cette option n'est pas utilisée, le Gestionnaire de Listes de mise à jour de stratégie recherche <span class="filepath"> flashaccesstools.properties </span> dans le répertoire de travail. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d nom de fichier </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d nom de fichier  </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur la liste de mise à jour de la stratégie. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e date </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e date  </span> </td> 
    <td colname="2" class="- topic/entry "> (Facultatif) Date d’expiration de la liste de mise à jour de la stratégie. Utilisez le format <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj </span> ou <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj-h24:min:sec </span> (par exemple, 2009-01-31-14:30:00 représente le 31 janvier à 14:30 PM). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f nom_fichier [certfile] </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f nom_fichier [certfile]  </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ajoute toutes les entrées de la liste de mise à jour de stratégie existante. Un seul fichier existant peut être spécifié. </p> <p class="- topic/p ">Si cette liste existante a été signée avec des informations d’identification différentes de celle utilisée pour signer la nouvelle liste, spécifiez son fichier de certificat afin que sa signature puisse être vérifiée. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt  </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que <span class="codeph"> -o </span> n'est pas défini, une erreur est renvoyée. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si le fichier de destination existe déjà, remplacez-le sans invite. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r identifiant de stratégie </span><span class="+ topic/ph pr-d/codeph codeph"> date </span> " <span class="+ topic/ph pr-d/codeph codeph"> code motif </span>" " <span class="+ topic/ph pr-d/codeph codeph"> texte motif </span>" "  raisonURL "<span class="+ topic/ph pr-d/codeph codeph"></span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facultatif) Révoque l’ID de stratégie à la date spécifiée. Un code de motif, un texte de motif et une URL de motif facultatifs peuvent également être fournis. Spécifiez une chaîne vide "" pour indiquer qu’aucune valeur n’est fournie pour les paramètres facultatifs. Indiquez la date comme <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj </span> ou <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj-h24:min:s </span> (par exemple, 2008-12-1 ou 2008-12-1-00:00:00 pour minuit le 1er décembre 2008). Si aucune date n’est spécifiée, la date actuelle est utilisée. Le code motif doit être supérieur ou égal à 0. Plusieurs options -r peuvent être spécifiées. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r policyID  </span> <span class="+ topic/ph pr-d/codeph codeph"> date  </span> "  <span class="+ topic/ph pr-d/codeph codeph"> code de raison  </span>" "  <span class="+ topic/ph pr-d/codeph codeph"> reasonText  </span>" "  <span class="+ topic/ph pr-d/codeph codeph"> reasonURL "</span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Facultatif) Révoque l’ID de stratégie à la date spécifiée. Un code de motif, un texte de motif et une URL de motif facultatifs peuvent également être fournis. Spécifiez une chaîne vide "" pour indiquer qu’aucune valeur n’est fournie pour les paramètres facultatifs. Indiquez la date <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj </span> ou <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-jj-h24:min:sec </span> (par exemple, 2008-12-1 ou 2008-12-1-00:00:00 pour minuit le 1, 2008). Si aucune date n’est spécifiée, la date actuelle est utilisée. Le code motif doit être supérieur ou égal à 0. Plusieurs options -r peuvent être spécifiées. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf stratégieNom <span class="+ topic/ph pr-d/codeph codeph"> de fichier </span> Date <span class="+ topic/ph pr-d/codeph codeph"> " </span> Code de raison <span class="+ topic/ph pr-d/codeph codeph"> " " </span><span class="+ topic/ph pr-d/codeph codeph"> de motif" " URL de raison "</span><span class="+ topic/ph pr-d/codeph codeph"></span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> date </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Exécute la même action que l’indicateur -r, mais extrait l’identifiant de stratégie du fichier donné. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -u policyFilename " reasonCode" " reasonText" " reasonURL" </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -u policyFilename " reasonCode" " reasonText" " reasonURL"  </span> </td> 
    <td colname="2" class="- topic/entry "> <p>Remplace toute stratégie correspondante dans une demande de licence par cette stratégie à l’aide du code de raison indiqué (facultatif), du texte de motif (facultatif) et de l’URL de motif (facultatif). </p> <p>Spécifiez une chaîne vide "" pour indiquer qu’aucune valeur n’est fournie pour les paramètres facultatifs. </p> <p>Le code de motif doit être supérieur ou égal à <span class="codeph"> 0 </span>. Plusieurs options <span class="codeph"> -u </span> peuvent être spécifiées. </p> </td> 
   </tr> 
  </tbody> 
