@@ -6,6 +6,9 @@ description: Détaille l’objet JSON lorsque la valeur de type est sauts public
 seo-description: Détaille l’objet JSON lorsque la valeur de type est sauts publicitaires directs.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 Le bloc de code suivant définit l’objet JSON de détails lorsque la valeur de type est sauts publicitaires directs.
 
-Le `MetadataNode` renvoyé par `IFeedItemAdapter:getStreamMetadata()` contient une entrée avec une clé de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` et une valeur de chaîne représentant la valeur d&#39;objet JSON détaillée ci-dessous.
+Le `MetadataNode` renvoyé par `IFeedItemAdapter:getStreamMetadata()` contient une entrée de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` et la valeur d&#39;une chaîne représentant la valeur de l&#39;objet JSON de détails ci-dessous.
 
 ```
 “metadata”: { 
@@ -50,10 +53,10 @@ Le `MetadataNode` renvoyé par `IFeedItemAdapter:getStreamMetadata()` contient u
 
 | Propriété | Description |
 |---|---|
-| `tag` | Chaîne qui correspond au champ de balise dans `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | Chaîne qui mappe au champ de balise dans `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 | `time` | Indique l’heure de début de la coupure publicitaire, qui correspond au champ d’heure dans `com.adobe.mediacore.timeline.advertising.AdBreak`. La valeur 0 indique une publicité preroll. |
-| `replace` | Indique la durée de remplacement de la coupure publicitaire, qui correspond au `replaceDuration` champ de `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | liste de publicités à lire pendant la coupure publicitaire donnée, qui correspond au `List<Ad>` champ dans `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `replace` | Indique la durée de remplacement de la coupure publicitaire et fait correspondre le champ `replaceDuration` dans `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | Liste de publicités à lire pendant la coupure publicitaire donnée, qui correspond au champ `List<Ad>` dans `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
 Le bloc de code suivant définit l’objet JSON pour le tableau publicités-liste.
 
@@ -74,7 +77,7 @@ Le bloc de code suivant définit l’objet JSON pour le tableau publicités-list
 
 | Propriété | Description |
 |---|---|
-| `url` | L’URL vers le contenu de la publicité correspond au champ URL dans `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `url` | L’URL du contenu de la publicité correspond au champ URL de `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `duration` | La durée de la publicité correspond au champ de durée dans `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | Chaîne de description. |
 
