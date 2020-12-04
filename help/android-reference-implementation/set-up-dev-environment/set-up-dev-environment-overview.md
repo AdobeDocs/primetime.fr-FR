@@ -6,10 +6,13 @@ seo-description: Le projet Android de référence TVSDK Primetime est configuré
 uuid: 2854af18-af1a-4c4e-8d96-650f3e15a7aa
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
 Le projet Android de référence TVSDK Primetime est configuré de telle sorte qu’il soit compatible avec Eclipse sans aucune modification majeure de configuration ou d’IDE. Pour configurer le projet de référence Primetime, suivez d&#39;abord les instructions de configuration d&#39;Eclipse, puis suivez les étapes de création du projet.
