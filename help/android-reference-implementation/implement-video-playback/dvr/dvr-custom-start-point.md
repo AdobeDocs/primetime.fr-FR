@@ -6,11 +6,14 @@ title: Choix d’un point de départ personnalisé pour la magnétoscopie numér
 uuid: a7e13865-2b86-4234-ac4c-9a5320b293db
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
 
-# Choix d’un point de départ personnalisé pour la magnétoscopie numérique {#choosing-a-custom-starting-point-for-dvr}
+# Choix d’un point de départ personnalisé pour le rapport DVR {#choosing-a-custom-starting-point-for-dvr}
 
 Vous pouvez choisir un point de départ personnalisé pour le moment où entrer un flux DVR au lieu du comportement par défaut de la saisie du flux DVR au début à l&#39;aide de la classe ConfigProvider.
 
