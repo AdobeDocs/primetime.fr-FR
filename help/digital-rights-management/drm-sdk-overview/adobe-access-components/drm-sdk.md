@@ -5,12 +5,15 @@ seo-title: SDK Java, Flash Player et client Adobe AIR
 title: SDK Java, Flash Player et client Adobe AIR
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
+# SDK DRM Adobe Primetime {#section_522E57DFEEFF4794978FF2D366B83690}
 
 Primetime DRM est fourni en tant que SDK Java qui fournit les blocs de construction à partir desquels vous pouvez créer une mise en oeuvre serveur. Le SDK vous permet de créer une solution DRM Primetime adaptée au modèle d’entreprise de votre entreprise.
 
@@ -52,4 +55,4 @@ Ces API sont utilisées lorsqu’un client demande une licence au serveur. Le SD
 
 ## Implémentation de référence {#reference-implementation}
 
-Le SDK comprend une implémentation de référence, un simple déploiement d’Adobe Primetime DRM qui montre comment utiliser les API Java. L’implémentation de référence fournit un serveur License Server, Watched Folder Packager, l’application AIR de Primetime DRM Manager, ainsi que des outils de ligne de commande pour la gestion des packages de contenu et des stratégies en fonction des API Java. Pour en savoir plus sur l’implémentation de référence DRM Primetime, voir Protection du contenu.
+Le SDK comprend une implémentation de référence, un simple déploiement Adobe Primetime DRM qui montre comment utiliser les API Java. L’implémentation de référence fournit un serveur License Server, Watched Folder Packager, l’application AIR de Primetime DRM Manager, ainsi que des outils de ligne de commande pour la gestion des packages de contenu et des stratégies en fonction des API Java. Pour en savoir plus sur l’implémentation de référence DRM Primetime, voir Protection du contenu.
