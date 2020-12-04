@@ -4,13 +4,16 @@ title: A propos des certificats
 uuid: 0b7818b4-bd6a-4f2e-94c2-565e0d735bf8
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
 
-# A propos des certificats {#about-certificates}
+# À propos des certificats {#about-certificates}
 
-Le SDK DRM d’Adobe Primetime est disponible dans les configurations suivantes :
+Le SDK Adobe Primetime DRM est disponible dans les configurations suivantes :
 
 * SDK de production DRM Primetime
 * SDK d’évaluation DRM Primetime
@@ -31,7 +34,7 @@ Pour bénéficier d’une flexibilité maximale et d’une sécurité renforcée
    Le SDK utilise ce certificat pour sécuriser la communication entre les clients et le serveur de licences.
 * Certificat d’autorité de domaine
 
-   Les clients qui souhaitent mettre en oeuvre un serveur de domaine ont besoin du certificat d’autorité de certification de domaine. Contrairement aux autres certificats, le certificat d’autorité de certification de domaine n’est pas émis par Adobe.
+   Les clients qui souhaitent mettre en oeuvre un serveur de domaine ont besoin du certificat d’autorité de certification de domaine. Contrairement aux autres certificats, le certificat d’autorité de certification de domaine n’est pas émis par l’Adobe.
 
 >[!NOTE]
 >
