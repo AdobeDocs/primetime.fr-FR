@@ -5,7 +5,10 @@ seo-title: Exemple de serveur de référence ExpressPlay Entitlement Server (SEE
 title: Exemple de serveur de référence ExpressPlay Entitlement Server (SEES)
 uuid: 99e42f76-7730-42fc-a9a9-f6396ac12c02
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
@@ -23,12 +26,12 @@ Le SEES s&#39;appuie sur deux services ExpressPlay Fairplay :
 
 Le format d’URL de la demande de jeton ExpressPlay prend deux formes, l’une pour la production, l’autre pour l’environnement de test :
 
-**Production**:<span></span>https://fp-gen.{prod_domain}/hms/fp/token
+**Production** : <span></span>https://fp-gen.{prod_domain}/hms/fp/token
 
-**Test**:<span></span>https://fp-gen.test.expressplay.com/hms/fp/token
+**Test** : <span></span>https://fp-gen.test.expressplay.com/hms/fp/token
 
 Le format d’URL pour la récupération des enregistrements ExpressPlay prend deux formes, une pour la production, une pour l’environnement de test :
 
-**Production**:<span></span>https://api.{prod_domain}/cmiapi/getrecord/
+**Production** : <span></span>https://api.{prod_domain}/cmiapi/getrecord/
 
-**Test**:<span></span>https://api.test.expressplay.com/cmiapi/getrecord/
+**Test** : <span></span>https://api.test.expressplay.com/cmiapi/getrecord/
