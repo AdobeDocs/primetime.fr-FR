@@ -6,6 +6,9 @@ title: Données de bannière d’accompagnement
 uuid: 4a5d78e1-5abe-45a8-b50f-14f73fdcc879
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Le contenu d’un AdAsset décrit une bannière connexe.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Chacune `AdAsset` fournit des informations sur l’affichage de la ressource.
+Chaque `AdAsset` fournit des informations sur l&#39;affichage de la ressource.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -44,7 +47,7 @@ Chacune `AdAsset` fournit des informations sur l’affichage de la ressource.
   </tr> 
   <tr> 
    <td colname="col1"> URL statique </td> 
-   <td colname="col2"> <p>Parfois, la bannière associée comporte également une <span class="codeph"> URL</span> statique qui est une URL directe vers l’image ou vers un <span class="codeph"> .swf</span> (bannière Flash). </p> <p>Si vous ne souhaitez pas utiliser de code html ou iframe, vous pouvez utiliser une URL directe vers une image ou un fichier swf pour afficher la bannière dans la scène Flash à la place. Dans ce cas, vous pouvez utiliser l’ <span class="codeph"> URL</span> statique pour afficher la bannière. </p> <p>Important :  Vous devez vérifier si l’URL statique est une chaîne valide, car cette propriété n’est pas toujours disponible. </p> </td> 
+   <td colname="col2"> <p>Parfois, la bannière associée possède également une <span class="codeph"> staticURL</span> qui est une URL directe vers l'image ou vers une <span class="codeph"> .swf</span> (bannière Flash). </p> <p>Si vous ne souhaitez pas utiliser de code html ou iframe, vous pouvez utiliser une URL directe vers une image ou un fichier swf pour afficher la bannière sur la scène du Flash. Dans ce cas, vous pouvez utiliser <span class="codeph"> staticURL</span> pour afficher la bannière. </p> <p>Important :  Vous devez vérifier si l’URL statique est une chaîne valide, car cette propriété n’est pas toujours disponible. </p> </td> 
   </tr> 
  </tbody> 
 </table>
