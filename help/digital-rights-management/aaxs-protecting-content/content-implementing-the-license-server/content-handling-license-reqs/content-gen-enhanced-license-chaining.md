@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Chaîne de licence améliorée {#enhanced-license-chaining}
+# Chaînage de licence amélioré {#enhanced-license-chaining}
 
-Avec un chaînage de licence amélioré dans Adobe Access 3.0, il est recommandé d&#39;émettre à la fois un Leaf et un Root la première fois que l&#39;utilisateur demande une licence pour un ordinateur particulier. Si l’utilisateur dispose déjà de la licence Root, le serveur ne peut émettre qu’un Leaf (appel `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` pour déterminer si le client dispose déjà d’une racine 3.0 Enhanced). Pour les demandes de licence ultérieures, le client indique qu’il dispose déjà d’une feuille et d’une racine, de sorte que le serveur doit émettre une nouvelle licence racine. Lorsque la chaîne de licence améliorée est utilisée, `setRootKeyRetrievalInfo()` vous devez appeler pour fournir les informations d’identification nécessaires au déchiffrement de la clé de chiffrement racine dans la stratégie.
+Avec un chaînage de licence amélioré dans Adobe Access 3.0, il est recommandé d&#39;émettre à la fois un Leaf et un Root la première fois que l&#39;utilisateur demande une licence pour un ordinateur particulier. Si l’utilisateur dispose déjà de la licence racine, le serveur ne peut émettre qu’un Leaf (appelez `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` pour déterminer si le client dispose déjà d’une racine améliorée de 3.0). Pour les demandes de licence ultérieures, le client indique qu’il dispose déjà d’une feuille et d’une racine, de sorte que le serveur doit émettre une nouvelle licence racine. Lorsque le chaînage de licences amélioré est utilisé, `setRootKeyRetrievalInfo()` doit être appelé pour fournir les informations d’identification nécessaires au déchiffrement de la clé de chiffrement racine dans la stratégie.
 
 >[!NOTE]
 >
