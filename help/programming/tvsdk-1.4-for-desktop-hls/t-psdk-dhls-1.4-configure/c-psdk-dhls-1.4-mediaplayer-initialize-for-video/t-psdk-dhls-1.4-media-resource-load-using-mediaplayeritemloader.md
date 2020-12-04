@@ -5,16 +5,19 @@ seo-title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLo
 title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
 uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 
-# Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
+# Charger une ressource multimédia à l’aide de MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
 
 MediaPlayerItemLoader permet également de résoudre une ressource multimédia. Cela s’avère utile lorsque vous souhaitez obtenir des informations sur un flux multimédia particulier sans instancier une instance MediaPlayer.
 
-Par le biais de la `MediaPlayerItemLoader` classe, vous pouvez échanger une ressource média pour la ressource correspondante `MediaPlayerItem` sans attacher une vue à une `MediaPlayer` instance, ce qui entraînerait l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d’obtention de l’ `MediaPlayerItem` instance est asynchrone.
+Par l&#39;intermédiaire de la classe `MediaPlayerItemLoader`, vous pouvez échanger une ressource média pour le `MediaPlayerItem` correspondant sans attacher une vue à une instance `MediaPlayer`, ce qui conduirait à l&#39;allocation des ressources matérielles de décodage vidéo. Le processus d&#39;obtention de l&#39;instance `MediaPlayerItem` est asynchrone.
 
 1. Mettez en oeuvre des écouteurs de événement pour ces `MediaPlayerItemLoader` événements :
 
@@ -22,10 +25,10 @@ Par le biais de la `MediaPlayerItemLoader` classe, vous pouvez échanger une res
 
       TVSDK l’utilise pour informer votre application qu’une erreur s’est produite. TVSDK fournit une propriété d’erreur qui contient des informations de diagnostic.
 
-1. Enregistrez cette instance sur le `MediaPlayerItemLoader`.
-1. Appel `DefaultMediaPlayerItemLoader.load`, transmission d’une instance d’un `MediaResource` objet.
+1. Enregistrez cette instance dans le `MediaPlayerItemLoader`.
+1. Appelez `DefaultMediaPlayerItemLoader.load`, en transmettant une instance d&#39;un objet `MediaResource`.
 
-   L’URL de l’ `MediaResource` objet doit pointer vers le flux pour lequel vous souhaitez obtenir des informations. Par exemple :
+   L&#39;URL de l&#39;objet `MediaResource` doit pointer vers le flux pour lequel vous souhaitez obtenir des informations. Par exemple :
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 
