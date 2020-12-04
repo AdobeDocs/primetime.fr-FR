@@ -6,6 +6,9 @@ seo-description: Ce processus diffère de la plupart des systèmes DRM existants
 uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
