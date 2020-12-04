@@ -1,20 +1,23 @@
 ---
 description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon ou la recherche.
 seo-description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon ou la recherche.
-seo-title: événements QoS
-title: événements QoS
+seo-title: Événements QoS
+title: Événements QoS
 uuid: fd657cf0-c6d4-4e9a-b212-7d09d483cae9
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
-# événements QoS{#qos-events}
+# Événements QoS{#qos-events}
 
 TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon ou la recherche.
 
-Pour être informé de tous les événements liés à la qualité de service, enregistrez les auditeurs de événement avec l’ `MediaPlayer` objet pour les événements suivants :
+Pour être averti de tous les événements liés à la qualité de service, enregistrez les auditeurs de événement avec l&#39;objet `MediaPlayer` pour les événements suivants :
 
 | Événement | Signification |
 |---|---|
