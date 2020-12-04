@@ -6,6 +6,9 @@ title: Configuration de PTMediaPlayer
 uuid: 78549406-7e33-4bca-a25e-1e433f6a75d7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Utilisez les outils de votre plate-forme pour créer un lecteur et le connecter 
 
 L’interface PTMediaPlayer encapsule la fonctionnalité et le comportement d’un objet de lecteur multimédia.
 
-Pour configurer votre `PTMediaPlayer`:
+Pour configurer votre `PTMediaPlayer` :
 
 1. Récupérez l’URL du média de votre interface utilisateur, par exemple, dans un champ de texte.
 
@@ -26,7 +29,7 @@ Pour configurer votre `PTMediaPlayer`:
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
    ```
 
-1. Créer `PTMetadata`.
+1. Créez `PTMetadata`.
 
    Supposons que votre méthode `createMetada` prépare des métadonnées (voir [Publicité](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
@@ -34,20 +37,20 @@ Pour configurer votre `PTMediaPlayer`:
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Créez `PTMediaPlayerItem` en utilisant votre `PTMetadata` instance.
+1. Créez `PTMediaPlayerItem` en utilisant votre instance `PTMetadata`.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. Ajouter les observateurs aux notifications que TVSDK envoie.
+1. Ajoutez des observateurs aux notifications que TVSDK envoie.
 
    ```
    [self addObservers]
    ```
 
-1. Créez `PTMediaPlayer` à l’aide de votre nouveau `PTMediaPlayerItem`formulaire.
+1. Créez `PTMediaPlayer` en utilisant votre nouveau `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
@@ -55,7 +58,7 @@ Pour configurer votre `PTMediaPlayer`:
 
 1. Définissez les propriétés sur votre lecteur.
 
-   Voici quelques-unes des propriétés disponibles `PTMediaPlayer` :
+   Voici quelques-unes des propriétés `PTMediaPlayer` disponibles :
 
    ```
    player.autoPlay                    = YES;  
@@ -77,14 +80,14 @@ Pour configurer votre `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Ajouter la vue du lecteur dans la sous-vue de la vue active.
+1. Ajoutez la vue du lecteur dans la sous-vue vue actuelle.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Appel `play` à la lecture multimédia par début.
+1. Appelez `play` pour début de la lecture multimédia.
 
    ```
    [player play];
