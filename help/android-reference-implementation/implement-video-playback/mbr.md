@@ -6,6 +6,9 @@ title: Débit multiple
 uuid: 46eac41e-0b2a-42e3-8a88-54ad9fe34212
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -23,12 +26,12 @@ L’implémentation de référence configure les paramètres ABR suivants dans [
 | Débit initial :  getABRInitialBitRate | Débit de lecture souhaité (en bits par seconde) pour le premier segment. Lors des débuts de lecture, le profil le plus proche (égal ou supérieur au débit initial) est utilisé pour le premier segment.  Si un débit minimal est défini et que le débit initial est inférieur au débit minimal, TVSDK sélectionne le profil dont le débit minimal est supérieur au débit minimal. De même, si le taux initial est supérieur au taux maximum, TVSDK sélectionne le taux le plus élevé inférieur au taux maximum. Si le débit initial est nul ou non défini, le débit initial est déterminé par la stratégie ABR.  Renvoie une valeur entière qui représente l’octet par seconde. |
 | Débit minimum :  getABRMinBitRate | Le débit binaire le plus bas autorisé auquel l&#39;ABR peut basculer. Le changement ABR ignore les profils dont le débit est inférieur à celui-ci. Renvoie une valeur entière qui représente le profil bits par seconde. |
 | Débit maximal :  getABRMaxBitRate | Débit maximal autorisé auquel l&#39;ABR peut basculer. Le changement d&#39;ABR ignore les profils dont le débit binaire est supérieur à celui-ci. Renvoie une valeur entière qui représente le profil bits par seconde. |
-| Stratégie de commutation ABR :  getABRPolicy | Lorsque cela est possible, la lecture passe progressivement au profil de débit le plus élevé. Vous pouvez définir la stratégie de commutation ABR, qui détermine la vitesse à laquelle TVSDK bascule entre les profils. La valeur par défaut est Modéré. <ul><li>*Conservatrice*: Bascule vers le profil avec le débit binaire suivant plus élevé lorsque la bande passante est supérieure de 50 % à celle du débit binaire actuel. </li><li>*Modéré*: Passe au profil de débit supérieur suivant lorsque la bande passante est supérieure de 20 % à celle du débit actuel.</li><li>*Agressive*: Bascule immédiatement au profil de débit le plus élevé lorsque la bande passante est supérieure au débit binaire actuel.</li></ul><br/>Si le débit initial est nul ou non spécifié et qu’une stratégie est spécifiée, les débuts de lecture avec le profil de débit le plus faible pour Conservateur, le profil le plus proche du débit médian des profils disponibles pour Modéré et le profil de débit le plus élevé pour Agressive.<br/><br/>La stratégie fonctionne dans les limites des débits minimum et maximum, si elles sont spécifiées.  Renvoie le paramètre actuel de l&#39;énumération ABRControlParameters : <ul><li>ABR_CONSERVATIVE</li><li>ABR_MODERATE </li><li>ABR_AGGRESSIVE</li></ul><br>Voir aussi [ABRPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/ABRControlParameters.ABRPolicy.html). |
+| Stratégie de commutation ABR :  getABRPolicy | Lorsque cela est possible, la lecture passe progressivement au profil de débit le plus élevé. Vous pouvez définir la stratégie de commutation ABR, qui détermine la vitesse à laquelle TVSDK bascule entre les profils. La valeur par défaut est Modéré. <ul><li>*Conservatrice* : Bascule vers le profil avec le débit binaire suivant plus élevé lorsque la bande passante est supérieure de 50 % à celle du débit binaire actuel. </li><li>*Modéré* : Passe au profil de débit supérieur suivant lorsque la bande passante est supérieure de 20 % à celle du débit actuel.</li><li>*Agressive* : Bascule immédiatement au profil de débit le plus élevé lorsque la bande passante est supérieure au débit binaire actuel.</li></ul><br/>Si le débit initial est nul ou non spécifié et qu’une stratégie est spécifiée, les débuts de lecture avec le profil de débit le plus faible pour Conservateur, le profil le plus proche du débit médian des profils disponibles pour Modéré et le profil de débit le plus élevé pour Agressive.<br/><br/>La stratégie fonctionne dans les limites des débits minimum et maximum, si elles sont spécifiées.  Renvoie le paramètre actuel de l&#39;énumération ABRControlParameters : <ul><li>ABR_CONSERVATIVE</li><li>ABR_MODERATE </li><li>ABR_AGGRESSIVE</li></ul><br>Voir aussi  [ABRPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/ABRControlParameters.ABRPolicy.html). |
 
 >[!NOTE]
 >
 >* Le mécanisme de basculement TVSDK peut remplacer ces paramètres, car TVSDK favorise une lecture continue plutôt que le strict respect des paramètres de contrôle.
->* Lorsque le débit binaire change, TVSDK distribue `onProfileChanged` des événements dans `PlaybackEventListener`.
+>* Lorsque le débit binaire change, TVSDK distribue des événements `onProfileChanged` dans `PlaybackEventListener`.
 
 
 ## Activation du contrôle ABR personnalisé dans l&#39;implémentation de référence {#section_72A6E7263E1441DD8D7E0690285515E6}
@@ -42,15 +45,15 @@ Pour activer l’ABR personnalisé via l’interface utilisateur des paramètres
 
    ![](assets/abr-configuration.jpg)
 
-* Appuyez sur le [!UICONTROL Enable ON] contrôle pour qu&#39;il s&#39;affiche `OFF`.
+* Appuyez sur le contrôle [!UICONTROL Enable ON] pour afficher `OFF`.
 
-Le `PlaybackManager` seul définit les paramètres ABR si [isABRControlEnabled](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html) renvoie true (ON). S’il renvoie false (OFF), le `PlaybackManager` contrôle ABR par défaut est utilisé de sorte que les débits initiaux, minimaux et maximaux seront tous de 0 et que la stratégie ABR sera `ABR_MODERATE`définie.
+`PlaybackManager` ne définit les paramètres ABR que si [isABRControlEnabled](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html) renvoie true (ON). Si elle renvoie false (OFF), `PlaybackManager` utilise le contrôle ABR par défaut, de sorte que les débits initial, minimal et maximal seront tous 0 et que la stratégie ABR sera `ABR_MODERATE`.
 
-## Configuration des faibles débits {#section_5451691CBBD24542AD54A474D222CD39}
+## Configurer pour les faibles débits {#section_5451691CBBD24542AD54A474D222CD39}
 
 Pour certains taux de lecture à faible débit, TVSDK bascule par défaut sur le flux audio uniquement et la lecture apparaît figée. Vous pouvez configurer le lecteur de sorte qu’il ne rencontre jamais de situation où il passe à l’audio uniquement.
 
-* Implémentez l’interface [IPlaybackConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html) :
+* Implémentez l&#39;interface [IPlaybackConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html) :
 
 * Assurez-vous que [getABRMinBitRate](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#getABRMinBitRate()) est supérieur au débit binaire audio uniquement (supérieur à 64000).
 * Vérifiez que [isABRControlEnabled](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IPlaybackConfig.html#isABRControlEnabled()) est activé.
