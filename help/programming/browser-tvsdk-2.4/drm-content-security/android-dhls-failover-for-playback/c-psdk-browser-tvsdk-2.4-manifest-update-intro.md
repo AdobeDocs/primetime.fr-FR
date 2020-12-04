@@ -6,6 +6,9 @@ title: Mise à jour du manifeste principal en direct
 uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Le navigateur TVSDK peut détecter les informations de lecture modifiées dans l
 
 Les fonctionnalités suivantes sont prises en charge :
 
-* Nombre de Profils (augmentation ou diminution)
-* Débit du Profil (chevauchement ou non)
+* Nombre de profils (augmentation ou diminution)
+* Débit du profil (chevauchement ou non)
 * Profils avec des URL sur le même (ou sur des serveurs différents)
 * Toute structure de basculement
 
