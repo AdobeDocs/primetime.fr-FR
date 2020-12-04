@@ -4,6 +4,9 @@ title: Version minimale du client
 uuid: 9f39e4e7-64eb-43ea-b194-b744838a411e
 translation-type: tm+mt
 source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Adobe Access 2.0.2 et versions ultérieures introduisent de nouvelles règles d&
 
 Par exemple,
 
-* Si la licence spécifie les capacités requises pour l’appareil (capacités de [périphérique requises pour lire du contenu](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)protégé), les clients Adobe Access 2.0.2 et versions ultérieures peuvent appliquer ces exigences.
-* Si le serveur de licences ne souhaite pas que le contenu soit lu sur des clients qui ne comprennent pas les capacités requises du périphérique, définissez la version minimale du client prise en charge sur 2 (pour la version 2.0.2). Cela empêchera le serveur d’émettre des licences aux clients Adobe Access avant la version 2.0.2. La version minimale du client sera également appliquée si la licence est transférée d’un client à un autre.
-* Si le serveur de licences souhaite permettre aux clients plus âgés d’ignorer les exigences en matière de capacités de l’appareil, définissez la version minimale du client prise en charge sur 1 (pour Adobe Access 2.0). Le serveur délivre une licence à tout client version 2.0 et ultérieure. Si le client met à niveau ou transfère la licence vers un autre client avec la version 2.0.2 ou ultérieure, les exigences de capacités du périphérique dans la licence seront appliquées, puisque le client prend désormais en charge cette règle d’utilisation.
+* Si la licence spécifie les capacités requises pour le périphérique ( [capacités requises pour lire le contenu protégé](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)), les clients d&#39;Adobe Access 2.0.2 et versions ultérieures peuvent appliquer ces exigences.
+* Si le serveur de licences ne souhaite pas que le contenu soit lu sur des clients qui ne comprennent pas les capacités requises du périphérique, définissez la version minimale du client prise en charge sur 2 (pour la version 2.0.2). Cela empêchera le serveur de délivrer des licences aux clients d&#39;Adobe Access avant la version 2.0.2. La version minimale du client sera également appliquée si la licence est transférée d&#39;un client à un autre.
+* Si le serveur de licences souhaite autoriser les clients plus âgés à ignorer les exigences de capacités de l’appareil, définissez la version minimale du client prise en charge sur 1 (pour Adobe Access 2.0). Le serveur délivre une licence à tout client version 2.0 et ultérieure. Si le client met à niveau ou transfère la licence vers un autre client avec la version 2.0.2 ou ultérieure, les exigences de capacités du périphérique dans la licence seront appliquées, puisque le client prend désormais en charge cette règle d’utilisation.
 
