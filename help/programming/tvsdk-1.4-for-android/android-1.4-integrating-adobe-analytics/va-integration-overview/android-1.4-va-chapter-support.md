@@ -5,7 +5,10 @@ seo-title: Mise en oeuvre de la prise en charge des chapitres
 title: Mise en oeuvre de la prise en charge des chapitres
 uuid: 5b39e494-85ad-43bb-ab56-a55797aa4ef7
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
