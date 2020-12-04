@@ -6,6 +6,9 @@ title: Initialisation et configuration des analyses vidéo
 uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -17,40 +20,40 @@ Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de 
 Avant d’activer le suivi vidéo (pulsations vidéo), assurez-vous que vous disposez des éléments suivants :
 
 * TVSDK pour iOS
-* Informations sur la configuration / l’initialisation - Contactez votre représentant Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
+* Informations sur la configuration / l’initialisation - Contactez votre représentant d’Adobe pour obtenir des informations spécifiques sur votre compte de suivi vidéo :
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
    <td colname="col2"> <p>Important :  Ce nom de fichier de configuration JSON doit rester <span class="codeph"> ADBMobileConfig.json </span>. Impossible de modifier le nom et le chemin d'accès de ce fichier de configuration. Le chemin d’accès à ce fichier doit être <span class="codeph"> &lt;racine source&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Point de terminaison du serveur de </span> suivi AppMeasurement </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’Adobe Analytics (anciennement SiteCatalyst). </td> 
+   <td colname="col1"> <span class="codeph"> Point de terminaison du serveur de  </span> suivi AppMeasurement </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale Adobe Analytics (anciennement SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Point de terminaison du serveur de suivi des analyses vidéo </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur la mise en oeuvre du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyses vidéo. C’est ici que sont envoyés tous les appels de suivi de pulsation vidéo. <p>Conseil :  L’URL du serveur de suivi du visiteur est identique à celle du serveur de suivi d’analyse. Pour plus d’informations sur l’implémentation du service d’ID de Visiteur, voir <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nom du compte </td> 
    <td colname="col2"> Connu également sous le nom d’identifiant de suite de rapports (RSID). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> ID d’organisation Marketing Cloud </td> 
+   <td colname="col1"> ID d'organisation Marketing Cloud </td> 
    <td colname="col2"> Valeur de chaîne requise pour instancier le composant Visiteur. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Editeur </td> 
-   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, qui est fourni aux clients par leur représentant Adobe. <p>Conseil :  Cet identifiant n'est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
+   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil :  Cet identifiant n'est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Pour configurer le suivi vidéo dans votre lecteur :
 
-1. Vérifiez que les options de temps de chargement du fichier de `ADBMobileConfig.json` ressources sont correctes.
+1. Vérifiez que les options de temps de chargement du fichier de ressources `ADBMobileConfig.json` sont correctes.
 
    ```
    { 
@@ -83,14 +86,14 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    Pour configurer les options de temps de chargement :
 
-   1. Vérifiez que le `ADBMobileConfig.json` fichier contient les valeurs appropriées fournies par Adobe.
-   1. Vérifiez que ce fichier se trouve dans le `AdobeMobile` dossier.
+   1. Vérifiez que le fichier `ADBMobileConfig.json` contient les valeurs appropriées fournies par l’Adobe.
+   1. Vérifiez que ce fichier se trouve dans le dossier `AdobeMobile`.
 
       Ce dossier doit se trouver à la racine de l&#39;arborescence de la source de l&#39;application.
    1. Compilez et générez votre application.
    1. Déployez et exécutez l’application assemblée.
 
-      Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo dans Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo en Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
 1. Initialisez et configurez les métadonnées de suivi de pulsation vidéo.
 
    >[!IMPORTANT]
@@ -125,7 +128,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
       }
       ```
 
-   1. Ajouter les métadonnées Analyses vidéo à l’instance de métadonnées globale.
+   1. Ajoutez les métadonnées Analyses vidéo à l’instance de métadonnées globale.
 
       Lorsque vous êtes prêt, définissez l’instance de métadonnées globale sur la ressource média ou l’élément du lecteur multimédia :
 
