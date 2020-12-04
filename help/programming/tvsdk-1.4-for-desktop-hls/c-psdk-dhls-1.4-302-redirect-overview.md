@@ -6,6 +6,9 @@ title: Optimisation de la redirection HTTP 302
 uuid: 58593d5f-a639-4d87-9589-dba6b2dbba38
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -18,18 +21,18 @@ Si une requête de manifeste principale est redirigée et que l’optimisation d
 
 Cette fonction est désactivée par défaut et vous pouvez modifier ce paramètre.
 
-Si vous activez cette fonction, elle ne fonctionne correctement que si *toutes les* conditions suivantes sont vraies ; dans le cas contraire, aucune optimisation de la redirection n’est effectuée et 302 réponses continuent à se produire :
+Si vous activez cette fonction, elle ne fonctionne correctement que si *toutes* des conditions suivantes sont vraies ; dans le cas contraire, aucune optimisation de la redirection n’est effectuée et 302 réponses continuent à se produire :
 
-* Votre application a été compilée pour Adobe Flash Player 11.8, avec `-swf-version` 21 ou version ultérieure.
-* Adobe Flash Player 11.8 ou version ultérieure est installé sur vos utilisateurs finaux.
+* Votre application a été compilée pour Adobe Flash Player 11.8, en utilisant `-swf-version` 21 ou une version ultérieure.
+* Les utilisateurs finaux ont installé Adobe Flash Player 11.8 ou version ultérieure.
 
 >[!IMPORTANT]
 >
 >Pour vous assurer que les cookies sont transmis avec les demandes d’annonce, désactivez la redirection 302. Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine d’origine du cookie.
 
-## Désactivation ou activation de l’optimisation de la redirection 302 {#section_D6687FC44C61446F878008B629A5FA19}
+## Désactivation ou activation de l&#39;optimisation de la redirection 302 {#section_D6687FC44C61446F878008B629A5FA19}
 
-Utilisez la `useRedirectedUrl` propriété pour activer la redirection 302 (true) ou la désactiver (false).
+Utilisez la propriété `useRedirectedUrl` pour activer la redirection 302 (true) ou la désactiver (false).
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
