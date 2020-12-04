@@ -1,16 +1,19 @@
 ---
 description: Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 seo-description: Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
-seo-title: Ajouter journalisation et débogage en temps réel
-title: Ajouter journalisation et débogage en temps réel
+seo-title: Ajouter la journalisation et le débogage en temps réel
+title: Ajouter la journalisation et le débogage en temps réel
 uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
-# Ajouter journalisation et débogage en temps réel{#add-real-time-logging-and-debugging}
+# Ajouter la journalisation et le débogage en temps réel{#add-real-time-logging-and-debugging}
 
 Vous pouvez utiliser des notifications pour mettre en oeuvre la journalisation en temps réel dans votre application vidéo.
 
@@ -34,4 +37,4 @@ Voici un exemple de récupération des notifications.
    Le serveur distant peut alors afficher les données fournies sous forme graphique en temps réel.
 1. Pour détecter la perte de événements de notification, recherchez des lacunes dans la séquence de valeurs d’index de événement.
 
-   Chaque événement de notification comporte une valeur d’index automatiquement incrémentée par la `session.NotificationHistory` classe.
+   Chaque événement de notification possède une valeur d&#39;index automatiquement incrémentée par la classe `session.NotificationHistory`.
