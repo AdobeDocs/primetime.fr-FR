@@ -6,6 +6,9 @@ description: Les gestionnaires de fonctionnalités vous permettent de contrôler
 seo-description: Les gestionnaires de fonctionnalités vous permettent de contrôler des fonctionnalités individuelles sans parcourir l’ensemble du SDK TVSDK à la recherche de code pour une fonction qui pourrait être dispersée en plusieurs emplacements.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '422'
+ht-degree: 2%
 
 ---
 
@@ -17,13 +20,16 @@ Les gestionnaires de fonctionnalités vous permettent de contrôler des fonction
 Les gestionnaires de fonctionnalités effectuent les tâches suivantes :
 
 * **Déclenche les fonctionnalités de TVSDK.**
-Il s’agit d’appels de fonction pour déclencher une fonction TVSDK. Par exemple, `PlaybackManager.play()` est appelée lorsque l’application du lecteur doit début la lecture vidéo.
+Il s’agit d’appels de fonction pour déclencher une fonction TVSDK. Par exemple, 
+`PlaybackManager.play()` est appelée lorsque l’application du lecteur doit début la lecture vidéo.
 
 * **Écoute les événements TVSDK.**
-Le gestionnaire de fonctionnalités doit écouter les événements TVSDK pour obtenir des informations auprès de TVSDK. Par exemple, `AdsManager` écoute les événements d’annonces TVSDK pour être averti lorsque la publicité tombe en début.
+Le gestionnaire de fonctionnalités doit écouter les événements TVSDK pour obtenir des informations auprès de TVSDK. Par exemple, 
+`AdsManager` écoute les événements d’annonces TVSDK pour être avertis lorsque la publicité tombe en début.
 
 * **Distribue des événements au gestionnaire.**
-Une fois que les gestionnaires de fonctionnalités ont reçu et traité les événements de TVSDK, ils avertissent le client de gérer le événement. Par exemple, après `AdsManager` réception d’un événement de début de coupure publicitaire, il indique au fragment du lecteur de refléter cette modification dans l’interface utilisateur (désactiver la barre de défilement, afficher l’incrustation publicitaire, etc.).
+Une fois que les gestionnaires de fonctionnalités ont reçu et traité les événements de TVSDK, ils avertissent le client de gérer le événement. Par exemple, après 
+`AdsManager` reçoit un événement de début de coupure publicitaire, il indique au fragment du lecteur de refléter cette modification dans l’interface utilisateur (désactive la barre de défilement, affiche l’incrustation publicitaire, etc.).
 
 L’implémentation de référence Primetime comprend les gestionnaires de fonctionnalités suivants :
 
@@ -31,7 +37,7 @@ L’implémentation de référence Primetime comprend les gestionnaires de fonct
 |---|---|---|---|
 | Lecture vidéo | PlaybackManager | Lecture et contrôle HLS, lecture et contrôle DVR, contrôle de la mémoire tampon et gestion des débits multibits. | Obligatoire |
 | Protection du contenu DRM | DrmManager | Protection du contenu. | Obligatoire |
-| Insertion publicitaire | AdsManager | L’insertion d’une publicité, y compris les coupures publicitaires directes d’Adobe Primetime et les coupures publicitaires personnalisées. | Facultatif |
+| Insertion publicitaire | AdsManager | Insertion d’une publicité, y compris prise de décision dans Adobe Primetime sur les coupures publicitaires directes et les coupures publicitaires personnalisées. | Facultatif |
 | Sous-titres | CCManager | Sous-titrage et sous-titres VTT. | Facultatif |
 | Audio à liaison tardive | AAManager | Liaison audio tardive. | Facultatif |
 | QoS | QosManager | Statistiques de la qualité de service. | Facultatif |
