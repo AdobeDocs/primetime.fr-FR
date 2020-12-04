@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Création d’un package et protection de contenu {#packaging-protecting-content}
+# Création de packages et protection de contenu {#packaging-protecting-content}
 
 Les informations sur l&#39;emballage et la protection du contenu vous permettent de protéger votre contenu.
 
@@ -21,15 +21,15 @@ Les informations sur l&#39;emballage et la protection du contenu vous permettent
 
 Vous devez sécuriser physiquement l’ordinateur sur lequel se produit la gestion des stratégies et la mise en package du contenu.
 
-Pour plus d’informations, voir Sécurité [physique et accès](../../secure-deployment-guidelines/physical-sec-and-access.md).
+Pour plus d&#39;informations, voir [Sécurité physique et accès](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-Si l’implémentation de la création de package de contenu nécessite une connectivité réseau, vous devez renforcer votre système d’exploitation et mettre en oeuvre une solution de pare-feu appropriée. Pour plus d’informations, voir Topologie [](../../secure-deployment-guidelines/overview/network-topology.md)réseau.
+Si l’implémentation de la création de package de contenu nécessite une connectivité réseau, vous devez renforcer votre système d’exploitation et mettre en oeuvre une solution de pare-feu appropriée. Pour plus d’informations, voir [Topologie du réseau](../../secure-deployment-guidelines/overview/network-topology.md).
 
 ## Emballage sécurisé de contenu {#securely-packaging-content}
 
 Le fichier de configuration de l’outil de ligne de commande Adobe Primetime DRM Media Packager requiert des informations d’identification PKCS12 utilisées lors de la création de package.
 
-Dans les outils de ligne de commande Mise en oeuvre de référence, le mot de passe du fichier d’identification PKCS12 est stocké dans le `flashaccess.properties` fichier en clair. Pour cette raison, prenez soin de protéger l&#39;ordinateur hébergeant ce fichier et assurez-vous que l&#39;ordinateur est dans un environnement sécurisé. Pour plus d’informations, voir Sécurité [physique et accès](../../secure-deployment-guidelines/physical-sec-and-access.md).
+Dans les outils de la ligne de commande Mise en oeuvre de référence, le mot de passe du fichier d&#39;identification PKCS12 est stocké dans le fichier `flashaccess.properties` en texte clair. Pour cette raison, prenez soin de protéger l&#39;ordinateur hébergeant ce fichier et assurez-vous que l&#39;ordinateur est dans un environnement sécurisé. Pour plus d&#39;informations, voir [Sécurité physique et accès](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 Il utilise également les certificats de transport License Server et License Server, et l&#39;intégrité et la confidentialité de ces informations doivent être protégées. Seules les entités autorisées doivent être autorisées à utiliser l&#39;emballeur. Si vos clés privées sont compromises, informez Adobe Systems Incorporated immédiatement afin que le certificat puisse être révoqué.
 
@@ -55,13 +55,13 @@ Lorsque vous créez ces applications, vous pouvez autoriser certains utilisateur
 
 Les stratégies ne sont pas signées ou protégées contre toute modification tant qu’elles ne sont pas utilisées dans le conditionnement. Si vous craignez que les utilisateurs de l’outil de création de package puissent modifier des stratégies, signez-les pour vous assurer qu’elles ne peuvent pas être modifiées.
 
-Pour plus d’informations sur la création d’applications à l’aide du SDK, voir les API DRM Primetime sur Références [de l’API Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)API.
+Pour plus d’informations sur la création d’applications avec le SDK, voir les API DRM Primetime sur [API Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
-## Chiffrement asymétrique des clés {#asymmetric-key-encryption}
+## Chiffrement asymétrique de la clé {#asymmetric-key-encryption}
 
 Le chiffrement asymétrique des clés, également appelé chiffrement de clé publique, utilise des paires de clés. Une clé est pour le chiffrement, et l&#39;autre pour le déchiffrement.
 
-La clé de déchiffrement, ou la clé *`private key`*, est tenue secrète ; la clé de chiffrement, ou la clé *`public key`*, est mise à la disposition de toute personne autorisée à chiffrer du contenu. Toute personne ayant accès à la clé publique peut chiffrer du contenu. Cependant, seule une personne ayant accès à la clé privée peut déchiffrer le contenu. La clé privée ne peut pas être reconstruite à partir de la clé publique.
+La clé de déchiffrement, ou *`private key`*, est tenue secrète ; la clé de chiffrement, ou *`public key`*, est mise à la disposition de toute personne autorisée à chiffrer du contenu. Toute personne ayant accès à la clé publique peut chiffrer du contenu. Cependant, seule une personne ayant accès à la clé privée peut déchiffrer le contenu. La clé privée ne peut pas être reconstruite à partir de la clé publique.
 
 Lorsque vous assemblez du contenu, la clé publique du serveur de licences est utilisée pour chiffrer la clé de chiffrement de contenu (CEK) dans les métadonnées DRM. Vous devez vous assurer que seul le serveur de licences a accès à la clé privée du serveur de licences. Si quelqu&#39;un d&#39;autre a la clé, il peut déchiffrer et vue le contenu.
 
