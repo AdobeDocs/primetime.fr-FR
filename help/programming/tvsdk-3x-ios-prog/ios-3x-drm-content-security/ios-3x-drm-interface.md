@@ -14,7 +14,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation de l’interface DRM de Primetime {#primetime-drm-interface-overview}
+# Présentation de l&#39;interface DRM de Primetime {#primetime-drm-interface-overview}
 
 Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
 
@@ -40,7 +40,7 @@ Il s’agit des éléments d’API les plus importants pour travailler avec DRM 
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-TVSDK émet une `PTMediaPlayerItemDRMMetadataChanged` notification lorsque les métadonnées DRM changent. Ces métadonnées sont utilisées comme entrée pour presque toutes les fonctions de la `DRMManager` classe.
+TVSDK émet une notification `PTMediaPlayerItemDRMMetadataChanged` lorsque les métadonnées DRM changent. Ces métadonnées sont utilisées comme entrée pour presque toutes les fonctions de la classe `DRMManager`.
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -54,7 +54,7 @@ Si le flux protégé par DRM est encodé à débit binaire multiple (MBR), les m
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-Le paramètre de chaîne de `faxs=1` requête signale que le contenu est protégé par DRM et déclenche le processus de déchiffrement DRM en conséquence dans le SDK iOS TVSDK. Vous pouvez également ajouter la `faxs=1` balise aux URL de ressources HLS protégées par DRM qui sont destinées à d’autres plateformes ; il est observé comme requis sur iOS ou traité comme non-op dans les lecteurs sur d’autres plates-formes.
+Le paramètre de chaîne de requête `faxs=1` signale que le contenu est protégé par DRM et déclenche le processus de déchiffrement DRM en conséquence dans le SDK TVSDK iOS. Vous pouvez également ajouter la balise `faxs=1` sur les URL de ressources HLS protégées par DRM qui sont destinées à d&#39;autres plateformes ; il est observé comme requis sur iOS ou traité comme non-op dans les lecteurs sur d’autres plates-formes.
 
 ## Mise en oeuvre de Primetime DRM dans une application TSVDK {#implement-primetime-drm-in-a-tsvdk-application}
 
