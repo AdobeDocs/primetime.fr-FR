@@ -23,9 +23,9 @@ Une version client DRM peut être identifiée par les attributs spécifiés dans
 
 | **Attribut** | **Valeurs prises en charge** | **Critères de correspondance** | **Description** |
 |---|---|---|---|
-| environnement | &quot;PC&quot;, &quot;PortingKit&quot; | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
+| Environnement | &quot;PC&quot;, &quot;PortingKit&quot; | Correspondance exacte | Indique si le client s’exécute sur un bureau ou sur un autre périphérique. |
 | SE | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Correspondance exacte | Plateforme |
-| Architecture | “32”, “64” | Correspondance exacte | 32 bits ou 64 bits |
+| Architecture | &quot;32&quot;, &quot;64&quot; | Correspondance exacte | 32 bits ou 64 bits |
 | Type d’écran | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Correspondance exacte |  |
 | Version d’exécution | Numéro de version valide. Par exemple, &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot;, etc. | Correspond si la version du client est inférieure ou égale à la version spécifiée. | Le numéro de version est spécifié sous la forme d’une combinaison de nombres et de points (&quot;.&quot;) de toute longueur. |
 | Version de la bibliothèque DRM | Numéro de version valide. Par exemple, &quot;2.0.0&quot;. | Correspond si la version du client est inférieure ou égale à la version spécifiée. | Le numéro de version est spécifié sous la forme d’une combinaison de nombres et de points (&quot;.&quot;) de toute longueur. |
