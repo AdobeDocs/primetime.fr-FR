@@ -6,11 +6,14 @@ title: Classes de filtres système
 uuid: 2a1cde8e-219f-4c5a-8eab-7a0fcac77a59
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
 
-# Classes de filtres système{#system-filters-classes}
+# Classe de filtres système {#system-filters-classes}
 
 Ces classes implémentent le filtrage des ressources multimédia.
 
