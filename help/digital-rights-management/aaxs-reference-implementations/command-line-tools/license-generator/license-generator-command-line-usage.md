@@ -4,6 +4,9 @@ title: Utilisation de la ligne de commande
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Pour générer une licence, utilisez la syntaxe suivante :
 </i class="+ topic>
 ```
 
-`metadata` est un fichier .metadata contenant les métadonnées DRM d&#39;Adobe Access. Ce fichier peut être obtenu à partir d’un contenu protégé à l’aide de l’ `-d -m` option Media Packager.
+`metadata` est un fichier .metadata contenant les métadonnées DRM d&#39;Adobe Access. Ce fichier peut être obtenu à partir d’un contenu protégé à l’aide de l’option `-d -m` de Media Packager.
 
 Pour afficher une licence générée précédemment, utilisez la syntaxe suivante :
 
@@ -33,7 +36,7 @@ Pour afficher une licence générée précédemment, utilisez la syntaxe suivant
 </i class="+ topic>
 ```
 
-`license` est un fichier contenant une licence Adobe Access générée par le générateur de licences.
+`license` est un fichier contenant une licence d&#39;accès aux Adobes générée par le générateur de licences.
 
 Le tableau suivant décrit les options de ligne de commande qui peuvent être spécifiées avec la syntaxe mentionnée précédemment :
 
@@ -51,7 +54,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> fichier de licence</span></i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Affichez des informations sur une licence déjà générée. </td> 
+   <td colname="2" class="- topic/entry "> Affiche des informations sur une licence déjà générée. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-leaf-filename</span> </td> 
@@ -75,7 +78,7 @@ Le tableau suivant décrit les options de ligne de commande qui peuvent être sp
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r destinataire-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Générez une licence pour le destinataire spécifié. Un certificat de périphérique ou de domaine peut être utilisé. Plusieurs <span class="+ topic/ph pr-d/codeph codeph"> options </span>-r peuvent être spécifiées pour créer une licence pour plusieurs destinataires. </td> 
+   <td colname="2" class="- topic/entry ">Générez une licence pour le destinataire spécifié. Un certificat de périphérique ou de domaine peut être utilisé. Plusieurs options <span class="+ topic/ph pr-d/codeph codeph"> -r </span>peuvent être spécifiées pour créer une licence pour plusieurs destinataires. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root-root-filename</span> </td> 
