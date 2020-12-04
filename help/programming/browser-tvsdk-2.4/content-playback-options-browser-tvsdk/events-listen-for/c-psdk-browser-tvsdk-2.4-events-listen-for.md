@@ -1,18 +1,21 @@
 ---
-description: Les Événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
-seo-description: Les Événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
+description: Les événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
+seo-description: Les événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
 seo-title: Écoute des événements du lecteur Primetime
 title: Écoute des événements du lecteur Primetime
 uuid: 7b7c28ac-22ae-46a3-bbeb-bef1b04baeb3
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '304'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#listen-for-primetime-player-events-overview}
+# Aperçu {#listen-for-primetime-player-events-overview}
 
-Les Événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
+Les événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
 
 Comme votre application doit répondre à un grand nombre de ces événements, vous devez mettre en oeuvre des routines de gestion de événement et enregistrer ces routines avec le navigateur TVSDK. Les routines appellent les méthodes appropriées du navigateur TVSDK pour répondre de manière appropriée.
 
