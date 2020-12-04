@@ -6,11 +6,14 @@ title: Codes de notification
 uuid: 24476204-5c35-4ff9-810d-77698ea18b53
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#notification-codes-overview}
+# Aperçu {#notification-codes-overview}
 
 Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
 
@@ -32,9 +35,9 @@ Les objets de notification fournissent des informations relatives à l’état d
    <td colname="1"> <span class="codeph"> code</span> </td> 
    <td colname="2"> <p>Les représentations numériques suivantes sont affectées aux notifications : 
      <ul id="ul_A86BF89D6B3B410E81FAD718D3C4A9F0"> 
-      <li id="li_8180972D704C40098723734DD4B45643">événements de notification d'erreur, de 100000 à 199999 </li> 
-      <li id="li_0EC29EA5F0034E5EBFEF8E68A6498D39">événements de notification d'avertissement, de 20000 à 29999 </li> 
-      <li id="li_189A53D3D7EF4960A521AB04D00DCF70">événements de notification des informations, de 300000 à 399999 </li> 
+      <li id="li_8180972D704C40098723734DD4B45643">Événements de notification d'erreur, de 100000 à 199999 </li> 
+      <li id="li_0EC29EA5F0034E5EBFEF8E68A6498D39">Événements de notification d'avertissement, de 20000 à 29999 </li> 
+      <li id="li_189A53D3D7EF4960A521AB04D00DCF70">Événements de notification des informations, de 300000 à 399999 </li> 
      </ul> </p> <p>Chaque plage de niveau supérieur, telle que les erreurs, est divisée en sous-plages, par exemple de 101 000 à 101 999, ce qui représente des erreurs de lecture. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
