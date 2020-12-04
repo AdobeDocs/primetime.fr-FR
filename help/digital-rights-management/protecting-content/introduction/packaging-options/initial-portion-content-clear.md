@@ -4,11 +4,14 @@ title: Partie initiale du contenu dans la zone claire
 uuid: a535a980-dfd2-4a34-830e-26dac55993c7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
 
-# Partie initiale du contenu dans la zone claire{#initial-portion-of-content-in-the-clear}
+# Partie initiale du contenu dans clear{#initial-portion-of-content-in-the-clear}
 
 Ce paramètre facultatif spécifie la durée (en secondes) à partir du début du contenu qui ne sera pas chiffré.
 
