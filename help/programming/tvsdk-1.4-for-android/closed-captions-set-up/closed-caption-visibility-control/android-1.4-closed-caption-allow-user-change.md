@@ -6,11 +6,14 @@ title: Exemple Autoriser les utilisateurs à modifier le suivi des légendes
 uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
 
-# Exemple : Autoriser les utilisateurs à modifier le suivi des légendes{#example-allow-users-to-change-the-caption-track}
+# Exemple : Autoriser les utilisateurs à modifier le suivi des légendes {#example-allow-users-to-change-the-caption-track}
 
 Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 
