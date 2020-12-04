@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Annonces VAST {#vast-ads}
+# Publicités VAST {#vast-ads}
 
 Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
 
-Pour plus d’informations sur VAST, voir [Digital Video Ad Serving Template (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Pour plus d’informations sur VAST, voir [Modèle de diffusion d’annonces vidéo numérique (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
 Le navigateur TVSDK prend en charge les éléments publicitaires VAST suivants :
 
@@ -41,11 +41,11 @@ Les éléments suivants sont pris en charge :
 
 ## Créatifs {#section_0121F948CB074E49A8132D202786CAA4}
 
-Il s’agit d’un fichier qui fait partie d’une publicité VAST et qui contient un `creative` élément qui peut prendre en charge une publicité linéaire, une publicité non linéaire ou une publicité connexe. Dans l’ `creative` élément, les `id`, `sequence`et `adId` éléments sont pris en charge.
+Cet élément est un fichier qui fait partie d&#39;une publicité VAST et qui contient un élément `creative` qui peut prendre en charge une publicité linéaire, une publicité non linéaire ou une publicité connexe. Dans l’élément `creative`, les éléments `id`, `sequence` et `adId` sont pris en charge.
 
 Pour plus d&#39;informations sur les types d&#39;annonces, consultez :
 
-* **Publicités** linéaires Les éléments suivants sont pris en charge :
+* **** Publicités linéairesLes éléments suivants sont pris en charge :
 
    * `TrackingEvent`, qui contient l’ `Tracking` élément.
       * `Duration`
@@ -62,15 +62,15 @@ Pour plus d&#39;informations sur les types d&#39;annonces, consultez :
 
          >[!TIP]
          >
-         >Dans cet élément, les attributs `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`,  et  sont pris en charge.`apiFramework``type`
+         >Dans cet élément, les attributs `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` et `type` sont pris en charge.
 
-* **Publicités** non linéaires Les éléments suivants sont pris en charge :
+* **** Publicités non linéairesLes éléments suivants sont pris en charge :
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`,  et  sont pris en charge.`maintainAspectRatio``minSuggestedDuration`
+      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` et `minSuggestedDuration` sont pris en charge.
 
       * `StaticResource`
       * `IFrameResource`
@@ -78,13 +78,13 @@ Pour plus d&#39;informations sur les types d&#39;annonces, consultez :
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Publicités** complémentaires Les éléments suivants sont pris en charge :
+* **Publicités complémentairesLes éléments suivants sont pris en charge :** 
 
    * `Companion`
 
       >[!TIP]
       >
-      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework``expandedWidth`et `expandedHeight` sont pris en charge.
+      >Dans cet élément, les attributs `id`, `width`, `height`, `apiFramework`, `expandedWidth` et `expandedHeight` sont pris en charge.
 
       * `StaticResource`
       * `IFrameResource`
