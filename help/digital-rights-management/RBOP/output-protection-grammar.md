@@ -6,6 +6,9 @@ title: Grammaire RBOP
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   l’instance suivante serait alors non valide, car il existe deux `foo` paires au sein du même objet :
+   l’instance suivante serait alors non valide, car il existe deux paires `foo` au sein du même objet :
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    est valide, puisqu’il s’agit d’instances indépendantes du même objet.
 
-1. Pour les définitions où une ou plusieurs chaînes peuvent être sélectionnées, traitez les chaînes comme un ensemble, dans lequel les entrées de duplicata sont traitées comme une seule entrée. Par exemple, `["foo", "bar", "foo", "baz"]` est équivalent à `["foo", "bar", "baz"]`
+1. Pour les définitions où une ou plusieurs chaînes peuvent être sélectionnées, traitez les chaînes comme un ensemble, dans lequel les entrées de duplicata sont traitées comme une seule entrée. Par exemple, `["foo", "bar", "foo", "baz"]` équivaut à `["foo", "bar", "baz"]`
 
-1. Pour définir des nombres, un espace est utilisé entre les règles (p. ex. `Digit Digits`), mais aucun espace ne doit être utilisé lors de l’application de la règle.
+1. Pour définir des nombres, un espace est utilisé entre les règles (par exemple, `Digit Digits`), mais aucun espace de ce type ne doit être utilisé lors de l&#39;application de la règle.
 
-   Par exemple, si nous exprimons le nombre *cent vingt-trois* par règle NonZeroInteger, il doit être exprimé comme `123` plutôt que `1 2 3`comme, même si la règle contient un espace entre NonZeroDigit et Chiffres.
+   Par exemple, si nous exprimons le nombre *cent vingt-trois* par règle NonZeroInteger, il doit être exprimé sous la forme `123` plutôt que `1 2 3`, même si la règle contient un espace entre NonZeroDigit et Chiffres.
 
-1. Certaines règles autorisent plusieurs formulaires. Dans ce cas, les différents formulaires sont séparés par le `'|'` caractère.
+1. Certaines règles autorisent plusieurs formulaires. Dans ce cas, les différents formulaires sont séparés par le caractère `'|'`.
 
    Par exemple, cette règle :
 
@@ -114,7 +117,7 @@ AnotherRule ::=
 
    signifie qu’une instance de `Foo` peut être remplacée par &quot;A&quot;, &quot;B&quot; ou &quot;C&quot;. Cela ne doit pas être confondu avec un formulaire qui s’étend sur plusieurs lignes ; c&#39;est une fonctionnalité qui permet de rendre les formulaires plus longs plus lisibles.
 
-## La Grammar {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
+## La grammaire {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
 ```
 PixelBasedOPConfig ::= 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Sémantique : Configurations légales mais non valides {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-La rubrique Configuration *de la protection* d’extraction d’échantillon présentait une configuration valide ainsi que sa signification sémantique. La section précédente de *cette* rubrique présentait les règles de grammaire pour les configurations. Bien que la grammaire aide à assurer l&#39;exactitude syntaxique, il existe des configurations syntaxiquement légales qui ne sont pas sémantiquement correctes (c&#39;est-à-dire qu&#39;elles ne sont pas logiques). Cette section présente des configurations *syntaxiquement* légales, mais *sémantiquement* incorrectes. N&#39;oubliez pas que les exemples de cette section ont été réduits à la structure minimale nécessaire pour illustrer le scénario en discussion.
+La rubrique *Exemple de configuration de protection de sortie* présentait une configuration valide ainsi que sa signification sémantique. La section précédente de *cette* rubrique présentait les règles de grammaire pour les configurations. Bien que la grammaire aide à assurer l&#39;exactitude syntaxique, il existe des configurations syntaxiquement légales qui ne sont pas sémantiquement correctes (c&#39;est-à-dire qu&#39;elles ne sont pas logiques). Cette section présente les configurations *syntaxiquement* légales, mais *sémantiquement* incorrectes. N&#39;oubliez pas que les exemples de cette section ont été réduits à la structure minimale nécessaire pour illustrer le scénario en discussion.
 
 * Il n&#39;est pas valide de définir plusieurs contraintes de pixels avec le même nombre de pixels.
 
