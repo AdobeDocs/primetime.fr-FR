@@ -6,11 +6,14 @@ title: Mise en oeuvre de mises à jour de temps personnalisées
 uuid: 2b46eca9-3815-4c44-ab5e-21678c35f410
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre de mises à jour de temps personnalisées{#implement-custom-time-updates}
+# Mettre en oeuvre des mises à jour de temps personnalisées{#implement-custom-time-updates}
 
 Dans certaines implémentations d’analyse, l’application cliente peut souhaiter fournir une position de curseur de lecture différente de celle rapportée par la valeur localeTime de TVSDK. Par exemple, lors de la lecture d’un flux LINEAR, chaque curseur de lecture du programme peut être fourni par rapport à son heure de début.
 
