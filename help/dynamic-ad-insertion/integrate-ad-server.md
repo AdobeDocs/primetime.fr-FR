@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Intégration de votre serveur d’annonces {#integrate-ad-server}
+# Intégrer votre serveur d’annonces {#integrate-ad-server}
 
 Au début, vous aurez accès à la console Ad Insertion Primetime à l’aide de laquelle vous pourrez configurer des règles que l’Ad Insertion Primetime utilise pour transférer des requêtes publicitaires au serveur d’annonces de votre choix. L’Ad Insertion Primetime prend en charge la plupart des serveurs d’annonces conformes VAST ou VMAP.
 
