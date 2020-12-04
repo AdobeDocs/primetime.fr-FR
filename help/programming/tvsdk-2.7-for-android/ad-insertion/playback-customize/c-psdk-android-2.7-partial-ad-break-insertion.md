@@ -6,11 +6,14 @@ title: Insertion partielle d’une coupure publicitaire
 uuid: cc071c89-f813-419e-a2b2-4f6a9fdccd6a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
 
-# Insertion partielle d’une coupure publicitaire {#partial-ad-break-insertion}
+# Insertion partielle de coupures publicitaires {#partial-ad-break-insertion}
 
 Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct. La fonction de coupure publicitaire partielle vous permet d’imiter une expérience TV où, si le client début un flux en direct dans un milieu, il début dans ce milieu. Il est similaire à passer à un canal de télévision et les publicités fonctionnent sans accroc.
 
