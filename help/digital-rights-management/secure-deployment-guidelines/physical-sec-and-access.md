@@ -6,11 +6,14 @@ title: Sécurité physique et accès
 uuid: a5b00012-f2e5-4afa-8c59-46910fa325da
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '324'
+ht-degree: 0%
 
 ---
 
 
-# Sécurité physique et accès{#physical-security-and-access}
+# Sécurité physique et accès {#physical-security-and-access}
 
 La sécurisation physique de votre environnement DRM Adobe Primetime est essentielle pour empêcher tout accès non autorisé.
 
