@@ -4,6 +4,9 @@ title: Préférences de Packager
 uuid: 3e9c971d-3a5f-4f3e-97e7-baab63b1f67f
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
@@ -14,12 +17,12 @@ Cet onglet contient les paramètres requis pour la mise en package du contenu. L
 
 | Préférence | Description |
 |--- |--- |
-| Certificat de transport du serveur de licences | Certificat de transport de serveur, émis par Adobe. Ce certificat permet de sécuriser les communications entre le client et le serveur de licences. Le fichier doit se trouver dans le répertoire des ressources. |
+| Certificat de transport du serveur de licences | Certificat de transport du serveur, émis par Adobe. Ce certificat permet de sécuriser les communications entre le client et le serveur de licences. Le fichier doit se trouver dans le répertoire des ressources. |
 | Activer HSM | Indique si les certificats et les informations d’identification sont stockés sur un HSM. Si tel est le cas, les préférences liées aux certificats et aux informations d’identification sont désactivées et les propriétés de l’onglet HSM doivent être spécifiées. |
 | Options de chiffrement des clés | Indique comment la clé de chiffrement de contenu est chiffrée au moment du conditionnement. |
 | Certificat du serveur de licences | Certificat du serveur de licences, émis par Adobe. Le fichier doit se trouver dans le répertoire des ressources. Le CEK est chiffré avec la clé publique du serveur de licences. Seuls les détenteurs de la clé privée du serveur de licences peuvent déchiffrer le CEK. |
-| Informations d’identification de Packager | Informations d’identification de l’outil de création de package, émises par Adobe. Ce fichier est utilisé pour signer les métadonnées lors de la création du pack. |
-| Nom du fichier | Le fichier `PKCS#12` (.pfx) contenant le certificat et la clé privée. Le fichier doit se trouver dans le répertoire des ressources. |
+| Informations d’identification de Packager | Informations d’identification du gestionnaire de package, émises par l’Adobe. Ce fichier est utilisé pour signer les métadonnées lors de la création du pack. |
+| Nom du fichier | Fichier `PKCS#12` ( .pfx) contenant le certificat et la clé privée. Le fichier doit se trouver dans le répertoire des ressources. |
 | Mot de passe du fichier | Mot de passe du fichier .pfx |
 | Propriétés globales du dossier de contrôle | Spécifie les paramètres communs à tous les dossiers de contrôle configurés sur ce serveur. |
 | Intervalle de vérification en millisecondes | Indique la fréquence à laquelle les dossiers de contrôle doivent rechercher le nouveau contenu à compresser. Le serveur effectue une itération sur tous les dossiers de contrôle configurés, puis dort pendant cette durée. |
