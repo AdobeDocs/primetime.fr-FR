@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Contrôler la visibilité des sous-titres {#control-closed-caption-visibility}
+# Contrôler la visibilité de la légende fermée {#control-closed-caption-visibility}
 
 Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
 
@@ -31,7 +31,7 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
 >}
 >```
 
-1. Attendez que le `MediaPlayer` soit au moins dans l’état PRÉPARÉ. Pour plus d’informations, voir [Attendre un état](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)valide.
+1. Attendez que `MediaPlayer` soit au moins dans l’état PRÉPARÉ. Pour plus d’informations, voir [Attendre un état valide](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
 1. Pour obtenir le paramètre de visibilité actuel pour les légendes fermées, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
 
