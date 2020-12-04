@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Création d’un package de contenu{#packaging-content}
+# Création d’un package de contenu {#packaging-content}
 
 Lorsque vous assemblez du contenu, vous devez spécifier l’URL du serveur de licences.
 
@@ -23,7 +23,7 @@ L’URL du serveur DRM Adobe Primetime utilise le format suivant :
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
 ```
 
-Par exemple, pour le nom d’hôte du serveur de licences `mylicenseserver.com` qui écoute sur le port 8080 et un locataire appelé *`tenant1`*, vous utiliseriez la syntaxe suivante pour l’URL du serveur de licences que vous spécifiez au moment où vous assemblez du contenu :
+Par exemple, pour le nom d’hôte du serveur de licences `mylicenseserver.com` qui écoute sur le port 8080 et un client appelé *`tenant1`*, vous utiliseriez la syntaxe suivante pour l’URL du serveur de licences que vous spécifiez au moment où vous incluez le contenu du package :
 
 ```
 https://mylicenseserver.com:8080/flashaccessserver/tenant1
