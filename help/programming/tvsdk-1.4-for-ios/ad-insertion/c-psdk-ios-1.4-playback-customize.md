@@ -6,17 +6,20 @@ title: Personnalisation de la lecture avec des publicités
 uuid: 58002ec2-65ab-4e3b-8e3b-f755ced5cb5a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1022'
+ht-degree: 0%
 
 ---
 
 
-# Personnalisation de la lecture avec des publicités{#customize-playback-with-ads}
+# Personnaliser la lecture avec les publicités{#customize-playback-with-ads}
 
 Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
 
 >[!TIP]
 >
->Vous pouvez remplacer le comportement par défaut en utilisant la `PTAdPolicySelector` classe.
+>Vous pouvez remplacer le comportement par défaut en utilisant la classe `PTAdPolicySelector`.
 
 Le comportement par défaut varie selon que l’utilisateur franchit la coupure publicitaire au cours de la lecture normale ou effectue une recherche dans une vidéo.
 
@@ -42,46 +45,46 @@ Les éléments d’API suivants sont utiles pour personnaliser la lecture :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdMetadata </span> </td> 
-   <td colname="col2"> Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de la <span class="codeph"> </span> propriété adBreakAsWatched. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
+   <td colname="col2"> Déterminer si une coupure publicitaire doit être marquée comme ayant été regardée par un lecteur et, dans l’affirmative, quand la marquer. Définissez et obtenez la stratégie de contrôle à l’aide de la propriété <span class="codeph"> adBreakAsWatched </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdPolicySelector </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
    <td colname="col2"> Protocole qui permet la personnalisation du comportement d’annonce TVSDK. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector  </span> </td> 
    <td colname="col2"> Classe qui implémente le comportement par défaut de TVSDK. Votre application peut remplacer cette classe pour personnaliser les comportements par défaut sans mettre en oeuvre l'interface complète. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTMediaPlayer </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Il s’agit de l’heure locale de lecture, à l’exclusion des pauses publicitaires importées. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime </span> . <p>Ici, la recherche se produit par rapport à une heure locale du flux. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>La position virtuelle sur la chronologie est convertie en position locale. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Il s’agit de l’heure locale de lecture, à l’exclusion des pauses publicitaires importées. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>Ici, la recherche se produit par rapport à une heure locale du flux. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>La position virtuelle sur la chronologie est convertie en position locale. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdBreak </span> </td> 
-   <td colname="col2"> <span class="codeph"> isWatched </span> , propriété. Indique si le lecteur a regardé la publicité. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdBreak  </span> </td> 
+   <td colname="col2"> <span class="codeph"> isWatched,  </span> propriété. Indique si le lecteur a regardé la publicité. </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Configuration de la lecture personnalisée {#section_8209BAACC7814C9399988DC7DE9CF4CA}
+## Configurer la lecture personnalisée {#section_8209BAACC7814C9399988DC7DE9CF4CA}
 
 Avant de pouvoir personnaliser ou remplacer des comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec TVSDK.
 
 Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
 
-* Respectez le `PTAdPolicySelector` protocole et appliquez toutes les méthodes de sélection de stratégies requises.
+* Respectez le protocole `PTAdPolicySelector` et appliquez toutes les méthodes de sélection de stratégie requises.
 
-   Cette option est recommandée si vous devez remplacer **tous les** comportements publicitaires par défaut.
+   Cette option est recommandée si vous devez remplacer **tous** les comportements publicitaires par défaut.
 
-* Remplacez la `PTDefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+* Remplacez la classe `PTDefaultAdPolicySelector` et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
 
-   Cette option est recommandée si vous ne devez remplacer que **certains** comportements par défaut.
+   Cette option est recommandée si vous ne devez remplacer que **certains** des comportements par défaut.
 
 Pour les deux options, effectuez les tâches suivantes :
 
@@ -89,7 +92,7 @@ Pour les deux options, effectuez les tâches suivantes :
 
    >[!NOTE]
    >
-   >Les stratégies publicitaires personnalisées qui sont enregistrées au début de la lecture sont effacées lorsque l’ `PTMediaPlayer` instance est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
+   >Les stratégies publicitaires personnalisées qui sont enregistrées au début de la lecture sont effacées lorsque l&#39;instance `PTMediaPlayer` est délocalisée. Votre application doit enregistrer une instance de sélecteur de stratégies chaque fois qu’une nouvelle session de lecture est créée.
 
    Par exemple :
 
@@ -247,7 +250,7 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 @end
 ```
 
-## Enregistrer la position de la vidéo et reprendre ultérieurement {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
+## Enregistrez la position de la vidéo et reprenez ultérieurement {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
 
 Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
 
@@ -259,13 +262,13 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    >
    >Les durées des publicités ne sont pas incluses.
 
-   Les coupures publicitaires peuvent varier d’une session à l’autre en raison de modèles publicitaires, d’un plafonnement de fréquence, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale. Utilisez la `localTime` propriété pour lire cette position, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
+   Les coupures publicitaires peuvent varier d’une session à l’autre en raison de modèles publicitaires, d’un plafonnement de fréquence, etc. L’heure actuelle de la vidéo dans une session peut être différente dans une session ultérieure. Lors de l’enregistrement d’une position dans la vidéo, l’application récupère l’heure locale. Utilisez la propriété `localTime` pour lire cette position, que vous pouvez enregistrer sur le périphérique ou dans une base de données sur le serveur.
 
-   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` il faudra 1 200 secondes, alors qu’ `localTime` à cette position, il faudra 900 secondes.
+   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` sera de 1 200 secondes, alors que `localTime` à cette position sera de 900 secondes.
 
    >[!IMPORTANT]
    >
-   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, cela `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
+   >L’heure locale et l’heure actuelle sont identiques pour les flux en direct/linéaires. Dans ce cas, `convertToLocalTime` n&#39;a aucun effet. Pour VOD, l’heure locale reste inchangée pendant la lecture des publicités.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -286,9 +289,9 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    >
    >Cette méthode est appelée uniquement avec des valeurs d’heure locales. Si la méthode est appelée avec les résultats de l’heure actuelle, un comportement incorrect se produit.
 
-   Pour rechercher l’heure actuelle, utilisez `seekToTime`.
+   Pour rechercher l&#39;heure actuelle, utilisez `seekToTime`.
 
-1. Lorsque votre application reçoit le événement de modification de l’ `PTMediaPlayerStatusReady` état, recherchez l’heure locale enregistrée.
+1. Lorsque votre application reçoit le événement de modification d&#39;état `PTMediaPlayerStatusReady`, recherchez l&#39;heure locale enregistrée.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -298,7 +301,7 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
 
 1. Fournissez les coupures publicitaires comme spécifié dans l’interface de stratégie publicitaire.
 1. Implémentez un sélecteur de stratégies publicitaires personnalisé en étendant le sélecteur de stratégies publicitaires par défaut.
-1. Fournir les coupures publicitaires qui doivent être présentées à l’utilisateur en implémentant `selectAdBreaksToPlay`
+1. Fournissez les coupures publicitaires qui doivent être présentées à l’utilisateur en implémentant `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
