@@ -26,13 +26,13 @@ Vous pouvez effectuer les types de modifications suivants :
 
 * Couleur de premier plan des boutons et du texte
 
-   Tous les contrôles qui ont un premier plan utilisent la `vid-skin-fgcolor` classe. Pour modifier le premier plan de tous les contrôles, effectuez une itération sur tous les éléments de la `vid-skin-fgcolor` classe et spécifiez la couleur souhaitée.
+   Tous les contrôles qui ont un premier plan utilisent la classe `vid-skin-fgcolor`. Pour modifier le premier plan de tous les contrôles, effectuez une itération sur tous les éléments avec la classe `vid-skin-fgcolor` et spécifiez la couleur souhaitée.
 * Couleur d’arrière-plan des boutons et du texte
 
-   Tous les contrôles qui ont un premier plan utilisent la `vid-skin-bgcolor` classe. Pour modifier le premier plan de tous les contrôles, effectuez une itération sur tous les éléments avec `vid-skin-bgcolor` classe et spécifiez la couleur souhaitée.
+   Tous les contrôles avec un premier plan utilisent la classe `vid-skin-bgcolor`. Pour modifier le premier plan de tous les contrôles, effectuez une itération sur tous les éléments avec la classe `vid-skin-bgcolor` et spécifiez la couleur souhaitée.
 * Forme de la tête de jeu
 
-   La tête de jeu peut être carrée ou ronde. Pour modifier la tête de lecture, ajoutez `square` ou `round` la classe à `playhead` l’élément.
+   La tête de jeu peut être carrée ou ronde. Pour modifier la tête de lecture, ajoutez la classe `square` ou `round` à l’élément `playhead`.
 * Style des spinners de mise en mémoire tampon
 
    Le lecteur de référence fournit les styles suivants de moteurs de balayage qui peuvent être affichés lorsque le lecteur met en mémoire tampon le contenu :
@@ -44,7 +44,7 @@ Vous pouvez effectuer les types de modifications suivants :
 
       >[!TIP]
       >
-      >Pour utiliser l&#39;une des versions de mise en mémoire tampon, vous devez ajouter la classe dans l&#39;élément de mise en mémoire tampon-recouvrement. Par exemple, pour utiliser `overlay-text`, ajoutez les lignes suivantes dans le `BufferOverlay.js` fichier :
+      >Pour utiliser l&#39;une des versions de mise en mémoire tampon, vous devez ajouter la classe dans l&#39;élément de mise en mémoire tampon-recouvrement. Par exemple, pour utiliser `overlay-text`, ajoutez les lignes suivantes dans le fichier `BufferOverlay.js` :
       >
       >
       ```js
