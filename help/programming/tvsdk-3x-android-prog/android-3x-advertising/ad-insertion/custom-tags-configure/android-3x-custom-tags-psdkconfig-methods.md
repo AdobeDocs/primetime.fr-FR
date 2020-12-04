@@ -6,11 +6,14 @@ title: Config des méthodes de classe pour les balises
 uuid: b75aebac-4b94-4c42-bed4-3c17ad989cd1
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
 
-# Config des méthodes de classe pour les balises {#config-class-methods-for-tags}
+# Configurez les méthodes de classe pour les balises {#config-class-methods-for-tags}
 
 Vous pouvez configurer globalement les noms de balises personnalisées dans TVSDK avec la classe MediaPlayerItemConfig.
 
@@ -23,7 +26,7 @@ TVSDK applique automatiquement la configuration globale à tout flux média qui 
 | <b>Méthode</b> | <b>Description</b> |
 |--- |--- |
 | `public final String[] getSubscribedTags` | Récupère la liste actuelle des balises abonnées. |
-| `public final void setSubscribedTags(String[] tags);` | Définit la liste des balises abonnées qui seront exposées à l’application.  Votre application est également automatiquement abonnée à toutes les balises transmises par le biais de `setAdTags`. |
+| `public final void setSubscribedTags(String[] tags);` | Définit la liste des balises abonnées qui seront exposées à l’application.  Votre application est également automatiquement abonnée à toutes les balises transmises par `setAdTags`. |
 
 **Personnaliser les balises publicitaires utilisées par le détecteur d&#39;opportunités par défaut**
 
@@ -36,9 +39,9 @@ Souvenez-vous des points suivants :
 
 * Les méthodes setter n’autorisent pas le paramètre de balises à contenir des valeurs nulles.
 
-   S’il est détecté, TVSDK lance un `IllegalArgumentException`jeton.
-* Le nom de la balise personnalisée doit contenir le `#` préfixe.
+   S’il est rencontré, TVSDK lance un `IllegalArgumentException`.
+* Le nom de la balise personnalisée doit contenir le préfixe `#`.
 
-   Par exemple, `#EXT-X-ASSET` est un nom de balise personnalisé correct, mais `EXT-X-ASSET` incorrect.
+   Par exemple, `#EXT-X-ASSET` est un nom de balise personnalisé correct, mais `EXT-X-ASSET` est incorrect.
 
 * Vous ne pouvez pas modifier la configuration après le chargement du flux média.
