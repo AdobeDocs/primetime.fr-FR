@@ -6,6 +6,9 @@ title: Classes Mediacore
 uuid: 2d4e41e6-e689-4f79-9021-1ab8ce0fe40d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '651'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Vous pouvez utiliser l’API du lecteur Primetime pour personnaliser le comportement du lecteur.
 
-Pour consulter la documentation complète sur l’API de TVSDK, accédez aux Références [de l’API](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)Adobe Primetime.
+Pour consulter la documentation complète sur l’API de TVSDK, consultez les [Références de l’API Adobe Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
 Ces classes décrivent votre lecteur multimédia et ses ressources.
 Package : [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/package-summary.html)
@@ -28,7 +31,7 @@ Package : [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a> ABRControlParameters</span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> </a>  ABRControlParametersABRControlParameters</span> </td> 
    <td colname="2"> Classe qui encapsule tous les paramètres de contrôle de débit adaptatif. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +52,11 @@ Package : [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2">Mise en oeuvre par défaut de la classe de l’interface <span class="codeph"> MediaPlayer</span> . </td> 
+   <td colname="2">Implémentation de classe par défaut de l’interface <span class="codeph"> MediaPlayer</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a> </span> </td> 
-   <td colname="2">Interface publique de la classe <span class="codeph"> DefaultMediaPlayer</span> . Inclut des énumérations pour Événement, PlayerState et Visibility. </td> 
+   <td colname="2">Interface publique de la classe <span class="codeph"> DefaultMediaPlayer</span>. Inclut des énumérations pour Événement, PlayerState et Visibility. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.AdPlaybackEventListener.html" format="html" scope="external"> MediaPlayer.AdPlaybackEventListener</a></span> </td> 
