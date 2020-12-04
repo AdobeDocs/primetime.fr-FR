@@ -6,15 +6,18 @@ title: Assemblage de votre contenu avec Adobe Offline Packager
 uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
 
-# Assemblage de votre contenu avec Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}
+# Mettez en package votre contenu avec Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}
 
 Adobe Offline Packager prend comme entrée du contenu mp4 non chiffré.
 
-**Appel d’Adobe Offline Packager**
+**Appel d&#39;Adobe Hors ligne Packager**
 
 Un appel standard d’adobe offline packager ressemblerait à l’appel ci-dessous :
 
@@ -26,15 +29,15 @@ Un appel standard d’adobe offline packager ressemblerait à l’appel ci-desso
     -playready_LA_
     URLhttp://pr.test.expressplay.com/playready/RightsManager.asmx
     -playready_keyid c595f214d84dc7ecf31a8ebf1b7ddda5-content_id c595f2114d84dc7ecf31a8ebf1b7ddda5
-    
 
-Dans ce cas particulier, le gestionnaire de package hors ligne ajoute les données d&#39;initialisation de protection de contenu Widevine et de protection de contenu PlayReady au contenu DASH de sortie. La valeur de `-key_file_path` est pour une clé codée en base 64. La valeur de `-playready_LA_URL` est pour l’acquisition de la licence PlayReady.
+    
+Dans ce cas particulier, le gestionnaire de package hors ligne ajoute les données d&#39;initialisation de protection de contenu Widevine et de protection de contenu PlayReady au contenu DASH de sortie. La valeur `-key_file_path` correspond à une clé codée en base 64. La valeur de `-playready_LA_URL` correspond à l’acquisition de la licence PlayReady.
 
 L&#39;argument conf_path pointe vers un fichier de configuration qui contiendra les éléments suivants :
 
     &lt;config>
     &lt;frag_dur>4&lt;/frag_dur>
-    &lt;cible_dur>6&lt;/cible_dur>
+    &lt;target_dur>6&lt;/target_dur>
     &lt;encrypt_audio>false&lt;/encrypt_audio>
     &lt;/config>
 
