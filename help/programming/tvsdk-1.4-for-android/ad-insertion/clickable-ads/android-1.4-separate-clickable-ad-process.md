@@ -5,12 +5,15 @@ seo-title: Séparer le processus publicitaire cliquable
 title: Séparer le processus publicitaire cliquable
 uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '175'
+ht-degree: 0%
 
 ---
 
 
-# Séparer le processus publicitaire cliquable{#separate-the-clickable-ad-process}
+# Séparer le processus d’annonce cliquable{#separate-the-clickable-ad-process}
 
 Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une Activité.
 
