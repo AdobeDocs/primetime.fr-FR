@@ -6,6 +6,9 @@ title: Utiliser des métadonnées minutées
 uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
 
 Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
 
-Pour utiliser ces objets enregistrés `PTTimedMetadata` au cours de la lecture, utilisez le dictionnaire enregistré des objets de métadonnées temporisées [Stocker au fur et à mesure qu’ils sont distribués](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Pour utiliser ces objets `PTTimedMetadata` enregistrés au cours de la lecture, utilisez le dictionnaire enregistré de [Stocker les objets de métadonnées minutées au fur et à mesure de leur distribution](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-1. Extrayez et mettez à jour le temps de lecture actuel à partir de cette notification et recherchez tous les objets dont les débuts correspondent au temps de lecture actuel. `PTTimedMetadata`
+1. Extrayez et mettez à jour le temps de lecture actuel à partir de cette notification et recherchez tous les objets `PTTimedMetadata` dont les débuts correspondent au temps de lecture actuel.
 
    Vous pouvez utiliser ces objets pour effectuer diverses actions.
 
@@ -57,4 +60,4 @@ Pour utiliser ces objets enregistrés `PTTimedMetadata` au cours de la lecture, 
    }
    ```
 
-1. Éliminez régulièrement `PTTimedMetadata` les instances obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
+1. Éliminez régulièrement les instances `PTTimedMetadata` obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
