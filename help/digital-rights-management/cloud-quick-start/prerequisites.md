@@ -4,6 +4,9 @@ title: Conditions préalables
 uuid: 5c85ce72-28a9-45d8-b951-46a697e362ea
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '119'
+ht-degree: 0%
 
 ---
 
@@ -14,4 +17,4 @@ Avant d’empaqueter du contenu, un certificat Primetime DRM Packager est requis
 
 [Guide d&#39;inscription de certificat](../../digital-rights-management/certificate-enrollment-guide/about-certs.md)
 
-Il existe deux niveaux de certificats d&#39;emballage : PRODUCTION et ESSAI. Le contenu conditionné à l’aide de certificats d’essai est destiné uniquement au développement et ne sera pas lu une fois le certificat arrivé à expiration. Toutes les licences délivrées au contenu d’essai auront une date d’expiration de stratégie codée en dur maximale égale à celle de la date d’expiration du certificat (si elle n’est pas définie dans la stratégie DRM).
+Il existe deux niveaux de certificats d&#39;emballage : PRODUCTION et ESSAI. Le contenu conditionné à l’aide de certificats d’évaluation est destiné uniquement au développement et ne sera pas lu une fois le certificat arrivé à expiration. Toutes les licences délivrées au contenu d’essai auront une date d’expiration de stratégie codée en dur maximale égale à celle de la date d’expiration du certificat (si elle n’est pas définie dans la stratégie DRM).
