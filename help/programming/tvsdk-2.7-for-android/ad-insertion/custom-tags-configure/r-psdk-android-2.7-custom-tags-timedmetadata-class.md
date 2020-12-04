@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Classe de métadonnées minutées {#timed-metadata-class}
+# Classe de métadonnées minutée {#timed-metadata-class}
 
 Lorsque TVSDK détecte une balise abonnée dans la liste de lecture/le manifeste, le lecteur tente automatiquement de traiter et d’exposer la balise sous la forme d’un objet TimedMetadata.
 
@@ -29,12 +29,12 @@ La classe fournit les éléments suivants :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> <p>Identificateur unique des métadonnées temporisées. </p> <p>Cette valeur est généralement extraite de l’attribut ID de balise/indice. Sinon, une valeur aléatoire unique est fournie. Utilisez <span class="codeph"> getId </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> Métadonnées </td> 
    <td colname="col2"> <p>Informations traitées/extraites de la liste de lecture/balise personnalisée manifest. Utilisez <span class="codeph"> getMetadata </span>. </p> </td> 
   </tr> 
@@ -44,12 +44,12 @@ La classe fournit les éléments suivants :
    <td colname="col2"> <p>Nom des métadonnées temporisées. Si le type est <span class="codeph"> TAG </span>, la valeur représente le nom de la balise/indice. Si le type est <span class="codeph"> ID3 </span>, il est nul. Utilisez <span class="codeph"> getName </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> <p>Position temporelle, en millisecondes, par rapport au début du contenu principal où ces métadonnées temporisées sont présentes dans le flux. Utilisez <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Type </td> 
    <td colname="col2"> <p>Type des métadonnées temporisées. Utilisez <span class="codeph"> getType </span>. 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
@@ -87,31 +87,31 @@ Souvenez-vous des points suivants :
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3} </span> </td> 
+   <td colname="col1"> <span class="codeph"> public enum Type {TAG, ID3}  </span> </td> 
    <td colname="col2"> <p>Types possibles pour les métadonnées temporisées. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata (type, long time, long id, nom de chaîne, métadonnées); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata (type, long time, long id, nom de chaîne, métadonnées);  </span> </td> 
    <td colname="col2"> <p>Constructeur par défaut (heure correspond à l’heure locale du flux). </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getTime();  </span> </td> 
    <td colname="col2"> <p>Position temporelle, par rapport au début du contenu principal, où ces métadonnées ont été insérées dans le flux. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Metadata getMetadata();  </span> </td> 
    <td colname="col2"> <p>Métadonnées insérées dans le flux. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Type getType(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Type getType();  </span> </td> 
    <td colname="col2"> <p>Renvoie le type des métadonnées minutées. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getId(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getId();  </span> </td> 
    <td colname="col2"> <p>Renvoie l’ID extrait des attributs de balise/indice. Sinon, une valeur aléatoire unique est fournie. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public String getName(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public String getName();  </span> </td> 
    <td colname="col2"> <p>Renvoie le nom du repère, qui est généralement le nom de balise HLS. </p> </td> 
   </tr> 
  </tbody> 
