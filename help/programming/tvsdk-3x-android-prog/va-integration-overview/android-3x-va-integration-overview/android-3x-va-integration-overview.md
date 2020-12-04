@@ -1,20 +1,23 @@
 ---
-description: Vous pouvez effectuer un suivi sur l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
-seo-description: Vous pouvez effectuer un suivi sur l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
+description: Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
+seo-description: Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
 seo-title: Intégration de TVSDK avec Adobe Analytics
 title: Intégration de TVSDK avec Adobe Analytics
 uuid: 4d498d35-ec8e-40fc-8272-1637ef942bb0
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
 
 # Intégration de TVSDK avec Adobe Analytics {#integrating-tvsdk-with-adobe-analytics}
 
-Vous pouvez effectuer un suivi sur l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
+Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
 
-Le suivi vidéo dans TVSDK utilise le service **Adobe Analytics Video Essentials** , qui fournit des mesures d’engagement vidéo, telles que les vues vidéo, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d’informations sur ce service, contactez votre représentant Adobe.
+Le suivi vidéo dans TVSDK utilise le service **Adobe Analytics Video Essentials**, qui fournit des mesures d’engagement vidéo, telles que les vues vidéo, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d&#39;informations sur ce service, contactez votre représentant d&#39;Adobe.
 
 La procédure suivante résume les étapes d’activation du suivi vidéo dans votre lecteur :
 
@@ -28,4 +31,4 @@ La procédure suivante résume les étapes d’activation du suivi vidéo dans v
    * Objet de métadonnées des analyses vidéo
    * Objet de métadonnées global
 
-1. Configurez le rapports d’analyses vidéo côté serveur à l’aide des outils d’administration d’Adobe Analytics.
+1. Configurez le rapports d’analyses vidéo côté serveur à l’aide des outils d’administration Adobe Analytics.
