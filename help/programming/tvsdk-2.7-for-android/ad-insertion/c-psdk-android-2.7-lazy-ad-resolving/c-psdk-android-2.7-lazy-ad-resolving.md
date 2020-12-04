@@ -14,14 +14,14 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#lazy-ad-resolving}
+# Aperçu {#lazy-ad-resolving}
 
 La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage.
 
 * Processus de base de résolution et de chargement des publicités :
 
    1. TVSDK télécharge un manifeste (playlist) et *résout* toutes les publicités.
-   1. TVSDK *charge* toutes les publicités et les place sur la chronologie.
+   1. TVSDK *charge* toutes les publicités et les place dans la chronologie.
    1. TVSDK déplace le lecteur dans l’état PRÉPARÉ et la lecture du contenu commence.
 
    Le lecteur utilise les URL du manifeste pour obtenir le contenu de la publicité (éléments créatifs), s’assure que le contenu de la publicité est dans un format lisible par TVSDK et TVSDK place les publicités sur la chronologie. Ce processus de base de résolution et de chargement des publicités peut provoquer un délai inacceptable pour un utilisateur attendant de lire son contenu, en particulier si le manifeste contient plusieurs URL de publicité.
@@ -51,12 +51,12 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
 
    >
    >    
-   * Le joueur doit attendre le `kEventAdResolutionComplete` événement avant de permettre la recherche ou le jeu de ficelles.
-   >    * Si l’utilisateur tente d’effectuer des opérations de recherche ou de lecture vidéo pendant que les publicités sont toujours en cours de résolution, TVSDK renvoie l’ `kECLazyAdResolutionInProgress` erreur.
-   >    * Si nécessaire, le lecteur doit mettre à jour la barre de défilement *après* avoir reçu le `kEventAdResolutionComplete` événement.
+   * Le joueur doit attendre le événement `kEventAdResolutionComplete` avant de permettre la recherche ou le jeu vidéo.
+   >    * Si l’utilisateur tente d’effectuer des opérations de recherche ou de lecture vidéo pendant que les publicités sont toujours en cours de résolution, TVSDK renvoie l’erreur `kECLazyAdResolutionInProgress`.
+   >    * Si nécessaire, le lecteur doit mettre à jour la barre de défilement, *après avoir reçu* le événement `kEventAdResolutionComplete`.
 >
 >* La résolution des publicités différées est réservée à VOD uniquement. Il ne fonctionnera pas avec les flux LIVE.
->* La résolution des publicités différées est incompatible avec la fonction *Instant On* .
+>* La résolution des publicités différées est incompatible avec la fonction *Instant On*.
 
 >
 >  
