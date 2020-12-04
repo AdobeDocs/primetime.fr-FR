@@ -6,6 +6,9 @@ title: Résolution des publicités juste à temps
 uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ La résolution et le chargement des publicités peuvent provoquer un délai inac
 **Processus de base de résolution et de chargement des publicités :**
 
 1. TVSDK télécharge un manifeste (playlist) et *résout* toutes les publicités.
-1. TVSDK *charge* toutes les publicités et stimule les segments publicitaires dans les manifestes.
+1. TVSDK *charge* toutes les publicités et les branche dans les manifestes.
 1. TVSDK déplace le lecteur dans l’état PRÉPARÉ et la lecture du contenu commence.
 
 Le lecteur utilise les URL du manifeste pour obtenir le contenu de la publicité (éléments créatifs), s’assure que le contenu de la publicité est dans un format lisible par TVSDK et TVSDK place les publicités sur la chronologie. Ce processus de base de résolution et de chargement des publicités peut provoquer un délai inacceptable pour un utilisateur attendant de lire son contenu, en particulier si le manifeste contient plusieurs URL de publicité.
@@ -25,19 +28,20 @@ Le lecteur utilise les URL du manifeste pour obtenir le contenu de la publicité
 **Résolution des publicités reluisantes :**
 
 1. TVSDK télécharge la liste de lecture.
-1. TVSDK *résout et charge* toutes les publicités preroll, déplace le lecteur dans l’état PRÉPARÉ et la lecture de contenu commence.
+1. TVSDK *résout et charge* les publicités preroll, déplace le lecteur dans l’état PRÉPARÉ et la lecture de contenu commence.
 1. TVSDK *résout* chaque coupure publicitaire avant sa position en fonction de la valeur définie dans `PTAdMetadata::delayAdLoadingTolerance`.
 
-Par exemple, par défaut, `delayAdLoadingTolerance` est défini sur 5 secondes. Si un AdBreak est défini pour être lu à 3h00, il sera résolu à 2h55. Vous pouvez augmenter cette valeur si vous pensez que la résolution de votre publicité prendra plus de 5 secondes.
+Par exemple, `delayAdLoadingTolerance` est défini par défaut sur 5 secondes. Si un AdBreak est défini pour être lu à 3h00, il sera résolu à 2h55. Vous pouvez augmenter cette valeur si vous pensez que la résolution de votre publicité prendra plus de 5 secondes.
 
 >[!IMPORTANT]
 >
 >**Facteurs à prendre en compte avec la résolution de publicités diffuses :**
 >* La résolution des publicités différées n&#39;est prise en charge que pour les flux VOD avec les modes SERVER_MAP et le mode de signalisation.
->* La résolution des publicités différées n’est pas activée par défaut. Vous devez définir `PTAdMetadata::delayAdLoading` = YES pour l’activer.
+>* La résolution des publicités différées n’est pas activée par défaut. Vous devez définir `PTAdMetadata::delayAdLoading` = YES pour l&#39;activer.
 >* La résolution des publicités différées est incompatible avec la fonction Instant On. Pour plus d’informations sur Instant On, voir [Instant On](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
 >* Le mode Image dans l’image n’est pas pris en charge avec la résolution des publicités diffuses. Veuillez désactiver tous les modes d&#39;image si vous activez l&#39;option Résolution des publicités diffuses.
 >* La résolution des publicités différées n’a aucune incidence sur les publicités preroll.
+
 >
 
 
