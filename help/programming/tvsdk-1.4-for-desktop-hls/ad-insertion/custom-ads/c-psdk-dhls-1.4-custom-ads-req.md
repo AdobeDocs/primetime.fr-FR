@@ -6,11 +6,14 @@ title: Configuration requise pour les publicités personnalisées
 uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# Configuration requise pour les publicités personnalisées {#custom-ad-requirements}
+# Exigences d&#39;annonces personnalisées {#custom-ad-requirements}
 
 Le lecteur TVSDK peut lire des publicités VPAID (Digital Video Player Ad-Interface Definition) et afficher l’état de chargement des publicités. En cas d’erreur dans la publicité ou de chargement trop long des publicités, TVSDK ignore ces publicités.
 
@@ -22,9 +25,9 @@ TVSDK prend en charge les fonctionnalités suivantes :
 
 * Version 1.0 et 2.0 de la spécification VPAID
 * Publicités VPAID linéaires sur du contenu vidéo à la demande (VOD)
-* Publicités Flash VPAID
+* Publicités VPAID Flash
 
-   Les publicités VPAID doivent être basées sur Flash et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/x-shockwave-flash`étant.
+   Les publicités VPAID doivent être basées sur un Flash et la réponse publicitaire doit identifier le type de média de la publicité VPAID comme `application/x-shockwave-flash`.
 
 Les fonctionnalités suivantes ne sont pas prises en charge :
 
@@ -43,14 +46,14 @@ TVSDK distribue les événements suivants :
 * `AdPlaying`
 * `AdStopped`
 
-Après le `AdStopped` événement, TVSDK reprend le contenu vidéo.
+Après le événement `AdStopped`, TVSDK reprend le contenu vidéo.
 
 >[!TIP]
 >
 >Si vous spécifiez la valeur zéro, TVSDK tente de charger la publicité jusqu’à ce qu’elle se charge ou qu’une erreur se produise.
 
-## Publicités ignorées {#section_3EA452F420884335AE90DF23C17E416A}
+## Publicités {#section_3EA452F420884335AE90DF23C17E416A} ignorées
 
 Si le chargement de la publicité est trop long ou qu’il y a des erreurs dans la publicité, TVSDK peut ignorer la publicité et la publicité suivante dans la capsule est lue automatiquement.
 
-Si le `AuditudeSettings.customAdLoadTimeout` paramètre spécifie un nombre de secondes supérieur à zéro, TVSDK tente de charger la publicité pendant la durée spécifiée. S’il ne parvient pas à charger la publicité, celle-ci est ignorée. Par exemple, si vous effectuez la configuration `AuditudeSettings.customAdLoadTimeout:5`, TVSDK tente de charger la publicité pendant un maximum de 5 secondes. Si la publicité ne se charge toujours pas, elle est ignorée.
+Si le paramètre `AuditudeSettings.customAdLoadTimeout` spécifie un nombre de secondes supérieur à zéro, TVSDK tente de charger la publicité pendant la durée spécifiée. S’il ne parvient pas à charger la publicité, celle-ci est ignorée. Par exemple, si vous configurez `AuditudeSettings.customAdLoadTimeout:5`, TVSDK tente de charger la publicité pendant un maximum de 5 secondes. Si la publicité ne se charge toujours pas, elle est ignorée.
