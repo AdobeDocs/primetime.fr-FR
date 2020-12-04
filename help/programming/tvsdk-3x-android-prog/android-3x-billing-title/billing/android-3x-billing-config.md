@@ -1,18 +1,21 @@
 ---
-description: Si vous utilisez la configuration par défaut, il n'y a rien d'autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant Adobe Enablement, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d’initialiser le lecteur de médias.
-seo-description: Si vous utilisez la configuration par défaut, il n'y a rien d'autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant Adobe Enablement, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d’initialiser le lecteur de médias.
+description: Si vous utilisez la configuration par défaut, il n'y a rien d'autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant d'activation d'Adobe, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d'initialiser le lecteur de médias.
+seo-description: Si vous utilisez la configuration par défaut, il n'y a rien d'autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant d'activation d'Adobe, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d'initialiser le lecteur de médias.
 seo-title: Configuration des mesures de facturation
 title: Configuration des mesures de facturation
 uuid: 340439bf-185b-4761-a481-010908842811
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# Configuration des mesures de facturation {#configure-billing-metrics}
+# Configurer les mesures de facturation {#configure-billing-metrics}
 
-Si vous utilisez la configuration par défaut, il n&#39;y a rien d&#39;autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant Adobe Enablement, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d’initialiser le lecteur de médias.
+Si vous utilisez la configuration par défaut, il n&#39;y a rien d&#39;autre à faire pour activer ou configurer la facturation. Si vous avez obtenu différents paramètres de configuration de votre représentant d&#39;activation d&#39;Adobe, utilisez la classe BillingMetricsConfiguration pour configurer ces paramètres avant d&#39;initialiser le lecteur de médias.
 
 >[!TIP]
 >
