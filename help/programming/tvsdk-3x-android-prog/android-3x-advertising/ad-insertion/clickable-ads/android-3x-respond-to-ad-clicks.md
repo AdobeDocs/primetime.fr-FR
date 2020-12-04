@@ -6,6 +6,9 @@ title: Répondre aux clics sur les publicités
 uuid: abc5de2f-3ab0-4e00-908c-ea8b31387d4f
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
@@ -17,16 +20,16 @@ TVSDK fournit des informations vous permettant d’agir sur les publicités par 
 Pour TVSDK pour Android, seules les publicités linéaires peuvent être cliquées.
 Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
 
-1. Pour configurer un écouteur de événement pour TVSDK et fournir les informations de clic publicitaire, enregistrez-vous `AdClickedEventListener.onAdClicked`.
+1. Pour configurer un écouteur de événement pour TVSDK et fournir les informations de clic publicitaire, enregistrez `AdClickedEventListener.onAdClicked`.
 
    Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, TVSDK envoie cette notification, y compris des informations sur la destination du clic.
 1. Surveillez les interactions des utilisateurs sur les annonces cliquables.
-1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, appelez `notifyClick` le `MediaPlayerView`.
-1. Prêtez attention au `onAdClick(AdClickEvent event)` événement de TVSDK.
-1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour l’ `AdClickEvent` instance.
+1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, appelez `notifyClick` sur le `MediaPlayerView`.
+1. Prêtez attention au événement `onAdClick(AdClickEvent event)` de TVSDK.
+1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour l’instance `AdClickEvent`.
 1. Mettez la vidéo en pause.
 
-   Pour plus d’informations sur la suspension de la vidéo, voir [Pause et reprise de la lecture](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
+   Pour plus d’informations sur la mise en pause de la vidéo, voir [Mise en pause et reprise de la lecture](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
 1. Utilisez les informations de clic publicitaire pour afficher l’URL de clic publicitaire et les informations associées. Vous pouvez, par exemple, afficher les informations de l’une des manières suivantes :
 
    * Dans votre application, en ouvrant l’URL de clic publicitaire dans un navigateur.
