@@ -5,7 +5,10 @@ seo-title: Flux de segments jetés
 title: Flux de segments jetés
 uuid: 62e3b858-2605-4960-b504-9010674f80ad
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: ''
 
 Les flux HLS diffusés par le biais d’un réseau CDN (Content Diffusion Network) peuvent parfois utiliser des jetons d’authentification sur les demandes de manifeste et de segmentation pour vérification. Ces jetons peuvent être fournis sous forme de paramètres d’URL ou d’en-têtes de cookie.
 
-Les jetons fournis en tant que cookies dans la réponse du manifeste principal (m3u8) ne sont pas partagés avec les demandes de segment (ts) même si les demandes de segment concernent le même domaine. Pour activer le partage de ces cookies dans une requête de segment, définissez la propriété suivante sur l’ `PTMetadata` instance fournie à l’élément du lecteur : 
+Les jetons fournis en tant que cookies dans la réponse du manifeste principal (m3u8) ne sont pas partagés avec les demandes de segment (ts) même si les demandes de segment concernent le même domaine. Pour activer le partage de ces cookies dans une demande de segment, définissez la propriété suivante sur l’instance `PTMetadata` fournie à l’élément du lecteur : 
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
