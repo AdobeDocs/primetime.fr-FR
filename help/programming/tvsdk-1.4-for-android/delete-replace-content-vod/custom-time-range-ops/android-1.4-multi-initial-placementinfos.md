@@ -6,11 +6,14 @@ title: Informations de placement initiales multiples
 uuid: e0f549d7-3092-45e9-bd67-ee41d01075b5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '30'
+ht-degree: 0%
 
 ---
 
 
-# Informations de placement initiales multiples{#multiple-initial-placementinformations}
+# Informations de positionnement multiples initiales {#multiple-initial-placementinformations}
 
 TVSDK peut configurer plusieurs informations de placement initiales.
 
