@@ -6,11 +6,14 @@ title: Utilisation des cookies
 uuid: a3b966fd-1263-458d-8303-b4e898372ee1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# Utilisation des cookies {#work-with-cookies}
+# Utilisation de cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
@@ -27,7 +30,7 @@ Voici un exemple de demande au serveur clé avec une certaine authentification :
 
 Pour utiliser des cookies :
 
-Créez un cookie `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
+Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
 
 Par exemple :
 
@@ -45,7 +48,7 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 >
 >Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
-TVSDK la requête `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
+TVSDK requête ce `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
 
 Le événement MediaPlayerEvent.COOKIES_UPDATED est appelé lorsque les cookies C++ sont mis à jour. Cette variable cookiesUpdateEvent possède une méthode getCookieString() qui renvoie une valeur de chaîne pour le cookie.
 
