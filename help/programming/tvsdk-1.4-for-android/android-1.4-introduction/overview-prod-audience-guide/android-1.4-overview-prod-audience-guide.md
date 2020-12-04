@@ -6,11 +6,14 @@ title: Présentation
 uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#overview}
+# Aperçu {#overview}
 
 Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour Android, qui est mis en oeuvre en Java.
 
@@ -24,7 +27,7 @@ Pour connaître la configuration matérielle et logicielle requise pour l’util
 
 Ce guide suppose que vous comprenez comment développer des applications et des lecteurs vidéo à l’aide de Java. Vous mettez en oeuvre une interface utilisateur de lecteur vidéo en utilisant cette langue et incorporez des fonctionnalités TVSDK.
 
-## A propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
+## À propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
 Ce guide fournit des informations qui vous permettent d’incorporer des fonctionnalités TVSDK dans un lecteur vidéo en utilisant Java sur les périphériques Android.
 
@@ -32,7 +35,7 @@ Ce guide fournit des informations qui vous permettent d’incorporer des fonctio
 
 >[!TIP]
 >
->Le préfixe d’espace de nommage de l’API TVSDK `com.adobe.mediacore` est omis pour des raisons de concision.
+>Le préfixe d’espace de nommage d’API TVSDK `com.adobe.mediacore` est omis pour des raisons de concision.
 >
 >De nombreux éléments d’API sont référencés sans leur indicateur de classe parent si le contexte est clair.
 
