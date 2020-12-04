@@ -1,20 +1,23 @@
 ---
-description: Vous pouvez exécuter des workflows spécifiques à Digital Rights Management (DRM).
-seo-description: Vous pouvez exécuter des workflows spécifiques à Digital Rights Management (DRM).
+description: Vous pouvez exécuter des workflows spécifiques à un Digital Rights Management (DRM).
+seo-description: Vous pouvez exécuter des workflows spécifiques à un Digital Rights Management (DRM).
 seo-title: Digital Rights Management
 title: Digital Rights Management
 uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
 source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
 # Digital Rights Management {#digital-rights-management}
 
-Vous pouvez exécuter des workflows spécifiques à Digital Rights Management (DRM).
+Vous pouvez exécuter des workflows spécifiques à un Digital Rights Management (DRM).
 
-Vous pouvez écouter le `AdobePSDK.DRMMetadataInfoEvent` événement pour gérer les workflows DRM :
+Vous pouvez écouter le événement `AdobePSDK.DRMMetadataInfoEvent` pour gérer les workflows DRM :
 
 ```js
 ... 
@@ -22,15 +25,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## Ajouter Digital Rights Management {#add-digital-rights-management}
+## Digital Rights Management d&#39;Ajoute {#add-digital-rights-management}
 
-1. Ajouter le `DRMMetadataInfoAvailableEvent` pour obtenir le `DRMMetadata`.
+1. Ajoutez `DRMMetadataInfoAvailableEvent` pour obtenir `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Mettez en oeuvre la `onDRMMetadataInfoAvailable` section située au-dessus de la ligne de l’étape 1.
+1. Mettez en oeuvre la section `onDRMMetadataInfoAvailable` au-dessus de la ligne de l’étape 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -69,7 +72,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Ajouter les données de protection à drmManager.
+1. Ajoutez les données de protection à drmManager.
 
    ```js
    drmManager.setProtectionData(protectionData);
