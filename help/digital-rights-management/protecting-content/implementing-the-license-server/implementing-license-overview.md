@@ -4,13 +4,16 @@ title: Présentation du serveur de licences
 uuid: 8c62376b-b159-4297-9322-75d62947e84e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#license-server-overview}
+# Aperçu {#license-server-overview}
 
-Avant de pouvoir délivrer des licences à des clients, vous devez déployer un serveur de licences DRM Adobe Primetime. Le serveur de licences utilise le SDK DRM Primetime pour effectuer un certain nombre de tâches.
+Avant de pouvoir délivrer des licences à des clients, vous devez déployer un serveur de licences Adobe Primetime DRM. Le serveur de licences utilise le SDK DRM Primetime pour effectuer un certain nombre de tâches.
 
 Pour mettre en oeuvre un serveur de licences :
 
@@ -23,4 +26,4 @@ Pour mettre en oeuvre un serveur de licences :
 
 En outre, le serveur doit fournir une logique métier pour authentifier les utilisateurs, déterminer si les utilisateurs sont autorisés à vue du contenu et éventuellement suivre l’utilisation des licences.
 
-Pour plus d’informations sur l’API Java, voir *Adobe Primetime DRM API Reference* .
+Voir *Référence de l’API DRM d’Adobe Primetime* pour plus d’informations sur l’API Java.
