@@ -6,6 +6,9 @@ title: Suivi des publicités
 uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ La plupart des annonceurs ont besoin d’informations détaillées sur le moment
 
 Lors de l’activation du suivi des publicités, le client spécifie l’une des approches suivantes :
 
-* **Côté** client En plus de la liste de lecture hébergée par des annonces publicitaires, le serveur envoie au client une structure JSON, VMAP ou in-manifest spécifiant les événements de suivi et les URL. Cette méthode est compatible avec Interactive Advertising Bureau (IAB)
+* **** côté clientAvec la liste de lecture hébergée sur une annonce, le serveur envoie au client un fichier JSON, VMAP ou une structure dans un manifeste spécifiant les événements de suivi et les URL. Cette méthode est compatible avec Interactive Advertising Bureau (IAB)
 
-* **Côté** serveur Le client ne participe pas au suivi des publicités. Le serveur envoie toutes les informations de suivi des publicités qu&#39;il peut. Les données de suivi sont calculées uniquement côté serveur et peuvent ne pas correspondre à l’activité de lecture côté client. Par exemple, si un utilisateur final ne vue pas la totalité de la publicité, une fois les segments distribués, le serveur considère toujours la publicité à lire.
+* **** Côté serveur : le client ne participe pas au suivi des publicités. Le serveur envoie toutes les informations de suivi des publicités qu&#39;il peut. Les données de suivi sont calculées uniquement côté serveur et peuvent ne pas correspondre à l’activité de lecture côté client. Par exemple, si un utilisateur final ne vue pas la totalité de la publicité, une fois les segments distribués, le serveur considère toujours la publicité à lire.
 
-* **Hybride** Il s’agit du suivi côté client, mais le client envoie ses rapports au serveur de manifeste, qui les transmet aux URL appropriées. Les annonceurs reçoivent les mêmes informations que pour le suivi côté client. Ce mode s&#39;adapte aux clients qui utilisent une connexion Internet restreinte.
+* **** HybridIl s’agit du suivi côté client, mais le client envoie ses rapports au serveur de manifeste, qui les transmet aux URL appropriées. Les annonceurs reçoivent les mêmes informations que pour le suivi côté client. Ce mode s&#39;adapte aux clients qui utilisent une connexion Internet restreinte.
