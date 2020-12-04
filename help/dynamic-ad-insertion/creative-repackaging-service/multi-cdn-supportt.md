@@ -6,17 +6,20 @@ title: Prise en charge de CDN multiple
 uuid: 2b6d71f0-61c8-486b-a35a-f7ef3a9519d2
 translation-type: tm+mt
 source-git-commit: 6863b63c7fa0068c3c5060fb946515c6cc5e3bff
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
 
-# Prise en charge de CDN multiple {#multi-cdn-support}
+# Prise en charge de plusieurs CDN {#multi-cdn-support}
 
 Multi CDN permet de définir un ou plusieurs emplacements CDN pour diffuser des publicités transcodées.
 
-Par défaut, toutes les ressources transcodées sont hébergées sur le réseau de diffusion de contenu Akamai détenu par Adobe. Cependant, vous pouvez choisir zéro ou plusieurs emplacements CDN supplémentaires dans lesquels CRS hébergera la ressource transcodée. Ainsi, dans ce cas, vos ressources et contenu transcodés peuvent être diffusés à partir du même CDN.
+Par défaut, toutes les ressources transcodées sont hébergées sur le réseau de diffusion de contenu Akamai détenu par l’Adobe. Cependant, vous pouvez choisir zéro ou plusieurs emplacements CDN supplémentaires dans lesquels CRS hébergera la ressource transcodée. Ainsi, dans ce cas, vos ressources et contenu transcodés peuvent être diffusés à partir du même CDN.
 
-Lorsque le serveur de manifeste effectue une recherche pour les requêtes transcodées, il utilise une URL d’amorçage qui contient plusieurs paramètres de requête. Si vous avez configuré un environnement CDN multiple, l&#39;URL d&#39;amorçage doit également contenir le `ptcdn` paramètre. Le serveur de manifeste utilise ce paramètre pour identifier le serveur CDN à partir duquel obtenir la version transcodée de la publicité.
+Lorsque le serveur de manifeste effectue une recherche pour les requêtes transcodées, il utilise une URL d’amorçage qui contient plusieurs paramètres de requête. Si vous avez configuré un environnement CDN multiple, l’URL d’amorçage devra également contenir le paramètre `ptcdn`. Le serveur de manifeste utilise ce paramètre pour identifier le serveur CDN à partir duquel obtenir la version transcodée de la publicité.
 
 La prise en charge de plusieurs CDN est également disponible pour les solutions Primetime suivantes :
 
@@ -24,7 +27,7 @@ La prise en charge de plusieurs CDN est également disponible pour les solutions
 1. TVSDK pour HLS de bureau
 1. TVSDK pour iOS
 
-## Activation de la prise en charge CDN {#section_1BA344F2300B49F291865A7461EDFEAE}
+## Activer la prise en charge CDN {#section_1BA344F2300B49F291865A7461EDFEAE}
 
 Par défaut, CRS est désactivé pour tous les clients.
 
@@ -34,6 +37,6 @@ Contactez votre gestionnaire de compte technique Adobe pour configurer votre com
 1. Détails de l’authentification
 1. Format d’URL de sortie
 
-En outre, votre gestionnaire de compte technique Adobe vous fournira un surnom pour ce CDN. Vous devez transmettre ce nom en tant que valeur du `ptcdn` paramètre dans l’URL d’amorçage.
+En outre, votre gestionnaire de compte technique Adobe vous donnera un surnom pour ce CDN. Vous devez transmettre ce surnom en tant que valeur du paramètre `ptcdn` dans l’URL du Bootstrap.
 
-Vous pouvez configurer plusieurs CDN sur CRS via l’assistance Adobe. Cependant, le réseau de diffusion de contenu utilisé pour sélectionner les ressources publicitaires à assembler via le serveur de manifeste doit être celui qui est transmis en tant que valeur du `ptcdn` paramètre dans l’URL d’amorçage.
+Vous pouvez configurer plusieurs CDN sur la fin CRS via le support Adobe. Cependant, le CDN utilisé pour sélectionner les ressources publicitaires à assembler via le serveur de manifeste doit être celui qui est transmis en tant que valeur du paramètre `ptcdn` dans l’URL du Bootstrap.
