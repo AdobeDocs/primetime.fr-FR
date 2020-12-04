@@ -4,6 +4,9 @@ title: Objet JSON pour les marqueurs publicitaires personnalisés
 uuid: 2c05d9ce-a22f-4829-bfea-9dcf0dc7cd6d
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '159'
+ht-degree: 0%
 
 ---
 
@@ -13,8 +16,8 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 Le bloc de code ci-dessous définit l’objet JSON &quot;détails&quot; lorsque le type est des marques publicitaires personnalisées.
 
 Le MetadataNode renvoyé par IFeedItemAdapter:getStreamMetadata() contient 2 entrées :
-1. une entrée avec la clé de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` et de valeur d’une instance de MetadataNode renvoyée par `TimeRangeCollection.toMetadata()`.
-1. La deuxième entrée comporte une clé de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` avec la valeur de l&#39;attribut *ajuster-chercher-position* ci-dessous.
+1. une entrée avec la clé de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.CUSTOM_AD_MARKERS_METADATA_KEY` et la valeur d&#39;une instance de MetadataNode renvoyée par `TimeRangeCollection.toMetadata()`.
+1. La deuxième entrée comporte une clé de type `com.adobe.mediacore.metadata.DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` avec la valeur de l&#39;attribut *modify-search-position* ci-dessous.
 
 ```
 “metadata”: {
