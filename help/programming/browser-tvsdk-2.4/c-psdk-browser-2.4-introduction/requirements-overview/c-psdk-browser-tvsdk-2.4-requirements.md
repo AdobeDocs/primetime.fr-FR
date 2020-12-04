@@ -6,11 +6,14 @@ title: Conditions requises
 uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#requirements-overview}
+# Aperçu {#requirements-overview}
 
 Le navigateur TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
 
