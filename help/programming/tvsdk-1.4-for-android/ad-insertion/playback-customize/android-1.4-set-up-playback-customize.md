@@ -13,16 +13,17 @@ ht-degree: 1%
 ---
 
 
-# Configuration d’une lecture personnalisée {#cset-up-customized-playback}
+# Configurer la lecture personnalisée {#cset-up-customized-playback}
 
 Vous pouvez personnaliser ou remplacer le comportement d’une publicité en enregistrant l’instance de stratégie d’annonce avec TVSDK.
 
 Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
 
-* Implémentez l’ `AdPolicySelector` interface et toutes ses méthodes.
+* Implémentez l&#39;interface `AdPolicySelector` et toutes ses méthodes.
 Cette option est recommandée si vous devez remplacer tous les comportements publicitaires par défaut.
 
-* Étendez la `DefaultAdPolicySelector` classe et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+* Étendre la classe `DefaultAdPolicySelector` et fournir des implémentations uniquement pour les comportements qui nécessitent
+personnalisation.
 Cette option est recommandée si vous ne devez remplacer que certains comportements par défaut.
 
 Pour les deux options, effectuez les tâches suivantes :
