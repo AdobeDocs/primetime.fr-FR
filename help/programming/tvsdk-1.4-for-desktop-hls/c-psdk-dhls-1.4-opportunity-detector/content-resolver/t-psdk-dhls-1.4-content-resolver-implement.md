@@ -6,18 +6,21 @@ title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
 
-# Mise en oeuvre d’un outil de résolution de contenu personnalisé{#implement-a-custom-content-resolver}
+# Mise en oeuvre d’un résolveur de contenu personnalisé{#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité à l’aide de la `canResolve` méthode . Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’avertissement de TVSDK une fois le processus terminé.
+Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité à l&#39;aide de la méthode `canResolve`. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’avertissement de TVSDK une fois le processus terminé.
 
-* Le résolveur de contenu appelle `client.place` pour spécifier l’opération de chronologie à exécuter par TVSDK (généralement un emplacement de coupure publicitaire).
-* Le résolveur de contenu appelle `client.notifyCompleted` si le processus de résolution est réussi ou `client.notifyFailed` si le processus échoue.
+* Le résolveur de contenu appelle `client.place` pour spécifier l’opération de chronologie à exécuter par TVSDK (généralement un placement de coupures publicitaires).
+* Le résolveur de contenu appelle `client.notifyCompleted` si le processus de résolution a réussi ou `client.notifyFailed` si le processus a échoué.
 
 1. Créez un résolveur d&#39;opportunités personnalisé.
 
