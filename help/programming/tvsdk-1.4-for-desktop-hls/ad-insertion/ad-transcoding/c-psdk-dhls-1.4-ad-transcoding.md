@@ -1,16 +1,19 @@
 ---
 description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
 seo-description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
-seo-title: Réparer les publicités incompatibles à l’aide d’Adobe Creative Repackaging Service
-title: Réparer les publicités incompatibles à l’aide d’Adobe Creative Repackaging Service
+seo-title: Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe
+title: Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe
 uuid: 3bc24185-6b19-4660-bf78-5ccdaf14787a
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '516'
+ht-degree: 0%
 
 ---
 
 
-# Réparer les publicités incompatibles à l’aide d’Adobe Creative Repackaging Service {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
+# Réparer les publicités incompatibles à l&#39;aide du service de reconditionnement créatif d&#39;Adobe {#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
 
 Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
 
@@ -18,11 +21,11 @@ Les publicités diffusées par divers tiers, tels qu’un serveur d’annonces d
 
 Lorsque TVSDK rencontre pour la première fois une publicité incompatible, le lecteur ignore la publicité et envoie une demande au service de reconditionnement de la création (CRS), qui fait partie du serveur principal Primetime et d’insertion, afin de reconditionner la publicité dans un format compatible. CRS tente de générer des rendus M3U8 à débit multiple de la publicité et stocke ces rendus sur le réseau de Diffusion de contenu Primetime (CDN). La prochaine fois que TVSDK recevra une réponse publicitaire pointant vers cette publicité, le lecteur utilisera la version compatible HLS M3U8 du CDN.
 
-Pour activer cette fonctionnalité facultative, contactez votre représentant Adobe.
+Pour activer cette fonctionnalité facultative, contactez votre représentant d’Adobe.
 
-Pour plus d’informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
+Pour plus d&#39;informations sur CRS, voir [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
 
-## Prise en charge de plusieurs réseaux CDN pour CRS et diffusion {#multiple-cdn-support-for-crs-ad-delivery}
+## Prise en charge de plusieurs CDN pour CRS et diffusion {#multiple-cdn-support-for-crs-ad-delivery}
 
 Bien que le scénario par défaut de Creative Repackaging Service (CRS) consiste à utiliser un réseau de données de contenu (CDN), vous pouvez déployer des ressources CRS sur plusieurs CDN.
 
@@ -39,13 +42,13 @@ Voici les ajouts d’API dans TVSDK :
 
 * `DefaultURLTransformer` Instance de transformateur d’URL par défaut créée dans TVSDK et qui implémente l’ `URLTransformer` interface. Les applications peuvent remplacer cette classe ou ajouter un gestionnaire de transformation post URL. Ce gestionnaire est utile lorsque l’application souhaite apporter des modifications à la demande d’URL après l’application de la transformation par défaut.
 
-* `NetworkConfiguration.urlTransformer` Méthode setter fournie sur l’instance de `NetworkConfiguration` métadonnées pour définir l’ `URLTransformer` implémentation.
+* `NetworkConfiguration.urlTransformer` Méthode setter fournie sur l’instance de  `NetworkConfiguration` métadonnées pour définir l’ `URLTransformer` implémentation.
 
 >[!IMPORTANT]
 >
->Les implémentations de votre application doivent rechercher la `URLTransformerInputType` énumération et transformer uniquement les URL de type `URLTransformerInputType.CRSCreative` CRS.
+>Les implémentations de votre application doivent rechercher la énumération `URLTransformerInputType` et uniquement transformer les URL de type `URLTransformerInputType.CRSCreative` pour CRS.
 
-L’exemple de code suivant montre comment votre application peut modifier le composant hôte par défaut en une autre chaîne (par exemple `cdn.mycrsdomain.com`) :
+L&#39;exemple de code suivant montre comment votre application peut changer le composant hôte par défaut en une autre chaîne (par exemple, `cdn.mycrsdomain.com`) :
 
 ```
 var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
