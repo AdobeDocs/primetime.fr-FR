@@ -6,27 +6,30 @@ title: Instant activé
 uuid: 5b1ceace-cae7-44c7-b4b9-d45078d58cc3
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# Instant activé {#instant-on}
+# Instant le {#instant-on}
 
 L’activation instantanée signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canal, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur début regarder.
 
-Sans Instant On, TVSDK initialise le média à lire, mais ne début pas la mise en mémoire tampon du flux tant que l’application n’appelle pas `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. Avec Instant On, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’élément du lecteur multimédia) et les débuts TVSDK mettent immédiatement les flux en mémoire tampon. Lorsqu’un utilisateur modifie le canal et que le flux est mis en mémoire tampon correctement, il appelle immédiatement `play` la lecture du nouveau début de canal.
+Sans Instant On, TVSDK initialise le média à lire mais ne début pas la mise en mémoire tampon du flux tant que l’application n’appelle pas `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. Avec Instant On, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’élément du lecteur multimédia) et les débuts TVSDK mettent immédiatement les flux en mémoire tampon. Lorsqu’un utilisateur modifie le canal et que le flux est mis en mémoire tampon correctement, il appelle `play` sur le nouveau début de lecture immédiatement.
 
-Bien qu’il n’existe aucune limite au nombre d’ `MediaPlayer` `MediaPlayerItemLoader` instances et d’instances que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme davantage de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d’informations sur `MediaPlayerItemLoader`, voir [Chargement d’une ressource multimédia dans le lecteur](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md)multimédia.
+Bien qu’il n’existe aucune limite au nombre d’instances `MediaPlayer` et `MediaPlayerItemLoader` que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme davantage de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource média dans le lecteur de médias](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->TVSDK ne prend pas en charge un seul `QoSProvider` pour travailler à la fois `itemLoader` et `MediaPlayer`. Si le client utilise Instant On, l’application doit gérer deux instances QoS et gérer les deux instances pour les informations.
+>TVSDK ne prend pas en charge un seul `QoSProvider` pour fonctionner avec `itemLoader` et `MediaPlayer`. Si le client utilise Instant On, l’application doit gérer deux instances QoS et gérer les deux instances pour les informations.
 
-Pour plus d’informations sur `MediaPlayerItemLoader`MediaPlayerItemLoader [, voir](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)Chargement d’une ressource multimédia.
+Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
 ## Ajouter une instance du fournisseur QoS à mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* Création et association d’un fournisseur QoS à une `mediaPlayerItemLoader` instance
+* Création et association d’un fournisseur QoS à une instance `mediaPlayerItemLoader`
 
    ```
    // Create an instance of QoSProvider  
@@ -37,9 +40,9 @@ Pour plus d’informations sur `MediaPlayerItemLoader`MediaPlayerItemLoader [, v
    _qosProvider.attachMediaPlayerItemLoader(this._loader); 
    ```
 
-   Une fois que la lecture est début, utilisez le `_qosProvider` pour obtenir `timeToLoad` et `timeToPrepare` des données QoSdata. Les autres mesures de QoS peuvent être récupérées à l’aide des `QoSProvider` données jointes au `mediaPlayer`.
+   Une fois la lecture début, utilisez `_qosProvider` pour obtenir `timeToLoad` et `timeToPrepare` QoSdata. Les autres mesures de QoS peuvent être récupérées à l&#39;aide de la balise `QoSProvider` jointe à `mediaPlayer`.
 
-   Pour plus d’informations sur `MediaPlayerItemLoader`MediaPlayerItemLoader [, voir](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md)Chargement d’une ressource multimédia.
+   Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
 ## Configuration de la mise en mémoire tampon pour Instant On {#section_4FE346B7BE434BA8A2203896D6E52146}
 
@@ -47,16 +50,16 @@ TVSDK fournit des méthodes et des états pour vous permettre d’utiliser Insta
 
 >[!NOTE]
 >
->Adobe recommande `MediaPlayerItemLoader` d’utiliser pour InstantOn. Pour utiliser `MediaPlayerItemLoader`plutôt que `MediaPlayer`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+>Adobe recommande d&#39;utiliser `MediaPlayerItemLoader` pour InstantOn. Pour utiliser `MediaPlayerItemLoader`, plutôt que `MediaPlayer`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
 1. Vérifiez que la ressource est chargée et que le lecteur est prêt à la lire.
-1. Avant d’appeler `play`, appelez `prepareBuffer` pour chaque `MediaPlayer` instance.
+1. Avant d&#39;appeler `play`, appelez `prepareBuffer` pour chaque instance `MediaPlayer`.
 
-   `prepareBuffer` active la mise en mémoire tampon des débuts Instant On et TVSDK immédiatement et distribue le `BUFFERING_COMPLETED` événement lorsque la mémoire tampon est pleine.
+   `prepareBuffer` active la mise en mémoire tampon des débuts Instant On et TVSDK immédiatement et distribue le  `BUFFERING_COMPLETED` événement lorsque la mémoire tampon est pleine.
 
    >[!TIP]
    >
-   >Par défaut, `prepareBuffer` et `prepareToPlay` configurez le flux média pour qu’il soit lu en début dès le début. Pour début à une autre position, transmettez la position (en millisecondes) à `prepareToPlay`.
+   >Par défaut, `prepareBuffer` et `prepareToPlay` configurent le flux média pour qu’il soit lu en début dès le début. Pour début à une autre position, passez la position (en millisecondes) à `prepareToPlay`.
 
    ```
    @Override 
@@ -76,7 +79,7 @@ TVSDK fournit des méthodes et des états pour vous permettre d’utiliser Insta
    }
    ```
 
-1. Lorsque vous recevez le `BUFFERING_COMPLETE` événement, début de lecture de l’élément ou affichage des commentaires visuels pour indiquer que le contenu est complètement mis en mémoire tampon.
+1. Lorsque vous recevez le événement `BUFFERING_COMPLETE`, début de lecture de l’élément ou affichage des commentaires visuels pour indiquer que le contenu est complètement mis en mémoire tampon.
 
    >[!NOTE]
    >
