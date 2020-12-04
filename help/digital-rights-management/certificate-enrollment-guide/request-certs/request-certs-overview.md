@@ -4,13 +4,16 @@ title: Présentation des certificats de demande
 uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#request-certificates-overview}
+# Aperçu {#request-certificates-overview}
 
-Pour utiliser le SDK de production DRM d’Adobe Primetime, répétez les étapes suivantes pour demander chaque certificat (serveur de licences, Packager et Transport). Le SDK d’évaluation et le SDK d’évaluation utilisent un seul certificat.
+Pour utiliser le SDK de production DRM Adobe Primetime, répétez les étapes suivantes pour demander chaque certificat (serveur de licences, Packager et Transport). Le SDK d’évaluation et le SDK d’évaluation utilisent un seul certificat.
 
 >[!NOTE]
 >
