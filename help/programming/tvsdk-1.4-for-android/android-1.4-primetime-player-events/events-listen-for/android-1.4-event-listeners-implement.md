@@ -1,22 +1,25 @@
 ---
-description: Les gestionnaires de Événements permettent à TVSDK de répondre aux événements.
-seo-description: Les gestionnaires de Événements permettent à TVSDK de répondre aux événements.
+description: Les gestionnaires de événements permettent à TVSDK de répondre aux événements.
+seo-description: Les gestionnaires de événements permettent à TVSDK de répondre aux événements.
 seo-title: Mise en oeuvre des écouteurs et des rappels de événement
 title: Mise en oeuvre des écouteurs et des rappels de événement
 uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# Mise en oeuvre des écouteurs et des rappels de événement{#implement-event-listeners-and-callbacks}
+# Mettre en oeuvre des écouteurs et des rappels de événement{#implement-event-listeners-and-callbacks}
 
-Les gestionnaires de Événements permettent à TVSDK de répondre aux événements.
+Les gestionnaires de événements permettent à TVSDK de répondre aux événements.
 
 Lorsqu&#39;un événement se produit, le mécanisme de événement de TVSDK appelle votre gestionnaire de événements enregistré et transmet les informations du événement au gestionnaire.
 
-TVSDK définit les écouteurs comme des interfaces internes publiques dans l’ `MediaPlayer` interface.
+TVSDK définit les auditeurs comme des interfaces internes publiques dans l&#39;interface `MediaPlayer`.
 
 Votre application doit mettre en oeuvre des écouteurs de événement pour les événements TVSDK qui affectent votre application.
 
@@ -24,13 +27,13 @@ Pour obtenir une liste complète des événements d’analyse vidéo, voir Suivi
 
 1. Déterminez quels événements votre application doit écouter.
 
-   * **événements** requis : Prêtez attention à tous les événements de lecture.
+   * **Événements** requis : Prêtez attention à tous les événements de lecture.
 
       >[!IMPORTANT]
       >
       >Le événement de lecture `onStateChanged` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante du lecteur.
 
-   * **Autres événements**: Facultatif, selon votre application.
+   * **Autres événements** : Facultatif, selon votre application.
 
       Par exemple, si vous incorporez de la publicité dans votre lecture, implémentez les rappels AdPlaybackEventListener.
 
@@ -47,7 +50,7 @@ Pour obtenir une liste complète des événements d’analyse vidéo, voir Suivi
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. Enregistrez vos écouteurs de rappel avec l’ `MediaPlayer` objet à l’aide de `MediaPlayer.addEventListener`.
+1. Enregistrez vos écouteurs de rappel avec l&#39;objet `MediaPlayer` en utilisant `MediaPlayer.addEventListener`.
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -65,22 +68,22 @@ TVSDK distribue des événements/notifications dans des séquences généralemen
 
 Les exemples suivants montrent l’ordre de certains événements incluant des événements de lecture.
 
-* Lors du chargement réussi d&#39;une ressource multimédia par `MediaPlayer.replaceCurrentResource`l&#39;intermédiaire de, l&#39;ordre des événements est le suivant :
+* Lors du chargement réussi d&#39;une ressource multimédia via `MediaPlayer.replaceCurrentResource`, l&#39;ordre des événements est le suivant :
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état  `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état  `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->Chargez votre ressource multimédia sur le thread principal. Si vous chargez une ressource multimédia sur un thread en arrière-plan, cette opération ou les opérations suivantes de TVSDK, ou les deux, peuvent générer une erreur (par exemple, `IllegalStateException`) et quitter.
+>Chargez votre ressource multimédia sur le thread principal. Si vous chargez une ressource multimédia sur un thread en arrière-plan, cette opération ou les opérations TVSDK suivantes, ou les deux, peuvent renvoyer une erreur (par exemple, `IllegalStateException`) et quitter.
 
-* Lors de la préparation de la lecture à travers `MediaPlayer.prepareToPlay`la vidéo, l’ordre des événements est le suivant :
+* Lors de la préparation de la lecture via `MediaPlayer.prepareToPlay`, l’ordre des événements est le suivant :
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` si des publicités ont été insérées.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` avec état  `MediaPlayerStatus.PREPARED`
 
 * Pour les flux en direct/linéaires, pendant la lecture, à mesure que la fenêtre de lecture avance et que des opportunités supplémentaires sont résolues, l’ordre des événements est le suivant :
 
@@ -177,7 +180,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## événements QoS {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## Événements QoS {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
 TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
 
@@ -205,11 +208,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 });
 ```
 
-## événements DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## ÉVÉNEMENTS DRM {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
 TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut implémenter des actions en réponse à ces événements.
 
-Pour être averti de tous les événements liés à la gestion des droits numériques, écoutez `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK distribue d’autres événements DRM par l’intermédiaire de la `DRMManager` classe.
+Pour être informé de tous les événements relatifs à la gestion des droits numériques, écoutez `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK distribue d’autres événements DRM par l’intermédiaire de la classe `DRMManager`.
 
 L’exemple suivant illustre une progression type :
 
@@ -221,7 +224,7 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## événements de chargement {#section_5638F8EDACCE422A9425187484D39DCC}
+## Événements de chargement {#section_5638F8EDACCE422A9425187484D39DCC}
 
 Votre lecteur peut mettre en oeuvre des actions en fonction des événements suivants :
 
