@@ -3,11 +3,14 @@ title: Codes d’erreur PSDK
 description: Informations sur divers codes d’erreur, avertissements et codes d’erreur natifs.
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
 
-# Codes d’erreur PSDK {#psdk-error-codes}
+# Codes d&#39;erreur PSDK {#psdk-error-codes}
 
 Lisez la section pour en savoir plus sur les codes d’erreur PSDK, les avertissements et les codes d’erreur natifs.
 
@@ -28,7 +31,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   </tr>
   <tr>
     <td>INVALID_ARGUMENT</td>
-    <td>1</td>
+    <td>3</td>
     <td>Les données ou le format de l'argument fourni à l'API sous-jacente ne sont pas valides.</td>
   </tr>
   <tr>
@@ -38,7 +41,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>L'opération n'est pas prise en charge dans l'état actuel du lecteur.</td>
   </tr>
   <tr>
@@ -94,7 +97,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>GENERIC_ERROR</td>
     <td>14</td>
-    <td>événement d’erreur générique. Non pas réellement émis par TVSDK. Il s’agit uniquement d’un marqueur pour la fin de la plage de codes numériques correspondant aux événements d’erreur TVSDK.</td>
+    <td>Événement d’erreur générique. Non pas réellement émis par TVSDK. Il s’agit uniquement d’un marqueur pour la fin de la plage de codes numériques correspondant aux événements d’erreur TVSDK.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
@@ -129,7 +132,7 @@ Le tableau suivant fournit des informations détaillées sur les notifications d
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La lecture HLS n'a pas été activée dans Flash Player. Voir AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
+    <td>La lecture HLS n'a pas été activée dans le Flash Player. Voir AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
@@ -156,7 +159,7 @@ La plupart des avertissements contiennent des métadonnées pertinentes ; par ex
   </tr>
   <tr>  
     <td>NATIVE_WARNING</td>
-    <td>201</td>
+    <td>2011</td>
     <td>La bibliothèque AVE de bas niveau a généré une erreur.</td>
   </tr>
   <tr>
@@ -223,7 +226,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>3</td>
+    <td>1</td>
     <td>Échec du décodeur au moment de l'exécution.</td>
   </tr>
   <tr>
@@ -354,7 +357,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>CONTENEUR_NOT_SUPPORTED</td>
     <td>29</td>
-    <td>Le type de Conteneur n'est pas pris en charge.</td>
+    <td>Le type de conteneur n'est pas pris en charge.</td>
   </tr>
   <tr>
     <td>SEEK_FAILED</td>
@@ -384,7 +387,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>  
     <td>VIDEO_PROFIL_NOT_SUPPORTED</td>
     <td>35</td>
-    <td>profil vidéo non pris en charge.</td>
+    <td>Profil vidéo non pris en charge.</td>
   </tr>
   <tr>
     <td>PERIOD_NOT_LOADED</td>
@@ -409,7 +412,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>ABORDÉ</td>
     <td>40</td>
-    <td>L’opération a été abandonnée par un appel explicite d’abort ou de destruction.</td>
+    <td>L'opération a été abandonnée par un appel explicite d'Abandon ou de Détruire.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
@@ -434,7 +437,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>NO_USABLE_BITRATE_PROFIL</td>
     <td>45</td>
-    <td>profil de débit binaire utilisable introuvable dans le flux.</td>
+    <td>Profil de débit binaire utilisable introuvable dans le flux.</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
@@ -484,7 +487,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>L’interception audio et vidéo dans le média n’est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes.</td>
+    <td>L'interception audio et vidéo dans le média n'est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes.</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -494,11 +497,11 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La lecture HLS n'a pas été activée dans Flash Player. Voir AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>La lecture HLS n'a pas été activée dans le Flash Player. Voir AuthorizedFeatures.enableHLSPlayback.</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
-    <td>58</td>
+    <td>78</td>
     <td>Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect.</td>
   </tr>
   <tr>
@@ -589,7 +592,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr>
     <td>AUDIO_DÉBUT_ERROR</td>
     <td>76</td>
-    <td>Impossible de début du son.</td>
+    <td>Impossible de début de l'audio.</td>
   </tr>
   <tr>
     <td>NO_AUDIO_SINK</td>
