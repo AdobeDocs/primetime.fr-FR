@@ -4,6 +4,9 @@ title: Règles temporelles
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ Primetime DRM utilise une &quot;application souple&quot; des restrictions de lic
 
 Bien que l’application souple soit le comportement par défaut, vous pouvez également activer l’application stricte en exécutant l’une des tâches suivantes :
 
-* Demandez à votre lecteur vidéo d’interroger régulièrement la licence afin de s’assurer qu’aucune des restrictions de temps n’a expiré. Pour ce faire, appelez `DRMManager.loadVoucher(LOCAL_ONLY).` un code d&#39;erreur indiquant que la licence stockée en local n&#39;est plus valide.
-* Chaque fois que l’utilisateur clique **[!UICONTROL Pause]**, vous pouvez enregistrer l’horodatage de la vidéo en cours, puis appeler `Netstream.stop()`. Lorsque l’utilisateur clique sur le bouton Lecture, vous pouvez rechercher l’emplacement enregistré, puis appeler `Netstream.play()`.
+* Demandez à votre lecteur vidéo d’interroger régulièrement la licence afin de s’assurer qu’aucune des restrictions de temps n’a expiré. Pour ce faire, appelez `DRMManager.loadVoucher(LOCAL_ONLY).`. Un code d&#39;erreur indique que la licence stockée localement n&#39;est plus valide.
+* Chaque fois que l’utilisateur clique sur **[!UICONTROL Pause]**, vous pouvez enregistrer l’horodatage de la vidéo actuelle, puis appeler `Netstream.stop()`. Lorsque l’utilisateur clique sur le bouton Lecture, vous pouvez rechercher l’emplacement enregistré, puis appeler `Netstream.play()`.
 
-## Date Début {#start-date}
+## Date du début {#start-date}
 
 La date du début indique la date à laquelle une licence est valide.
 
@@ -49,7 +52,7 @@ La fenêtre de lecture indique la durée de validité d’une licence après sa 
 
 Exemple de cas d’utilisation : Certains modèles d&#39;entreprise permettent une période de location de 30 jours, mais une fois la lecture commencée, la lecture doit être terminée dans 48 heures. Dans ce cas, la durée de 48 heures de la licence correspond à la fenêtre de lecture.
 
-**A partir de la version 5.3 vers** l’avant - La fenêtre de lecture prend également en charge l’option d’activation ou de désactivation de l’arrêt en mode Dur, ce qui indique si le contexte de déchiffrement pour la lecture doit s’arrêter à l’expiration de la fenêtre de lecture (activée) ou continuer malgré l’expiration (désactivée).
+**A partir de la version 5.3 vers**  l’avant - La fenêtre de lecture prend également en charge l’option d’activation ou de désactivation de l’arrêt en mode Dur, ce qui indique si le contexte de déchiffrement pour la lecture doit s’arrêter à l’expiration de la fenêtre de lecture (activée) ou continuer malgré l’expiration (désactivée).
 
 >[!NOTE]
 >
