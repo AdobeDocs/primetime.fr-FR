@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Présentation {#notification-codes-overview}
+# Aperçu {#notification-codes-overview}
 
 Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
 
@@ -40,7 +40,8 @@ Les objets de notification fournissent des informations relatives à l’état d
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Événements de notification des informations, de 300000 à 399999 </li> 
     </ul> <p>Chaque plage de niveau supérieur, telle que les erreurs, est divisée en sous-plages, par exemple de 101 000 à 101 999, ce qui représente des erreurs de lecture. </p>
     <pre>
-     La énumération <span class="codeph"> mediacore.PSDKErrorCode</span> liste les valeurs possibles.
+     La énumération 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> liste les valeurs possibles.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,7 +50,7 @@ Les objets de notification fournissent des informations relatives à l’état d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadata </td> 
-   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> serait associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui provoquait une erreur. </td> 
+   <td colname="2">paires clé/valeur qui contient des informations pertinentes supplémentaires sur la notification. Par exemple, une clé nommée <span class="codeph"> URL</span> sera associée à une valeur qui est une URL liée à la notification, telle qu’une URL non valide qui a provoqué une erreur. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
