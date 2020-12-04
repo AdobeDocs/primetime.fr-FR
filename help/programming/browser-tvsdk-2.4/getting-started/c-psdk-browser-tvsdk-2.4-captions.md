@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Vous pouvez afficher des légendes lors de la lecture de contenu vidéo.
 
-Pour gérer les légendes, vous devez ajouter l’écouteur de `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` événement :
+Pour gérer les légendes, vous devez ajouter l’écouteur de événement `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` :
 
 ```js
 ... 
