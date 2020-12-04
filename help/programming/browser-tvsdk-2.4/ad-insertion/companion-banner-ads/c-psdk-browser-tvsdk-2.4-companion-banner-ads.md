@@ -5,12 +5,15 @@ seo-title: Bannières publicitaires d’accompagnement
 title: Bannières publicitaires d’accompagnement
 uuid: 5655c348-268d-42d6-92c2-f5de39ff666f
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 0%
 
 ---
 
 
-# Présentation {#companion-banner-ads-overview}
+# Aperçu {#companion-banner-ads-overview}
 
 Le navigateur TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l&#39;affichage des bannières d&#39;accompagnement fournies avec une publicité linéaire.
 
