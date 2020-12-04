@@ -6,6 +6,9 @@ title: Balises ID3
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -23,13 +26,13 @@ Lorsque TVSDK détecte les métadonnées ID3, il émet une notification contenan
 * TYPE = ID3
 * NAME = ID3
 
-1. Implémentez un écouteur de événement pour `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l’ `MediaPlayer` objet.
+1. Implémentez un écouteur de événement pour `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l&#39;objet `MediaPlayer`.
 
-   TVSDK appelle cet écouteur lorsqu’il détecte `ID3` des métadonnées.
+   TVSDK appelle cet écouteur lorsqu’il détecte des métadonnées `ID3`.
 
    >[!TIP]
    >
-   >Les indices publicitaires personnalisés utilisent le même `onTimedMetadata` événement pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir Balises [](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md)personnalisées.
+   >Les indices publicitaires personnalisés utilisent le même événement `onTimedMetadata` pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir [Balises personnalisées](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Récupérez les métadonnées.
