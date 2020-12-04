@@ -5,7 +5,10 @@ seo-title: Présentation de l’interface DRM
 title: Présentation de l’interface DRM
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
-source-git-commit: ''
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire
 >
 >La prise en charge DRM est disponible pour les flux MPEG-Dash protégés par Microsoft PlayReady (sur Internet Explorer sous Windows 8.1 et Edge) et Widevine (sur Google Chrome). La prise en charge de DRM est disponible pour les flux HLS sur Safari qui sont protégés par FairPlay.
 
-L’interface clé du processus DRM est la `DRMManager`. Une référence à l’ `DRMManager` instance peut être obtenue par l’intermédiaire de l’instance MediaPlayer :
+L&#39;interface clé du processus DRM est `DRMManager`. Une référence à l&#39;instance `DRMManager` peut être obtenue par l&#39;intermédiaire de l&#39;instance MediaPlayer :
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -29,7 +32,7 @@ L’interface clé du processus DRM est la `DRMManager`. Une référence à l’
 
 Voici un flux de travail de haut niveau pour la lecture de contenu protégé par DRM :
 
-1. Pour joindre les données spécifiques au système DRM qui seront utilisées par le navigateur TVSDK dans le processus d’acquisition de licence d’un flux protégé, effectuez l’appel suivant avant d’appeler `mediaPlayer.replaceCurrentResource`:
+1. Pour joindre les données spécifiques au système DRM qui seront utilisées par le navigateur TVSDK dans le processus d’acquisition de licence d’un flux protégé, effectuez l’appel suivant avant d’appeler `mediaPlayer.replaceCurrentResource` :
 
    ```js
    var protectionData = { 
@@ -100,14 +103,14 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
 
 1. Par défaut, le type de session de la licence DRM est temporaire, ce qui signifie que la licence n’est pas stockée une fois la session fermée.
 
-   Vous pouvez spécifier un type de session à l’aide d’une API dans `DRMManager`.  Pour une compatibilité ascendante, les types de session sont `temporary`, `persistent-license`, `persistent-usage-record`et `persistent`.
+   Vous pouvez spécifier un type de session à l&#39;aide d&#39;une API dans `DRMManager`.  Pour une compatibilité ascendante, les types de session sont `temporary`, `persistent-license`, `persistent-usage-record` et `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Lorsque la licence `sessionType` utilisée est `persistent-license` ou `persistent`, la licence DRM peut être renvoyée en appelant `DRMManager.returnLicense`.
+1. Lorsque `sessionType` utilisé est `persistent-license` ou `persistent`, la licence DRM peut être renvoyée en appelant `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
