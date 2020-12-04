@@ -6,16 +6,19 @@ title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
 uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
 
-# Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Affiche la durée, l’heure actuelle et l’heure restante de la vidéo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que vous pouvez afficher dans la barre de recherche.
 
 1. Attendez que votre lecteur soit à l’état PRÉPARÉ.
-1. Récupérez l’heure actuelle du curseur de lecture à l’aide de la `MediaPlayer.getCurrentTime` méthode.
+1. Récupérez l’heure actuelle du curseur de lecture à l’aide de la méthode `MediaPlayer.getCurrentTime`.
 
    Cette opération renvoie la position actuelle du curseur de lecture sur le plan de montage chronologique virtuel en millisecondes. Le temps est calculé par rapport au flux résolu qui peut contenir plusieurs instances de contenu alternatif, telles que plusieurs publicités ou coupures publicitaires épissées dans le flux principal. Pour les flux en direct/linéaires, l’heure renvoyée se trouve toujours dans la plage de la fenêtre de lecture.
 
@@ -24,13 +27,13 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que v
    ```
 
 1. Récupérez la plage de lecture du flux et déterminez sa durée.
-   1. Utilisez la `mediaPlayer.getPlaybackRange` méthode pour obtenir la plage de temps de la chronologie virtuelle.
+   1. Utilisez la méthode `mediaPlayer.getPlaybackRange` pour obtenir la plage de temps de la chronologie virtuelle.
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
       ```
 
-   1. Parcourez la période à l’aide de `mediacore.utils.TimeRange`.
+   1. Analyse de la période à l&#39;aide de `mediacore.utils.TimeRange`.
    1. Pour déterminer la durée, soustrayez le début de la fin de la plage.
 
       Cela inclut la durée du contenu supplémentaire qui est inséré dans le flux (publicités).
@@ -39,11 +42,11 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que v
 
       Pour un fichier linéaire/vivant, la plage représente la plage de la fenêtre de lecture et cette plage change pendant la lecture.
 
-      TVSDK appelle votre `onUpdated` rappel pour indiquer que l’élément média a été actualisé et que ses attributs (y compris la plage de lecture) ont été mis à jour.
+      TVSDK appelle votre rappel `onUpdated` pour indiquer que l’élément média a été actualisé et que ses attributs (y compris la plage de lecture) ont été mis à jour.
 
-1. Utilisez les méthodes disponibles sur la `MediaPlayer` classe et la `SeekBar` classe qui est disponible publiquement dans le SDK Android pour configurer les paramètres de barre de recherche.
+1. Utilisez les méthodes disponibles sur les classes `MediaPlayer` et `SeekBar` qui sont accessibles au public dans le SDK Android pour configurer les paramètres de barre de recherche.
 
-   Par exemple, voici une mise en page possible qui contient les `SeekBar` et deux `TextView` éléments.
+   Par exemple, voici une disposition possible qui contient les éléments `SeekBar` et deux éléments `TextView`.
 
    ```xml
    <LinearLayout 
@@ -77,7 +80,7 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que v
 
 1. Utilisez un minuteur pour récupérer régulièrement l’heure actuelle et mettre à jour SeekBar.
 
-   L&#39;exemple suivant utilise la classe `Clock.java` helper comme minuteur, disponible dans le lecteur de référence PrimetimeReference. Cette classe définit un écouteur de événement et déclenche un `onTick` événement toutes les secondes ou une autre valeur de délai d&#39;expiration que vous pouvez spécifier.
+   L&#39;exemple suivant utilise la classe d&#39;assistance `Clock.java` comme minuteur, disponible dans le lecteur de référence PrimetimeReference. Cette classe définit un écouteur de événement et déclenche un événement `onTick` toutes les secondes, ou une autre valeur de délai d&#39;expiration que vous pouvez spécifier.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
