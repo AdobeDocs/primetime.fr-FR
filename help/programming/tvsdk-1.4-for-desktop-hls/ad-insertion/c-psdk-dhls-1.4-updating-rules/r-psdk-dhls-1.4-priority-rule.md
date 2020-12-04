@@ -7,6 +7,9 @@ title: Règles de priorité
 uuid: 8716758f-686e-4927-8605-19c36091db65
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ La règle de priorité définit l’ordre de priorité des créatifs publicitair
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> hôte</span></td> 
-   <td>Actuellement, seul <span class="codeph"> l’hôte</span> est pris en charge. Cet attribut doit être présent lorsque des <span class="codeph"> correspondances</span> et des attributs de <span class="codeph"> valeurs</span> sont définis.</td> 
+   <td>Actuellement, seul <span class="codeph"> hôte</span> est pris en charge. Cet attribut doit être présent lorsque les attributs <span class="codeph"> correspondent à </span> et <span class="codeph"> valeurs</span> sont définis.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> correspond</span></td> 
@@ -48,7 +51,7 @@ La règle de priorité définit l’ordre de priorité des créatifs publicitair
      <li><span class="codeph"> eq</span> - est égal à</li> 
      <li><span class="codeph"> ne</span> - pas égal à</li> 
      <li><span class="codeph"> co</span> - contient</li> 
-     <li><span class="codeph"> nc</span> - non contient</li> 
+     <li><span class="codeph"> nc</span> - ne contient pas</li> 
      <li><span class="codeph"> sw</span> - débuts avec</li> 
      <li><span class="codeph"> ew</span> - se termine par</li> 
     </ul></td> 
@@ -57,19 +60,19 @@ La règle de priorité définit l’ordre de priorité des créatifs publicitair
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td><span class="codeph"> priority</span></td> 
-   <td>La valeur doit toujours être <span class="codeph"> prioritaire</span></td> 
+   <td>La valeur doit toujours être <span class="codeph"> priority</span></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Tableau</span></td> 
    <td></td> 
-   <td> <p>TVSDK utilisera l’attribut <span class="codeph"> match</span> sur l’élément <span class="codeph"></span> de création source et fera une correspondance avec les valeurs définies dans ce tableau.</p> </td> 
+   <td> <p>TVSDK utilisera l’attribut <span class="codeph"> correspond</span> sur l’élément <span class="codeph"> </span> du créatif source et fera correspondre les valeurs définies dans ce tableau.</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
    <td><span class="codeph"> Chaîne</span></td> 
    <td></td> 
-   <td> <p>La valeur peut être <span class="codeph"> validée</span> ou <span class="codeph"> active</span></p> </td> 
+   <td> <p>La valeur peut être <span class="codeph"> vod</span> ou <span class="codeph"> live</span>.</p> </td> 
   </tr> 
  </tbody> 
 </table>
