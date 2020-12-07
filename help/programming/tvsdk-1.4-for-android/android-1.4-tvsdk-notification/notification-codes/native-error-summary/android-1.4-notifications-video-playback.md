@@ -6,6 +6,9 @@ title: Valeurs de lecture vidéo NATIVE_ERROR
 uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 6%
 
 ---
 
@@ -44,7 +47,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Opération impossible en raison de la condition de fin de fichier (EOF). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> Échec du décodeur au moment de l'exécution. </td> 
   </tr> 
@@ -55,72 +58,72 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> Impossible de localiser la ressource. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> Erreur générique. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR  </span> </td> 
    <td colname="col3"> Condition d’erreur à laquelle le moteur vidéo ne peut pas récupérer. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE  </span> </td> 
    <td colname="col3"> Erreur réseau, tentative de récupération. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> Impossible de déterminer la taille de la ressource. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
    <td colname="col3"> Fonction non implémentée. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY </span> </td> 
+   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY  </span> </td> 
    <td colname="col3"> Mémoire insuffisante. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> Erreur lors de l'analyse du fichier multimédia. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> TAILLE_INCONNUE </span> </td> 
+   <td colname="col2"><span class="codeph"> TAILLE_INCONNUE  </span> </td> 
    <td colname="col3"> La ressource a une taille, mais elle est inconnue. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> Condition de débordement. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG  </span> </td> 
    <td colname="col3"> La configuration n'est pas prise en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> L'opération n'est pas prise en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> Pas encore initialisé. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> Paramètre non valide. </td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> Ressource non spécifiée. </td> 
   </tr> 
   <tr> 
@@ -175,8 +178,8 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTENEUR_NOT_SUPPORTED </span> </td> 
-   <td colname="col3"> Le type de Conteneur n'est pas pris en charge. </td> 
+   <td colname="col2"><span class="codeph"> CONTENEUR_NOT_SUPPORTED  </span> </td> 
+   <td colname="col3"> Le type de conteneur n'est pas pris en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 30 </td> 
@@ -206,7 +209,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 35 </td> 
    <td colname="col2"><span class="codeph"> VIDEO_PROFIL_NOT_SUPPORTED</span> </td> 
-   <td colname="col3"> profil vidéo non pris en charge. </td> 
+   <td colname="col3"> Profil vidéo non pris en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 36 </td> 
@@ -250,13 +253,13 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> NETWORK_DOWN  </span> </td> 
    <td colname="col3"> La connexion réseau de l'utilisateur est interrompue. La lecture peut s’arrêter à tout moment et reprendra lorsque la connexion sera disponible. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
    <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_PROFIL</span> </td> 
-   <td colname="col3"> profil de débit binaire utilisable introuvable dans le flux. </td> 
+   <td colname="col3"> Profil de débit binaire utilisable introuvable dans le flux. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 46 </td> 
@@ -300,7 +303,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3"> Le lecteur de médias ne peut pas charger les segments, car il a atteint la fin de la fenêtre active. Le chargement des segments reprend lorsque le serveur ajoute de nouveaux médias à la fenêtre active. Cet état est généralement atteint si : 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">La valeur bufferTime est trop élevée (égale ou supérieure à la durée de la fenêtre active). </li> 
@@ -310,8 +313,8 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
-   <td colname="col3"> L’interception audio et vidéo dans le média n’est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes. </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING  </span> </td> 
+   <td colname="col3"> L'interception audio et vidéo dans le média n'est pas effectuée correctement. Il s’agit d’une erreur de création de package. L’avertissement est envoyé lorsque la différence dépasse deux secondes. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 56 </td> 
@@ -321,7 +324,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> La lecture HLS n'a pas été activée dans Flash Player. Voir AuthorizedFeatures.enableHLSPlayback. </td> 
+   <td colname="col3"> La lecture HLS n'a pas été activée dans le Flash Player. Voir AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -375,7 +378,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Le protocole Web utilisé dans l’URL n’est pas pris en charge. </td> 
   </tr> 
   <tr> 
@@ -416,7 +419,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 76 </td> 
    <td colname="col2"><span class="codeph"> AUDIO_DÉBUT_ERROR</span> </td> 
-   <td colname="col3"> Impossible de début du son. </td> 
+   <td colname="col3"> Impossible de début de l'audio. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 77 </td> 
@@ -424,7 +427,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Aucun récepteur audio présent dans une structure de données interne. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Impossible d'ouvrir le fichier. </td> 
   </tr> 
@@ -439,13 +442,13 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Impossible de lire à partir d'un fichier. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Une erreur s'est produite lors de l'analyse des données ID3. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> Le chargement du contenu a échoué en raison de restrictions de sécurité. </td> 
   </tr> 
   <tr> 
@@ -465,7 +468,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> Clé introuvable. </td> 
   </tr> 
   <tr> 
@@ -496,7 +499,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Une erreur s'est produite lors de la lecture du média en mode de lecture <i></i> par astuces. Le mode de lecture des vidéos est terminé et le flux est suspendu. Appelez <span class="codeph"> Play()</span> pour lire le média en mode normal. </td> 
+   <td colname="col3">Une erreur s'est produite lors de la lecture du média en mode <i>trick play</i>. Le mode de lecture des vidéos est terminé et le flux est suspendu. Appelez <span class="codeph"> Play()</span> pour lire le média en mode normal. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
