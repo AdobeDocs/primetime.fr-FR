@@ -6,17 +6,20 @@ title: Demande/réponse de jeton de licence PlayReady
 uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 3%
 
 ---
 
 
-# Demande/réponse de jeton de licence PlayReady {#playready-license-token-request-response}
+# Demande de jeton de licence PlayReady / réponse {#playready-license-token-request-response}
 
 L’interface de jeton de licence PlayReady fournit des services de production et de test.
 
 Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence PlayReady.
 
-**Méthode : GET, POST** (avec un corps codé www-url qui contient des paramètres pour les deux méthodes)
+**Méthode : GET, POST**  (avec un corps codé www-url qui contient des paramètres pour les deux méthodes)
 
 **URL :**
 
@@ -55,7 +58,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
 <table id="table_zxg_dyr_pv">  
  <thead> 
   <tr> 
-   <th class="entry"><b>Paramètre de Requête</b> </th> 
+   <th class="entry"><b>Paramètre de requête</b> </th> 
    <th class="entry"><b>Description</b> </th> 
    <th class="entry"><b>Obligatoire ?</b> </th> 
   </tr> 
@@ -68,7 +71,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td>HTML <span class="codeph"></span> ou <span class="codeph"> json</span>. Si <span class="codeph"> html</span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. <p>Si <span class="codeph"> json</span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir Erreurs <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"></a> JSON pour plus d’informations. </p> <p>Le type MIME de la réponse est <span class="codeph"> text/uri-liste</span> on success, <span class="codeph"> text/html</span> for HTML error format ou <span class="codeph"> application/json</span> for JSON error format. </p> </td> 
+   <td><span class="codeph"> html</span> ou <span class="codeph"> json</span>. Si <span class="codeph"> html</span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. <p>Si <span class="codeph"> json</span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Erreurs JSON</a> pour plus d’informations. </p> <p>Le type MIME de la réponse est soit <span class="codeph"> text/uri-liste</span> en cas de succès, <span class="codeph"> text/html</span> pour le format d’erreur HTML, soit <span class="codeph"> application/json</span> pour le format d’erreur JSON. </p> </td> 
    <td> Non </td> 
   </tr> 
  </tbody> 
@@ -79,7 +82,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
 <table id="table_f1l_fyr_pv">  
  <thead> 
   <tr> 
-   <th class="entry"><b>Paramètre de Requête</b> </th> 
+   <th class="entry"><b>Paramètre de requête</b> </th> 
    <th class="entry"><b>Description</b> </th> 
    <th class="entry"><b>Obligatoire ?</b> </th> 
   </tr> 
@@ -92,12 +95,12 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td><span class="codeph"> kek</span> </td> 
-   <td> Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l'aide d'un algorithme d'encapsulation de clés (AES Key Wrap, RFC3394). </td> 
+   <td> Clé de chiffrement de clé (KEK). Les clés sont stockées cryptées avec une clé à l’aide d’un algorithme d’encapsulation de clé (AES Key Wrap, RFC3394). </td> 
    <td> Non </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> enfant</span> </td> 
-   <td>Représentation d'une chaîne hexadécimale de 16 octets de la clé de chiffrement de contenu ou d'une chaîne <span class="codeph"> ^somestring'</span>. La longueur de la chaîne suivie du caractère "^" ne peut pas dépasser 64 caractères. </td> 
+   <td>Représentation d’une chaîne hexadécimale de 16 octets de la clé de chiffrement de contenu ou d’une chaîne <span class="codeph"> ^somestring'</span>. La longueur de la chaîne suivie du caractère "^" ne peut pas dépasser 64 caractères. </td> 
    <td> Oui </td> 
   </tr> 
   <tr> 
@@ -112,13 +115,13 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
-   <td>Indique le type de droits. Doit être <span class="codeph"> achetée</span> ou <span class="codeph"> louée</span>. </td> 
+   <td>Indique le type de droits. Doit être <span class="codeph"> BuyToOwn</span> ou <span class="codeph"> Location</span>. </td> 
    <td> Oui </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> location.periodEndTime</span> </td> 
-   <td>Date de fin de la location. Cette valeur DOIT être au format RFC 3339 _ date/heure au format de l'indicateur de zone Z ("heure Zulu"), ou un entier précédé d'un signe "+". <p>Si la valeur est un format <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 339</a> date/heure, elle représente une date/heure d’expiration absolue pour la licence. Un exemple de date/heure RFC 3339 est 2006-04-14T12:01:10Z. </p> <p> Si la valeur est un entier précédé d’un signe "+", elle est prise en tant que nombre relatif de secondes à partir du moment où le jeton est émis. Le contenu ne peut plus être lu après cette date. Uniquement valide si <span class="codeph"> rightsType</span> est <span class="codeph"> Location</span>. </p> </td> 
-   <td>Oui, quand <span class="codeph"> les droitsType</span> est <span class="codeph"> Location</span>. </td> 
+   <td>Date de fin de la location. Cette valeur DOIT être au format RFC 3339 _ date/heure au format de l'indicateur de zone Z ("heure Zulu"), ou un entier précédé d'un signe "+". <p>Si la valeur est un format de date/heure <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a>, elle représente une date/heure d’expiration absolue pour la licence. Un exemple de date/heure RFC 3339 est 2006-04-14T12:01:10Z. </p> <p> Si la valeur est un entier précédé d’un signe "+", elle est prise en tant que nombre relatif de secondes à partir du moment où le jeton est émis. Le contenu ne peut plus être lu après cette date. Uniquement valide si <span class="codeph"> rightsType</span> est <span class="codeph"> Location</span>. </p> </td> 
+   <td>Oui, lorsque <span class="codeph"> rightsType</span> est <span class="codeph"> Location</span>. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> location.playDuration</span> </td> 
@@ -152,7 +155,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td><span class="codeph"> unknownOutputBehavior</span> </td> 
-   <td>Comportement requis lorsque la sortie est inconnue. Valeurs autorisées : <span class="codeph"> Autoriser</span>, <span class="codeph"> interdire</span> ou <span class="codeph"> SDOuniquement</span> </td> 
+   <td>Comportement requis lorsque la sortie est inconnue. Valeurs autorisées : <span class="codeph"> Autoriser </span>, <span class="codeph"> Interdire</span> ou <span class="codeph"> SDOnly</span> </td> 
    <td> Non </td> 
   </tr> 
   <tr> 
@@ -180,12 +183,12 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
 | **Code d’état HTTP** | **Description** | **Content-Type** | **Le corps d’entité contient** |
 |---|---|---|---|
 | `200 OK` | Aucune erreur. | `text/uri-list` | URL et jeton d’acquisition de licence |
-| `400 Bad Request` | Arguments non valides | `text/html` ou `application/json` | Description de l’erreur |
-| `401 Unauthorized` | Échec de l&#39;authentification | `text/html` ou `application/json` | Description de l’erreur |
-| `404 Not found` | URL incorrecte | `text/html` ou `application/json` | Description de l’erreur |
-| `50x Server Error` | Erreur serveur | `text/html` ou `application/json` | Description de l’erreur |
+| `400 Bad Request` | Arguments non valides | `text/html` ou  `application/json` | Description de l’erreur |
+| `401 Unauthorized` | Échec de l&#39;authentification | `text/html` ou  `application/json` | Description de l’erreur |
+| `404 Not found` | URL incorrecte | `text/html` ou  `application/json` | Description de l’erreur |
+| `50x Server Error` | Erreur serveur | `text/html` ou  `application/json` | Description de l’erreur |
 
-**Tableau 12 : Codes d&#39;erreur de Événement**
+**Tableau 12 : Codes d&#39;erreur de événement**
 
 <table id="table_lqb_ycs_pv">  
  <thead> 
@@ -277,7 +280,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> OutputControlFlag</span> doit être codé 4 octets </td> 
+   <td><span class="codeph"> </span> OutputControlFlagmust doit être codé 4 octets </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -289,7 +292,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td>Enfant <span class="codeph"> disparu</span> </td> 
+   <td>Enfant <span class="codeph"> manquant</span> </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
@@ -297,19 +300,19 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> enfant</span> doit comporter 32 caractères hexadécimaux </td> 
+   <td><span class="codeph"> </span> kidmust be 32 caractères hexadécimaux long </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> enfant</span> doit comporter 64 caractères après le ^ </td> 
+   <td><span class="codeph"> </span> kidmust doit comporter 64 caractères après le ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td>Enfant <span class="codeph"> non valide</span> </td> 
+   <td><span class="codeph"> enfant </span> non valide </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Clé <span class="codeph"></span> ou clé chiffrée non valide </td> 
+   <td>Clé <span class="codeph"> chiffrée </span> ou clé non valide </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -337,7 +340,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td> -5007 </td> 
-   <td>Seule une clé de <span class="codeph"> clé</span> ou <span class="codeph"> clé de contenu</span> peut être spécifiée </td> 
+   <td>Seul l'un des <span class="codeph"> kek</span> ou <span class="codeph"> contentKey</span> peut être spécifié </td> 
   </tr> 
  </tbody> 
 </table>
