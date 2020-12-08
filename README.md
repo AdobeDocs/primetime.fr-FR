@@ -1,16 +1,12 @@
 ---
-source-git-commit: cb347453d4a08b869842aaaaca61538095978c91
+source-git-commit: 8c828661016782f79257c11708bf7cac618853b7
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '460'
-ht-degree: 6%
+source-wordcount: '378'
+ht-degree: 7%
 
 ---
 # Article Contribute
-
-| EXL-PR | EXL | Prévisualisation | Activer | Publié | Aide |
-|--- |--- |--- |--- |--- |--- |
-| [![État de la création](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_pr-exl/lastBuild/) | [![État de la création](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/primetime.en_exl/lastBuild/lastBuild) | [URL de la prévisualisation](https://experienceleague.corp.adobe.com/docs/primetime/programming/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [URL en direct](https://experienceleague.adobe.com/docs/primetime/programming/home.html?lang=en) | [Guide de création](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 Nous accueillons avec plaisir les contributions de notre communauté ainsi que celles des employés d&#39;Adobes de l&#39;extérieur des équipes de documentation.
 
@@ -20,13 +16,13 @@ Ce projet respecte le [Code de conduite d’Adobe Open Source](code-of-conduct.m
 
 ## A propos de vos contributions au contenu des Adobes
 
-Consultez le Guide [des contributeurs de](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html)documents Adobes.
+Consultez le [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 La manière dont vous contribuez dépend de qui vous êtes et du type de changements que vous souhaitez apporter :
 
 ### Modifications mineures
 
-Si vous contribuez à des mises à jour mineures par coeur, visitez l&#39;article et cliquez sur le lien **Modifier** dans l&#39;article qui accède à la source GitHub pour l&#39;article. Ensuite, utilisez simplement l’interface utilisateur GitHub pour effectuer vos mises à jour. Pour plus d&#39;informations, consultez le guide [général des contributeurs](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobes Docs.
+Si vous contribuez à des mises à jour mineures par coeur, visitez l&#39;article et cliquez sur le lien **Modifier** dans l&#39;article qui renvoie à la source GitHub de l&#39;article. Ensuite, utilisez simplement l’interface utilisateur GitHub pour effectuer vos mises à jour. Pour plus d&#39;informations, consultez le guide général [Adobe Docs contributeur guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 Les corrections ou clarifications mineures que vous soumettez pour la documentation et les exemples de code dans ce rapport sont couvertes par les conditions d&#39;utilisation de l&#39;Adobe.
 
@@ -40,13 +36,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Principaux changements apportés par les employés de l&#39;Adobe
 
-Si vous êtes un rédacteur technique, un responsable de programme ou un développeur de l’équipe produit pour une solution Adobe Experience Cloud et que vous avez le devoir de contribuer à ou de créer des articles techniques, vous devez utiliser le référentiel privé [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
+Si vous êtes un rédacteur technique, un responsable de programme ou un développeur de l’équipe produit d’une solution Adobe Experience Cloud et que vous avez le devoir de contribuer ou de créer des articles techniques, vous devez utiliser le référentiel privé [https://git.corp.adobe.com/AdobeDocs](https://git.corp.adobe.com/AdobeDocs). <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
 ## Outils et configuration
 
 Les contributeurs de la communauté peuvent utiliser l’interface utilisateur GitHub pour effectuer des modifications de base ou effectuer des redirections pour apporter des contributions importantes.
 
-Pour plus d&#39;informations, consultez le Guide [des contributeurs](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html) Adobes Docs.
+Pour plus d&#39;informations, consultez le [Adobe Docs Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 ## Utilisation des balises pour formater votre rubrique
 
