@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Enregistrements de ce type de journal demande que le serveur manifeste crée pou
 
 ### TRACE_WEBVTT_RESPONSE records {#trace-webvtt-response-records}
 
-Enregistre ``of ``ce ``type ``journal ``responses ``le ``manifest ``serveur ``sends ``à ``clients ``dans `` `answer` ``à ``requests `` `for` ``WEBVTT ``légendes. Les champs situés au-delà de TRACE_WEBVTT_RESPONSE &quot;apparaissent dans l’ordre indiqué dans le tableau, séparés par des `by`onglets.
+Enregistrements de ce type de réponses au journal que le serveur de manifeste envoie aux clients en réponse aux demandes de légendes `WEBVTT`. Les champs au-delà de `TRACE_WEBVTT_RESPONSE` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |--- |--- |--- |
