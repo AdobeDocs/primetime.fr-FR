@@ -1,28 +1,52 @@
 ---
-title: Notes de mise à jour de PTAI 20.10.1
-description: Les notes de mise à jour de la version 20.10.1 de l’IPAM décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l’Ad Insertion Primetime en 2020.
+title: Notes de mise à jour de PTAI 20.12.1
+description: Les notes de mise à jour de l'IPAT décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l'Ad Insertion Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de Primetime Ad Insertion 20.10.1
+# Notes de mise à jour de Primetime Ad Insertion 20.12.1
 
-Les notes de mise à jour de l’Ad Insertion Primetime 20.10.1 décrivent ce qui est nouveau ou modifié, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2020.
+Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qui est nouveau ou modifié, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2020.
 
-## Nouveautés de la version 20.10.1 de l’IPAM
+## Nouveautés de la version 20.12.1 de l’IPAM
+
+**Quand :** mardi 08 décembre 2020 de 01h00 à 04h00, heure de l&#39;Est
+
+**Modifications**
+
+* Inclut un correctif pour résoudre les problèmes de connectivité client (5xx) intermittente dans l’Ad Insertion Primetime rencontré le 30 novembre 2020.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 201.11.1
+
+**Quand :** jeudi 5 novembre 2020 de 2h00 à 5h00, heure de l&#39;Est
+
+**Modifications**
+
+* Mises à jour de maintenance.
+
+#### Version 201.10.2
+
+**Quand :** jeudi 29 octobre 2020 de 12h01 à 06h00, heure de l&#39;Est
+
+**Modifications**
+
+* Mises à jour de maintenance.
+
+#### Version 201.10.1
 
 **Quand :** mardi 13 octobre 2020 de 03:00 à 07:00 AM, heure de l&#39;Est
 
 **Modifications**
 
 * Mises à jour de maintenance.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 20.9.3
 
