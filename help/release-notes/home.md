@@ -4,7 +4,7 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 38%
@@ -18,7 +18,7 @@ Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents réperto
 
 ## Améliorations et correctifs de PTAI 20.12.1
 
-Cette version comprend un correctif pour résoudre les problèmes intermittents de connectivité du client.
+Cette version comprend un correctif pour résoudre les problèmes de connectivité intermittente du client.
 
 ## Correctifs dans TVSDK 3.12 Android
 
