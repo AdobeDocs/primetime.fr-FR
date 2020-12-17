@@ -2,7 +2,7 @@
 title: Notes de mise à jour de PTAI 20.12.1
 description: Les notes de mise à jour de l'IPAT décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l'Ad Insertion Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
+source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 ### Améliorations et correctifs des versions précédentes
 
-#### Version 201.11.1
+#### Version 20.11.1
 
 **Quand :** jeudi 5 novembre 2020 de 2h00 à 5h00, heure de l&#39;Est
 
@@ -32,7 +32,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Mises à jour de maintenance.
 
-#### Version 201.10.2
+#### Version 20.10.2
 
 **Quand :** jeudi 29 octobre 2020 de 12h01 à 06h00, heure de l&#39;Est
 
@@ -40,7 +40,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Mises à jour de maintenance.
 
-#### Version 201.10.1
+#### Version 20.10.1
 
 **Quand :** mardi 13 octobre 2020 de 03:00 à 07:00 AM, heure de l&#39;Est
 
