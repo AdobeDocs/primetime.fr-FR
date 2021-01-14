@@ -4,7 +4,7 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 38%
@@ -16,9 +16,9 @@ ht-degree: 38%
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de PTAI 20.12.1
+## Améliorations et correctifs de PTAI 21.1.1
 
-Cette version comprend un correctif pour résoudre les problèmes de connectivité intermittente du client.
+Cette version comprend la prise en charge des offres d’affilié pour les formats de indices basés sur SCTE35.
 
 ## Correctifs dans TVSDK 3.12 Android
 
@@ -41,7 +41,7 @@ Consultez pour plus d’informations sur la version actuelle de [iOS](../release
 | [Implémentation de référence](/help/android-reference-implementation/home.md) | Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
 | [Références API Primetime](/help/reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
-| [Aide sur Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
+| [Aide de Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
 | [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez des fichiers PDF de la documentation archivée. |
 
 ## Ressources utiles
