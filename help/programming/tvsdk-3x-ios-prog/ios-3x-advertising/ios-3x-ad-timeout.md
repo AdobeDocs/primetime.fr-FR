@@ -5,7 +5,7 @@ seo-title: Exigences en matière de publicité
 title: Exigences en matière de publicité
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 48ad8aad89701f8414e752a4d4e41da252d28d62
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -40,7 +40,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
 **API relatives au délai d’expiration d’AdManifest**
 
@@ -62,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Suivez ensuite la section : [Métadonnées du serveur et de l’heure de priorité](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
