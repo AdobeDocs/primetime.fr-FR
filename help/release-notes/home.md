@@ -4,7 +4,7 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 39%
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de PTAI 21.1.2
+## Améliorations et correctifs de PTAI 21.2.1
 
-Cette version comprend la mise à niveau des grappes de mémoire cache principale de l’Ad Insertion Primetime.
+Cette version comprend la prise en charge de l’optimisation de la sortie DASH : consolidation des noeuds basée sur le temps.
 
 ## Correctifs dans TVSDK 3.12 Android
 
