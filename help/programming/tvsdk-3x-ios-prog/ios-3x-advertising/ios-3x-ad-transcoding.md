@@ -5,9 +5,9 @@ seo-title: Réparer les publicités incompatibles à l’aide du service de reco
 title: Réparer les publicités incompatibles à l’aide du service de reconditionnement Creative Adobe
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Les publicités diffusées par divers tiers, tels qu’un serveur d’annonces d
 Lorsque TVSDK rencontre pour la première fois une publicité incompatible, le lecteur ignore la publicité et envoie une demande au service de reconditionnement de la création (CRS), qui fait partie du serveur principal Primetime et d’insertion, afin de reconditionner la publicité dans un format compatible. CRS tente de générer des rendus M3U8 à débit multiple de la publicité et stocke ces rendus sur le réseau de Diffusion de contenu Primetime (CDN). La prochaine fois que TVSDK recevra une réponse publicitaire pointant vers cette publicité, le lecteur utilisera la version compatible HLS M3U8 du CDN.
 
 Pour activer cette fonctionnalité facultative, contactez votre représentant d’Adobe.
-
-Pour plus d&#39;informations sur CRS, voir [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Prise en charge de plusieurs CDN pour CRS et diffusion {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
