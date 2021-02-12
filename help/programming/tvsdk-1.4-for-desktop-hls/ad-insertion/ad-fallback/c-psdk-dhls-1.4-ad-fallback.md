@@ -5,9 +5,9 @@ seo-title: Reprise publicitaire pour les annonces VAST et VMAP
 title: Reprise publicitaire pour les annonces VAST et VMAP
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,6 @@ ht-degree: 0%
 Dans le cas des annonces (ou créatives) à modèle de diffusion de vidéo numérique pour lesquelles la règle de secours est activée, TVSDK traite une publicité avec un type de média non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
 
 La spécification VAST/Digital Video Multiple Ad Playlist (VMAP) indique que pour les publicités pour lesquelles la fonction de secours VAST est activée, les publicités vides déclenchent automatiquement l’utilisation des publicités de secours. Lorsqu’une publicité VAST est vide, TVSDK recherche un remplacement de type de média HLS valide parmi les annonces de secours. Lorsqu’une publicité VAST dans un wrapper a un type de média non valide, TVSDK traite cette publicité comme vide. Vous pouvez déterminer si TVSDK doit faire de même pour les publicités intégrées dans un VMAP. Pour plus d’informations sur la fonctionnalité VAST `fallbackOnNoAd`, voir [Modèle de diffusion d’annonces vidéo numérique (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
-
-Le back-end Primetime et insertion conserve un ensemble de priorités pour lui permettre de choisir parmi différents types de supports dans la même réponse VAST/VMAP. Vous pouvez en savoir plus sur cette liste de priorité et comment la modifier à l&#39;adresse [Présentation du CS Ex](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Définir le comportement des publicités de secours pour les annonces VMAP intégrées {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
