@@ -5,9 +5,9 @@ seo-title: Réparer des annonces incompatibles à l’aide du service de recondi
 title: Réparer des annonces incompatibles à l’aide du service de reconditionnement d’Adobe Creative Repackaging Service (CRS)
 uuid: ef542d13-6d52-4429-8a1e-0af2df236f12
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,6 @@ Pour activer cette fonction CRS facultative, contactez votre représentant d’A
 >
 
 
-
-Pour plus d&#39;informations sur CRS, voir [Creative Packaging Service (CRS)](../../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Activer CRS dans les applications TVSDK {#enable-crs-in-tvsdk-applications}
 
