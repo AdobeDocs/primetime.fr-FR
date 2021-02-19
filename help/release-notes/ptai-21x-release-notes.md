@@ -1,28 +1,36 @@
 ---
-title: Notes de mise à jour de PTAI 21.2.1
+title: Notes de mise à jour de PTAI 21.2.2
 description: Les notes de mise à jour de l'IPAT décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l'Ad Insertion Primetime en 2021.
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de l’Ad Insertion Primetime 21.2.1
+# Notes de mise à jour de l’Ad Insertion Primetime 21.2.2
 
 Les notes de mise à jour de l’Ad Insertion Primetime 21.x.x décrivent ce qui est nouveau ou modifié, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2021.
 
-## Nouveautés de la version 21.2.1 de l’ITAP
+## Nouveautés de la version 21.2.2 de l’ITAP
+
+**Quand :** mardi 23 février 2021 de 1h00 à 4h00, heure de l&#39;Est
+
+**Modifications**
+
+* Prise en charge Ajoutée de l’insertion/synchronisation des flux EXT-X-IMAGE-STREAM-INF dans les flux HLS. La fonction est activée via une configuration côté serveur. Contactez votre gestionnaire de compte technique pour activer la fonction.
+
+### Améliorations et correctifs des versions précédentes
+
+#### Version 21.2.1
 
 **Quand :** mercredi 3 février 2021 de 1 h à 4 h, heure de l&#39;Est
 
 **Modifications**
 
 * Prise en charge Ajoutée de l’optimisation de la sortie DASH : consolidation des noeuds basée sur le temps.
-
-### Améliorations et correctifs des versions précédentes
 
 #### Version 21.1.2
 
