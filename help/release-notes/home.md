@@ -4,10 +4,10 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
+source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 39%
+source-wordcount: '297'
+ht-degree: 36%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de PTAI 21.2.1
+## Améliorations et correctifs de PTAI 21.2.2
 
-Cette version comprend la prise en charge de l’optimisation de la sortie DASH : consolidation des noeuds basée sur le temps.
+Cette version comprend la prise en charge de l’insertion/synchronisation de flux EXT-X-IMAGE-STREAM-INF dans les flux HLS. La fonction est activée via une configuration côté serveur. Contactez votre gestionnaire de compte technique pour activer la fonction.
 
 ## Correctifs dans TVSDK 3.12 Android
 
