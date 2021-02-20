@@ -2,7 +2,7 @@
 title: Notes de mise à jour de PTAI 20.12.1
 description: Les notes de mise à jour de l'IPAT décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus de l'Ad Insertion Primetime en 2020.
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -22,9 +22,9 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Inclut un correctif pour résoudre les problèmes de connectivité client (5xx) intermittente dans l’Ad Insertion Primetime rencontré le 30 novembre 2020.
 
-### Améliorations et correctifs des versions précédentes
+## Améliorations et correctifs des versions précédentes
 
-#### Version 20.11.1
+### Version 20.10.1
 
 **Quand :** jeudi 5 novembre 2020 de 2h00 à 5h00, heure de l&#39;Est
 
@@ -32,7 +32,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Mises à jour de maintenance.
 
-#### Version 20.10.2
+### Version 20.10.2
 
 **Quand :** jeudi 29 octobre 2020 de 12h01 à 06h00, heure de l&#39;Est
 
@@ -40,7 +40,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Mises à jour de maintenance.
 
-#### Version 20.10.1
+### Version 20.10.1
 
 **Quand :** mardi 13 octobre 2020 de 03:00 à 07:00 AM, heure de l&#39;Est
 
@@ -48,7 +48,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Mises à jour de maintenance.
 
-#### Version 20.9.3
+### Version 20.9.3
 
 **Quand :** Mercredi 30 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
 
@@ -56,7 +56,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 20.12.1 décrivent ce qu
 
 * Paramètre d&#39;API Bootstrap Ajouté `ptparallelstream`. Cela permet aux clients ayant des lecteurs qui demandent des flux audio ou vidéo déuxés CMAF en parallèle de s&#39;assurer que les publicités des pistes audio et vidéo sont cohérentes. Définissez la valeur du paramètre sur true pour activer cette fonction ou omettez de la désactiver.
 
-#### Version 20.9.2
+### Version 20.9.2
 
 **Quand :** mardi 15 septembre 2020 de 3h30 à 6h30, heure de l&#39;Est
 
@@ -71,7 +71,7 @@ Pour plus d&#39;informations ou pour activer cette fonctionnalité, contactez vo
    >
    >Ce délai d’attente s’applique uniquement aux requêtes publicitaires, et non aux requêtes créatives publicitaires.
 
-#### Version 20.9.1
+### Version 20.9.1
 
 **Quand :** mardi 1er septembre 2020 de 3h30 à 7h30, heure de l&#39;Est
 
@@ -79,7 +79,7 @@ Pour plus d&#39;informations ou pour activer cette fonctionnalité, contactez vo
 
 * Correction d’un problème pour les clients utilisant HLS/CMAF, en raison duquel EXT-X-MAP manquait parfois des jetons CDN ou des balises EXT-X-MAP parfois incorrectement déployées hors de la fenêtre DVR.
 
-#### Version 20.8.4
+### Version 20.8.4
 
 **Quand :** mercredi 19 août 2020 de 03:30 à 07:30 heure de l&#39;Est
 
@@ -87,7 +87,7 @@ Pour plus d&#39;informations ou pour activer cette fonctionnalité, contactez vo
 
 Mises à jour de maintenance.
 
-#### Version 20.8.1
+### Version 20.8.1
 
 **Quand :** mardi 4 août 2020 de 3h00 à 6h00, heure de l&#39;Est
 
@@ -95,7 +95,7 @@ Mises à jour de maintenance.
 
 Mises à jour de maintenance.
 
-#### Version 20.7.1
+### Version 20.7.1
 
 **Quand :** jeudi 9 juillet 2020 de 03:00 à 05:00 AM, heure de l&#39;Est
 
@@ -109,7 +109,7 @@ Mises à jour de maintenance.
 
 * Tableau de bord de la console SSAI amélioré pour le panneau Statistiques de session
 
-#### Version 20.6.2
+### Version 20.6.2
 
 **Quand :** le jeudi 18 juin 2020 de 03h00 à 04h00, heure de l&#39;Est
 
@@ -117,7 +117,7 @@ Mises à jour de maintenance.
 
 Amélioration de la synchronisation des flux pour les clients vidéo nécessitant une précision de milliseconde. Contactez l&#39;assistance Adobe pour activer la précision en millisecondes pour `#EXT-X-PROGRAM-DATE-TIME tags`.
 
-#### Version 20.6.1
+### Version 20.6.1
 
 **Quand :** mardi 2 juin 2020 de 03h00 à 05h00, heure de l&#39;Est
 
@@ -127,7 +127,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Manipulation du manifeste : Les segments HLS et les URL de ressources peuvent désormais être transformés entre HTTP et HTTPS afin d’améliorer les performances en réduisant les poignées de main TLS sur les requêtes principales. Il peut également être utilisé pour unifier des fragments de publicités/de contenu sur les mêmes CDN.
 
-* VOD de forme longue : Amélioration des API pour maintenir la session en vie avec les ressources VOD de forme longue.
+* VOD de forme longue : Amélioration des API pour maintenir la session en vie avec les ressources VOD à long terme.
 
 **Correctifs**
 
@@ -135,7 +135,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correction d’un problème en raison duquel les balises EXT-X-DISCONTINUITY étaient supprimées du haut de la liste de lecture lors du passage des publicités au contenu. Contactez l’assistance Adobe pour activer ce correctif.
 
-#### Version 20.5.1
+### Version 20.5.1
 
 **Quand :** mardi 5 mai 2020 de 4 h à 05 h, heure de l&#39;Est
 
@@ -145,7 +145,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de maintenance.
 
-#### Version 20.3.4
+### Version 20.3.4
 
 **Quand :** mercredi 1er avril 2020 de 03h00 à 04h00, heure de l&#39;Est
 
@@ -153,7 +153,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de sécurité.
 
-#### Version 20.3.3
+### Version 20.3.3
 
 **Quand :** jeudi 26 mars 2020 de 03:00 à 04:00 AM, heure de l&#39;Est
 
@@ -163,7 +163,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correction d’un problème lié aux flux audio CMAF/déuxed, en raison duquel les numéros EXT-X-MEDIA-SEQUENCE s’incrémentaient incorrectement dans certains scénarios.
 
-#### Version 20.3.2
+### Version 20.3.2
 
 **Quand :** mercredi 11 mars 2020 de 05h30 à 07h00, heure de l&#39;Est
 
@@ -171,7 +171,7 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Mises à jour de maintenance.
 
-#### Version 20.3.1
+### Version 20.3.1
 
 **Quand :** le jeudi 5 mars 2020 de 02h30 à 04h30, heure de l&#39;Est
 
@@ -183,14 +183,14 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Correctifs de sécurité et de maintenance.
 
-#### Version 20.2.1
+### Version 20.2.1
 
 **Quand :** jeudi 13 février 2020 de 04h30 à 05h30, heure de l&#39;Est
 
 * Prise en charge Ajoutée de l’assemblage de ressources publicitaires qui contiennent plusieurs flux audio uniquement en fonction de la langue/du codec/du débit.
 * Améliorations mineures des performances et mises à jour de maintenance.
 
-#### Version 20.1.3
+### Version 20.1.3
 
 **Quand :** mardi 28 janvier 2020 de 2h00 à 3h00, heure de l&#39;Est
 
@@ -204,15 +204,15 @@ Contactez l’assistance Adobe pour activer les nouvelles fonctionnalités suiva
 
 * Purger les anciens objets V1 des groupes NetStorage pour que le nombre d’objets reste dans les limites sécurisées d’Akamai.
 
-#### Version 20.1.2 (Correctif)
+### Version 20.1.2 (Correctif)
 
 **Quand :** le lundi 20 janvier 2020 de 02h00 à 03h00, heure de l&#39;Est
 
 * Mises à jour de maintenance.
 
-#### Version 20.1.1
+### Version 20.1.1
 
-**Quand :** mercredi 15 janvier 2020 de 04h00 à 05h00, heure de l&#39;Est
+**Quand :** mercredi 15 janvier 2020 de 4 h à 05 h, heure de l&#39;Est
 
 * Le service de reconditionnement d’images offre désormais une insertion publicitaire plus rapide en bloquant automatiquement la liste des créatifs malformés.
 
