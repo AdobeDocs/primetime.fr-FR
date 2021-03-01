@@ -68,7 +68,7 @@ ht-degree: 0%
    + Options de groupement {#packaging-options}
       + [Utilisation de l’outil Primetime Offline Packager inclus](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Utiliser un encodeur tiers](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Utiliser Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Utiliser Adobes Medium Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Test du contenu assemblé](cloud-quick-start/test-packaged-content.md)
    + [Erreurs de déclenchement](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Authentification personnalisée/droits {#custom-auth-ent}
