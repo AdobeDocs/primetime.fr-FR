@@ -4,10 +4,10 @@ seo-title: Notes de mise à jour d’Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 36%
+source-wordcount: '345'
+ht-degree: 31%
 
 ---
 
@@ -20,11 +20,13 @@ Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents réperto
 
 Cette version comprend la prise en charge de l’insertion/synchronisation de flux EXT-X-IMAGE-STREAM-INF dans les flux HLS. La fonction est activée via une configuration côté serveur. Contactez votre gestionnaire de compte technique pour activer la fonction.
 
-## Correctifs dans TVSDK 3.12 Android
+## Correctifs dans TVSDK 3.13 Android
 
-Cette version était axée sur la mise à jour de la version graduelle de l’application de référence Primetime vers la version 5.6.4.
+Cette version offre une solution au problème du blocage du flux Widevine DRM ou de l&#39;affichage d&#39;images noires sur le commutateur ABR sur les appareils FireTV, qui incluent Fire TV 3e génération pendant et Fire TV Cube 1ère et 2e génération.
 
-Consultez pour plus d’informations sur la version actuelle pour [Android](../release-notes/tvsdk-3x-android.md).
+Pour résoudre ce problème, définissez l’API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` pour les périphériques Fire TV spécifiés avant de commencer la lecture. La valeur par défaut est false.
+
+Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK for Android](../release-notes/tvsdk-3x-android.md).
 
 ## Améliorations et correctifs des notes de mise à jour de TVSDK 3.12 iOS
 
