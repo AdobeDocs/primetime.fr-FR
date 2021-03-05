@@ -1,24 +1,24 @@
 ---
-title: Notes de mise à jour de TVSDK 3.12 pour Android
-seo-title: Notes de mise à jour de TVSDK 3.12 pour Android
-description: Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12
-seo-description: Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12
+title: Notes de mise à jour de TVSDK 3.13 pour Android
+seo-title: Notes de mise à jour de TVSDK 3.13 pour Android
+description: Les Notes de mise à jour de TVSDK 3.13 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.13
+seo-description: Les Notes de mise à jour de TVSDK 3.13 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.13
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '5418'
+source-wordcount: '5471'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.12 pour Android {#tvsdk-for-android-release-notes}
+# Notes de mise à jour de TVSDK 3.13 pour Android {#tvsdk-for-android-release-notes}
 
-Les Notes de mise à jour de TVSDK 3.12 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.12.
+Les Notes de mise à jour de TVSDK 3.13 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 3.13.
 
 Le lecteur de référence Android est inclus avec le SDK Android dans le répertoire samples/ de votre distribution. Le fichier README.md qui l’accompagne explique comment créer le lecteur de référence.
 
@@ -34,6 +34,14 @@ TVSDK pour Android offre de nombreuses améliorations de performances par rappor
 
 L&#39;ensemble complet des fonctionnalités prises en charge et non prises en charge est présenté dans la section [Matrice des fonctionnalités](#feature-matrix) des notes de mise à jour.
 
+## Android TVSDK 3.13
+
+Le flux DRM filaire gèle ou affiche des images noires sur un interrupteur ABR sur des appareils FireTV, qui comprennent Fire TV 3e génération pendant et Fire TV Cube 1ère et 2e génération.
+
+Pour résoudre ce problème, définissez l’API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` pour les périphériques Fire TV spécifiés avant de commencer la lecture. La valeur par défaut est false.
+
+### Nouvelles fonctionnalités et améliorations des versions précédentes
+
 ## Android TVSDK 3.12
 
 La version graduelle de l’application de référence Primetime est maintenant mise à jour vers la version 5.6.4.
@@ -41,8 +49,6 @@ La version graduelle de l’application de référence Primetime est maintenant 
 Pour configurer et exécuter une application de référence à l’aide d’Android Studio, suivez les instructions du fichier Lisez-moi disponible avec le fichier zip TVSDK à l’adresse `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`.
 
 Les principaux problèmes des clients corrigés dans la version actuelle sont mentionnés dans la section [Problèmes résolus](#resolved-issues).
-
-### Nouvelles fonctionnalités et améliorations des versions précédentes
 
 **Android TVSDK 3.11**
 
@@ -131,7 +137,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
    * `void alwaysUseAC3OnSupportedDevices(boolean val)` en  `MediaPlayer` classe
 
-* **TVSDK prend en charge le CMAF et la lecture en flux continu pour les clics Widevine cryptés.**
+* **TVSDK prend en charge la lecture CMAF et des flux simples pour Widevine CTR crypté.**
 
 * **La lecture des flux HEVC 4K est désormais prise en charge.**
 
@@ -268,7 +274,7 @@ Les nouvelles fonctionnalités importantes d’Android 2.5.1.
 * **Connexions réseau persistantes :** cette fonctionnalité permet à TVSDK de créer et de stocker une liste interne de connexions réseau persistantes. Ces connexions sont réutilisées pour plusieurs requêtes, plutôt que d&#39;ouvrir une nouvelle connexion pour chaque requête réseau et de la détruire ensuite. Cela augmente l’efficacité et réduit la latence du code réseau, ce qui accélère les performances de lecture.
 Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connexion *keep-alive*. Certains serveurs peuvent ne pas prendre en charge ce type de connexion, auquel cas TVSDK revient à établir une connexion pour chaque requête. En outre, bien que les connexions persistantes soient activées par défaut, TVSDK dispose désormais d’une option de configuration permettant aux applications de désactiver les connexions persistantes si nécessaire.
 
-* **Téléchargement parallèle : le** téléchargement de fichiers audio et vidéo en parallèle plutôt qu&#39;en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité de se retrouver dans des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
+* **Téléchargement parallèle : le** téléchargement de fichiers audio et vidéo en parallèle plutôt qu’en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité de se retrouver dans des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
 
 * **Téléchargements de publicités parallèles :** TVSDK prérécupère les publicités en parallèle à la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.
 
