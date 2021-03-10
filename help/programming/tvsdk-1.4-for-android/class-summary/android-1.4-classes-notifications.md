@@ -1,13 +1,10 @@
 ---
 description: Ces classes décrivent les messages relatifs aux erreurs, aux avertissements et à certaines activités que TVSDK génère à des fins de journalisation et de débogage.
-seo-description: Ces classes décrivent les messages relatifs aux erreurs, aux avertissements et à certaines activités que TVSDK génère à des fins de journalisation et de débogage.
-seo-title: Classes de notification
 title: Classes de notification
-uuid: e231a2d0-6190-4251-87db-ca46d2aee60d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
