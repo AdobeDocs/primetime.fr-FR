@@ -1,13 +1,10 @@
 ---
 description: Pour utiliser le Flash Player, assurez-vous que votre environnement répond aux exigences requises.
-seo-description: Pour utiliser le Flash Player, assurez-vous que votre environnement répond aux exigences requises.
-seo-title: Flash Player requis
 title: Flash Player requis
-uuid: f181457b-2bb4-4baa-b2b7-d787f65fab75
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '142'
 ht-degree: 1%
 
 ---
