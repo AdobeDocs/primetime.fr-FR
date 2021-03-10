@@ -1,17 +1,13 @@
 ---
 title: Notes de mise à jour de TVSDK 1.4 pour Android
-seo-title: Notes de mise à jour de TVSDK 1.4 pour Android
 description: Les Notes de mise à jour de TVSDK 1.4 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 1.4.
-seo-description: Les Notes de mise à jour de TVSDK 1.4 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 1.4.
-uuid: 8bd8ee42-7a1b-4c14-aad9-22804743e505
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '7830'
+source-wordcount: '7802'
 ht-degree: 0%
 
 ---
@@ -360,7 +356,7 @@ Cela se produit parce que les objets n&#39;ont pas été correctement nettoyés 
 * Zendesk #25352 - Définition d’un en-tête HTTP personnalisé
 Ce problème a été résolu en ajoutant un nouvel en-tête personnalisé à la liste autorisée sur TVSDK.
 
-* Zendesk #25617 - Le roulement PTS en flux continu provoque une discontinuité du lecteur et un blocage de la mémoire
+* Zendesk n° 25617 - Survol PTS en flux continu en direct provoquant une discontinuité du lecteur et un blocage de la mémoire
 Ce problème a été résolu en ajoutant une gestion de roulement PTS dans FragmentedHTTPStreamer lorsqu’un roulement survient au milieu d’un segment.
 
 **Version 1.4.28 (1637)**
@@ -699,7 +695,7 @@ Une nouvelle API a été ajoutée pour définir l’agent utilisateur pour les a
 
 * Zendesk #2197 - Suivi des erreurs et des erreurs. Échec du chargement du manifeste de la notification Ajoutée pour l&#39;actif
 * Zendesk #2575 - PSDK ignore la publicité personnalisée MARK en flux continu avant la vidéo.
-* Zendesk #2719 - Win Death with auditude ads (Gagner la mort avec publicités avec auditude), correction du suivi des balises lorsqu&#39;elles sont redirigées vers l&#39;URL relative dans le module externe Auditude)
+* Zendesk #2719 - Win Death with auditude ads (Gagner la mort avec publicités d&#39;auditude), fixed beacon tracking (Correction du suivi des balises lorsqu&#39;elles sont redirigées vers l&#39;URL relative dans le module externe Auditude)
 * Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay.
 * Zendesk #2805 - Crash du lecteur au début de la lecture, même correction que Zendesk #2719
 * Zendesk #2817 - Lecteur Android - Le lecteur est parfois suspendu et s’arrête de lire, corrigé en étendant la mise en mémoire tampon du décodage de 2,0 à 3,0 secondes.
@@ -729,7 +725,7 @@ Ce problème a été corrigé en ajoutant une latence entre les téléchargement
 * Zendesk #2256 - Accès à la liste de lecture du Principal, mise à jour du PSDK pour distribuer des événements de métadonnées temporisées pour les balises abonnées sur la liste de lecture principale.
 * Zendesk #2269 - Deux langues de sous-titres différentes apparaissent simultanément à l’écran avec WebVTT.
 * Zendesk #2417 - Lecteur essayant de télécharger des sous-titres avant le début de lecture, WebVTT utilisait la variable de numéro de segment incorrecte pour la correspondance des numéros de segment. Le bogue ne s’affichait que pour les médias dont les indices de segmentation commençaient à zéro.
-* Zendesk #2470 - PSDK ne revient pas de l&#39;état SUSPENDU lorsque le changement de débit survient après la suspension. Dans une situation particulière où la recherche intelligente est appelée par RestoreGPUResource (restaurer le lecteur à partir de l&#39;état de suspension) et que le commutateur de diffusion détecté avant cela, la recherche intelligente est incapable d&#39;effectuer la recherche intelligente et résulte en une mise en mémoire tampon constante.
+* Zendesk #2470 - PSDK ne revient pas de l&#39;état SUSPENDU lorsque le changement de débit survient après la suspension. Dans une situation particulière où la recherche intelligente est appelée par RestoreGPUResource (restaurer le lecteur à partir de l&#39;état de suspension) et que le commutateur de diffusion détecté avant cela, la recherche intelligente est incapable de se terminer et résulte en une mise en mémoire tampon constante.
 * Zendesk #2451 - Sous-titrage &quot;bottom inset&quot;, ajout du paramètre &quot;bottomInset&quot; au code de sous-titrage
 * Zendesk #2480 - Désactivation de l’optimisation de la redirection HTTP 302, prise en charge Ajoutée pour la définition de la propriété useRedirectUrl
 * Zendesk #2486 - Balises tierces
