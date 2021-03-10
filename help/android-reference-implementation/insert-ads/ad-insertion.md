@@ -1,13 +1,10 @@
 ---
 description: L’implémentation de référence illustre comment configurer le lecteur pour les publicités, ce qui inclut la configuration des métadonnées vidéo pour l’insertion de publicités et la résolution des publicités preroll, mid, mid et post-roll dans des flux vidéo VOD ou des flux vidéo linéaire/en direct. Il illustre également comment gérer les publicités cliquables.
-seo-description: L’implémentation de référence illustre comment configurer le lecteur pour les publicités, ce qui inclut la configuration des métadonnées vidéo pour l’insertion de publicités et la résolution des publicités preroll, mid, mid et post-roll dans des flux vidéo VOD ou des flux vidéo linéaire/en direct. Il illustre également comment gérer les publicités cliquables.
-seo-title: Insertion publicitaire
 title: Insertion publicitaire
-uuid: 75c1d77a-a7ff-4cb6-ad7f-7c83a950b7cb
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
