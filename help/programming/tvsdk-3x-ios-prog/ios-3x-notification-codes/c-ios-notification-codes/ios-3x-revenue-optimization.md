@@ -1,12 +1,10 @@
 ---
 description: 'Ce tableau fournit des informations détaillées sur les notifications d''optimisation des recettes. '
-seo-description: 'Ce tableau fournit des informations détaillées sur les notifications d''optimisation des recettes. '
-seo-title: Code d'optimisation des recettes
 title: Code d'optimisation des recettes
 translation-type: tm+mt
-source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
