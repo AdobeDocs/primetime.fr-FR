@@ -1,9 +1,9 @@
 ---
-seo-title: Révocation des informations d’identification du client et de l’exécution DRM
 title: Révocation des informations d’identification du client et de l’exécution DRM
-uuid: 8e36536a-8eed-4d27-8a5f-8d3219817e57
+description: Révocation des informations d’identification du client et de l’exécution DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
