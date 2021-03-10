@@ -1,17 +1,13 @@
 ---
 title: Notes de mise à jour de TVSDK 1.4 pour Desktop HLS
-seo-title: Notes de mise à jour de TVSDK 1.4 pour Desktop HLS
 description: Les notes de mise à jour TVSDK for Desktop HLS décrivent les nouveautés ou les modifications, les problèmes résolus et connus de TVSDK DHLS.
-seo-description: Les notes de mise à jour TVSDK for Desktop HLS décrivent les nouveautés ou les modifications, les problèmes résolus et connus de TVSDK DHLS.
-uuid: 84da27b7-299b-478d-88f5-ef943f0a8321
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '5222'
+source-wordcount: '5196'
 ht-degree: 0%
 
 ---
