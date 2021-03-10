@@ -1,13 +1,10 @@
 ---
 description: Le mode de signalisation de la publicité indique où le flux vidéo doit obtenir des informations publicitaires.
-seo-description: Le mode de signalisation de la publicité indique où le flux vidéo doit obtenir des informations publicitaires.
-seo-title: Mode de signalisation publicitaire
 title: Mode de signalisation publicitaire
-uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
