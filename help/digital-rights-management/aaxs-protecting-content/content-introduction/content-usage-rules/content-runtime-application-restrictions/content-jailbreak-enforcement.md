@@ -1,9 +1,9 @@
 ---
-seo-title: Application des peines d'emprisonnement (nécessite l'Adobe Primetime)
 title: Application des peines d'emprisonnement (nécessite l'Adobe Primetime)
-uuid: 12be7499-c359-406f-ace9-a4aad9e00207
+description: Application des peines d'emprisonnement (nécessite l'Adobe Primetime)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
