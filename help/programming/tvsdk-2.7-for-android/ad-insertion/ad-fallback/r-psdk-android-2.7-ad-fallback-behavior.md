@@ -1,13 +1,10 @@
 ---
 description: Lorsque la prise de décision publicitaire Primetime rencontre une publicité VAST (créative) vide ou dont le type de média n’est pas valide pour HLS, elle évalue les publicités de secours afin de déterminer ce qu’il faut renvoyer.
-seo-description: Lorsque la prise de décision publicitaire Primetime rencontre une publicité VAST (créative) vide ou dont le type de média n’est pas valide pour HLS, elle évalue les publicités de secours afin de déterminer ce qu’il faut renvoyer.
-seo-title: Comportement des abandons publicitaires pour VAST et VMAP
 title: Comportement des abandons publicitaires pour VAST et VMAP
-uuid: 50e17372-fd29-4792-aafa-8f9c21cc42c6
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
