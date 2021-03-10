@@ -1,13 +1,10 @@
 ---
 description: Video Player Ad-Serving Interface Definition (VPAID) 2.0 fournit une interface commune pour lire des publicités vidéo. Il offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-description: Video Player Ad-Serving Interface Definition (VPAID) 2.0 fournit une interface commune pour lire des publicités vidéo. Il offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-title: Prise en charge des publicités VPAID 2.0
 title: Prise en charge des publicités VPAID 2.0
-uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
