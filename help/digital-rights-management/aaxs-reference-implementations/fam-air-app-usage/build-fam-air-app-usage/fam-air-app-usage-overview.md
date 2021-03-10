@@ -1,9 +1,9 @@
 ---
-seo-title: Création de Packager Server et d’une application AIR
 title: Création de Packager Server et d’une application AIR
-uuid: ed7a1f11-1b7d-41d6-9b15-95c304992fc9
+description: Création de Packager Server et d’une application AIR
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
