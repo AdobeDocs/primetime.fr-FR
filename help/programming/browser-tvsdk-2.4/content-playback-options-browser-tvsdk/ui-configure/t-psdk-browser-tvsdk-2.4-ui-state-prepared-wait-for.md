@@ -1,13 +1,10 @@
 ---
 description: Avant de pouvoir utiliser la plupart des méthodes du lecteur Browser TVSDK, le lecteur doit être dans un état valide.
-seo-description: Avant de pouvoir utiliser la plupart des méthodes du lecteur Browser TVSDK, le lecteur doit être dans un état valide.
-seo-title: Attendre un état valide
 title: Attendre un état valide
-uuid: 0add29a8-fbd8-483a-8c99-e4bc6de9e3d3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
