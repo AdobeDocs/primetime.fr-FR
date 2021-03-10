@@ -1,13 +1,10 @@
 ---
 description: L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
-seo-description: L’interface MediaPlayer pour Android encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
-seo-title: Configuration de MediaPlayer
 title: Configuration de MediaPlayer
-uuid: 492b4693-acdf-4213-98e5-d6f0f1ae086d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
