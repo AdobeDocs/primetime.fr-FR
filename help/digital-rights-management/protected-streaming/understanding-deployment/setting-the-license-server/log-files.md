@@ -1,13 +1,10 @@
 ---
 description: Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en flux continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
-seo-description: Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en flux continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
-seo-title: Fichiers journaux
 title: Fichiers journaux
-uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
