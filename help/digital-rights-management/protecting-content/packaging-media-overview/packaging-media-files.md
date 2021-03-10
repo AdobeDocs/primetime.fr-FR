@@ -1,9 +1,9 @@
 ---
-seo-title: Présentation de la création de packages de fichiers multimédias
 title: Présentation de la création de packages de fichiers multimédias
-uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
+description: Présentation de la création de packages de fichiers multimédias
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
