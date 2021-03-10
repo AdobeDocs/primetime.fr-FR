@@ -1,13 +1,10 @@
 ---
 description: La pile HLS d’Apple prend en charge le basculement vers les flux de basculement/sauvegarde s’il ne parvient pas à récupérer les flux du jeu Principal. Pour les périphériques Apple HLS, pour faciliter le basculement, vous pouvez signaler au serveur manifest de traiter les flux Principaux et de basculement identifiés dans la liste de lecture principale comme des jeux disjoints (avec leurs propres UUID).
-seo-description: La pile HLS d’Apple prend en charge le basculement vers les flux de basculement/sauvegarde s’il ne parvient pas à récupérer les flux du jeu Principal. Pour les périphériques Apple HLS, pour faciliter le basculement, vous pouvez signaler au serveur manifest de traiter les flux Principaux et de basculement identifiés dans la liste de lecture principale comme des jeux disjoints (avec leurs propres UUID).
-seo-title: Faciliter le passage du lecteur HLS aux flux de basculement/sauvegarde
 title: Faciliter le passage du lecteur HLS aux flux de basculement/sauvegarde
-uuid: 2fea8a51-e4cb-4fc9-82d5-6305a1d96603
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
