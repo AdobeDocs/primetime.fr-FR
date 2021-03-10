@@ -1,13 +1,10 @@
 ---
 description: L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vidéo dans l’objet de métadonnées NATIVE_ERROR.
-seo-description: L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vidéo dans l’objet de métadonnées NATIVE_ERROR.
-seo-title: Valeurs de lecture vidéo NATIVE_ERROR
 title: Valeurs de lecture vidéo NATIVE_ERROR
-uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -37,7 +34,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Opération réussie. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/d’échec seront disponibles ultérieurement. </td> 
   </tr> 
@@ -327,7 +324,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> La lecture HLS n'a pas été activée dans le Flash Player. Voir AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect. </td> 
   </tr> 
@@ -419,7 +416,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 76 </td> 
    <td colname="col2"><span class="codeph"> AUDIO_DÉBUT_ERROR</span> </td> 
-   <td colname="col3"> Impossible de début de l'audio. </td> 
+   <td colname="col3"> Impossible de début du son. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 77 </td> 
@@ -427,7 +424,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Aucun récepteur audio présent dans une structure de données interne. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Impossible d'ouvrir le fichier. </td> 
   </tr> 
@@ -442,7 +439,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Impossible de lire à partir d'un fichier. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Une erreur s'est produite lors de l'analyse des données ID3. </td> 
   </tr> 
