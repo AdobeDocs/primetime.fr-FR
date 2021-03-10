@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
-seo-description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
-seo-title: Présentation de l’interface DRM
 title: Présentation de l’interface DRM
-uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
