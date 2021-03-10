@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez spécifier la mise en forme des sous-titres.
-seo-description: Vous pouvez spécifier la mise en forme des sous-titres.
-seo-title: Exemples de formatage des légendes
 title: Exemples de formatage des légendes
-uuid: d55a506a-6662-4252-95f6-4073b2997f3b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
