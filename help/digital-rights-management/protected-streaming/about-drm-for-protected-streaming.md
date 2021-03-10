@@ -1,13 +1,10 @@
 ---
 description: Le serveur Adobe Primetime DRM Server pour la diffusion en flux continu protégée est une mise en oeuvre du serveur de licences basée sur le SDK DRM de Primetime. Ce serveur délivre des licences pour le contenu protégé aux clients DRM Primetime.
-seo-description: Le serveur Adobe Primetime DRM Server pour la diffusion en flux continu protégée est une mise en oeuvre du serveur de licences basée sur le SDK DRM de Primetime. Ce serveur délivre des licences pour le contenu protégé aux clients DRM Primetime.
-seo-title: A propos du serveur DRM Adobe Primetime pour la diffusion en continu protégée
 title: A propos du serveur DRM Adobe Primetime pour la diffusion en continu protégée
-uuid: 775bef19-6071-428f-80f5-57cae472753c
 translation-type: tm+mt
-source-git-commit: 68f1318db89cf9422f5969f669c11f3784560db6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
