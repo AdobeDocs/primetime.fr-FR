@@ -1,13 +1,10 @@
 ---
 description: TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
-seo-description: TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
-seo-title: Conditions requises
 title: Conditions requises
-uuid: 7e5fb176-4c3f-4c12-9080-3afced28627b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
