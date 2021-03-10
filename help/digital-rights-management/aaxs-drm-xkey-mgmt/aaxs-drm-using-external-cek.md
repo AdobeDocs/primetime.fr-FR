@@ -1,13 +1,10 @@
 ---
 description: Utilisez la fonction CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
-seo-description: Utilisez la fonction CEK externe pour vendre et assembler des licences à l’aide de votre fichier CKMS existant.
-seo-title: Utilisation du CEK externe pour diffuser et assembler des licences
 title: Utilisation du CEK externe pour diffuser et assembler des licences
-uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
