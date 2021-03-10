@@ -1,13 +1,10 @@
 ---
 description: Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo sur le matériel du périphérique. La disponibilité de StageVideo dépend des versions et des fonctionnalités des différentes parties de votre système, notamment le Flash Player, le matériel vidéo, le système d’exploitation, les pilotes, le navigateur, la connexion réseau et le contexte d’affichage.
-seo-description: Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo sur le matériel du périphérique. La disponibilité de StageVideo dépend des versions et des fonctionnalités des différentes parties de votre système, notamment le Flash Player, le matériel vidéo, le système d’exploitation, les pilotes, le navigateur, la connexion réseau et le contexte d’affichage.
-seo-title: Fonctionnalités et restrictions de StageVideo
 title: Fonctionnalités et restrictions de StageVideo
-uuid: 7556f30b-4b9f-4258-beb6-2a4ce8f05d1a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
