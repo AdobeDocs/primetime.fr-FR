@@ -1,13 +1,10 @@
 ---
 description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-title: Utilisation de sous-titres fermés
 title: Utilisation de sous-titres fermés
-uuid: 6e105316-a166-45c1-b6b0-70c89c97c297
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
