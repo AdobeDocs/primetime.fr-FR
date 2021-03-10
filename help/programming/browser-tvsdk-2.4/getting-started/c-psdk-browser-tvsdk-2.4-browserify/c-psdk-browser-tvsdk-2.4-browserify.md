@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez créer un lecteur compatible avec le navigateur à l’aide de fichiers JS fournis par le navigateur TVSDK.
-seo-description: Vous pouvez créer un lecteur compatible avec le navigateur à l’aide de fichiers JS fournis par le navigateur TVSDK.
-seo-title: Lecteur compatible avec la navigation
 title: Lecteur compatible avec la navigation
-uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '133'
 ht-degree: 0%
 
 ---
@@ -30,4 +27,4 @@ Pour commencer à utiliser Browserify, exécutez les commandes de configuration 
 1. Accédez à [!DNL samples/browserify/ui-framework/build].
 1. Exécutez les mêmes commandes que celles de l’étape 2.
 
-Une fois cette configuration effectuée, vous pouvez continuer à créer des applications TVSDK compatibles avec les navigateurs en vous basant sur les exemples fournis avec TVSDK.
+Une fois cette configuration terminée, vous pouvez continuer à créer des applications TVSDK compatibles avec les navigateurs en vous basant sur les exemples fournis avec TVSDK.
