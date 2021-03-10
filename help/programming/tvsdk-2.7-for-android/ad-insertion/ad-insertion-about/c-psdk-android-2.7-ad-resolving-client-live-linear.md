@@ -1,13 +1,10 @@
 ---
 description: Pour le contenu en direct/linéaire, TVSDK remplace un morceau du contenu du flux principal par une coupure publicitaire de même durée, de sorte que la durée du plan de montage chronologique reste la même.
-seo-description: Pour le contenu en direct/linéaire, TVSDK remplace un morceau du contenu du flux principal par une coupure publicitaire de même durée, de sorte que la durée du plan de montage chronologique reste la même.
-seo-title: Résolution et insertion d’une publicité dynamique/linéaire
 title: Résolution et insertion d’une publicité dynamique/linéaire
-uuid: c9d54fc9-1d54-41c3-a872-d27afdd16314
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
