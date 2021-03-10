@@ -1,13 +1,10 @@
 ---
 description: Le SDK TVSDK informe le client du lecteur de la disponibilité de la variable availableMediaCharacteristicsWithMediaSelectionOptions du fichier AVAsset interne en utilisant la notification PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-description: Le SDK TVSDK informe le client du lecteur de la disponibilité de la variable availableMediaCharacteristicsWithMediaSelectionOptions du fichier AVAsset interne en utilisant la notification PTMediaPlayerMediaSelectionOptionsAvailableNotification.
-seo-title: Exposer les sous-titres
 title: Exposer les sous-titres
-uuid: 1cd8761f-6e6f-4017-9852-fa61f36197c5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Le SDK TVSDK informe le client du lecteur de la disponibilité de la variable availableMediaCharacteristicsWithMediaSelectionOptions du fichier AVAsset interne en utilisant la notification PTMediaPlayerMediaSelectionOptionsAvailableNotification.
 
-Vous pouvez accéder aux sous-titres disponibles par l&#39;intermédiaire de la propriété `subtitlesOptions` &lt;a1/> de la propriété `PTMediaPlayerItem`.
+Vous pouvez accéder aux sous-titres disponibles par l&#39;intermédiaire de la propriété `subtitlesOptions`  de la propriété `PTMediaPlayerItem`.
 
 Pour exposer les sous-titres :
 
