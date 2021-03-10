@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
-seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
-seo-title: Systèmes DRM pris en charge
 title: Systèmes DRM pris en charge
-uuid: db1f3d2f-b493-486c-ac53-49ccee9ec06b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
