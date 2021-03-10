@@ -1,9 +1,9 @@
 ---
-seo-title: Gestion des mises à jour des certificats lorsque vos certificats émis par Adobe arrivent à expiration
 title: Gestion des mises à jour des certificats lorsque vos certificats émis par Adobe arrivent à expiration
-uuid: 5151ef15-daf6-4fb3-bf83-25ebac1d003b
+description: Gestion des mises à jour des certificats lorsque vos certificats émis par Adobe arrivent à expiration
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
