@@ -1,13 +1,10 @@
 ---
 description: TVSDK insère le contenu alternatif (publicités) dans la chronologie qui correspond au contenu principal.
-seo-description: TVSDK insère le contenu alternatif (publicités) dans la chronologie qui correspond au contenu principal.
-seo-title: Phase d'insertion publicitaire
 title: Phase d'insertion publicitaire
-uuid: 4a8e9578-6e95-44c0-b045-ae3c20da75e9
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
