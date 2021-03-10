@@ -1,13 +1,10 @@
 ---
 description: Pour que les sous-titres soient accessibles au lecteur client, vous devez les activer. L’utilisateur peut activer ou désactiver les sous-titres et sélectionner la mise en forme.
-seo-description: Pour que les sous-titres soient accessibles au lecteur client, vous devez les activer. L’utilisateur peut activer ou désactiver les sous-titres et sélectionner la mise en forme.
-seo-title: Exposer les sous-titres fermés
 title: Exposer les sous-titres fermés
-uuid: 7057014a-b14a-4790-8f7f-37d7a1fb8194
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
