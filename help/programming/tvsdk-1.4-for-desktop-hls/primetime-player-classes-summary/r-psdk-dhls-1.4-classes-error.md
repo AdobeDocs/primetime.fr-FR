@@ -1,13 +1,10 @@
 ---
 description: Ces classes fournissent des informations lorsque TVSDK est mal utilisé.
-seo-description: Ces classes fournissent des informations lorsque TVSDK est mal utilisé.
-seo-title: Classes d’erreur
 title: Classes d’erreur
-uuid: 0c77e20d-edaf-495c-9b33-02edc0a4432c
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '93'
 ht-degree: 0%
 
 ---
