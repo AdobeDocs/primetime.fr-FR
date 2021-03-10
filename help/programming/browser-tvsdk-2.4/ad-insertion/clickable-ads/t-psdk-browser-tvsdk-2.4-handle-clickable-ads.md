@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer fournit une fonction notificationClick() qui distribue des événements liés à la publicité lorsqu’une publicité cliquable est en cours de lecture. Ces événements fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir des fonctionnalités de clics publicitaires.
-seo-description: MediaPlayer fournit une fonction notificationClick() qui distribue des événements liés à la publicité lorsqu’une publicité cliquable est en cours de lecture. Ces événements fournissent des informations sur les coupures publicitaires et publicitaires que votre application peut utiliser pour fournir des fonctionnalités de clics publicitaires.
-seo-title: Gérer les publicités cliquables
 title: Gérer les publicités cliquables
-uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
