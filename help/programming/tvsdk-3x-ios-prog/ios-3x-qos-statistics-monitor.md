@@ -1,14 +1,11 @@
 ---
 description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-title: Statistiques sur la qualité des services
 title: Statistiques sur la qualité des services
-uuid: c08c1031-616a-4776-92e2-1c405467689b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 0%
+source-wordcount: '197'
+ht-degree: 1%
 
 ---
 
