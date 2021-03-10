@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités.
-seo-description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités.
-seo-title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
 title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
-uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
