@@ -1,13 +1,10 @@
 ---
 description: La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
-seo-description: La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
-seo-title: Licence
 title: Licence
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
