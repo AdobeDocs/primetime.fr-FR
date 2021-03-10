@@ -1,13 +1,10 @@
 ---
 description: TVSDK récupère les informations de FreeWheel et d'autres serveurs qui fournissent des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux que les créatifs capturent ou négligent les intérêts d’une audience.
-seo-description: TVSDK récupère les informations de FreeWheel et d'autres serveurs qui fournissent des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux que les créatifs capturent ou négligent les intérêts d’une audience.
-seo-title: Mesures publicitaires de Moat
 title: Mesures publicitaires de Moat
-uuid: 520d33b0-2218-4f74-9689-b9dc520f29cc
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
