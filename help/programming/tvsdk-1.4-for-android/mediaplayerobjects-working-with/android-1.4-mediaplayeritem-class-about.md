@@ -1,13 +1,10 @@
 ---
 description: L’objet MediaPlayer représente votre lecteur multimédia. Un MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
-seo-description: L’objet MediaPlayer représente votre lecteur multimédia. Un MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
-seo-title: A propos de la classe MediaPlayerItem
 title: A propos de la classe MediaPlayerItem
-uuid: d7f65edf-4693-4b1e-bae0-46fadce98751
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
