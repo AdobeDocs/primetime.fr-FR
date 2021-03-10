@@ -1,13 +1,10 @@
 ---
-seo-title: Gestionnaires de fonctionnalités
 title: Gestionnaires de fonctionnalités
-uuid: 3d78544e-4819-4122-bfd3-01522a067aa9
 description: Les gestionnaires de fonctionnalités vous permettent de contrôler des fonctionnalités individuelles sans parcourir l’ensemble du SDK TVSDK à la recherche de code pour une fonction qui pourrait être dispersée en plusieurs emplacements.
-seo-description: Les gestionnaires de fonctionnalités vous permettent de contrôler des fonctionnalités individuelles sans parcourir l’ensemble du SDK TVSDK à la recherche de code pour une fonction qui pourrait être dispersée en plusieurs emplacements.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '390'
 ht-degree: 2%
 
 ---
