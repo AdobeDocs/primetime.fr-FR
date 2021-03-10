@@ -1,13 +1,10 @@
 ---
 description: Le kit de développement logiciel Adobe Primetime (TVSDK) est un ensemble d’outils qui vous permet d’ajouter des fonctionnalités de lecture vidéo avancées à vos applications.
-seo-description: Le kit de développement logiciel Adobe Primetime (TVSDK) est un ensemble d’outils qui vous permet d’ajouter des fonctionnalités de lecture vidéo avancées à vos applications.
-seo-title: Présentation
 title: Présentation
-uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
