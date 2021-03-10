@@ -1,14 +1,11 @@
 ---
-description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Lors du chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Lors du chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
-seo-title: Résolution de la publicité juste à temps
+description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Dans le chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
+keywords: Lazy ; Résolution de la publicité ; Chargement de la publicité
 title: Résolution de la publicité juste à temps
-uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -16,7 +13,7 @@ ht-degree: 0%
 
 # Aperçu {#just-in-time-ad-resolving-overview}
 
-La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Lors du chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
+La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage. La résolution des publicités a considérablement changé dans la version 3.0. Dans le chargement des publicités différées avant la version 3.0, la résolution des publicités était divisée en deux étapes, ce qui ne permettait de résoudre que les publicités pré-rouleaux avant l’état PRÉPARÉ, et les publicités moyennes et post-rolls après l’état PRÉPARÉ. Ceci a changé et les coupures publicitaires sont maintenant résolues à un intervalle spécifié avant la position de la coupure publicitaire.
 
 * Processus de base de résolution et de chargement des publicités :
 
