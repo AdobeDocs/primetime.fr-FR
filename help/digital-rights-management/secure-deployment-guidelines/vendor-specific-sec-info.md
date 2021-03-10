@@ -1,13 +1,10 @@
 ---
 description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution Adobe Primetime DRM.
-seo-description: Les systèmes d’exploitation et les serveurs d’applications sont inclus dans votre solution Adobe Primetime DRM.
-seo-title: Informations de sécurité spécifiques au fournisseur
 title: Informations de sécurité spécifiques au fournisseur
-uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '371'
 ht-degree: 0%
 
 ---
