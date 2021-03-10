@@ -1,13 +1,10 @@
 ---
-seo-title: Objet JSON pour les annonces Primetime
 title: Objet JSON pour les annonces Primetime
-uuid: acf968d2-9856-4ed6-a046-1ac17d176571
 description: Le bloc de code ci-dessous définit l’objet JSON de détails lorsque la valeur de type est Publicités Primetime.
-seo-description: Le bloc de code ci-dessous définit l’objet JSON de détails lorsque la valeur de type est Publicités Primetime.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
