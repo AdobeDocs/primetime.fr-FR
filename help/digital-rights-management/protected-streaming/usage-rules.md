@@ -1,13 +1,10 @@
 ---
 description: Avec Adobe Primetime DRM Server for Protected Streaming, vous pouvez spécifier toutes les règles d’utilisation du serveur avec des fichiers de configuration.
-seo-description: Avec Adobe Primetime DRM Server for Protected Streaming, vous pouvez spécifier toutes les règles d’utilisation du serveur avec des fichiers de configuration.
-seo-title: A propos des règles d’utilisation
 title: A propos des règles d’utilisation
-uuid: 4a794712-db58-43f5-b867-8871e58e12ae
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
