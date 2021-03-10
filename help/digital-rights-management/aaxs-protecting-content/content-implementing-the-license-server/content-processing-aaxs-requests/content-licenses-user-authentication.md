@@ -1,9 +1,9 @@
 ---
-seo-title: Authentification des utilisateurs
 title: Authentification des utilisateurs
-uuid: 191964eb-cd68-47a6-8214-aec01f993df4
+description: Authentification des utilisateurs
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
