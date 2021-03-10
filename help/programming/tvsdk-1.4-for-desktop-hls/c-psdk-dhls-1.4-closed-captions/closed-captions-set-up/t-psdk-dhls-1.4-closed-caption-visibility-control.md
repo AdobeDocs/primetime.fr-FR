@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
-seo-description: Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
-seo-title: Contrôler la visibilité des sous-titres
 title: Contrôler la visibilité des sous-titres
-uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
