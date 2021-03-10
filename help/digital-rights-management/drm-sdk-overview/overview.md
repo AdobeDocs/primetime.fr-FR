@@ -1,9 +1,9 @@
 ---
-seo-title: SDK DRM Adobe Primetime - Présentation
 title: SDK DRM Adobe Primetime - Présentation
-uuid: d6bdd66e-02b3-48b8-9355-60238b9115a4
+description: SDK DRM Adobe Primetime - Présentation
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
