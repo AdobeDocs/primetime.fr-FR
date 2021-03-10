@@ -1,9 +1,9 @@
 ---
-seo-title: Fichier de stratégie DRM interdomaines
 title: Fichier de stratégie DRM interdomaines
-uuid: e0ca3133-c924-4cb7-bc46-23f8692679b9
+description: Fichier de stratégie DRM interdomaines
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
