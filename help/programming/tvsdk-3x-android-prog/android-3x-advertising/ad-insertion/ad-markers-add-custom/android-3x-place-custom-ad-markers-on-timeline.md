@@ -1,13 +1,10 @@
 ---
 description: Cet exemple montre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans le plan de montage chronologique de lecture.
-seo-description: Cet exemple montre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans le plan de montage chronologique de lecture.
-seo-title: Placez des marqueurs publicitaires personnalisés sur le plan de montage chronologique.
 title: Placez des marqueurs publicitaires personnalisés sur le plan de montage chronologique.
-uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
-source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
