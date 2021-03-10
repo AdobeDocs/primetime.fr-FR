@@ -1,13 +1,10 @@
 ---
-seo-title: Extensions d’autorisation personnalisées
 title: Extensions d’autorisation personnalisées
 description: La logique d’autorisation personnalisée peut être invoquée lors de l’acquisition d’une licence afin de déterminer si une licence doit être délivrée au client requérant.
-seo-description: La logique d’autorisation personnalisée peut être invoquée lors de l’acquisition d’une licence afin de déterminer si une licence doit être délivrée au client requérant.
-uuid: fb40db6f-30aa-46e3-9eeb-faff3cfedab1
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
