@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications.
-seo-description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications.
-seo-title: Fonctionnalités MP3 et MP4 prises en charge
 title: Fonctionnalités MP3 et MP4 prises en charge
-uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
