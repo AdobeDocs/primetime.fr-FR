@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités DASH que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications vidéo.
-seo-description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités DASH que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications vidéo.
-seo-title: Fonctionnalités DASH prises en charge
 title: Fonctionnalités DASH prises en charge
-uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
