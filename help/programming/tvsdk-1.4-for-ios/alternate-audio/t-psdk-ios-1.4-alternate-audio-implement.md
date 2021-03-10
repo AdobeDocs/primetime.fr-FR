@@ -1,13 +1,10 @@
 ---
 description: Le fichier audio à liaison tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-description: Le fichier audio à liaison tardive utilise PTMediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-title: Accéder à d'autres pistes audio
 title: Accéder à d'autres pistes audio
-uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
