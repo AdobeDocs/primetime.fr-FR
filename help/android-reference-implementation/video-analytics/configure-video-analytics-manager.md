@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez suivre l’utilisation des vidéos dans l’implémentation de référence Android Primetime en la configurant pour qu’elle fonctionne avec votre compte Adobe Analytics.
-seo-description: Vous pouvez suivre l’utilisation des vidéos dans l’implémentation de référence Android Primetime en la configurant pour qu’elle fonctionne avec votre compte Adobe Analytics.
-seo-title: Configuration des analyses vidéo
 title: Configuration des analyses vidéo
-uuid: ce2ebab3-b3c8-472a-9c54-16ddb1c3cc4e
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
