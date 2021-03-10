@@ -1,13 +1,10 @@
 ---
 description: Ces modifications dans TVSDK prennent en charge la suppression et le remplacement des annonces.
-seo-description: Ces modifications dans TVSDK prennent en charge la suppression et le remplacement des annonces.
-seo-title: Modifications de l’API de suppression et de remplacement des publicités
 title: Modifications de l’API de suppression et de remplacement des publicités
-uuid: 9d208d3b-6459-4aaf-bc56-53c405ccc1b6
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
