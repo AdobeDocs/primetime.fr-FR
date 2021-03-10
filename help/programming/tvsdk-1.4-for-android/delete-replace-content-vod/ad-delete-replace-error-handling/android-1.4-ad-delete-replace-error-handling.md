@@ -1,13 +1,10 @@
 ---
 description: TVSDK traite les erreurs de plage de temps en fonction du problème spécifique, soit en fusionnant, soit en réordonnant les plages de temps mal définies.
-seo-description: TVSDK traite les erreurs de plage de temps en fonction du problème spécifique, soit en fusionnant, soit en réordonnant les plages de temps mal définies.
-seo-title: Gestion des erreurs de suppression et de remplacement des publicités
 title: Gestion des erreurs de suppression et de remplacement des publicités
-uuid: e2e06f13-9813-4d86-b6fe-3d09f3bdb100
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
