@@ -1,13 +1,10 @@
 ---
 description: Le SDK TVSDK peut lire des vidéos qui comportent plusieurs profils avec des débits différents, en basculant entre eux pour fournir plusieurs niveaux de qualité en fonction de la bande passante disponible.
-seo-description: Le SDK TVSDK peut lire des vidéos qui comportent plusieurs profils avec des débits différents, en basculant entre eux pour fournir plusieurs niveaux de qualité en fonction de la bande passante disponible.
-seo-title: Débit multiple
 title: Débit multiple
-uuid: 46eac41e-0b2a-42e3-8a88-54ad9fe34212
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
