@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez afficher la durée du contenu actuellement principal.
-seo-description: Vous pouvez afficher la durée du contenu actuellement principal.
-seo-title: Afficher la durée de la vidéo
 title: Afficher la durée de la vidéo
-uuid: 945f222d-80ba-4832-a06f-9bb8db6adbcb
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
