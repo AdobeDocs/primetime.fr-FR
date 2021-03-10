@@ -1,13 +1,10 @@
 ---
 description: La protection Replay empêche un attaquant de relire un message de demande de licence et peut entraîner une attaque par déni de service (DoS) contre le client.
-seo-description: La protection Replay empêche un attaquant de relire un message de demande de licence et peut entraîner une attaque par déni de service (DoS) contre le client.
-seo-title: Protection de relecture
 title: Protection de relecture
-uuid: 93749dd3-a42c-4866-ac54-1b20d6683c42
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
