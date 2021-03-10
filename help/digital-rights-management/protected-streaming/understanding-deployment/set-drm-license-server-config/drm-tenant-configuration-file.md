@@ -1,13 +1,10 @@
 ---
 description: Le fichier de configuration flashaccess-locataire.xml comprend des paramètres qui s’appliquent à un client spécifique du serveur de licences.
-seo-description: Le fichier de configuration flashaccess-locataire.xml comprend des paramètres qui s’appliquent à un client spécifique du serveur de licences.
-seo-title: Fichier de configuration du client
 title: Fichier de configuration du client
-uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
