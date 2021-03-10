@@ -1,13 +1,10 @@
 ---
-seo-title: Téléchargement et configuration des logiciels prérequis
 title: Téléchargement et configuration des logiciels prérequis
 description: Le processus d'installation est simple. Si le JDK est déjà installé sur votre système, vous pouvez ignorer cette étape, mais sachez que votre JDK, Eclipse IDE et votre système d’exploitation doivent être compatibles.
-seo-description: Le processus d'installation est simple. Si le JDK est déjà installé sur votre système, vous pouvez ignorer cette étape, mais sachez que votre JDK, Eclipse IDE et votre système d’exploitation doivent être compatibles.
-uuid: ca29144f-8088-4c8d-93cf-aa59007da034
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
