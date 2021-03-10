@@ -1,13 +1,10 @@
 ---
 description: Par défaut, un flux en direct avec prise en charge du DVR expose une plage de recherche dans laquelle le lecteur peut s’arrêter et effectuer des recherches.
-seo-description: Par défaut, un flux en direct avec prise en charge du DVR expose une plage de recherche dans laquelle le lecteur peut s’arrêter et effectuer des recherches.
-seo-title: DVR sans insertion de publicité
 title: DVR sans insertion de publicité
-uuid: e516be00-bb18-4119-ae0d-a79a35f4bd20
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
