@@ -1,14 +1,11 @@
 ---
 description: L’interface de jeton de licence PlayReady fournit des services de production et de test.
-seo-description: L’interface de jeton de licence PlayReady fournit des services de production et de test.
-seo-title: Demande/réponse de jeton de licence PlayReady
 title: Demande/réponse de jeton de licence PlayReady
-uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 3%
+source-wordcount: '898'
+ht-degree: 4%
 
 ---
 
@@ -165,7 +162,7 @@ Cette requête HTTP renvoie un jeton qui peut être utilisé pour une licence Pl
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionType</span> </td> 
-   <td>Mot arbitraire de 4 lettres représentant un identifiant 32 bits pour une extension. Le code ASCII 8 bits de chaque lettre correspond à la portion d’octet 8 bits de l’identifiant. Par exemple, la valeur d'identificateur 0x61626364 (hexadécimal) serait écrite "<span class="codeph"> abcd</span>", car le code ASCII pour "a" est 0x61, etc. </td> 
+   <td>Mot arbitraire de 4 lettres représentant un identifiant 32 bits pour une extension. Le code ASCII 8 bits de chaque lettre correspond à la portion d’octet 8 bits de l’identifiant. Par exemple, la valeur d'identificateur 0x61626364 (hexadécimal) sera écrite "<span class="codeph"> abcd</span>", car le code ASCII pour "a" est 0x61, etc. </td> 
    <td> Non </td> 
   </tr> 
   <tr> 
