@@ -1,13 +1,10 @@
 ---
 description: La version 2.0 de l’interface de définition de l’interface de diffusion d’annonces du lecteur vidéo (VPAID) fournit une interface commune pour lire des publicités vidéo. Il offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-description: La version 2.0 de l’interface de définition de l’interface de diffusion d’annonces du lecteur vidéo (VPAID) fournit une interface commune pour lire des publicités vidéo. Il offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-title: Prise en charge des publicités VPAID 2.0
 title: Prise en charge des publicités VPAID 2.0
-uuid: e45e91d2-2aef-4d69-ac80-228d23e8fd7b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
