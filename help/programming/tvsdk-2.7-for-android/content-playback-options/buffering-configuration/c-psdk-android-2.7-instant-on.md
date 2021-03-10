@@ -1,13 +1,10 @@
 ---
 description: L’activation instantanée signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canal, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur début regarder.
-seo-description: L’activation instantanée signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canal, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur début regarder.
-seo-title: Instant activé
 title: Instant activé
-uuid: 7e14b779-2a36-4ff4-a365-9ac49a836ff3
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
