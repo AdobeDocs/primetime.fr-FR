@@ -1,13 +1,10 @@
 ---
 description: Les workflows DRM impliquent la création d’un pack de contenu, l’octroi de licences pour le contenu et la lecture du contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais certaines différences se trouvent dans les détails.
-seo-description: Les workflows DRM impliquent la création d’un pack de contenu, l’octroi de licences pour le contenu et la lecture du contenu protégé depuis votre propre application vidéo. Le flux de travail est généralement similaire pour chaque solution DRM, mais certaines différences se trouvent dans les détails.
-seo-title: Processus multi-DRM pour FairPlay
 title: Processus multi-DRM pour FairPlay
-uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
