@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez choisir un point de départ personnalisé pour le moment où entrer un flux DVR au lieu du comportement par défaut de la saisie du flux DVR au début à l'aide de la classe ConfigProvider.
-seo-description: Vous pouvez choisir un point de départ personnalisé pour le moment où entrer un flux DVR au lieu du comportement par défaut de la saisie du flux DVR au début à l'aide de la classe ConfigProvider.
-seo-title: Choix d’un point de départ personnalisé pour la magnétoscopie numérique
 title: Choix d’un point de départ personnalisé pour la magnétoscopie numérique
-uuid: a7e13865-2b86-4234-ac4c-9a5320b293db
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
