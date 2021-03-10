@@ -1,13 +1,10 @@
 ---
 description: TVSDK gère les coupures d’électricité dans les flux vidéo en direct et fournit du contenu alternatif lors d’une coupure d’Internet.
-seo-description: TVSDK gère les coupures d’électricité dans les flux vidéo en direct et fournit du contenu alternatif lors d’une coupure d’Internet.
-seo-title: Gestion des pannes de courant
 title: Gestion des pannes de courant
-uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
