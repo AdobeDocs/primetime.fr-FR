@@ -1,13 +1,10 @@
 ---
 description: 'Lors de la détermination des règles de pare-feu, tenez compte des types d’URL suivants : '
-seo-description: 'Lors de la détermination des règles de pare-feu, tenez compte des types d’URL suivants : '
-seo-title: Règles de pare-feu
 title: Règles de pare-feu
-uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
