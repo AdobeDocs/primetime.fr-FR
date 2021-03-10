@@ -1,9 +1,9 @@
 ---
-seo-title: Liste bloquée des runtimes d'application limitée à l'accès au contenu protégé
 title: Liste bloquée des runtimes d'application limitée à l'accès au contenu protégé
-uuid: 462a2c09-b335-4768-bd0e-1359db169d69
+description: Liste bloquée des runtimes d'application limitée à l'accès au contenu protégé
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
