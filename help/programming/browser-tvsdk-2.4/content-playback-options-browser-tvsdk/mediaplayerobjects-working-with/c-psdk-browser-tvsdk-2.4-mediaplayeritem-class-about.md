@@ -1,13 +1,10 @@
 ---
 description: Une fois que MediaResource a été chargé, le navigateur TVSDK crée une instance de la classe MediaPlayerItem pour fournir l’accès à cette ressource.
-seo-description: Une fois que MediaResource a été chargé, le navigateur TVSDK crée une instance de la classe MediaPlayerItem pour fournir l’accès à cette ressource.
-seo-title: A propos de la classe MediaPlayerItem
 title: A propos de la classe MediaPlayerItem
-uuid: 5226d3ad-2438-44fe-a8ef-bcc0da8331b8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
