@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez activer la reprise lorsqu’une publicité VMAP intégrée contient un type de média non valide.
-seo-description: Vous pouvez activer la reprise lorsqu’une publicité VMAP intégrée contient un type de média non valide.
-seo-title: Définir le comportement des annonces de secours pour les annonces VMAP intégrées
 title: Définir le comportement des annonces de secours pour les annonces VMAP intégrées
-uuid: bc8cb0b4-5ea9-429b-ab5d-746c6f03e74b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
