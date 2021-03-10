@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe PTSDKConfig.
-seo-description: Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe PTSDKConfig.
-seo-title: Config des méthodes de classe pour les balises
 title: Config des méthodes de classe pour les balises
-uuid: 1d3651a0-3b70-4d3a-8ced-663a9dad7205
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
