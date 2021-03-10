@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
-seo-description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
-seo-title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
 title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
-uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '169'
 ht-degree: 2%
 
 ---
