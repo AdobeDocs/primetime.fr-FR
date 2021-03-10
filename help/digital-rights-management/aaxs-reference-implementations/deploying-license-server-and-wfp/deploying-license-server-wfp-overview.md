@@ -1,9 +1,9 @@
 ---
-seo-title: Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle
 title: Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle
-uuid: 4b71f2f4-f971-4382-ae41-171f7dfdfe21
+description: Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
