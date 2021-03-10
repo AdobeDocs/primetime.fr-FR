@@ -1,9 +1,9 @@
 ---
-seo-title: Application non SWF Autoriser la mise en vente
 title: Application non SWF Autoriser la mise en vente
-uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
+description: Application non SWF Autoriser la mise en vente
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
