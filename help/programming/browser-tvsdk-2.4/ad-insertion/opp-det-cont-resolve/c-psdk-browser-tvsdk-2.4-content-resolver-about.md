@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent des publicités dans la chronologie. Ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application doit peut-être modifier le calendrier en fonction des opportunités identifiées dans le manifeste.
-seo-description: Le navigateur TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent des publicités dans la chronologie. Ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application doit peut-être modifier le calendrier en fonction des opportunités identifiées dans le manifeste.
-seo-title: Générateurs d’opportunités et résolveurs de contenu
 title: Générateurs d’opportunités et résolveurs de contenu
-uuid: e462ad89-1609-4efa-aa67-cfd04f045927
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '301'
 ht-degree: 0%
 
 ---
