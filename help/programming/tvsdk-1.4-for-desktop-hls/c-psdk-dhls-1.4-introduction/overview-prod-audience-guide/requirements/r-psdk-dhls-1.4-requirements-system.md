@@ -1,13 +1,10 @@
 ---
 description: Pour utiliser TVSDK, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de votre application répondent toutes aux exigences minimales énumérées ci-dessous.
-seo-description: Pour utiliser TVSDK, assurez-vous que les versions de votre matériel, de votre système d’exploitation et de votre application répondent toutes aux exigences minimales énumérées ci-dessous.
-seo-title: Configuration système et logiciel requise
 title: Configuration système et logiciel requise
-uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
-source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
