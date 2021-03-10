@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Détermination de l’exécution correcte du serveur de licences d’implémentation des références
 title: Détermination de l’exécution correcte du serveur de licences d’implémentation des références
-uuid: 84d32c94-7594-464e-a883-5338b52de2bf
+description: Détermination de l’exécution correcte du serveur de licences d’implémentation des références
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
