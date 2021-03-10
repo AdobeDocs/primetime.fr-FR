@@ -1,13 +1,10 @@
 ---
 description: La définition de l’interface de diffusion publicitaire du lecteur vidéo (VPAID) fournit une interface commune pour lire des publicités vidéo. VPAID offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-description: La définition de l’interface de diffusion publicitaire du lecteur vidéo (VPAID) fournit une interface commune pour lire des publicités vidéo. VPAID offre aux utilisateurs une expérience multimédia enrichie et permet aux éditeurs de mieux cible les publicités, de suivre les impressions publicitaires et de monétiser le contenu vidéo.
-seo-title: Configuration requise pour les publicités personnalisées
 title: Configuration requise pour les publicités personnalisées
-uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
