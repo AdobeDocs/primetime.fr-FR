@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
-seo-description: Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
-seo-title: Enregistrer la position de la vidéo et reprendre ultérieurement
 title: Enregistrer la position de la vidéo et reprendre ultérieurement
-uuid: 03ed5c63-008d-4dd1-9a31-baefa73b56e2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
@@ -32,7 +29,7 @@ Les publicités insérées dynamiquement diffèrent d’une session utilisateur 
    // save the resumeTime to a persistent location
    ```
 
-   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` `be` aura &lt;a1/> 1 200 secondes, alors que `localTime` à cette position aura `be` 900 secondes.
+   Par exemple, si l’utilisateur se trouve à la 20e minute de la vidéo et que cette position comprend cinq minutes de publicités, `currentTime` `be` aura  1 200 secondes, alors que `localTime` à cette position aura `be` 900 secondes.
 
 1. Restaurez la session utilisateur lorsque l’activité du lecteur reprend.
 
