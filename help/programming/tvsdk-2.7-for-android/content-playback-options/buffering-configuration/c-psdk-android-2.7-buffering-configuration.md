@@ -1,13 +1,10 @@
 ---
 description: Pour une visualisation plus fluide, TVSDK met parfois en mémoire tampon le flux vidéo. Vous pouvez configurer la mise en mémoire tampon du lecteur.
-seo-description: Pour une visualisation plus fluide, TVSDK met parfois en mémoire tampon le flux vidéo. Vous pouvez configurer la mise en mémoire tampon du lecteur.
-seo-title: Mise en mémoire tampon
 title: Mise en mémoire tampon
-uuid: 7f9f0deb-5f18-441d-b7a4-67c631a798f4
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
