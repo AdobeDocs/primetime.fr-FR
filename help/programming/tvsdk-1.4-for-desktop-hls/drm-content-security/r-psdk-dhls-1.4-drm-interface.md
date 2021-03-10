@@ -1,13 +1,10 @@
 ---
 description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
-seo-description: L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM.
-seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
-uuid: 01714ee6-a937-4ca3-b535-6a6ef681ee6d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
