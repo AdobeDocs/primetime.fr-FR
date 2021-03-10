@@ -1,9 +1,9 @@
 ---
-seo-title: A propos des fichiers ECI
 title: A propos des fichiers ECI
-uuid: 124d8ab1-933b-4a1b-992a-919f3d799460
+description: A propos des fichiers ECI
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
