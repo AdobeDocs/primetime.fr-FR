@@ -1,13 +1,10 @@
 ---
 description: Ce tableau fournit des informations détaillées sur les notifications de type ERROR.
-seo-description: Ce tableau fournit des informations détaillées sur les notifications de type ERROR.
-seo-title: Codes de notification d’erreur
 title: Codes de notification d’erreur
-uuid: cc21473d-924e-475d-96ea-352233f664ef
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '615'
 ht-degree: 4%
 
 ---
