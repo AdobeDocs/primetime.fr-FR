@@ -1,13 +1,10 @@
 ---
 description: Dans certains cas, vous devez savoir si le contenu multimédia est actif ou VOD.
-seo-description: Dans certains cas, vous devez savoir si le contenu multimédia est actif ou VOD.
-seo-title: Déterminer si le contenu est actif ou VOD
 title: Déterminer si le contenu est actif ou VOD
-uuid: cd71b8d3-259a-48f8-a6ad-02b57da146a7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
