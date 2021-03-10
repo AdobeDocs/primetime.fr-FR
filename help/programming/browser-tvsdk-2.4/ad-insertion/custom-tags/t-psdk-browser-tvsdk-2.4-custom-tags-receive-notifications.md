@@ -1,13 +1,10 @@
 ---
 description: Pour recevoir des notifications concernant les balises dans le manifeste, écoutez AdobePSDK.TimedMetadataEvent.
-seo-description: Pour recevoir des notifications concernant les balises dans le manifeste, écoutez AdobePSDK.TimedMetadataEvent.
-seo-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
 title: Ajouter des écouteurs pour les notifications de métadonnées minutées
-uuid: c82c5549-0ab6-4343-a766-5176e784d4cb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
