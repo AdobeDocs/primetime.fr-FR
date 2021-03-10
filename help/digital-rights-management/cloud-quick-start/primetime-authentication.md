@@ -1,9 +1,9 @@
 ---
-seo-title: Authentification Adobe Primetime (facultatif)
 title: Authentification Adobe Primetime (facultatif)
-uuid: fa6225d6-e0e5-4fcc-ac26-4ff54f9f334a
+description: Authentification Adobe Primetime (facultatif)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
