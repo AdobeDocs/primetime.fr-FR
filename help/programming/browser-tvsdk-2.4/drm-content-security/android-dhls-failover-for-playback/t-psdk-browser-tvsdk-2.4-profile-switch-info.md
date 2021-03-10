@@ -1,13 +1,10 @@
 ---
 description: Lorsque le lecteur de médias bascule son profil actuel sur un nouveau profil, vous pouvez récupérer des informations sur le commutateur, y compris le moment où il a basculé, les informations de largeur et de hauteur, ou les raisons pour lesquelles un débit binaire différent a été utilisé.
-seo-description: Lorsque le lecteur de médias bascule son profil actuel sur un nouveau profil, vous pouvez récupérer des informations sur le commutateur, y compris le moment où il a basculé, les informations de largeur et de hauteur, ou les raisons pour lesquelles un débit binaire différent a été utilisé.
-seo-title: Obtenir des informations sur le commutateur de profil
 title: Obtenir des informations sur le commutateur de profil
-uuid: 0ff1aeac-882a-4209-b19f-1aa3141404d9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
