@@ -1,13 +1,10 @@
 ---
 description: Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour Android, qui est mis en oeuvre en Java.
-seo-description: Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour Android, qui est mis en oeuvre en Java.
-seo-title: Présentation
 title: Présentation
-uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '216'
 ht-degree: 0%
 
 ---
