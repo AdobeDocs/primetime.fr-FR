@@ -1,9 +1,9 @@
 ---
-seo-title: Détails du processus de stratégie
 title: Détails du processus de stratégie
-uuid: b355fcf6-3416-440f-9b30-a155e20f9f74
+description: Détails du processus de stratégie
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
