@@ -1,17 +1,13 @@
 ---
 title: Versions de Primetime Offline Packager 2.x
-seo-title: Versions de Primetime Offline Packager 2.x
 description: Nouveautés des versions 2.1 et 2.3.1 de Primetime Offline Packager
-seo-description: Nouveautés des versions 2.1 et 2.3.1 de Primetime Offline Packager
-uuid: 01926a10-890d-477d-b832-e22847d957e0
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 933a0711-846a-4bb7-bf51-b300822a93d4
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -74,7 +70,7 @@ Configuration logicielle requise
 
 ### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Téléchargez le logiciel Java SE à partir du [site de l&#39;Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
 1. Extrayez sur le disque le fichier d&#39;archive Adobe Primetime Offline Packager 2.3.1 nommé `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip`.
 
 ### Configuration de Offline Packager 2.3.1 {#configuring-the-offline-packager}
@@ -126,7 +122,7 @@ Les problèmes suivants ont également été corrigés dans cette version.
 
 ### Installation de Offline Packager 2.1 {#installing-offline-packager}
 
-1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Téléchargez le logiciel Java SE à partir du [site de l&#39;Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
 1. Extrayez le `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip` sur votre disque.
 
 ### Configuration de Offline Packager 2.1 {#configuring-the-offline-packager-1}
