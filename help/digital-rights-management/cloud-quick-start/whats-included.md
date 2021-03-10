@@ -1,13 +1,10 @@
 ---
 description: Adobe fournit un service DRM Cloud aux clients Adobe Primetime DRM qui ne souhaitent pas développer et gérer leur propre serveur de licences DRM Primetime. En utilisant ce service, les clients peuvent réduire la complexité opérationnelle et de développement liée à l'émission de licences DRM. Primetime Cloud DRM peut émettre des licences DRM sur tous les périphériques capables d’exécuter une application vidéo compatible avec le SDK du navigateur Primetime, telle que iOS, Android, Ordinateurs de bureau et Xbox360. Ce service DRM est hébergé et géré par Adobe, avec une disponibilité 24h/24 et 7j/7.
-seo-description: Adobe fournit un service DRM Cloud aux clients Adobe Primetime DRM qui ne souhaitent pas développer et gérer leur propre serveur de licences DRM Primetime. En utilisant ce service, les clients peuvent réduire la complexité opérationnelle et de développement liée à l'émission de licences DRM. Primetime Cloud DRM peut émettre des licences DRM sur tous les périphériques capables d’exécuter une application vidéo compatible avec le SDK du navigateur Primetime, telle que iOS, Android, Ordinateurs de bureau et Xbox360. Ce service DRM est hébergé et géré par Adobe, avec une disponibilité 24h/24 et 7j/7.
-seo-title: Contexte
 title: Contexte
-uuid: 11a5b9ea-ebd2-47e0-b078-af2a3e1f7bf6
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '364'
 ht-degree: 0%
 
 ---
