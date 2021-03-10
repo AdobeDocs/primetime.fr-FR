@@ -1,13 +1,10 @@
 ---
 description: Ces classes décrivent les messages relatifs aux erreurs, aux avertissements et à certaines activités qui posent problème pour la journalisation et le débogage.
-seo-description: Ces classes décrivent les messages relatifs aux erreurs, aux avertissements et à certaines activités qui posent problème pour la journalisation et le débogage.
-seo-title: Classes de notification
 title: Classes de notification
-uuid: 3befc64b-4abd-47df-9c45-215b49029757
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
