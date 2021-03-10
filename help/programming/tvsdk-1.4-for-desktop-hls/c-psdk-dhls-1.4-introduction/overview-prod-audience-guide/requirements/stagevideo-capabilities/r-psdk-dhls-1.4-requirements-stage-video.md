@@ -1,13 +1,10 @@
 ---
 description: Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel du périphérique.
-seo-description: Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel du périphérique.
-seo-title: Configuration minimale requise pour StageVideo
 title: Configuration minimale requise pour StageVideo
-uuid: 8916dbac-33e0-4efd-8105-9ddbc85f0a3f
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
