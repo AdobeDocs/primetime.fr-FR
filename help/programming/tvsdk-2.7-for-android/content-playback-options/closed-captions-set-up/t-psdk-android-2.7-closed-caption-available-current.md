@@ -1,14 +1,11 @@
 ---
 description: Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d'autres sont devenues disponibles.
-seo-description: Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d'autres sont devenues disponibles.
-seo-title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
 title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
-uuid: d582779a-2789-4e2a-85f6-1a0b9b847382
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '198'
+ht-degree: 2%
 
 ---
 
