@@ -1,13 +1,10 @@
 ---
 description: TVSDK prend en charge l’affichage de publicités linéaires VPAID (Video Player-Ad Interface Definition) lors d’une coupure publicitaire. La version 1.0 de VPAID nécessite un Flash, tandis que la version 2.0 fonctionne également avec le navigateur TVSDK et JavaScript.
-seo-description: TVSDK prend en charge l’affichage de publicités linéaires VPAID (Video Player-Ad Interface Definition) lors d’une coupure publicitaire. La version 1.0 de VPAID nécessite un Flash, tandis que la version 2.0 fonctionne également avec le navigateur TVSDK et JavaScript.
-seo-title: Afficher des publicités VPAID linéaires dans une coupure publicitaire
 title: Afficher des publicités VPAID linéaires dans une coupure publicitaire
-uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
