@@ -1,13 +1,10 @@
 ---
 description: Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu début plus tôt car une partie de la mise en mémoire tampon est déjà terminée.
-seo-description: Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu début plus tôt car une partie de la mise en mémoire tampon est déjà terminée.
-seo-title: Instant-on
 title: Instant-on
-uuid: 98a5ef79-51e4-474e-a6e8-ca449c430b5e
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
