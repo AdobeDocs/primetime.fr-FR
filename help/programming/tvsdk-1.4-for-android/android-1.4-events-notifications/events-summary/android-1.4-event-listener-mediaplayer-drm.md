@@ -1,13 +1,10 @@
 ---
 description: TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles.
-seo-description: TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles.
-seo-title: ÉVÉNEMENTS DRM
 title: ÉVÉNEMENTS DRM
-uuid: c4d96e06-2268-4e38-9d05-68ccbe912484
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
