@@ -1,13 +1,10 @@
 ---
 description: Nous utilisons à la fois le packager Bento4 et le packager hors ligne Adobe pour créer du contenu chiffré DASH. Bento4 prend comme entrée du contenu mp4 non chiffré.
-seo-description: Nous utilisons à la fois le packager Bento4 et le packager hors ligne Adobe pour créer du contenu chiffré DASH. Bento4 prend comme entrée du contenu mp4 non chiffré.
-seo-title: Assemblage de votre contenu avec Bento4
 title: Assemblage de votre contenu avec Bento4
-uuid: 88323a4e-d0b5-4a41-acec-7126d3e0c90b
 translation-type: tm+mt
-source-git-commit: 75702ea2a524d7b38bb9ac83cb094c8482b1098f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
