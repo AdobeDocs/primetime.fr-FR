@@ -1,16 +1,12 @@
 ---
 title: Notes de mise à jour de TVSDK 2.4.1 pour Android
-seo-title: Notes de mise à jour de TVSDK 2.4.1 pour Android
 description: Les Notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
-seo-description: Les Notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
-uuid: 929fc577-e851-4e03-9201-13280cc6137a
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: a6dbcc4a-9e14-4452-9004-b39ed13fad6f
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1988'
+source-wordcount: '1963'
 ht-degree: 0%
 
 ---
