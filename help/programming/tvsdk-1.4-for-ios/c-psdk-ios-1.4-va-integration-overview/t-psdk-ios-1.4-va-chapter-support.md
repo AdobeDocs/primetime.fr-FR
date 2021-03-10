@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Mise en oeuvre de la prise en charge des chapitres
 title: Mise en oeuvre de la prise en charge des chapitres
-uuid: 4224cd2e-1e16-4040-972b-92c91506408f
+description: Mise en oeuvre de la prise en charge des chapitres
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
