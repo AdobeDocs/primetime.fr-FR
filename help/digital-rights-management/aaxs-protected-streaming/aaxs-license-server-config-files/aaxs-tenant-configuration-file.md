@@ -1,9 +1,9 @@
 ---
-seo-title: Fichier de configuration du client
 title: Fichier de configuration du client
-uuid: 6e5c82c9-b8f5-4fca-8325-a884b2c779f7
+description: Fichier de configuration du client
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
