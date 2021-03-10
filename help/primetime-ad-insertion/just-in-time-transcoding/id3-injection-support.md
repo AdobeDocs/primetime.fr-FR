@@ -1,13 +1,10 @@
 ---
 description: Le transcodage juste à temps peut injecter des métadonnées minutées ID3 dans les créations publicitaires afin de faciliter le suivi des publicités côté client.
-seo-description: Le transcodage juste à temps peut injecter des métadonnées minutées ID3 au format HLS dans des éléments créatifs pour faciliter le suivi des annonces côté client.
-seo-title: Utilisation du transcodage juste à temps pour insérer des balises de métadonnées temporelles ID3
 title: Utilisation du transcodage juste à temps pour insérer des balises de métadonnées temporelles ID3
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
