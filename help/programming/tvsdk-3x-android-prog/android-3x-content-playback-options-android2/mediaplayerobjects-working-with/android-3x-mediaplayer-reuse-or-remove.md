@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez réinitialiser, réutiliser ou libérer une instance MediaPlayer dont vous n’avez plus besoin.
-seo-description: Vous pouvez réinitialiser, réutiliser ou libérer une instance MediaPlayer dont vous n’avez plus besoin.
-seo-title: Réutilisation ou suppression d’une instance MediaPlayer
 title: Réutilisation ou suppression d’une instance MediaPlayer
-uuid: 74a46689-1708-4d26-9a4e-a4cdb0e55451
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
