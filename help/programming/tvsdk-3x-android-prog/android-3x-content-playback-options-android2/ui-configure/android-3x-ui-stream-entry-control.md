@@ -1,13 +1,10 @@
 ---
 description: Par défaut, lors du démarrage de la lecture, les médias VOD sont débuts à 0 et les débuts de médias en direct au point d’accès client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
-seo-description: Par défaut, lors du démarrage de la lecture, les médias VOD sont débuts à 0 et les débuts de médias en direct au point d’accès client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
-seo-title: Entrer un flux à un moment donné
 title: Entrer un flux à un moment donné
-uuid: b315a967-77ad-4352-8a32-f228704d4b20
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '117'
 ht-degree: 1%
 
 ---
