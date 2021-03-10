@@ -1,9 +1,9 @@
 ---
-seo-title: Délivrance de licences pour la diffusion de clés distantes aux clients iOS (nécessite Adobe Primetime)
 title: Délivrance de licences pour la diffusion de clés distantes aux clients iOS (nécessite Adobe Primetime)
-uuid: 43d88426-209f-4d31-a810-ea8d75f31da9
+description: Délivrance de licences pour la diffusion de clés distantes aux clients iOS (nécessite Adobe Primetime)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
