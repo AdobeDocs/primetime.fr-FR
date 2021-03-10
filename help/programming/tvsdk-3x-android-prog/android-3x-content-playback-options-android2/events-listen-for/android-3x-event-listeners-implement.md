@@ -1,13 +1,10 @@
 ---
 description: Les gestionnaires de événements vous permettent de répondre aux événements TVSDK.
-seo-description: Les gestionnaires de événements vous permettent de répondre aux événements TVSDK.
-seo-title: Mise en oeuvre des écouteurs et des rappels de événement
 title: Mise en oeuvre des écouteurs et des rappels de événement
-uuid: f186b39e-e634-4f64-977d-279147d76c5c
 translation-type: tm+mt
-source-git-commit: 1034a0520590777cc0930d2f732741202bc3bc04
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
