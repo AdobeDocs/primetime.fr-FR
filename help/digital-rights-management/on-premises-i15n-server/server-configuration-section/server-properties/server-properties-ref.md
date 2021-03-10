@@ -1,9 +1,9 @@
 ---
-seo-title: Référence des propriétés du serveur
 title: Référence des propriétés du serveur
-uuid: 24a187fe-9b7d-411f-a358-d10c70a5dd0e
+description: Référence des propriétés du serveur
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -84,7 +84,7 @@ ht-degree: 0%
     <ul id="ul_j1v_kw2_jr"> 
      <li id="li_B60002B33A3042FCBE1F694454966469"><span class="codeph"> adobe.weblogs.loc =</span> [Répertoire dans lequel les fichiers journaux seront créés] </li> 
      <li id="li_2DD4406FBBF047589BAAAE1C9082D8B3"><span class="codeph"> log.Level =</span> [Le niveau le plus bas de messages du journal pouvant apparaître dans les journaux  <span class="codeph"> [DEBUG | INFO]</span> ] </li> 
-     <li id="li_610FAF239A554CE59DAC455174F0CF0A"><span class="codeph"> log.FileName =</span> [Préfixe pour les fichiers journaux. L’extension Date/Heure et ".log" sera ajoutée au nom de fichier] </li> 
+     <li id="li_610FAF239A554CE59DAC455174F0CF0A"><span class="codeph"> log.FileName =</span> [Préfixe pour les fichiers journaux. L'extension Date/Heure et ".log" sera ajoutée au nom de fichier] </li> 
      <li id="li_1F2913B209BE4A0E8207FAAD052D1764"><span class="codeph"> log.RollInterval =</span> [Indique la fréquence d’roulements des journaux.] </li> 
      <li id="li_3F46C15488114BB5B41035F710E7A19F"><span class="codeph"> log.RollSize =</span> [Faire rouler les journaux lorsqu'ils atteignent cette taille (Les journaux s'affichent lorsque l'on atteint  <span class="codeph"> </span> RollIntervalor  <span class="codeph"> </span> RollSizeis, selon ce qui arrive en premier)] </li> 
      <li id="li_DA32E862F7B0413885DA20633B682484"><span class="codeph"> log.ReportLogging.Enabled =</span>[ [true] | false ] Indique si un fichier distinct doit être généré, qui contient les données utilisées par l’Adobe pour générer des rapports d’individualisation.] </li> 
@@ -96,7 +96,7 @@ ht-degree: 0%
    <td></td> 
    <td> 
     <ul id="ul_b3b_g1f_jr"> 
-     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key =</span> [Clé encodée Base64 cryptée utilisée pour les informations de périphérique HMAC avant de l'inclure dans le jeton de l'ordinateur. La clé peut être différente pour les environnements de développement/test/production, mais doit être la même pour tous les serveurs d’un environnement particulier. _ </li> 
+     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key =</span> [Clé encodée Base64 cryptée utilisée pour les informations de périphérique HMAC avant de l'inclure dans le jeton de l'ordinateur. La clé peut être différente pour les environnements de développement/test/production, mais doit être la même pour tous les serveurs d’un environnement particulier. ] </li> 
      <li id="li_B19C77FD6F91496294DBF836A1922EE1"><span class="codeph"> keys.kgs.server =</span> [Emplacement du serveur Key Gen (un hôte/port unique, représentant un pool de serveurs clés) ] </li> 
      <li id="li_5DA3C89770804B148EF6FAF01A5AD958"><span class="codeph"> keys.MinQueueSize =</span> [récupérer un autre lot de clés du KGS lorsqu'il reste autant de clés dans la file d'attente] </li> 
      <li id="li_0C2E5F2FDB824182A6BE418B041D2F28"><span class="codeph"> status.Timeout =</span> [La page d'état effectue un test ping sur le KGS pour déterminer s'il peut atteindre le serveur. Il expirera si une réponse n’est pas reçue dans le délai spécifié.] </li> 
