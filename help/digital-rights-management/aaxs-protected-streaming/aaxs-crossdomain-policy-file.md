@@ -1,13 +1,10 @@
 ---
-seo-title: Fichier de stratégie interdomaines
 title: Fichier de stratégie interdomaines
 description: Fichier de stratégie interdomaines
-seo-description: Fichier de stratégie interdomaines
-uuid: e1a1b700-c5f9-4ad1-a705-75805a18682b
 translation-type: tm+mt
-source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
