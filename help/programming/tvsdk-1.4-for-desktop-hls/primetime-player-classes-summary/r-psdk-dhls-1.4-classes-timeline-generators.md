@@ -1,13 +1,10 @@
 ---
 description: Ces classes permettent de détecter les opportunités de placement de contenu dans une chronologie, telles que les publicités.
-seo-description: Ces classes permettent de détecter les opportunités de placement de contenu dans une chronologie, telles que les publicités.
-seo-title: Classes des générateurs de chronologie
 title: Classes des générateurs de chronologie
-uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
