@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée Adobe.
-seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution intégrée Adobe.
-seo-title: DRM sans fil
 title: DRM sans fil
-uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
