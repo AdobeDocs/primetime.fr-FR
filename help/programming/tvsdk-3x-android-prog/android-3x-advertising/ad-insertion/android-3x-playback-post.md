@@ -1,13 +1,10 @@
 ---
 description: Le comportement de la lecture multimédia est affecté par la recherche, la mise en pause, l’avance rapide ou le retour arrière et la publicité.
-seo-description: Le comportement de la lecture multimédia est affecté par la recherche, la mise en pause, l’avance rapide ou le retour arrière et la publicité.
-seo-title: Comportement de lecture par défaut et personnalisé avec les publicités
 title: Comportement de lecture par défaut et personnalisé avec les publicités
-uuid: f008eea1-f30f-4a7a-ad8b-9cde4bac121e
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
