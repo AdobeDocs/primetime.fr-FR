@@ -1,13 +1,10 @@
 ---
 description: Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure) dans un flux. Un flux peut être une liste de lecture à fenêtre coulissante ou un contenu vidéo à la demande (VOD).
-seo-description: Dans le navigateur TVSDK, vous pouvez rechercher une position spécifique (heure) dans un flux. Un flux peut être une liste de lecture à fenêtre coulissante ou un contenu vidéo à la demande (VOD).
-seo-title: Gérer la recherche lors de l’utilisation de la barre de recherche
 title: Gérer la recherche lors de l’utilisation de la barre de recherche
-uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
