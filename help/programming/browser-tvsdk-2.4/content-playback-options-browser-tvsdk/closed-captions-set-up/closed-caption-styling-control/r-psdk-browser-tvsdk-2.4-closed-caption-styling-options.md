@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez spécifier plusieurs options de style de légende et ces options remplacent les options de style dans les légendes d’origine.
-seo-description: Vous pouvez spécifier plusieurs options de style de légende et ces options remplacent les options de style dans les légendes d’origine.
-seo-title: Options de style de sous-titrage
 title: Options de style de sous-titrage
-uuid: 0e2fd9f3-e569-4b5d-9b78-86f8ee6230ee
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
