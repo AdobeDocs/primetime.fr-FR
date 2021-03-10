@@ -1,13 +1,10 @@
 ---
 description: Votre application doit utiliser les objets TimedMetadata appropriés aux moments appropriés.
-seo-description: Votre application doit utiliser les objets TimedMetadata appropriés aux moments appropriés.
-seo-title: Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués
 title: Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués
-uuid: 0e6d2a42-37a8-477e-b925-66bbc23445c1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
