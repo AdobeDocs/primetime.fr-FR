@@ -1,13 +1,10 @@
 ---
 description: Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur de vidéo d’Adobe (AVE).
-seo-description: Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur de vidéo d’Adobe (AVE).
-seo-title: Suivi des avertissements AVE dans votre lecteur
 title: Suivi des avertissements AVE dans votre lecteur
-uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '165'
 ht-degree: 1%
 
 ---
