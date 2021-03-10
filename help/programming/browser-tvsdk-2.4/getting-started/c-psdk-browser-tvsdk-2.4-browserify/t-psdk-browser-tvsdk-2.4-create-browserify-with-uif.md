@@ -1,13 +1,10 @@
 ---
 description: Utilisez les fichiers de bibliothèque Browserify fournis par le navigateur TVSDK dans votre application pour créer un lecteur compatible Browserify à l’aide de l’interface utilisateur-Framework.
-seo-description: Utilisez les fichiers de bibliothèque Browserify fournis par le navigateur TVSDK dans votre application pour créer un lecteur compatible Browserify à l’aide de l’interface utilisateur-Framework.
-seo-title: Création d’un lecteur compatible avec les navigateurs à l’aide de l’interface utilisateur-Framework
 title: Création d’un lecteur compatible avec les navigateurs à l’aide de l’interface utilisateur-Framework
-uuid: 544fd872-5ca1-417d-8aab-69613caada0e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '125'
 ht-degree: 0%
 
 ---
