@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer des noms de balises personnalisés dans un flux à l’aide de la classe MediaPlayerItemConfig.
-seo-description: Vous pouvez configurer des noms de balises personnalisés dans un flux à l’aide de la classe MediaPlayerItemConfig.
-seo-title: Config des méthodes de classe pour les balises
 title: Config des méthodes de classe pour les balises
-uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
