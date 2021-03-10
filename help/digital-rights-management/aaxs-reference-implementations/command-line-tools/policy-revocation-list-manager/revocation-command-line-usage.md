@@ -1,9 +1,9 @@
 ---
-seo-title: Utilisation de la ligne de commande
 title: Utilisation de la ligne de commande
-uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
+description: Utilisation de la ligne de commande
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
