@@ -1,13 +1,10 @@
 ---
 description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
-seo-description: Les objets MediaPlayerStatus fournissent des informations sur les modifications de l’état du lecteur. Les objets de notification fournissent des informations sur les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur. Vous implémentez des écouteurs de événement pour capturer et répondre aux événements (objets MediaPlayerEvent).
-seo-title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
 title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
-uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
