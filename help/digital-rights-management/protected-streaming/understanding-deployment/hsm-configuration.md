@@ -1,13 +1,10 @@
 ---
 description: Si vous sélectionnez un HSM pour stocker les informations d’identification de votre serveur, vous devez charger les clés privées et les certificats sur le HSM et créer un fichier de configuration pkcs11.cfg.
-seo-description: Si vous sélectionnez un HSM pour stocker les informations d’identification de votre serveur, vous devez charger les clés privées et les certificats sur le HSM et créer un fichier de configuration pkcs11.cfg.
-seo-title: Configuration HSM
 title: Configuration HSM
-uuid: 3610840b-082e-4a73-8aa5-5065f9232e0b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
