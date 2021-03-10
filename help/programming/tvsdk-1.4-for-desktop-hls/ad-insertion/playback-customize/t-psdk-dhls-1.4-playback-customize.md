@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez personnaliser ou remplacer les comportements publicitaires.
-seo-description: Vous pouvez personnaliser ou remplacer les comportements publicitaires.
-seo-title: Configuration de la lecture personnalisée
 title: Configuration de la lecture personnalisée
-uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
-source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
