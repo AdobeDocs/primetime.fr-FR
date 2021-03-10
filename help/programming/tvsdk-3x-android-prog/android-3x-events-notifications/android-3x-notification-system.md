@@ -1,13 +1,10 @@
 ---
 description: Les événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
-seo-description: Les événements et notifications vous aident à gérer les aspects asynchrones de l’application vidéo.
-seo-title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
 title: Notifications et événements concernant l’état, l’activité, les erreurs et la consignation du lecteur
-uuid: c4a108e7-72aa-4c96-9538-b1385343d6af
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
