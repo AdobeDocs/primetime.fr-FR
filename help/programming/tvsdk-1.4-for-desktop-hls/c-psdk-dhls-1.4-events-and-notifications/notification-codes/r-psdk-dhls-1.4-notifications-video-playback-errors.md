@@ -1,13 +1,10 @@
 ---
 description: L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vidéo dans l’objet de métadonnées NATIVE_ERROR.
-seo-description: L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vidéo dans l’objet de métadonnées NATIVE_ERROR.
-seo-title: Valeurs de lecture vidéo NATIVE_ERROR
 title: Valeurs de lecture vidéo NATIVE_ERROR
-uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1339'
 ht-degree: 6%
 
 ---
@@ -37,7 +34,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Opération réussie. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> Opération asynchrone. La demande d'opération a été effectuée. Les informations de réussite/d’échec seront disponibles ultérieurement. </td> 
   </tr> 
@@ -327,7 +324,7 @@ L’interface Video Encoder de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> La lecture HLS n'a pas été activée dans le Flash Player. Voir <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Le décodeur a reçu un échantillon incorrect qui ne peut pas être décodé. Il ne s’agit généralement pas d’une erreur fatale, mais indique qu’il peut y avoir des problèmes dans l’audio/la vidéo. Trop d'instances de cette erreur indiquent un mauvais codage ou un fichier incorrect. </td> 
   </tr> 
