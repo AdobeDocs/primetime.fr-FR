@@ -1,13 +1,10 @@
 ---
 description: Il arrive parfois que le contenu ne puisse pas être lu. Un certain nombre de situations peuvent en être à l’origine, notamment des erreurs dans la pile réseau du navigateur, la couche de transport, le système d’exploitation, l’exécution du Flash Player ou le système DRM Primetime.
-seo-description: Il arrive parfois que le contenu ne puisse pas être lu. Un certain nombre de situations peuvent en être à l’origine, notamment des erreurs dans la pile réseau du navigateur, la couche de transport, le système d’exploitation, l’exécution du Flash Player ou le système DRM Primetime.
-seo-title: Présentation des erreurs de tri
 title: Présentation des erreurs de tri
-uuid: 44b4ab0e-5f08-44b0-bcb5-a869f6add69b
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
