@@ -1,9 +1,9 @@
 ---
-seo-title: Consommer des listes CRL publiées par Adobe
 title: Consommer des listes CRL publiées par Adobe
-uuid: 43f65edb-0c96-46ab-b787-1b5f0b4b093e
+description: Consommer des listes CRL publiées par Adobe
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
