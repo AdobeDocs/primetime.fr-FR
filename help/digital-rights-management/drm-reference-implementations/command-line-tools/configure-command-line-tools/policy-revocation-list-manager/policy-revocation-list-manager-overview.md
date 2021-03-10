@@ -1,9 +1,9 @@
 ---
-seo-title: Gestionnaire de Listes de révocation DRM
 title: Gestionnaire de Listes de révocation DRM
-uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
+description: Gestionnaire de Listes de révocation DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
