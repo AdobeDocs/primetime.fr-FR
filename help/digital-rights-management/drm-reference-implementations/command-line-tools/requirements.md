@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Exigences relatives aux outils de ligne de commande
 title: Exigences relatives aux outils de ligne de commande
-uuid: 62f6e7ef-f593-4184-b217-2d086fead733
+description: Exigences relatives aux outils de ligne de commande
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
