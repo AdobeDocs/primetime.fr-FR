@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer un contrôle d'interface utilisateur pour le volume sonore.
-seo-description: Vous pouvez configurer un contrôle d'interface utilisateur pour le volume sonore.
-seo-title: Contrôler le volume
 title: Contrôler le volume
-uuid: 63e96424-54d0-4c16-bd94-2366722f752a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
