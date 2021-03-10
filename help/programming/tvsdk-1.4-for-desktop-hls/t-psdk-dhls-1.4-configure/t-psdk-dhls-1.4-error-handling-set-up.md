@@ -1,14 +1,11 @@
 ---
 description: Configurez un emplacement unique pour gérer les erreurs.
-seo-description: Configurez un emplacement unique pour gérer les erreurs.
-seo-title: Configuration de la gestion des erreurs
 title: Configuration de la gestion des erreurs
-uuid: ff56180d-aa74-4b7c-a24c-e536d874c2e6
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 1%
+source-wordcount: '99'
+ht-degree: 2%
 
 ---
 
