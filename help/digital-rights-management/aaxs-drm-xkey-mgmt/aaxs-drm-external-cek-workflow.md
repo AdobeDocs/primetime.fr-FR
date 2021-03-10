@@ -1,13 +1,10 @@
 ---
-seo-title: Processus CEK externe DRM AAXS
 title: Processus CEK externe DRM AAXS
 description: Ce processus diffère de la plupart des systèmes DRM existants, car il ne nécessite l'utilisation d'aucun référentiel central ou système de gestion de clés de contenu (CKMS).
-seo-description: Ce processus diffère de la plupart des systèmes DRM existants, car il ne nécessite l'utilisation d'aucun référentiel central ou système de gestion de clés de contenu (CKMS).
-uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
-source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
