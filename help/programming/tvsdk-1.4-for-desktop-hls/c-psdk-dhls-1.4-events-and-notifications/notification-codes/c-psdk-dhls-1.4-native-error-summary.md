@@ -1,9 +1,9 @@
 ---
-seo-title: Détails de la notification NATIVE_ERROR
 title: Détails de la notification NATIVE_ERROR
-uuid: 59f6077f-8162-4755-afd8-ce95fd5d57b2
+description: Détails de la notification NATIVE_ERROR
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
