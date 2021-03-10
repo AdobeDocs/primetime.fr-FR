@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
-seo-description: Vous pouvez enregistrer la position de lecture actuelle dans une vidéo et reprendre la lecture à la même position dans une session ultérieure.
-seo-title: Enregistrer la position de la vidéo et reprendre ultérieurement
 title: Enregistrer la position de la vidéo et reprendre ultérieurement
-uuid: cff1715e-c7a9-4eda-ad71-31892c3c1e78
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
