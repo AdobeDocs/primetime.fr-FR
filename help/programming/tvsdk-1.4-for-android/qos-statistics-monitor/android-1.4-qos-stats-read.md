@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
-seo-description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
-seo-title: Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS
 title: Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS
-uuid: 19228a50-3721-4dc1-89b6-97458518e272
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
