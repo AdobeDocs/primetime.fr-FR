@@ -1,9 +1,9 @@
 ---
-seo-title: Mise en oeuvre de l'enregistrement des domaines basé sur l'identité
 title: Mise en oeuvre de l'enregistrement des domaines basé sur l'identité
-uuid: 4a71b2e0-d1a2-4d63-9cbd-980a292774ab
+description: Mise en oeuvre de l'enregistrement des domaines basé sur l'identité
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
