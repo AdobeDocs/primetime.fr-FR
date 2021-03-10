@@ -1,13 +1,10 @@
 ---
 description: Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux média, effectuez l’authentification avant de commencer la lecture.
-seo-description: Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux média, effectuez l’authentification avant de commencer la lecture.
-seo-title: Authentification DRM avant lecture
 title: Authentification DRM avant lecture
-uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 1%
 
 ---
