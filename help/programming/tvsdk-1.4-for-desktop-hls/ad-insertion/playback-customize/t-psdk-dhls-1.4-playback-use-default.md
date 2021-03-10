@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
-seo-description: Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
-seo-title: Utiliser le comportement de lecture par défaut
 title: Utiliser le comportement de lecture par défaut
-uuid: 7139384c-167a-4cab-816a-c02fb723a5cb
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
