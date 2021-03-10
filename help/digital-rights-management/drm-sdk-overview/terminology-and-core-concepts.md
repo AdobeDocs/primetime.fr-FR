@@ -1,9 +1,9 @@
 ---
-seo-title: Terminologie et concepts fondamentaux
 title: Terminologie et concepts fondamentaux
-uuid: dc269873-7b63-4c18-bada-5338f4da0edd
+description: Terminologie et concepts fondamentaux
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La *clé de chiffrement du contenu* (CEK) est une clé cryptographique utilisée
 
 **Certificat numérique**
 
-*Les certificats*  numériques (également appelés  *certificats*) lient une entité, telle qu’un individu, une organisation ou un système, à une paire de clés publique et privée spécifique. Les certificats numériques peuvent être considérés comme des informations d’identification électroniques permettant de vérifier l’identité d’une personne, d’un système ou d’une organisation.
+*Les certificats*  numériques (également appelés  *certificats*) lient une entité, telle qu’un individu, une organisation ou un système, à une paire de clés publique et privée spécifique. Les certificats numériques peuvent être considérés comme des informations d’identification électroniques qui vérifient l’identité d’une personne, d’un système ou d’une organisation.
 
 **Signature numérique**
 
