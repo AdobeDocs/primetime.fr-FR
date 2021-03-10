@@ -1,13 +1,10 @@
 ---
 description: Les événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
-seo-description: Les événements du navigateur TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
-seo-title: Écoute des événements du lecteur Primetime
 title: Écoute des événements du lecteur Primetime
-uuid: 7b7c28ac-22ae-46a3-bbeb-bef1b04baeb3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
