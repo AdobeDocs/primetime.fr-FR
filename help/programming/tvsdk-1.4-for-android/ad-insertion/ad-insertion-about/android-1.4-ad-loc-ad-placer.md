@@ -1,13 +1,10 @@
 ---
 description: Il existe plusieurs méthodes pour déterminer l'insertion et l'emplacement des publicités.
-seo-description: Il existe plusieurs méthodes pour déterminer l'insertion et l'emplacement des publicités.
-seo-title: Insertion et placement de publicités
 title: Insertion et placement de publicités
-uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
