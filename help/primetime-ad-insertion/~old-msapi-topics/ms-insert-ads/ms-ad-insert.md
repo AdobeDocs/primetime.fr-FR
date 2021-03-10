@@ -1,13 +1,10 @@
 ---
 description: Toutes les requêtes d’insertion publicitaire utilisent la même structure d’URL et les mêmes paramètres de requête de base. Des paramètres de requête supplémentaires permettent au serveur de manifeste de fonctionner avec divers clients et situations.
-seo-description: Toutes les requêtes d’insertion publicitaire utilisent la même structure d’URL et les mêmes paramètres de requête de base. Des paramètres de requête supplémentaires permettent au serveur de manifeste de fonctionner avec divers clients et situations.
-seo-title: Demandes d’insertion de publicités
 title: Demandes d’insertion de publicités
-uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
