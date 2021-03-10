@@ -1,13 +1,10 @@
 ---
 description: L’état du lecteur de médias détermine quelles actions sont légales.
-seo-description: L’état du lecteur de médias détermine quelles actions sont légales.
-seo-title: Cycle de vie et états de l’objet MediaPlayer
 title: Cycle de vie et états de l’objet MediaPlayer
-uuid: a0eb27c8-180b-4c56-926f-59fa3bcef032
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -67,7 +64,7 @@ Le tableau suivant fournit des détails sur le cycle de vie et les états du lec
    <td colname="col2"> <p>Si l’application quitte la lecture, arrête le périphérique ou change d’application pendant la lecture ou la mise en pause, le lecteur multimédia est suspendu et les ressources libérées. </p> <p>L'appel à <span class="codeph"> MediaPlayer.restore() </span> renvoie le lecteur à l'état dans lequel il se trouvait avant sa SUSPENSION. L’exception est que si le lecteur RECHERCHE lorsqu’il est suspendu est appelé, le lecteur est EN PAUSE, puis SUSPENDU. </p> <p>Important :  <p>Rappelez-vous des informations suivantes : 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
        <li id="li_08459A3AB03C45588D73FA162C27A56C"><span class="codeph"> MediaPlayer </span> appelle automatiquement <span class="codeph"> suspendre </span> uniquement lorsque l'objet de surface utilisé par <span class="codeph"> MediaPlayerView </span> est détruit. </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1"><span class="codeph"> MediaPlayer </span> n'appelle automatiquement <span class="codeph"> restore() </span> que lorsqu'un nouvel objet de surface utilisé par <span class="codeph"> MediaPlayerView </span> est créé. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1"><span class="codeph"> MediaPlayer </span> appelle automatiquement <span class="codeph"> restore() </span> uniquement lorsqu'un nouvel objet de surface utilisé par <span class="codeph"> MediaPlayerView </span> est créé. </li> 
       </ul> </p> </p> <p>Si vous souhaitez toujours que la lecture soit interrompue lorsque MediaPlayer est restauré, faites appel à l’application <span class="codeph"> MediaPlayer.pause() </span> dans la méthode <span class="codeph"> onPause() </span> de l’Activité Android. </p> </td> 
   </tr> 
   <tr> 
