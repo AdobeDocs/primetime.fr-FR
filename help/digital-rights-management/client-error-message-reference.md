@@ -1,12 +1,10 @@
 ---
 description: 'Les erreurs du client DRM sont un sous-ensemble des erreurs client TVSDK. '
-seo-description: 'Les erreurs du client DRM sont un sous-ensemble des erreurs client TVSDK. '
-seo-title: Référence du message d’erreur du client DRM
 title: Référence du message d’erreur du client DRM
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '5202'
+source-wordcount: '5185'
 ht-degree: 1%
 
 ---
@@ -80,7 +78,7 @@ Les erreurs du client DRM sont un sous-ensemble des erreurs côté client TVSDK,
 | 3360 | DomainRegistrationRequired | Le contenu nécessite l’enregistrement du domaine. |
 | 3361 | NotRegisteredToDomain | L&#39;ordinateur n&#39;est pas enregistré dans le domaine pour les métadonnées spécifiées. |
 | 3362 | OperationTimeoutError | L’opération asynchrone a pris plus de temps que la valeur maxOperationTimeout configurée.<br>**Remarque :** ce code d’erreur n’est renvoyé que par iOS DRMNative Framework. |
-| 3363 | UnsupportedIOSPlaylistError | La liste de lecture M3U8 contient du contenu non pris en charge ou manque un objet de métadonnées DRM #EXT-X-FAXS-CM requis.<br>**Remarque :** ce code d’erreur n’est renvoyé que par iOS DRMNative Framework. |
+| 3363 | UnsupportedIOSPlaylistError | La liste de lecture M3U8 contient du contenu non pris en charge ou il manque un objet de métadonnées DRM #EXT-X-FAXS-CM requis.<br>**Remarque :** ce code d’erreur n’est renvoyé que par iOS DRMNative Framework. |
 | 3364 | NoDeviceId | La structure a demandé l’ID du périphérique, mais la valeur renvoyée était vide.<br>La structure a demandé l’ID du périphérique, mais la valeur renvoyée était vide.<br>Dans le paramètre du navigateur Chrome, l’utilisateur ne doit pas cocher la case  **Autoriser les identificateurs pour le** contenu protégé. |
 | 3365 | IncognitoModeNotAllowed | Cette combinaison navigateur/plate-forme n’autorise pas la lecture protégée par DRM en mode Incognito.<br>Le logiciel du distributeur doit conseiller à l&#39;utilisateur de quitter le mode Incognito ou d&#39;utiliser un autre navigateur. Pour plus d’informations, voir [cause et résolution de l’erreur DRM 3365](https://forums.adobe.com/thread/1266622). |
 | 3366 | Paramètre incorrect | Le runtime hôte a appelé la bibliothèque DRM Primetime avec un paramètre incorrect. |
