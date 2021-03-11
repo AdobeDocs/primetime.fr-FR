@@ -1,13 +1,10 @@
 ---
 description: Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier Media Presentation Description (MPD), et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
-seo-description: Les flux de médias peuvent contenir des métadonnées supplémentaires sous la forme de balises dans le fichier Media Presentation Description (MPD), et ce fichier indique l’emplacement de la publicité. Vous pouvez spécifier des noms de balises personnalisés et être averti lorsque certaines balises apparaissent dans le fichier manifeste.
-seo-title: Balises personnalisées
 title: Balises personnalisées
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
