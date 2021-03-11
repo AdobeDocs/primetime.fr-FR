@@ -1,13 +1,10 @@
 ---
 description: Pour empêcher les utilisateurs de sauvegarder et de restaurer des fichiers pour contourner le désenregistrement de domaine, vous devez mettre en oeuvre certaines méthodes de gestion de domaine.
-seo-description: Pour empêcher les utilisateurs de sauvegarder et de restaurer des fichiers pour contourner le désenregistrement de domaine, vous devez mettre en oeuvre certaines méthodes de gestion de domaine.
-seo-title: Gestion des domaines
 title: Gestion des domaines
-uuid: 30b73e38-d6ed-43c6-89ba-ae8616383779
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
