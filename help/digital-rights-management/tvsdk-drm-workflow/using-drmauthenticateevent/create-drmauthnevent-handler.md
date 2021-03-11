@@ -1,13 +1,10 @@
 ---
 description: L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire du contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
-seo-description: L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire du contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
-seo-title: Création d’un gestionnaire DRMAuthenticateEvent
 title: Création d’un gestionnaire DRMAuthenticateEvent
-uuid: 58330691-d0b5-46bd-9b1d-8dc597580d31
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
