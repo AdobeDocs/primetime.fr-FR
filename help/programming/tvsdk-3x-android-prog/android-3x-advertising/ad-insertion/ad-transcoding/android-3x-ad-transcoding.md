@@ -1,19 +1,16 @@
 ---
 description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
-seo-description: Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
-seo-title: Réparer des annonces incompatibles à l’aide du service de reconditionnement d’Adobe Creative Repackaging Service (CRS)
 title: Réparer des annonces incompatibles à l’aide du service de reconditionnement d’Adobe Creative Repackaging Service (CRS)
-uuid: ef542d13-6d52-4429-8a1e-0af2df236f12
 translation-type: tm+mt
-source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
 
 
-# Réparer les annonces incompatibles à l’aide du service de reconditionnement créatif d’Adobe (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Réparer les annonces incompatibles à l’aide du service CRS (Adobe Creative Repackaging Service) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
 Certaines publicités (ou créatives) tierces ne peuvent pas être assemblées dans le flux de contenu HLS (HTTP Live Streaming), car leur format vidéo est incompatible avec HLS. L’insertion d’annonces Primetime et TVSDK peuvent éventuellement tenter de recompresser des publicités incompatibles en vidéos compatibles M3U8.
 
