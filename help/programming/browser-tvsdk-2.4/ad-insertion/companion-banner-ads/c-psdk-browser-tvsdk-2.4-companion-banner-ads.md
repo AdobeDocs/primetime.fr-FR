@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l'affichage des bannières d'accompagnement fournies avec une publicité linéaire.
-seo-description: Le navigateur TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l'affichage des bannières d'accompagnement fournies avec une publicité linéaire.
-seo-title: Bannières publicitaires d’accompagnement
 title: Bannières publicitaires d’accompagnement
-uuid: 5655c348-268d-42d6-92c2-f5de39ff666f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
