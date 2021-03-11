@@ -1,9 +1,9 @@
 ---
-seo-title: Déploiement des fichiers WAR
 title: Déploiement des fichiers WAR
-uuid: 435a6a6e-c981-46fb-bca9-7f5f34eecd6a
+description: Déploiement des fichiers WAR
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
