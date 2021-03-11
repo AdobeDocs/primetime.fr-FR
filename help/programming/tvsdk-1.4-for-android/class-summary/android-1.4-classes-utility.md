@@ -1,13 +1,10 @@
 ---
 description: Ces classes permettent de traiter différents types d’informations.
-seo-description: Ces classes permettent de traiter différents types d’informations.
-seo-title: Classes d'utilitaires
 title: Classes d'utilitaires
-uuid: 060d5587-c1ef-4b58-9cad-49826201a79f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
