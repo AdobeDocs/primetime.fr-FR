@@ -1,13 +1,10 @@
 ---
 description: Pour chaque nouveau contenu vidéo, initialisez une instance MediaResource avec des informations sur le contenu vidéo et chargez la ressource multimédia. La classe MediaResource représente le contenu à charger par l'instance MediaPlayer.
-seo-description: Pour chaque nouveau contenu vidéo, initialisez une instance MediaResource avec des informations sur le contenu vidéo et chargez la ressource multimédia. La classe MediaResource représente le contenu à charger par l'instance MediaPlayer.
-seo-title: Création d’une ressource multimédia
 title: Création d’une ressource multimédia
-uuid: d9fe982a-bedf-445c-b5be-f7918693782a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
