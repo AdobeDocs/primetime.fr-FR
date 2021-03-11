@@ -1,13 +1,10 @@
 ---
 description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. La fonction de résolution du chargement des publicités différé peut réduire ce délai de démarrage. Les publicités peuvent désormais être résolues à un intervalle spécifié avant la position de la coupure publicitaire. Pour y parvenir, il faut utiliser une approche à deux joueurs.
-seo-description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. La fonction de résolution du chargement des publicités différé peut réduire ce délai de démarrage. Les publicités peuvent désormais être résolues à un intervalle spécifié avant la position de la coupure publicitaire. Pour y parvenir, il faut utiliser une approche à deux joueurs.
-seo-title: Résolution des publicités juste à temps
 title: Résolution des publicités juste à temps
-uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
