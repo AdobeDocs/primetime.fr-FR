@@ -1,9 +1,9 @@
 ---
-seo-title: Incorporation de licences
 title: Incorporation de licences
-uuid: e3d55376-07de-479c-9a53-04bc8071ced4
+description: Incorporation de licences
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
