@@ -1,13 +1,10 @@
 ---
 description: Le terme "instantané" désigne le préchargement d’un ou de plusieurs canaux afin qu’un utilisateur qui sélectionne un canal ou change de canal voit le contenu s’afficher immédiatement. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur début regarder.
-seo-description: Le terme "instantané" désigne le préchargement d’un ou de plusieurs canaux afin qu’un utilisateur qui sélectionne un canal ou change de canal voit le contenu s’afficher immédiatement. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur début regarder.
-seo-title: Instant le
 title: Instant le
-uuid: 4cb4d221-170f-46e8-af26-32f259377617
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
