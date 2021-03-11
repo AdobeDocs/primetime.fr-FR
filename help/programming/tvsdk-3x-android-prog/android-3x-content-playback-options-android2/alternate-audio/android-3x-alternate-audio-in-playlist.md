@@ -1,13 +1,10 @@
 ---
 description: La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez souhaiter ajouter différentes langues à votre contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son périphérique pendant la lecture du contenu.
-seo-description: La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez souhaiter ajouter différentes langues à votre contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son périphérique pendant la lecture du contenu.
-seo-title: Autres pistes audio de la liste de lecture
 title: Autres pistes audio de la liste de lecture
-uuid: e134cc46-5cd3-4c3c-a6ef-5ae54a2108ce
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
