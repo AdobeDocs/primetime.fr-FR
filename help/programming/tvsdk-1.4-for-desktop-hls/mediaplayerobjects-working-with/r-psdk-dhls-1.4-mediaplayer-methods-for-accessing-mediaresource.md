@@ -1,13 +1,10 @@
 ---
 description: Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des informations sur le flux de contenu représenté par une ressource MediaResource chargée.
-seo-description: Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des informations sur le flux de contenu représenté par une ressource MediaResource chargée.
-seo-title: Méthodes MediaPlayer pour l’accès aux informations MediaResource
 title: Méthodes MediaPlayer pour l’accès aux informations MediaResource
-uuid: c2d18f8e-4107-42bc-a975-9b881aadd27b
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
