@@ -1,13 +1,10 @@
 ---
 description: Les principaux composants d'Adobe Access sont un SDK Java et les environnements d'exécution client Flash Player et Adobe AIR.
-seo-description: Les principaux composants d'Adobe Access sont un SDK Java et les environnements d'exécution client Flash Player et Adobe AIR.
-seo-title: SDK Java, Flash Player et client Adobe AIR
 title: SDK Java, Flash Player et client Adobe AIR
-uuid: 6b6c5aa2-56ee-4476-a05b-dcbbe3b9001e
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Les principaux composants d&#39;Adobe Access sont un SDK Java et les environneme
 
 Pour plus d&#39;informations sur la configuration du SDK, voir Configuration du SDK dans *Utilisation du SDK d&#39;accès à l&#39;Adobe pour la protection du contenu.*
 
-Le SDK Adobe Access vous permet de développer une solution de gestion des droits numériques qui s’intègre à l’infrastructure métier existante de votre entreprise, telle que les systèmes de gestion de contenu, de facturation et de contrôle d&#39;accès d’utilisateur. Flash Player et Adobe AIR vous permettent de créer et de déployer facilement des applications grâce auxquelles les clients peuvent accéder et vue de grandes bibliothèques de contenu numérique.
+Le SDK Adobe Access vous permet de développer une solution de gestion des droits numériques qui s’intègre à l’infrastructure métier existante de votre entreprise, telle que les systèmes de gestion de contenu, de facturation et de contrôle d&#39;accès utilisateur. Flash Player et Adobe AIR vous permettent de créer et de déployer facilement des applications grâce auxquelles les clients peuvent accéder et vue de grandes bibliothèques de contenu numérique.
 
 ## SDK d&#39;accès aux Adobes {#section_6AA3DC7BAE354472AE179BBC9AF6BD27}
 
@@ -67,7 +64,7 @@ Le SDK comprend une implémentation de référence, un simple déploiement d’a
 
 ## Adobe Access Server pour la diffusion en continu protégée {#adobe-access-server-for-protected-streaming}
 
-Pour les cas d’utilisation de la diffusion en flux continu où le contenu est protégé par l’accès à l’Adobe, par exemple pour le HTTP Dynamic Streaming d’Adobe, le logiciel inclut également Adobe Access Server pour la diffusion en flux continu protégée. Cette solution peut être facilement déployée sur un conteneur de servlet tel que Tomcat et peut atteindre un niveau élevé d&#39;évolutivité et de performances pour répondre aux besoins les plus importants en matière de distribution de contenu.
+Pour les cas d’utilisation de la diffusion en flux continu où le contenu est protégé par l’accès à l’Adobe, par exemple pour le HTTP Dynamic Streaming d’Adobe, le logiciel inclut également Adobe Access Server pour la diffusion en flux continu protégée. Cette solution peut être facilement déployée sur un conteneur de servlet tel que Tomcat et peut atteindre un haut niveau d&#39;évolutivité et de performances pour répondre aux besoins les plus importants en matière de distribution de contenu.
 
 ## Flash Player d&#39;Adobe {#adobe-flash-player}
 
