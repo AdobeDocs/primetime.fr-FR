@@ -1,13 +1,10 @@
 ---
 description: TVSDK envoie les mesures de facturation à l’Adobe dans un format XML.
-seo-description: TVSDK envoie les mesures de facturation à l’Adobe dans un format XML.
-seo-title: Transmettre les mesures de facturation
 title: Transmettre les mesures de facturation
-uuid: f4a7f50e-f457-434e-bf26-1e06cb15a038
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
