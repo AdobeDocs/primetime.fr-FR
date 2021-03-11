@@ -1,13 +1,10 @@
 ---
 description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire personnalisée et des écouteurs appropriés.
-seo-description: Pour ajouter la prise en charge de VPAID 2.0, ajoutez une vue publicitaire personnalisée et des écouteurs appropriés.
-seo-title: Mise en oeuvre de l’intégration VPAID 2.0
 title: Mise en oeuvre de l’intégration VPAID 2.0
-uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
-source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '169'
 ht-degree: 2%
 
 ---
