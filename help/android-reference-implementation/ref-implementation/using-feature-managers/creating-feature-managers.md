@@ -1,13 +1,10 @@
 ---
 description: Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées via MediaPlayer.
-seo-description: Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées via MediaPlayer.
-seo-title: Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au lecteur Media
 title: Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au lecteur Media
-uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
