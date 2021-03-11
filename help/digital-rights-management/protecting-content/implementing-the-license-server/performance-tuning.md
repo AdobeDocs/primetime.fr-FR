@@ -1,9 +1,9 @@
 ---
-seo-title: Réglage des performances
 title: Réglage des performances
-uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
+description: Réglage des performances
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Dans certaines conditions, les environnements Linux peuvent interrompre leurs op
 
 * Démarrage du serveur de licence DRM Adobe Primetime
 * Génération de stratégie à l&#39;aide de l&#39;utilitaire [!DNL AdobePolicyManager]
-* Mise en package de contenu protégé par DRM avec Adobe Media Server ou Primetime OfflinePackager
+* Mise en package de contenu protégé par DRM avec Adobes Medium Server ou Primetime OfflinePackager
 
 Les retards au cours de ces opérations sont souvent le résultat d&#39;un pool à faible entropie sur votre serveur Linux.
 
