@@ -1,9 +1,9 @@
 ---
-seo-title: Gestion des demandes de retour de licence
 title: Gestion des demandes de retour de licence
-uuid: d184faea-88cb-44f3-a253-e5314d577f17
+description: Gestion des demandes de retour de licence
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
