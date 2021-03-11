@@ -1,13 +1,10 @@
 ---
 description: TVSDK distribue des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
-seo-description: TVSDK distribue des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
-seo-title: Ordre des événements de lecture
 title: Ordre des événements de lecture
-uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
