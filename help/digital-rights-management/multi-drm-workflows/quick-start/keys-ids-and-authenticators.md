@@ -1,13 +1,10 @@
 ---
 description: Pour mettre en oeuvre DRM, vous avez besoin de certificats et de clés particuliers, notamment une clé de chiffrement de contenu ou un CEK pour chiffrer votre contenu, un authentificateur de client pour la protection des communications avec les serveurs ExpressPlay et des CEKSID pour identifier vos clés de chiffrement de contenu stockées dans un système de gestion des clés.
-seo-description: Pour mettre en oeuvre DRM, vous avez besoin de certificats et de clés particuliers, notamment une clé de chiffrement de contenu ou un CEK pour chiffrer votre contenu, un authentificateur de client pour la protection des communications avec les serveurs ExpressPlay et des CEKSID pour identifier vos clés de chiffrement de contenu stockées dans un système de gestion des clés.
-seo-title: Raccourcis clavier, identifiants et authentificateurs
 title: Raccourcis clavier, identifiants et authentificateurs
-uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -70,7 +67,7 @@ L’ID d’Enregistrement de clé de chiffrement de contenu (CEKSID) identifie d
 
 **Qu&#39;est-ce que le CEKSID ?** - Le CEKSID est l&#39;identifiant unique d&#39;une clé de chiffrement de contenu (CEK). Le CEK est nécessaire pour déverrouiller le contenu protégé ; le CEKSID est nécessaire pour accéder au CEK à partir de son emplacement de stockage. Lorsque vous testez votre configuration, vous pouvez fournir un CEKSID et un CEK aléatoires au moment de l’assemblage, à condition d’utiliser les mêmes informations pour les contrôles de licence et de lecture.
 
-**D&#39;où vient-elle ?** - Vous (le fournisseur de contenu) pouvez créer cet identifiant vous-même ou vous pouvez utiliser un service tel que  [ExpressPlay&#39;s Key ](https://www.expressplay.com/developer/key-storage/) Storageafin de générer des CEKSID pour chacun de vos CEK (et de les stocker tous les deux). De plus, vous pouvez utiliser des CEKSID générés de manière aléatoire ou utiliser un schéma qui correspond à votre modèle d’entreprise. Par exemple, vous pouvez utiliser des SICEK qui sont des chaînes significatives plutôt que des chaînes hexadécimales aléatoires (le nom d’ID peut être composé de sujets, de dates, d’heures, etc.).
+**D&#39;où vient-elle ?** - Vous (le fournisseur de contenu) pouvez créer cet identifiant vous-même, ou vous pouvez utiliser un service tel que  [ExpressPlay&#39;s Key ](https://www.expressplay.com/developer/key-storage/) Storageafin de générer des CEKSID pour chacun de vos CEK (et de les stocker tous les deux). De plus, vous pouvez utiliser des CEKSID générés de manière aléatoire ou utiliser un schéma qui correspond à votre modèle d’entreprise. Par exemple, vous pouvez utiliser des SICEK qui sont des chaînes significatives plutôt que des chaînes hexadécimales aléatoires (le nom d’ID peut être composé de sujets, de dates, d’heures, etc.).
 
 **Comment nomme-t-on le CEKSID ?** - Il est parfois appelé ID *de* contenu.
 
