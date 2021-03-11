@@ -1,13 +1,10 @@
 ---
-description: Le fichier audio à liaison tardive utilise MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-description: Le fichier audio à liaison tardive utilise MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-seo-title: Accéder à d'autres pistes audio
+description: Les fichiers audio à liaison tardive utilisent MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
 title: Accéder à d'autres pistes audio
-uuid: 136b4f1b-e56f-4a8a-a961-05193434558c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Accéder à d&#39;autres pistes audio{#access-alternate-audio-tracks}
 
-Le fichier audio à liaison tardive utilise MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
+Les fichiers audio à liaison tardive utilisent MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
 
 1. Attendez que `MediaPlayer` soit au moins dans l’état PRÉPARÉ.
 1. Prêtez attention aux événements suivants :
