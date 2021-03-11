@@ -1,13 +1,10 @@
 ---
 description: TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une playlist de fenêtre coulissante, à la fois dans la vidéo à la demande (VOD) et les flux en direct.
-seo-description: TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une playlist de fenêtre coulissante, à la fois dans la vidéo à la demande (VOD) et les flux en direct.
-seo-title: Affichage d’une barre de défilement de recherche avec la position de lecture actuelle
 title: Affichage d’une barre de défilement de recherche avec la position de lecture actuelle
-uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
