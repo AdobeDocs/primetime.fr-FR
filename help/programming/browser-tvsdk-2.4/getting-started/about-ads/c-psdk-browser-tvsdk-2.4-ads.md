@@ -1,13 +1,10 @@
 ---
 description: Lors de la lecture du contenu, le navigateur TVSDK peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource.
-seo-description: Lors de la lecture du contenu, le navigateur TVSDK peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource.
-seo-title: Publicités
 title: Publicités
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
