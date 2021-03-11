@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser l’API du lecteur Primetime pour personnaliser le comportement du lecteur.
-seo-description: Vous pouvez utiliser l’API du lecteur Primetime pour personnaliser le comportement du lecteur.
-seo-title: Classes Mediacore
 title: Classes Mediacore
-uuid: 2d4e41e6-e689-4f79-9021-1ab8ce0fe40d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
