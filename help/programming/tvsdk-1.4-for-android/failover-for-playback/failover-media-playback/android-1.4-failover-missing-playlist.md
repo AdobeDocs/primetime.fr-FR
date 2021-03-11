@@ -1,13 +1,10 @@
 ---
 description: Lorsqu’une sélection complète est absente, par exemple, lorsque le fichier M3U8 spécifié dans un fichier manifeste de niveau supérieur n’est pas téléchargé, TVSDK tente de récupérer. S’il ne peut pas récupérer, votre application détermine l’étape suivante.
-seo-description: Lorsqu’une sélection complète est absente, par exemple, lorsque le fichier M3U8 spécifié dans un fichier manifeste de niveau supérieur n’est pas téléchargé, TVSDK tente de récupérer. S’il ne peut pas récupérer, votre application détermine l’étape suivante.
-seo-title: Basculement de la liste de lecture manquant
 title: Basculement de la liste de lecture manquant
-uuid: 91a537f3-3e69-4669-8f84-0292c19ac209
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
