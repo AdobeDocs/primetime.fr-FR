@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe MediaPlayerItemConfig ou en flux continu avec la classe MediaPlayerItemConfig.
-seo-description: Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe MediaPlayerItemConfig ou en flux continu avec la classe MediaPlayerItemConfig.
-seo-title: Config des méthodes de classe pour les balises
 title: Config des méthodes de classe pour les balises
-uuid: 3317fc8b-c13c-4e7d-8334-aa8cdf40fa05
 translation-type: tm+mt
-source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
