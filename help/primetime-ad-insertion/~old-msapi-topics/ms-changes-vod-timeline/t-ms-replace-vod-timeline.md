@@ -1,13 +1,10 @@
 ---
 description: Remplacez une chronologie VOD en envoyant une nouvelle demande d’insertion de publicité au serveur de manifeste par un paramètre de requête pttimeline correctement défini.
-seo-description: Remplacez une chronologie VOD en envoyant une nouvelle demande d’insertion de publicité au serveur de manifeste par un paramètre de requête pttimeline correctement défini.
-seo-title: Remplacement d’une chronologie VOD
 title: Remplacement d’une chronologie VOD
-uuid: 17a6daa3-5ee5-48fb-8981-0d183aed0fe4
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '173'
 ht-degree: 0%
 
 ---
