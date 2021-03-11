@@ -1,9 +1,9 @@
 ---
-seo-title: Présentation
 title: Présentation
-uuid: 11cf1f1f-a4b2-4ac2-aae7-e925d96729d2
+description: Présentation
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Aperçu {#overview}
 
-*L’* emballage fait référence au processus de chiffrement et d’application d’une stratégie aux fichiers FLV ou F4V. Utilisez les API de création de package des médias pour assembler des fichiers. Le SDK Java d’Adobe Access ne peut inclure que le Flash de téléchargement progressif et le contenu AIR, tel que FLV, F4V et MP4. Pour compresser du contenu à l’aide du DRM d’accès aux Adobes pour d’autres formats de contenu, tels que Adobe HTTP Dynamic Streaming (HDS) ou Apple HTTP Live Streaming (HLS), vous devez utiliser d’autres outils, tels que Adobe Media Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) ou un encodeur qui implémente le SDK de diffusion Adobe ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). Les clients peuvent également choisir d’utiliser le jeu d’outils Java Primetime Packager d’Adobe, qui permet d’assembler du contenu pour divers formats de cible, tels que HDS, HLS et DASH.
+*L’* emballage fait référence au processus de chiffrement et d’application d’une stratégie aux fichiers FLV ou F4V. Utilisez les API de création de package des médias pour assembler des fichiers. Le SDK Java d’Adobe Access ne peut inclure que le Flash de téléchargement progressif et le contenu AIR, tel que FLV, F4V et MP4. Pour compresser du contenu à l’aide du DRM d’accès aux Adobes pour d’autres formats de contenu, tels que Adobe HTTP Dynamic Streaming (HDS) ou Apple HTTP Live Streaming (HLS), vous devez utiliser d’autres outils, tels que Adobes Medium Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) ou un encodeur qui implémente le SDK de diffusion Adobe ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). Les clients peuvent également choisir d’utiliser le jeu d’outils Java Primetime Packager d’Adobe, qui permet d’assembler du contenu pour divers formats de cible, tels que HDS, HLS et DASH.
 
 Le groupement est dissocié du serveur de licences. Il n’est pas nécessaire que le gestionnaire de package se connecte au serveur de licences pour échanger des informations sur le contenu. Tout ce dont le serveur de licences a besoin pour délivrer la licence est inclus dans les métadonnées de contenu.
 
