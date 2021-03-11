@@ -1,16 +1,12 @@
 ---
 title: Notes de mise à jour de TVSDK 2.7 pour Android
-seo-title: Notes de mise à jour de TVSDK 2.7 pour Android
 description: Les Notes de mise à jour de TVSDK 2.7 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 2.7
-seo-description: Les Notes de mise à jour de TVSDK 2.7 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 2.7
-uuid: 4013b97d-29f9-435b-8772-b19df7054282
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '4123'
+source-wordcount: '4095'
 ht-degree: 0%
 
 ---
@@ -134,7 +130,7 @@ Les nouvelles fonctionnalités importantes d’Android 2.5.1.
       * **Résolution des publicités irrégulières :** TVSDK n’attend pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues. Ceci s&#39;applique aux flux VOD utilisés avec l&#39;ISAC. Les opérations telles que la recherche et l’avance rapide ne sont pas autorisées tant que la résolution de la publicité n’est pas terminée. Pour les flux en direct, cette fonction ne peut pas être activée pour la résolution des publicités pendant un événement en direct.
       * **Connexions réseau persistantes :** cette fonctionnalité permet à TVSDK de créer et de stocker une liste interne de connexions réseau persistantes. Ces connexions sont réutilisées pour plusieurs requêtes, plutôt que d&#39;ouvrir une nouvelle connexion pour chaque requête réseau et de la détruire ensuite. Cela augmente l’efficacité et réduit la latence du code réseau, ce qui accélère les performances de lecture.
 Lorsque TVSDK ouvre une connexion, il demande au serveur d’établir une connexion *keep-alive*. Certains serveurs peuvent ne pas prendre en charge ce type de connexion, auquel cas TVSDK revient à établir une connexion pour chaque requête. En outre, bien que les connexions persistantes soient activées par défaut, TVSDK dispose désormais d’une option de configuration permettant aux applications de désactiver les connexions persistantes si nécessaire.
-      * **Téléchargement parallèle : le** téléchargement de fichiers audio et vidéo en parallèle plutôt qu&#39;en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité de se retrouver dans des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
+      * **Téléchargement parallèle : le** téléchargement de fichiers audio et vidéo en parallèle plutôt qu’en série réduit les délais de démarrage. Cette fonctionnalité permet la lecture des fichiers HLS Live et VOD, optimise l’utilisation de la bande passante disponible à partir d’un serveur, réduit la probabilité de se retrouver dans des situations de mémoire tampon en cours d’exécution et réduit le délai entre le téléchargement et la lecture.
       * **Téléchargements de publicités parallèles :** TVSDK prérécupère les publicités en parallèle à la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.
 
 * **Lecture**
