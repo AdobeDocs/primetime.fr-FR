@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l'utilisation d'un HSM ne soit pas nécessaire, elle est recommandée.
-seo-description: Vous pouvez configurer l’implémentation des références avec le fournisseur Sun PKCS#11 qui prend en charge HSM. Bien que l'utilisation d'un HSM ne soit pas nécessaire, elle est recommandée.
-seo-title: Configuration HSM
 title: Configuration HSM
-uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
