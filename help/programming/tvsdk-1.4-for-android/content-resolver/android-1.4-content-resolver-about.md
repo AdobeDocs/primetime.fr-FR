@@ -1,13 +1,10 @@
 ---
 description: Un détecteur d’opportunités est un composant TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-seo-description: Un détecteur d’opportunités est un composant TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-seo-title: Générateurs d’opportunités et résolveurs de contenu
 title: Générateurs d’opportunités et résolveurs de contenu
-uuid: 593de6c0-042d-4a05-82d7-056a9a4500f3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
