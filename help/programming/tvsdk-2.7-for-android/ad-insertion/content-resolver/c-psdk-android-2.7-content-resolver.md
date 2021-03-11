@@ -1,13 +1,10 @@
 ---
 description: Un générateur d’opportunités identifie les opportunités de placement par balises personnalisées dans un flux, ainsi que les marqueurs personnalisés en mode de signalisation, etc. Le générateur d’opportunités envoie ces opportunités d’emplacement au résolveur de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité d’emplacement.
-seo-description: Un générateur d’opportunités identifie les opportunités de placement par balises personnalisées dans un flux, ainsi que les marqueurs personnalisés en mode de signalisation, etc. Le générateur d’opportunités envoie ces opportunités d’emplacement au résolveur de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité d’emplacement.
-seo-title: Personnaliser les générateurs d'opportunités et les résolveurs de contenu
 title: Personnaliser les générateurs d'opportunités et les résolveurs de contenu
-uuid: 97738b80-5cf8-494f-8811-449bceded220
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
