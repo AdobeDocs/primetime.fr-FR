@@ -1,13 +1,10 @@
 ---
 description: Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
-seo-description: Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
-seo-title: 'null'
-title: 'null'
-uuid: 20828188-817a-471c-acbc-aeb5f336356b
+title: Codes de notification d’erreur
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '448'
 ht-degree: 5%
 
 ---
@@ -243,7 +240,7 @@ La plupart des erreurs contiennent des métadonnées pertinentes, par exemple l�
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_ERROR  </span> </td> 
    <td colname="3"> Aucun </td> 
    <td colname="4"><span class="codeph"> DESCRIPTION  </span> </td> 
    <td colname="5"> <p>Erreur SiteCatalyst. Voir la description. </p> </td> 
