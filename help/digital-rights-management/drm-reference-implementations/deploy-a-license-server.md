@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Déploiement du serveur de licences
 title: Déploiement du serveur de licences
-uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
+description: Déploiement du serveur de licences
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
