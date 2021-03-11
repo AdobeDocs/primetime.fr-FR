@@ -1,13 +1,10 @@
 ---
 description: Pour mettre à niveau un serveur exécutant Adobe Access Server for Protected Streaming, remplacez le fichier flashaccserver.war déployé sur votre serveur d’applications par le fichier inclus avec le dernier Adobe Access. Si vous souhaitez utiliser les nouvelles options de configuration décrites ci-dessus, mettez à jour le fichier flashaccess-locataire.xml de votre serveur. Vous devez également mettre à jour jsafe.dll ou libjsafe.so vers la version incluse avec le dernier Adobe Access.
-seo-description: Pour mettre à niveau un serveur exécutant Adobe Access Server for Protected Streaming, remplacez le fichier flashaccserver.war déployé sur votre serveur d’applications par le fichier inclus avec le dernier Adobe Access. Si vous souhaitez utiliser les nouvelles options de configuration décrites ci-dessus, mettez à jour le fichier flashaccess-locataire.xml de votre serveur. Vous devez également mettre à jour jsafe.dll ou libjsafe.so vers la version incluse avec le dernier Adobe Access.
-seo-title: Exécution de Adobe Access Server pour la diffusion en continu protégée
 title: Exécution de Adobe Access Server pour la diffusion en continu protégée
-uuid: 3819500d-ad2f-49eb-8aa4-e50a55461608
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
