@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser l’API de reconditionnement CRS pour transcoder à l’avance les éléments publicitaires non-HLS. Une version HLS est donc disponible lorsque vous devez l’exécuter, ce qui élimine le délai de 2 à 4 minutes associé au reconditionnement juste à temps (JIT).
-seo-description: Vous pouvez utiliser l’API de reconditionnement CRS pour transcoder à l’avance les éléments publicitaires non-HLS. Une version HLS est donc disponible lorsque vous devez l’exécuter, ce qui élimine le délai de 2 à 4 minutes associé au reconditionnement juste à temps (JIT).
-seo-title: API de restauration
 title: API de restauration
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
