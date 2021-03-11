@@ -1,14 +1,12 @@
 ---
-description: 'null'
-keywords: creative selection rules;AdobeTVSDKConfig
-seo-description: 'null'
-seo-title: Appliquer les règles de sélection créative
+keywords: règles de sélection créative;Adobe TVSDKConfig
 title: Appliquer les règles de sélection créative
-uuid: 313306b7-6b99-4d90-8717-2b0a1e39a07b
+description: Appliquer les règles de sélection créative
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
