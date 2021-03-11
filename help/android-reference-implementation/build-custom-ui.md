@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez facilement créer une interface utilisateur personnalisée basée sur la structure d’implémentation de référence.
-seo-description: Vous pouvez facilement créer une interface utilisateur personnalisée basée sur la structure d’implémentation de référence.
-seo-title: Création d’une interface utilisateur personnalisée
 title: Création d’une interface utilisateur personnalisée
-uuid: b785f6a4-3ef8-4f7a-a087-0d6551da9750
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
