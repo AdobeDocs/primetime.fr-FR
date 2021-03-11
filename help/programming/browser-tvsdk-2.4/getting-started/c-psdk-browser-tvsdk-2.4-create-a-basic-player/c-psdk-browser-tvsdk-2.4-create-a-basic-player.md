@@ -1,13 +1,10 @@
 ---
 description: Pour utiliser le SDK Browser TVSDK, vous devez créer et configurer un lecteur de base. Pour lire du contenu vidéo, vous pouvez créer un lecteur de base de deux manières à l’aide du SDK du navigateur ou de la structure de l’interface utilisateur.
-seo-description: Pour utiliser le SDK Browser TVSDK, vous devez créer et configurer un lecteur de base. Pour lire du contenu vidéo, vous pouvez créer un lecteur de base de deux manières à l’aide du SDK du navigateur ou de la structure de l’interface utilisateur.
-seo-title: Lecteur de base
 title: Lecteur de base
-uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
