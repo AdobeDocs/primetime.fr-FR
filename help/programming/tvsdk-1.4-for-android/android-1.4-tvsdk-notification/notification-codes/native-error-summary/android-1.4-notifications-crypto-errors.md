@@ -1,14 +1,11 @@
 ---
 description: Le module de chiffrement du moteur de vidéo d'Adobe renvoie ces notifications dans l'objet de métadonnées NATIVE_ERROR.
-seo-description: Le module de chiffrement du moteur de vidéo d'Adobe renvoie ces notifications dans l'objet de métadonnées NATIVE_ERROR.
-seo-title: Valeurs Crypto NATIVE_ERROR
 title: Valeurs Crypto NATIVE_ERROR
-uuid: 5e86ba61-93e9-47cf-adad-8794957a1f7c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 6%
+source-wordcount: '84'
+ht-degree: 8%
 
 ---
 
