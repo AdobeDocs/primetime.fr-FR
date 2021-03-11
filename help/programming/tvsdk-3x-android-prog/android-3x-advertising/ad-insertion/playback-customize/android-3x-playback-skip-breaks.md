@@ -1,13 +1,10 @@
 ---
 description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
-seo-description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
-seo-title: Ignorer les coupures publicitaires pour une période
 title: Ignorer les coupures publicitaires pour une période
-uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
