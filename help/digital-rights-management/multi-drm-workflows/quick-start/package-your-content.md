@@ -1,13 +1,10 @@
 ---
 description: La création de packages de contenu est le processus de préparation de contenu vidéo en vue d’une lecture sur le Web. La création de package comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents périphériques et navigateurs.
-seo-description: La création de packages de contenu est le processus de préparation de contenu vidéo en vue d’une lecture sur le Web. La création de package comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents périphériques et navigateurs.
-seo-title: Assemblage de votre contenu
 title: Assemblage de votre contenu
-uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
