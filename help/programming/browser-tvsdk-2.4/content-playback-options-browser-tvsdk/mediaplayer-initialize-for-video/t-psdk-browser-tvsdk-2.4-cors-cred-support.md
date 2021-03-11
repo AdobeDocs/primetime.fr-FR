@@ -1,14 +1,11 @@
 ---
 description: La prise en charge de l’attribut withCredentials dans XMLHttpRequests permet aux demandes CORS (partage de ressources entre origines) d’inclure les cookies du domaine de cible pour divers types de requêtes.
-keywords: CORS;cross origin;resource sharing;cookies;withCredentials
-seo-description: La prise en charge de l’attribut withCredentials dans XMLHttpRequests permet aux demandes CORS (partage de ressources entre origines) d’inclure les cookies du domaine de cible pour divers types de requêtes.
-seo-title: Partage de ressources entre origines
+keywords: CORS ; origine croisée ; partage de ressources ; cookies ; avecCredentials
 title: Partage de ressources entre origines
-uuid: e788b542-d4ac-48aa-91e2-1e88068cbba1
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
