@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez spécifier ou remplacer des chronologies pour les coupures publicitaires dans le contenu VOD à l’aide d’une liste formatée de segments de publicité et de contenu appelée capsules.
-seo-description: Vous pouvez spécifier ou remplacer des chronologies pour les coupures publicitaires dans le contenu VOD à l’aide d’une liste formatée de segments de publicité et de contenu appelée capsules.
-seo-title: Format de chronologie VOD
 title: Format de chronologie VOD
-uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
