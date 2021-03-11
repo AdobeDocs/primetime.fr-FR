@@ -1,13 +1,10 @@
 ---
 description: Le serveur de manifeste coordonne les systèmes qui fournissent du contenu, fournissent des publicités, lisent des vidéos et effectuent le suivi des publicités. Il reçoit des listes de lecture (manifestes) codées en M3U8 que les lecteurs vidéo clients reçoivent des fournisseurs de contenu, sélectionne les publicités des fournisseurs de publicité dans les manifestes et transmet les manifestes assemblés aux lecteurs vidéo. Il prend en charge le suivi des publicités côté client et côté serveur. Il effectue ses interactions à l’aide d’une interface de service Web basée sur HTTP.
-seo-description: Le serveur de manifeste coordonne les systèmes qui fournissent du contenu, fournissent des publicités, lisent des vidéos et effectuent le suivi des publicités. Il reçoit des listes de lecture (manifestes) codées en M3U8 que les lecteurs vidéo clients reçoivent des fournisseurs de contenu, sélectionne les publicités des fournisseurs de publicité dans les manifestes et transmet les manifestes assemblés aux lecteurs vidéo. Il prend en charge le suivi des publicités côté client et côté serveur. Il effectue ses interactions à l’aide d’une interface de service Web basée sur HTTP.
-seo-title: Présentation des interactions du serveur de manifeste
 title: Présentation des interactions du serveur de manifeste
-uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
