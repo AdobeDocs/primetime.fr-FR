@@ -1,13 +1,10 @@
 ---
 description: Les informations sur l'emballage et la protection du contenu vous permettent de protéger votre contenu.
-seo-description: Les informations sur l'emballage et la protection du contenu vous permettent de protéger votre contenu.
-seo-title: Emballage et protection du contenu
 title: Emballage et protection du contenu
-uuid: 9bf89f86-082e-40f9-8deb-c9774a9d8e02
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
