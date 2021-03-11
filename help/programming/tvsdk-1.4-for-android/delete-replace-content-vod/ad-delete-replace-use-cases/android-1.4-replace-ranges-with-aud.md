@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez insérer des publicités dans du contenu VOD.
-seo-description: Vous pouvez insérer des publicités dans du contenu VOD.
-seo-title: Remplacer des plages de temps par une publicité
 title: Remplacer des plages de temps par une publicité
-uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
