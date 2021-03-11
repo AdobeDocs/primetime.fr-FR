@@ -1,9 +1,9 @@
 ---
-seo-title: A propos de l'accès aux Adobes
 title: A propos de l'accès aux Adobes
-uuid: e0e85150-8966-4d16-b53a-2c283067481d
+description: A propos de l'accès aux Adobes
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
