@@ -1,13 +1,10 @@
 ---
 description: Ces classes fournissent le décodage et l'analyse pour les paquets et les balises.
-seo-description: Ces classes fournissent le décodage et l'analyse pour les paquets et les balises.
-seo-title: Classes de décodeurs système
 title: Classes de décodeurs système
-uuid: b333166b-3a13-48c5-a5d7-d8a64f0cd736
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '115'
 ht-degree: 1%
 
 ---
