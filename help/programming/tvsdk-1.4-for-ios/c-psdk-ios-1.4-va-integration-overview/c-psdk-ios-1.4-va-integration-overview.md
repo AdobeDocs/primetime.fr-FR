@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
-seo-description: Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
-seo-title: Analyses vidéo
 title: Analyses vidéo
-uuid: 8f297316-f95e-4896-b489-a2d6b36e6b40
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
