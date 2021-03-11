@@ -1,13 +1,10 @@
 ---
 description: Multi CDN permet de définir un ou plusieurs emplacements CDN pour diffuser des publicités transcodées.
-seo-description: Multi CDN permet de définir un ou plusieurs emplacements CDN pour diffuser des publicités transcodées.
-seo-title: Prise en charge de CDN multiple
 title: Prise en charge de CDN multiple
-uuid: 2b6d71f0-61c8-486b-a35a-f7ef3a9519d2
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
