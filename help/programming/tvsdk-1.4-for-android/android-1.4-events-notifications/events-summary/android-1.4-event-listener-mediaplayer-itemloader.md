@@ -1,13 +1,10 @@
 ---
 description: TVSDK distribue des événements d’éléments du lecteur multimédia en réponse au chargement d’un élément multimédia.
-seo-description: TVSDK distribue des événements d’éléments du lecteur multimédia en réponse au chargement d’un élément multimédia.
-seo-title: Événements de chargement
 title: Événements de chargement
-uuid: 1b401ff5-4313-4c64-8be9-99bdeb58ba2a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
