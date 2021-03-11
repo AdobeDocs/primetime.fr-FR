@@ -1,9 +1,9 @@
 ---
-seo-title: Générer les métadonnées DRM sur site
 title: Générer les métadonnées DRM sur site
-uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
+description: Générer les métadonnées DRM sur site
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Un utilitaire [!DNL CreateMetadata.jar] est inclus dans le dossier [!DNL create_
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      Les deux fichiers JAR peuvent résider dans le dossier [!DNL Command Line Tools/libs]. Le fichier [!DNL createMetadata.properties] peut se trouver en regard du fichier [!DNL flashaccesstools.properties].
+      Les deux fichiers JAR peuvent résider dans le dossier [!DNL Command Line Tools/libs]. Le fichier [!DNL createMetadata.properties] peut résider en regard du fichier [!DNL flashaccesstools.properties].
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
