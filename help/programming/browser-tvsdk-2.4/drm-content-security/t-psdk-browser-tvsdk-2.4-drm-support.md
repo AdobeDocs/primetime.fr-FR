@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prend en charge plusieurs systèmes de gestion des droits numériques (DRM) en utilisant la spécification W3C pour les extensions de supports chiffrés (EME). Les fonctionnalités DRM sont mises à la disposition de l’application par le biais d’une API et d’un processus unifiés.
-seo-description: Le navigateur TVSDK prend en charge plusieurs systèmes de gestion des droits numériques (DRM) en utilisant la spécification W3C pour les extensions de supports chiffrés (EME). Les fonctionnalités DRM sont mises à la disposition de l’application par le biais d’une API et d’un processus unifiés.
-seo-title: Systèmes DRM pris en charge
 title: Systèmes DRM pris en charge
-uuid: 7dd30633-ab28-4fca-a662-c84e95f6ef16
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
