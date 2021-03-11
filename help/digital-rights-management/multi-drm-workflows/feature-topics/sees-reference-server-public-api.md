@@ -1,13 +1,10 @@
 ---
 description: La demande de droits et la réponse sont transmises via une connexion SSL mutuellement authentifiée entre le serveur de licences et le service de droits du client.
-seo-description: La demande de droits et la réponse sont transmises via une connexion SSL mutuellement authentifiée entre le serveur de licences et le service de droits du client.
-seo-title: VOIR API publique
 title: VOIR API publique
-uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
-source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
