@@ -1,13 +1,10 @@
 ---
 description: TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
-seo-description: TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
-seo-title: Exemples d’erreurs de période
 title: Exemples d’erreurs de période
-uuid: 327b38dc-6aa3-49a7-b5e7-c343b704c5c3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
