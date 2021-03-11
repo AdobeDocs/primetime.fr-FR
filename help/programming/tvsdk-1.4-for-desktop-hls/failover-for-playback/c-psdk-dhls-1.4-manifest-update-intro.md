@@ -1,13 +1,10 @@
 ---
 description: TVSDK peut détecter les informations de lecture modifiées dans les manifestes m3u8 originaux pour la diffusion en direct et mettre à jour les informations de lecture pendant la lecture du flux. TVSDK prend en charge un ensemble dynamique de profils de débit binaire à mesure que les profils apparaissent ou disparaissent du manifeste principal, y compris les débits binaires profils non chevauchants entre les mises à jour.
-seo-description: TVSDK peut détecter les informations de lecture modifiées dans les manifestes m3u8 originaux pour la diffusion en direct et mettre à jour les informations de lecture pendant la lecture du flux. TVSDK prend en charge un ensemble dynamique de profils de débit binaire à mesure que les profils apparaissent ou disparaissent du manifeste principal, y compris les débits binaires profils non chevauchants entre les mises à jour.
-seo-title: Mise à jour du manifeste principal en direct
 title: Mise à jour du manifeste principal en direct
-uuid: 44f8adc2-0538-4c5d-8e39-55f661d8540b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '740'
 ht-degree: 0%
 
 ---
