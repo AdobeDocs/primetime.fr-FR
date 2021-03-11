@@ -1,13 +1,10 @@
 ---
 description: Le serveur de manifeste prend en charge les légendes WebVTT activées pour l’éditeur pour tous les formats vidéo HLS. Lorsqu’il reçoit des demandes d’insertion de publicités dans le contenu sous-titré WebVTT, il le fait correctement.
-seo-description: Le serveur de manifeste prend en charge les légendes WebVTT activées pour l’éditeur pour tous les formats vidéo HLS/DASH. Lorsqu’il reçoit des demandes d’insertion de publicités dans le contenu sous-titré WebVTT, il le fait correctement.
-seo-title: Prise en charge des légendes WebVTT
 title: Prise en charge des légendes WebVTT
-uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
