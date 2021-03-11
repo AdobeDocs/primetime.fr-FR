@@ -1,13 +1,10 @@
 ---
 description: Le processus d’insertion publicitaire vidéo à la demande (VOD) comprend les phases de résolution, d’insertion publicitaire et de lecture publicitaire. Pour le suivi des publicités, TVSDK doit informer un serveur de suivi distant de la progression de la lecture de chaque publicité. Lorsque des situations inattendues surviennent, TVSDK prend les mesures appropriées.
-seo-description: Le processus d’insertion publicitaire vidéo à la demande (VOD) comprend les phases de résolution, d’insertion publicitaire et de lecture publicitaire. Pour le suivi des publicités, TVSDK doit informer un serveur de suivi distant de la progression de la lecture de chaque publicité. Lorsque des situations inattendues surviennent, TVSDK prend les mesures appropriées.
-seo-title: Insertion et basculement publicitaires pour VOD
 title: Insertion et basculement publicitaires pour VOD
-uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
