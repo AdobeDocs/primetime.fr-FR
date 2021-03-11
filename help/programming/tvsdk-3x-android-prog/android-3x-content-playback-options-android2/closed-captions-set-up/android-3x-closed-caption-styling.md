@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage fermées à l’aide de la classe TextFormat, qui définit le style des sous-titrages fermés affichés par votre lecteur.
-seo-description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage fermées à l’aide de la classe TextFormat, qui définit le style des sous-titrages fermés affichés par votre lecteur.
-seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
-uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
