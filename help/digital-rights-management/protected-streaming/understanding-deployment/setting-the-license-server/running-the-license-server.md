@@ -1,9 +1,9 @@
 ---
-seo-title: Exécution du serveur DRM pour la diffusion en flux continu protégée
 title: Exécution du serveur DRM pour la diffusion en flux continu protégée
-uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
+description: Exécution du serveur DRM pour la diffusion en flux continu protégée
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
