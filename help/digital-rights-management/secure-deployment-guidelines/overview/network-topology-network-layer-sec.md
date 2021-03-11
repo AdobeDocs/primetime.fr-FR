@@ -1,13 +1,10 @@
 ---
 description: Les vulnérabilités de sécurité réseau sont parmi les premières menaces qui pèsent sur tout serveur d’applications orienté sur Internet ou sur un intranet, et vous devez protéger les hôtes du réseau contre ces vulnérabilités.
-seo-description: Les vulnérabilités de sécurité réseau sont parmi les premières menaces qui pèsent sur tout serveur d’applications orienté sur Internet ou sur un intranet, et vous devez protéger les hôtes du réseau contre ces vulnérabilités.
-seo-title: Sécurité de la couche réseau
 title: Sécurité de la couche réseau
-uuid: c750c595-a784-47ce-be0b-17b8d60c5753
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
