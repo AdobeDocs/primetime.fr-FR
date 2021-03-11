@@ -1,13 +1,10 @@
 ---
 description: L’élément clé côté client de la solution DRM Primetime est le Gestionnaire de DRM. L’exemple d’application inclus dans le SDK Android comprend également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
-seo-description: L’élément clé côté client de la solution DRM Primetime est le Gestionnaire de DRM. L’exemple d’application inclus dans le SDK Android comprend également une classe DRMHelper qui peut être utilisée pour faciliter la mise en oeuvre de certaines opérations DRM.
-seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
-uuid: d77a98c8-c1f5-4fe3-8d0b-3d21e288f228
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
