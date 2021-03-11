@@ -1,13 +1,10 @@
 ---
 description: 'Vous devez configurer les propriétés du serveur pour refléter votre environnement. Pour ce faire, utilisez l’une des méthodes suivantes : '
-seo-description: 'Vous devez configurer les propriétés du serveur pour refléter votre environnement. Pour ce faire, utilisez l’une des méthodes suivantes : '
-seo-title: Appliquer les propriétés aux environnements de serveur
 title: Appliquer les propriétés aux environnements de serveur
-uuid: a1ee0d6c-b5e7-4689-b7c8-b155176faf1c
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
