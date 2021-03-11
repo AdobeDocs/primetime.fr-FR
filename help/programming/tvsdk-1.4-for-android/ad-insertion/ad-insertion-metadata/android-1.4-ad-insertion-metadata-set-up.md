@@ -1,13 +1,10 @@
 ---
 description: Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
-seo-description: Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
-seo-title: Configuration des métadonnées d’insertion de publicités
 title: Configuration des métadonnées d’insertion de publicités
-uuid: d96e67c3-4cc7-4309-a2a2-ff5193b46534
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '267'
 ht-degree: 0%
 
 ---
