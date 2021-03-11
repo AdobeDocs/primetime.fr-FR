@@ -1,12 +1,10 @@
 ---
 description: Tous les lecteurs vidéo doivent fournir des fonctionnalités sur lesquelles le serveur de manifeste utilise pour insérer des publicités et activer le suivi des publicités.
-seo-description: Tous les lecteurs vidéo doivent fournir des fonctionnalités sur lesquelles le serveur de manifeste utilise pour insérer des publicités et activer le suivi des publicités.
-seo-title: Configuration requise pour le lecteur vidéo
 title: Configuration requise pour le lecteur vidéo
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
