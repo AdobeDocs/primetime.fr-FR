@@ -1,13 +1,10 @@
 ---
 description: La chronologie de la publicité appropriée à une lecture de contenu VOD peut être inappropriée pour les lectures suivantes. Vous pouvez remplacer une chronologie VOD sans modifier le contenu.
-seo-description: La chronologie de la publicité appropriée à une lecture de contenu VOD peut être inappropriée pour les lectures suivantes. Vous pouvez remplacer une chronologie VOD sans modifier le contenu.
-seo-title: Modifications apportées à VOD
 title: Modifications apportées à VOD
-uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
