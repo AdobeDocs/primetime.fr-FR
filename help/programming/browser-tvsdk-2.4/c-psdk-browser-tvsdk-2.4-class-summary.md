@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser l’API du lecteur Primetime pour personnaliser le comportement du lecteur.
-seo-description: Vous pouvez utiliser l’API du lecteur Primetime pour personnaliser le comportement du lecteur.
-seo-title: Résumé des classes du lecteur Primetime
 title: Résumé des classes du lecteur Primetime
-uuid: ca245d58-43a7-412a-93ac-a90d664b0eb9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '81'
+source-wordcount: '63'
 ht-degree: 0%
 
 ---
