@@ -1,9 +1,9 @@
 ---
-seo-title: Utilisation de Policy Manager
 title: Utilisation de Policy Manager
-uuid: 729aa6bc-8851-40e3-8b86-629a4786575b
+description: Utilisation de Policy Manager
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
