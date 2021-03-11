@@ -1,13 +1,10 @@
 ---
 description: L'interface de jeton de licence Widevine fournit des services de production et de test.
-seo-description: L'interface de jeton de licence Widevine fournit des services de production et de test.
-seo-title: Demande/réponse de jeton de licence Widevine
 title: Demande/réponse de jeton de licence Widevine
-uuid: a3522422-7075-49a7-bc55-137ef84ee430
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 5%
 
 ---
@@ -60,7 +57,7 @@ Cette requête HTTP renvoie un jeton qui peut être racheté pour une licence Wi
   </tr> 
   <tr> 
    <td> <span class="codeph"> errorFormat  </span> </td> 
-   <td> <span class="codeph"> html </span> ou <span class="codeph"> json </span>. <p>Si <span class="codeph"> html </span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si <span class="codeph"> json </span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Erreurs JSON </a> pour plus d’informations. </p> <p>Le type MIME de la réponse est soit <span class="codeph"> text/uri-liste </span> sur succès, <span class="codeph"> text/html </span> pour le format d'erreur <span class="codeph"> html </span>, soit <span class="codeph"> application/json </span> pour le format d'erreur </span> json &lt;a9/&gt;.<span class="codeph"> </span></p> </td> 
+   <td> <span class="codeph"> html </span> ou <span class="codeph"> json </span>. <p>Si <span class="codeph"> html </span> (valeur par défaut), une représentation HTML de toute erreur est fournie dans le corps d’entité de la réponse. Si <span class="codeph"> json </span> est spécifié, une réponse structurée au format JSON est renvoyée. Voir <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Erreurs JSON </a> pour plus d’informations. </p> <p>Le type MIME de la réponse est soit <span class="codeph"> text/uri-liste </span> sur succès, <span class="codeph"> text/html </span> pour le format d'erreur <span class="codeph"> html </span>, soit <span class="codeph"> application/json </span> pour le format d'erreur </span> json <span class="codeph">. </span></p> </td> 
    <td> Non </td> 
   </tr> 
  </tbody> 
