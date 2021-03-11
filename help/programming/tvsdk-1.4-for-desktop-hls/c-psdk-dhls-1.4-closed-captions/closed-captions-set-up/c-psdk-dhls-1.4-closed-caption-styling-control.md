@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe ClosedCaptionStyles. Cela définit le style de toutes les sous-titres fermés qui sont affichés par votre lecteur.
-seo-description: Vous pouvez fournir des informations de style pour les pistes de sous-titrage à l’aide de la classe ClosedCaptionStyles. Cela définit le style de toutes les sous-titres fermés qui sont affichés par votre lecteur.
-seo-title: Contrôler le style de sous-titrage
 title: Contrôler le style de sous-titrage
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
