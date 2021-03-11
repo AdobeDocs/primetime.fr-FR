@@ -1,13 +1,10 @@
 ---
 description: Le Gestionnaire de droits expose ces classes pour intégrer l’authentification Adobe Primetime dans votre lecteur.
-seo-description: Le Gestionnaire de droits expose ces classes pour intégrer l’authentification Adobe Primetime dans votre lecteur.
-seo-title: Documentation sur les API connexes
 title: Documentation sur les API connexes
-uuid: 7b37b965-6048-45e9-ad5a-2026a5a9e105
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
