@@ -1,9 +1,9 @@
 ---
-seo-title: Création de stratégies DRM personnalisées (facultatif)
 title: Création de stratégies DRM personnalisées (facultatif)
-uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
+description: Création de stratégies DRM personnalisées (facultatif)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
