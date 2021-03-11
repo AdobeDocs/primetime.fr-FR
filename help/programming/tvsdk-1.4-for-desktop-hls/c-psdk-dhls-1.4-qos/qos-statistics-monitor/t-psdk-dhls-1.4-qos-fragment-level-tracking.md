@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez lire des informations sur la qualité du service (QoS) à propos des ressources téléchargées, telles que des fragments et des pistes, à partir de la classe LoadInformation.
-seo-description: Vous pouvez lire des informations sur la qualité du service (QoS) à propos des ressources téléchargées, telles que des fragments et des pistes, à partir de la classe LoadInformation.
-seo-title: Suivi au niveau du fragment à l’aide des informations de chargement
 title: Suivi au niveau du fragment à l’aide des informations de chargement
-uuid: 41fb2b90-3531-4cc5-bf9b-01ccae04d2fd
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -47,7 +44,7 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
    <tr> 
       <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
-      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes supplémentaires pour télécharger l’intégralité du fragment. </p> </td> 
+      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes de plus pour télécharger l’intégralité du fragment. </p> </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
@@ -82,7 +79,7 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
       <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST - Liste de lecture/manifeste </li> 
       <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAGMENT - Un fragment </li> 
       <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK : fragment associé à une piste spécifique </li> 
-      </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, FILE est renvoyé. </td> 
+      </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, le fichier est renvoyé. </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> url  </span> </td> 
