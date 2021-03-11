@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que vous pouvez afficher dans la barre de recherche.
-seo-description: Vous pouvez utiliser TVSDK pour récupérer des informations sur le média que vous pouvez afficher dans la barre de recherche.
-seo-title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
 title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
-uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
