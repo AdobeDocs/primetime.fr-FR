@@ -1,9 +1,9 @@
 ---
-seo-title: Conversion de fichiers
 title: Conversion de fichiers
-uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
+description: Conversion de fichiers
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
