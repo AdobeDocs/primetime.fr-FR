@@ -1,13 +1,10 @@
 ---
 description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon ou la recherche.
-seo-description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon ou la recherche.
-seo-title: Événements QoS
 title: Événements QoS
-uuid: 27f60cd3-d3fc-4ea3-81df-96d0fe9f7068
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
