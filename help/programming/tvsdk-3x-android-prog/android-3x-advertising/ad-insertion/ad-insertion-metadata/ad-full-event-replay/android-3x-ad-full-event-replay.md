@@ -1,13 +1,10 @@
 ---
 description: La relecture en événement complet (FER) est une ressource VOD qui agit comme une ressource en direct/DVR. Votre application doit donc prendre des mesures pour s’assurer que les publicités sont placées correctement.
-seo-description: La relecture en événement complet (FER) est une ressource VOD qui agit comme une ressource en direct/DVR. Votre application doit donc prendre des mesures pour s’assurer que les publicités sont placées correctement.
-seo-title: Activer les publicités en lecture événement complet
 title: Activer les publicités en lecture événement complet
-uuid: a8859db1-1408-4365-bf12-5bc2ab7df449
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
