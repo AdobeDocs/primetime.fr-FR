@@ -1,13 +1,10 @@
 ---
 description: Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d'événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
-seo-description: Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d'événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
-seo-title: Types d'événement et classes pour les rappels
 title: Types d'événement et classes pour les rappels
-uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -68,7 +65,7 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
      <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> PRINCIPAL_UPDATED</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> Principal_UPDATED</span> </li> 
      <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
      <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
     </ul> </td> 
