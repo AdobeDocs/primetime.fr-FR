@@ -1,12 +1,10 @@
 ---
-description: 'null'
-keywords: hard stop
-seo-description: 'null'
-seo-title: Propriétés de configuration
+keywords: arrêt brutal
 title: Propriétés de configuration
-uuid: 216921d1-a9c1-4650-9dce-c025836986e5
+description: Propriétés de configuration
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -182,7 +180,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeMinSecurityLevel</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Le module d'exécution de l'application doit avoir au moins le niveau de sécurité minimum spécifié pour accéder au contenu protégé. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Le module d'exécution d'application doit avoir au moins le niveau de sécurité minimum spécifié pour accéder au contenu protégé. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
