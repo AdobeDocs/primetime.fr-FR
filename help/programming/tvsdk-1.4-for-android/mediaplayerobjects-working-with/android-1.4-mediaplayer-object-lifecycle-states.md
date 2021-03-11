@@ -1,13 +1,10 @@
 ---
 description: Depuis le moment où vous créez l’instance MediaPlayer jusqu’au moment où vous l’arrêtez (réutilisez ou supprimez), cette instance complète une série de transitions entre les états.
-seo-description: Depuis le moment où vous créez l’instance MediaPlayer jusqu’au moment où vous l’arrêtez (réutilisez ou supprimez), cette instance complète une série de transitions entre les états.
-seo-title: Cycle de vie des objets MediaPlayer
 title: Cycle de vie des objets MediaPlayer
-uuid: 6670a30c-7053-4754-bc36-6bb8590c001d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -70,7 +67,7 @@ Le tableau suivant fournit des détails supplémentaires :
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> PAUSED  </span> </td> 
-   <td colname="col2"> <p>Au fur et à mesure que votre application lit et met en pause le média, le lecteur de médias se déplace entre cet état et la LECTURE. </p> </td> 
+   <td colname="col2"> <p>Au fur et à mesure que votre application lit et met en pause le média, le lecteur multimédia se déplace entre cet état et la LECTURE. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> SUSPENDU  </span> </td> 
