@@ -1,13 +1,10 @@
 ---
 description: Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences à partir d’un serveur Web HTTP simple.
-seo-description: Si vous utilisez Adobe Primetime DRM Professional, vous pouvez prégénérer des licences et incorporer des licences dans le contenu. Cette fonctionnalité peut être combinée avec le chaînage de licences amélioré, de sorte qu’une licence Leaf soit prégénérée et incorporée dans le contenu, et que le client puisse demander une licence Root (liée à un ordinateur ou un domaine) à un serveur de licences. Les applications clientes peuvent également mettre en oeuvre un processus dans lequel le périphérique s’enregistre préalablement auprès d’un serveur, où le serveur génère automatiquement des licences liées à ce périphérique, et où le client récupère ses licences à partir d’un serveur Web HTTP simple.
-seo-title: Licences pré-générées
 title: Licences pré-générées
-uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
