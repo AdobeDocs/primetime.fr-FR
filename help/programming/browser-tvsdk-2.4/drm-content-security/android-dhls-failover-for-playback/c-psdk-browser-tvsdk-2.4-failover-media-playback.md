@@ -1,13 +1,10 @@
 ---
 description: Pour les médias en direct et VOD, le navigateur TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution intermédiaire, puis en téléchargeant les segments du support de débit de résolution intermédiaire définis par la liste de lecture.
-seo-description: Pour les médias en direct et VOD, le navigateur TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution intermédiaire, puis en téléchargeant les segments du support de débit de résolution intermédiaire définis par la liste de lecture.
-seo-title: Lecture multimédia
 title: Lecture multimédia
-uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
