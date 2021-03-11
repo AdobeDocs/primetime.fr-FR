@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez désigner des intervalles de temps dans le contenu VOD comme coupures publicitaires.
-seo-description: Vous pouvez désigner des intervalles de temps dans le contenu VOD comme coupures publicitaires.
-seo-title: Marquer les plages
 title: Marquer les plages
-uuid: fa6047dc-9a12-42fa-9e58-8ee3a55fa866
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
