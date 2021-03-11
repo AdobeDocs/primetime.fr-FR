@@ -1,13 +1,10 @@
 ---
 description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-seo-description: Il s’agit d’un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-seo-title: Exemple Autoriser les utilisateurs à modifier le suivi des légendes
 title: Exemple Autoriser les utilisateurs à modifier le suivi des légendes
-uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
