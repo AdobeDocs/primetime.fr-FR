@@ -1,13 +1,10 @@
 ---
 description: Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en épinglant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
-seo-description: Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en épinglant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
-seo-title: Résoudre et insérer une publicité VOD
 title: Résoudre et insérer une publicité VOD
-uuid: b7124cab-441b-4b38-ac83-300ab9e5f9ec
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
