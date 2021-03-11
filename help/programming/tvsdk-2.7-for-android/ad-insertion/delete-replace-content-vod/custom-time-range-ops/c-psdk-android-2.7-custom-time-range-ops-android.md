@@ -1,13 +1,10 @@
 ---
 description: La classe CustomRangeMetadata identifie différents types de plages de temps dans un flux VOD, marqué, supprimé et remplacé. Pour chacun de ces types de plage de temps personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement de contenu publicitaire.
-seo-description: La classe CustomRangeMetadata identifie différents types de plages de temps dans un flux VOD, marqué, supprimé et remplacé. Pour chacun de ces types de plage de temps personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement de contenu publicitaire.
-seo-title: Opérations de plage de temps personnalisées
 title: Opérations de plage de temps personnalisées
-uuid: e9c6a135-124e-44d4-adf2-dc9d671e2483
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
