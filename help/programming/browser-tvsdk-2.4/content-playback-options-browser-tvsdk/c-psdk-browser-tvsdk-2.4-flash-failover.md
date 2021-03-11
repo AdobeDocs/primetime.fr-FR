@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK fournit des outils permettant de créer une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
-seo-description: Le navigateur TVSDK fournit des outils permettant de créer une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
-seo-title: 'null'
-title: 'null'
-uuid: 57b35a5f-87f8-41a2-ad85-300b999dc30b
+title: Basculement Flash
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
