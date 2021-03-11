@@ -1,13 +1,10 @@
 ---
 description: Il existe deux types de requêtes liées à la compatibilité de Flash Media Rights Management Server 1.x. Un type de requête est utilisé pour inviter les clients 1.x à effectuer la mise à niveau vers un runtime qui prend en charge Adobe Primetime DRM 2.0 ou version ultérieure. Une autre est utilisée pour mettre à jour les métadonnées 1.x au format DRM Primetime avant qu’une licence ne puisse être demandée. La prise en charge de ces requêtes n’est requise que si vous avez précédemment déployé un contenu utilisant FMRMS 1.0 ou 1.5.
-seo-description: Il existe deux types de requêtes liées à la compatibilité de Flash Media Rights Management Server 1.x. Un type de requête est utilisé pour inviter les clients 1.x à effectuer la mise à niveau vers un runtime qui prend en charge Adobe Primetime DRM 2.0 ou version ultérieure. Une autre est utilisée pour mettre à jour les métadonnées 1.x au format DRM Primetime avant qu’une licence ne puisse être demandée. La prise en charge de ces requêtes n’est requise que si vous avez précédemment déployé un contenu utilisant FMRMS 1.0 ou 1.5.
-seo-title: Gestion de la compatibilité FMRMS
 title: Gestion de la compatibilité FMRMS
-uuid: c32ee087-2edf-4d11-be36-e2b31f3769de
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
