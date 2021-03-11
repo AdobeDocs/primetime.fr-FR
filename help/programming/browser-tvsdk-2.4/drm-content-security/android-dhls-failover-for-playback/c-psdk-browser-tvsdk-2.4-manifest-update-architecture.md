@@ -1,13 +1,10 @@
 ---
 description: Voici quelques informations et exemples sur la façon dont le SDK du navigateur prend en charge les manifestes originaux mis à jour.
-seo-description: Voici quelques informations et exemples sur la façon dont le SDK du navigateur prend en charge les manifestes originaux mis à jour.
-seo-title: Architecture de mise à jour de manifeste principal en direct
 title: Architecture de mise à jour de manifeste principal en direct
-uuid: 6f253502-8dec-4b42-9ee1-99ad9bfd6080
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
