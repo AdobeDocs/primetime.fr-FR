@@ -1,13 +1,10 @@
 ---
 description: Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
-seo-description: Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
-seo-title: Répondre aux clics sur les publicités
 title: Répondre aux clics sur les publicités
-uuid: 58efaba5-d0f6-4ddd-9628-6bc065cc95d8
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
