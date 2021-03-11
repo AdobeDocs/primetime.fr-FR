@@ -1,9 +1,9 @@
 ---
-seo-title: Utilisation des Listes de mise à jour des stratégies DRM
 title: Utilisation des Listes de mise à jour des stratégies DRM
-uuid: 41f89671-81c6-4d3d-ac31-9c2a1980517a
+description: Utilisation des Listes de mise à jour des stratégies DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
