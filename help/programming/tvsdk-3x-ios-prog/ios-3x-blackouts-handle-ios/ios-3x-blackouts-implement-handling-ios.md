@@ -1,13 +1,10 @@
 ---
 description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
-seo-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
-seo-title: Mise en oeuvre de la gestion des interruptions de service
 title: Mise en oeuvre de la gestion des interruptions de service
-uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
