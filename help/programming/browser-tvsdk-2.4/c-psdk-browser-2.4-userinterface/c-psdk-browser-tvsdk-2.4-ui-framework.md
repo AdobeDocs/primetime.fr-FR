@@ -1,13 +1,10 @@
 ---
 description: La structure de l’interface utilisateur est un calque d’interface utilisateur placé au-dessus du SDK du navigateur, qui fournit différentes configurations d’interface utilisateur liées au lecteur vidéo. Vous pouvez créer un lecteur hautement personnalisable en apportant les modifications appropriées à votre environnement.
-seo-description: La structure de l’interface utilisateur est un calque d’interface utilisateur placé au-dessus du SDK du navigateur, qui fournit différentes configurations d’interface utilisateur liées au lecteur vidéo. Vous pouvez créer un lecteur hautement personnalisable en apportant les modifications appropriées à votre environnement.
-seo-title: La structure de l’interface utilisateur
 title: La structure de l’interface utilisateur
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
