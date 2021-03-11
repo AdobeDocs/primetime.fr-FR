@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont détectés dans le fichier MPD (Media Presentation Description).
-seo-description: Le navigateur TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont détectés dans le fichier MPD (Media Presentation Description).
-seo-title: S’abonner à des balises publicitaires personnalisées
 title: S’abonner à des balises publicitaires personnalisées
-uuid: 208f61f4-dc33-4363-aa71-878458740a8d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
