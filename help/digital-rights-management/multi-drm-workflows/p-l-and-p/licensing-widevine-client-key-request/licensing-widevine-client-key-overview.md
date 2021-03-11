@@ -1,13 +1,10 @@
 ---
 description: Pour lire le contenu DASH résultant de l’assemblage du contenu, le client TVSDK doit obtenir la clé de déchiffrement du contenu transmise pendant le processus d’assemblage dans le processus d’acquisition de clés. La clé de déchiffrement du contenu client est généralement remise au client par un serveur de licence Widevine/PlayReady en réponse à une ou plusieurs publications HTTP/HTTPS du client.
-seo-description: Pour lire le contenu DASH résultant de l’assemblage du contenu, le client TVSDK doit obtenir la clé de déchiffrement du contenu transmise pendant le processus d’assemblage dans le processus d’acquisition de clés. La clé de déchiffrement du contenu client est généralement remise au client par un serveur de licence Widevine/PlayReady en réponse à une ou plusieurs publications HTTP/HTTPS du client.
-seo-title: Présentation du processus de demande de clé client
 title: Présentation du processus de demande de clé client
-uuid: 2f01f0ae-adbf-42fa-a908-4b5b9410a26d
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
