@@ -1,13 +1,10 @@
 ---
 description: 'Adobe® Access™ est une solution avancée de gestion des droits numériques et de protection du contenu pour les contenus audiovisuels de grande valeur. Les outils que vous créez à l’aide des API Java vous permettent de créer des stratégies, d’appliquer des stratégies aux fichiers contenant du contenu audio et vidéo et de chiffrer ces fichiers. Les étapes de haut niveau pour exécuter ces tâches sont les suivantes : '
-seo-description: 'Adobe® Access™ est une solution avancée de gestion des droits numériques et de protection du contenu pour les contenus audiovisuels de grande valeur. Les outils que vous créez à l’aide des API Java vous permettent de créer des stratégies, d’appliquer des stratégies aux fichiers contenant du contenu audio et vidéo et de chiffrer ces fichiers. Les étapes de haut niveau pour exécuter ces tâches sont les suivantes : '
-seo-title: Présentation
 title: Présentation
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
