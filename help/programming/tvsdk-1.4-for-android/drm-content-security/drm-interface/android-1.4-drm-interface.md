@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
-seo-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
-seo-title: Présentation de l’interface DRM de Primetime
 title: Présentation de l’interface DRM de Primetime
-uuid: 71479464-8356-4732-9774-da9f6084e6ad
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
