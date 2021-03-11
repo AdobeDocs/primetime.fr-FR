@@ -1,13 +1,10 @@
 ---
 description: Le lecteur peut écouter une série de événements qui indiquent l’état du lecteur.
-seo-description: Le lecteur peut écouter une série de événements qui indiquent l’état du lecteur.
-seo-title: Configuration des notifications
 title: Configuration des notifications
-uuid: 77cc5b45-f91f-4b71-9a67-5d17cda81da3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
