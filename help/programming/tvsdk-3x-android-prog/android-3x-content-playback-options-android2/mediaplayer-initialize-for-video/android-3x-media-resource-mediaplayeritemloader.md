@@ -1,13 +1,10 @@
 ---
 description: L’utilisation de MediaPlayerItemLoader permet d’obtenir des informations sur un flux média sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de mise en mémoire tampon afin que la lecture puisse commencer sans délai.
-seo-description: L’utilisation de MediaPlayerItemLoader permet d’obtenir des informations sur un flux média sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de mise en mémoire tampon afin que la lecture puisse commencer sans délai.
-seo-title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
 title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
-uuid: 504063af-1dd4-4268-88e7-ad5a247fdff7
 translation-type: tm+mt
-source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
