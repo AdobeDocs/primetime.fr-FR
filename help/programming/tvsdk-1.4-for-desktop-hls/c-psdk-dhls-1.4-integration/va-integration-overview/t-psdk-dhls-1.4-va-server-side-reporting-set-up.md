@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Configuration du rapports d’analyses vidéo côté serveur
 title: Configuration du rapports d’analyses vidéo côté serveur
-uuid: f9aa5ba4-82a3-4e1f-9c33-70eb4bdf9483
+description: Configuration du rapports d’analyses vidéo côté serveur
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
