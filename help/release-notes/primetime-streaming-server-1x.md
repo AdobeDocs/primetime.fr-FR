@@ -1,16 +1,12 @@
 ---
 title: Versions de Primetime Streaming Server
-seo-title: Versions de Primetime Streaming Server 1.x
 description: Nouveautés des versions 1.3 et 1.4 de Primetime Streaming Server.
-seo-description: Nouveautés des versions 1.3 et 1.4 de Primetime Streaming Server.
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -152,7 +148,7 @@ Plusieurs améliorations de performances ont été apportées aux fonctionnalit�
 
 **Installation du serveur de flux continu**
 
-1. Téléchargez le logiciel Java SE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
+1. Téléchargez le logiciel Java SE et JDK sur le [site d’Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
 2. Extrayez le fichier d’archive Adobe Primetime-Streaming Server 1.4, `Primetime- StreamingServer-1-4-0-b206-12042014.zip` sur votre disque.
 
 **Début du serveur de flux continu Primetime**
@@ -231,12 +227,12 @@ La configuration minimale requise ci-dessus est vraie pour Origine Server et Liv
 
 **Installation de Live Packager**
 
-1. Téléchargez le logiciel Java SE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
+1. Téléchargez le logiciel Java SE et JDK sur le [site d’Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
 1. Extrayez le fichier d’archive Adobe Primetime - Live Packager 1.4 `Primetime-LivePackager-1-4-0-b206-12042014.zip` sur votre disque.
 
 **Installation du serveur d’Origines HTTP**
 
-1. Téléchargez le logiciel Java JRE et JDK sur le [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
+1. Téléchargez le logiciel Java JRE et JDK sur le [site d’Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d’installation.
 1. Extrayez le fichier d’archive Adobe Primetime - HTTP Origine Server 1.4, `Primetime-HttpOrigin-1-4-0-b206-12042014.zip`, sur votre disque.
 
 **Pour début à Live** PackagerPour début au gestionnaire de package, exécutez la commande suivante à partir du répertoire racine du gestionnaire de package :\
@@ -320,7 +316,7 @@ Pour désinstaller le serveur d’Origines HTTP, arrêtez le serveur d’Origine
 
 Pour installer Offline Packager, procédez comme suit :
 
-1. Téléchargez le logiciel Java SE à partir du [site Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
+1. Téléchargez le logiciel Java SE à partir du [site de l&#39;Oracle](https://www.oracle.com/technetwork/java/javase/downloads/index.html) et suivez les instructions d&#39;installation.
 1. Extrayez le fichier d’archive Adobe Primetime - Offline Packager 1.4, `Primetime- OfflinePackager-1-4-0-b206-12042014.zip`, sur votre disque.
 
 Reportez-vous au document de prise en main de Primetime Offline Packager pour obtenir les détails de configuration disponibles [ici](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
