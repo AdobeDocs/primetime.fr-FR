@@ -1,13 +1,10 @@
 ---
 description: Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
-seo-description: Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
-seo-title: Classes de chronologie
 title: Classes de chronologie
-uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
