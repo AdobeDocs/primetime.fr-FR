@@ -1,9 +1,9 @@
 ---
-seo-title: Utilisation de la présentation de la classe DRMManager
 title: Utilisation de la présentation de la classe DRMManager
-uuid: 71ce061b-75b6-4ab5-8bbd-cafe7c3e4592
+description: Utilisation de la présentation de la classe DRMManager
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
