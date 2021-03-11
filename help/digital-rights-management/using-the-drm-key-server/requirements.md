@@ -1,9 +1,9 @@
 ---
-seo-title: Configuration requise pour l’utilisation de Primetime DRM Key Server
 title: Configuration requise pour l’utilisation de Primetime DRM Key Server
-uuid: 769f9e10-7a3e-4a38-b30d-18181b666bb4
+description: Configuration requise pour l’utilisation de Primetime DRM Key Server
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -23,7 +23,7 @@ La configuration minimale requise pour utiliser le serveur de clés DRM Primetim
 
    >[!NOTE]
    >
-   >PKCS11 64 bits est désormais pris en charge dans OpenJDK 8 : [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131) et Oracle JDK : [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
+   >PKCS11 64 bits est désormais pris en charge dans OpenJDK 8 : [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131) et JDK Oracle : [https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559](https://bugs.java.com/bugdatabase/view_bug.do?bug_id=6880559).
 
 * [Apache Tomcat 7](https://tomcat.apache.org)
 * Pouvoirs émis par l&#39;Adobe
