@@ -1,13 +1,10 @@
 ---
 description: Si pttrackingmode=simple ou ptplayer=ios-mobileweb, le serveur de manifeste renvoie un fichier au format JSON contenant Principal-M3U8, URL que le client doit utiliser pour demander le fichier M3U8 décrivant le contenu.
-seo-description: Si pttrackingmode=simple ou ptplayer=ios-mobileweb, le serveur de manifeste renvoie un fichier au format JSON contenant Principal-M3U8, URL que le client doit utiliser pour demander le fichier M3U8 décrivant le contenu.
-seo-title: Format JSON pour l’URL de demande de liste de lecture du manifeste de variante
 title: Format JSON pour l’URL de demande de liste de lecture du manifeste de variante
-uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
