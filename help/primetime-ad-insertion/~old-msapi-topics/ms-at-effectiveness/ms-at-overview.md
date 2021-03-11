@@ -1,13 +1,10 @@
 ---
 description: La plupart des annonceurs ont besoin d’informations détaillées sur le moment, la durée et le succès de l’affichage de leurs publicités. L’approche la plus efficace consiste à demander au lecteur client d’envoyer des rapports lors de la lecture des publicités, mais le serveur de manifeste prend également en charge le suivi des publicités côté serveur et hybrides.
-seo-description: La plupart des annonceurs ont besoin d’informations détaillées sur le moment, la durée et le succès de l’affichage de leurs publicités. L’approche la plus efficace consiste à demander au lecteur client d’envoyer des rapports lors de la lecture des publicités, mais le serveur de manifeste prend également en charge le suivi des publicités côté serveur et hybrides.
-seo-title: Suivi des publicités
 title: Suivi des publicités
-uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
