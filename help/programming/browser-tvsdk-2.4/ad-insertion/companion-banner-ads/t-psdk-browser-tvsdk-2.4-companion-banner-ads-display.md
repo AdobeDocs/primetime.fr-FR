@@ -1,13 +1,10 @@
 ---
 description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
-seo-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser le navigateur TVSDK à écouter les événements liés aux publicités.
-seo-title: Afficher les bannières publicitaires
 title: Afficher les bannières publicitaires
-uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
