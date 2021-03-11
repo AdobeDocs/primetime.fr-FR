@@ -1,13 +1,10 @@
 ---
 description: Les flux HLS et DASH fournissent différents encodages de débit binaire (profils) pour la même courte rafale vidéo. TVSDK peut sélectionner le niveau de qualité pour chaque éclatement en fonction de la bande passante disponible.
-seo-description: Les flux HLS et DASH fournissent différents encodages de débit binaire (profils) pour la même courte rafale vidéo. TVSDK peut sélectionner le niveau de qualité pour chaque éclatement en fonction de la bande passante disponible.
-seo-title: Débit adaptatif (ABR) pour la qualité vidéo
 title: Débit adaptatif (ABR) pour la qualité vidéo
-uuid: e5752d7e-fa7d-407c-96df-c3830a35c66e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
