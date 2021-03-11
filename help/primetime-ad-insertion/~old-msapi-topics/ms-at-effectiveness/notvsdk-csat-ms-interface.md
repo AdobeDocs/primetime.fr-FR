@@ -1,13 +1,10 @@
 ---
 description: Utilisez les paramètres facultatifs de requête pttrackingmode, pttrackingversion et pttrackingposition pour obtenir les URL vers lesquelles envoyer les informations de suivi des publicités sur la vidéo en cours. Les réponses varient selon la version de suivi et si le flux vidéo est en direct ou à la demande (VOD).
-seo-description: Utilisez les paramètres facultatifs de requête pttrackingmode, pttrackingversion et pttrackingposition pour obtenir les URL vers lesquelles envoyer les informations de suivi des publicités sur la vidéo en cours. Les réponses varient selon la version de suivi et si le flux vidéo est en direct ou à la demande (VOD).
-seo-title: API permettant aux lecteurs d’interagir avec le serveur de manifeste
 title: API permettant aux lecteurs d’interagir avec le serveur de manifeste
-uuid: ab7a19e7-6c28-4960-a56b-3b33c525e6b3
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
