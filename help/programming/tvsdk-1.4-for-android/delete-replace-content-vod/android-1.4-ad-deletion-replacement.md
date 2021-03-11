@@ -1,13 +1,10 @@
 ---
 description: Ces modifications dans l’API TVSDK Android prennent en charge la suppression et le remplacement des annonces.
-seo-description: Ces modifications dans l’API TVSDK Android prennent en charge la suppression et le remplacement des annonces.
-seo-title: Modifications de l’API de suppression et de remplacement des publicités
 title: Modifications de l’API de suppression et de remplacement des publicités
-uuid: 2bb8a331-6851-4442-99de-b01500a0e1e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
