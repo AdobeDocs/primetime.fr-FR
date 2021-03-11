@@ -1,14 +1,11 @@
 ---
 description: Suspendre et restaurer TVSDK MediaPlayer lorsqu’un écran de périphérique est désactivé et activé doit être géré par votre application.
-keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
-seo-description: Suspendre et restaurer TVSDK MediaPlayer lorsqu’un écran de périphérique est désactivé et activé doit être géré par votre application.
-seo-title: Suspension et restauration de MediaPlayer
+keywords: SurfaceView ; Suspendre ; Restaurer ; BroadcastReceiver
 title: Suspension et restauration de MediaPlayer
-uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
