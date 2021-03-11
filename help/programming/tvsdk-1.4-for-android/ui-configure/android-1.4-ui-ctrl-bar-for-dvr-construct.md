@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du DVR pour la diffusion VOD et en direct. Le support DVR inclut le concept d'une fenêtre pouvant être recherchée et le point de vie du client.
-seo-description: Vous pouvez mettre en oeuvre une barre de contrôle avec la prise en charge du DVR pour la diffusion VOD et en direct. Le support DVR inclut le concept d'une fenêtre pouvant être recherchée et le point de vie du client.
-seo-title: Construire une barre de contrôle améliorée pour le magnétoscope numérique
 title: Construire une barre de contrôle améliorée pour le magnétoscope numérique
-uuid: c9c86383-379f-452c-b35d-447ac8691fa0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
