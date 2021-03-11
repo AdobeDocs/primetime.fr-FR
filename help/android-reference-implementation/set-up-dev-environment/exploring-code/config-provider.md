@@ -1,13 +1,10 @@
 ---
 description: La classe ConfigProvider obtient la configuration du lecteur de médias. Vous devez mettre en oeuvre l’interface de configuration pour que les gestionnaires de fonctionnalités puissent lire les informations de configuration.
-seo-description: La classe ConfigProvider obtient la configuration du lecteur de médias. Vous devez mettre en oeuvre l’interface de configuration pour que les gestionnaires de fonctionnalités puissent lire les informations de configuration.
-seo-title: ConfigProvider
 title: ConfigProvider
-uuid: 2467a617-6413-4b5d-9710-894cdc751b26
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
