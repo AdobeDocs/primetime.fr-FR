@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
-seo-description: Vous pouvez utiliser plusieurs résolveurs de contenu pour gérer différentes opérations de chronologie.
-seo-title: Résolveurs de contenu pour suppression/remplacement d’annonces
 title: Résolveurs de contenu pour suppression/remplacement d’annonces
-uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
