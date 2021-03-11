@@ -1,13 +1,10 @@
 ---
 description: Depuis le moment où l’instance MediaPlayer est créée jusqu’au moment où elle est terminée, cette instance se transition d’un état à l’autre.
-seo-description: Depuis le moment où l’instance MediaPlayer est créée jusqu’au moment où elle est terminée, cette instance se transition d’un état à l’autre.
-seo-title: Cycle de vie et états de l’objet MediaPlayer
 title: Cycle de vie et états de l’objet MediaPlayer
-uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
