@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser le gestionnaire de package Bento4 d'ExpressPlay pour préparer le contenu pour toutes les solutions DRM prises en charge par Primetime Cloud DRM, optimisé par ExpressPlay.
-seo-description: Vous pouvez utiliser le gestionnaire de package Bento4 d'ExpressPlay pour préparer le contenu pour toutes les solutions DRM prises en charge par Primetime Cloud DRM, optimisé par ExpressPlay.
-seo-title: ExpressPlay Packager / Cloud DRM / TVSDK
 title: ExpressPlay Packager / Cloud DRM / TVSDK
-uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
