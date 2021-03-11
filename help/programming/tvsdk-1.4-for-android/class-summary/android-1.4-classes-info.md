@@ -1,13 +1,10 @@
 ---
 description: Ces classes fournissent des informations sur les médias.
-seo-description: Ces classes fournissent des informations sur les médias.
-seo-title: Classes d’informations
 title: Classes d’informations
-uuid: 49d6dc60-573e-41a6-aef9-2094c2699673
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
@@ -38,7 +35,7 @@ Package : [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Profil</a> </span></td> 
-   <td colname="2"> Classe qui contient des informations sur le profil du média, telles que la hauteur, la largeur et le débit. </td> 
+   <td colname="2"> Classe contenant des informations sur le profil du média, telles que la hauteur, la largeur et le débit. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Piste</a> </span></td> 
