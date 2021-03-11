@@ -1,13 +1,10 @@
 ---
 description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
-seo-description: TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
-seo-title: Eléments de l’API Blackout
 title: Eléments de l’API Blackout
-uuid: 65e1668c-6a19-4910-83a2-46d364e94e5f
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
