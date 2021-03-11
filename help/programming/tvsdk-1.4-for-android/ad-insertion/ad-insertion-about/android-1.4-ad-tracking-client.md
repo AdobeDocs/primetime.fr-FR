@@ -1,13 +1,10 @@
 ---
 description: TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
-seo-description: TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
-seo-title: Suivi des publicités clientes
 title: Suivi des publicités clientes
-uuid: 09a3a2b5-8c73-4070-a47b-b7ab490b1139
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
