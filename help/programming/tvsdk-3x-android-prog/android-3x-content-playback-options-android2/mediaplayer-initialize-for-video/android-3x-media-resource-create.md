@@ -1,13 +1,10 @@
 ---
 description: La classe MediaResource représente le contenu à charger par l'instance MediaPlayer.
-seo-description: La classe MediaResource représente le contenu à charger par l'instance MediaPlayer.
-seo-title: Création d’une ressource multimédia
 title: Création d’une ressource multimédia
-uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -76,4 +73,4 @@ La classe MediaResource représente le contenu à charger par l&#39;instance Med
 
    >[!IMPORTANT]
    >
-   >Ne chargez pas la ressource multimédia sur un thread en arrière-plan. La plupart des opérations TVSDK doivent s’exécuter sur le thread principal et les exécuter sur un thread en arrière-plan peut provoquer une erreur et une fermeture.
+   >Ne chargez pas la ressource multimédia sur un thread en arrière-plan. La plupart des opérations TVSDK doivent s’exécuter sur le thread principal et les exécuter sur un thread en arrière-plan peut entraîner une erreur et une fermeture.
