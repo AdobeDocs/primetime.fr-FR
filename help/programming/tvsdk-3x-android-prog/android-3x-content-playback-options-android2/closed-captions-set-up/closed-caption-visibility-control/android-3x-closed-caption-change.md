@@ -1,13 +1,10 @@
 ---
 description: Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-seo-description: Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-seo-title: Autoriser les utilisateurs à modifier le suivi des légendes
 title: Autoriser les utilisateurs à modifier le suivi des légendes
-uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
 
-1. Créez un bouton pour modifier le suivi de la légende fermée.
+1. Créez un bouton pour modifier le suivi des sous-titres fermés.
 
    ```xml
    <Button 
