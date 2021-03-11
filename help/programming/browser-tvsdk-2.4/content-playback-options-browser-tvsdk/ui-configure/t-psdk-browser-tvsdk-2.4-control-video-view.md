@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView.
-seo-description: Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView.
-seo-title: Contrôle de la position et de la taille de la vue vidéo
 title: Contrôle de la position et de la taille de la vue vidéo
-uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
