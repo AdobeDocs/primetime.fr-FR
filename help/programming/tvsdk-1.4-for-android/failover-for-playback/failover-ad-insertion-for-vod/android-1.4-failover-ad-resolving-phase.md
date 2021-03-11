@@ -1,13 +1,10 @@
 ---
 description: TVSDK contacte un service de diffusion publicitaire, tel que la prise de décision publicitaire Adobe Primetime, et tente d’obtenir le fichier de liste de lecture Principal qui correspond au flux vidéo de la publicité. Au cours de la phase de résolution des publicités, TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
-seo-description: TVSDK contacte un service de diffusion publicitaire, tel que la prise de décision publicitaire Adobe Primetime, et tente d’obtenir le fichier de liste de lecture Principal qui correspond au flux vidéo de la publicité. Au cours de la phase de résolution des publicités, TVSDK effectue un appel HTTP au serveur de diffusion publicitaire distant et analyse la réponse du serveur.
-seo-title: Phase de résolution des publicités
 title: Phase de résolution des publicités
-uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
