@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Liste bloquée des exécutions d’applications
 title: Liste bloquée des exécutions d’applications
-uuid: fc3c9bd6-b1e6-4534-b29c-cd9a35b80928
+description: Liste bloquée des exécutions d’applications
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '121'
 ht-degree: 0%
 
 ---
