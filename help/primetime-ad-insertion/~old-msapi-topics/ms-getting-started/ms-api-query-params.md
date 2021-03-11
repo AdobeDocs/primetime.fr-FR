@@ -1,13 +1,10 @@
 ---
 title: Paramètres de requête du serveur de manifeste
 description: Les paramètres de requête indiquent au serveur de manifeste quel type de client a envoyé la demande et ce que ce client souhaite que le serveur de manifeste fasse. Certains sont requis et d'autres ont des formats ou des valeurs acceptables spécifiques.
-seo-title: Paramètres de requête du serveur de manifeste
-seo-description: Les paramètres de requête indiquent au serveur de manifeste quel type de client a envoyé la demande et ce que ce client souhaite que le serveur de manifeste fasse. Certains sont requis et d'autres ont des formats ou des valeurs acceptables spécifiques.
-uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
