@@ -1,13 +1,10 @@
 ---
 description: La définition de stratégies consiste à définir des conditions pour qu’un utilisateur soit autorisé à lire du contenu vidéo protégé et quand et comment.
-seo-description: La définition de stratégies consiste à définir des conditions pour qu’un utilisateur soit autorisé à lire du contenu vidéo protégé et quand et comment.
-seo-title: Définition des stratégies
 title: Définition des stratégies
-uuid: 2d2672ce-5ed4-4868-aa5e-0a9e21a809b3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
