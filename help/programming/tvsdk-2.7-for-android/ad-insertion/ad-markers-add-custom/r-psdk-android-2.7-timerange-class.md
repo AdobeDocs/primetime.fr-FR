@@ -1,13 +1,10 @@
 ---
 description: Les marqueurs publicitaires personnalisés vous permettent de transmettre à TVSDK un ensemble de spécifications TimeRange qui représentent les segments de la chronologie.
-seo-description: Les marqueurs publicitaires personnalisés vous permettent de transmettre à TVSDK un ensemble de spécifications TimeRange qui représentent les segments de la chronologie.
-seo-title: TimeRange, classe
 title: TimeRange, classe
-uuid: e5a176af-29b9-4aa6-848e-5aba7988584b
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
