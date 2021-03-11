@@ -1,13 +1,10 @@
 ---
 description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements envoyés par TVSDK.
-seo-description: Votre application peut surveiller l’activité de votre lecteur et l’état changeant du lecteur en écoutant les événements envoyés par TVSDK.
-seo-title: Événements de lecture
 title: Événements de lecture
-uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
