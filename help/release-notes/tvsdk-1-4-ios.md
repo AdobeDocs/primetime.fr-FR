@@ -1,16 +1,12 @@
 ---
 title: Notes de mise à jour de TVSDK 1.4 pour iOS
-seo-title: Notes de mise à jour de TVSDK 1.4 pour iOS
 description: Les Notes de mise à jour de TVSDK 1.4 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 1.4
-seo-description: Les Notes de mise à jour de TVSDK 1.4 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 1.4
-uuid: c1df12bd-aa21-47e8-ade4-1e497882ce9b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6578'
+source-wordcount: '6550'
 ht-degree: 0%
 
 ---
@@ -164,7 +160,7 @@ Les stratégies DRM peuvent désormais spécifier la résolution maximale autori
 
 * **Intégration du SDK Nielsen**
 
-   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 de Nielsen.
+   * TVSDK prend désormais en charge l’envoi de balises mTVR et MDPR ID3 au SDK Nielsen sans intégration personnalisée. Pour commencer, téléchargez le SDK d’application iOS 3.1.2.19 Nielsen.
 
 **Version 1.4.0**
 
@@ -348,7 +344,7 @@ Comment Type: draft
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
-* (ZD #30411) - Vous pouvez obtenir des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
+* (ZD #30411) - Il se peut que vous obteniez des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
@@ -360,7 +356,7 @@ Comment Type: draft
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
-* (ZD #30411) - Vous pouvez obtenir des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
+* (ZD #30411) - Il se peut que vous obteniez des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
@@ -911,7 +907,7 @@ Correction d’une fuite de mémoire dans drmFramework avec lecture régulière 
 
 Correction d’un bogue afin que les stratégies publicitaires puissent être correctement désactivées.
 
-* (ZD n° 4017) Demande d’API iOS pour forcer la lecture des publicités à l’envers
+* (ZD #4017) Demande d’API iOS pour forcer la lecture des publicités à l’envers
 
 Correctif pour ZD #4279 résolu
 
