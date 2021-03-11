@@ -1,13 +1,10 @@
 ---
 description: TVSDK pour Android 3.4 comprend diverses fonctionnalités que vous pouvez mettre en oeuvre dans vos lecteurs.
-seo-description: TVSDK pour Android 3.4 comprend diverses fonctionnalités que vous pouvez mettre en oeuvre dans vos lecteurs.
-seo-title: Fonctionnalités de TVSDK Primetime
 title: Fonctionnalités de TVSDK Primetime
-uuid: 6e26c09c-2858-47d1-80e8-1d7c6a468b86
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
