@@ -1,9 +1,9 @@
 ---
-seo-title: Présentation du déploiement d’Adobe Access Server pour la diffusion en flux continu protégée
 title: Présentation du déploiement d’Adobe Access Server pour la diffusion en flux continu protégée
-uuid: 48a7e452-520a-4ff8-97e9-11210221256d
+description: Présentation du déploiement d’Adobe Access Server pour la diffusion en flux continu protégée
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Le package Adobe Access Server for Protected Streaming inclut [!DNL flashaccesse
 
 >[!NOTE]
 >
->Si vous avez configuré Tomcat pour inclure [!DNL commons-logging.jar] sur le chemin de classe du système (non requis pour la diffusion en flux continu protégée Adobe Access Server), la journalisation des biens communs doit être configurée pour utiliser Log4J.
+>Si vous avez configuré Tomcat pour inclure [!DNL commons-logging.jar] dans le chemin de classe du système (non requis pour la diffusion en flux continu protégée Adobe Access Server), la journalisation des biens communs doit être configurée pour utiliser Log4J.
 
 Le serveur utilise éventuellement une bibliothèque spécifique à la plate-forme ( [!DNL jsafe.dll] sous Microsoft Windows ou [!DNL libjsafe.so] sous Linux) pour des performances optimales. Copiez la bibliothèque appropriée pour votre plateforme de [!DNL thirdparty/cryptoj/]*plateforme* vers un emplacement spécifié par la variable d&#39;environnement `PATH` (ou `LD_LIBRARY_PATH` sous Linux).
 
