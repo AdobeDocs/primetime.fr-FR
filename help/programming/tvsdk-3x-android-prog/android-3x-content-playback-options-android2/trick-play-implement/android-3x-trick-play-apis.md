@@ -1,14 +1,11 @@
 ---
 description: TVSDK comprend des méthodes, des propriétés et des événements permettant de déterminer les taux valides, les taux courants, la prise en charge de la lecture de l’astuce et d’autres fonctionnalités liées à l’avance rapide et au rembobinage.
-seo-description: TVSDK comprend des méthodes, des propriétés et des événements permettant de déterminer les taux valides, les taux courants, la prise en charge de la lecture de l’astuce et d’autres fonctionnalités liées à l’avance rapide et au rembobinage.
-seo-title: Eléments API de changement de taux
 title: Eléments API de changement de taux
-uuid: c2bcd20c-0641-4d75-802c-08098786d572
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 3%
 
 ---
 
