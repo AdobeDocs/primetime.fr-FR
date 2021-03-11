@@ -1,13 +1,10 @@
 ---
 description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
-seo-description: Lorsque le navigateur TVSDK demande une publicité qui ne se trouve pas sur votre serveur d’annonces Principal, le lecteur doit la demander au serveur secondaire. Le modèle de diffusion d’annonces vidéo (VAST) définit la norme de communication entre les serveurs d’annonces et les lecteurs vidéo. Il s’agit de la réponse envoyée par le serveur d’annonces secondaires lorsque la publicité est demandée.
-seo-title: Annonces VAST
 title: Annonces VAST
-uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
