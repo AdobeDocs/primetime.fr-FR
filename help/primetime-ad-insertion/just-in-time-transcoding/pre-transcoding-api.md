@@ -1,13 +1,10 @@
 ---
 title: API de prétranscodage
 description: Vous pouvez utiliser l’API de reconditionnement juste à temps pour transcoder les éléments créatifs à l’avance, de sorte qu’une version compatible avec le contenu soit disponible si nécessaire, éliminant ainsi le délai de 2 à 4 minutes associé au reconditionnement juste à temps (JIT).
-seo-description: Vous pouvez utiliser l’API de reconditionnement juste à temps pour transcoder les éléments créatifs à l’avance, de sorte qu’une version compatible avec le contenu soit disponible si nécessaire, éliminant ainsi le délai de 2 à 4 minutes associé au reconditionnement juste à temps (JIT).
-seo-title: API de prétranscodage
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
