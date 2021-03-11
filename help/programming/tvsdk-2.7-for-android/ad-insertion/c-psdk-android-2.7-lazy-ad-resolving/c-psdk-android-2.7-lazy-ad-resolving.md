@@ -1,14 +1,11 @@
 ---
 description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: La résolution et le chargement des publicités peuvent provoquer un délai inacceptable pour un utilisateur qui attend la lecture au début. Les fonctions Lazy Ad Loading et Lazy Ad Resolving peuvent réduire ce délai de démarrage.
-seo-title: Résolution de publicités diffuses
+keywords: Lazy ; Résolution de la publicité ; Chargement de la publicité
 title: Résolution de publicités diffuses
-uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
