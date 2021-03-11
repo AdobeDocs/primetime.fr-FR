@@ -1,13 +1,10 @@
 ---
 description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
-seo-description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
-seo-title: Optimisation de la redirection HTTP 302
 title: Optimisation de la redirection HTTP 302
-uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
