@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
-seo-description: Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
-seo-title: Lecture et mise en pause d’une vidéo
 title: Lecture et mise en pause d’une vidéo
-uuid: 04b3b23f-5ef1-4cc4-a22f-f6ffa9cefce5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
