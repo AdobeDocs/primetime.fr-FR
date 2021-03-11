@@ -1,13 +1,10 @@
 ---
 description: Le gestionnaire d’analyses vidéo expose ces classes pour mettre en oeuvre le suivi vidéo dans votre lecteur.
-seo-description: Le gestionnaire d’analyses vidéo expose ces classes pour mettre en oeuvre le suivi vidéo dans votre lecteur.
-seo-title: Documentation sur les API connexes
 title: Documentation sur les API connexes
-uuid: 2dbb01c7-f8e0-47c7-baaa-84b8d54c03a6
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
