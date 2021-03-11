@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Liste bloquée des clients DRM limitée à l'accès au contenu protégé
 title: Liste bloquée des clients DRM limitée à l'accès au contenu protégé
-uuid: 38bc024e-0c5b-4c1c-8d4b-94b9e0fec67e
+description: Liste bloquée des clients DRM limitée à l'accès au contenu protégé
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
