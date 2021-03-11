@@ -1,13 +1,10 @@
 ---
-seo-title: Objet JSON pour l'ID de ressource de droits
 title: Objet JSON pour l'ID de ressource de droits
-uuid: f5b659da-1732-404c-bf00-d32a0ae39aa1
 description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne de texte simple.
-seo-description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne de texte simple.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
