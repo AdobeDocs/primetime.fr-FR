@@ -1,9 +1,9 @@
 ---
-seo-title: Créer un administrateur Secondaire
 title: Créer un administrateur Secondaire
-uuid: 2a360226-2fcb-432f-bdeb-3fa9ef0019ee
+description: Créer un administrateur Secondaire
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '355'
 ht-degree: 0%
