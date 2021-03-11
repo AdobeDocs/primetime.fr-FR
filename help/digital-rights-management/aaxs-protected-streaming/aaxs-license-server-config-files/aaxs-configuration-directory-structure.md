@@ -1,13 +1,10 @@
 ---
 description: 'L’Adobe Access Server for Protected Streaming nécessite deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration de client pour chaque client (flashaccess-locataire.xml).'
-seo-description: 'L’Adobe Access Server for Protected Streaming nécessite deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration de client pour chaque client (flashaccess-locataire.xml).'
-seo-title: Structure d'annuaire de configuration
 title: Structure d'annuaire de configuration
-uuid: c6cfc734-6b7c-4502-9bdb-c7aaca156e0e
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
