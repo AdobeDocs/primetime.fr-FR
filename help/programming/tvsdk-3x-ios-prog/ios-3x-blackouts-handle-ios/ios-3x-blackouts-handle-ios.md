@@ -1,9 +1,9 @@
 ---
-seo-title: Gestion des pannes de courant en direct
 title: Gestion des pannes de courant en direct
-uuid: 717f0242-1a6e-4347-ba4c-ea0450a37874
+description: Gestion des pannes de courant en direct
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%
