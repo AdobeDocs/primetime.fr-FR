@@ -1,13 +1,10 @@
 ---
 description: Le lecteur Primetime prend en charge l’intégration de DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux.
-seo-description: Le lecteur Primetime prend en charge l’intégration de DRM Primetime en tant que workflows DRM personnalisés. Cela signifie que votre application doit mettre en oeuvre les workflows d’authentification DRM avant de lire le flux.
-seo-title: Protection du contenu DRM
 title: Protection du contenu DRM
-uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
