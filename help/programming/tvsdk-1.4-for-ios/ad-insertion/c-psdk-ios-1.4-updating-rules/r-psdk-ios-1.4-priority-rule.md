@@ -1,14 +1,11 @@
 ---
 description: La règle de priorité définit l’ordre de priorité des créatifs publicitaires qui seront sélectionnés pour la lecture à partir d’une réponse VAST/VMAP.
-keywords: priority rule;creative selection rules
-seo-description: La règle de priorité définit l’ordre de priorité des créatifs publicitaires qui seront sélectionnés pour la lecture à partir d’une réponse VAST/VMAP.
-seo-title: Règles de priorité
+keywords: règle de priorité ; règles de sélection créative
 title: Règles de priorité
-uuid: a0924b3e-45cb-45ca-8a98-ed7d42aaed14
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
