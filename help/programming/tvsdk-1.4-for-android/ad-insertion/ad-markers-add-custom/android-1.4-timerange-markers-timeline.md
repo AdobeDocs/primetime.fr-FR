@@ -1,13 +1,10 @@
 ---
 description: Cet exemple montre la méthode recommandée pour inclure des spécifications TimeRange dans la chronologie de la lecture.
-seo-description: Cet exemple montre la méthode recommandée pour inclure des spécifications TimeRange dans la chronologie de la lecture.
-seo-title: Placer des marqueurs publicitaires de la plage de temps sur le plan de montage chronologique
 title: Placer des marqueurs publicitaires de la plage de temps sur le plan de montage chronologique
-uuid: 12935eba-2e91-40ea-a60e-02d0060c3cce
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
