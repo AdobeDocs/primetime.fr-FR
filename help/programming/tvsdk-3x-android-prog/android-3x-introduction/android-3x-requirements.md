@@ -1,13 +1,10 @@
 ---
 description: TVSDK a des exigences spécifiques pour le contenu multimédia, le contenu manifeste, la gestion des droits numériques et les versions logicielles.
-seo-description: TVSDK a des exigences spécifiques pour le contenu multimédia, le contenu manifeste, la gestion des droits numériques et les versions logicielles.
-seo-title: Conditions requises
 title: Conditions requises
-uuid: 06e61b9f-cda2-4813-8da4-fb3e0d88ad35
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
