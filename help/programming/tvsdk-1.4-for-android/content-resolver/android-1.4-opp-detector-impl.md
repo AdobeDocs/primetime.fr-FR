@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités en implémentant l'interface PlacementOpportunityDetector.
-seo-description: Vous pouvez mettre en oeuvre vos propres détecteurs d'opportunités en implémentant l'interface PlacementOpportunityDetector.
-seo-title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
 title: Mise en oeuvre d'un détecteur d'opportunités personnalisé
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
