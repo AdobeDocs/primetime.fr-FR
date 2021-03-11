@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez diffuser n’importe quel flux à partir d’une application d’expéditeur basée sur TVSDK et faire lire le flux sur Chromecast avec le navigateur TVSDK.
-seo-description: Vous pouvez diffuser n’importe quel flux à partir d’une application d’expéditeur basée sur TVSDK et faire lire le flux sur Chromecast avec le navigateur TVSDK.
-seo-title: Application Google Cast pour le navigateur TVSDK
 title: Application Google Cast pour le navigateur TVSDK
-uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
