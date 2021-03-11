@@ -1,13 +1,10 @@
 ---
 description: Si StageVideo n’est pas disponible et que votre application tente d’utiliser StageVideo, TVSDK ne génère pas d’erreur. Votre application peut déterminer si StageVideo est disponible en écoutant l’événement StageVideoAvailabilityEvent.
-seo-description: Si StageVideo n’est pas disponible et que votre application tente d’utiliser StageVideo, TVSDK ne génère pas d’erreur. Votre application peut déterminer si StageVideo est disponible en écoutant l’événement StageVideoAvailabilityEvent.
-seo-title: Vérifier si StageVideo est disponible
 title: Vérifier si StageVideo est disponible
-uuid: 09c39442-cb9a-4892-af99-3d3d9bf1d4a7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '124'
 ht-degree: 1%
 
 ---
