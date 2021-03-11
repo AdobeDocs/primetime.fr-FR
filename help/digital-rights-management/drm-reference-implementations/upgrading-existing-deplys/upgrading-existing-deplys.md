@@ -1,13 +1,10 @@
 ---
 description: Pour mettre à niveau un serveur prenant en charge le serveur de licence d’implémentation de référence version 3.0 ou Watched Folder Packager, vous devez remplacer les fichiers .war qui ont été déployés sur un serveur d’applications par les fichiers qui ont été inclus avec le serveur d’implémentation de référence DRM Adobe Primetime.
-seo-description: Pour mettre à niveau un serveur prenant en charge le serveur de licence d’implémentation de référence version 3.0 ou Watched Folder Packager, vous devez remplacer les fichiers .war qui ont été déployés sur un serveur d’applications par les fichiers qui ont été inclus avec le serveur d’implémentation de référence DRM Adobe Primetime.
-seo-title: Mettre à niveau les déploiements existants
 title: Mettre à niveau les déploiements existants
-uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
