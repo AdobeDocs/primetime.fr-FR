@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Propriétés de la diffusion des clés distantes (iOS)
 title: Propriétés de la diffusion des clés distantes (iOS)
-uuid: 17e1b756-d106-47a7-99ae-641190693870
+description: Propriétés de la diffusion des clés distantes (iOS)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
