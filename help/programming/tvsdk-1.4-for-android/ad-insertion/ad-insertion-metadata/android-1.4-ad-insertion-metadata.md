@@ -1,13 +1,10 @@
 ---
 description: Pour que le résolveur d’annonces puisse fonctionner, les fournisseurs d’annonces, tels que la prise de décision d’annonces Adobe Primetime, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
-seo-description: Pour que le résolveur d’annonces puisse fonctionner, les fournisseurs d’annonces, tels que la prise de décision d’annonces Adobe Primetime, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
-seo-title: Métadonnées d’insertion publicitaire
 title: Métadonnées d’insertion publicitaire
-uuid: f40ed53b-eba1-4f70-a29c-90cac51e8a9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Pour que le résolveur d’annonces puisse fonctionner, les fournisseurs d’annonces, tels que la prise de décision d’annonces Adobe Primetime, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
 
-TVSDK comprend la bibliothèque de prise de décision publicitaire Primetime. Pour que votre contenu comprenne des publicités provenant du serveur de prise de décision publicitaire Primetime, votre application doit fournir les `AuditudeSettings` informations &lt;a0/> requises suivantes :
+TVSDK comprend la bibliothèque de prise de décision publicitaire Primetime. Pour que votre contenu comprenne des publicités provenant du serveur de prise de décision publicitaire Primetime, votre application doit fournir les `AuditudeSettings` informations  requises suivantes :
 
 * `mediaID`, qui est un identifiant unique pour la vidéo à lire.
 
