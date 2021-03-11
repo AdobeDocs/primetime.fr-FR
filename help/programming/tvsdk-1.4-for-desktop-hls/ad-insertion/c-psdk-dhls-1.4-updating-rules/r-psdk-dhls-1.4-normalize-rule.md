@@ -1,14 +1,11 @@
 ---
 description: La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
-keywords: normalize rule;creative selection rules
-seo-description: La règle de normalisation définit une transformation d’URL à appliquer à une URL de création source obtenue à partir d’une réponse VAST/VMAP.
-seo-title: Normalisation des règles
+keywords: normaliser la règle ; règles de sélection créative
 title: Normalisation des règles
-uuid: b3ca2c8e-133a-4630-8109-17bf0a91843d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
