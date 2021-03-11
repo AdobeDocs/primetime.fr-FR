@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez définir des valeurs de contrôle ABR uniquement avec ABRControlParameters, mais vous pouvez en construire une nouvelle à tout moment.
-seo-description: Vous pouvez définir des valeurs de contrôle ABR uniquement avec ABRControlParameters, mais vous pouvez en construire une nouvelle à tout moment.
-seo-title: Configuration des débits adaptatifs à l'aide des paramètres ABRControlParameters
 title: Configuration des débits adaptatifs à l'aide des paramètres ABRControlParameters
-uuid: 7084e954-196b-492e-846f-f8b36bed13a9
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
