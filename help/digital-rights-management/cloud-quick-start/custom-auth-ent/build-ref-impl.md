@@ -1,9 +1,9 @@
 ---
-seo-title: Créer l'implémentation de référence pour les BEES
 title: Créer l'implémentation de référence pour les BEES
-uuid: c9358188-e626-4f99-a02c-4928b06d6ae2
+description: Créer l'implémentation de référence pour les BEES
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
