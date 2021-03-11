@@ -1,13 +1,10 @@
 ---
 description: Un lecteur vidéo client ou le serveur de manifeste peuvent interagir avec CRS pour obtenir un reconditionnement JIT. Les deux utilisent la même logique de sélection des publicités.
-seo-description: Un lecteur vidéo client ou le serveur de manifeste peuvent interagir avec CRS pour obtenir un reconditionnement JIT. Les deux utilisent la même logique de sélection des publicités.
-seo-title: Workflows détaillés pour la restauration JIT
 title: Workflows détaillés pour la restauration JIT
-uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
