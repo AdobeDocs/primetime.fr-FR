@@ -1,13 +1,10 @@
 ---
 description: Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
-seo-description: Lorsque la lecture atteint une coupure publicitaire, passe une coupure publicitaire ou se termine par une coupure publicitaire, TVSDK définit un comportement par défaut pour le positionnement du curseur de lecture actuel.
-seo-title: Personnalisation de la lecture avec des publicités
 title: Personnalisation de la lecture avec des publicités
-uuid: e0d3dfb2-b2d2-4590-aa19-26bea916a252
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
