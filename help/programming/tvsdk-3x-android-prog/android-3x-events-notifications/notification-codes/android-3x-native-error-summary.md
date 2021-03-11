@@ -1,9 +1,9 @@
 ---
-seo-title: Détails de la notification NATIVE_ERROR
 title: Détails de la notification NATIVE_ERROR
-uuid: d16ef930-d1f4-4984-be6e-1cf4993ab71d
+description: Détails de la notification NATIVE_ERROR
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6888'
 ht-degree: 2%
@@ -197,7 +197,7 @@ Lorsque des erreurs DRM de rapports sont signalées à l&#39;Adobe, veillez à i
    <td colname="col2"><span class="codeph"> AAXS_RequireSSL</span> </td> 
    <td colname="col3"> <p>Sur Access 4.0 et les versions ultérieures, cette erreur est générée sur iOS lorsque l'URL de clé distante n'utilise pas HTTPS comme schéma. HTTPS est requis. </p> 
     <ul id="ul_3D47777BBCA14B67B107FBBE3E37E40C"> 
-     <li id="li_7F7BBB27AE754CC39ABAAF9269739C49">Si le distributeur utilise une version antérieure à Access v4, ou une version au moins 4, mais que la plate-forme n'est pas iOS, le logiciel du distributeur doit consigner l'erreur. <p>L’erreur est générée uniquement sur iOS. </p> </li> 
+     <li id="li_7F7BBB27AE754CC39ABAAF9269739C49">Si le distributeur utilise une version antérieure à Access v4, ou une version au moins égale à 4, mais que la plate-forme n'est pas iOS, le logiciel du distributeur doit consigner l'erreur. <p>L’erreur est générée uniquement sur iOS. </p> </li> 
      <li id="li_D83C427D2A0D47408F723EF7195070B6">Si le logiciel du distributeur est au moins la version 4 d'Adobe Access et que la plate-forme est iOS, les distributeurs doivent modifier l'URL du serveur de clés distantes qu'ils utilisent en HTTPS. <p>S'ils n'utilisaient que HTTP, les distributeurs pourraient avoir à configurer un serveur HTTPS. Dans le cas contraire, les distributeurs doivent envoyer les informations consignées à l’Adobe et réaffecter le problème. </p> </li> 
     </ul> </td> 
   </tr> 
@@ -206,7 +206,7 @@ Lorsque des erreurs DRM de rapports sont signalées à l&#39;Adobe, veillez à i
    <td colname="col2"><span class="codeph"> AAXS_ContentExpired</span> </td> 
    <td colname="col3"> <p>Le contenu affiché a expiré conformément aux règles définies par le fournisseur de contenu. subErrorId contient une erreur spécifique au client ou une erreur de ligne. </p> <p> 
      <ul id="ul_1E4B3B8AE87A4E79997553BB2A0E52B9"> 
-      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">Le logiciel du distributeur doit tenter de récupérer une fois la licence du serveur pour déterminer si une nouvelle licence non expirée est disponible. <p>Si aucune licence n’est disponible ou si la licence a expiré, autorisez l’utilisateur à acquérir une nouvelle licence ou informez l’utilisateur que le contenu ne peut pas être surveillé.Si le contenu a été inclus avec une stratégie dont la date d’expiration/de fin est dépassée, les journaux du serveur de licences signalent une <span class="codeph"> exception PolicyEvaluationException</span> et indiquent que la date de fin de la stratégie est dépassée (code d’erreur du serveur 3033). Vérifiez les fichiers journaux du serveur. </p> <p>Dans la mesure du possible, les clients doivent vérifier la stratégie qu’ils ont utilisée lors de l’emballage pour vérifier si elle a expiré. L'outil de ligne de commande Java est : <code> java&nbsp;-jar&nbsp;libs/AdobePolicyManager.jar&nbsp;&nbsp;&nbsp;detail&nbsp;demo.pol</code> </p> </li> 
+      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">Le logiciel du distributeur doit tenter de récupérer une fois la licence du serveur pour déterminer si une nouvelle licence non expirée est disponible. <p>Si aucune licence n'est disponible ou si la licence a expiré, autorisez l'utilisateur à acquérir une nouvelle licence ou informez l'utilisateur que le contenu ne peut pas être surveillé.Si le contenu a été inclus avec une stratégie dont la date d'expiration/de fin est dépassée, les journaux du serveur de licences signalent une <span class="codeph"> exception PolicyEvaluationException</span> et indiquent que la date de fin de la stratégie est dépassée (code d'erreur du serveur 30303). Vérifiez les fichiers journaux du serveur. </p> <p>Dans la mesure du possible, les clients doivent vérifier la stratégie qu’ils ont utilisée lors de l’emballage pour vérifier si elle a expiré. L'outil de ligne de commande Java est : <code> java&nbsp;-jar&nbsp;libs/AdobePolicyManager.jar&nbsp;&nbsp;&nbsp;detail&nbsp;demo.pol</code> </p> </li> 
       <li id="li_50DBE680D8F04E7DA3E29C65A93188E7">Le distributeur doit vérifier si les dates d'expiration des licences sont configurées comme prévu. </li> 
      </ul> </p> <p>Pour plus d’informations sur ce code d’erreur, voir <a href="https://forums.adobe.com/thread/1300813" format="https" scope="external"> 3303 (Content Expired) with AMS/FMS using a Live Stream?</a>. </p> </td> 
   </tr> 
@@ -1047,7 +1047,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Les insertions postroulées ne sont pas autorisées sur un support en direct. Ils sont toutefois autorisés une fois que le serveur a marqué le support comme terminé. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> INTERNAL_ERROR</span> </td> 
    <td colname="col3"> Un problème très rare qui ne devrait jamais se produire. </td> 
   </tr> 
@@ -1124,7 +1124,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 76 </td> 
    <td colname="col2"><span class="codeph"> AUDIO_DÉBUT_ERROR</span> </td> 
-   <td colname="col3"> Impossible de début de l'audio. </td> 
+   <td colname="col3"> Impossible de début du son. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 77 </td> 
@@ -1147,7 +1147,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col3"> Impossible de lire à partir d'un fichier. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Une erreur s'est produite lors de l'analyse des données ID3. </td> 
   </tr> 
