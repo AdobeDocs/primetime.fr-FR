@@ -1,13 +1,10 @@
 ---
 description: TVSDK prend en charge la suppression et le remplacement programmatiques du contenu publicitaire dans les flux VOD.
-seo-description: TVSDK prend en charge la suppression et le remplacement programmatiques du contenu publicitaire dans les flux VOD.
-seo-title: Supprimer et remplacer des publicités dans les flux VOD
 title: Supprimer et remplacer des publicités dans les flux VOD
-uuid: 8f51c413-a8c9-46c1-aec6-0d536feaaeb7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
