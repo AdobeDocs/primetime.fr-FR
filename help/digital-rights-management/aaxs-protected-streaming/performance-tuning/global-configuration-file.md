@@ -1,9 +1,9 @@
 ---
-seo-title: Fichier de configuration global
 title: Fichier de configuration global
-uuid: 48c45f56-55c2-4526-b854-5552caf21541
+description: Fichier de configuration global
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 L’impact le plus important sur les performances est l’utilisation de paramètres dans le fichier de configuration global, flashaccess-global.xml. Ces paramètres comprennent les éléments `<Caching>` et `<Logging>`.
 
-* `<Caching>` L’ `<Caching>` élément contrôle la mise en cache des fichiers de configuration en mémoire. L’élément `<Caching>` a la syntaxe suivante :
+* `<Caching>` L’ `<Caching>` élément contrôle la mise en cache des fichiers de configuration en mémoire. L&#39;élément `<Caching>` a la syntaxe suivante :
 
    ```
    <Caching refreshDelaySeconds="..." numTenants="..."/>
@@ -25,7 +25,7 @@ L’impact le plus important sur les performances est l’utilisation de paramè
 
    * `numTenants` indique le nombre de locataires. Une valeur inférieure au nombre de locataires a probablement une incidence sur le rendement, car les demandes aux locataires restants entraînent des erreurs de cache. Une absence de cache pour les données de configuration a un impact négatif sur les performances. Par conséquent, Adobe vous recommande de définir cette valeur plus élevée que le nombre de locataires configurés pour le serveur, à moins que la mémoire ne soit limitée.
 
-* `<Logging>` L’ `<Logging>` élément spécifie le niveau de journalisation et la fréquence d’enroulement des fichiers journaux. L’élément `<Logging>` a la syntaxe suivante :
+* `<Logging>` L’ `<Logging>` élément spécifie le niveau de journalisation et la fréquence d’enroulement des fichiers journaux. L&#39;élément `<Logging>` a la syntaxe suivante :
 
    ```
    <Logging level="..." rollingFrequency=""/>
