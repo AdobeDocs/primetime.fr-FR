@@ -1,13 +1,10 @@
 ---
 description: TVSDK offre une expérience TV de la possibilité de se joindre au milieu d’une publicité, dans des flux en direct.
-seo-description: TVSDK offre une expérience TV de la possibilité de se joindre au milieu d’une publicité, dans des flux en direct.
-seo-title: Insertion partielle de coupures publicitaires
 title: Insertion partielle de coupures publicitaires
-uuid: b6ee62da-c4d1-42f2-b03d-f73247f8e585
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
