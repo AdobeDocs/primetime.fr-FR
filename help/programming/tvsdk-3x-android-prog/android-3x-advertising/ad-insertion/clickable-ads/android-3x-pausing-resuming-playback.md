@@ -1,13 +1,10 @@
 ---
 description: Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
-seo-description: Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
-seo-title: Pause et reprise de la lecture
 title: Pause et reprise de la lecture
-uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
