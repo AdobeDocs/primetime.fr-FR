@@ -1,13 +1,10 @@
 ---
 description: La gestion du basculement se produit lorsqu’une variante de liste de lecture comporte plusieurs rendus pour le même débit et que l’un des rendus ne fonctionne plus. TVSDK bascule entre les rendus.
-seo-description: La gestion du basculement se produit lorsqu’une variante de liste de lecture comporte plusieurs rendus pour le même débit et que l’un des rendus ne fonctionne plus. TVSDK bascule entre les rendus.
-seo-title: Basculement
 title: Basculement
-uuid: 53cf611f-59e6-4728-a287-b98907d7f7bb
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
