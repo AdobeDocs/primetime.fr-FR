@@ -1,9 +1,9 @@
 ---
-seo-title: Création d’une interface utilisateur d’authentification
 title: Création d’une interface utilisateur d’authentification
-uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
+description: Création d’une interface utilisateur d’authentification
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
