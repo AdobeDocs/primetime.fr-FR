@@ -1,13 +1,10 @@
 ---
 description: Votre application doit utiliser les objets PTTimedMetadata appropriés aux moments appropriés.
-seo-description: Votre application doit utiliser les objets PTTimedMetadata appropriés aux moments appropriés.
-seo-title: Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués
 title: Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués
-uuid: d26ed49e-fb29-4765-86e9-9ebbe5fa0a2b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
