@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
-seo-description: Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
-seo-title: Initialisation et configuration des analyses vidéo
 title: Initialisation et configuration des analyses vidéo
-uuid: d1dc9425-e67c-4e13-aee7-302149352506
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
