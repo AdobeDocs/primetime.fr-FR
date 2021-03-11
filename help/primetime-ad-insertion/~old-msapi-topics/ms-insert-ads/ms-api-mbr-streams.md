@@ -1,13 +1,10 @@
 ---
 description: Les demandes d’insertion d’annonces du client spécifient généralement plus d’un débit dans la liste de lecture au format M3U8 de variante. Le serveur de manifeste génère et renvoie un nouveau fichier de variante M3U8 contenant un lien M3U8 distinct pour chaque débit binaire. Il génère également un identifiant de groupe unique pour lier ces M3U8s ensemble.
-seo-description: Les demandes d’insertion d’annonces du client spécifient généralement plus d’un débit dans la liste de lecture au format M3U8 de variante. Le serveur de manifeste génère et renvoie un nouveau fichier de variante M3U8 contenant un lien M3U8 distinct pour chaque débit binaire. Il génère également un identifiant de groupe unique pour lier ces M3U8s ensemble.
-seo-title: Flux de débit binaire multiples
 title: Flux de débit binaire multiples
-uuid: f59cb765-e000-43e0-8d3a-8149a3c5b96e
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
