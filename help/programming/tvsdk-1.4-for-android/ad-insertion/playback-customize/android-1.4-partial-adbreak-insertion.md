@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct.
-seo-description: Vous pouvez activer une expérience TV de la possibilité de rejoindre au milieu d’une publicité, dans des flux en direct.
-seo-title: Insertion partielle d’une coupure publicitaire
 title: Insertion partielle d’une coupure publicitaire
-uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
