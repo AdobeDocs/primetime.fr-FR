@@ -1,13 +1,10 @@
 ---
 description: Si votre système a accès au décodage assisté par le matériel, vous pouvez obtenir un jeu plus fluide qu’avec la mise en oeuvre logicielle pure de TVSDK en utilisant le format iFrame.
-seo-description: Si votre système a accès au décodage assisté par le matériel, vous pouvez obtenir un jeu plus fluide qu’avec la mise en oeuvre logicielle pure de TVSDK en utilisant le format iFrame.
-seo-title: Opérations de jeux de ficelles plus fluides
 title: Opérations de jeux de ficelles plus fluides
-uuid: 959d6c67-b64f-4666-8de7-54d247459fd1
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
