@@ -1,13 +1,10 @@
 ---
 description: Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
-seo-description: Le système de notification TVSDK produit divers avis d’erreur, d’avertissement et d’information qui fournissent des métadonnées de diagnostic.
-seo-title: Codes de notification
 title: Codes de notification
-uuid: 6babb203-b6d4-4b11-9fae-41e7db7fd570
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
