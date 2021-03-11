@@ -1,13 +1,10 @@
 ---
 description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, définissez le taux de lecture de MediaPlayer sur une valeur autre que 1.
-seo-description: Lorsque les utilisateurs avancent rapidement ou reviennent rapidement à travers le média, ils sont en mode de jeu de tour. Pour passer en mode de lecture par astuces, définissez le taux de lecture de MediaPlayer sur une valeur autre que 1.
-seo-title: Mise en oeuvre rapide de l’avance et du rembobinage
 title: Mise en oeuvre rapide de l’avance et du rembobinage
-uuid: d54c8c61-887f-4362-9085-e443859854b9
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
