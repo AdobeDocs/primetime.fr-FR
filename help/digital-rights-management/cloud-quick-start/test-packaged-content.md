@@ -1,9 +1,9 @@
 ---
-seo-title: Test du contenu assemblé
 title: Test du contenu assemblé
-uuid: 99df417a-85ce-45da-bfcf-33df2197bf5b
+description: Test du contenu assemblé
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
