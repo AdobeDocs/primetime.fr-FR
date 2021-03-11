@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez écouter les notifications et ajouter vos propres notifications à l’historique des notifications.
-seo-description: Vous pouvez écouter les notifications et ajouter vos propres notifications à l’historique des notifications.
-seo-title: Configuration de votre système de notification
 title: Configuration de votre système de notification
-uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
