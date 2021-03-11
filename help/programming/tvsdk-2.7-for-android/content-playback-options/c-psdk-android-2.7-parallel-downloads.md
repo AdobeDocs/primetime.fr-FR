@@ -1,13 +1,10 @@
 ---
 description: Le téléchargement de fichiers vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
-seo-description: Le téléchargement de fichiers vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
-seo-title: Téléchargements parallèles
 title: Téléchargements parallèles
-uuid: fa3edb50-7c24-433c-bc50-72d6cf73d834
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
