@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK distribue des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
-seo-description: Le navigateur TVSDK distribue des événements/notifications dans des séquences généralement attendues. Votre lecteur peut mettre en oeuvre des actions en fonction des événements de la séquence prévue.
-seo-title: Ordre des événements de lecture
 title: Ordre des événements de lecture
-uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
