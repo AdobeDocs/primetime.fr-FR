@@ -1,13 +1,10 @@
 ---
 description: Le serveur de référence SEES vous montre comment activer le service de droits de liaison de périphérique à l'aide d'ExpressPlay.
-seo-description: Le serveur de référence SEES vous montre comment activer le service de droits de liaison de périphérique à l'aide d'ExpressPlay.
-seo-title: Droit de liaison de périphérique du service de référence
 title: Droit de liaison de périphérique du service de référence
-uuid: 22ce2f8e-1758-4528-8caf-60d209839afe
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
