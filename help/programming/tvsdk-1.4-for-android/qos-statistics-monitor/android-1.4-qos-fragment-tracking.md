@@ -1,13 +1,10 @@
 ---
 description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-seo-title: Suivi au niveau du fragment à l’aide des informations de chargement
 title: Suivi au niveau du fragment à l’aide des informations de chargement
-uuid: a6572823-d525-4ce0-806a-3feb20678cb0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -41,7 +38,7 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
       <tr> 
       <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <span class="codeph"> long  </span> </td> 
-      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes supplémentaires pour télécharger l’intégralité du fragment. </p> </td> 
+      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes de plus pour télécharger l’intégralité du fragment. </p> </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
@@ -81,7 +78,7 @@ TVSDK fournit également des informations sur les ressources téléchargées sui
       <li id="li_A093552B492A44FD8B30785E465F6886">MANIFEST - Liste de lecture/manifeste </li> 
       <li id="li_DEF9AC71AA564F9BB4C5D4E834432EE5">FRAGMENT - Un fragment </li> 
       <li id="li_57821F47B6F04CD38570BCE6447A01B8">TRACK : fragment associé à une piste spécifique </li> 
-      </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, FILE est renvoyé. </td> 
+      </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, le fichier est renvoyé. </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> url  </span> </td> 
