@@ -1,13 +1,10 @@
 ---
 description: Ce tableau fournit des informations détaillées sur les notifications de type INFO.
-seo-description: Ce tableau fournit des informations détaillées sur les notifications de type INFO.
-seo-title: Codes de notification INFO
 title: Codes de notification INFO
-uuid: 10145ce6-9eb0-4829-85dd-1acfe97b07e8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '180'
 ht-degree: 4%
 
 ---
