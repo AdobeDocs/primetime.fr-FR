@@ -1,13 +1,10 @@
 ---
 description: Les objets PTNotification fournissent des informations sur les changements d'état du lecteur, les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur.
-seo-description: Les objets PTNotification fournissent des informations sur les changements d'état du lecteur, les avertissements et les erreurs. Les erreurs qui arrêtent la lecture de la vidéo modifient également l’état du lecteur.
-seo-title: Contenu de la notification
 title: Contenu de la notification
-uuid: d42d2e89-1bdd-4be0-8a69-821fec6bbc75
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
