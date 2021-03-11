@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte de sous-titrage.
-seo-description: Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte de sous-titrage.
-seo-title: Définition des styles de sous-titrage
 title: Définition des styles de sous-titrage
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
