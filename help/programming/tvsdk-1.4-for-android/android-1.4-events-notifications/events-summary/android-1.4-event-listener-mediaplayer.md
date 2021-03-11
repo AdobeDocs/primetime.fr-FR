@@ -1,13 +1,10 @@
 ---
 description: TVSDK distribue des événements de lecture publicitaire en réponse à des opérations liées à la publicité, telles que le début de la lecture d’une publicité.
-seo-description: TVSDK distribue des événements de lecture publicitaire en réponse à des opérations liées à la publicité, telles que le début de la lecture d’une publicité.
-seo-title: Événements de lecture des publicités
 title: Événements de lecture des publicités
-uuid: dd6991ae-3e33-4d92-92e9-26b1086a555a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
