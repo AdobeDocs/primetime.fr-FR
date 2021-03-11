@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez mettre en oeuvre votre propre système de journalisation.
-seo-description: Vous pouvez mettre en oeuvre votre propre système de journalisation.
-seo-title: Présentation de la journalisation personnalisée
 title: Présentation de la journalisation personnalisée
-uuid: f056d7d7-ec3a-4cf1-997f-72a89bbc9447
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
