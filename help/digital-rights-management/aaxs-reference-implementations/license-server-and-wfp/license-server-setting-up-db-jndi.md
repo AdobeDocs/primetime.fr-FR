@@ -1,9 +1,9 @@
 ---
-seo-title: Configuration de la base de données et configuration de la source de données JNDI
 title: Configuration de la base de données et configuration de la source de données JNDI
-uuid: 1326523f-c053-4169-a934-1b2d3907b1f4
+description: Configuration de la base de données et configuration de la source de données JNDI
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%
