@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
-seo-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
-seo-title: Utiliser des métadonnées minutées
 title: Utiliser des métadonnées minutées
-uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '152'
 ht-degree: 1%
 
 ---
