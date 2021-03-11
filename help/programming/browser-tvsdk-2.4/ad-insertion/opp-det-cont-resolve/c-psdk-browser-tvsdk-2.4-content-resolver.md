@@ -1,13 +1,10 @@
 ---
 description: Un détecteur d’opportunités est un composant Browser TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-seo-description: Un détecteur d’opportunités est un composant Browser TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-seo-title: Personnaliser les détecteurs d'opportunités et les résolveurs de contenu
 title: Personnaliser les détecteurs d'opportunités et les résolveurs de contenu
-uuid: d4926933-5966-4cd8-8050-c81c5e3c8545
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---
