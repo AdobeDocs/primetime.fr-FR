@@ -1,13 +1,10 @@
 ---
 description: MediaResource représente le contenu qui est sur le point d’être chargé par l’instance MediaPlayer.
-seo-description: MediaResource représente le contenu qui est sur le point d’être chargé par l’instance MediaPlayer.
-seo-title: Classes MediaPlayer et MediaResource
 title: Classes MediaPlayer et MediaResource
-uuid: 36ef75f3-08f7-4fc5-88a7-9bab9198b917
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
