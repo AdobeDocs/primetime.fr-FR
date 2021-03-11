@@ -1,13 +1,10 @@
 ---
 description: Pour recevoir des notifications concernant les balises dans le manifeste, enregistrez le ou les écouteurs de événement appropriés.
-seo-description: Pour recevoir des notifications concernant les balises dans le manifeste, enregistrez le ou les écouteurs de événement appropriés.
-seo-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
 title: Ajouter des écouteurs pour les notifications de métadonnées minutées
-uuid: 419f4204-e3c3-4608-beb4-4cd259c8474d
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
