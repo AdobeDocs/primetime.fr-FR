@@ -1,13 +1,10 @@
 ---
 description: Les éditeurs peuvent créer des lecteurs vidéo compatibles HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces avec le serveur de manifeste pour les cas de flux en direct et de vidéo à la demande (VOD) sont légèrement différentes.
-seo-description: Les éditeurs peuvent créer des lecteurs vidéo compatibles HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces avec le serveur de manifeste pour les cas de flux en direct et de vidéo à la demande (VOD) sont légèrement différentes.
-seo-title: Présentation du suivi côté client non TVSDK
 title: Présentation du suivi côté client non TVSDK
-uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
