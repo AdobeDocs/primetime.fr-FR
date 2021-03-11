@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez remplacer le comportement par défaut de la façon dont TVSDK traite les recherches sur les publicités lors de l’utilisation de marqueurs publicitaires personnalisés.
-seo-description: Vous pouvez remplacer le comportement par défaut de la façon dont TVSDK traite les recherches sur les publicités lors de l’utilisation de marqueurs publicitaires personnalisés.
-seo-title: Contrôler le comportement de lecture pour la recherche sur les marques publicitaires personnalisées
 title: Contrôler le comportement de lecture pour la recherche sur les marques publicitaires personnalisées
-uuid: ec95a22f-0143-4c80-826f-d6b40e77cf26
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
