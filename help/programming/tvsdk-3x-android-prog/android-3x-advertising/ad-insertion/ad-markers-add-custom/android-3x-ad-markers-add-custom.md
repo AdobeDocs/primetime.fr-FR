@@ -1,13 +1,10 @@
 ---
 description: En utilisant des marqueurs publicitaires personnalisés, vous pouvez marquer des sections spécifiques du contenu principal comme des périodes de contenu liées à la publicité.
-seo-description: En utilisant des marqueurs publicitaires personnalisés, vous pouvez marquer des sections spécifiques du contenu principal comme des périodes de contenu liées à la publicité.
-seo-title: Ajouter des marqueurs publicitaires personnalisés
 title: Ajouter des marqueurs publicitaires personnalisés
-uuid: 47b08d5e-8d99-4048-a579-77804a5edcdd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
