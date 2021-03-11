@@ -1,9 +1,9 @@
 ---
-seo-title: Générer une demande de signature de certificat (demandeur)
 title: Générer une demande de signature de certificat (demandeur)
-uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
+description: Générer une demande de signature de certificat (demandeur)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
