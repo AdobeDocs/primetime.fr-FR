@@ -1,9 +1,9 @@
 ---
-seo-title: Configuration du chemin d’accès et du chemin de classe
 title: Configuration du chemin d’accès et du chemin de classe
-uuid: cf10fafa-125e-450c-83ae-60b990dab6b5
+description: Configuration du chemin d’accès et du chemin de classe
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 1%
