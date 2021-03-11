@@ -1,9 +1,9 @@
 ---
-seo-title: 'Outils de ligne de commande pour la création de packages de contenu et la création de listes de révocation '
 title: 'Outils de ligne de commande pour la création de packages de contenu et la création de listes de révocation '
-uuid: 2c740521-2004-4320-88e1-118b84e80e31
+description: 'Outils de ligne de commande pour la création de packages de contenu et la création de listes de révocation '
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
