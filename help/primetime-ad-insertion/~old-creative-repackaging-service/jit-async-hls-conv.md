@@ -1,13 +1,10 @@
 ---
 description: CRS fournit des solutions de reconditionnement juste à temps et asynchrones et de conversion HLS en HLS. Le résultat du reconditionnement est une version au format HLS de l’élément créatif publicitaire d’origine. CRS place la version au format HLS sur le serveur CDN (Content diffusion Network) pour l’utiliser si nécessaire.
-seo-description: CRS fournit des solutions de reconditionnement juste à temps et asynchrones et de conversion HLS en HLS. Le résultat du reconditionnement est une version au format HLS de l’élément créatif publicitaire d’origine. CRS place la version au format HLS sur le serveur CDN (Content diffusion Network) pour l’utiliser si nécessaire.
-seo-title: Principales utilisations des SIR
 title: Principales utilisations des SIR
-uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
