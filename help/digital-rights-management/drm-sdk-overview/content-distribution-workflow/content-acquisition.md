@@ -1,13 +1,10 @@
 ---
 description: 'Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web ou d’un réseau de diffusion de contenu, il doit également acquérir une licence qui contient une clé pour déchiffrer la vidéo avant de pouvoir la lire. Les étapes suivantes illustrent un processus commun d’accès au contenu protégé par un Flash Player d’exécution ou Adobe AIR d’ordinateur '
-seo-description: 'Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web ou d’un réseau de diffusion de contenu, il doit également acquérir une licence qui contient une clé pour déchiffrer la vidéo avant de pouvoir la lire. Les étapes suivantes illustrent un processus commun d’accès au contenu protégé par un Flash Player d’exécution ou Adobe AIR d’ordinateur '
-seo-title: Acquisition de contenu
 title: Acquisition de contenu
-uuid: 80253746-bc31-43f0-b28b-7a1aa7fe34a7
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web
 
    Ce processus d&#39;attribution d&#39;un certificat unique s&#39;appelle *individualisation*. L’individualisation identifie de manière unique à la fois l’ordinateur et le Flash Player ou l’exécution Adobe AIR utilisé pour lire le contenu.
 
-   Le processus d’individualisation permet de lier les licences téléchargées à un ordinateur spécifique sur lequel le client est installé. Chaque ordinateur reçoit des informations d’identification d’ordinateur uniques (clé privée de l’ordinateur et certificat de l’ordinateur). Si un client spécifique est compromis, il peut être révoqué et interdit d’acquérir des licences pour le nouveau contenu.
+   Le processus d’individualisation permet de lier les licences téléchargées à un ordinateur spécifique sur lequel le client est installé. Chaque ordinateur reçoit des informations d’identification d’ordinateur uniques (clé privée de l’ordinateur et certificat de l’ordinateur). Si un client spécifique doit être compromis, il peut être révoqué et interdit d’acquérir des licences pour le nouveau contenu.
 
 1. Le client analyse le contenu protégé lorsqu’il commence à télécharger ou à diffuser en continu sur l’ordinateur du consommateur et extrait l’URL du serveur de licences du détaillant à partir des métadonnées DRM Primetime incorporées dans le fichier.
 
@@ -44,5 +41,5 @@ Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web
 
    ![](assets/FMRMS_fig01_web.png)
 
-   L&#39;exemple précédent ne montre qu&#39;un seul processus possible. Vous pouvez également utiliser un flux de travaux avec un téléchargement proactif de contenu lorsque l’acquisition de licence se produit bien plus tard. Une autre option consiste à implémenter un processus de pré-commande dans lequel l’acquisition de licence se produit avant l’accès au contenu.
+   L&#39;exemple précédent ne montre qu&#39;un seul processus possible. Vous pouvez également utiliser un processus avec un téléchargement proactif de contenu lorsque l’acquisition de licence se produit bien plus tard. Une autre option consiste à implémenter un processus de pré-commande dans lequel l’acquisition de licence se produit avant l’accès au contenu.
 
