@@ -1,9 +1,9 @@
 ---
-seo-title: Acquisition de contenu
 title: Acquisition de contenu
-uuid: f3d8b4ef-bc45-4c2d-962b-638512ca0ef3
+description: Acquisition de contenu
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web
 
    Ce processus d&#39;attribution d&#39;un certificat unique s&#39;appelle *individualisation*. L’individualisation identifie de manière unique à la fois l’ordinateur et le Flash Player ou l’exécution Adobe AIR utilisé pour lire le contenu.
 
-   Le processus d’individualisation permet de lier les licences téléchargées à un ordinateur spécifique sur lequel le client est installé. Chaque ordinateur reçoit des informations d’identification d’ordinateur uniques (clé privée de l’ordinateur et certificat de l’ordinateur). Si un client spécifique est compromis, il peut être révoqué et interdit d’acquérir des licences pour le nouveau contenu.
+   Le processus d’individualisation permet de lier les licences téléchargées à un ordinateur spécifique sur lequel le client est installé. Chaque ordinateur reçoit des informations d’identification d’ordinateur uniques (clé privée de l’ordinateur et certificat de l’ordinateur). Si un client spécifique doit être compromis, il peut être révoqué et interdit d’acquérir des licences pour le nouveau contenu.
 
 1. Le client analyse le contenu protégé lorsqu’il commence à télécharger ou à diffuser en continu sur l’ordinateur du consommateur et extrait l’URL du serveur de licences du détaillant des métadonnées DRM intégrées au fichier.
 
@@ -42,5 +42,5 @@ Lorsqu’un utilisateur acquiert un fichier de contenu protégé d’un site Web
 
    ![](assets/FMRMS_fig01_web.png)
 
-   L&#39;exemple précédent ne montre qu&#39;un seul processus possible. Vous pouvez également utiliser un flux de travaux avec un téléchargement proactif de contenu lorsque l’acquisition de licence se produit bien plus tard. Une autre option consiste à implémenter un processus de pré-commande dans lequel l’acquisition de licence se produit avant l’accès au contenu.
+   L&#39;exemple précédent ne montre qu&#39;un seul processus possible. Vous pouvez également utiliser un processus avec un téléchargement proactif de contenu lorsque l’acquisition de licence se produit bien plus tard. Une autre option consiste à implémenter un processus de pré-commande dans lequel l’acquisition de licence se produit avant l’accès au contenu.
 
