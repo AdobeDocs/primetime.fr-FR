@@ -1,13 +1,10 @@
 ---
 description: Pour utiliser TVSDK de manière efficace, vous devez prendre en compte certains détails de son fonctionnement et suivre certaines bonnes pratiques.
-seo-description: Pour utiliser TVSDK de manière efficace, vous devez prendre en compte certains détails de son fonctionnement et suivre certaines bonnes pratiques.
-seo-title: Considérations et bonnes pratiques
 title: Considérations et bonnes pratiques
-uuid: e698ae09-280b-4406-a9b8-4f468b7a6b9c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
