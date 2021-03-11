@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser des incrustations HTML avec StageVideo pour afficher des éléments d’interface dans le plan vidéo de la liste d’affichage du Flash. Ce plan se trouve au-dessus du plan StageVideo, de sorte que StageVideo s’affiche toujours derrière n’importe quel élément de liste d’affichage de Flash.
-seo-description: Vous pouvez utiliser des incrustations HTML avec StageVideo pour afficher des éléments d’interface dans le plan vidéo de la liste d’affichage du Flash. Ce plan se trouve au-dessus du plan StageVideo, de sorte que StageVideo s’affiche toujours derrière n’importe quel élément de liste d’affichage de Flash.
-seo-title: Incrustations StageVideo et HTML
 title: Incrustations StageVideo et HTML
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
