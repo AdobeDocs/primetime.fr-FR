@@ -1,14 +1,11 @@
 ---
 description: Vous pouvez activer ou désactiver la fonction Résolution des publicités en différé à l’aide du mécanisme de chargement des publicités en différé existant (la résolution des publicités en différé est désactivée par défaut).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Vous pouvez activer ou désactiver la fonction Résolution des publicités en différé à l’aide du mécanisme de chargement des publicités en différé existant (la résolution des publicités en différé est désactivée par défaut).
-seo-title: Activer la résolution des annonces parentes
+keywords: Lazy ; Résolution de la publicité ; Chargement de la publicité ; Délai de chargement
 title: Activer la résolution des annonces parentes
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
