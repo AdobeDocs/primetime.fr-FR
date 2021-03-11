@@ -1,13 +1,10 @@
 ---
 description: Pour commencer à utiliser Primetime DRM Cloud, proposé par ExpressPlay, vous devez configurer des comptes Cert d'Adobe et ExpressPlay avec l'aide de votre représentant d'Adobe.
-seo-description: Pour commencer à utiliser Primetime DRM Cloud, proposé par ExpressPlay, vous devez configurer des comptes Cert d'Adobe et ExpressPlay avec l'aide de votre représentant d'Adobe.
-seo-title: Obtenir des privilèges d'accès (comptes, etc.)
 title: Obtenir des privilèges d'accès (comptes, etc.)
-uuid: 51b95676-2121-4d8b-8756-9fd097185a13
 translation-type: tm+mt
-source-git-commit: 9792aff8586c46aabb5bfb70864cfe98c28e602d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
