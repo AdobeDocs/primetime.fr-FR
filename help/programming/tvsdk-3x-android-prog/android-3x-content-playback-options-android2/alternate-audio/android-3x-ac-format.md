@@ -1,13 +1,10 @@
 ---
 description: Le format Audio Codec 3 (AC-3, également appelé Dolby Digital®) 5.1, permet aux fournisseurs de contenu de compresser la taille des fichiers audio multicanaux sans nuire à la qualité du son. AC-3 est un format 5.1, ce qui signifie qu’il fournit cinq canaux de bande passante complète pour une expérience utilisateur plus riche.
-seo-description: Le format Audio Codec 3 (AC-3, également appelé Dolby Digital®) 5.1, permet aux fournisseurs de contenu de compresser la taille des fichiers audio multicanaux sans nuire à la qualité du son. AC-3 est un format 5.1, ce qui signifie qu’il fournit cinq canaux de bande passante complète pour une expérience utilisateur plus riche.
-seo-title: Format AC-3 5.1
 title: Format AC-3 5.1
-uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -41,7 +38,7 @@ Les fonctionnalités AC-3 5.1 suivantes ne sont pas prises en charge :
 
 ## Sélectionner le support pris en charge {#section_0D7E717BE18B418D817EE017EF2375D1}
 
-Voici le flux de travail typique qui se produit lorsque TVSDK trouve un manifeste avec un média AC-3 et AAC :
+Voici le flux de travaux typique qui se produit lorsque TVSDK trouve un manifeste avec un média AC-3 et AAC :
 
 1. REQUÊTES TVSDK qui codent le périphérique peut prendre en charge.
 1. Le codec de meilleure qualité est sélectionné.
