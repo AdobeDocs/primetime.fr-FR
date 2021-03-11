@@ -1,13 +1,10 @@
 ---
 description: Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et en téléchargeant les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture des débits haute résolution et les médias associés et poursuit le processus de téléchargement.
-seo-description: Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et en téléchargeant les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture des débits haute résolution et les médias associés et poursuit le processus de téléchargement.
-seo-title: Lecture et basculement du média
 title: Lecture et basculement du média
-uuid: 197a6ee0-f1ff-40ac-bd49-eafeae6167d4
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -64,7 +61,7 @@ Si un segment est manquant sur le serveur, car, par exemple, le fichier manifest
 
 Lorsque TVSDK ne peut pas obtenir un autre segment, il déclenche une notification d’erreur `CONTENT_ERROR`. Cette notification contient une notification interne avec le code `DOWNLOAD_ERROR`. Si le flux présentant le problème est une autre piste audio, TVSDK génère la notification d’erreur `AUDIO_TRACK_ERROR`.
 
-Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segment continus à 5, après quoi la lecture est arrêtée et TVSDK émet un `NATIVE_ERROR` &lt;a0/> avec le code 5.
+Si le moteur vidéo ne parvient pas à obtenir des segments en permanence, il limite les sauts de segment continus à 5, après quoi la lecture est arrêtée et TVSDK émet un `NATIVE_ERROR`  avec le code 5.
 
 >[!NOTE]
 >
