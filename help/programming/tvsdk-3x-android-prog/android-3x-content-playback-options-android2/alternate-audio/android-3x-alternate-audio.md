@@ -1,13 +1,10 @@
 ---
 description: L’audio de remplacement vous permet de basculer entre les pistes audio disponibles pour une piste vidéo. Les utilisateurs peuvent sélectionner la langue de leur choix lors de la lecture de la vidéo.
-seo-description: L’audio de remplacement vous permet de basculer entre les pistes audio disponibles pour une piste vidéo. Les utilisateurs peuvent sélectionner la langue de leur choix lors de la lecture de la vidéo.
-seo-title: Autre son
 title: Autre son
-uuid: d1af1ea9-2516-4835-baff-3577ad5b705e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
