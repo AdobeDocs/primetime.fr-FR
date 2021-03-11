@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez fournir des métadonnées personnalisées sur le contenu, les publicités et les appels de suivi de chapitre en utilisant les fonctions de rappel.
-seo-description: Vous pouvez fournir des métadonnées personnalisées sur le contenu, les publicités et les appels de suivi de chapitre en utilisant les fonctions de rappel.
-seo-title: Mise en oeuvre de la prise en charge des métadonnées personnalisées
 title: Mise en oeuvre de la prise en charge des métadonnées personnalisées
-uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
