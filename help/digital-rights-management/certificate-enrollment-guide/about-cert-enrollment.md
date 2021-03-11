@@ -1,9 +1,9 @@
 ---
-seo-title: A propos des rôles d’inscription de certificat
 title: A propos des rôles d’inscription de certificat
-uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
+description: A propos des rôles d’inscription de certificat
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
