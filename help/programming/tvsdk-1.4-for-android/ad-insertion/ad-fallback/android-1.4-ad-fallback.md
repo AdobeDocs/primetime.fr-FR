@@ -1,13 +1,10 @@
 ---
 description: Dans le cas des annonces (ou créatives) à modèle de diffusion de vidéo numérique pour lesquelles la règle de secours est activée, TVSDK traite une publicité avec un type de média non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
-seo-description: Dans le cas des annonces (ou créatives) à modèle de diffusion de vidéo numérique pour lesquelles la règle de secours est activée, TVSDK traite une publicité avec un type de média non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
-seo-title: Reprise publicitaire pour les annonces VAST et VMAP
 title: Reprise publicitaire pour les annonces VAST et VMAP
-uuid: 5469cd22-7121-49f0-8833-2a525c7ef7d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
