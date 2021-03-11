@@ -1,13 +1,10 @@
 ---
 description: Ces classes fournissent des informations sur les publicités qui surviennent dans un plan de montage chronologique.
-seo-description: Ces classes fournissent des informations sur les publicités qui surviennent dans un plan de montage chronologique.
-seo-title: Classes publicitaires de la chronologie
 title: Classes publicitaires de la chronologie
-uuid: f424fa13-778b-458d-bc82-389441a8a56a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
