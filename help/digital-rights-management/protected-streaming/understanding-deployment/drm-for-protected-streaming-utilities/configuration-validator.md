@@ -1,13 +1,10 @@
 ---
 description: Adobe recommande que si vous apportez des modifications au fichier de configuration, vous exécutiez l’utilitaire Configuration Validator avant de début du serveur. Cet utilitaire peut détecter la plupart des erreurs de configuration plus tôt, avant qu’elles ne provoquent des erreurs lors du traitement de la demande.
-seo-description: Adobe recommande que si vous apportez des modifications au fichier de configuration, vous exécutiez l’utilitaire Configuration Validator avant de début du serveur. Cet utilitaire peut détecter la plupart des erreurs de configuration plus tôt, avant qu’elles ne provoquent des erreurs lors du traitement de la demande.
-seo-title: Validation de configuration
 title: Validation de configuration
-uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
