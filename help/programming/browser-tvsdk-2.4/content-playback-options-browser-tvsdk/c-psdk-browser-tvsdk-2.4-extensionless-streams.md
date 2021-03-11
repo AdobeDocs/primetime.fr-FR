@@ -1,13 +1,10 @@
 ---
 description: Le navigateur TVSDK prend actuellement en charge la lecture de flux dans lesquels les manifestes et les fragments ne contiennent pas d’extensions.
-seo-description: Le navigateur TVSDK prend actuellement en charge la lecture de flux dans lesquels les manifestes et les fragments ne contiennent pas d’extensions.
-seo-title: Flux sans extensibilité
 title: Flux sans extensibilité
-uuid: c69ba62b-a940-4211-920d-2e559849fd6d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
