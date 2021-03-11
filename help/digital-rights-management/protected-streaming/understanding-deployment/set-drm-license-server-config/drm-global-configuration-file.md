@@ -1,13 +1,10 @@
 ---
 description: Le fichier de configuration flashaccess-global.xml comprend des paramètres qui s’appliquent à tous les locataires du serveur de licences.
-seo-description: Le fichier de configuration flashaccess-global.xml comprend des paramètres qui s’appliquent à tous les locataires du serveur de licences.
-seo-title: Fichier de configuration global
 title: Fichier de configuration global
-uuid: 294d6cff-be07-4b4b-8aa6-943044a1c56f
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
