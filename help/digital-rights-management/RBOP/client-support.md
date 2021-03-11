@@ -1,13 +1,10 @@
 ---
 description: Cette section décrit les fonctionnalités disponibles avec différentes versions de Flash Player et TVSDK.
-seo-description: Cette section décrit les fonctionnalités disponibles avec différentes versions de Flash Player et TVSDK.
-seo-title: Prise en charge du client RBOP
 title: Prise en charge du client RBOP
-uuid: d1d0f788-7bc1-488c-807e-be47f83725e9
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
@@ -44,4 +41,4 @@ Cette section décrit les fonctionnalités disponibles avec différentes version
 >
 >Ces plates-formes réduisent automatiquement la vidéo et affichent le contenu à une résolution inférieure ou égale à celle spécifiée par la stratégie DRM. Avec cette fonctionnalité, le contenu sera toujours lu au client, tant qu’un flux disponible respecte les restrictions de la stratégie DRM.
 
-**Protection**  Output héritée - Les clients utilisant des Flashs Player antérieurs à la version 18 ne peuvent gérer que les restrictions OP héritées. Les clients disposant de la version 18 et des versions ultérieures du Flash Player peuvent gérer les restrictions héritées ou RBOP. Si vous définissez des restrictions RBOP, vous devez également définir des restrictions OP héritées pour les clients plus âgés. Pour les clients qui prennent en charge RBOP, les restrictions RBOP l&#39;emportent sur les restrictions OP héritées.
+**Protection**  Output héritée - Les clients utilisant des Flashs Player antérieurs à la version 18 ne peuvent gérer que les restrictions OP héritées. Les clients disposant de la version 18 du Flash Player et des versions ultérieures peuvent gérer les restrictions héritées ou RBOP. Si vous définissez des restrictions RBOP, vous devez également définir des restrictions OP héritées pour les clients plus âgés. Pour les clients qui prennent en charge RBOP, les restrictions RBOP l&#39;emportent sur les restrictions OP héritées.
