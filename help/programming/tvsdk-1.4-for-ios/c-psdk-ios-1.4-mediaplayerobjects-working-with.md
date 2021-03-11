@@ -1,13 +1,10 @@
 ---
 description: L’objet PTMediaPlayer représente votre lecteur multimédia. Un objet PTMediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
-seo-description: L’objet PTMediaPlayer représente votre lecteur multimédia. Un objet PTMediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
-seo-title: Utilisation d’objets MediaPlayer
 title: Utilisation d’objets MediaPlayer
-uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
