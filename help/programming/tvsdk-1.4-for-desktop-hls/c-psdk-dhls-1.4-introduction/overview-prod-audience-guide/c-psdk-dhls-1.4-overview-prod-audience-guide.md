@@ -1,13 +1,10 @@
 ---
 description: Ce guide fournit des informations sur la façon de développer des applications de lecteurs vidéo en utilisant TVSDK for Desktop HLS, qui est mis en oeuvre dans l’ActionScript.
-seo-description: Ce guide fournit des informations sur la façon de développer des applications de lecteurs vidéo en utilisant TVSDK for Desktop HLS, qui est mis en oeuvre dans l’ActionScript.
-seo-title: Présentation
 title: Présentation
-uuid: 9752a239-690b-4b2b-aab1-1e82470d84d1
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
