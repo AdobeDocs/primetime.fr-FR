@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez gérer les coupures de courant dans les flux vidéo en direct et fournir un autre contenu pendant une coupure de courant.
-seo-description: Vous pouvez gérer les coupures de courant dans les flux vidéo en direct et fournir un autre contenu pendant une coupure de courant.
-seo-title: Eléments de l’API Blackout
 title: Eléments de l’API Blackout
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
