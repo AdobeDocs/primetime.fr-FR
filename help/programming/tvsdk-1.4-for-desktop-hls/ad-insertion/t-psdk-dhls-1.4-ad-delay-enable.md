@@ -1,13 +1,10 @@
 ---
-description: Vous pouvez indiquer si la lecture doit être autorisée avant que toutes les publicités ne soient chargées et placées dans la chronologie. Le démarrage de la lecture de cette manière permet à la visionneuse d’accéder plus rapidement au contenu principal. Cette fonctionnalité s'applique uniquement aux magnétoscopes en direct et ne fonctionne pas, par exemple, sur les ressources VOD.
-seo-description: Vous pouvez indiquer si la lecture doit être autorisée avant que toutes les publicités ne soient chargées et placées dans la chronologie. Le démarrage de la lecture de cette manière permet à la visionneuse d’accéder plus rapidement au contenu principal. Cette fonctionnalité s'applique uniquement aux magnétoscopes en direct et ne fonctionne pas, par exemple, sur les ressources VOD.
-seo-title: Activer le chargement différé des annonces
+description: Vous pouvez indiquer si la lecture doit être autorisée avant que toutes les publicités ne soient chargées et placées dans la chronologie. Le démarrage de la lecture de cette manière permet à la visionneuse d’accéder plus rapidement au contenu principal. Cette fonctionnalité s'applique uniquement aux enregistrements vidéo numériques en direct et ne fonctionne pas, par exemple, sur les ressources VOD.
 title: Activer le chargement différé des annonces
-uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Activer le chargement différé des publicités{#enable-lazy-ad-loading}
 
-Vous pouvez indiquer si la lecture doit être autorisée avant que toutes les publicités ne soient chargées et placées dans la chronologie. Le démarrage de la lecture de cette manière permet à la visionneuse d’accéder plus rapidement au contenu principal. Cette fonctionnalité s&#39;applique uniquement aux magnétoscopes en direct et ne fonctionne pas, par exemple, sur les ressources VOD.
+Vous pouvez indiquer si la lecture doit être autorisée avant que toutes les publicités ne soient chargées et placées dans la chronologie. Le démarrage de la lecture de cette manière permet à la visionneuse d’accéder plus rapidement au contenu principal. Cette fonctionnalité s&#39;applique uniquement aux enregistrements vidéo numériques en direct et ne fonctionne pas, par exemple, sur les ressources VOD.
 
 1. Utilisez la propriété booléenne `delayAdLoading` dans `AdvertisingMetadata`.
 
