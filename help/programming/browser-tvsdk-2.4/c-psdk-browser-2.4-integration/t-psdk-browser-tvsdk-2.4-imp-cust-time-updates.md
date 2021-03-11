@@ -1,13 +1,10 @@
 ---
 description: Dans certaines implémentations d’analyse, l’application cliente peut souhaiter fournir une position de curseur de lecture différente de celle rapportée par la valeur localeTime du navigateur TVSDK.
-seo-description: Dans certaines implémentations d’analyse, l’application cliente peut souhaiter fournir une position de curseur de lecture différente de celle rapportée par la valeur localeTime du navigateur TVSDK.
-seo-title: Mise en oeuvre de mises à jour de temps personnalisées
 title: Mise en oeuvre de mises à jour de temps personnalisées
-uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '119'
 ht-degree: 0%
 
 ---
