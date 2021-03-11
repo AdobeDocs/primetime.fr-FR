@@ -1,13 +1,10 @@
 ---
 description: Si votre implémentation de Adobe Primetime DRM utilise des règles de fonctionnement qui exigent que le client conserve l’état (par exemple, l’intervalle de lecture), l’Adobe recommande que le serveur garde le suivi du compteur d’annulation et utilise AIR ou SWF pour autoriser la mise en vente.
-seo-description: Si votre implémentation de Adobe Primetime DRM utilise des règles de fonctionnement qui exigent que le client conserve l’état (par exemple, l’intervalle de lecture), l’Adobe recommande que le serveur garde le suivi du compteur d’annulation et utilise AIR ou SWF pour autoriser la mise en vente.
-seo-title: Détection de restauration
 title: Détection de restauration
-uuid: f161ed41-488a-478a-b6a8-468cf6d11e89
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
