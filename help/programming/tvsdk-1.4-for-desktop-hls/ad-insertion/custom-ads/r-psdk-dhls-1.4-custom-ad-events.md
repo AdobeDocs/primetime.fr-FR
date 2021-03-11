@@ -1,13 +1,10 @@
 ---
 description: Le lecteur TVSDK distribue des événements pour afficher l’état de chargement personnalisé de la publicité ou pour ignorer une publicité dont le chargement prend trop de temps ou comporte des erreurs. Ces événements sont définis dans événements.CustomAdEvents.
-seo-description: Le lecteur TVSDK distribue des événements pour afficher l’état de chargement personnalisé de la publicité ou pour ignorer une publicité dont le chargement prend trop de temps ou comporte des erreurs. Ces événements sont définis dans événements.CustomAdEvents.
-seo-title: Événements publicitaires personnalisés
 title: Événements publicitaires personnalisés
-uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
