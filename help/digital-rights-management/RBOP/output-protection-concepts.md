@@ -1,13 +1,10 @@
 ---
 description: Cette section présente un aperçu conceptuel de la configuration, des options et des significations associées à la protection de la sortie.
-seo-description: Cette section présente un aperçu conceptuel de la configuration, des options et des significations associées à la protection de la sortie.
-seo-title: Concepts RBOP
 title: Concepts RBOP
-uuid: fc19c3c9-39a1-4b62-b763-101e5454a01f
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
