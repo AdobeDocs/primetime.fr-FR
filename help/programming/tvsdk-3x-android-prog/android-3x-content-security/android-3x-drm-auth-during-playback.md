@@ -1,14 +1,11 @@
 ---
 description: Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, vous pouvez effectuer une authentification pendant la lecture.
-seo-description: Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, vous pouvez effectuer une authentification pendant la lecture.
-seo-title: Authentification DRM pendant la lecture
 title: Authentification DRM pendant la lecture
-uuid: d44acfb2-796b-4c60-b622-db01e58042cc
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 0%
+source-wordcount: '194'
+ht-degree: 1%
 
 ---
 
