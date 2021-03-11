@@ -1,13 +1,10 @@
 ---
 description: Utilisez la commande GET HTTP pour interagir avec le serveur de manifeste.
-seo-description: Utilisez la commande GET HTTP pour interagir avec le serveur de manifeste.
-seo-title: Envoyer une commande au serveur de manifeste
 title: Envoyer une commande au serveur de manifeste
-uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
