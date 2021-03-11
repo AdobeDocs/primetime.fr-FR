@@ -1,13 +1,10 @@
 ---
 description: Le serveur de manifeste renvoie des listes de lecture originales au format M3U8, conformément à la norme de diffusion en flux continu HTTP Live proposée. Il se compose d'un ensemble de flux de transport (TS) de variantes, chacun contenant des rendus du même contenu pour différents débits et formats de bits. L’insertion d’une publicité Adobe Primetime ajoute la balise de directive EXT-X-MARKER, qui doit être interprétée par les lecteurs vidéo clients.
-seo-description: Le serveur de manifeste renvoie des listes de lecture originales au format M3U8, conformément à la norme de diffusion en flux continu HTTP Live proposée. Il se compose d'un ensemble de flux de transport (TS) de variantes, chacun contenant des rendus du même contenu pour différents débits et formats de bits. L’insertion d’une publicité Adobe Primetime ajoute la balise de directive EXT-X-MARKER, qui doit être interprétée par les lecteurs vidéo clients.
-seo-title: Directive EXT-X-MARKER
 title: Directive EXT-X-MARKER
-uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
