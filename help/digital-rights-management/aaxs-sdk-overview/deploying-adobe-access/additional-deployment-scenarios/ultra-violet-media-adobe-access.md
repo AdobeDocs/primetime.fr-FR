@@ -1,13 +1,10 @@
 ---
 description: Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en flux continu pour configurer un écosystème complet et sécurisé de distribution de médias à base de DRM.
-seo-description: Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en flux continu pour configurer un écosystème complet et sécurisé de distribution de médias à base de DRM.
-seo-title: Accès aux médias et aux Adobes UltraViolet
 title: Accès aux médias et aux Adobes UltraViolet
-uuid: d287680f-02de-4cca-aeea-22b7fd8e67d2
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
