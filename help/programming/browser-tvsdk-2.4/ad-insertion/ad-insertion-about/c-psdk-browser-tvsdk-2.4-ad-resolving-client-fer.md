@@ -1,13 +1,10 @@
 ---
 description: 'Le contenu Replay Événement complet (FER) est un flux en direct converti en VOD en ajoutant la balise #EXT-X-ENDLIST à la fin du fichier manifeste. Le flux conserve ses marqueurs publicitaires.'
-seo-description: 'Le contenu Replay Événement complet (FER) est un flux en direct converti en VOD en ajoutant la balise #EXT-X-ENDLIST à la fin du fichier manifeste. Le flux conserve ses marqueurs publicitaires.'
-seo-title: Résolution et insertion des annonces FER
 title: Résolution et insertion des annonces FER
-uuid: 85da0e92-17fe-4001-a53c-085dadd09756
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
