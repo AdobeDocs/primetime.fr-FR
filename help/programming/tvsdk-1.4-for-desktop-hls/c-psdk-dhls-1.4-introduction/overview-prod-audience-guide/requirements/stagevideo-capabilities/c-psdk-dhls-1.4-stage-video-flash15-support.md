@@ -1,13 +1,10 @@
 ---
 description: A partir du Flash 15 et des versions ultérieures, lorsque le rendu matériel avec StageVideo n’est pas disponible, StageVideo revient en douceur à un objet StageVideo logiciel.
-seo-description: A partir du Flash 15 et des versions ultérieures, lorsque le rendu matériel avec StageVideo n’est pas disponible, StageVideo revient en douceur à un objet StageVideo logiciel.
-seo-title: Prise en charge du Flash 15 pour StageVideo
 title: Prise en charge du Flash 15 pour StageVideo
-uuid: 49bd8703-016e-4fda-8773-5254d4774ec6
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
