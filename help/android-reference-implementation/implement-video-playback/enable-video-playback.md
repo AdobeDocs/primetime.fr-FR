@@ -1,13 +1,10 @@
 ---
 description: Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
-seo-description: Créez un PlaybackManager qui gère l’opération de configuration et de lecture du flux HLS. Aucune autre configuration n’est requise.
-seo-title: Activer la lecture vidéo
 title: Activer la lecture vidéo
-uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
