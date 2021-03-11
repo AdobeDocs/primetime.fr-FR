@@ -1,13 +1,10 @@
 ---
 description: Dans certains cas, vous pouvez empêcher les utilisateurs finaux de lire du contenu sur plusieurs périphériques lorsque le contenu est acheté ou loué. Si le client utilise Expressplay, vous pouvez le faire en utilisant les API Expressplay pour lier le jeton Expressplay de l’utilisateur à l’ordinateur de l’utilisateur.
-seo-description: Dans certains cas, vous pouvez empêcher les utilisateurs finaux de lire du contenu sur plusieurs périphériques lorsque le contenu est acheté ou loué. Si le client utilise Expressplay, vous pouvez le faire en utilisant les API Expressplay pour lier le jeton Expressplay de l’utilisateur à l’ordinateur de l’utilisateur.
-seo-title: Liaison de périphérique
 title: Liaison de périphérique
-uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
