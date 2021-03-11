@@ -1,13 +1,10 @@
 ---
 description: Vous pouvez utiliser les informations suivantes pour vous aider à habiller votre lecteur. Pour chaque construction visuelle, les comportements correspondants sont mentionnés dans le comportement par défaut.
-seo-description: Vous pouvez utiliser les informations suivantes pour vous aider à habiller votre lecteur. Pour chaque construction visuelle, les comportements correspondants sont mentionnés dans le comportement par défaut.
-seo-title: Esquisse du lecteur
 title: Esquisse du lecteur
-uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
