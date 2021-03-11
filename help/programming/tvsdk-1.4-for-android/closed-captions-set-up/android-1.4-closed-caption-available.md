@@ -1,13 +1,10 @@
 ---
 description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-description: Le sous-titrage permet d’afficher la partie audio d’une vidéo sous forme de texte à l’écran lorsque le son est inaudible ou que le lecteur est malentendant.
-seo-title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
 title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
-uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '230'
 ht-degree: 1%
 
 ---
