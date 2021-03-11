@@ -1,13 +1,10 @@
 ---
 description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion
-seo-description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion
-seo-title: Format VMAP pour les URL de suivi
 title: Format VMAP pour les URL de suivi
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
