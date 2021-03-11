@@ -1,13 +1,10 @@
 ---
 description: En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un périphérique unique. Cette liaison empêche les utilisateurs de partager des licences sur différents périphériques sans autorisation. Outre la liaison par périphérique, Primetime DRM permet de lier des licences à un domaine de périphérique ou à un groupe de périphériques.
-seo-description: En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un périphérique unique. Cette liaison empêche les utilisateurs de partager des licences sur différents périphériques sans autorisation. Outre la liaison par périphérique, Primetime DRM permet de lier des licences à un domaine de périphérique ou à un groupe de périphériques.
-seo-title: Lecture du contenu chiffré à l’aide de la prise en charge des domaines
 title: Lecture du contenu chiffré à l’aide de la prise en charge des domaines
-uuid: 8854cc0f-9bfc-4833-82d7-a3f46ac88e06
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
