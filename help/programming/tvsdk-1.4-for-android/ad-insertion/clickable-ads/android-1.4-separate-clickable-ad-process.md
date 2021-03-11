@@ -1,13 +1,10 @@
 ---
 description: Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une Activité.
-seo-description: Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une Activité.
-seo-title: Séparer le processus publicitaire cliquable
 title: Séparer le processus publicitaire cliquable
-uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
