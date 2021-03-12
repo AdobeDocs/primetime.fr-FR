@@ -2,9 +2,9 @@
 description: Vous pouvez insérer des publicités dans votre contenu VOD et du contenu direct/linéaire à l’aide de l’interface Adobe Primetime Ad Decision.
 title: Exigences en matière de publicité
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Pour incorporer des publicités dans votre contenu vidéo, assurez-vous que la p
 * Si le contenu principal contient un flux audio uniquement, le contenu publicitaire doit également contenir un flux audio uniquement.
 * Si le contenu principal contient des flux de sous-titres, le contenu publicitaire doit être non chiffré.
 * Si le contenu principal est un débit binaire multiple (MBR), le contenu publicitaire doit également être MBR.
-* Si le contenu principal comporte d’autres pistes audio, chaque publicité doit comporter au moins un flux audio uniquement.
-
-Si la publicité ne comporte pas au moins un flux audio uniquement, elle est ignorée.
+* Si le contenu principal comporte d’autres pistes audio, chaque publicité doit comporter au moins un flux audio uniquement ou les publicités doivent être décompressées. Si la publicité n’a pas au moins un flux audio seul et n’est pas dévolue, elle est ignorée.
