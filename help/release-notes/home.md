@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 32%
+source-wordcount: '378'
+ht-degree: 29%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 32%
 # Notes de mise à jour de Primetime
 
 Bienvenue dans les Notes de mise à jour Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, la configuration système requise, les limitations, les problèmes résolus et les problèmes connus.
+
+## Améliorations et correctifs apportés à TVSDK 3.13 iOS
+
+Cette version introduit la prise en charge des publicités &quot;HLS/CMAF&quot; (preroll, midroll et postroll) DÉMOXED pour les flux LIVE, VOD et FER.
+
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK for iOS](../release-notes/tvsdk-3x-ios.md)
 
 ## Améliorations et correctifs de PTAI 21.2.2
 
