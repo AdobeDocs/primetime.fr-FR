@@ -1,16 +1,16 @@
 ---
-title: Notes de mise à jour de TVSDK 3.12 pour iOS
-description: Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
+title: Notes de mise à jour de TVSDK 3.13 pour iOS
+description: Les Notes de mise à jour de TVSDK 3.13 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.13.
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7713'
 ht-degree: 0%
 
 ---
 
 
-# Notes de mise à jour de TVSDK 3.12 pour iOS {#tvsdk-for-ios-release-notes}
+# Notes de mise à jour de TVSDK 3.13 pour iOS {#tvsdk-for-ios-release-notes}
 
 Les Notes de mise à jour de TVSDK 3.12 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK iOS 3.12.
 
@@ -20,13 +20,17 @@ Avant de télécharger iOS 3.12, assurez-vous que les versions de votre matérie
 
 Système d’exploitation : iOS 8.0 ou version ultérieure.
 
-## iOS TVSDK 3.12
+## iOS TVSDK 3.13
 
-Correction d’un problème en raison duquel la diffusion en direct échouait après 15 minutes de lecture.
+Cette version introduit la prise en charge des publicités &quot;HLS/CMAF&quot; (preroll, midroll et postroll) DÉMOXED pour les flux LIVE, VOD et FER.
 
-Pour les correctifs de la version actuelle, voir la section [Problèmes client résolus](#resolved-issues) et pour les limitations [Problèmes connus et limitations](#known-issues-and-limitations).
+Pour les correctifs apportés aux problèmes signalés par les clients, voir [Problèmes résolus](#resolved-issues). Pour les limites, voir [problèmes connus et limites](#known-issues-and-limitations).
 
 ### Nouvelles fonctionnalités et correctifs des versions précédentes {#whats-new-previous}
+
+**iOS TVSDK 3.12**
+
+Correction d’un problème en raison duquel la diffusion en direct échouait après 15 minutes de lecture.
 
 **iOS TVSDK 3.11**
 
@@ -301,6 +305,14 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 -->
 
+**iOS TVSDK 3.13**
+
+* (ZD 42085) - Problèmes de lecture sur les flux CMAF.
+
+* (ZD-43215) - Blocage lors de la fermeture du lecteur alors qu’une publicité est en cours.
+
+* (ZD 43210) - La lecture HLS iOS se fige lorsque le sous-titre WebVTT est activé.
+
 **iOS TVSDK 3.12**
 
 * La diffusion en continu en direct échoue après 15 minutes de lecture lors de l’utilisation de TVSDK pour iOS 3.10.
@@ -496,7 +508,7 @@ Correctif fourni pour le numéro fermé 34385 de la version 1.4.42. Code de gest
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
-* (ZD #30411) - Vous pouvez obtenir des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
+* (ZD #30411) - Il se peut que vous obteniez des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
@@ -508,7 +520,7 @@ Correctif fourni pour le numéro fermé 34385 de la version 1.4.42. Code de gest
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
-* (ZD #30411) - Vous pouvez obtenir des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
+* (ZD #30411) - Il se peut que vous obteniez des résultats inattendus, comme l’absence d’audio ou d’audio incorrect, si vous choisissez une langue Sap secondaire.
 
    Préparez et informez les pistes audio à l&#39;état Prêt.
 
@@ -1057,7 +1069,7 @@ Correction d’une fuite de mémoire dans drmFramework avec lecture régulière 
 
 Correction d’un bogue afin que les stratégies publicitaires puissent être correctement désactivées.
 
-* (ZD n° 4017) Demande d’API iOS pour forcer la lecture des publicités à l’envers
+* (ZD #4017) Demande d’API iOS pour forcer la lecture des publicités à l’envers
 
 Correctif pour ZD #4279 résolu
 
