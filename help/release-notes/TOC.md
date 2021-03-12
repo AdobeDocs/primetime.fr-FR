@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 user-guide-description: Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus.
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -21,7 +21,7 @@ ht-degree: 14%
    + [Notes de mise à jour de PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK pour iOS {#tvsdk-ios}
-   + [Notes de mise à jour de TVSDK 3.12 pour iOS](tvsdk-3x-ios.md)
+   + [Notes de mise à jour de TVSDK 3.13 pour iOS](tvsdk-3x-ios.md)
    + [Notes de mise à jour de TVSDK 1.4 pour iOS](tvsdk-1-4-ios.md)
 + TVSDK pour Android {#tvsdk-android}
    + [Notes de mise à jour de TVSDK 3.13 pour Android](tvsdk-3x-android.md)
