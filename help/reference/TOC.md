@@ -6,10 +6,10 @@ user-guide-title: Documentation de référence pour Primetime
 user-guide-description: Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation.
 user-guide-url: /content/en/primetime/reference/api-references.html
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 78%
+source-wordcount: '20'
+ht-degree: 75%
 
 ---
 
@@ -17,3 +17,4 @@ ht-degree: 78%
 # Référence Primetime {#reference}
 
 + [Références API](api-references.md)
++ [Spécifications](specifications.md)
