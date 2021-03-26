@@ -5,15 +5,15 @@ description: Spécifications d’Adobe Primetime
 seo-description: Spécifications d’Adobe Primetime
 topic-tags: Adobe Primetime Specifications
 translation-type: tm+mt
-source-git-commit: 53014028cf1a9cb48f93781cbbb4aec3e2bcc523
+source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
 
-# Spécifications de l’API Adobe Primetime
+# Spécifications d’Adobe Primetime
 
 Adobe Primetime apporte la TV à chaque écran connecté à IP. Il offre aux programmeurs et aux opérateurs des capacités modulaires pour diffuser, protéger, analyser et monétiser des vidéos sur des ordinateurs de bureau et des périphériques. Ces expériences optimisent un certain nombre de technologies de diffusion en continu utilisées pour diffuser du contenu et de la publicité aux lecteurs vidéo Primetime.
 
