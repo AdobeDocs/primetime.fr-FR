@@ -2,7 +2,7 @@
 title: Annonces Ad Insertion
 description: Annonces de nouvelles fonctionnalités récentes et autres informations connexes sur l’Ad Insertion Primetime
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Réduction des erreurs de publicité par le biais des dépassements de délai de résolution des publicités
 
-Publié le 1er décembre 2000
+Publié le 1er décembre 2020
 
 L&#39;Adobe vise à aider nos clients Ad Insertion Primetime à optimiser la monétisation de leur stock publicitaire. Nous accordons une attention particulière à la réduction des complexités de la réalisation de la demande programmatique, qui représente plus des trois quarts des dépenses de vidéo numérique américaines selon eMarketer. La vente par programmation permet aux éditeurs de maximiser la demande pour leur stock publicitaire, ce qui entraîne des taux de remplissage et des rendements plus élevés. Mais il augmente également l’exposition aux erreurs publicitaires, telles que les réponses VAST mal formées, les erreurs HTTP et autres, qui peuvent entraîner des pertes de recettes et/ou de mauvaises expériences de visionneuse.
 
