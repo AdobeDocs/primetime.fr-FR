@@ -1,14 +1,15 @@
 ---
 title: Rapports et facturation
-description: null
+description: Rapports et facturation
+copied-description: true
+exl-id: efe91d97-a429-448a-9b7f-cac50b850f35
 translation-type: tm+mt
-source-git-commit: b60ed8d497700d51393afe4769239c996263fc40
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
-
 
 # Rapports et facturation {#reporting-and-billing}
 
