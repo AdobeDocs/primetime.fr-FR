@@ -1,14 +1,15 @@
 ---
 title: Appliquer les contraintes de résolution des publicités
-description: null
+description: Appliquer les contraintes de résolution des publicités
+copied-description: true
+exl-id: aae17be8-d23c-4c5c-90fd-7ee6fba69e9a
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
-
 
 # Appliquer les contraintes de résolution des publicités {#apply-ad-resolution-constraints}
 
