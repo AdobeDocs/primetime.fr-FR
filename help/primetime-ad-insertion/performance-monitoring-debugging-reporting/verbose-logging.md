@@ -1,14 +1,15 @@
 ---
 title: Journalisation détaillée
-description: null
+description: Journalisation détaillée
+copied-description: true
+exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2157'
 ht-degree: 0%
 
 ---
-
 
 # Journalisation détaillée {#verbose-logging}
 
@@ -42,7 +43,7 @@ La structure d&#39;un enregistrement de journal est la suivante :
 | record_type | string | Type de événement en cours de journalisation |
 | autres champs | varie | Dépend du type de événement |
 
-Les enregistrements de ce type enregistrent les résultats des requêtes HTTP. Les champs au-delà de `TRACE_REQUEST_INFO` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type enregistrent les résultats des requêtes HTTP. Les champs situés au-delà de `TRACE_REQUEST_INFO` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -100,7 +101,7 @@ Les enregistrements de ce type consignent les en-têtes HTTP échangés lors des
 
 ### TRACE_AD_CALL enregistrements {#tracing-ad-call-records}
 
-Les enregistrements de ce type consignent les résultats des demandes d&#39;annonce du serveur de manifeste. Les champs au-delà de `TRACE_AD_CALL` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type consignent les résultats des demandes d&#39;annonce du serveur de manifeste. Les champs situés au-delà de `TRACE_AD_CALL` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -177,7 +178,7 @@ Les enregistrements de ce type consignent un élément publicitaire manquant. Le
 |---|---|---|
 | ad_id | string | ID d’annonce complète (FQ_AD_ID : Q_AD_ID\[;Q_AD_ID\[;Q_AD_ID...\] \] Q_AD_ID : PROTOCOLE:AD_SYSTEM:AD_ID\[:CREATIVE_ID\[:MEDIA_ID\] \] PROTOCOLE : AUDITUDE, VAST) |
 
-Les enregistrements de ce type consignent les résultats des demandes de transcodage que le serveur de manifeste envoie à CRS. Les champs au-delà de `TRACE_TRANSCODING_REQUESTED` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type consignent les résultats des demandes de transcodage que le serveur de manifeste envoie à CRS. Les champs situés au-delà de `TRACE_TRANSCODING_REQUESTED` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -187,7 +188,7 @@ Les enregistrements de ce type consignent les résultats des demandes de transco
 | indicateurs | string | ID3 indique si la demande de transcodage inclut une demande d’ajout d’une balise ID3. |
 | cible_duration | string | Durée de cible (en secondes) de l’élément créatif transcodé |
 
-Les enregistrements de ce type indiquent une demande de suivi côté serveur. Les champs au-delà de `TRACE_TRACKING_REQUEST` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type indiquent une demande de suivi côté serveur. Les champs situés au-delà de `TRACE_TRACKING_REQUEST` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -195,7 +196,7 @@ Les enregistrements de ce type indiquent une demande de suivi côté serveur. Le
 | début | flotter | Début du fragment PTS (secondes avec une précision de milliseconde) |
 | end | flotter | Heure de fin du fragment PTS (secondes avec une précision de milliseconde) |
 
-Les enregistrements de ce type fournissent une URL de suivi pour le suivi côté serveur. Les champs au-delà de `TRACE_TRACKING_REQUEST_URL` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type fournissent une URL de suivi pour le suivi côté serveur. Les champs situés au-delà de `TRACE_TRACKING_REQUEST_URL` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -203,7 +204,7 @@ Les enregistrements de ce type fournissent une URL de suivi pour le suivi côté
 | ad_system | string | Système publicitaire (par exemple, auditude) |
 | url | string | URL vers ping |
 
-Les enregistrements de ce type de journal demandent que le serveur manifeste crée des légendes `WEBVTT`. Les champs au-delà de `TRACE_WEBVTT_REQUEST` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Les enregistrements de ce type de journal demandent que le serveur manifeste crée des légendes `WEBVTT`. Les champs situés au-delà de `TRACE_WEBVTT_REQUEST` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -212,14 +213,14 @@ Les enregistrements de ce type de journal demandent que le serveur manifeste cr�
 | début | flotter | Temps début fractionné (secondes avec précision de milliseconde) |
 | end | flotter | Temps de fin fractionné (secondes avec précision de milliseconde) |
 
-Enregistrements de ce type de réponses au journal que le serveur de manifeste envoie aux clients dans `answer` aux demandes de légendes `WEBVTT`. Les champs au-delà de `TRACE_WEBVTT_RESPONSE` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Enregistrements de ce type de réponses au journal que le serveur de manifeste envoie aux clients dans `answer` aux demandes de légendes `WEBVTT`. Les champs situés au-delà de `TRACE_WEBVTT_RESPONSE` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
 | statut | string | Code d’état HTTP renvoyé |
 | réponse | string | Réponse codée en base 64 envoyée au client |
 
-Enregistrements de ce type de réponses au journal des demandes que le serveur manifeste fait pour des légendes `WEBVTT`. Les champs au-delà de `TRACE_WEBVTT_SOURCE` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Enregistrements de ce type de réponses au journal des demandes que le serveur manifeste fait pour des légendes `WEBVTT`. Les champs situés au-delà de `TRACE_WEBVTT_SOURCE` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
@@ -300,7 +301,7 @@ Les enregistrements de ce type permettent au serveur de manifeste de consigner l
 
 ### TRACE_PLAYBACK_PROGRESS, enregistrements {#trace-playback-progress-records}
 
-Le serveur de manifeste génère des enregistrements de ce type lorsqu’il reçoit un signal sur la progression de la lecture au cours du processus de suivi côté serveur. Les champs au-delà de `TRACE_PLAYBACK_PROGRESS` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
+Le serveur de manifeste génère des enregistrements de ce type lorsqu’il reçoit un signal sur la progression de la lecture au cours du processus de suivi côté serveur. Les champs situés au-delà de `TRACE_PLAYBACK_PROGRESS` apparaissent dans l’ordre indiqué dans le tableau, séparés par des onglets.
 
 | Champ | Type | Description |
 |---|---|---|
