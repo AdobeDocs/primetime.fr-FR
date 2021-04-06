@@ -1,14 +1,15 @@
 ---
 title: Débogage des en-têtes
-description: null
+description: Débogage des en-têtes
+copied-description: true
+exl-id: 42c19089-2c61-4622-b53a-c28b8d495ef8
 translation-type: tm+mt
-source-git-commit: 45e5c8e6144adf4a405bde7d8d19505b7ad549e0
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '257'
 ht-degree: 7%
 
 ---
-
 
 # Débogage des en-têtes (X-ADBE-AI-X1) {#debugging-headers}
 
@@ -22,12 +23,12 @@ La description des champs est la suivante :
 | Nom | Description | Exemple |
 |--- |--- |--- |
 | isActivePreroll | Envoi ou non d’un appel publicitaire pour la pré-diffusion | 0 |
-| isActiveMidroll | Envoi ou non d’un appel publicitaire pour le déroulement intermédiaire | 1 |
+| isActiveMidroll | Envoi ou non d’un appel publicitaire pour le déroulement intermédiaire | 3 |
 | ID de demande | SSAI interne | 1594181097704 |
 | ID de session | ID de session de la requête | 1512633-5ba9-49b8-a219-4f37e60d259c |
 | Type de diffusion | u=variant, l=live, v=vod | v |
 | isBootstrap | Indique si cette demande est un appel de démarrage | 0 |
-| Nombre de coupures publicitaires | Nombre total de coupures publicitaires dans ce manifeste | 3 |
+| Nombre de coupures publicitaires | Nombre total de coupures publicitaires dans ce manifeste | 1 |
 | Durée totale des pauses publicitaires | Durée totale de la coupure publicitaire, en secondes | 30 |
 | Nombre d&#39;appels d&#39;annonce | Nombre d&#39;appels de publicité envoyés dans cette demande | 2 |
 | Nombre d&#39;appels de redirection | Nombre d&#39;appels de publicité de redirection envoyés dans cette demande | 1 |
