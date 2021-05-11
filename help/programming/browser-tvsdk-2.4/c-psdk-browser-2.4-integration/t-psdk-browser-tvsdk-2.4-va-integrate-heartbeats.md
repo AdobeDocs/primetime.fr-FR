@@ -1,14 +1,14 @@
 ---
 description: Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
 title: Initialisation et configuration des analyses vidéo
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # Initialisation et configuration des analyses vidéo {#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ Avant de commencer une nouvelle session de lecture de contenu, détruisez l’in
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. Marquez manuellement le flux en direct/linéaire comme étant terminé.
 Si vous avez plusieurs épisodes sur un flux en direct, vous pouvez marquer manuellement un épisode comme terminé en utilisant l’API complète. Ceci met fin à la session de suivi vidéo pour l’épisode vidéo en cours et vous pouvez en début une nouvelle pour l’épisode suivant.
       >[!TIP]
@@ -146,5 +147,5 @@ Si vous avez plusieurs épisodes sur un flux en direct, vous pouvez marquer manu
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
