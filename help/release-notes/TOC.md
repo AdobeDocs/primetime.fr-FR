@@ -3,11 +3,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 user-guide-description: Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus.
-translation-type: tm+mt
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
 workflow-type: tm+mt
-source-wordcount: '114'
-ht-degree: 14%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +15,7 @@ ht-degree: 14%
 
 + [Présentation des notes de mise à jour](home.md)
 + Ad Insertion Primetime {#ptai}
-   + [Notes de mise à jour de PTAI 21.2.2](ptai-21x-release-notes.md)
+   + [Notes de mise à jour de PTAI 21.5.1](ptai-21x-release-notes.md)
    + [Notes de mise à jour de PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK pour iOS {#tvsdk-ios}
@@ -27,9 +26,9 @@ ht-degree: 14%
    + [Notes de mise à jour de TVSDK 2.7 pour Android](tvsdk-27-android.md)
    + [Notes de mise à jour de TVSDK 2.4.1 pour Android](tvsdk-24-android.md)
    + [Notes de mise à jour de TVSDK 1.4 pour Android](tvsdk-1-4-android.md)
-+ SDK du navigateur {#browser-tvsdk}
-   + [Notes de mise à jour du navigateur TVSDK 2.4](tvsdk-24-browser.md)
-+ TVSDK pour HLS de bureau {tvsdk-desktop-hls}
++ Navigateur TVSDK {#browser-tvsdk}
+   + [Notes de mise à jour de Browser TVSDK 2.4](tvsdk-24-browser.md)
++ TVSDK pour Desktop HLS {tvsdk-desktop-hls}
    + [Notes de mise à jour de TVSDK 1.4 pour Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Versions de Primetime Offline Packager version 2](offline-packager-2x-release-note.md)
