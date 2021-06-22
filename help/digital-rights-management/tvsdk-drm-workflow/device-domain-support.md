@@ -1,37 +1,36 @@
 ---
-description: En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un périphérique unique. Cette liaison empêche les utilisateurs de partager des licences sur différents périphériques sans autorisation. Outre la liaison par périphérique, Primetime DRM permet de lier des licences à un domaine de périphérique ou à un groupe de périphériques.
-title: Lecture du contenu chiffré à l’aide de la prise en charge des domaines
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un appareil unique. Cette liaison empêche les utilisateurs de partager des licences sur différents appareils sans autorisation. En plus de la liaison par appareil, Primetime DRM permet de lier des licences à un domaine d’appareil ou à un groupe d’appareils.
+title: Lire du contenu chiffré à l’aide de la prise en charge des domaines
+exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
+# Prise en charge des domaines d’appareil {#device-domain-support}
 
-# Prise en charge des domaines de périphérique {#device-domain-support}
+En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un appareil unique. Cette liaison empêche les utilisateurs de partager des licences sur différents appareils sans autorisation. En plus de la liaison par appareil, Primetime DRM permet de lier des licences à un domaine d’appareil ou à un groupe d’appareils.
 
-En règle générale, toutes les licences DRM Primetime, au moment de la création, sont liées à un périphérique unique. Cette liaison empêche les utilisateurs de partager des licences sur différents périphériques sans autorisation. Outre la liaison par périphérique, Primetime DRM permet de lier des licences à un domaine de périphérique ou à un groupe de périphériques.
+Si les métadonnées de contenu spécifient que l’enregistrement du domaine de l’appareil est requis, l’application peut appeler une API pour rejoindre un groupe d’appareils. Cette action déclenche l’envoi d’une demande d’enregistrement de domaine au serveur de domaine. Une fois qu’une licence est émise à un groupe d’appareils, celle-ci peut être exportée et partagée avec d’autres appareils qui ont rejoint le groupe d’appareils.
 
-Si les métadonnées de contenu indiquent que l’enregistrement du domaine de l’appareil est requis, l’application peut appeler une API pour rejoindre un groupe d’appareils. Cette action déclenche l’envoi d’une demande d’enregistrement de domaine au serveur de domaine. Une fois qu’une licence est délivrée à un groupe de périphériques, celle-ci peut être exportée et partagée avec d’autres périphériques qui ont rejoint ce groupe.
+Les informations du groupe d’appareils sont ensuite utilisées dans l’objet `DRMContentData` `VoucherAccessInfo`, qui sera ensuite utilisé pour présenter les informations requises pour récupérer et utiliser une licence.
 
-Les informations de groupe de périphériques sont ensuite utilisées dans l&#39;objet `DRMContentData` `VoucherAccessInfo`, qui sera ensuite utilisé pour présenter les informations requises pour récupérer et utiliser une licence.
+## Lire du contenu chiffré à l’aide de la prise en charge des domaines {#play-encrypted-content-using-domain-support}
 
-## Lire le contenu chiffré en utilisant la prise en charge du domaine {#play-encrypted-content-using-domain-support}
+Pour lire du contenu chiffré à l’aide de Primetime DRM , procédez comme suit :
 
-Pour lire du contenu chiffré à l’aide de Primetime DRM, procédez comme suit :
+1. À l’aide de `VoucherAccessInfo.deviceGroup`, vérifiez si l’enregistrement du groupe d’appareils est requis.
+1. Si l’authentification est requise :
+   1. Utilisez la propriété `DeviceGroupInfo.authenticationMethod` pour savoir si l’authentification est requise.
+   1. Si une authentification est requise, authentifiez l’utilisateur en effectuant l’une des étapes suivantes :
 
-1. À l&#39;aide de `VoucherAccessInfo.deviceGroup`, vérifiez si l&#39;enregistrement du groupe de périphériques est requis.
-1. Si l&#39;authentification est requise :
-   1. Utilisez la propriété `DeviceGroupInfo.authenticationMethod` pour savoir si une authentification est requise.
-   1. Si l’authentification est requise, authentifiez l’utilisateur en procédant de l’UNE des manières suivantes :
-
-      * Procurez-vous le nom d’utilisateur et le mot de passe de l’utilisateur et appelez `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
-      * Procurez-vous un jeton d’authentification mis en cache/prégénéré et appelez `DRMManager.setAuthenticationToken()`.
+      * Obtenez le nom d’utilisateur et le mot de passe de l’utilisateur et appelez `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
+      * Obtenez un jeton d’authentification mis en cache/prégénéré et appelez `DRMManager.setAuthenticationToken()`.
    1. Appeler `DRMManager.addToDeviceGroup()`
-1. Obtenez la licence du contenu en exécutant l’une des tâches suivantes :
-   1. Utilisez la méthode `DRMManager.loadVoucher()`.
-   1. Récupérez la licence d&#39;un périphérique différent enregistré dans le même groupe de périphériques et fournissez la licence à ` DRMManager` par l&#39;intermédiaire de la méthode `DRMManager.storeVoucher()`.
-1. Lisez le contenu chiffré à l’aide de la méthode `Primetime.play()`.
-Pour exporter la licence du contenu, n’importe quel périphérique peut fournir les octets bruts de la licence à l’aide de la méthode `DRMVoucher.toByteArray()` après avoir obtenu la licence auprès du serveur de licences DRM Primetime. Les fournisseurs de contenu limitent généralement le nombre de périphériques d’un groupe de périphériques. Si la limite est atteinte, vous devrez peut-être appeler la méthode `DRMManager.removeFromDeviceGroup()` sur un périphérique inutilisé avant d&#39;enregistrer le périphérique actuel.
+1. Obtenez la licence du contenu en effectuant l’une des tâches suivantes :
+   1. Utilisez la méthode `DRMManager.loadVoucher()` .
+   1. Obtenez la licence à partir d’un appareil différent enregistré dans le même groupe d’appareils et fournissez la licence à `DRMManager` par l’intermédiaire de la méthode `DRMManager.storeVoucher()`.
+1. Lire le contenu chiffré à l’aide de la méthode `Primetime.play()`.
+Pour exporter la licence du contenu, n’importe quel appareil peut fournir les octets bruts de la licence à l’aide de la méthode `DRMVoucher.toByteArray()` après avoir obtenu la licence du serveur de licences DRM Primetime. Les fournisseurs de contenu limitent généralement le nombre d’appareils d’un groupe. Si la limite est atteinte, vous devrez peut-être appeler la méthode `DRMManager.removeFromDeviceGroup()` sur un appareil inutilisé avant d’enregistrer l’appareil actuel.
