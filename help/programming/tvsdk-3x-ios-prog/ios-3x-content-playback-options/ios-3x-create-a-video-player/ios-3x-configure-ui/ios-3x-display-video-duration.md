@@ -16,7 +16,7 @@ Vous pouvez afficher la durée du contenu actuellement principal.
 
 Mettez en oeuvre un affichage de durée de la vidéo à l’aide de l’exemple de code suivant :
 
-    La propriété &quot;PTMediaPlayer&quot;, ` [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange)&quot;, contient la plage de fenêtres pouvant être recherchée :
+    La propriété &quot;PTMediaPlayer&quot;, &grave; [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange)&quot;, contient la plage de fenêtres pouvant être recherchée :
     
     * Pour VOD, cette plage correspond à la plage de contenu VOD complète, y compris les publicités.
     * Pour les variables en direct/linéaire, cette plage représente la fenêtre pouvant être recherchée.
