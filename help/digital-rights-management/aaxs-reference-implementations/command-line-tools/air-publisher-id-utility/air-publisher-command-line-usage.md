@@ -28,8 +28,7 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* indique le chemin d’accès au fichier signatures.xml de l’application AIR, situé dans le  [!DNL META-INF] répertoire des applications.
+* `signaturefile` indique le chemin d’accès au fichier signatures.xml de l’application AIR, situé dans le  [!DNL META-INF] répertoire des applications.
 
 * `signingcert` spécifie le certificat utilisé pour signer l&#39;application AIR
 
