@@ -1,15 +1,15 @@
 ---
-description: La version de `#`EXT-X-VERSION dans le fichier .m3u8 affecte les fonctionnalités disponibles pour votre application et les balises EXT valides dans votre liste de lecture/manifeste.
+description: La version de EXT-X-VERSION du fichier .m3u8 affecte les fonctionnalités disponibles pour votre application et les balises EXT valides dans votre liste de lecture/manifeste.
 title: Exigences DE VERSION EXT-X
 exl-id: ee778fe1-d050-4c90-af8d-6600fff72e52
-source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
+source-git-commit: e2a796dc5eb017929297d127cc79b65ba51a0c75
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# `#`Exigences DE VERSION EXT-X{#ext-x-version-requirements}
+# Exigences DE VERSION EXT-X{#ext-x-version-requirements}
 
 La version de #EXT-X-VERSION dans le fichier .m3u8 affecte les fonctionnalités disponibles pour votre application et les balises EXT valides dans votre liste de lecture/manifeste.
 
