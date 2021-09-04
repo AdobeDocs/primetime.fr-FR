@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 31%
+source-wordcount: '340'
+ht-degree: 32%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 31%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de l’API 21.5.1
+## Améliorations et correctifs de l’API 21.8.1
 
-La version comprend une nouvelle télémétrie pour les modifications à venir du tableau de bord et la prise en charge du type de segmentation obsolète 0x01 (UPID) pour les formats de repère basés sur SCTE.
+Cette version comprend la prise en charge des flux DASH en direct/linéaire.
 
 Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
 
