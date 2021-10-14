@@ -3,7 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 user-guide-description: Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus.
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 16%
@@ -22,7 +22,7 @@ ht-degree: 16%
    + [Notes de mise à jour de TVSDK 3.13 pour iOS](tvsdk-3x-ios.md)
    + [Notes de mise à jour de TVSDK 1.4 pour iOS](tvsdk-1-4-ios.md)
 + TVSDK pour Android {#tvsdk-android}
-   + [Notes de mise à jour de TVSDK 3.13 pour Android](tvsdk-3x-android.md)
+   + [Notes de mise à jour de TVSDK 3.14 pour Android](tvsdk-3x-android.md)
    + [Notes de mise à jour de TVSDK 2.7 pour Android](tvsdk-27-android.md)
    + [Notes de mise à jour de TVSDK 2.4.1 pour Android](tvsdk-24-android.md)
    + [Notes de mise à jour de TVSDK 1.4 pour Android](tvsdk-1-4-android.md)

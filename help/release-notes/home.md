@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 32%
+source-wordcount: '301'
+ht-degree: 37%
 
 ---
 
@@ -26,11 +26,9 @@ Cette version introduit la prise en charge des publicités &quot;HLS/CMAF&quot; 
 
 Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK pour iOS](../release-notes/tvsdk-3x-ios.md)
 
-## Correctifs dans TVSDK 3.13 Android
+## Correctifs dans TVSDK 3.14 Android
 
-Cette version fournit une solution au problème du blocage de la diffusion Widevine DRM ou de l’affichage d’images noires sur les interrupteurs ABR sur les appareils FireTV, notamment Fire TV 3e génération pendant et Fire TV Cube 1ère et 2e génération.
-
-Pour résoudre le problème, définissez l’API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` pour les appareils Fire TV spécifiés avant de lancer la lecture. La valeur par défaut est false.
+Cette version corrige un problème en raison duquel l’application se bloque lorsque le noeud [!UICONTROL CDATA] est vide pour l’un des éléments [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] de la réponse [!UICONTROL VAST].
 
 Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) .
 
@@ -44,7 +42,7 @@ Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour A
 | [Références de l’API Primetime](/help/reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
 | [Aide de Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
-| [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez des fichiers PDF de la documentation archivée. |
+| [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez les PDF de la documentation archivée. |
 
 ## Ressources utiles
 
