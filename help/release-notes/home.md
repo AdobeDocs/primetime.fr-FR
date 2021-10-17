@@ -3,7 +3,7 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 37%
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Notes de mise à jour de Primetime
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
+
+## Correctifs dans TVSDK 3.14 Android
+
+Cette version corrige un problème en raison duquel l’application se bloque lorsque le noeud [!UICONTROL CDATA] est vide pour l’un des éléments [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] de la réponse [!UICONTROL VAST].
+
+Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) .
 
 ## Améliorations et correctifs de l’API 21.8.1
 
@@ -25,12 +31,6 @@ Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour Ad I
 Cette version introduit la prise en charge des publicités &quot;HLS/CMAF&quot; (préroll, midroll et postroll) DEMUXED pour les diffusions LIVE, VOD et FER.
 
 Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK pour iOS](../release-notes/tvsdk-3x-ios.md)
-
-## Correctifs dans TVSDK 3.14 Android
-
-Cette version corrige un problème en raison duquel l’application se bloque lorsque le noeud [!UICONTROL CDATA] est vide pour l’un des éléments [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] de la réponse [!UICONTROL VAST].
-
-Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) .
 
 ## Voir aussi
 
