@@ -1,46 +1,43 @@
 ---
-title: Notes de mise à jour de PTAI 21.8.1
+title: Notes de mise à jour de PTAI 21.10.1
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
-# Notes de mise à jour de Primetime Ad Insertion 21.8.1
+# Notes de mise à jour de Primetime Ad Insertion 21.10.1
 
-Les notes de mise à jour de l’Ad Insertion Primetime 21.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2021
+Les notes de mise à jour de l’Ad Insertion Primetime 21.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2021.
 
-<!---
-Primetime Ad Insertion 21.9.1
-When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+## Nouveautés de l’API 21.10.1
 
+Lorsque :  Mardi 12 octobre 2021 de 7 h 45 à 13 h 45, heure de l&#39;Est
 
+* Cette version est axée sur la consolidation des serveurs, la suppression des serveurs non productifs et non utiles.
 
+## Améliorations et correctifs des versions précédentes
 
+### Version de maintenance de l’Ad Insertion Primetime
 
+Lorsque : Mardi 28 septembre 2021 de 5h00 à 6h00, heure de l’Est
 
+* Mises à jour de la pile de l’équilibreur de charge d’AWS Elastic Load Balancer vers AWS Application Load Balancer pour des fonctionnalités et une évolutivité améliorées. Ces équilibreurs de charge sont utilisés pour acheminer le trafic de requêtes de publicité vers le serveur principal Auditude à partir de la couche Ad Insertion (SSAI/CSAI).
 
+### Version 21.9.1
 
+Lorsque : Mardi 7 septembre 2021 de 02h30 à 05h30, heure de l’Est
 
-What:  Primetime Ad Insertion 21.9.1
+* Mises à jour des composants d’infrastructure sous-jacents aux composants de médiation et de création de rapports de l’Ad Insertion Primetime (interface utilisateur graphique de Primetime Ads).
 
-When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
-
-Changes:
-
-* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
--->
-
-## Nouveautés de la version 21.8.1 de l’API
+### Version 21.8.1
 
 Lorsque : Mardi 24 août 2021 de 02h00 à 05h00, heure de l’Est
 
 * Ajout de la prise en charge des diffusions DASH Live/Linéaire (VOD est déjà pris en charge).
-
-## Améliorations et correctifs des versions précédentes
 
 ### Version 21.5.1
 

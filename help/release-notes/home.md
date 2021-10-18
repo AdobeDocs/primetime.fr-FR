@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
+source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 37%
+source-wordcount: '306'
+ht-degree: 36%
 
 ---
 
@@ -20,17 +20,17 @@ Cette version corrige un problème en raison duquel l’application se bloque lo
 
 Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) .
 
-## Améliorations et correctifs de l’API 21.8.1
+## Améliorations et correctifs de l’API 21.10.1
 
-Cette version comprend la prise en charge des flux DASH en direct/linéaire.
+La version est axée sur la consolidation des serveurs, supprimant les serveurs non productifs et non utiles.
 
-Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 
 ## Améliorations et correctifs de TVSDK 3.13 iOS
 
 Cette version introduit la prise en charge des publicités &quot;HLS/CMAF&quot; (préroll, midroll et postroll) DEMUXED pour les diffusions LIVE, VOD et FER.
 
-Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK pour iOS](../release-notes/tvsdk-3x-ios.md)
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK pour iOS](../release-notes/tvsdk-3x-ios.md).
 
 ## Voir aussi
 
