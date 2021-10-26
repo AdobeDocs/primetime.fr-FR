@@ -2,7 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Aide de Primetime Ad Insertion
-source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
+source-git-commit: 23930068020475ef32a03e63c8a90d9c08429082
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 4%
@@ -47,7 +47,7 @@ ht-degree: 4%
 + [Surveillance des événements en direct](live-event-monitoring.md)
 + Référence {#technical-reference}
    + [API Bootstrap](technical-reference/bootstrap-api.md)
-   + [API de rapports](assets/auditude-report-api.pdf)
+   + [API de rapports](technical-reference/report-api.md)
    + Bonnes pratiques{#best-practices}
       + [Présentation](best-practices/best-practices-overview.md)
       + [Optimisation des heures de démarrage de la vidéo](best-practices/optimize-video-startup-time.md)
