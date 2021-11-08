@@ -3,9 +3,9 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 36%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 36%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
-## Correctifs dans TVSDK 3.14 Android
+## Correctifs dans TVSDK 3.15 Android
 
-Cette version corrige un problème en raison duquel l’application se bloque lorsque le noeud [!UICONTROL CDATA] est vide pour l’un des éléments [!UICONTROL ClickTracking], [!UICONTROL CustomClick] ou [!UICONTROL CompanionClickTracking] de la réponse [!UICONTROL VAST].
+Cette version corrige un problème en raison duquel l’application se bloque lorsque la balise créative est manquante ou lorsque [!UICONTROL url CDATA] est vide dans [!UICONTROL VAST] réponse.
 
-Pour plus d’informations, consultez les [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) .
+Consultez la section [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) pour plus d’informations.
 
 ## Améliorations et correctifs de l’API 21.10.1
 
 La version est axée sur la consolidation des serveurs, supprimant les serveurs non productifs et non utiles.
 
-Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de l’Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 
 ## Améliorations et correctifs de TVSDK 3.13 iOS
 
