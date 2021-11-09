@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 36%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,15 +14,13 @@ ht-degree: 36%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
+## Améliorations et correctifs de l’API 21.11.1
+
+Le [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone.
+
 ## Correctifs dans TVSDK 3.15 Android
 
 Cette version corrige un problème en raison duquel l’application se bloque lorsque la balise créative est manquante ou lorsque [!UICONTROL url CDATA] est vide dans [!UICONTROL VAST] réponse.
-
-Consultez la section [Notes de mise à jour de TVSDK pour Android](../release-notes/tvsdk-3x-android.md) pour plus d’informations.
-
-## Améliorations et correctifs de l’API 21.10.1
-
-La version est axée sur la consolidation des serveurs, supprimant les serveurs non productifs et non utiles.
 
 Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de l’Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 

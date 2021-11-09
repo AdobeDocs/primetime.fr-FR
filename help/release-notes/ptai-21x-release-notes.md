@@ -1,25 +1,31 @@
 ---
-title: Notes de mise à jour de PTAI 21.10.1
+title: Notes de mise à jour de PTAI 21.11.1
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Notes de mise à jour de Primetime Ad Insertion 21.10.1
+# Notes de mise à jour de Primetime Ad Insertion 21.11.1
 
 Les notes de mise à jour de l’Ad Insertion Primetime 21.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2021.
 
-## Nouveautés de l’API 21.10.1
+## Nouveautés de l’API 21.11.1
 
-Lorsque :  Mardi 12 octobre 2021 de 7 h 45 à 13 h 45, heure de l&#39;Est
+Lorsque : Mardi 9 novembre 2021 de 1 h 30 à 4 h 30, heure de l’Est
 
-* Cette version est axée sur la consolidation des serveurs, la suppression des serveurs non productifs et non utiles.
+* [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone.
 
 ## Améliorations et correctifs des versions précédentes
+
+### Version 21.10.1
+
+Lorsque : Mardi 12 octobre 2021 de 7 h 45 à 13 h 45, heure de l&#39;Est
+
+* Serveurs consolidés, suppression des serveurs non productifs et non utiles.
 
 ### Version de maintenance de l’Ad Insertion Primetime
 
@@ -41,7 +47,7 @@ Lorsque : Mardi 24 août 2021 de 02h00 à 05h00, heure de l’Est
 
 ### Version 21.5.1
 
-Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
+Lorsque : Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 **Modifications**
 
@@ -51,7 +57,7 @@ Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 ### Version 21.4.1
 
-**Quand :** jeudi 22 avril 2021 de 02h00 à 5h00, heure de l’Est
+**Lorsque :** Jeudi 22 avril 2021 de 02h00 à 5h00, heure de l’Est
 
 **Modifications**
 
@@ -61,7 +67,7 @@ Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 ### Version 21.2.2
 
-**Quand :** mardi 23 février 2021 de 1 h 00 à 4 h 00, heure de l’Est
+**Lorsque :** Mardi 23 février 2021 de 1 h 00 à 4 h 00, heure de l’Est
 
 **Modifications**
 
@@ -69,7 +75,7 @@ Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 ### Version 21.2.1
 
-**Quand :** mercredi 3 février 2021 de 1 h 00 à 4 h 00, heure de l’Est
+**Lorsque :** Mercredi 3 février 2021 de 1 h 00 à 4 h 00, heure de l’Est
 
 **Modifications**
 
@@ -77,7 +83,7 @@ Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 ### Version 21.1.2
 
-**Quand :** mardi 19 janvier 2021 de 00 h 30 à 08 h 30, heure de l’Est
+**Lorsque :** Mardi 19 janvier 2021 de 00 h 30 à 08 h 30, heure de l’Est
 
 **Modifications**
 
@@ -85,7 +91,7 @@ Lorsque :  Mercredi 26 mai 2021 de 3 h 30 à 6 h 30, heure de l’Est
 
 ### Version 21.1.1
 
-**Quand :** mercredi 13 janvier 2021 de 01h00 à 04h00, heure de l’Est
+**Lorsque :** Mercredi 13 janvier 2021 de 01h00 à 04h00, heure de l’Est
 
 **Modifications**
 
