@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 21.11.1
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ Les notes de mise à jour de l’Ad Insertion Primetime 21.x.x décrivent les no
 Lorsque : Mardi 9 novembre 2021 de 1 h 30 à 4 h 30, heure de l’Est
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone.
+
+* Roku Trick Play est entièrement pris en charge.
 
 ## Améliorations et correctifs des versions précédentes
 

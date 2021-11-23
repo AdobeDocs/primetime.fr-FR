@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '291'
+ht-degree: 38%
 
 ---
 
@@ -16,7 +16,7 @@ Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents rép
 
 ## Améliorations et correctifs de l’API 21.11.1
 
-Le [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone.
+Le [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone et [!UICONTROL Roku Trick] play est entièrement pris en charge.
 
 ## Correctifs dans TVSDK 3.15 Android
 
