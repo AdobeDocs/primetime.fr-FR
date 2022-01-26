@@ -4,9 +4,9 @@ description: Les notes de mise à jour de TVSDK 2.7 pour Android™ décrivent l
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 * **Insertion de coupure publicitaire partielle**
 
    Expérience de type télévision consistant à se joindre au milieu d’une publicité sans déclencher le suivi pour la publicité visionnée partiellement.\
-   Exemple**: **L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Cette coupure intervient 10 secondes dans la seconde publicité.
+   Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Cette coupure intervient 10 secondes dans la seconde publicité.
    * La deuxième publicité est lue pendant la durée restante (20 secondes), suivie de la troisième publicité.
    * Les dispositifs de suivi des publicités pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les dispositifs de suivi de la troisième publicité uniquement sont déclenchés.
 
@@ -71,7 +71,7 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 
 * **Ajout d’AdSystem et d’un ID créatif aux requêtes CRS**
 
-   * Incluez désormais &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
+   * Maintenant, incluez `AdSystem` et `CreativeId` comme nouveaux paramètres dans les requêtes 1401 et 1403.
 
 * **API setEncodeUrlForTracking dans la classe NetworkConfiguration supprimée** car les caractères dangereux d’une URL doivent être codés.
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4 propose les mises à jour et modifications suivantes de 
 
 * Modifications de la valeur par défaut pour `WebViewDebbuging`
 
-   `WebViewDebbuging` sont définies sur False par défaut. Pour l’activer, appelez setWebCon`tentsDebuggingEnabled(true) dans l’application.
+   Le `WebViewDebbuging` est définie sur _False_ par défaut. Pour l’activer, appelez `setWebContentsDebuggingEnabled` to _True_ dans l’application.
+
 * Mise à jour de la version OpenSSL et Curl `libcurl` vers la version 7.57.0 et OpenSSL vers la version 1.0.2k.
 * Accès au niveau de l’application pour l’objet de réponse VAST Introduction d’une nouvelle API NetworkAdInfo::getVastXml() qui permet d’accéder à l’objet de réponse VAST de l’application.
 
