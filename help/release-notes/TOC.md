@@ -3,10 +3,10 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notes de mise à jour de Primetime
 user-guide-description: Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus.
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 16%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,8 @@ ht-degree: 16%
 
 + [Notes de mise à jour Présentation](home.md)
 + Ad Insertion Primetime {#ptai}
+
+   + [Notes de mise à jour de PTAI 2.2.2](ptai-22x-release-notes.md)
    + [Notes de mise à jour de PTAI 21.11.1](ptai-21x-release-notes.md)
    + [Notes de mise à jour de PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notes de mise à jour de PTAI 19.11.1](ptai-19x-release-notes.md)

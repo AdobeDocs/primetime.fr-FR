@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 38%
+source-wordcount: '320'
+ht-degree: 35%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 38%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de l’API 21.11.1
+## Améliorations et correctifs de l’API 2.2.2
 
-Le [!UICONTROL EXT-X-IMAGE-STREAM-INF] est maintenant configurable par zone et [!UICONTROL Roku Trick] play est entièrement pris en charge.
+Cette version se concentre sur la capture de nouveaux événements de performances publicitaires, tels que les appels publicitaires, les appels au serveur de publicités et les événements de résolution de publicité. Ces événements seront exposés dans la nouvelle interface utilisateur graphique de l’Ad Insertion Primetime dans une prochaine version.
 
 ## Correctifs dans TVSDK 3.15 Android
 
