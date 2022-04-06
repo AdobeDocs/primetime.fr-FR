@@ -1,9 +1,10 @@
 ---
 title: Notes de mise à jour de PTAI 2.2.2
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2022.
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
+source-git-commit: 258ce10297aa15086a3ed1c1a825af2a30d34d24
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -12,10 +13,22 @@ ht-degree: 0%
 
 Les notes de mise à jour de l’Ad Insertion Primetime 2.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2022.
 
-## Nouveautés de la version 2.2.2 de l’API
+## Nouveautés de la version 22.3.2 de l’API
+
+Lorsque : Mardi 8 mars 2022, de 1 h 30 à 4 h 30, heure de l’Est
+
+* Mise à jour permettant de s’assurer que le contenu principal lit un seul segment avant de passer au preroll dans les appareils Apple.
+
+* Mise à niveau de la méthode d’agrégation des mesures de surveillance interne de &quot;per million&quot; à &quot;count&quot;.
+
+* Nettoyage et optimisation des ressources.
+
+## Améliorations et correctifs des versions précédentes
+
+### Version PTAI 2.2.2
 
 Lorsque : Mercredi 2 mars 2022 de 1 h 30 à 4 h 30, heure de l’Est
 
-* Capture des nouveaux événements de performances publicitaires, y compris les appels de création publicitaire, les appels au serveur de publicités et les événements de résolution de publicité.
+* Nouveaux événements de performances publicitaires capturés, y compris les appels de création publicitaire, les appels de serveur de publicités et les événements de résolution de publicité.
 
 * Ces événements seront exposés par le biais de la nouvelle Interphase utilisateur graphique de l’Ad Insertion Primetime dans une prochaine version.
