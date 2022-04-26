@@ -2,9 +2,9 @@
 title: Notes de mise à jour de PTAI 2.2.2
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 258ce10297aa15086a3ed1c1a825af2a30d34d24
+source-git-commit: 899b8dc98b79d531c7f13bfe26d12806e90d5685
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,21 @@ ht-degree: 0%
 
 Les notes de mise à jour de l’Ad Insertion Primetime 2.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2022.
 
-## Nouveautés de la version 22.3.2 de l’API
+## Nouveautés de la version 22.4.4 de l’API
 
-Lorsque : Mardi 8 mars 2022, de 1 h 30 à 4 h 30, heure de l’Est
+Lorsque : Mercredi 20 avril 2022 de 3 h à 6 h (heure de l’Est)
+
+* Mise à jour permettant de capturer de nouveaux événements de performances publicitaires autour des appels de publicité.
+
+* Mise à jour permettant de capturer de nouvelles dimensions d’impression afin d’enrichir l’interface de création de rapports, la facturation interne et les initiatives de performances publicitaires.
+
+## Améliorations et correctifs des versions précédentes
+
+### Version 22.3.2
+
+**Lorsque :** Mardi 8 mars 2022, de 1 h 30 à 4 h 30, heure de l’Est
+
+**Modifications**
 
 * Mise à jour permettant de s’assurer que le contenu principal lit un seul segment avant de passer au preroll dans les appareils Apple.
 
@@ -23,11 +35,11 @@ Lorsque : Mardi 8 mars 2022, de 1 h 30 à 4 h 30, heure de l’Est
 
 * Nettoyage et optimisation des ressources.
 
-## Améliorations et correctifs des versions précédentes
+### Version 2.2.2
 
-### Version PTAI 2.2.2
+**Lorsque :** Mercredi 2 mars 2022 de 1 h 30 à 4 h 30, heure de l’Est
 
-Lorsque : Mercredi 2 mars 2022 de 1 h 30 à 4 h 30, heure de l’Est
+**Modifications**
 
 * Nouveaux événements de performances publicitaires capturés, y compris les appels de création publicitaire, les appels de serveur de publicités et les événements de résolution de publicité.
 
