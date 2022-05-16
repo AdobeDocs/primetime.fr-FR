@@ -2,26 +2,25 @@
 title: Présentation
 description: Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
+source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# Utilitaire AIR Publisher ID {#air-publisher-id-utility}
 
-# Utilitaire d’ID d’éditeur AIR {#air-publisher-id-utility}
+Lorsque vous créez un fichier AIR, l’outil de développement AIR (ADT) génère automatiquement un identifiant d’éditeur. Utilitaire AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcule l’identifiant d’éditeur d’une application AIR.
 
-Lorsque vous créez un fichier AIR, l’outil ADT (AIR Developer Tool) génère automatiquement un identifiant d’éditeur. L’utilitaire d’identification de l’éditeur AIR ( [!DNL AdobePublisherIDUtility.jar]) calcule l’identifiant de l’éditeur pour une application AIR.
-
-L’ID d’éditeur est unique au certificat que vous utilisez pour créer un fichier AIR. Si vous réutilisez le même certificat pour plusieurs applications AIR, toutes les applications AIR ont le même ID d’éditeur. Une version AIR qui succède à la version 1.5.2 n’ajoute pas l’identifiant d’éditeur généré à un fichier. Par conséquent, si vous prévoyez d’utiliser une liste autorisée d’applications AIR, utilisez cet outil pour déterminer l’identifiant de l’éditeur.
+L’identifiant de l’éditeur est unique au certificat que vous utilisez pour créer un fichier AIR. Si vous réutilisez le même certificat pour plusieurs applications AIR, toutes les applications AIR ont le même identifiant d’éditeur. Une version d’AIR qui succède à la version 1.5.2 n’ajoute pas l’identifiant d’éditeur généré à un fichier. Par conséquent, si vous prévoyez d’utiliser une liste autorisée d’application AIR, utilisez cet outil pour déterminer l’identifiant de l’éditeur.
 
 >[!NOTE]
 >
->L’ID d’éditeur utilisé pour l’application de la liste autorisée AIR n’est pas identique à l’ID d’éditeur spécifié par l’éditeur de l’application dans le fichier [!DNL application.xml] de l’application.
+>L’identifiant de l’éditeur utilisé pour l’application des listes autorisées AIR n’est pas identique à l’identifiant de l’éditeur spécifié par l’éditeur de l’application dans le [!DNL application.xml] fichier .
 
-## Utilitaire d’identification de l’éditeur AIR, utilisation de ligne de commande {#air-publisher-id-utility-command-line-usage}
+## Utilisation de la ligne de commande de l’utilitaire AIR Publisher ID {#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -36,11 +35,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* indique un chemin d’accès au  [!DNL signatures.xml] fichier de l’application AIR, situé dans le  [!DNL META-INF] répertoire des applications.
+* `signaturefile` spécifie un chemin d’accès au de l’application AIR [!DNL signatures.xml] fichier situé dans les applications [!DNL META-INF] directory
 
 * `signingcert` spécifie le certificat utilisé pour signer une application AIR
 
 >[!NOTE]
 >
->Pour déterminer l&#39;ID d&#39;éditeur d&#39;une application Android, vous devez utiliser l&#39;option `-s` pour spécifier le certificat utilisé pour signer le package d&#39;application Android (APK). Primetime DRM est nécessaire pour créer des applications Android capables de lire du contenu protégé par DRM Primetime.
+>Pour déterminer l’ID d’éditeur d’une application Android, vous devez utiliser la variable `-s` pour spécifier le certificat utilisé pour signer le package de l’application Android (APK). Primetime DRM est requis pour créer des applications Android capables de lire du contenu protégé par DRM Primetime.
