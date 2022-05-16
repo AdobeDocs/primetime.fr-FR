@@ -1,38 +1,37 @@
 ---
-title: Détails du processus de stratégie
-description: Détails du processus de stratégie
+title: Détails du workflow de stratégie
+description: Détails du workflow de stratégie
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
-
 
 # Processus BEES {#bees-workflow}
 
 **Résumé :**
 
-* **Stratégie**  - Créez une stratégie de gestion des abeilles (DRM) qui indique que l&#39;abeille est requise pour tout le contenu emballé à l&#39;aide de cette stratégie.
-* **Packaging**  - Empaquetage de contenu à l’aide de la stratégie DRM basée sur les ABEES.
-* **Authentification**  - Authentifiez votre périphérique client et utilisez l’API DRM Primetime, ou l’API Primetime, pour associer ce jeton à la gestion des droits numériques Primetime Cloud. Ainsi, le périphérique client enverra ce jeton d’authentification à Primetime Cloud DRM avec toutes les demandes de licence. Primetime Cloud DRM ne traitera pas ce jeton, mais le transmettra (en tant que blob opaque) à votre point de terminaison d&#39;abeilles pour traitement.
-* **Licence**  - Demandez une licence pour votre contenu protégé. Le périphérique client ajoute automatiquement votre jeton d’authentification précédemment défini à l’appel.
-* **Droits**  - Primetime Cloud DRM détermine que le contenu a été inclus avec une stratégie qui requiertBEES. Primetime Cloud DRM construira une demande JSON à envoyer au point de terminaison BEES. La réponse d&#39;BEES indique à Primetime Cloud DRM si une licence doit être émise ou non et, éventuellement, quelle stratégie DRM utiliser.
+* **Stratégie** - Créez une stratégie DRM BEES qui indique que BEES est nécessaire pour tout le contenu empaqueté à l’aide de cette stratégie.
+* **Modules** - Regroupez le contenu à l’aide de la stratégie DRM basée sur les BEES.
+* **Authentification** - Authentifiez votre appareil client et utilisez l’API Primetime DRM, ou l’API Primetime, pour associer ce jeton à Primetime Cloud DRM. Ce faisant, l’appareil client enverra ce jeton d’authentification à Primetime Cloud DRM avec toutes les demandes de licence. Primetime Cloud DRM ne traitera pas ce jeton, mais le transmettra (en tant qu’objet blob opaque) à votre point de terminaison BEES pour le traitement.
+* **Licences** - Demandez une licence pour votre contenu protégé. Le périphérique client ajoute automatiquement votre jeton d’authentification défini précédemment à l’appel .
+* **Droit** - Primetime Cloud DRM détermine que le contenu a été compilé avec une stratégie qui nécessite BEES. Primetime Cloud DRM crée une requête JSON à envoyer au point de terminaison BEES. La réponse BEES indiquera à Primetime Cloud DRM d’émettre ou non une licence et, éventuellement, la stratégie DRM à utiliser.
 
-## Détails du processus de stratégie {#policy-workflow-details}
+## Détails du workflow de stratégie {#policy-workflow-details}
 
-Lorsque Primetime Cloud DRM traite une demande de licence, il analyse la stratégie DRM dans la demande afin de déterminer si un appel à un service de droits d’arrière-plan est nécessaire avant que le contenu ne s’affiche. Si un appel BEES *est* requis, Primetime Cloud DRM crée la demande BEES, puis analyse la stratégie DRM pour obtenir un point de terminaison d&#39;URL BEES spécifié pour la demande BEES.
+Lorsque Primetime Cloud DRM traite une demande de licence, il analyse la stratégie DRM dans la demande pour déterminer si un appel à un service de droit principal est requis avant que le contenu puisse être affiché. Si un appel BEES *is* Si nécessaire, Primetime Cloud DRM crée la requête BEES, puis analyse la stratégie DRM pour obtenir un point de terminaison d’URL BEES spécifié pour la requête BEES.
 
 Appliquez votre stratégie DRM qui indique l’exigence BEES, en spécifiant les deux propriétés personnalisées suivantes dans la stratégie :
 
-    * `policy.customProp.1=bees.required=&lt;true>`
-    * `policy.customProp.2=bees.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>`
+* `policy.customProp.1=bees.required=<true | false>`
+* `policy.customProp.2=bees.url=<url to your BEES endpoint>`
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
-Par exemple, en utilisant le Gestionnaire de stratégies DRM Primetime ( [!DNL AdobePolicyManager.jar]), vous spécifiez les deux propriétés personnalisées suivantes dans le fichier de configuration [!DNL flashaccesstools.properties] :
+Par exemple, en utilisant Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]), vous devez spécifier les deux propriétés personnalisées suivantes dans la variable [!DNL flashaccesstools.properties] fichier de configuration :
 
 * `policy.customProp.1=bees.required=true`
 * `policy.customProp.2=bees.url=https://mybeesserver.example.com/bees`
@@ -41,21 +40,21 @@ Par exemple, en utilisant le Gestionnaire de stratégies DRM Primetime ( [!DNL A
 >
 >Si vous utilisez déjà `policy.customProp.1` ou `policy.customProp.2` pour une autre propriété, utilisez simplement des numéros uniques pour les propriétés les plus récentes.
 
-## Détails du processus du package {#package-workflow-details}
+## Détails du workflow de module {#package-workflow-details}
 
-Lors de la création d&#39;un pack de contenu protégé par accès à l&#39;Adobe, vous devez appliquer l&#39;une de vos stratégies DRM prenant en compte les abeilles au contenu.
+Lors du conditionnement du contenu protégé par accès de votre Adobe, vous devez appliquer l’une de vos stratégies DRM basées sur les abeilles au contenu.
 
-## Détails du processus d&#39;authentification {#authentication-workflow-details}
+## Détails du workflow d’authentification {#authentication-workflow-details}
 
-Pour que votre point de terminaison BEES prenne des décisions concernant les droits, le périphérique client doit fournir des informations d’authentification. Pour ce faire, utilisez votre propre jeton d’authentification spécifique au client.
+Pour que votre point de terminaison BEES puisse prendre des décisions concernant les droits, l’appareil client doit fournir des informations d’authentification. Pour ce faire, utilisez votre propre jeton d’authentification spécifique au client.
 
-Primetime Cloud DRM n’a pas à comprendre ce jeton ; il le transmet simplement à votre point de terminaison Abeilles. Le périphérique client est chargé de créer ou d’acquérir ce jeton et de le définir à l’aide de l’API `DRMManager.setAuthenticationToken()`.
+Primetime Cloud DRM n’a pas à comprendre ce jeton ; il le transmet simplement à votre point de terminaison BEES. L’appareil client est chargé de créer ou d’acquérir ce jeton et de le définir à l’aide de la fonction `DRMManager.setAuthenticationToken()` API.
 
-Pour associer ce jeton à Primetime Cloud DRM, procédez comme suit afin qu’il soit envoyé avec la demande de licence :
+Procédez comme suit pour associer ce jeton à Primetime Cloud DRM , de sorte qu’il soit envoyé avec la demande de licence :
 
-Instanciez l’objet `DRMManager` à l’aide des métadonnées DRM du contenu compressé pour Primetime Cloud DRM.
+Instanciation de la variable `DRMManager` avec les métadonnées DRM du contenu qui a été mis en package pour Primetime Cloud DRM.
 
-La méthode `setAuthenticationToken()` fonctionne en associant le tableau d’octets donné à l’URL du serveur de licences fournie dans les métadonnées DRM utilisées pour instancier `DRMManager`.
+Le `setAuthenticationToken()` fonctionne en associant le tableau d’octets donné à l’URL du serveur de licences fournie dans les métadonnées DRM utilisées pour instancier. `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  
@@ -65,13 +64,13 @@ mgr.setAuthenticationToken(<auth token>);
 
 Le jeton est envoyé avec toutes les demandes de licence jusqu’à ce que le jeton soit effacé en appelant `.setAuthenticationToken` avec la valeur null comme paramètre.
 
-## Détails du processus de licence{#license-workflow-details}
+## Détails du workflow de licence{#license-workflow-details}
 
 Demandez une licence à Primetime Cloud DRM en appelant `mgr.loadVoucher()`.
 
-## Détails de la demande et de la réponse de droits{#entitlement-request-and-response-details}
+## Détails de la requête et de la réponse de droit{#entitlement-request-and-response-details}
 
-Lorsque le DRM de Primetime Cloud détermine que le contenu a été inclus avec une stratégie DRM prenant en compte les abeilles, il construit la demande JSON suivante pour envoyer au point de terminaison des abeilles spécifié dans la stratégie DRM :
+Lorsque Primetime Cloud DRM détermine que le contenu a été compilé avec une stratégie DRM prenant en charge l’BEES, il crée la requête JSON suivante à envoyer au point de terminaison BEES spécifié dans la stratégie DRM :
 
 ```
 {
@@ -105,7 +104,7 @@ Lorsque le DRM de Primetime Cloud détermine que le contenu a été inclus avec 
 }
 ```
 
-La réponse suivante est attendue à partir du point de terminaison des abeilles :
+La réponse suivante est attendue du point de terminaison BEES :
 
 ```
 {
@@ -153,4 +152,4 @@ La réponse suivante est attendue à partir du point de terminaison des abeilles
 }
 ```
 
-Primetime Cloud DRM utilise la réponse pour déterminer s’il doit ou non délivrer une licence au périphérique demandeur et s’il doit remplacer une nouvelle stratégie DRM dans le processus de génération de licence. Si `isAllowed` est `true` et qu&#39;aucune stratégie n&#39;est fournie dans la réponse, la stratégie DRM d&#39;origine utilisée pendant la durée de création du contenu est utilisée pour générer la licence.
+Primetime Cloud DRM utilise la réponse pour déterminer s’il doit ou non émettre une licence sur l’appareil demandeur et s’il doit substituer une nouvelle stratégie DRM dans le processus de génération de licence. If `isAllowed` is `true` et qu’aucune stratégie n’est fournie dans la réponse, la stratégie DRM d’origine utilisée pendant le délai de création du contenu sera utilisée pour générer la licence.
