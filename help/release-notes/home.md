@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 35%
+source-wordcount: '301'
+ht-degree: 37%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 35%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de l’API 2.2.2
+## Améliorations et correctifs dans PTAI 2.2.6.2
 
-Cette version se concentre sur la capture de nouveaux événements de performances publicitaires, tels que les appels publicitaires, les appels au serveur de publicités et les événements de résolution de publicité. Ces événements seront exposés dans la nouvelle interface utilisateur graphique de l’Ad Insertion Primetime dans une prochaine version.
+Cette version se concentre sur les améliorations apportées à la journalisation des performances publicitaires avec plus de détails sur la perte de valeur et les autres origines de stockage net pour CRS.
 
 ## Correctifs dans TVSDK 3.15 Android
 
