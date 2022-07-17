@@ -1,0 +1,42 @@
+---
+title: Limites et problèmes connus
+description: 'Problèmes connus dans le produit. '
+source-git-commit: 4b840a1a722b3dd403d70f4ba838529d7d4d0b35
+workflow-type: tm+mt
+source-wordcount: '411'
+ht-degree: 0%
+
+---
+
+
+# Problèmes connus et limites {#known-issues}
+
+Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences utilisateur fluides grâce à ses offres. La version actuelle (version 1.0) de Account IQ fournit des analyses d’utilisation et de partage d’abonnements aux fournisseurs de diffusion en continu avec un degré de confiance élevé. Toutefois, les restrictions suivantes seront corrigées dans les versions à venir.
+
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans une version ultérieure.
+
+* Lors de l’estimation des scores de partage pour les comptes individuels, Account IQ adopte une approche conservatrice qui permet aux entreprises d’agir sur le partage avec une grande confiance. Cependant, cette approche tend à sous-estimer le montant total du partage lorsqu’il est agrégé sur de nombreux comptes.
+
+* Le [Score de partage global](/help/AccountIQ/dashboard.md#overall-sharing-score) facteurs actuellement uniquement dans [Niveau de partage](/help/AccountIQ/dashboard.md#sharing-level) et [Utilisation des comptes partagés](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Les futures versions prendront en compte les mesures supplémentaires.
+
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, les sélecteurs des distributeurs multicanaux de programmes audiovisuels et des canaux ne disposent pas du mécanisme de recherche, pour l’instant.
+
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il existe une limitation pour sélectionner uniquement 10 MVPD et programmeurs au maximum.
+
+* L&#39;option d&#39;export des statistiques de compte est limitée à l&#39;export de 1000 comptes, pour l&#39;instant.
+
+* L’option à sélectionner [Type de segment](#segment-type) lorsque la définition des opérations est limitée à **Nombre fixe de comptes**. Le **Nombre variable de comptes** sera disponible dans une version ultérieure.
+
+* Les sections Évaluation, Modèles de détection, Segments, Instantanés et Règles du volet de navigation de gauche sont actuellement désactivées et seront disponibles dans une version à venir.
+
+* Lors de la création [Opérations](/help/AccountIQ/operation-affecting-user-segment.md), vous ne pouvez identifier que deux types de [Actions](/help/AccountIQ/operation-affecting-user-segment.md) à compter de maintenant : règles de surveillance simultanée et actions externes.
+
+* Actuellement, les opérations ne peuvent être créées que et [scheduled](/help/AccountIQ/operation-affecting-user-segment.md#action). Les prochaines versions vous permettront de les mettre en pause, de les reprendre et de les gérer entièrement.
+
+* En raison de l’ensemble de données plus limité utilisé, le mode Isolation ne reflète pas vraiment la quantité de partage. Par conséquent, le MVPD en mode Isolation ne peut pas être comparé à un autre MVPD.
+
+* Lorsque vous définissez une nouvelle [segment](/help/AccountIQ/segments-timeframe.md) pour une opération, vous pouvez ajouter des mesures. Mais si vous sélectionnez un segment enregistré, vous ne pouvez pas ajouter d’autres mesures pour affiner le segment.
+
+* La granularité et le sélecteur de période sont limités à une semaine ou un mois, ce qui signifie que les données peuvent être évaluées sur une seule semaine ou un seul mois.
+
+* Les intervalles prédéfinis sont actuellement désactivés dans la granularité et le sélecteur de périodes et seront disponibles dans une version ultérieure.

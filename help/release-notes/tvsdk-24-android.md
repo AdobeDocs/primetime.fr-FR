@@ -1,46 +1,45 @@
 ---
 title: Notes de mise à jour de TVSDK 2.4.1 pour Android
-description: Les Notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
+description: Les notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
 
-
 # Notes de mise à jour de TVSDK 2.4.1 pour Android {#tvsdk-for-android-release-notes}
 
-Les Notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
+Les notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
 
 ## TVSDK Android 2.4.1 {#tvsdk-android}
 
 Adobe publie TVSDK 2.4.1 pour Android.
 
-Pour utiliser cette version de TVSDK, assurez-vous que votre système répond aux exigences décrites à la section [Configuration système requise](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6).
+Pour utiliser cette version de TVSDK, assurez-vous que votre système respecte la configuration requise décrite à la section [Configuration requise](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6).
 
-Vous trouverez ci-dessous la documentation :
+Vous trouverez la documentation suivante :
 
-・ Système d&#39;aide en ligne TVSDK 2.4 pour l&#39;aide Android
+・ Aide du système d’aide en ligne TVSDK 2.4 pour Android
 
 ・ [Javadocs TVSDK 2.4 pour l’API Java Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
 
-Les Javadocs sont l’autorité suprême, car ils sont automatiquement générés directement à partir du code source TVSDK.
+Les Javadocs constituent l’autorité ultime, car ils sont générés automatiquement directement à partir du code source TVSDK.
 
-・ [Documentation de l&#39;API C++ TVSDK 2.4 pour l&#39;API C++ Android](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
+・ [Documentation de l’API C++ TVSDK 2.4 pour l’API Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
-Chaque classe Java possède une classe C++ correspondante, et la documentation C++ contient plus d&#39;explications que les Javadocs. Consultez donc la documentation C++ pour en savoir plus sur l&#39;API Java.
+Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient plus de documents explicatifs que les Javadocs. Consultez donc la documentation C++ pour une meilleure compréhension de l’API Java.
 
-・ Guide de migration ([TVSDK 2.4 for Android Migration Guide](../migration-guides/tvsdk-14-25-android.md))
+・ Guide de migration ([Guide de migration de TVSDK 2.4 pour Android](../migration-guides/tvsdk-14-25-android.md))
 
 Ce guide explique ce que vous devez modifier pour migrer une application basée sur TVSDK 1.4 vers une application basée sur TVSDK 2.4.
 
 ## Nouvelles fonctionnalités {#new-features}
 
-TVSDK 2.4.1 pour Android offre de nombreuses améliorations de performances par rapport aux versions antérieures. Il offre une expérience de visualisation de haute qualité.
+TVSDK 2.4.1 pour Android offre de nombreuses améliorations de performances par rapport aux versions antérieures. Il offre une expérience de visionnage de haute qualité.
 
 Cette version comprend toutes les fonctionnalités des versions 2.4 et 2.4.1 et aucune fonctionnalité n’est obsolète.
 
@@ -48,47 +47,47 @@ Voici les principales nouvelles fonctionnalités de la version 2.4.1 :
 
 * Fonctionnalités HLS version 4
 
-   * **Lecture**  vidéo (lecture, pause, recherche) avec contrôle du lecteur pour les flux en direct, linéaires et VOD.
-   * **Sous-titrage fermé.** TVSDK peut afficher des légendes fermées 608/708 avec une sélection de polices, tailles de police, couleurs et arrière-plan. Il peut également prendre en charge les vidéos avec des légendes cumulées et passer d’un suivi de langue à l’autre si elles sont disponibles.
-   * **Les** modèles de jeu de cartes permettent d&#39;avancer rapidement et de revenir en arrière pour les flux HLS qui utilisent des I-Frames. Toutes les commandes de lecture vidéo fonctionnent sur le contenu. Le mouvement lent (avant) est disponible pour le mode de lecture vidéo externe avec des taux compris entre 0 et 1.
-   * **Le débit adaptatif (ABR)** permet au lecteur de sélectionner dynamiquement l’une des versions multiples du même flux de contenu à lire, en fonction du réseau et d’autres conditions. Vous pouvez définir des paramètres de manière dynamique ou dans le fichier manifeste afin de les sélectionner parmi des stratégies de sélection agressives, modérées et conservatrices.
-   * **Les** plages d’octets permettent à un seul fichier TS de contenir plusieurs segments TS.
-   * **Autre** rendu audio permettant au lecteur de basculer entre les pistes audio disponibles.
+   * **Lecture vidéo** (lecture, pause, recherche) avec contrôle du lecteur pour les flux en direct, linéaires et VOD.
+   * **Sous-titrage codé.** TVSDK peut afficher 608/708 sous-titres avec une sélection de polices, de tailles de police, de couleurs et d’arrière-plan. Il peut également prendre en charge les vidéos avec des sous-titres de cumul et passer d’un suivi de langue à l’autre s’ils sont disponibles.
+   * **Mode de lecture des tropiques** prend en charge les flux HLS rapides en avant et en arrière qui utilisent des I-Frames. Toutes les commandes de lecture vidéo fonctionnent sur le contenu. Le mouvement lent (avant) est disponible pour le mode de lecture vidéo externe avec des taux compris entre 0 et 1.
+   * **Débit adaptatif (ABR)** permet au lecteur de sélectionner dynamiquement la ou les versions multiples d’un même flux de contenu à lire, en fonction du réseau et d’autres conditions. Vous pouvez définir des paramètres dynamiquement ou dans le fichier de manifeste pour effectuer une sélection parmi des stratégies de sélection agressives, modérées et conservatrices.
+   * **Périodes** Activez un seul fichier TS pour contenir plusieurs segments TS.
+   * **Autres rendus audio** Permet au lecteur de basculer entre les pistes audio disponibles.
    * **Prise en charge d’ID3.** TVSDK peut lire des flux audio et vidéo HLS contenant des métadonnées audio ID3, telles que le nom de l’artiste, le titre et l’album.
-   * **Basculement. **TVSDK utilise des stratégies pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs hôtes, des fichiers de liste de lecture et des segments.
-   * **Transmission audio multicanal (DD+).** TVSDK peut transmettre des données audio Dolby Digital Plus (E-AC3) au matériel de prise en charge.
+   * **Basculement. **TVSDK utilise des stratégies pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs d’hôtes, des fichiers de liste de lecture et des segments.
+   * **Diffusion audio multicanal (DD+).** TVSDK peut transmettre des données audio Dolby Digital Plus (E-AC3) au matériel de prise en charge.
 
 * Fonctionnalités de protection du contenu
 
-   * **DRM pour HLS.** Toutes les API de lecture vidéo fonctionnent avec du contenu vidéo chiffré protégé par Accès à l’Adobe. Les fonctionnalités DRM suivantes sont prises en charge :
+   * **DRM pour HLS.** Toutes les API de lecture vidéo fonctionnent avec du contenu vidéo chiffré protégé par Accès aux Adobes. Les fonctionnalités DRM suivantes sont prises en charge :
 
       * Rotation des licences
-      * Rotation clé
-      * Mise en cache des licences
-      * Temps de la stratégie
-      * rotation IV
+      * Rotation des clés
+      * Mise en cache de licence
+      * Durée de la stratégie
+      * Rotation IV
 
 * **Lecture AES 128.** TVSDK peut lire le contenu HLS standard de chiffrement avancé (AES) avec une taille de clé de 128 bits.
-* **Les systèmes HLS protégés (PHLS)** fournissent un ensemble limité de politiques de gestion des droits (DRM) préétablies, un sous-ensemble de ce que fournit Accès aux Adobes, pour permettre la gestion des droits (DRM) légers sur les systèmes HLS pour les flux vivants et VOD.
+* **HLS protégé (PHLS)** fournit un ensemble limité de stratégies DRM préconfigurées, un sous-ensemble de ce qu’fournit Adobe Access, afin d’activer la DRM légère sur HLS pour les flux VOD et en direct.
 
-* Fonctionnalités de publicité/de remplacement de contenu et de monétisation
+* Fonctionnalités publicitaires/de contenu alternatif et de monétisation
 
-   * **Suivi des publicités insérées côté serveur.** TVSDK peut effectuer le suivi des publicités insérées par le service d’insertion d’annonces dans Adobe Cloud. Il prend en charge les annonces linéaires aux formats VAST2, VAST3 et VMAP pour les flux VOD et les flux vivants/linéaires.
-   * **Balises HLS personnalisées.** TVSDK utilise sa  `MediaPlayerConfig` classe pour activer la notification de l’application du lecteur lorsque des balises HLS personnalisées apparaissent dans le flux.
-   * **Insertion publicitaire côté client.** La bibliothèque d’insertion d’annonces Auditude fonctionne avec les serveurs Adobe Auditude pour résoudre les publicités en vue de les insérer dynamiquement dans du contenu en direct, linéaire et VOD, aux positions preroll, mid-roll ou post-roll.
-   * **Résolveurs d’annonces personnalisés.** Les  `ContentResolver, OpportunityGenerator,` et  `MediaPlayerClientFactory` interfaces vous permettent de mettre en oeuvre un résolveur de publicités/de contenu alternatif personnalisé et d’enregistrer un détecteur d’opportunités personnalisé pour travailler avec TVSDK. Les classes `TestAdResolver` et `AuditudeResolver` fournissent des exemples C++ d&#39;implémentation d&#39;un résolveur de contenu. Vous trouverez un exemple JavaScript à l’adresse `samples/jspsdk/testapp/psdk.js`.
-   * **Comportement cohérent des publicités.** Utilisez l’ `AdPolicySelector` interface pour permettre un comportement cohérent dans tous les lecteurs pour des opérations telles que la recherche et le jeu vidéo lorsque des publicités sont présentes dans le contenu. Si vous n’implémentez pas les vôtres, TVSDK utilise `DefaultAdPolicySelector`.
-   * **Supprimez/remplacez des publicités C3.** Utilisez l’API TVSDK appropriée pour supprimer des plages de contenu personnalisées et insérer dynamiquement de nouvelles publicités sans préparation supplémentaire. C&#39;est pratique lorsque du contenu en direct/linéaire est diffusé, puis immédiatement disponible à la demande sans nettoyage.
+   * **Suivi des publicités insérées côté serveur.** TVSDK peut effectuer le suivi des publicités insérées par le service d’insertion de publicités Adobe Cloud. Il prend en charge les publicités linéaires aux formats VAST2, VAST3 et VMAP pour les diffusions VOD et live/linear.
+   * **Balises HLS personnalisées.** TVSDK utilise son `MediaPlayerConfig` pour activer la notification de l’application du lecteur lorsque des balises HLS personnalisées apparaissent dans le flux.
+   * **Insertion de publicités côté client.** La bibliothèque d’insertion de publicités Auditude fonctionne avec les serveurs Adobe Auditude pour résoudre les publicités en vue d’une insertion dynamique dans du contenu dynamique, linéaire et VOD, aux positions preroll, mid-roll ou post-roll.
+   * **Résolveurs de publicités personnalisés.** Le `ContentResolver, OpportunityGenerator,` et `MediaPlayerClientFactory` Les interfaces vous permettent de mettre en oeuvre un résolveur de contenu alternatif/publicité personnalisé et d’enregistrer un détecteur d’opportunités personnalisé pour travailler avec TVSDK. Le `TestAdResolver` et `AuditudeResolver` Les classes fournissent des exemples C++ d’implémentation d’un résolveur de contenu. Vous trouverez un exemple JavaScript à l’adresse `samples/jspsdk/testapp/psdk.js`.
+   * **Comportement cohérent de la publicité.** Utilisez la variable `AdPolicySelector` pour permettre un comportement cohérent sur tous les lecteurs pour des opérations telles que la recherche et le jeu vidéo lorsque des publicités sont présentes dans le contenu. Si vous n’implémentez pas le vôtre, TVSDK utilise `DefaultAdPolicySelector`.
+   * **Supprimez/remplacez des publicités C3.** Utilisez l’API TVSDK appropriée pour supprimer des plages de contenu personnalisées et insérer dynamiquement de nouvelles publicités sans préparation supplémentaire. Cela s’avère pratique lorsque le contenu en direct/linéaire est diffusé, puis rendu disponible immédiatement à la demande sans nettoyage.
 
 Voici les principales nouvelles fonctionnalités de la version 2.4 :
 
-* **Instant pour VOD et** liveLorsque vous activez l’instantané, TVSDK initialise et met en mémoire tampon le média avant les débuts de lecture. Comme vous pouvez lancer plusieurs instances `MediaPlayerItemLoader` simultanément en arrière-plan, vous pouvez mettre en mémoire tampon plusieurs flux. Lorsqu’un utilisateur modifie le canal et que le flux est correctement mis en mémoire tampon, la lecture sur le nouveau canal s’effectue immédiatement. TVSDK 2.4 prend également en charge Instant On pour les flux en direct. Les flux en direct sont remis en mémoire tampon lorsque la fenêtre active se déplace.
+* **Installez pour VOD et live** Lorsque vous activez l’instantané, TVSDK s’initialise et met en mémoire tampon le média avant le début de la lecture. Parce que vous pouvez lancer plusieurs `MediaPlayerItemLoader` instances simultanément en arrière-plan, vous pouvez mettre en mémoire tampon plusieurs diffusions. Lorsqu’un utilisateur modifie le canal et que la diffusion a été mise en mémoire tampon correctement, la lecture du nouveau canal commence immédiatement. TVSDK 2.4 prend également en charge Instant On pour les diffusions en direct. Les diffusions en direct sont mises en mémoire tampon à nouveau lorsque la fenêtre active se déplace.
 
-* **Améliorations des performances **La nouvelle architecture TVSDK 2.4 apporte diverses améliorations aux performances :
+* **Amélioration des performances **La nouvelle architecture de TVSDK 2.4 apporte diverses améliorations de performances :
 
-   * **Sous-segmentation**  : TVSDK réduit davantage la taille de chaque fragment pour permettre la lecture début dès que possible.
-   * **Téléchargements**  de publicités parallèles : TVSDK prérécupère les publicités en parallèle à la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.
-   * **Résolution**  des publicités différée - Grâce à cette fonctionnalité, nous n&#39;attendons pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues.
+   * **Sous-segmentation** - TVSDK réduit davantage la taille de chaque fragment afin de démarrer la lecture dès que possible.
+   * **Téléchargements de publicités parallèles** - TVSDK récupère les publicités en parallèle de la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.
+   * **Lazy ad resolution** - Avec cette fonctionnalité, nous n’attendons pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues.
 
 * **Lecture du contenu MP4**
 
@@ -96,112 +95,112 @@ Cette version de TVSDK prend en charge la lecture de MP4 en tant que contenu pri
 
 * **Connexions réseau persistantes**
 
-TVSDK conserve un ensemble de connexions réseau réutilisables, de sorte qu’il n’est pas nécessaire de créer et de détruire une connexion réseau pour chaque demande de réseau.
+TVSDK conserve un ensemble de connexions réseau réutilisables. Il n’entraîne donc pas de surcharge lors de la création et de la destruction d’une connexion réseau pour chaque demande de réseau.
 
-* **Protection de la sortie basée sur la résolution**
+* **Protection des sorties basée sur la résolution**
 
-Cette fonctionnalité établit un lien entre les restrictions de lecture et des résolutions spécifiques, offrant ainsi des commandes DRM plus fines.
+Cette fonctionnalité associe les restrictions de lecture à des résolutions spécifiques, fournissant des contrôles DRM plus précis.
 
-* **Lecture avec débit binaire adaptatif (ABR)**
+* **Lecture de la vidéo avec débit adaptatif (ABR)**
 
-Cette fonctionnalité permet à TVSDK de basculer entre les flux iFrame en mode de lecture par astuces. Vous pouvez utiliser des profils autres qu’iFrame pour jouer à des vitesses de lecture inférieures.
+Cette fonctionnalité permet à TVSDK de basculer entre les diffusions iFrame en mode de lecture de l’astuce. Vous pouvez utiliser des profils non iFrame pour effectuer des opérations de lecture à des vitesses inférieures.
 
-* **Lissage du jeu**
+* **Jeu de tour lisser**
 
-Ces améliorations améliorent l’expérience des utilisateurs :
+Ces améliorations améliorent l’expérience utilisateur :
 
-・ Sélection adaptative du débit binaire et de la fréquence d’images lors de la lecture de l’astuce, en fonction de la bande passante et du profil de mémoire tampon
+・ Sélection de débit binaire adaptatif et de débit d’image lors de la lecture de l’astuce, en fonction de la bande passante et du profil de mémoire tampon
 
-・ Utilisez le flux principal plutôt que le flux IDR pour obtenir une lecture rapide jusqu&#39;à 30 i/s.
+・ Utilisez la diffusion principale au lieu de la diffusion IDR pour une lecture rapide jusqu’à 30 ips.
 
-* **Logique ABR améliorée**
+* **Amélioration de la logique ABR**
 
-La nouvelle logique ABR est basée sur la longueur de la mémoire tampon, le taux de changement de la longueur de la mémoire tampon et la bande passante mesurée. Ainsi, l&#39;ABR choisit le débit approprié lorsque la bande passante fluctue et optimise le nombre de fois où le commutateur de débit se produit réellement en surveillant le débit auquel la longueur de la mémoire tampon change.
+La nouvelle logique ABR repose sur la longueur de la mémoire tampon, le taux de changement de la longueur de la mémoire tampon et la bande passante mesurée. Ainsi, l’ABR choisit le débit approprié lorsque la bande passante fluctue et optimise le nombre de fois où le changement de débit se produit réellement en surveillant la vitesse à laquelle la longueur de la mémoire tampon change.
 
 * **Facturation**
 
-TVSDK collecte automatiquement des mesures, en conformité avec le contrat de vente du client, afin de générer des rapports d’utilisation périodiques requis pour la facturation. Sur chaque événement de début de diffusion en continu, TVSDK utilise l’API d’insertion de données Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion d’annonces et les indicateurs activés pour l’insertion d’images drm - en fonction de la durée du flux facturable - à la suite de rapports propriétaire Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client ou ne les inclut pas. Sur demande, ce rapport sur l&#39;utilisation de la facturation est envoyé périodiquement aux clients. Il s&#39;agit de la première phase de la fonction de facturation qui ne prend en charge que la facturation d&#39;utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation.
+TVSDK collecte automatiquement les mesures, en conformité avec le contrat de vente client, afin de générer des rapports d’utilisation périodiques requis à des fins de facturation. Pour chaque événement de démarrage de flux, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour la collecte de données drm (selon la durée du flux facturable) à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client, ni ne les inclut dans celles-ci. Sur demande, ce rapport sur l’utilisation de la facturation est envoyé régulièrement aux clients. Il s’agit de la première phase de la fonctionnalité de facturation prenant uniquement en charge la facturation de l’utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation.
 
 ## Fonctionnalités prises en charge {#supported-features}
 
-TVSDK for Android 2.4 prend en charge un certain nombre de fonctionnalités que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
+TVSDK pour Android 2.4 prend en charge plusieurs fonctionnalités que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
 
 >[!NOTE]
 >
 >Dans les tableaux de la matrice des fonctionnalités ci-dessous, un √ signifie que la fonctionnalité est prise en charge dans la version actuelle.
 
-### Fonctionnalités de lecture de base {#core-playback-features}
+### Fonctions de lecture principales {#core-playback-features}
 
-| **Fonction** | **Type de contenu** | **HLS** | **DASH** |
+| **Fonctionnalité** | **Type de contenu** | **HLS** | **DASH** |
 |---|---|---|---|
-| Lecture générale (Lecture, Pause, Recherche) | VOD + Live | √ | √ (VOD uniquement) |
+| Lecture générale (Lecture, Pause, Recherche) | VOD + En direct | √ | √ (VOD uniquement) |
 | FER - Lecture générale (Lecture, Pause, Recherche) | FER VOD | √ | Non pris en charge |
 | MP3 | VOD | Non pris en charge | Non pris en charge |
 | Lecture de contenu MP4 | VOD | √ | √ |
-| Logique de commutation de débit adaptatif | VOD + Live | √ | Non pris en charge |
-| Lecture audio uniquement | VOD + Live | √ | Non pris en charge |
-| Sous-titres - 608/708 | VOD + Live | √ | √ (VOD uniquement) |
-| Sous-titres - WebVTT | VOD + Live | √ | √ (VOD uniquement) |
-| Basculement du manifeste | VOD + Live | √ | √ (VOD uniquement) |
-| Basculement avancé | VOD + Live | √ | √ (VOD uniquement) |
-| Notifications de la qualité de service et du lecteur | VOD + Live | √ | √ (VOD uniquement) |
-| Prise en charge des en-têtes de cookie | VOD + Live | √ | √ (VOD uniquement) |
-| Prise en charge des en-têtes personnalisés | VOD + Live | Non pris en charge | Non pris en charge |
-| Définir les paramètres de contrôle de la mémoire tampon | VOD + Live | √ | √ (VOD uniquement) |
-| Définition des contrôles de débit binaire adaptatif | VOD + Live | √ | √ (VOD uniquement) |
-| Balises de manifeste personnalisées (HLS) / Flux de Événement (DASH) | VOD + Live | √ | √ (VOD uniquement) |
-| Audio lié en retard | VOD + Live | √ | √ (VOD uniquement) |
-| 302 Redirection | VOD + Live | √ | √ (VOD uniquement) |
+| Logique de changement de débit adaptatif | VOD + En direct | √ | Non pris en charge |
+| Lecture audio uniquement | VOD + En direct | √ | Non pris en charge |
+| Sous-titres codés - 608/708 | VOD + En direct | √ | √ (VOD uniquement) |
+| Sous-titres codés - WebVTT | VOD + En direct | √ | √ (VOD uniquement) |
+| Basculement du manifeste | VOD + En direct | √ | √ (VOD uniquement) |
+| Basculement avancé | VOD + En direct | √ | √ (VOD uniquement) |
+| Notifications QoS et du lecteur | VOD + En direct | √ | √ (VOD uniquement) |
+| Prise en charge des en-têtes de cookie | VOD + En direct | √ | √ (VOD uniquement) |
+| Prise en charge des en-têtes personnalisés | VOD + En direct | Non pris en charge | Non pris en charge |
+| Définition des paramètres de contrôle de la mémoire tampon | VOD + En direct | √ | √ (VOD uniquement) |
+| Définition des contrôles de débit adaptatif | VOD + En direct | √ | √ (VOD uniquement) |
+| Balises de manifeste personnalisées (HLS) / Flux d’événements (DASH) | VOD + En direct | √ | √ (VOD uniquement) |
+| Audio liée tardive | VOD + En direct | √ | √ (VOD uniquement) |
+| Redirection 302 | VOD + En direct | √ | √ (VOD uniquement) |
 
 ### Fonctionnalités de lecture avancées {#advanced-playback-features}
 
 <table> 
  <tbody>
   <tr>
-   <td><strong>Fonction</strong></td> 
+   <td><strong>Fonctionnalité</strong></td> 
    <td><strong>Type de contenu</strong></td> 
    <td><strong>HLS</strong></td> 
    <td><strong>DASH</strong></td> 
   </tr>
   <tr>
    <td>Lecture avec décalage</td> 
-   <td>Live</td> 
+   <td>En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
    <td>Lecture audio uniquement</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Lecture de la bande </td> 
-   <td>VOD + Live</td> 
+   <td>Lecture de la carte </td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Lecture lisse (avec ABR)</td> 
-   <td>VOD + Live</td> 
+   <td>Lecture lisser de la marque (avec ABR)</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Analyse ID3 (HLS) / Métadonnées temporisées (DASH)</td> 
-   <td>VOD + Live</td> 
+   <td>Analyse ID3 (HLS) / Métadonnées temporelles (DASH)</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Coupures </td> 
-   <td>VOD + Live</td> 
+   <td>Noires </td> 
+   <td>VOD + En direct</td> 
    <td>Non pris en charge</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
    <td>Instant activé</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
@@ -209,57 +208,57 @@ TVSDK for Android 2.4 prend en charge un certain nombre de fonctionnalités que 
    <td>
     <ul> 
      <li>Prise en charge des marqueurs de discontinuité (HLS) </li> 
-     <li>Multipériode (DASH)</li> 
+     <li>Multi-périodes (DASH)</li> 
     </ul> </td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>302 Attractif de redirection</td> 
-   <td>VOD + Live</td> 
+   <td>Attractivité de redirection 302</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>√ (VOD uniquement)</td> 
   </tr>
   <tr>
    <td>Défilement des miniatures (Iframe et JPEG)</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>Non pris en charge</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Intégrité du flux </td> 
-   <td>VOD + Live</td> 
+   <td>Intégrité des diffusions </td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
  </tbody>
 </table>
 
-### Fonctionnalités de l&#39;Ad Insertion principal {#core-ad-insertion-features-csai}
+### Principales fonctionnalités de l’Ad Insertion (CSAI) {#core-ad-insertion-features-csai}
 
-| **Fonction** | **Type de contenu** | **HLS** | **DASH** |
+| **Fonctionnalité** | **Type de contenu** | **HLS** | **DASH** |
 |---|---|---|---|
-| Lecture générale, publicités activées | VOD + Live | √ | √ (VOD Pre-rolls uniquement) |
+| Lecture générale, publicités activées | VOD + En direct | √ | √ (Pré-enregistrements VOD uniquement) |
 | Contenu FER avec publicités activées | VOD | √ | Non pris en charge |
-| Comportements publicitaires par défaut | VOD + Live | √ | √ (VOD Pre-rolls uniquement) |
-| VAST 2.0/3.0 | VOD + Live | √ | √ (VOD Pre-rolls uniquement) |
-| VMAP 1.0 | VOD + Live | √ | √ (VOD Pre-rolls uniquement) |
-| Publicités MP4 | VOD + Live | √ (provenant de CRS) | √ (provenant de CRS, pré-rouleaux uniquement) |
+| Comportements de publicité par défaut | VOD + En direct | √ | √ (Pré-enregistrements VOD uniquement) |
+| VAST 2.0/3.0 | VOD + En direct | √ | √ (Pré-enregistrements VOD uniquement) |
+| VMAP 1.0 | VOD + En direct | √ | √ (Pré-enregistrements VOD uniquement) |
+| Publicités MP4 | VOD + En direct | √ (provenant de CRS) | √ (provenant de CRS, pré-enregistrements uniquement) |
 
-### Fonctionnalités avancées des Ad Insertion (CSAI) {#advanced-ad-insertion-features-csai}
+### Fonctionnalités Ad Insertion avancées (CSAI) {#advanced-ad-insertion-features-csai}
 
 <table> 
  <tbody>
   <tr>
-   <td><strong>Fonction</strong></td> 
+   <td><strong>Fonctionnalité</strong></td> 
    <td><strong>Type de contenu</strong></td> 
    <td><strong>HLS</strong></td> 
    <td><strong>DASH</strong></td> 
   </tr>
   <tr>
-   <td>Lecture à l'aide de publicités activée</td> 
-   <td>VOD + Live</td> 
+   <td>Lecture de la carte avec publicités activées</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
   </tr>
@@ -271,48 +270,48 @@ TVSDK for Android 2.4 prend en charge un certain nombre de fonctionnalités que 
   </tr>
   <tr>
    <td>Paramètres de ciblage</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
-   <td>√ (VOD Pre-rolls uniquement)</td> 
+   <td>√ (Pré-enregistrements VOD uniquement)</td> 
   </tr>
   <tr>
    <td>Paramètres personnalisés</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
-   <td>√ (VOD Pre-rolls uniquement)</td> 
+   <td>√ (Pré-enregistrements VOD uniquement)</td> 
   </tr>
   <tr>
    <td>Comportements publicitaires personnalisés</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√</td> 
-   <td>√ (VOD Pre-rolls uniquement)</td> 
+   <td>√ (Pré-enregistrements VOD uniquement)</td> 
   </tr>
   <tr>
    <td>Balises publicitaires personnalisées</td> 
-   <td>Live</td> 
+   <td>En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Résolveurs d’annonces personnalisés</td> 
-   <td>VOD + Live</td> 
+   <td>Résolveurs de publicités personnalisés</td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Résolveur d’annonce personnalisé à roue libre</td> 
+   <td>Résolveur de publicité personnalisée à roue libre</td> 
    <td>VOD</td> 
    <td>Non pris en charge</td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>C3 Remplacement de publicité </td> 
-   <td>VOD + Live</td> 
+   <td>Remplacement de publicité C3 </td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Chargement publicitaire différé</td> 
+   <td>Chargement différé des publicités</td> 
    <td>VOD</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
@@ -321,39 +320,39 @@ TVSDK for Android 2.4 prend en charge un certain nombre de fonctionnalités que 
    <td>
     <ul> 
      <li>Prise en charge des marqueurs de discontinuité - SSAI (HLS) </li> 
-     <li>Multipériode (DASH)</li> 
+     <li>Multi-périodes (DASH)</li> 
     </ul> </td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
    <td> </td> 
   </tr>
   <tr>
    <td>Publicités d’accompagnement, bannières publicitaires et publicités cliquables</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
-   <td>√ (VOD Pre-rolls uniquement)</td> 
+   <td>√ (Pré-enregistrements VOD uniquement)</td> 
   </tr>
   <tr>
    <td>VPAID 2.0</td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√ (JS) </td> 
-   <td>√ (VOD Pre-rolls uniquement)</td> 
+   <td>√ (Pré-enregistrements VOD uniquement)</td> 
   </tr>
   <tr>
-   <td>Sortie de publicité anticipée</td> 
-   <td>Live</td> 
+   <td>Sortie anticipée de publicité</td> 
+   <td>En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>VOD créatif basé sur des règles + hiérarchisation en direct</td> 
-   <td>VOD + Live</td> 
+   <td>Création VOD + hiérarchisation en direct basée sur des règles</td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
   <tr>
    <td>Règles CRS </td> 
-   <td>VOD + Live</td> 
+   <td>VOD + En direct</td> 
    <td>√ </td> 
    <td>Non pris en charge</td> 
   </tr>
@@ -362,49 +361,49 @@ TVSDK for Android 2.4 prend en charge un certain nombre de fonctionnalités que 
 
 ## Fonctionnalités de protection du contenu {#content-protection-features}
 
-| **Fonction** | **Type de contenu** | **HLS** | **DASH** |
+| **Fonctionnalité** | **Type de contenu** | **HLS** | **DASH** |
 |---|---|---|---|
-| Chiffrement AES | VOD + Live | √ | √ (VOD uniquement) |
-| Exemple de chiffrement AES | VOD + Live | √ |  |
-| Flux jetés | VOD + Live | √ |  |
-| DRM | VOD + Live | Primetime DRM uniquement (Futur : Widevine) | Équipement uniquement |
-| Lecture externe (RBOP) | VOD + Live | DRM Primetime uniquement | Non pris en charge |
-| Rotation de licence | VOD + Live | DRM Primetime uniquement | Non pris en charge |
-| Rotation clé | VOD + Live | DRM Primetime uniquement | Non pris en charge |
+| Chiffrement AES | VOD + En direct | √ | √ (VOD uniquement) |
+| Exemple de chiffrement AES | VOD + En direct | √ |  |
+| Flux Tokenized | VOD + En direct | √ |  |
+| DRM | VOD + En direct | Primetime DRM uniquement (Future : Widevine) | Widevine uniquement |
+| Lecture externe (RBOP) | VOD + En direct | Primetime DRM uniquement | Non pris en charge |
+| Rotation de licence | VOD + En direct | Primetime DRM uniquement | Non pris en charge |
+| Rotation des clés | VOD + En direct | Primetime DRM uniquement | Non pris en charge |
 
-### Fonctionnalités d&#39;intégration {#integration-features}
+### Fonctions d’intégration {#integration-features}
 
-| **Fonction** | **Type de contenu** | **HLS** | **DASH** |
+| **Fonctionnalité** | **Type de contenu** | **HLS** | **DASH** |
 |---|---|---|---|
-| Intégration d’Adobe Analytics VHL | VOD + Live | √ | √ |
-| Facturation | VOD + Live | √ | Non pris en charge |
+| Intégration d’Adobe Analytics VHL | VOD + En direct | √ | √ |
+| Facturation | VOD + En direct | √ | Non pris en charge |
 
-## Fonctions non prises en charge {#features-not-supported}
+## Fonctionnalités non prises en charge {#features-not-supported}
 
 Cette version de TVSDK ne prend pas en charge :
 
-* Abandon de publicité.
-* Le mouvement lent dans le jeu de la ruse.
-* Recherchez et jouez avec du contenu MP4.
-* Insertion d’une publicité avec le contenu principal MP4.
-* Recherchez quand une publicité est en cours de lecture.
-* Lecture des publicités avec des supports audio uniquement.
+* Abandon de publicités.
+* Le mouvement lent dans les jeux de fiction.
+* Effectuez une recherche et créez un aperçu avec du contenu MP4.
+* Insertion de l&#39;annonce avec le contenu principal MP4.
+* Rechercher quand une publicité est en cours de lecture
+* Lecture des publicités avec support audio uniquement.
 
-## Problèmes et limitations connus {#known-issues-and-limitations}
+## Problèmes connus et limites {#known-issues-and-limitations}
 
 Cette version de TVSDK présente les problèmes suivants :
 
-* Un périphérique spécifique (Samsung Galaxy Tab 4) bloque VOD DRM LBA avec auditude et clique sur les publicités
+* Le blocage VOD DRM LBA par auditude spécifique à l’appareil (Samsung Galaxy Tab 4) et le clic sur les publicités
 * La publicité post-roll n’est pas lue pour un contenu spécifique.
-* La définition de la légende de fermeture en langues CJK ne fonctionne pas.
-* La vidéo peut sortir du mode tour automatiquement entre VOD et live.
-* VHL - des appels de pulsation incorrects sont envoyés lorsque nous début un contenu à partir d’un décalage.
-* Lorsque des publicités VPAID sont lues, les appels de pulsation VHL pour événement:type:play sont manquants.
+* La définition de la légende de fermeture sur les langues CJK ne fonctionne pas.
+* La vidéo peut sortir du mode de ruse automatiquement entre VOD et live.
+* VHL : les appels de pulsation incorrects sont envoyés lorsque nous commençons un contenu à partir d’un décalage.
+* Lorsque des publicités VPAID sont lues, des appels de pulsation VHL sont lus pour un événement.:type:la publicité de lecture est manquante.
 * La publicité preroll est lue même si adBreakPolicy SKIP est sélectionné.
-* Une fois que vous êtes entré dans le lecteur d’état complet, vous revenez à l’état Lecture avec SKIP adBreakPolicy pour les publicités post-roll.
+* Une fois que vous êtes entré dans le lecteur d’état complet, il revient à l’état de lecture avec SKIP adBreakPolicy pour les publicités preroll.
 
-Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, vous ne pouvez pas afficher de graphiques pour les légendes.
+Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, vous ne pouvez pas afficher de graphiques pour les sous-titres.
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète à la [page Apprentissage et support Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consultez la documentation d’aide complète à l’adresse [Formation et assistance pour Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) page.

@@ -2,9 +2,9 @@
 title: Notes de mise à jour de TVSDK 3.13 pour iOS
 description: Les notes de mise à jour de TVSDK 3.13 pour iOS décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes d’appareil dans TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -1205,6 +1205,6 @@ Remarque : Dans certaines versions d’iOS, le système d’exploitation ne char
 
 ## Ressources utiles {#helpful-resources}
 
-* [Guide du programmeur iOS : TVSDK 3.4](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [Guide du programmeur iOS : TVSDK 3.4](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [Référence de l’API TVSDK iOS 3.4](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * Consultez la documentation d’aide complète à l’adresse [Formation et assistance pour Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) page.

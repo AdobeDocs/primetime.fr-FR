@@ -4,9 +4,9 @@ description: Les notes de mise à jour de TVSDK 2.7 pour Android™ décrivent l
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -425,10 +425,10 @@ Cette version de TVSDK présente les problèmes suivants :
 
 ## Ressources utiles {#helpful-resources}
 
-* [Configuration requise](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
-* [Guide du programmeur TVSDK 2.7 pour Android™](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [Configuration requise](/help/programming/tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
+* [Guide du programmeur TVSDK 2.7 pour Android™](/help/programming/tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
 * [TVSDK Android™ Javadoc pour référence d’API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
 * [Document API TVSDK Android™ C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) - Chaque classe Java™ possède une classe C++ correspondante et la documentation C++ contient plus de documents explicatifs que la documentation Java™. Reportez-vous donc à la documentation C++ pour une meilleure compréhension de l’API Java™.
-* [Guide de migration de TVSDK 1.4 vers 2.5 pour Android™ (Java™)](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* [Guide de migration de TVSDK 1.4 vers 2.5 pour Android™ (Java™)](/help/migration-guides/tvsdk-14-25-android.md)
 * Pour gérer les scénarios d’activation/de désactivation d’écran, reportez-vous à la section `Application_Changes_for_Screen_On_Off.pdf` inclus dans la version.
 * Consultez la documentation d’aide complète à l’adresse [Formation et assistance pour Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) page.

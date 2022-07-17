@@ -4,9 +4,9 @@ description: Les notes de mise à jour de TVSDK 3.15 pour Android décrivent les
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -751,7 +751,7 @@ Cette version présente les problèmes suivants :
 * La lecture peut être bloquée lorsque la recherche porte sur les contenus audio de liaison tardive.
 * Par intermittence, les sous-titres webVTT peuvent devenir désynchronisés pour le contenu LIVE.
 * Par intermittence, la lecture rapide de quelques images peut être vue après la sortie d’une coupure publicitaire.
-* Parfois, une erreur 303 est générée pour les coupures publicitaires Tripple Wrapper, même si des publicités sont lues.
+* Parfois, une erreur 303 est générée pour les coupures publicitaires de l’outil Tripple Wrapper, même si des publicités sont lues.
 
 **Android TVSDK 2.5.2**
 
@@ -772,8 +772,8 @@ Cette version de TVSDK présente les problèmes suivants :
 
 ## Ressources utiles {#helpful-resources}
 
-* [Configuration requise](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [Guide du programmeur Android TVSDK 3.10](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [Configuration requise](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [Guide du programmeur Android TVSDK 3.10](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [Javadoc Android TVSDK pour référence API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [Document API TVSDK Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient plus de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une compréhension plus approfondie de l’API Java.
 * [Guide de migration de TVSDK 1.4 vers 2.5 pour Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
