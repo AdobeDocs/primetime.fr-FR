@@ -1,9 +1,10 @@
 ---
 title: Définition d’un segment et d’une période
 description: Définition d’un segment et d’une période
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -54,9 +55,8 @@ Pour sélectionner les canaux de programmeur de votre choix, procédez comme sui
 
    Les éléments de liste de niveau supérieur dans la variable **Canaux dans le segment** are [programmeur](/help/AccountIQ/product-concepts.md#programmer-def) les sociétés et les éléments de liste sous les noms de programmeur sont leurs [channels](/help/AccountIQ/product-concepts.md#channel-def). Vous pouvez sélectionner des canaux individuels sous des programmeurs ou sélectionner des programmeurs et toutes les activités des canaux sous ce programmeur sont incluses dans les résultats des rapports et graphiques.
 
-   ![](assets/programmer-channels.png)
-
-   *Figure : Programmeurs et canaux répertoriés dans le sélecteur de canaux*
+   <!--![](assets/programmer-channels.png)
+   *Figure: Programmers and channels listed in channels selector*-->
 
    >[!IMPORTANT]
    >
@@ -95,9 +95,7 @@ Pour sélectionner une période d’évaluation :
 
 1. Sélectionnez **Semaine** ou **Mois** de **Agréger par** pour définir la granularité de votre évaluation.
 
-   ![](assets/granularity-timeframe-weekwise.png)
-
-   *Figure : Sélecteur de date pour sélectionner la granularité et la période*
+   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
 
 1. Une fois la granularité sélectionnée, vous pouvez utiliser les flèches vers l’avant ou vers l’arrière pour avancer ou reculer dans le temps.
 

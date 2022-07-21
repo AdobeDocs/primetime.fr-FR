@@ -2,7 +2,7 @@
 title: Tableau de bord du compte IQ
 description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Les valeurs vous aident à comprendre l’ampleur du partage des informations d�
 
 
 *Figure : Panneau Note de partage moyenne - agrégé pour le segment actuel*
-
-![](assets/aggregate-sharing-score.svg)
 
 Les trois mesures suivantes sont des composants de la note de partage moyenne.
 
