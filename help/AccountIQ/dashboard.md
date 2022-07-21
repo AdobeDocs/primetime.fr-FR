@@ -2,9 +2,9 @@
 title: Tableau de bord du compte IQ
 description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ Le tableau de bord résume et agrège les données dans une collection de graphi
 
 ![Tableau de bord du compte IQ](assets/dashboard-capture.png)
 
+
+*Figure : Le tableau de bord*
+
 ## Score de partage moyen - agrégé pour le segment actuel {#aggregated-sharing}
 
 Le panneau Score de partage agrégé fournit un résumé de première ligne résumant la quantité et l’impact du partage en termes de comptes et de volume de diffusion.
@@ -23,9 +26,12 @@ Les valeurs vous aident à comprendre l’ampleur du partage des informations d�
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*Figure : Panneau Note de partage moyenne - agrégé pour le segment actuel*
+
 ![](assets/aggregate-sharing-score.svg)
 
-Les trois mesures suivantes sont des composants du score de partage agrégé.
+Les trois mesures suivantes sont des composants de la note de partage moyenne.
 
 ### Niveau de partage {#sharing-level}
 
@@ -34,6 +40,9 @@ La jauge du niveau de partage indique le pourcentage de tous vos comptes d’abo
 Une valeur calculée à partir d’une moyenne de la probabilité de partage calculée pour chaque compte dans l’ensemble des distributeurs multicanaux sélectionnés qui a diffusé en continu depuis l’un des canaux de programmeurs sélectionnés pendant la période sélectionnée.
 
 ![](assets/sharing-level.png)
+
+
+*Figure : Niveau de partage*
 
 L’indicateur de tendance affiche le pourcentage de changement de la valeur de la mesure dans par rapport à la période précédente.
 
@@ -45,6 +54,9 @@ Vous pouvez également voir l’indicateur de tendance, qui illustre une augment
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*Figure : Utilisation de comptes partagés*
+
 ### Score de partage global {#overall-sharing-score}
 
 Le score de partage global est un composite des scores de partage, y compris &quot;Niveau de partage&quot; et &quot;Utilisation z des comptes partagés&quot;.
@@ -52,6 +64,9 @@ Le score de partage global est un composite des scores de partage, y compris &qu
 Il fournit une valeur destinée à refléter l’impact relatif du partage par rapport à l’industrie. Son objectif est similaire à celui d’un score de crédit, résumant la situation par un seul chiffre. Mais dans ce cas, plus le nombre est élevé, plus le danger potentiel est grand.
 
 ![](assets/overall-sharing-score.png)
+
+
+*Figure : Score de partage global*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ Ce tableau fournit une vue comparative des différents scores de partage agrég�
 
 ![](assets/top-mvpds.png)
 
+
+*Figure : Meilleurs MVPD dans le segment par score global*
+
 ### Score de partage par canaux et MVPD {#sharin-score-by-channels-and-mvpds}
 
 Ce tableau fournit une vue comparative du partage des scores des canaux sélectionnés pour les MVPD dans le segment actuel.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*Figure : Partage de scores par canaux et MVPD*
 
 ### Probabilité de partage des comptes {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ Ce graphique partitionne les comptes en plages de quintiles de probabilité de p
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*Figure : Nombres et pourcentages de comptes abonnés dans différentes plages de probabilités de partage*
+
 ### Nombre de comptes et d’utilisations en partageant le niveau de probabilité {#number-of-accounts-usage-sharing-probability}
 
 Ce panneau fournit une vue tabulaire des comptes partitionnés en plages de quintiles de probabilité de partage allant de très bas (0-20 %) à très élevé (80=100 %) avec l’utilisation associée de chaque quintile à partir de comptes partagés.
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*Figure : Nombre de comptes, de tendances et d’utilisations appartenant à différentes périodes de probabilité*
+
