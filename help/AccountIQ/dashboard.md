@@ -1,13 +1,13 @@
 ---
 title: Tableau de bord du compte IQ
-description: 'Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # Le tableau de bord {#dashboard}
 
@@ -15,13 +15,15 @@ Le tableau de bord résume et agrège les données dans une collection de graphi
 
 ![Tableau de bord du compte IQ](assets/dashboard-capture.png)
 
-## Score de partage agrégé {#aggregated-sharing}
+## Score de partage moyen - agrégé pour le segment actuel {#aggregated-sharing}
 
 Le panneau Score de partage agrégé fournit un résumé de première ligne résumant la quantité et l’impact du partage en termes de comptes et de volume de diffusion.
 
 Les valeurs vous aident à comprendre l’ampleur du partage des informations d’identification par vos abonnés, ce qui vous permet de mesurer la nécessité d’agir sur celle-ci.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 Les trois mesures suivantes sont des composants du score de partage agrégé.
 
