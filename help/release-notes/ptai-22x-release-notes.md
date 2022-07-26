@@ -1,27 +1,37 @@
 ---
-title: Notes de mise à jour de PTAI 2.2.6.2
+title: Notes de mise à jour de PTAI 2.2.7.1
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
 
-# Notes de mise à jour de Primetime Ad Insertion 2.6.2
+# Notes de mise à jour de Primetime Ad Insertion 2.7.1
 
 Les notes de mise à jour de l’Ad Insertion Primetime 2.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2022.
 
-## Nouveautés de la version 22.6.2 de l’API
+## Nouveautés de la version 22.7.1 de l’API
 
-Lorsque : Mercredi 29 juin 2022 de 3 h 00 à 6 h 00, heure de l’Est
+Lorsque : Mercredi 20 juillet 2022 de 3 h 00 à 6 h 00, heure de l’Est
+
+* Améliorations apportées à la journalisation des performances publicitaires, avec introduction de mesures liées aux valeurs pour les workflows DASH.
+
+* Migration de la base de données.
+
+## Améliorations et correctifs des versions précédentes
+
+### Version 22.6.2
+
+**Lorsque :** Mercredi 29 juin 2022 de 3 h 00 à 6 h 00, heure de l’Est
+
+**Modifications**
 
 * Amélioration de la journalisation des performances publicitaires avec plus de détails sur la perte de valeur.
 
 * Autres origines de stockage réseau pour CRS.
-
-## Améliorations et correctifs des versions précédentes
 
 ### Version 22.6.1
 
