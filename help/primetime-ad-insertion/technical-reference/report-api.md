@@ -1,19 +1,21 @@
 ---
 title: API de rapport
 description: API du rapport Auditude
-source-git-commit: 7f958c83a4dd481221feb4a266440b920ac7d195
+exl-id: 50eb4869-3765-4591-8c41-794b29d50044
+source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # API de rapport {#report-api}
 
 L’interface utilisateur dispose de rôles gérés pour les clients et pour l’équipe d’activation (Adobe). Les clients peuvent accéder au portail, puis créer et modifier leurs configurations. Ils peuvent également consulter les rapports pour connaître les impressions publicitaires de l’interface utilisateur.
 
 Les API fonctionnent en arrière-plan pour faciliter la communication entre les clients et les administrateurs et l’infrastructure principale.
+
+Pour explorer le [!DNL Primetime Ad Insertion] APIs voir [Points de terminaison de l’API Ad Insertion dans l’interface utilisateur basculée](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## Point d’entrée API {#report-api-endpoint}
 
