@@ -1,13 +1,13 @@
 ---
 title: Opérations sur le compte IQ
 description: Les opérations dans le compte IQ impliquent des actions pour effectuer des automatisations et des opérations en bloc sur les comptes d’abonnés et suivre leurs effets.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # Opérations {#operations-tab-next-steps}
 
@@ -55,19 +55,30 @@ Vous pouvez analyser les impacts d’une opération en consultant son rapport. P
 
 1. Sélectionnez le nom de l’opération sur la page Opérations principale.
 
-   Le rapport s’affiche sous la forme d’un graphique à barres empilé.
+   Le rapport s&#39;affiche sous la forme d&#39;un graphique à barres empilé.
 
    ![](assets/operation-impact-report.png)
 
    *Figure : Rapport des opérations pour visualiser les impacts des opérations*
 
-   L’axe X trace la période d’évaluation et l’axe Y trace une variable pour évaluer l’impact du fonctionnement.
+   L’axe X représente la période d’évaluation et l’axe Y représente l’impact de l’opération (en termes de nombre de comptes dans un segment pendant la période d’évaluation). Chaque barre est divisée en trois parties.
 
-   Par exemple, dans l’image ci-dessus, la variable sur l’axe Y est le nombre de comptes. Le graphique vous permet de comparer le nombre de comptes qui se trouvent dans le segment des opérations par rapport au nombre de comptes qui se trouvent en dehors du segment des opérations à un moment donné (par exemple, la semaine 2 de la période d’évaluation des opérations). Par conséquent, vous pouvez analyser la manière dont le nombre de comptes varie au cours de la période d’évaluation dans le segment d’opération et en dehors du segment.
+   * Une partie représente le nombre de comptes qui répondent toujours aux critères du segment d’opération.
 
-   Ainsi, si votre opération devait envoyer des emails d’avertissement à des comptes suspects, et que les comptes dans le segment des opérations étaient ceux avec une probabilité de partage supérieure à 90 et utilisant plus de 5 appareils pour diffuser du contenu, alors au début de la période d’évaluation, les comptes dans le segment sont plus de 7 millions. Ce nombre change au cours de la période d’évaluation, comme le montre le graphique, indiquant ainsi l’impact du fonctionnement. Sur la base de l’évaluation, vous pouvez prendre des mesures correctives concernant la suspension de comptes, ou poursuivre l’opération, ou ajuster votre stratégie pour de meilleurs résultats afin de limiter le partage des informations d’identification.
+   * Une autre partie représente le nombre de comptes principaux pour cette période qui se trouvaient à l’origine dans le segment, mais qui ne répondent plus aux critères du segment d’opération.
 
-2. Pour fermer le rapport et revenir à la page Opérations principale, sélectionnez **Opérations** option sous **Actions** dans le volet de navigation de gauche.
+   * La troisième partie représente les comptes qui n&#39;ont pas été ouverts au cours de cette période.
+   >[!NOTE]
+   >
+   >La première barre représente le nombre de comptes qui répondent aux conditions du segment d&#39;opération au début de la période d&#39;évaluation.
+
+   Au fil du temps, le graphique montre l’effet de votre action (par le biais de l’opération) en indiquant le nombre de comptes qui ont modifié leur comportement par rapport aux critères d’origine (par exemple, ayant une probabilité de partage supérieure à 90 et utilisant plus de 5 appareils) ou qui sont devenus inactifs.
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. Pour fermer le rapport et revenir à la page Opérations principale, sélectionnez **Opérations** option sous **Actions** dans le volet de navigation de gauche.
 
 <!--
 
