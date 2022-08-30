@@ -2,9 +2,9 @@
 title: Tableau de bord du compte IQ
 description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Le tableau de bord {#dashboard}
 
 Le tableau de bord résume et agrège les données dans une collection de graphiques et de rapports, conçue pour donner un aperçu général de la portée et de l’impact du partage de compte. Il fournit une page unique contenant les principaux rapports et mesures du compte IQ.
-
-<table><tr><th>
-
-+++Tableau de bord pour les programmeurs
 
 ![Tableau de bord du compte IQ](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Ce panneau fournit une vue tabulaire des comptes partitionnés en plages de quin
 
 *Figure : Nombre de comptes, de tendances et d’utilisations appartenant à différentes périodes de probabilité*
 
-+++
 
-</th><th>
-
-+++Tableau de bord des MVPD Le tableau de bord des utilisateurs MVPD est légèrement différent de celui des utilisateurs programmeurs.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Figure : Tableau de bord du MVPD*
-
-## Meilleurs programmeurs dans le segment par score de partage global {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Figure : Panneau présentant les principaux programmeurs dans un segment*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers

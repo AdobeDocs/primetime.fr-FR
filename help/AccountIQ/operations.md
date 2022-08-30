@@ -2,7 +2,7 @@
 title: Opérations sur le compte IQ
 description: Les opérations dans le compte IQ impliquent des actions pour effectuer des automatisations et des opérations en bloc sur les comptes d’abonnés et suivre leurs effets.
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Vous pouvez analyser les impacts d’une opération en consultant son rapport. P
 
 1. Sélectionnez le nom de l’opération sur la page Opérations principale.
 
-   Le rapport s&#39;affiche sous la forme d&#39;un graphique à barres empilé.
+   Le rapport s&#39;affiche sous la forme d&#39;un graphique en colonnes empilé.
 
    ![](assets/operation-impact-report.png)
 
