@@ -2,7 +2,7 @@
 title: Tableau de bord du compte IQ
 description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### Scores de partage globaux à l’échelle du secteur pour les distributeurs multicanaux de programmes audiovisuels {#top-mvpds}
+## Scores de partage globaux à l’échelle du secteur pour les distributeurs multicanaux de programmes audiovisuels {#top-mvpds}
 
 Ce tableau fournit une vue comparative des différents scores de partage agrégés pour les MVPD dans le segment.
 
@@ -85,7 +85,7 @@ Ce tableau fournit une vue comparative des différents scores de partage agrég�
 
 *Figure : Meilleurs MVPD dans le segment par score global*
 
-### Score de partage par canaux et MVPD {#sharin-score-by-channels-and-mvpds}
+## Score de partage par canaux et MVPD {#sharin-score-by-channels-and-mvpds}
 
 Ce tableau fournit une vue comparative du partage des scores des canaux sélectionnés pour les MVPD dans le segment actuel.
 
@@ -94,7 +94,7 @@ Ce tableau fournit une vue comparative du partage des scores des canaux sélecti
 
 *Figure : Partage de scores par canaux et MVPD*
 
-### Probabilité de partage des comptes {#accounts-sharing-probability}
+## Probabilité de partage des comptes {#accounts-sharing-probability}
 
 Ce graphique partitionne les comptes en plages de quintiles de probabilité de partage allant de très bas (0-20 %) à très élevés (80=100 %).
 
@@ -108,7 +108,7 @@ Ce graphique partitionne les comptes en plages de quintiles de probabilité de p
 
 *Figure : Nombres et pourcentages de comptes abonnés dans différentes plages de probabilités de partage*
 
-### Nombre de comptes et d’utilisations en partageant le niveau de probabilité {#number-of-accounts-usage-sharing-probability}
+## Nombre de comptes et d’utilisations en partageant le niveau de probabilité {#number-of-accounts-usage-sharing-probability}
 
 Ce panneau fournit une vue tabulaire des comptes partitionnés en plages de quintiles de probabilité de partage allant de très bas (0 à 20 %) à très élevé (80 à 100 %) avec l’utilisation associée de chaque quintile à partir de comptes partagés.
 
