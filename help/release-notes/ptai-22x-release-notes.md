@@ -1,27 +1,45 @@
 ---
-title: Notes de mise à jour de PTAI 2.2.7.1
+title: Notes de mise à jour de PTAI 2.2.9.2
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-# Notes de mise à jour de Primetime Ad Insertion 2.7.1
+# Notes de mise à jour de Primetime Ad Insertion 2.9.2
 
 Les notes de mise à jour de l’Ad Insertion Primetime 2.x.x décrivent les nouveautés ou les modifications, les problèmes résolus et les problèmes connus de l’Ad Insertion Primetime en 2022.
 
-## Nouveautés de la version 22.7.1 de l’API
+## Nouveautés de la version 22.9.2 de l’API
 
-Lorsque : Mercredi 20 juillet 2022 de 3 h 00 à 6 h 00, heure de l’Est
+**Lorsque :** Mercredi 7 septembre 2022 de 3 h 00 à 6 h 00, heure de l’Est
+
+* Améliorations apportées aux données de télémétrie des performances publicitaires dans l’Ad Insertion Primetime afin d’inclure des données de journalisation d’appel publicitaire et de publicité supplémentaires.
+
+## Améliorations et correctifs des versions précédentes
+
+### Version PTAI 2.2.9.1
+
+**Lorsque :** Mardi 6 septembre 2022, de 3 h à 6 h, heure de l’Est
+
+**Modifications :**
+
+* Améliorations de l’authentification du serveur principal Content Repackaging Service (CRS).
+
+* Mises à jour des graphiques de télémétrie CRS (Content Repackaging Service) dans l’interface utilisateur de l’Ad Insertion Primetime.
+
+### Version 22.7.1
+
+**Lorsque :** Mercredi 20 juillet 2022 de 3 h 00 à 6 h 00, heure de l’Est
+
+**Modifications :**
 
 * Améliorations apportées à la journalisation des performances publicitaires, avec introduction de mesures liées aux valeurs pour les workflows DASH.
 
 * Migration de la base de données.
-
-## Améliorations et correctifs des versions précédentes
 
 ### Version 22.6.2
 

@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 37%
+source-wordcount: '309'
+ht-degree: 36%
 
 ---
 
@@ -14,15 +14,17 @@ ht-degree: 37%
 
 Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents répertoriés dans le volet de navigation de gauche fournissent des informations spécifiques à la version, les exigences du système, les limitations, les problèmes résolus et les problèmes connus.
 
-## Améliorations et correctifs de l’API 2.2.7.1
+## Améliorations et correctifs dans PTAI 2.2.9.2
 
-Cette version se concentre sur les améliorations apportées à la journalisation des performances publicitaires avec l’introduction de mesures liées aux valeurs pour les workflows DASH.
+Cette version de se concentre sur les améliorations apportées aux données de télémétrie des performances publicitaires afin d’inclure les données d’appel publicitaire et de journalisation Avail.
+
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de l’Ad Insertion](/help/release-notes/ptai-22x-release-notes.md).
 
 ## Correctifs dans TVSDK 3.15 Android
 
 Cette version corrige un problème en raison duquel l’application se bloque lorsque la balise créative est manquante ou lorsque [!UICONTROL url CDATA] est vide dans [!UICONTROL VAST] réponse.
 
-Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de l’Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de TVSDK pour Android](/help/release-notes/tvsdk-3x-android.md)
 
 ## Améliorations et correctifs de TVSDK 3.13 iOS
 
