@@ -5,7 +5,7 @@ user-guide-title: Aide de Primetime Digital Rights Management
 user-guide-description: Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
