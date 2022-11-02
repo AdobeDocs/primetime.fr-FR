@@ -1,45 +1,44 @@
 ---
 description: Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du lecteur dans le média et les afficher dans la barre de recherche.
-title: Affiche la durée, l’heure actuelle et l’heure restante de la vidéo.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Afficher la durée, l’heure actuelle et l’heure restante de la vidéo
+exl-id: d9832f19-c2d1-413a-b094-091052912c96
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
-
-# Affiche la durée, l’heure actuelle et l’heure restante de la vidéo {#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Afficher la durée, l’heure actuelle et l’heure restante de la vidéo {#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du lecteur dans le média et les afficher dans la barre de recherche.
 
-1. Attendez que le lecteur soit au moins à l’état PRÉPARÉ.
-1. Récupérez l’heure actuelle du curseur de lecture à l’aide de la méthode `MediaPlayer.getCurrentTime`.
+1. Attendez que le lecteur soit à au moins l’état PRÉPARÉ .
+1. Récupérez l’heure actuelle du curseur de lecture à l’aide de la variable `MediaPlayer.getCurrentTime` .
 
-   Cette opération renvoie la position actuelle du curseur de lecture sur le plan de montage chronologique virtuel en millisecondes. Le temps est calculé par rapport au flux résolu qui peut contenir plusieurs instances de contenu alternatif, telles que plusieurs publicités ou coupures publicitaires épissées dans le flux principal. Pour les flux en direct/linéaires, l’heure renvoyée se trouve toujours dans la plage de la fenêtre de lecture.
+   Cette opération renvoie la position actuelle du curseur de lecture sur la chronologie virtuelle en millisecondes. Le temps est calculé par rapport au flux résolu qui peut contenir plusieurs instances de contenu alternatif, comme plusieurs publicités ou coupures publicitaires répliquées dans le flux principal. Pour les flux en direct/linéaires, l’heure renvoyée se trouve toujours dans la plage de la fenêtre de lecture.
 
    ```java
    long getCurrentTime() throws MediaPlayerException;
    ```
 
-1. Récupérez la plage de lecture du flux et déterminez sa durée.
-   1. Utilisez la méthode `MediaPlayer.getPlaybackRange` pour obtenir la plage de temps de la chronologie virtuelle.
+1. Récupérez la plage de lecture de la diffusion et déterminez la durée.
+   1. Utilisez la variable `MediaPlayer.getPlaybackRange` pour obtenir la plage temporelle de la chronologie virtuelle.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Utilisez la méthode `MediaPlayer.getPlaybackRange` pour obtenir la plage de temps de la chronologie virtuelle.
+   1. Utilisez la variable `MediaPlayer.getPlaybackRange` pour obtenir la plage temporelle de la chronologie virtuelle.
 
-      * Pour VOD, la plage commence toujours par zéro et la valeur finale est égale à la somme de la durée du contenu principal et de la durée du contenu supplémentaire dans le flux (publicités).
-      * Pour un fichier linéaire/actif, la plage représente la plage de la fenêtre de lecture. Cette plage change pendant la lecture.
+      * Pour VOD, la plage commence toujours par zéro et la valeur de fin est égale à la somme de la durée du contenu principal et des durées du contenu supplémentaire dans le flux (publicités).
+      * Pour une ressource linéaire/active, la plage représente la plage de la fenêtre de lecture. Cette plage change pendant la lecture.
 
-         TVSDK appelle le rappel `ITEM_Updated` pour indiquer que l’élément média a été actualisé et que ses attributs, y compris la plage de lecture, ont été mis à jour.
+         TVSDK appelle la fonction `ITEM_Updated` rappel pour indiquer que l’élément multimédia a été actualisé et que ses attributs, y compris la plage de lecture, ont été mis à jour.
 
-1. Utilisez les méthodes disponibles sur `MediaPlayer` et sur la classe `SeekBar` du SDK Android pour configurer les paramètres de barre de recherche.
+1. Utilisation des méthodes disponibles sur `MediaPlayer` et sur le `SeekBar` dans le SDK Android pour configurer les paramètres de barre de recherche.
 
-   Par exemple, voici une disposition possible qui contient la barre de recherche et deux éléments `TextView`.
+   Par exemple, voici une disposition possible qui contient la barre de recherche et deux `TextView` éléments .
 
    ```xml
    <LinearLayout 
@@ -71,13 +70,13 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du 
    </LinearLayout>
    ```
 
-1. Utilisez un minuteur pour récupérer périodiquement l’heure actuelle et mettre à jour la barre de recherche, comme le montre la figure :
+1. Utilisez un minuteur pour récupérer périodiquement l’heure actuelle et mettre à jour la barre de recherche, comme illustré dans la figure :
 
    <!--<a id="fig_689CEDDD02094C0C8E91C5195F8EAD3F"></a>-->
 
-   ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
+   ![](assets/seek-bar.jpg){width="477.000pt"}
 
-   L&#39;exemple suivant utilise la classe d&#39;assistance `Clock.java`, disponible dans `ReferencePlayer`, comme minuteur. Cette classe définit un écouteur de événement et déclenche un événement `onTick` toutes les secondes, ou une autre valeur de délai d&#39;expiration que vous pouvez spécifier.
+   L’exemple suivant utilise la méthode `Clock.java` Classe d’assistance disponible dans `ReferencePlayer`, comme minuteur. Cette classe définit un écouteur d’événement et déclenche une `onTick` toutes les secondes ou une autre valeur de délai d’expiration que vous pouvez spécifier.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +89,7 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du 
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Sur chaque coche d&#39;horloge, cet exemple récupère la position actuelle du lecteur multimédia et met à jour la barre de recherche. Il utilise les deux éléments `TextView` pour marquer l’heure actuelle et la position de fin de la plage de lecture comme des valeurs numériques.
+   Sur chaque coche de l’horloge, cet exemple récupère la position actuelle du lecteur multimédia et met à jour la barre de recherche. Elle utilise les deux `TextView` pour marquer l’heure actuelle et la position de fin de la plage de lecture comme des valeurs numériques.
 
    ```java
    @Override 
@@ -108,4 +107,3 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du 
        } 
    } 
    ```
-

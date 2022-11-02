@@ -1,35 +1,34 @@
 ---
-description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné lu par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
-title: Inspect de la chronologie de la lecture
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné en cours de lecture par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche une barre de défilement personnalisée dans laquelle les sections de contenu qui correspondent au contenu publicitaire sont identifiées.
+title: Inspect de la chronologie de lecture
+exl-id: 95792354-76f6-44fd-9207-73e862b434e1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
+# Inspect de la chronologie de lecture {#inspect-the-playback-timeline}
 
-# Inspect de la chronologie de la lecture {#inspect-the-playback-timeline}
+Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné en cours de lecture par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche une barre de défilement personnalisée dans laquelle les sections de contenu qui correspondent au contenu publicitaire sont identifiées.
 
-Vous pouvez obtenir une description de la chronologie associée à l’élément actuellement sélectionné lu par TVSDK. Cela s’avère particulièrement utile lorsque votre application affiche un contrôle de barre de défilement personnalisée dans lequel les sections de contenu correspondant au contenu publicitaire sont identifiées.
+Voici un exemple de mise en oeuvre, comme illustré dans la capture d’écran suivante.  ![](assets/inspect-playback.jpg){width="368.641pt"}
 
-Voici un exemple d’implémentation, comme illustré dans la capture d’écran suivante.  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+1. Accédez au `Timeline` dans le `MediaPlayer` en utilisant la variable `getTimeline()` .
 
-1. Accédez à l&#39;objet `Timeline` dans `MediaPlayer` à l&#39;aide de la méthode `getTimeline()`.
+   Le `Timeline` encapsule les informations liées au contenu de la chronologie associée à l’élément multimédia actuellement chargé par la variable `MediaPlayer` instance. Le `Timeline` permet d’accéder à une vue en lecture seule de la chronologie sous-jacente. Le `Timeline` fournit une méthode getter qui fournit un itérateur via une liste de `TimelineMarker` objets.
 
-   La classe `Timeline` encapsule les informations liées au contenu de la chronologie associée à l&#39;élément média actuellement chargé par l&#39;instance `MediaPlayer`. La classe `Timeline` permet d&#39;accéder à une vue en lecture seule de la chronologie sous-jacente. La classe `Timeline` fournit une méthode getter qui fournit un itérateur via une liste d&#39;objets `TimelineMarker`.
+1. Parcourir la liste de `TimelineMarkers` et utilisez les informations renvoyées pour mettre en oeuvre votre chronologie.
 
-1. Effectuez une itération à la liste de `TimelineMarkers` et utilisez les informations renvoyées pour mettre en oeuvre votre chronologie.
-
-       Un objet &quot;TimelineMarker&quot; contient deux informations :
+       Un objet &quot;TimelineMarker&quot; contient deux éléments d’informations :
    
    * Position du marqueur sur la chronologie (en millisecondes)
    * Durée du marqueur sur la chronologie (en millisecondes)
 
-1. Prêtez attention au événement `MediaPlayerEvent.TIMELINE_UPDATED` sur l&#39;instance `MediaPlayer` et implémentez le rappel `TimelineUpdatedEventListener.onTimelineUpdated()`.
+1. Écoute de la `MediaPlayerEvent.TIMELINE_UPDATED` sur l’événement `MediaPlayer` et implémentez le `TimelineUpdatedEventListener.onTimelineUpdated()` rappel.
 
-   L&#39;objet `Timeline` peut informer votre application des modifications qui peuvent se produire dans le plan de montage chronologique de lecture en appelant votre écouteur `OnTimelineUpdated`.
+   Le `Timeline` peut informer votre application des modifications qui peuvent se produire dans la chronologie de lecture en appelant votre `OnTimelineUpdated` écouteur.
 
 ```java
 // access the timeline object 
