@@ -1,15 +1,15 @@
 ---
 title: Comment afficher des rapports pour les 10 principaux MVPD par personnage de programmeur.
 description: Affichez les rapports pour les 10 principaux distributeurs multicanaux de programmes de diffusion de contenu.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# Comment afficher des rapports pour les 10 principaux MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
+# Affichage des rapports de partage de compte pour les 10 principaux MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 Le compte IQ dispose de fonctionnalités pour vous aider à afficher et analyser les statistiques de partage de compte pour les 10 premiers MVPD (dans un [segment](/help/AccountIQ/product-concepts.md#segmet-def)) ayant :
 

@@ -1,17 +1,17 @@
 ---
-title: 'Création d’une opération sur un segment d’utilisateur et suivi de l’effet '
+title: Création d’une opération sur un segment d’utilisateur et suivi de l’effet
 description: Découvrez comment créer une opération qui a un effet et en effectue le suivi sur un segment défini d’utilisateurs.
-source-git-commit: 1d6beb69470fcf6a3193b4d2f508c503d4f957f1
+exl-id: ab74f857-e178-4120-8f9c-655ec921d096
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
 
-
 # Création d’une opération sur un segment d’utilisateur {#operation-to-track-segment}
 
-Chaque page de rapports sur le compte IQ comporte une **Créer une opération** l’option permettant de créer des workflows afin d’automatiser (et de simplifier) diverses actions (en bloc) sur les comptes d’abonnés ; définissez des règles pour spécifier un exemple, définir des actions, enregistrer et analyser les effets de ces actions. Sur la page de création des opérations, vous pouvez définir l’exemple de groupes d’utilisateurs sur lequel les opérations seront effectuées et planifier l’exécution de l’opération à une date ultérieure.
+Chaque page de rapports sur le compte IQ comporte une **Créer une opération** l’option permettant de créer des workflows afin d’automatiser (et de simplifier) diverses actions (en bloc) sur les comptes d’abonnés ; définir des règles pour spécifier un exemple, définir des actions, enregistrer et analyser les effets de ces actions ; Sur la page de création des opérations, vous pouvez définir l’exemple de groupes d’utilisateurs sur lequel les opérations seront effectuées et planifier l’exécution de l’opération à une date ultérieure.
 
 Pour créer une opération :
 
@@ -34,10 +34,21 @@ Pour créer une opération :
 
 ## Détails de l&#39;opération {#operation-details}
 
++++Détails de l’opération Programmer
+
 Nommez la nouvelle opération dans **Nom de l’opération** sous Détails de l’opération. Par exemple, &quot;*Testez l’effet de l’authentification multifactorielle sur les abonnés de MVPD X&quot; ou &quot;Limitez le nombre de diffusions dans la surveillance simultanée&quot; ou &quot;Limitez les abonnés de MVPD D qui visualisent le canal &quot;N&quot; à partir de plus de 20 appareils.*&quot;.
 
++++
+
++++MVPD - détails de l’opération
+
+Nommez la nouvelle opération dans **Nom de l’opération** sous Détails de l’opération. Par exemple, &quot;*Testez l’effet de l’authentification multifactorielle sur les visionneuses du canal N ou &quot;Limitez le nombre de diffusions dans la surveillance simultanée&quot; ou &quot;Limitez les abonnés qui visualisent le canal N à partir de plus de 20 appareils.*&quot;.
+
++++
 
 ## Segment cible {#segment}
+
++++Programmeur - Segment Target
 
 Le **Segment** définit ici les utilisateurs qui seront exploités par cette opération ; ou le groupe d’exemple de votre opération. Le segment par défaut est le suivant : **segment** vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
 
@@ -47,7 +58,22 @@ Le **Segment** définit ici les utilisateurs qui seront exploités par cette op�
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Ce segment définit les abonnés des MVPD et des canaux qui seront affectés par l’opération en cours de création. Par exemple, votre segment (par défaut) comprend *tous les comptes abonnés du MVPD nommés &quot;C&quot; qui affichent le canal &quot;N Sports&quot;*.
+Ce segment définit les abonnés qui seront affectés par l’opération en cours de création. Par exemple, le segment sélectionné peut spécifier *tous les comptes abonnés du MVPD nommés &quot;C&quot; qui affichent le canal &quot;N Sports&quot;*.
+
++++
+
++++MVPD - Segment cible
+
+Le **Segment** définit ici les utilisateurs qui seront exploités par cette opération ; ou le groupe d’exemple de votre opération. Le segment par défaut est le suivant : **segment** vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
+
+<!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
+
+* The **segment evaluation period** is the time period of analysis you selected in step 1 from **Granularity and Timeframe** option.
+![](assets/operations-segment-selection.png)
+*Figure: Segment and timeframe selection on the main page*-->
+
+Ce segment définit vos abonnés (qui sont des visionneuses de canaux spécifiques) qui seront affectés par l’opération en cours de création. Par exemple, votre segment (par défaut) comprend *tous les comptes abonnés qui affichent le canal &quot;N Sports&quot;*.
++++
 
 ### Segmentation supplémentaire {#additional-segmentation}
 

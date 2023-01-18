@@ -1,19 +1,19 @@
 ---
 title: Limites et problèmes connus
-description: 'Problèmes connus dans le produit. '
-source-git-commit: 4b840a1a722b3dd403d70f4ba838529d7d4d0b35
+description: Problèmes connus dans le produit.
+exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
-
 # Problèmes connus et limites {#known-issues}
 
-Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences utilisateur fluides grâce à ses offres. La version actuelle (version 1.0) de Account IQ fournit des analyses d’utilisation et de partage d’abonnements aux fournisseurs de diffusion en continu avec un degré de confiance élevé. Toutefois, les restrictions suivantes seront corrigées dans les versions à venir.
+Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences utilisateur fluides grâce à ses offres. La version actuelle (version 1.1) de Account IQ fournit des analyses d’utilisation et de partage d’abonnements aux fournisseurs de diffusion en continu avec un degré de confiance élevé. Toutefois, les restrictions suivantes seront corrigées dans les versions à venir.
 
-* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans une version ultérieure.
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans un avenir proche.
 
 * Lors de l’estimation des scores de partage pour les comptes individuels, Account IQ adopte une approche conservatrice qui permet aux entreprises d’agir sur le partage avec une grande confiance. Cependant, cette approche tend à sous-estimer le montant total du partage lorsqu’il est agrégé sur de nombreux comptes.
 
@@ -21,7 +21,7 @@ Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences u
 
 * Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, les sélecteurs des distributeurs multicanaux de programmes audiovisuels et des canaux ne disposent pas du mécanisme de recherche, pour l’instant.
 
-* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il existe une limitation pour sélectionner uniquement 10 MVPD et programmeurs au maximum.
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il est limité de sélectionner uniquement 10 MVPD et programmeurs (ou canaux individuels).
 
 * L&#39;option d&#39;export des statistiques de compte est limitée à l&#39;export de 1000 comptes, pour l&#39;instant.
 
@@ -29,11 +29,11 @@ Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences u
 
 * Les sections Évaluation, Modèles de détection, Segments, Instantanés et Règles du volet de navigation de gauche sont actuellement désactivées et seront disponibles dans une version à venir.
 
-* Lors de la création [Opérations](/help/AccountIQ/operation-affecting-user-segment.md), vous ne pouvez identifier que deux types de [Actions](/help/AccountIQ/operation-affecting-user-segment.md) à compter de maintenant : règles de surveillance simultanée et actions externes.
+* Lors de la création [opérations](/help/AccountIQ/operation-affecting-user-segment.md), vous ne pouvez identifier que deux types de [Actions](/help/AccountIQ/operation-affecting-user-segment.md) à compter de maintenant — Règles de contrôle de simultanéité et actions externes.
 
-* Actuellement, les opérations ne peuvent être créées que et [scheduled](/help/AccountIQ/operation-affecting-user-segment.md#action). Les prochaines versions vous permettront de les mettre en pause, de les reprendre et de les gérer entièrement.
+* Actuellement, les opérations ne peuvent être créées que et [scheduled](/help/AccountIQ/operation-affecting-user-segment.md#action). Les prochaines versions vous permettront de mettre en pause, de reprendre et de les gérer entièrement.
 
-* En raison de l’ensemble de données plus limité utilisé, le mode Isolation ne reflète pas vraiment la quantité de partage. Par conséquent, le MVPD en mode Isolation ne peut pas être comparé à un autre MVPD.
+* En raison de l’ensemble de données plus limité utilisé, le mode Isolation ne reflète pas vraiment la quantité de partage. Par conséquent, le MVPD en mode Isolation ne peut pas être comparé à un autre MVPD. <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 
 * Lorsque vous définissez une nouvelle [segment](/help/AccountIQ/segments-timeframe.md) pour une opération, vous pouvez ajouter des mesures. Mais si vous sélectionnez un segment enregistré, vous ne pouvez pas ajouter d’autres mesures pour affiner le segment.
 

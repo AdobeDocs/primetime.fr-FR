@@ -1,13 +1,13 @@
 ---
-title: 'Rapports sur les comptes partagés '
+title: Rapports sur les comptes partagés
 description: Rapports sur les comptes partagés
-source-git-commit: ead505dfa3e6569b7e349fa63170e5f8d90d759b
+exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
-
 
 # Rapports sur les comptes partagés {#shared-accounts-reports}
 
@@ -53,7 +53,7 @@ Ce panneau vous permet de sélectionner une plage parmi les suivantes comme seui
 
 ![](assets/threshold-selector-shared-accounts.png)
 
-Une fois que vous avez sélectionné le seuil, le panneau affiche le pourcentage (et le nombre) de comptes parmi tous les comptes abonnés des distributeurs multicanaux sélectionnés dans le segment.
+Une fois que vous avez sélectionné le seuil, le panneau affiche le pourcentage (et le nombre) de comptes parmi tous les comptes abonnés du segment sélectionné.
 
 ## Segment - Lire les requêtes sur le total {#play-request-out-total}
 

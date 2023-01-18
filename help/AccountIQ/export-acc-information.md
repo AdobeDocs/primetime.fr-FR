@@ -1,17 +1,17 @@
 ---
 title: Exporter des informations pour les comptes avec un score de partage élevé
 description: Exportez des informations pour les comptes ayant un score de partage élevé.
-source-git-commit: 17a44bde5cf320f519cc537d37df0fe823cf51a6
+exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
 
-
 # Exporter des informations pour les comptes avec un score de partage élevé {#export-account-info-high-score}
 
-Account IQ vous offre la possibilité d’exporter les détails de partage de compte pour les 1 000 premiers comptes abonnés en fonction de leurs [probabilités de partage](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Les données du fichier CSV exporté sont triées dans l’ordre décroissant des probabilités de partage des comptes d’abonnés, des MVPD sélectionnés dans la variable [segment](/help/AccountIQ/product-concepts.md#segment-def), pour un [période spécifiée](/help/AccountIQ/product-concepts.md#time-frame-def).
+Account IQ vous offre la possibilité d’exporter les détails de partage de compte pour les 1 000 premiers comptes abonnés en fonction de leurs [probabilités de partage](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Les données du fichier CSV exporté sont triées dans l’ordre décroissant des probabilités de partage des comptes abonnés dans la variable [segment](/help/AccountIQ/product-concepts.md#segment-def), pour un [période spécifiée](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 L’option permettant d’exporter les informations de partage de compte est disponible sur [Rapports d’utilisation générale](/help/AccountIQ/general-usage-reports.md) et [Rapports sur les comptes partagés](/help/AccountIQ/shared-acc-reports.md) pages.
 
@@ -23,13 +23,7 @@ L’option permettant d’exporter les informations de partage de compte est dis
 
 Pour exporter les informations de partage de compte des abonnés :
 
-1. Spécifiez un segment à partir du sélecteur de segments. Pour sélectionner un segment :
-
-   1. Sélectionnez les MVPD de votre choix dans **MVPD dans le segment** .
-
-   1. Sélectionnez les canaux de votre choix dans **Canaux dans le segment** .
-
-   1. Sélectionnez une période à partir de **Granularité et période** pour afficher les rapports relatifs à cette opération.
+1. Définissez un segment de votre choix en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation à partir de [segment et période](/help/AccountIQ/segments-timeframe.md) du panneau.
 
 1. Sélectionnez la **Exporter les 1 000 premiers comptes** pour exporter les informations du compte de 1 000 abonnés avec la probabilité de partage la plus élevée.
 
@@ -105,13 +99,13 @@ Nombre de fois où les utilisateurs se sont connectés au cours de la période, 
 
 Nombre de fois où un MVPD a autorisé un flux, ou accordé l’accès (au contenu), à ce compte.
 
->[!NOTE]
->
->Le **# AuthZ OK** est lié à la variable **# Lecture de requêtes**; il est plus petit que le **# Lecture de requêtes** car Adobe met en cache les autorisations qui sont envoyées pour les distributeurs multicanaux de programmes audiovisuels pendant 24 heures.
-
 **# Lecture de requêtes**
 
 Le nombre réel de diffusions pendant la période.
+
+>[!NOTE]
+>
+>**# AuthZ OK** est généralement plus petit que **# Lecture de requêtes** car Adobe met en cache les autorisations provenant des distributeurs multicanaux de programmes audiovisuels pendant 24 heures au maximum. Cette colonne n’est pas disponible pour les MVPD.
 
 **# Canaux**
 

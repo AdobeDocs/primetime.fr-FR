@@ -1,19 +1,19 @@
 ---
 title: FAQ sur Account IQ
 description: Réponses aux questions fréquemment posées des clients.
-source-git-commit: df6577182a4211b95c2002f949cdfb894126dc32
+exl-id: d6e11fc9-0d14-46d8-9a85-f1006ac81fb1
+source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
-
 
 # Questions fréquentes {#faqs}
 
 1. À qui le compte IQ est-il destiné ?
 
-   **Répondez.** Account IQ est conçu pour servir les programmeurs, les distributeurs multicanaux de programmes et les services D2C, mais il y a des différences mineures entre ces deux versions. Il existe des limites et des restrictions quant aux données pouvant être affichées pour chaque groupe.
+   **Répondez.** Account IQ est conçu pour servir les programmeurs, les MVPD et les services D2C, mais il y a des différences mineures entre ces versions. Il existe des limites et des restrictions quant aux données pouvant être affichées pour chaque groupe.
 
 1. Jusqu&#39;où remontent les données ?
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
    **Répondez.** La fonctionnalité de filtrage des comptes de test n’est pas disponible dans cette version, mais elle sera disponible dans une version ultérieure.
 
-1. Puis-je voir le partage de compte pour chacun de mes canaux ?
+1. Puis-je voir le partage de compte pour chacun de mes canaux ? <!--shall we separate out this question for the persona of programmer?-->
 
    **Répondez.** Oui, vous pouvez voir le partage de compte pour des canaux individuels, un groupe de canaux ou des réseaux entiers (par exemple, des programmeurs).
 
@@ -45,13 +45,13 @@ ht-degree: 0%
 
 1. Quelle est l’efficacité de la surveillance de la simultanéité dans la limitation du partage dans l’industrie ?
 
-   **Répondez.** Account IQ et Concurrency Monitoring détectent différents modes de partage et sont complémentaires. CM est excellent pour empêcher le partage simultané. Il est donc plus efficace lors de l’affichage en prime ou pour des événements en direct, comme le sport. D’un autre côté, Account IQ examine un large ensemble de données historiques et détecte donc le partage qui n’est pas nécessairement simultané. Ces deux services peuvent être combinés pour une solution encore plus efficace.
+   **Répondez.** Account IQ et Concurrency Monitoring (CM) détectent différents modes de partage et sont complémentaires. CM est excellent pour empêcher le partage simultané. Il est donc plus efficace lors de l’affichage en prime ou pour des événements en direct, comme le sport. D’un autre côté, Account IQ examine un large ensemble de données historiques et détecte donc le partage qui n’est pas nécessairement simultané. Ces deux services peuvent être combinés pour une solution encore plus efficace.
 
 1. Pouvons-nous identifier des comptes particuliers ?
 
    **Répondez.** Oui, nous pouvons fournir la liste des comptes de n’importe quel segment, ainsi que leurs mesures et caractéristiques de partage.
 
-1. À quel point les résultats du compte IQ sont-ils similaires aux solutions internes ?
+1. À quel point les résultats du compte IQ sont-ils similaires par rapport aux solutions internes ?
 
    **Répondez.** Account IQ a accès à plus de données que n’importe quel autre service de diffusion en continu et dispose d’un modèle de détection basé sur plus d’une décennie de traitement, ce qui donne les résultats les plus précis disponibles.
 
@@ -59,10 +59,10 @@ ht-degree: 0%
 
    **Répondez.** Comprendre l’ampleur et la nature du partage est la première étape de nos bonnes pratiques recommandées. L’action ciblée avec des comptes spécifiques tels que la vente incitative ou la limitation des diffusions est l’étape. La recommandation complète consiste à commencer petit, à mesurer les résultats de l’action, ainsi qu’à affiner et à mettre à l’échelle le processus.
 
-1. Devons-nous travailler avec des groupes technologiques internes et des partenaires de distribution pour mettre en oeuvre des mesures comme la gestion dynamique des balises ?
+1. Devons-nous travailler avec des groupes technologiques internes et des partenaires de distribution pour mettre en oeuvre des mesures comme la gestion dynamique des balises (contrôle de la simultanéité) ?
 
-   **Répondez.** Pas nécessairement, l’assistance Adobe Primetime peut travailler avec pour créer vos propres règles CM en fonction d’AIQ vos données.
+   **Répondez.** Pas nécessairement. La prise en charge d’Adobe Primetime peut travailler à la création de vos propres règles de gestion du contenu en fonction de vos données AIQ.
 
 1. Puis-je voir la tendance des segments au fil du temps ?
 
-   **Répondez.** Oui, les graphiques d’impact sur l’opération effectuent le suivi et l’affichage des caractéristiques d’un segment cible pendant toute la durée de l’opération.
+   **Répondez.** Oui. Les opérations ont un impact sur les graphiques, le suivi et les caractéristiques d’affichage d’un segment cible pendant toute la durée de l’opération.

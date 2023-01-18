@@ -2,9 +2,9 @@
 title: Définition d’un segment et d’une période
 description: Définition d’un segment et d’une période
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ En plus de modifier votre sélection dans la variable **MVPD dans le segment** e
 * En sélectionnant le **Supprimer** Icône (![icône de suppression](assets/remove-icon.png)) sur les noms de ces MVPD et canaux sélectionnés affichés sous le sélecteur de segments.
 
 * Vous pouvez également utiliser **Effacer la sélection** pour supprimer tous les MVPD ou canaux sélectionnés précédemment.
-
-![](assets/segment-panel-selection1.png)
-
-*Figure : MVPD et canaux sélectionnés dans le panneau de segments et de périodes*
 
 ![](assets/segment-panel-selection.png)
 

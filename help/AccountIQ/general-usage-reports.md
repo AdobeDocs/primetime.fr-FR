@@ -1,13 +1,13 @@
 ---
 title: Rapports d’utilisation générale
 description: Rapports d’utilisation générale
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
+source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
-
 
 # Rapports d’utilisation générale {#general-usage-reports}
 
@@ -41,7 +41,26 @@ Les rapports reposent tous sur le segment actuel sélectionné à l’aide de la
 
 Les graphiques linéaires présentent ici les changements au fil du temps dans les valeurs AuthN OK, AuthZ OK, Lire les requêtes et Abonnés uniques au cours d’une période sélectionnée pour le segment défini.
 
-![](assets/line-graph-gu.png)
++++Programmer- **AuthN OK / AuthZ OK / Lire les requêtes / Abonnés uniques**
+
+![](assets/progr-line-graph-gu.png)
+
+
+*Figure : AuthN OK / AuthZ OK / Lire les requêtes / Abonnés uniques pour l’utilisateur programmeur*
+
+
++++
+
+
++++MVPD- **AuthN OK / AuthZ OK / Abonnés uniques**
+
+![](assets/mvpd-line-graph-gu.png)
+
+
+*Figure : AuthN OK / AuthZ OK / Abonnés uniques pour l’utilisateur MVPD*
+
+
++++
 
 L’axe X présente les unités au cours de la période actuelle et l’axe Y représente les mesures de base de l’activité des abonnés au cours de cette période. Les graphiques linéaires vous permettent de comparer les valeurs suivantes pour les abonnés des distributeurs multicanaux et les canaux que vous avez sélectionnés dans le panneau de sélection de segments :
 
@@ -56,6 +75,11 @@ L’axe X présente les unités au cours de la période actuelle et l’axe Y re
 * **Lire les requêtes**
 
    Les requêtes de lecture correspondent au nombre de requêtes de lecture. Pour plus d’informations et de définition, voir [Concepts du produit : Lecture des requêtes](/help/AccountIQ/product-concepts.md#play-requests-def)
+
+   >[!NOTE]
+   >
+   >Le graphique linéaire de demandes de lecture n’est pas disponible pour les utilisateurs MVPD.
+
 
 * **Abonnés uniques**
 
@@ -105,7 +129,7 @@ Le graphique vous montre les éléments suivants :
 
 ## Périphériques par semaine (ou mois) par compte {#devices-week-account}
 
-Le **graphique en barres** fournit des informations sur le comportement d’utilisation en ce qui concerne la manière dont les abonnés de vos distributeurs multicanaux utilisent leurs appareils pour accéder au contenu de votre canal.
+Le **graphique en barres** fournit des informations sur le comportement d’utilisation en ce qui concerne la manière dont les abonnés utilisent leurs appareils pour accéder au contenu.
 
 L’axe X trace le nombre de comptes et l’axe Y trace le nombre de périphériques. En fonction du seuil que vous définissez pour le nombre d’appareils par compte, il marque le nombre absolu de comptes abonnés qui consomment du contenu d’un nombre spécifique d’appareils au cours d’une semaine.
 
@@ -135,7 +159,7 @@ Résultats de cette mesure combinés au nombre [Périphériques par semaine (ou 
 
 ![](assets/graph-loc-week-acc.png)
 
-Une fois que vous avez défini un segment (en sélectionnant des MVPD et des canaux) et défini le seuil de nombre d’emplacements, vous pouvez l’identifier à partir du graphique :
+Une fois que vous avez défini un segment et défini le seuil du nombre d’emplacements, vous pouvez identifier à partir du graphique :
 
 * Nombre (et pourcentage) d’abonnés qui consomment du contenu à partir (d’un emplacement spécifique) x nombre d’emplacements au cours d’une semaine.
 
@@ -179,5 +203,5 @@ Le graphique à barres Aperçu historique vous permet de comparer les mesures d�
 
 >[!MORELIKETHIS]
 >
->* Découvrez comment exporter des rapports pour les 1 000 premiers abonnés des MVPD sélectionnés à l’aide de filtres dans le rapport d’utilisation générale à l’aide des [Exporter les 1 000 premiers comptes](/help/AccountIQ/export-acc-information.md) .
+>* Découvrez comment exporter des rapports pour les 1 000 premiers abonnés du segment sélectionné à l’aide de filtres dans le rapport Utilisation générale à l’aide des [Exporter les 1 000 premiers comptes](/help/AccountIQ/export-acc-information.md) .
 

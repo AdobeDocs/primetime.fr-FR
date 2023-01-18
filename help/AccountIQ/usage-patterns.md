@@ -1,23 +1,23 @@
 ---
 title: Modèles d’utilisation
 description: Afficher le comportement de partage de compte pour différentes typologies d’utilisateurs.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Modèles d’utilisation {#usage-patterns}
 
-Account IQ classe les utilisateurs de comptes abonnés dans différentes catégories en fonction de leur comportement social, comme Voyageur ou voyageur, Grande famille et Partage communautaire. Le **Modèles d’utilisation** présente plusieurs analyses et rapports différents pour ces typologies d’utilisateurs. Par exemple : **Distribution des modèles d’utilisation - Utilisateurs dans le segment par secteur d’activité** compare le comportement d’utilisation du segment actuel par rapport à l’ensemble du secteur.
+Account IQ classe les utilisateurs des comptes d’abonnés dans différentes catégories en fonction de leur comportement social, comme les voyageurs ou les navetteurs, la grande famille et le partage communautaire. Le **Modèles d’utilisation** présente plusieurs analyses et rapports différents pour ces typologies d’utilisateurs. Par exemple : **Distribution des modèles d’utilisation - Utilisateurs dans le segment par rapport au total** compare le comportement d’utilisation du segment actuel par rapport à l’ensemble du secteur.
 
 Comme les autres pages de l’application, les analyses et les rapports ici sont basés sur le segment actuel tel que défini dans la variable [panneau des segments](/help/AccountIQ/segments-timeframe.md).
 
 ## Distribution des modèles d’utilisation {#usage-pattern-dis}
 
-Le graphique en barres dans **Distribution des modèles d’utilisation - Utilisateurs dans le segment par secteur d’activité** représente le nombre et le pourcentage d’abonnés pour chaque comportement social ou modèle d’utilisation. En plus de comparer chaque modèle d’utilisation du segment actuel à l’ensemble du secteur, il les compare à un segment contenant tous vos canaux.
+Le graphique en barres dans **Distribution des modèles d’utilisation - Utilisateurs dans le segment par rapport au total** représente le nombre et le pourcentage d’abonnés pour chaque comportement social ou modèle d’utilisation. En plus de comparer chaque modèle d’utilisation du segment actuel à l’ensemble du secteur, il les compare à un segment contenant tous vos canaux.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ Par exemple, dans l’image ci-dessus :
 
 * Et 15,7 % (24 073 311) du total des demandes de lecture (153 076 350) sont effectuées par des utilisateurs réguliers.
 
-## Distribution du modèle d’utilisation pour les MVPD {#usage-pattern-dis-mvpd}
+## Distribution du modèle d’utilisation par partenaire de segment {#usage-pattern-dis-mvpd}
 
-Le **Distribution du modèle d’utilisation pour les MVPD** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les MVPD dans le segment actuel.
++++Programmeur - Distribution du modèle d’utilisation pour les segments totaux et les partenaires de segments
+
+Le **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les MVPD dans le segment actuel.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD : distribution des schémas d’utilisation pour le nombre total de segments et de partenaires de segments.
+
+Le **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les canaux programmeurs dans le segment actuel.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++
