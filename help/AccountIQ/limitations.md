@@ -2,7 +2,7 @@
 title: Limites et problèmes connus
 description: Problèmes connus dans le produit.
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Problèmes connus et limites {#known-issues}
 
-Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences utilisateur fluides grâce à ses offres. La version actuelle (version 1.1) de Account IQ fournit des analyses d’utilisation et de partage d’abonnements aux fournisseurs de diffusion en continu avec un degré de confiance élevé. Toutefois, les restrictions suivantes seront corrigées dans les versions à venir.
+Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences utilisateur fluides grâce à ses offres. La version actuelle (version 1.0) de Account IQ fournit des analyses d’utilisation et de partage d’abonnements aux fournisseurs de diffusion en continu avec un degré de confiance élevé. Toutefois, les restrictions suivantes seront corrigées dans les versions à venir.
 
-* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans un avenir proche.
+* Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans une version ultérieure.
 
 * Lors de l’estimation des scores de partage pour les comptes individuels, Account IQ adopte une approche conservatrice qui permet aux entreprises d’agir sur le partage avec une grande confiance. Cependant, cette approche tend à sous-estimer le montant total du partage lorsqu’il est agrégé sur de nombreux comptes.
 
@@ -29,7 +29,7 @@ Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences u
 
 * Les sections Évaluation, Modèles de détection, Segments, Instantanés et Règles du volet de navigation de gauche sont actuellement désactivées et seront disponibles dans une version à venir.
 
-* Lors de la création [opérations](/help/AccountIQ/operation-affecting-user-segment.md), vous ne pouvez identifier que deux types de [Actions](/help/AccountIQ/operation-affecting-user-segment.md) à compter de maintenant — Règles de contrôle de simultanéité et actions externes.
+* Lors de la création [Opérations](/help/AccountIQ/operation-affecting-user-segment.md), vous ne pouvez identifier que deux types de [Actions](/help/AccountIQ/operation-affecting-user-segment.md) à compter de maintenant — Règles de contrôle de simultanéité et actions externes.
 
 * Actuellement, les opérations ne peuvent être créées que et [scheduled](/help/AccountIQ/operation-affecting-user-segment.md#action). Les prochaines versions vous permettront de mettre en pause, de reprendre et de les gérer entièrement.
 

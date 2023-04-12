@@ -2,7 +2,7 @@
 title: Bonnes pratiques
 description: Lisez la suite pour comprendre comment mieux utiliser l’outil Account IQ.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ Pour comprendre la nature et l’impact du partage sur votre entreprise :
 ## Actions incrémentielles ciblées {#incremental-targeted-action}
 
 Avec un segment cible défini, prenez des mesures. En commençant petit avec un segment bien défini, vous réduisez le risque de conséquences involontaires et pouvez mieux comprendre le résultat. Où que vous soyez le long de votre chemin, vous pouvez toujours affiner ou développer la cible de votre opération.
-
 Commencer petit et augmenter est une approche prudente. Utilisez les segments précédemment identifiés et prenez des mesures (en tant qu’expériences) avec des objectifs spécifiques.
 
 Utilisez l’outil Opération pour définir le segment cible et une période opérationnelle. Vous pourrez ainsi effectuer le suivi des effets dans la phase suivante.

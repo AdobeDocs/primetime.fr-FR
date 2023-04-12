@@ -2,9 +2,9 @@
 title: Création d’une opération sur un segment d’utilisateur et suivi de l’effet
 description: Découvrez comment créer une opération qui a un effet et en effectue le suivi sur un segment défini d’utilisateurs.
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Le **Action** définit l’opération que vous exécuterez sur le segment défin
 
 Vous pouvez effectuer deux types d’actions :
 
-* Actions utilisant des systèmes intégrés à Account IQ ; par exemple [Surveillance de simultanéité](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* Actions utilisant des systèmes intégrés à Account IQ ; par exemple **Surveillance de simultanéité** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Actions pour créer et traiter des workflows externes à Account IQ et non intégrés au système de compte IQ. Par exemple, une action pour le programmeur de canal &quot;N&quot; pour envoyer des emails en masse à tous les abonnés du MVPD &quot;C&quot;.
 
