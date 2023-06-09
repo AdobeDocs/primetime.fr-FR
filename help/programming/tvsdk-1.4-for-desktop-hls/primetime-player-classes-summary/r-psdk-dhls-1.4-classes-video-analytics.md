@@ -1,23 +1,21 @@
 ---
-description: Ces classes fournissent l’interface entre TVSDK et les analyses vidéo d’Adobe.
-title: Classes d’analyses vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ces classes fournissent l’interface entre TVSDK et Adobe Video Analytics.
+title: Classes Video Analytics
+exl-id: 980d8e36-cfd1-45d4-8c40-f3c53e29b6f6
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
+# Classes Video Analytics{#video-analytics-classes}
 
-# Classes d’analyses vidéo{#video-analytics-classes}
-
-Ces classes fournissent l’interface entre TVSDK et les analyses vidéo d’Adobe.
+Ces classes fournissent l’interface entre TVSDK et Adobe Video Analytics.
 
 Package : [com.adobe.mediacore.videoanalytics](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/package-detail.html)
 
 | Nom | Description |
 |---|---|
-| [Paramètres VideoAnalyticsConfig](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsConfigParameters.html) | Contient des métadonnées de propriété spécifiques au suivi des analyses vidéo dans TVSDK. |
-| [VideoAnalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | Joint l’instance `MediaPlayer` au module VideoHeartbeat pour le suivi de la lecture. |
+| [VideoAnalyticsProvider](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsProvider.html) | joint le fichier `MediaPlayer` au module VideoHeartbeat pour le suivi de la lecture. |
 | [VideoAnalyticsMetadata](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/videoanalytics/VideoAnalyticsMetadata.html) | Contient des métadonnées de propriété spécifiques à Video Analytics. |

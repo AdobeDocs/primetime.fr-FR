@@ -1,13 +1,13 @@
 ---
 title: Annexe B "Conseils de débogage"
 description: Annexe B "Conseils de débogage"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
-
 
 # Annexe B : Conseils de débogage {#appendix-b-debugging-tips}
 
@@ -22,7 +22,7 @@ L’authentification Adobe Primetime stocke des données temporaires telles que 
 
 - [Effacement du cache du navigateur et des cookies](#clearing-the-browser-cache-and-cookies)
 - [Effacement du cache des LSOs](#clearing-lsos-cache)\
-    
+   
 
 ## Effacement du cache du navigateur et des cookies {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Sélectionnez la ```entitlement.\*``` (en fonction des tests) et cliquez sur &qu
 Les ingénieurs d’authentification Adobe Primetime utilisent les outils de débogage suivants :
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (fonctionne avec la version de débogage du lecteur Flash) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- En-têtes HTTP en direct - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug (fonctionne avec la version de débogage du lecteur Flash)
 - Fiddler - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>
