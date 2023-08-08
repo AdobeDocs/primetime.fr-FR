@@ -87,14 +87,14 @@ ht-degree: 0%
          + [Enregistrement de l’application Amazon FireOS](amazon-fireos-application-registration.md)
          + [SDK FireOS avec enregistrement de client dynamique](fireos-sdk-with-dynamic-client-registration.md)
    + SSO de la plateforme {#platform-sso}
-      + Apple SSO {#apple-sso}
+      + APPLE SSO {#apple-sso}
          + [Présentation d’Apple SSO](apple-sso-overview.md)
          + [Guide pas à pas Apple SSO (API REST)](apple-sso-cookbook-rest-api.md)
          + [Guide pas à pas Apple SSO (SDK iOS/tvOS)](apple-sso-cookbook-iostvos-sdk.md)
       + Roku SSO {#roku-sso}
          + [Roku SSO](roku-sso-overview.md)
    + Métadonnées de contenu {#content-metadata}
-      + [Identification des ressources protégées](identify-protected-resources.md)
+      + [Identification de la ressource protégée](identify-protected-resources.md)
    + Intégration du serveur de contenu {#content-serv-int}
       + [Comment intégrer le vérificateur de jeton multimédia](media-token-verifier-int.md)
    + Annexes {#appendices}
@@ -124,11 +124,11 @@ ht-degree: 0%
       + [Temp pass](temp-pass.md)
       + [Passe temporaire promotionnelle](promotional-temp-pass.md)
    + Authentification unique {#sso}
-      + [Prise en charge de l’authentification unique](sso-support.md)
+      + [Prise en charge de la connexion unique](sso-support.md)
       + [SSO via authentification passive](sso-passive-authn.md)
    + Authentification par domicile {#home-based-auth}
       + [Authentification basée sur la maison pour TV partout](home-based-authn-tve.md)
-      + [État des adaptateurs de bus hôte pour les distributeurs multicanaux de programmes audiovisuels](hba-status-mvpds.md)
+      + [État de l’adaptateur de bus hôte pour les MVPD](hba-status-mvpds.md)
    + Métadonnées utilisateur {#user-metadat}
       + [Métadonnées utilisateur](user-metadata-feature.md)
    + [Autorisation de contrôle en amont](preflight-authz.md)
@@ -185,12 +185,12 @@ ht-degree: 0%
    + API sans client {#clientless-api}
       + [Mise en oeuvre de l’API sans client - Codes d’erreur/messages avec une raison/cause probable](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
       + [Flux d’API sans client en l’absence d’identifiant d’appareil](clientless-api-flow-in-the-absence-of-device-id.md)
-      + [Sans client : Évitez d’utiliser &#39;&amp;&#39;reg_code dans /authenticRequest](clientless-avoid-using-reg-code-in-authenticate-request.md)
+      + [Sans client : évitez d’utiliser &#39;&amp;&#39;reg_code dans /authenticRequest](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Activation des Services de droits Primetime pour un programmeur sur Xbox 360 et XboxOne sans client](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
       + [Type d’appareil sans client et mesures](benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
    + Expérience utilisateur {#user-exp}
       + [Comment migrer la page de connexion MVPD d’iFrame vers la fenêtre contextuelle](migr-mvpd-login-iframe-popup.md)
-      + [Fonctionnalité de contrôle en amont : Comment activer, résoudre ou déterminer le problème](preflight-feature.md)
+      + [Fonctionnalité de contrôle en amont : comment activer, résoudre ou déterminer le problème](preflight-feature.md)
    + Outils et utilitaires {#tools-and-utilities}
       + [Utilisation du proxy Charles](using-charles-proxy.md)
    + Concepts {#concepts}
