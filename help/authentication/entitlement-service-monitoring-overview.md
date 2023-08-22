@@ -1,13 +1,13 @@
 ---
 title: Présentation de la surveillance du service de droits
 description: Présentation de la surveillance du service de droits
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ebd5d650-0a32-4583-9045-5156356494e2
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
 
 ---
-
 
 # Présentation de la surveillance du service de droits {#entitlement-service-monitoring-overview}
 
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Les sites et applications TVE doivent être disponibles 24/7. Les clients doivent donc disposer d’informations en temps réel sur les événements de droits afin de détecter et de corriger les problèmes le plus rapidement possible. Ils doivent également analyser les données mensuelles afin de déterminer les plateformes qui fournissent la majeure partie du trafic et celles qui peuvent présenter une mauvaise implémentation et des taux de conversion médiocres.
 
-Le service de surveillance des droits (ESM) fournit aux programmeurs et aux MVPD un flux de données qui offre une visibilité en temps réel dans leurs événements d’authentification et d’autorisation. Les données sont collectées à partir des systèmes d’authentification Adobe Primetime et fournies via une API RESTful.  Les clients peuvent utiliser les données directement ou depuis leurs propres tableaux de bord opérationnels personnalisés.
+Le service de surveillance des droits (ESM) fournit aux programmeurs et aux MVPD un flux de données qui offre une visibilité en temps réel dans leurs événements d’authentification et d’autorisation. Les données sont collectées à partir des systèmes d’authentification Adobe Primetime et fournies via une API RESTful.  Les clients peuvent utiliser les données directement ou depuis leurs propres tableaux de bord opérationnels personnalisés.
 
-Les éléments essentiels du système de gestion de l&#39;environnement sont ses mesures et ses dimensions. ESM génère des rapports qui contiennent des mesures agrégées en fonction de la sélection de dimension. Comme les événements Adobe Pass sont consignés dans le fuseau horaire PST, les rapports ESM sont également disponibles dans le fuseau horaire PST. 
+Les éléments essentiels du système de gestion de l&#39;environnement sont ses mesures et ses dimensions. ESM génère des rapports qui contiennent des mesures agrégées en fonction de la sélection de dimension. Comme les événements Adobe Pass sont consignés dans le fuseau horaire PST, les rapports ESM sont également disponibles dans le fuseau horaire PST.
 
-L’API ESM n’est pas disponible en général.  Contactez votre représentant Adobe pour toute question concernant la disponibilité.
+L’API ESM n’est pas disponible en général.  Contactez votre représentant Adobe pour toute question concernant la disponibilité.
 
 ## ESM pour les programmeurs {#esm-for-programmers}
 
@@ -34,8 +34,8 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 |-------------------------|--------------------------|
 | authn-tries | Nombre de flux d’authentification lancés |
 | authn-success | Nombre de jetons d’authentification obtenus avec succès par les clients |
-| création en attente | Nombre de jetons d’authentification générés avec succès (sans tenir compte du fait que le client l’ait réellement obtenu) |
-| authn-failed | Nombre d’échecs d’authentification effectués par le biais d’un système externe. |
+| authn-pending | Nombre de jetons d’authentification générés avec succès (sans tenir compte du fait que le client l’ait réellement obtenu) |
+| authn-failed | Nombre d’échecs d’authentification effectués via un système externe. |
 | jetons sans client | Nombre de jetons sans client émis avec succès |
 | clientless-failure | Nombre de tentatives de réception de jetons par l’API sans client ayant échoué |
 | authz-tries | Nombre de tentatives d’autorisation |
@@ -68,7 +68,7 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 | channel | Le site web du canal, extrait du champ de ressource (extrait de la payload MRSS en tant que canal/titre s&#39;il est fourni, ou mappé à la valeur de la ressource si elle n&#39;est pas au format RSS). |
 | resource-id | Titre réel de la ressource impliquée dans la requête d’autorisation (extrait de la charge utile MRSS en tant qu’élément/titre s’il est fourni). |
 | appareil | La plateforme de l’appareil (PC, mobile, console, etc.) |
-| eap | Fournisseur d’authentification externe lorsque le flux d’authentification est effectué par le biais d’un système externe. </br> Les valeurs peuvent être les suivantes : </br> - S.O. : l’authentification a été fournie par l’authentification Primetime </br> - Apple : le système externe qui a fourni l’authentification est Apple |
+| eap | Fournisseur d’authentification externe lorsque le flux d’authentification est effectué via un système externe. </br> Les valeurs peuvent être les suivantes : </br> - S.O. : l’authentification a été fournie par l’authentification Primetime </br> - Apple : le système externe qui a fourni l’authentification est Apple |
 | os-family | Système d’exploitation en cours d’exécution sur le périphérique |
 | browser-family | Agent utilisateur utilisé pour accéder à l’authentification Adobe Primetime |
 | cdt | Plateforme d’appareil (alternative), actuellement utilisée pour les clients sans client. </br>  Les valeurs peuvent être les suivantes : </br> - S.O. : l’événement ne provient pas d’un SDK sans client </br> - Inconnu - Comme le paramètre deviceType d’une API sans client est facultatif, il existe des appels qui ne contiennent aucune valeur. </br> - toute autre valeur envoyée via l’API sans client, par exemple xbox, appletv, roku, etc. </br> |
@@ -79,7 +79,7 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 | sdk-version | Version du SDK client d’authentification Adobe Primetime |
 | event | Nom de l’événement d’authentification Adobe Primetime |
 | reason | Raison des échecs, comme indiqué par l’authentification Adobe Primetime |
-| sso-type | Le mécanisme d’authentification unique sous-jacent : platform/passive/adobe. Indique que le jeton d’autorisation a été émis en réutilisant AuthN dans une autre application. |
+| sso-type | Mécanisme d’authentification unique sous-jacent : platform/passive/adobe. Indique que le jeton d’autorisation a été émis en réutilisant AuthN dans une autre application. |
 
 ## ESM pour MVPD {#esm-for-mvpds}
 
@@ -89,8 +89,8 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 |---|---|
 | authn-tries | Nombre de flux d’authentification lancés |
 | authn-success | Nombre de jetons d’authentification obtenus avec succès par les clients |
-| création en attente | Nombre de jetons d’authentification générés avec succès (sans tenir compte du fait que le client l’ait réellement obtenu) |
-| authn-failed | Nombre d’échecs d’authentification effectués par le biais d’un système externe. |
+| authn-pending | Nombre de jetons d’authentification générés avec succès (sans tenir compte du fait que le client l’ait réellement obtenu) |
+| authn-failed | Nombre d’échecs d’authentification effectués via un système externe. |
 | authz-tries | Nombre de tentatives d’autorisation |
 | authz-success | Nombre d’autorisations réussies |
 | authz-failed | Nombre d’autorisations refusées par les MVPD au niveau de l’application |
@@ -107,7 +107,7 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 | hour | Heure de la journée |
 | minute | La minute de l’heure |
 | requestor-id | Identifiant du demandeur utilisé pour exécuter la demande de droit |
-| eap | Fournisseur d’authentification externe lorsque le flux d’authentification est effectué par le biais d’un système externe. </br> Les valeurs peuvent être les suivantes : </br> - S.O. : l’authentification a été fournie par l’authentification Primetime </br> - Apple : le système externe qui a fourni l’authentification est Apple |
+| eap | Fournisseur d’authentification externe lorsque le flux d’authentification est effectué via un système externe. </br> Les valeurs peuvent être les suivantes : </br> - S.O. : l’authentification a été fournie par l’authentification Primetime </br> - Apple : le système externe qui a fourni l’authentification est Apple |
 | cdt | Plateforme d’appareil (alternative), actuellement utilisée pour les clients sans client. </br>  Les valeurs peuvent être les suivantes : </br> - S.O. : l’événement ne provient pas d’un SDK sans client </br> - Inconnu - Comme le paramètre deviceType d’une API sans client est facultatif, il existe des appels qui ne contiennent aucune valeur. </br> - toute autre valeur envoyée via l’API sans client, par exemple xbox, appletv, roku, etc. </br> |
 | sdk-type | Le SDK client utilisé (Flash, HTML5, Android natif, iOS, sans client, etc.) |
 
@@ -116,11 +116,11 @@ L’API ESM n’est pas disponible en général.  Contactez votre représentant
 
 Vous pouvez utiliser les données ESM pour les cas d’utilisation suivants :
 
-- **Surveillance** - Les opérations ou les équipes de surveillance peuvent créer un tableau de bord ou un graphique qui appelle l’API toutes les minutes. En utilisant les informations affichées, ils peuvent détecter un problème (avec l’authentification Primetime ou avec un MVPD) à la minute où il apparaît.  
+- **Surveillance** - Les opérations ou les équipes de surveillance peuvent créer un tableau de bord ou un graphique qui appelle l’API toutes les minutes. En utilisant les informations affichées, ils peuvent détecter un problème (avec l’authentification Primetime ou avec un MVPD) à la minute où il apparaît.
 
-- **Débogage/test de qualité** - Comme les données sont également ventilées par plateforme, périphérique, navigateur et système d’exploitation, l’analyse des schémas d’utilisation peut pointer des problèmes sur des combinaisons spécifiques (par exemple, Safari sur OSX).  
+- **Débogage/test de qualité** - Comme les données sont également ventilées par plateforme, périphérique, navigateur et système d’exploitation, l’analyse des schémas d’utilisation peut pointer des problèmes sur des combinaisons spécifiques (par exemple, Safari sur OSX).
 
-- **Analytics** - Les données fournies peuvent être utilisées pour compléter/auditer les données côté client collectées via Adobe Analytics ou un autre outil d’analyse.
+- **Analytics** - Les données fournies peuvent être utilisées pour compléter/auditer les données côté client collectées via Adobe Analytics ou un autre outil d’analyse.
 
 <!--
 ## Related Information {#related-information}

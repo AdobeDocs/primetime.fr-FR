@@ -1,13 +1,13 @@
 ---
 title: Surveillance de l’authentification Adobe Primetime
 description: Surveillance de l’authentification Adobe Primetime
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: fb000e9d-b5aa-45b1-a914-9e419ec8a4d9
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
-
 
 # Surveillance de l’authentification Adobe Primetime {#monitoring-adobe-primetime-authentication}
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Introduction {#intro}
 
-Les clients peuvent utiliser [Nagios](http://www.nagios.org) ou d’autres outils pour vérifier si l’authentification Adobe Primetime est activée ou désactivée. 
+Les clients peuvent utiliser [Nagios](http://www.nagios.org) ou d’autres outils pour vérifier si l’authentification Adobe Primetime est activée ou désactivée.
 
 ## Surveiller les points de terminaison {#monitoring-endpoints}
 
@@ -25,17 +25,17 @@ Les clients peuvent utiliser [Nagios](http://www.nagios.org) ou d’autres outil
 
 * Le point de terminaison de configuration pour toutes les plateformes : `https://sp.auth.adobe.com/adobe-services/config/[your-config-ID]`- Il est disponible via HTTP ou HTTPS (selon le choix effectué par le développeur du fournisseur de contenu). Si ce point de terminaison est manquant, cela signifie que votre contenu ne sera pas disponible sur toutes les plateformes et tous les MVPD. Pour l’API REST sans client, nous disposons également du point de terminaison suivant :  `https://api.auth.adobe.com/adobe-services/config your-config-ID]`.
 
-* Les points de terminaison suivants font partie du SDK Web d’authentification Adobe Primetime.  S&#39;il manque, cela signifie que la payTVpass est désactivé pour tous les programmeurs et toutes les propriétés web :
+* Les points de terminaison suivants font partie du SDK Web d’authentification Adobe Primetime.  S&#39;il manque, cela signifie que la payTVpass est désactivé pour tous les programmeurs et toutes les propriétés web :
 
    * `https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js`
    * `https://entitlement.auth.adobe.com/entitlement/js/AccessEnabler.js`
 
- 
+
 ### Points de terminaison que vous ne devez pas surveiller {#endpoints-not-monitor}
 
 * `https://sp.auth.adobe.com/sp/saml/SAMLAssertionConsumer`
 
-   Vous obtiendrez toujours une erreur 503, car ce point de terminaison nécessite une réponse SAML MVPD.
+  Vous obtiendrez toujours une erreur 503, car ce point de terminaison nécessite une réponse SAML MVPD.
 
 * Autres points de terminaison des droits - `adobe-services/1.0/authenticate/`, `adobe-services/1.0/deviceShortAuthorize`, `adobe-services/1.0/authorize`
 

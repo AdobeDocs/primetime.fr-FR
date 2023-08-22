@@ -1,13 +1,13 @@
 ---
 title: Chemin de mise à niveau d’AccessEnabler iOS/tvOS 3.7.0
 description: Chemin de mise à niveau d’AccessEnabler iOS/tvOS 3.7.0
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Chemin de mise à niveau d’AccessEnabler iOS/tvOS 3.7.0 {#accessenabler-iostvos-370-upgrade-path}
 

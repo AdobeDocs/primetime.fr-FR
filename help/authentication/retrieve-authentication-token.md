@@ -1,13 +1,13 @@
 ---
 title: Récupération du jeton d’authentification
 description: Récupération du jeton d’authentification
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7fb03854-edad-41e7-b218-1858fc071876
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
-
 
 # Récupération du jeton d’authentification {#retrieve-authentication-token}
 
@@ -19,23 +19,23 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## Description {#description}
 
-Récupère le jeton d’authentification (AuthN).  
+Récupère le jeton d’authentification (AuthN).
 
-| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
+| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authn</br></br>Par exemple :</br></br>&lt;sp_fqdn>/api/v1/tokens/authn | Application de diffusion en continu</br></br>ou</br></br>Service de programmation | 1. demandeur (obligatoire)</br>2.  deviceId (obligatoire)</br>3.  device_info/X-Device-Info (obligatoire)</br>4.  _deviceType_ (Obsolète)</br>5.  _deviceUser_ (Obsolète)</br>6.  _appId_ (Obsolète) | GET | XML ou JSON contenant des informations d’authentification ou des détails d’erreur en cas d’échec. | 200 - Réussite.  </br>404 - Jeton introuvable  </br>410 - Jeton expiré |
+| &lt;sp_fqdn>/api/v1/tokens/authn</br></br>Par exemple :</br></br>&lt;sp_fqdn>/api/v1/tokens/authn | Application de diffusion en continu</br></br>ou</br></br>Service de programmation | 1. demandeur (obligatoire)</br>2.  deviceId (obligatoire)</br>3.  device_info/X-Device-Info (obligatoire)</br>4.  _deviceType_ (Obsolète)</br>5.  _deviceUser_ (Obsolète)</br>6.  _appId_ (Obsolète) | GET | XML ou JSON contenant des informations d’authentification ou des détails d’erreur en cas d’échec. | 200 - Réussite.  </br>404 - Jeton introuvable  </br>410 - Jeton expiré |
 
 {style="table-layout:auto"}
 
@@ -44,10 +44,10 @@ Récupère le jeton d’authentification (AuthN).  
 | --- | --- |
 | demandeur | Identifiant du demandeur du programmeur pour lequel cette opération est valide. |
 | deviceId | Octets d’identifiant de l’appareil. |
-| device_info/</br></br>X-Device-Info | Informations sur les périphériques de diffusion en continu.</br></br>**Remarque**: Cela peut être transmis device_info comme paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, il doit être transmis sous la forme X-Device-Info dans l’en-tête http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| device_info/</br></br>X-Device-Info | Informations sur les périphériques de diffusion en continu.</br></br>**Remarque**: cette variable peut être transmise à device_info en tant que paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, elle doit être transmise sous la forme X-Device-Info dans l’en-tête http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
 | _deviceType_ | Type d’appareil (par exemple, Roku, PC).</br></br>**Remarque**: device_info remplace ce paramètre. |
 | _deviceUser_ | Identifiant de l’utilisateur de l’appareil.</br></br>**Remarque**: s’il est utilisé, deviceUser doit avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
-| _appId_ | ID/nom de l’application. </br></br>**Remarque**: device_info remplace ce paramètre. Si utilisé, `appId` doivent avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
+| _appId_ | ID/nom de l’application. </br></br>**Remarque**: device_info remplace ce paramètre. En cas d’utilisation, `appId` doivent avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Récupère le jeton d’authentification (AuthN).  
 
 ### Exemple de réponse {#response}
 
- 
+
 
 #### Succès
 
@@ -76,16 +76,16 @@ Récupère le jeton d’authentification (AuthN).  
 
 ```JSON
     {
-         "requestor": "sampleRequestor",
-         "mvpd": "sampleMvpdId",
-         "userId": "sampleUserId",
-         "expires": "1601114932000"
+         "requestor": "sampleRequestor",
+         "mvpd": "sampleMvpdId",
+         "userId": "sampleUserId",
+         "expires": "1601114932000"
     }
 ```
 
- 
 
- 
+
+
 
 #### Jeton d’authentification introuvable :
 
@@ -99,7 +99,7 @@ Récupère le jeton d’authentification (AuthN).  
     </error>
 ```
 
- 
+
 **JSON :**
 
 ```JSON
@@ -108,4 +108,3 @@ Récupère le jeton d’authentification (AuthN).  
         "message": "Not Found"
     }
 ```
-

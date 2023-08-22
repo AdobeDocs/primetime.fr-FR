@@ -1,9 +1,10 @@
 ---
 title: Présentation des mesures côté serveur
 description: Présentation des mesures côté serveur
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 ## Introduction {#intro}
 
-Ce document décrit les mesures côté serveur d’authentification Adobe Primetime générées par le service de surveillance du service de droits (ESM). Il ne décrit pas les mêmes événements du point de vue du client (ce que les programmeurs verraient s’ils mettaient en oeuvre un service de mesure tel qu’Adobe Analytics sur leur page/application).  
+Ce document décrit les mesures côté serveur d’authentification Adobe Primetime générées par le service de surveillance du service de droits (ESM). Il ne décrit pas les mêmes événements du point de vue du client (ce que les programmeurs verraient s’ils mettaient en oeuvre un service de mesure tel qu’Adobe Analytics sur leur page/application).
 
 ## Résumé des événements {#events_summary}
 
@@ -27,14 +28,14 @@ Du point de vue du serveur d’authentification Adobe Primetime, les événement
 
    * Notification de la tentative AuthN : cette opération est générée lorsque l’utilisateur est envoyé au site de connexion MVPD.
    * Notification d’AuthN en attente : si l’utilisateur parvient à se connecter avec son MVPD, celui-ci est généré lorsque l’utilisateur est redirigé vers l’authentification Primetime.
-   * Notification d’AuthN accordée : cette notification est générée lorsque l’utilisateur est de retour sur le site du programmeur et a récupéré le jeton d’authentification à partir de l’authentification Primetime. 
+   * Notification d’AuthN accordée : cette notification est générée lorsque l’utilisateur est de retour sur le site du programmeur et a récupéré le jeton d’authentification à partir de l’authentification Primetime.
 * **Flux d’autorisation** (Juste une vérification de l’autorisation avec un MVPD)\
-   *Condition requise :* Jeton AuthN valide
-   * Notification de la tentative AuthZ
+  *Condition préalable requise :* Jeton AuthN valide
+   * Notification d’une tentative AuthZ
    * Notification d’AuthZ accordée
 * **Requête de lecture réussie**\
-   *Condition requise :* Jetons AuthN et AuthZ valides
-   * Notification d’une vérification avec l’authentification Adobe Primetime 
+  *Condition préalable requise :* Jetons AuthN et AuthZ valides
+   * Notification d’une vérification avec l’authentification Adobe Primetime
    * Une requête de lecture nécessite une authentification accordée et une autorisation accordée.
 
 
@@ -50,7 +51,14 @@ Le nombre d’utilisateurs uniques est présenté en détail dans la section [Ut
 
 L’exemple suivant montre les mesures côté serveur pour un mois pour une marque :
 
-| Mesure | MVPD 1 | MVPD 2 | ... | MVPD n | Total | | — | — | — | - | — | — | | Authentifications réussies | 1125 | 2892 | | 2203 | SUM(MVP1+...MVPD n) | | Autorisations réussies | 2527 | 5603 | | 5904 | SUM(MVP1+...MVPD n) | | Demandes de lecture réussies | 4201 | 10518 | | 10737 | SUM(MVP1+...MVPD n) | | Utilisateurs uniques | 1375 | 2400 | | 2890 | SOMME de tous les utilisateurs pour tous les MVPD dédupliqués\* | | Authentifications tentées | 2147 | 3887 | | 3108 | SUM(MVP1+...MVPD n) | | Tentatives d’autorisation | 2889 | 6139 | | 6039 | SUM(MVP1+...MVPD n) |
+| Mesure | MVPD 1 | MVPD 2 | … | MVPD | Total |
+| -------------------------- | ------ | ------ | - | ------ | ---------------------------------------------- |
+| Authentifications réussies | 1125 | 2892 |   | 2203 | SUM(MVP1+...MVPD n) |
+| Autorisations réussies | 2527 | 5603 |   | 5904 | SUM(MVP1+...MVPD n) |
+| Demandes de lecture réussies | 4201 | 10518 |   | 10737 | SUM(MVP1+...MVPD n) |
+| Utilisateurs uniques | 1375 | 2400 |   | 2890 | SOMME de tous les utilisateurs pour tous les MVPD dédupliqués\* |
+| Tentatives d’authentification | 2147 | 3887 |   | 3108 | SUM(MVP1+...MVPD n) |
+| Tentatives d’autorisation | 2889 | 6139 |   | 6039 | SUM(MVP1+...MVPD n) |
 
 </br>
 
@@ -72,7 +80,7 @@ Le flux implique des allers-retours vers les MVPD pour l’authentification (#5 
 
 
 
-Une fois le flux terminé, les jetons Authentification et Autorisation sont mis en cache sur le périphérique de l’utilisateur. Les valeurs de durée de vie (TTL) des jetons d’authentification sont comprises entre 6 heures et 90 jours. Une expiration de jeton AuthN force automatiquement une expiration de jeton AuthZ. La valeur TTL du jeton d’autorisation est généralement de 24 heures.
+Une fois le flux terminé, les jetons Authentification et Autorisation sont mis en cache sur le périphérique de l’utilisateur. Les valeurs de durée de vie (TTL) des jetons d’authentification sont comprises entre 6 heures et 90 jours. Une expiration de jeton AuthN force automatiquement une expiration de jeton AuthZ. La valeur TTL du jeton d’autorisation est généralement de 24 heures.
 
 | Événements côté serveur déclenchés | <ul><li>Tentative d&#39;authentification, Authentification en attente, Authentification accordée</li><li>Tentative d’autorisation, autorisation accordée</li><li>Requête de lecture réussie</li></ul> |
 |---|---|
@@ -111,11 +119,11 @@ Ce flux implique un aller-retour au MVPD.
 
 ### Tentative d’authentification {#authentication-attempt}
 
-Comme illustré dans le diagramme ci-dessus, les événements d’authentification ne sont déclenchés que lorsque l’utilisateur effectue un aller-retour au MVPD ; les événements d’authentification n’incluent pas les authentifications de jeton mises en cache.
+Comme illustré dans le diagramme ci-dessus, les événements d’authentification ne sont déclenchés que lorsque l’utilisateur effectue un aller-retour vers le MVPD ; les événements d’authentification n’incluent pas les authentifications de jeton mises en cache.
 
 L’événement de tentative d’authentification est déclenché lorsque l’utilisateur a cliqué sur un MVPD particulier dans le sélecteur.
 
-* Le premier événement du côté MVPD qui se rapproche de ce point est le chargement de la page.
+* Le premier événement du côté MVPD qui se rapproche est le chargement de la page.
 * L’authentification Adobe Primetime ne comptabilise pas les tentatives répétées de l’utilisateur de se connecter à la page MVPD (mot de passe incorrect, réessayez).
 * plusieurs tentatives sont comptabilisées comme une seule tentative
 * Certains MVPD effectuent également l’autorisation à l’étape Authentification et l’utilisateur n’est pas redirigé en cas d’échec de l’autorisation.
@@ -128,12 +136,12 @@ Cet événement se produit lorsque le processus de redirection vers l’authenti
 
 L&#39;utilisateur est un abonné connu du MVPD, généralement avec un abonnement à la télévision payante, mais parfois avec seulement un accès Internet. Une authentification réussie peut se produire soit parce que l’utilisateur a explicitement saisi des informations d’identification valides avec son MVPD, soit parce qu’il a précédemment saisi des informations d’identification valides et que l’option &quot;Mémoriser&quot; a été cochée (et que la session précédente n’avait pas expiré).
 
-Le MVPD envoie donc une réponse positive à l’authentification Adobe Primetime et l’authentification Adobe Primetime crée une *Jeton AuthN*.
+Le MVPD envoie donc une réponse positive à l’authentification Adobe Primetime à la demande d’authentification et l’authentification Adobe Primetime crée une *Jeton AuthN*.
 
 * L’authentification est généralement mise en cache pendant une longue période (un mois ou plus). De ce fait, les événements d’authentification ne seront plus présents tant que le jeton n’expire pas et que le flux n’est pas redémarré.
-* La connexion à partir d’un autre site/application via l’authentification unique ne déclenche pas d’événements d’authentification.
+* La connexion à partir d’un autre site/application par le biais de l’authentification unique ne déclenche pas d’événements d’authentification.
 
- 
+
 
 ### Authentification Comcast {#comcast-authentication}
 
@@ -141,11 +149,11 @@ Comcast a un flux AuthN différent du reste des MVPD.
 
 Les fonctions suivantes décrivent les différences :
 
-* **Comportement du cookie de session**: Cela entraîne la suppression complète des jetons d’authentification une fois que l’utilisateur a fermé le navigateur. Cette fonctionnalité est présente sur le web uniquement. L’objectif principal est de vous assurer que votre session Comcast n’est pas conservée sur les ordinateurs non sécurisés/partagés. L’impact est qu’il y aura plus de tentatives d’authentification/flux attribués que pour le reste des MVPD.
+* **Comportement du cookie de session**: cela entraîne la suppression complète des jetons d’authentification une fois que l’utilisateur a fermé le navigateur. Cette fonctionnalité est présente sur le web uniquement. L’objectif principal est de vous assurer que votre session Comcast n’est pas conservée sur les ordinateurs non sécurisés/partagés. L’impact est qu’il y aura plus de tentatives d’authentification/flux attribués que pour le reste des MVPD.
 
 * **AuthN par requestorID**: Comcast ne permet pas que l’état AuthN soit mis en cache d’un ID de demandeur à un autre. Pour cette raison, chaque site/application doit accéder à Comcast pour obtenir un jeton d’authentification. Outre les considérations d’expérience utilisateur, l’impact, comme ci-dessus, est que davantage de tentatives d’authentification / d’événements attribués seront générés.
 
-* **Authentification passive**: Pour améliorer l’expérience utilisateur tout en conservant la fonctionnalité AuthN par requestorID, un flux d’authentification passive se produit dans un iFrame masqué. L’utilisateur ne voit rien, mais les événements seront toujours déclenchés comme auparavant.
+* **Authentification passive**: afin d’améliorer l’expérience utilisateur tout en conservant la fonctionnalité AuthN par requestorID , un flux d’authentification passive se produit dans un iFrame masqué. L’utilisateur ne voit rien, mais les événements seront toujours déclenchés comme auparavant.
 
 Si l’utilisateur clique sur &quot;Mémoriser&quot; dans la page de connexion Comcast, les visites suivantes sur cette page (dans une période de 2 semaines) ne seront qu’une redirection rapide. Dans le cas contraire, les utilisateurs devront s’authentifier sur la page.
 
@@ -169,16 +177,16 @@ Quelques remarques sur les mesures :
 
 ### Tentative d’autorisation {#authorization_attempt}
 
-Outre l’obtention d’un jeton d’authentification, les utilisateurs doivent également obtenir un jeton d’autorisation avant de lire le contenu. Cela se produit généralement après l’authentification ou si le jeton d’autorisation expire. Puisque cette vérification est effectuée côté serveur (des serveurs d’authentification Adobe Primetime aux serveurs MVPD), l’utilisateur n’est pas tenu de faire quoi que ce soit.
+Outre l’obtention d’un jeton d’authentification, les utilisateurs doivent également obtenir un jeton d’autorisation avant de lire le contenu. Cela se produit généralement après l’authentification ou si le jeton d’autorisation expire. Puisque cette vérification est effectuée côté serveur (des serveurs d’authentification Adobe Primetime aux serveurs MVPD), l’utilisateur n’est pas tenu de faire quoi que ce soit.
 
 ### Autorisation accordée {#authorization-granted}
 
 Une &quot;autorisation accordée&quot; indique que l’abonnement de l’utilisateur authentifié inclut la programmation demandée.
 
-Notez que tous les MVPD ne prennent pas en charge une étape d’autorisation distincte ; pour une authentification donnée, est associé à l’autorisation . Le MVPD envoie une réponse réussie à l’authentification Adobe Primetime à la requête AuthZ du canal principal, et l’authentification Adobe Primetime crée un jeton AuthZ.
+Notez que tous les MVPD ne prennent pas en charge une étape d’autorisation distincte ; pour certaines authentifications, il s’agit d’une autorisation. Le MVPD envoie une réponse réussie à l’authentification Adobe Primetime à la requête AuthZ du canal principal, et l’authentification Adobe Primetime crée un jeton AuthZ.
 
 * Le jeton AuthZ est mis en cache pendant une période donnée, généralement 24 heures. Durant cette période, aucun événement AuthZ ne sera déclenché.
-* Certains MVPD fonctionnent avec les autorisations au niveau des ressources, d’autres avec les autorisations au niveau des canaux ; - selon l’instance utilisée, plus ou moins d’événements AuthZ sont déclenchés. Même pour l’autorisation au niveau du canal, la mise en cache est en place. Par conséquent, si la même ressource est demandée en moins de 24 heures, aucun événement ne sera déclenché.
+* Certains MVPD fonctionnent avec les autorisations au niveau des ressources, d’autres avec les autorisations au niveau des canaux ; - selon le canal utilisé, plus ou moins d’événements AuthZ sont déclenchés. Même pour l’autorisation au niveau du canal, la mise en cache est en place. Par conséquent, si la même ressource est demandée en moins de 24 heures, aucun événement ne sera déclenché.
 
 ### Autorisation refusée {#authorization-denied}
 
@@ -189,7 +197,7 @@ Pour certains MVPD, les utilisateurs sont authentifiés avec succès même s’i
 Certains MVPD proposent des messages d’erreur personnalisés pour les refus AuthZ qui peuvent inclure des offres de mise à niveau de leur package.
 
 
-### Taux de conversion des autorisations {#authorization-conversion-rate}
+### Taux de conversion d’autorisation {#authorization-conversion-rate}
 
 Le taux de conversion d’authentification peut être calculé comme suit : (requêtes AuthZ / AuthZ accordées)%.
 
@@ -212,7 +220,7 @@ Cette valeur est également transmise au site/à l’application dans le rappel 
 
 Cette valeur peut être persistante sur plusieurs périphériques (le MVPD produit la même valeur pour un utilisateur donné, quel que soit l’endroit où se produit la connexion) ou transitoire (pour chaque connexion, une nouvelle valeur est générée, que le MVPD mappe dans son serveur principal. En règle générale, les valeurs fournies par les MVPD à l’authentification Adobe Primetime sont persistantes entre les sessions et les appareils, mais, comme nous l’avons vu, la persistance n’est ni garantie ni validée.
 
-Cette valeur sert à calculer les utilisateurs uniques. La valeur signalée (par ID/intervalle/MVPD de demandeur) est dédupliquée pour l’intervalle particulier. Ainsi, la somme des utilisateurs uniques par jour est généralement différente de la valeur mensuelle, la valeur mensuelle ayant la valeur la plus faible.
+Cette valeur sert à calculer les utilisateurs uniques. La valeur signalée (par ID/intervalle/MVPD de demandeur) est dédupliquée pour l’intervalle en question. Ainsi, la somme des utilisateurs uniques par jour est généralement différente de la valeur mensuelle, la valeur mensuelle ayant la valeur la plus faible.
 
 Ce nombre inclut tous les événements provenant de l’authentification Adobe Primetime, moins les tentatives d’authentification (qui n’ont pas d’ID utilisateur), mais inclut les autorisations de tentative (et éventuellement d’échec).
 
@@ -250,9 +258,9 @@ L&#39;utilisateur XYZ regarde une autre vidéo.
 * Événement de tentative/accordé AuthZ
    * Depuis l’expiration de la mise en cache d’un jour à partir du jour 1
 * Événement de requête de lecture réussi (les autres sont mis en cache)
-* Nombre d’utilisateurs uniques par jour augmenté de 1 ; les uniques par mois sont toujours de 1
+* Nombre d’utilisateurs uniques par jour augmenté de 1 ; les uniques mensuelles restent 1
 
-#### Jour 31 {#day31}
+#### 31 jour {#day31}
 
 L&#39;utilisateur XYZ regarde une autre vidéo.
 

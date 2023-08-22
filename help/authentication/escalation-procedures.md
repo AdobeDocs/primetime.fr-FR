@@ -1,7 +1,8 @@
 ---
 title: Procédures de réaffectation
 description: Procédures de réaffectation
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 1d754e5a-d5fa-4411-8932-2a36294da6eb
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -20,12 +21,12 @@ ht-degree: 0%
 
 ## Introduction {#introduction}
 
-Ce document décrit les procédures d’assistance pour les incidents majeurs (**SEVERITY 1** niveau) affectant l’authentification Adobe Primetime, la surveillance de la simultanéité Primetime et ses partenaires.\
- 
+Ce document décrit les procédures d’assistance pour les incidents majeurs (**SEVERITY 1** niveau) affectant l’authentification Adobe Primetime, la surveillance de la simultanéité Primetime et ses partenaires.
+
 
 ## Définition d’un incident de niveau SÉVÉRITÉ 1 {#definition-of-a-severity-1-level-incident}
 
-A **SEVERITY 1** un incident de niveau **LIVE** situation, **survenant dans l’environnement de production**, qui ne permet pas l’achèvement des flux d’authentification et/ou d’autorisation pour un canal et un MVPD, affectant un grand nombre d’abonnés du MVPD exécutant le flux.
+A **SEVERITY 1** un incident de niveau **LIVE** situation, **survenant dans l’environnement de production**, qui ne permet pas l’achèvement des flux d’authentification et/ou d’autorisation pour un canal et un MVPD, affectant un grand nombre d’abonnés du MVPD exécutant le flux.
 
 
 ## Exemples d&#39;incidents de SÉCURITÉ 1 {#examples-of-severity-1-incidentcs}
@@ -61,7 +62,6 @@ Les incidents de gravité 1 peuvent être provoqués par un Adobe ou un partenai
    * (Facultatif) Toutes les captures d’écran ou vidéos disponibles démontrant le problème.
 1. Si Adobe ne répond pas au ticket dans les 30 minutes, le partenaire appelle le numéro suivant :
    **1-205-693-9813**
-
    >[!IMPORTANT]
    >Si vous n’incluez pas &quot;URGENT-INCIDENT&quot; dans le titre du ticket, il ne sera pas repris par notre système de notification**.
 
@@ -75,7 +75,7 @@ Les incidents de gravité 1 peuvent être provoqués par un Adobe ou un partenai
 
 1. Adobe travaille à la résolution de l&#39;incident et tient informés tous les partenaires concernés.
 
-#### ...pour un problème de partenaire (programmeur/MVPD) {#adobe-initiated-flow-partner-issue}
+#### ...pour un problème de partenaire (Programmeur/MVPD) {#adobe-initiated-flow-partner-issue}
 
 1. Adobe identifie un problème lié à l’intégration à un MVPD ou à l’un des sites du programmeur.
 
@@ -89,11 +89,11 @@ Les incidents de gravité 1 peuvent être provoqués par un Adobe ou un partenai
 
 Dans certains cas, une action par défaut est exécutée dans le cas de l’occurrence de ce scénario :
 
-|  | Scénario | Description | Actions |
+|   | Scénario | Description | Actions |
 |---|---|---|---|
 | S1 | Adobe identifie un problème avec l’intégration d’un MVPD lors d’opérations de production normales. | Lors des opérations de production normales, Adobe identifie un problème avec l’un des MVPD qui empêche l’exécution des flux d’authentification/d’autorisation (par exemple, certificats expirés, réponses SAML expirées, ports fermés, paramètres modifiés, etc.). | - L&#39;Adobe informera les programmeurs et MVPD concernés.  </br> </br> - Adobe désactivera ce MVPD pour tous les programmeurs affectés. </br> </br> - L’Adobe ouvrira un ticket avec le MVPD suivant la procédure de support convenue avec ce MVPD |
 | S2 | Adobe active un nouveau MVPD pour un programmeur, et le programmeur autorise le MVPD avant la date de lancement. | Adobe active un nouveau MVPD pour un site de programmeur, et le site affiche déjà le nouveau MVPD dans le sélecteur, même s’il n’était pas censé le faire. | - Adobe informera le programmeur que le nouveau MVPD apparaîtra dans le sélecteur avant la date planifiée. </br> </br>  - Le programmeur prendra des mesures pour le supprimer du sélecteur si nécessaire. |
-| S3 | Adobe active un nouveau MVPD pour un programmeur même si le MVPD n’est pas prêt à être mis en production | Adobe active un nouveau MVPD pour un programmeur, mais le MVPD n’a pas encore déployé la prise en charge de l’intégration afin que les flux d’authentification/d’autorisation ne puissent pas être effectués. | : l’Adobe effectue le déploiement uniquement si le programmeur le demande. </br> </br> - Le programmeur sera chargé d&#39;assurer l&#39;autorisation du MVPD une fois tous les tests effectués. |
+| S3 | Adobe active un nouveau MVPD pour un programmeur même si le MVPD n’est pas prêt pour la production | Adobe active un nouveau MVPD pour un programmeur, mais le MVPD n’a pas encore déployé la prise en charge de l’intégration afin que les flux d’authentification/d’autorisation ne puissent pas être effectués. | : l’Adobe effectue le déploiement uniquement si le programmeur le demande. </br> </br> - Le programmeur sera chargé d&#39;assurer l&#39;autorisation du MVPD une fois tous les tests effectués. |
 
 ## Attentes En Matière De Réponse Pour Les Incidents De Gravité 1 {#response-expectations-for-severity-one-incidents}
 

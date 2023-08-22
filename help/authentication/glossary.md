@@ -1,13 +1,13 @@
 ---
 title: Glossaire
 description: Glossaire
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e64a94f6-7460-4aa8-8d6b-e0553ba1e4ec
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
 
 ---
-
 
 # Glossaire {#glossary}
 
@@ -46,7 +46,7 @@ Une solution d’intégration d’authentification Adobe Primetime qui utilise d
 
 ## ID de périphérique {#device-id}
 
-Identifie de manière unique un appareil (tel qu’un téléphone, une tablette, etc.) dans l’authentification Adobe Primetime. Cet identifiant est obtenu/fourni par l’application du programmeur.
+Identifie de manière unique un appareil (téléphone, tablette, etc.) dans l’authentification Adobe Primetime. Cet identifiant est obtenu/fourni par l’application du programmeur.
 
 
 ## Flux de droits{#entitlement_flow}
@@ -60,7 +60,7 @@ Voir [Identifiant utilisateur](#user-id).
 
 ## IdP {#idp}
 
-Identifier le fournisseur ; synonyme de MVPD dans le contexte du rôle d’un MVPD dans une intégration d’authentification Adobe Primetime. (Les clients doivent vérifier leur identité via la page de connexion de leur fournisseur de télévision payante.)
+Identifiez le fournisseur ; synonyme de MVPD dans le contexte du rôle d’un MVPD dans une intégration d’authentification Adobe Primetime. (Les clients doivent vérifier leur identité via la page de connexion de leur fournisseur de télévision payante.)
 
 ## Vérificateur de jeton multimédia {#media-token-verifier}
 
@@ -68,11 +68,11 @@ Bibliothèque fournie par l’Adobe et utilisée par les programmeurs pour véri
 
 ## MVPD {#mvpd}
 
-Distributeur de programmation vidéo multicanal ; synonyme de &quot;Fournisseur de télévision payante&quot;.
+Distributeur de programmation vidéo multicanal ; synonyme de &quot;fournisseur de télévision payante&quot;.
 
 ## MVPD ID {#mvpd-id}
 
-Voir [Identifiant utilisateur](#user-id).
+Voir [Identifiant utilisateur](#user-id).
 
 ## Identifiant du partenaire {#partner-id}
 
@@ -88,7 +88,7 @@ Synonyme de &quot;fournisseur de contenu&quot;, &quot;compte&quot;, &quot;canal&
 
 ## Proxy MVPD {#proxy-mvpd}
 
-un MVPD qui fournit des services d’identité pour les autres MVPD ; directement intégré à l’authentification Adobe Primetime.
+Un MVPD qui fournit des services d’identité pour d’autres MVPD ; directement intégré à l’authentification Adobe Primetime.
 
 ## MVPD proxy {#proxied-mvpd}
 
@@ -96,11 +96,11 @@ Un MVPD qui ne dispose pas d’une intégration directe avec le SP d’Adobe, ma
 
 ## Identifiant du demandeur {#requestor-id}
 
-Identifie de manière unique un [Programmeur](#programmer) (un compte, une marque, un canal ou une propriété) dans l’authentification Adobe Primetime. Cet identifiant est déterminé entre le programmeur et l’Adobe lors de la configuration initiale du compte. Sur le Web, l’identifiant du demandeur est associé à un ensemble de domaines placés sur la liste autorisée ; tout appel utilisant un identifiant d’un domaine externe sera refusé. Les programmeurs utilisent également l’identifiant du demandeur pour les analyses. Il n’y a généralement qu’un seul identifiant de demandeur par programmeur. Une autre fonctionnalité liée à l’identifiant du demandeur est que le programmeur doit fournir à l’Adobe un certificat public, car l’appel de l’API setRequestor attend l’envoi de données chiffrées, utilisées pour authentifier le programmeur dans le système d’authentification Adobe Primetime.
+Identifie de manière unique un [Programmeur](#programmer) (un compte, une marque, un canal ou une propriété) dans l’authentification Adobe Primetime. Cet identifiant est déterminé entre le programmeur et l’Adobe lors de la configuration initiale du compte. Sur le web, l’identifiant du demandeur est associé à un ensemble de domaines placés sur liste blanche ; tout appel utilisant un identifiant provenant d’un domaine externe sera refusé. Les programmeurs utilisent également l’identifiant du demandeur pour les analyses. Il n’y a généralement qu’un seul identifiant de demandeur par programmeur. Une autre fonctionnalité liée à l’identifiant du demandeur est que le programmeur doit fournir à l’Adobe un certificat public, car l’appel de l’API setRequestor attend l’envoi de données chiffrées, utilisées pour authentifier le programmeur dans le système d’authentification Adobe Primetime.
 
 ## ID de ressource {#resource-id}
 
-Chaîne ou ressource mRSS qui identifie une [Programmeur](#programmer) aux MVPD. Il est convenu entre le programmeur et les distributeurs de programmes audiovisuels; L’authentification Adobe Primetime transmet l’ID de ressource sans modification. Elle doit donc être identique pour tous les MVPD. Un programmeur peut utiliser plusieurs ID de ressource tant que les MVPD savent ce que chaque ID représente.
+Chaîne ou ressource mRSS qui identifie une [Programmeur](#programmer) aux MVPD. Il est convenu entre le programmeur et les MVPD ; l’authentification Adobe Primetime transmet l’ID de ressource sans modification, de sorte qu’il doit être le même pour tous les MVPD. Un programmeur peut utiliser plusieurs ID de ressource tant que les MVPD savent ce que chaque ID représente.
 
 ## SessionGUID {#sessionGUID}
 
@@ -116,7 +116,7 @@ Terme utilisé dans la documentation d’authentification d’Adobe Primetime po
 
 ## SP{#sp}
 
-Fournisseur de services; cela fait généralement référence à la variable *rôle* de SP, joué par l’authentification Adobe Primetime, agissant pour le compte d’un programmeur dans une intégration avec une [MVPD](#mvpd).
+Fournisseur de services ; il s’agit généralement de la variable *rôle* de SP, joué par l’authentification Adobe Primetime, agissant pour le compte d’un programmeur dans une intégration avec une [MVPD](#mvpd).
 
 ## Temp Pass {#temp-pass}
 
@@ -132,7 +132,7 @@ La Télévision Partout.
 
 ## Identifiant utilisateur {#user-id}
 
-Identifie de manière unique l’utilisateur d’une application de programmeur, mais provient du MVPD. Disponible dans différents formulaires pour différents cas pratiques. Voir [Présentation des identifiants utilisateur dans la présentation du programmeur](/help/authentication/programmer-overview.md#user-ids).
+Identifie de manière unique l’utilisateur de l’application d’un programmeur, mais provient du MVPD. Disponible dans différents formulaires pour différents cas pratiques. Voir [Présentation des identifiants utilisateur dans le programme](/help/authentication/programmer-overview.md#user-ids).
 
 ## Liste autorisée {#whitelist}
 

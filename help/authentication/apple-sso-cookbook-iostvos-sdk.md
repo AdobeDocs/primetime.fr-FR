@@ -1,14 +1,13 @@
 ---
 title: Guide pas à pas Apple SSO (SDK iOS/tvOS)
 description: Guide pas à pas Apple SSO (SDK iOS/tvOS)
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2d59cd33-ccfd-41a8-9697-1ace3165bc44
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1867'
 ht-degree: 0%
 
 ---
-
-
 
 # Guide pas à pas Apple SSO (SDK iOS/tvOS) {#apple-sso-cookbook-iostvos-sdk}
 
@@ -38,19 +37,19 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
 
 >[!TIP]
 >
-> **<u>Conseil Pro :</u>** Pour pouvoir accéder aux informations d’abonnement de l’utilisateur, celui-ci doit donner à l’application l’autorisation de continuer, comme s’il avait accès à la caméra ou au microphone de l’appareil. Cette autorisation doit être demandée par application et l’appareil enregistre la sélection de l’utilisateur. Gardez à l’esprit que l’utilisateur peut modifier sa décision en accédant aux paramètres de l’application (accès aux autorisations du fournisseur de télévision) ou à la section depuis *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS.
+> **<u>Conseil Pro :</u>** Pour pouvoir accéder aux informations d’abonnement de l’utilisateur, celui-ci doit donner à l’application l’autorisation de continuer, comme s’il avait accès à la caméra ou au microphone de l’appareil. Cette autorisation doit être demandée par application et l’appareil enregistre la sélection de l’utilisateur. Gardez à l’esprit que l’utilisateur peut modifier sa décision en accédant aux paramètres de l’application (accès aux autorisations du fournisseur de télévision) ou à la section depuis *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS.
 
 >[!TIP]
 >
-> **<u>Conseil Pro :</u>** Nous vous recommandons de demander l’autorisation de l’utilisateur lorsque l’application entre en premier plan, mais il s’agit uniquement d’une suggestion, car l’application peut vérifier [autorisation d’accès](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) les informations d’abonnement de l’utilisateur à tout moment avant de nécessiter une authentification de l’utilisateur. En outre, les API du SDK iOS/tvOS AccessEnabler demandent automatiquement l’autorisation de l’utilisateur lorsqu’il en a besoin.
+> **<u>Conseil Pro :</u>** Nous vous recommandons de demander l’autorisation de l’utilisateur lorsque l’application entre en premier plan, mais il s’agit uniquement d’une suggestion, car l’application peut vérifier [autorisation d’accès](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) les informations d’abonnement de l’utilisateur à tout moment avant de nécessiter une authentification de l’utilisateur. En outre, les API du SDK iOS/tvOS AccessEnabler demandent automatiquement l’autorisation de l’utilisateur lorsqu’il en a besoin.
 
 >[!TIP]
 >
-> **<u>Conseil Pro :</u>** Si l’utilisateur n’accorde pas l’accès à ses informations d’abonnement ou si la communication avec la structure de compte d’abonné vidéo échoue, le SDK AccessEnabler iOS/tvOS revient au flux d’authentification ordinaire.
+> **<u>Conseil Pro :</u>** Si l’utilisateur n’accorde pas l’accès à ses informations d’abonnement ou si la communication avec la structure de compte d’abonné vidéo échoue, le SDK AccessEnabler iOS/tvOS revient au flux d’authentification ordinaire.
 
 >[!TIP]
 >
-> **<u>Conseil Pro :</u>** Nous vous recommandons d’inciter les utilisateurs qui refusent de donner l’autorisation d’accéder aux informations d’abonnement en expliquant les avantages de l’expérience utilisateur de connexion unique (SSO). Gardez à l’esprit que l’utilisateur peut modifier sa décision en accédant aux paramètres de l’application (accès aux autorisations du fournisseur de télévision) ou à la section depuis *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS.
+> **<u>Conseil Pro :</u>** Nous vous recommandons d’inciter les utilisateurs qui refusent de donner l’autorisation d’accéder aux informations d’abonnement en expliquant les avantages de l’expérience utilisateur de connexion unique (SSO). Gardez à l’esprit que l’utilisateur peut modifier sa décision en accédant aux paramètres de l’application (accès aux autorisations du fournisseur de télévision) ou à la section depuis *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS.
 
 
 ```swift
@@ -78,7 +77,7 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
 
 >[!TIP]
 >
-> **<u>Conseil Pro :</u>** Mettez en oeuvre la liste suivante de [callbacks](/help/authentication/iostvos-sdk-api-reference.md) qui sont spécifiques au workflow SSO Apple.
+> **<u>Conseil Pro :</u>** Mettez en oeuvre la liste suivante de [callbacks](/help/authentication/iostvos-sdk-api-reference.md) qui sont spécifiques au workflow SSO Apple.
 
 - [*presentTVProviderDialog*](/help/authentication/iostvos-sdk-api-reference.md#presenttvproviderdialog-presenttvdialog) - Rappel déclenché lorsque le sélecteur MVPD Apple s’ouvre.
 - [*dismissTVProviderDialog*](/help/authentication/iostvos-sdk-api-reference.md#dismisstvproviderdialog-dismisstvdialog) - Rappel déclenché lorsque le sélecteur MVPD Apple se ferme.
@@ -96,8 +95,8 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
 - ***N005*** - L’utilisateur a décidé d’annuler le sélecteur MVPD standard ou le sélecteur MVPD Apple.
 - ***VSA403*** - La permission du fournisseur de télévision de l&#39;utilisateur est refusée pour la demande.
 - ***VSA404*** - L’autorisation du fournisseur de télévision de l’utilisateur est indéterminée pour la demande.
-- ***VSA503*** - Échec de la demande de métadonnées de compte d’abonné vidéo, plus de contexte est fourni dans la section *message* champ .
-- ***AAPL / APPL_ERROR*** - Échec de la demande de métadonnées de compte d’abonné vidéo, plus de contexte est fourni dans la section *détails* champ . 
+- ***VSA503*** - Échec de la demande de métadonnées de compte d’abonné vidéo, plus de contexte est fourni dans la section *message* champ .
+- ***AAPL / APPL_ERROR*** - Échec de la demande de métadonnées de compte d’abonné vidéo, plus de contexte est fourni dans la section *détails* champ .
 
 </br>
 
@@ -107,16 +106,16 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
 >
 > **<u>Conseil :</u>** Suivez les étapes ci-dessous pour la ou les implémentations iOS/iPadOS/tvOS.
 
-1. La demande doit [initialize](/help/authentication/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) Accédez au SDK iOS/tvOS d’AccessEnabler.
+1. La demande doit [initialize](/help/authentication/iostvos-sdk-api-reference.md#initsoftwarestatement-initwithsoftwarestatement) le SDK AccessEnabler iOS/tvOS.
 1. La demande doit [définir l’identifiant du demandeur actuel ;](/help/authentication/iostvos-sdk-api-reference.md#setrequestorrequestorid-setrequestorrequestoridserviceproviders-setreqv3).
 
-   **Important :** Cette deuxième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
+   **Important :** Cette deuxième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
 
    - ***VSA403*** - La permission du fournisseur de télévision de l&#39;utilisateur est refusée pour la demande.
    - ***VSA404*** - L’autorisation du fournisseur de télévision de l’utilisateur est indéterminée pour la demande.
    - ***APPL*** - La communication entre le SDK AccessEnabler iOS/tvOS et la structure du compte d’abonné vidéo a rencontré une erreur.
 
-   Cette deuxième étape consiste à échanger en silence le profil SSO Apple contre un jeton d’authentification d’Adobe, au cas où **tous les éléments ci-dessus sont faux.** et **tous les éléments suivants sont vrais**:
+   Cette deuxième étape consiste à échanger en silence le profil SSO Apple contre un jeton d’authentification d’Adobe, au cas où **tous les éléments ci-dessus sont faux.** et **tous les éléments suivants sont vrais**:
 
    - La permission du fournisseur de télévision de l’utilisateur est accordée pour la demande.
    - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil.
@@ -130,13 +129,13 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
 
 1. La demande doit [vérifier l’état d’authentification](/help/authentication/iostvos-sdk-api-reference.md#checkauthentication-checkauthn).
 
-   **Important :** Cette troisième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
+   **Important :** Cette troisième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
 
    - ***VSA403** - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais son autorisation de fournisseur de télévision est refusée pour l’application.
-   - ***VSA404** - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais l’autorisation du fournisseur de télévision de l’utilisateur n’est pas déterminée pour l’application.
+   - ***VSA404** - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais son autorisation de fournisseur de télévision n’est pas déterminée pour l’application.
    - ***APPL\_ERROR** - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais la communication entre le SDK AccessEnabler iOS/tvOS et la structure du compte d’abonné vidéo a rencontré une erreur.
 
-   **Important :** Cette troisième étape déclenche l’événement [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 0, en cas **l’une des conditions suivantes est vraie.**:
+   **Important :** Cette troisième étape déclenche la [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 0, en cas **l’une des conditions suivantes est vraie.**:
 
    - L’utilisateur n’est pas connecté à son compte de fournisseur de télévision au niveau du système de l’appareil ou par le biais d’un flux d’authentification régulier.
    - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil ou par le biais d’un flux d’authentification régulier, mais le jeton d’authentification du fournisseur de télévision de l’utilisateur est transmis.
@@ -146,14 +145,14 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
    - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais son autorisation de fournisseur de télévision n’est pas déterminée pour l’application.
    - L’utilisateur est connecté à son compte de fournisseur de télévision au niveau du système de l’appareil, mais la communication entre le SDK AccessEnabler iOS/tvOS et la structure du compte d’abonné vidéo a rencontré une erreur.
 
-   **Important :** Cette troisième étape déclenche l’événement [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 1, au cas où **tous les éléments ci-dessus sont faux.**
+   **Important :** Cette troisième étape déclenche la [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 1, au cas où **tous les éléments ci-dessus sont faux.**
 
 
-1. La demande doit [initialisation de l’authentification](/help/authentication/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) au cas où la vérification de l’état de l’authentification précédente déclencherait la variable [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 0.
+1. La demande doit [initialisation de l’authentification](/help/authentication/iostvos-sdk-api-reference.md#getauthentication-getauthenticationwithdata-getauthn) au cas où la vérification de l’état de l’authentification précédente déclencherait la variable [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setauthenticationstatuserrorcode-setauthnstatus) rappel avec *status* égal à 0.
 
-   **<u>Conseil Pro :</u>** Mettez en oeuvre l’une des API SDK AccessEnabler iOS/tvOS suivantes [getAuthentication](/help/authentication/iostvos-sdk-api-reference.md#getAuthN) ou [getAuthentication:filter](/help/authentication/iostvos-sdk-api-reference.md#getAuthN_filter).
+   **<u>Conseil Pro :</u>** Mettez en oeuvre l’une des API SDK AccessEnabler iOS/tvOS suivantes [getAuthentication](/help/authentication/iostvos-sdk-api-reference.md#getAuthN) ou [getAuthentication:filter](/help/authentication/iostvos-sdk-api-reference.md#getAuthN_filter).
 
-   **Important :** Cette quatrième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
+   **Important :** Cette quatrième étape peut déclencher une [code d’erreur avancé](/help/authentication/error-reporting.md) qui est spécifique au workflow SSO d’Apple, le cas échéant **l’une des conditions suivantes est vraie.**:
 
    - ***VSA403*** - La permission du fournisseur de télévision de l&#39;utilisateur est refusée pour la demande.
    - ***VSA404*** - L’autorisation du fournisseur de télévision de l’utilisateur est indéterminée pour la demande.
@@ -162,13 +161,13 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
    - ***N004*** - L’utilisateur a sélectionné un fournisseur de télévision dans le sélecteur MVPD Apple, qui n’est pas pris en charge (intégration ou connexion unique désactivée) par le demandeur actuel.
    - ***N005*** - L’utilisateur a décidé d’annuler le sélecteur MVPD standard ou le sélecteur MVPD Apple.
 
-   **Important :** Cette quatrième étape reviendrait au flux d’authentification standard, en déclenchant l’événement [displayProviderDialog](/help/authentication/iostvos-sdk-api-reference.md#dispProvDialog) callback et **one** de ce qui précède [codes d’erreur avancés](/help/authentication/error-reporting.md), au cas où **l’une des conditions ci-dessus est vraie.**. 
+   **Important :** Cette quatrième étape reviendrait au flux d’authentification standard, en déclenchant l’événement [displayProviderDialog](/help/authentication/iostvos-sdk-api-reference.md#dispProvDialog) callback et **one** de ce qui précède [codes d’erreur avancés](/help/authentication/error-reporting.md), au cas où **l’une des conditions ci-dessus est vraie.**.
 
-   **Important :** Cette quatrième étape reviendrait au flux d’authentification standard, en déclenchant l’événement [navigateToUrl](/help/authentication/iostvos-sdk-api-reference.md#nav2url) ou [navigateToUrl:useSVC](/help/authentication/iostvos-sdk-api-reference.md#nav2urlSVC) callback et **none** de ce qui précède [codes d’erreur avancés](/help/authentication/error-reporting.md), si l’utilisateur a sélectionné un fournisseur de télévision, qui ne prend pas en charge la fonction SSO d’Apple, mais qui est présent dans le sélecteur MVPD d’Apple.
+   **Important :** Cette quatrième étape reviendrait au flux d’authentification standard, en déclenchant l’événement [navigateToUrl](/help/authentication/iostvos-sdk-api-reference.md#nav2url) ou [navigateToUrl:useSVC](/help/authentication/iostvos-sdk-api-reference.md#nav2urlSVC) callback et **none** de ce qui précède [codes d’erreur avancés](/help/authentication/error-reporting.md), si l’utilisateur a sélectionné un fournisseur de télévision, qui ne prend pas en charge la fonction SSO d’Apple, mais qui est présent dans le sélecteur MVPD d’Apple.
 
-   **<u>Conseil Pro :</u>** Le SDK AccessEnabler iOS/tvOS appelle silencieusement le [setSelectedProvider](/help/authentication/iostvos-sdk-api-reference.md#setSelProv) API, au cas où l’utilisateur sélectionnerait un fournisseur de télévision, qui ne prend pas en charge la fonction SSO d’Apple, mais qui est présent dans le sélecteur MVPD d’Apple.
+   **<u>Conseil Pro :</u>** Le SDK AccessEnabler iOS/tvOS appelle silencieusement le [setSelectedProvider](/help/authentication/iostvos-sdk-api-reference.md#setSelProv) API, au cas où l’utilisateur sélectionnerait un fournisseur de télévision, qui ne prend pas en charge la connexion unique Apple, mais qui est présent dans le sélecteur MVPD Apple.
 
-   **Important :** Cette quatrième étape consiste à échanger silencieusement le profil SSO Apple contre un jeton d’authentification d’Adobe, au cas où **tous les éléments ci-dessus sont faux.** et **tous les éléments suivants sont vrais**:
+   **Important :** Cette quatrième étape consiste à échanger silencieusement le profil SSO Apple contre un jeton d’authentification d’Adobe, au cas où **tous les éléments ci-dessus sont faux.** et **tous les éléments suivants sont vrais**:
 
    - La permission du fournisseur de télévision de l’utilisateur est accordée pour la demande.
    - L’utilisateur est connecté/se connecte actuellement à son compte de fournisseur de télévision au niveau du système de l’appareil.
@@ -179,16 +178,15 @@ Afin de bénéficier de l’expérience utilisateur SSO d’Apple, une applicati
    - Le SDK AccessEnabler iOS/tvOS a reçu la réponse SAML du fournisseur de télévision de l’utilisateur de la structure du compte d’abonné vidéo.
 
 
- 
 
->**<u>Conseil Pro :</u>** Cette quatrième étape déclenche l’événement [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setAuthNStatus) rappel, indépendamment de *status* , car l’authentification a été explicitement lancée par l’application.
+>**<u>Conseil Pro :</u>** Cette quatrième étape déclenche la [*setAuthenticationStatus*](/help/authentication/iostvos-sdk-api-reference.md#setAuthNStatus) callback, indépendamment de *status* , car l’authentification a été explicitement lancée par l’application.
 
 
 </br>
 
 ### Métadonnées {#Metadata}
 
-L’application a la possibilité de déterminer si l’authentification s’est produite suite à une connexion via l’authentification unique (SSO) de la plateforme, ou non, en utilisant le *tokenSource&quot;* [métadonnées utilisateur](/help/authentication/iostvos-sdk-api-reference.md#getMeta) API du SDK AccessEnabler iOS/tvOS.
+L’application a la possibilité de déterminer si l’authentification s’est produite suite à une connexion via l’authentification unique (SSO) de la plateforme, ou non, en utilisant le *tokenSource&quot;* [métadonnées utilisateur](/help/authentication/iostvos-sdk-api-reference.md#getMeta) API du SDK AccessEnabler iOS/tvOS.
 
 ```swift
     ...
@@ -200,11 +198,11 @@ L’application a la possibilité de déterminer si l’authentification s’est
 
 ### Déconnexion {#Logout}
 
-Le [Compte d’abonné vidéo](https://developer.apple.com/documentation/videosubscriberaccount) La structure ne fournit pas d’API pour déconnecter par programmation les personnes qui se sont connectées à leur compte de fournisseur de télévision au niveau du système de l’appareil. Par conséquent, pour que la déconnexion soit effective, l’utilisateur final doit se déconnecter explicitement de *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS. L’autre option dont dispose l’utilisateur consiste à retirer l’autorisation d’accéder aux informations d’abonnement de l’utilisateur dans la section des paramètres de l’application spécifique (accès aux autorisations du fournisseur de télévision).
+La variable [Compte d’abonné vidéo](https://developer.apple.com/documentation/videosubscriberaccount) La structure ne fournit pas d’API pour déconnecter par programmation les personnes qui se sont connectées à leur compte de fournisseur de télévision au niveau du système de l’appareil. Par conséquent, pour que la déconnexion soit effective, l’utilisateur final doit se déconnecter explicitement de *`Settings -> TV Provider`* sur iOS/iPadOS ou *`Settings -> Accounts -> TV Provider`* sur tvOS. L’autre option dont dispose l’utilisateur consiste à retirer l’autorisation d’accéder aux informations d’abonnement de l’utilisateur dans la section des paramètres de l’application spécifique (accès aux autorisations du fournisseur de télévision).
 
 >[!TIP]
 >
-> **<u>Conseil :</u>** Mettez en oeuvre cette méthode à l’aide du SDK AccessEnabler iOS/tvOS [déconnexion](/help/authentication/iostvos-sdk-api-reference.md#logout) API.
+> **<u>Conseil :</u>** Mettez en oeuvre cette méthode à l’aide du SDK AccessEnabler iOS/tvOS [déconnexion](/help/authentication/iostvos-sdk-api-reference.md#logout) API.
 
 
 >[!TIP]
@@ -212,14 +210,14 @@ Le [Compte d’abonné vidéo](https://developer.apple.com/documentation/videos
 > **<u>Conseil Pro :</u>** Suivez les étapes ci-dessous pour la ou les mises en oeuvre tvOS.
 
 - La demande doit [lancer la déconnexion](/help/authentication/iostvos-sdk-api-reference.md#logout) à partir du SDK AccessEnabler iOS/tvOS. Cela ne faciliterait pas le nettoyage de session du côté MVPD.
-- L’application doit demander à l’utilisateur de se déconnecter explicitement de . *`Settings -> Accounts -> TV Provider`* sur tvOS uniquement au cas où [*VSA203* le code d’état est déclenché.](/help/authentication/error-reporting.md).
+- L’application doit demander à l’utilisateur de se déconnecter explicitement de . *`Settings -> Accounts -> TV Provider`* sur tvOS uniquement au cas où [*VSA203* code d’état déclenché](/help/authentication/error-reporting.md).
 
 >[!TIP]
 >
 > **<u>Conseil Pro :</u>** Suivez les étapes ci-dessous pour la ou les implémentations iOS/iPadOS.
 
 - La demande doit [lancer la déconnexion](/help/authentication/iostvos-sdk-api-reference.md#logout) à partir du SDK AccessEnabler iOS/tvOS. Cela faciliterait le nettoyage de session du côté MVPD.
-- L’application doit demander à l’utilisateur de se déconnecter explicitement de . *`Settings -> TV Provider`* sur iOS/iPadOS uniquement au cas où [*VSA203* le code d’état est déclenché.](/help/authentication/error-reporting.md).
+- L’application doit demander à l’utilisateur de se déconnecter explicitement de . *`Settings -> TV Provider`* sur iOS/iPadOS uniquement au cas où [*VSA203* code d’état déclenché](/help/authentication/error-reporting.md).
 
 
 <!--
@@ -230,5 +228,5 @@ Le [Compte d’abonné vidéo](https://developer.apple.com/documentation/videos
 - [AccessEnabler iOS/tvOS SDK Cookbook](/help/authentication/iostvos-sdk-cookbook.md)
 - [AccessEnabler iOS/tvOS SDK API Reference](/help/authentication/iostvos-sdk-api-reference.md)
 - [Error Reporting](/help/authentication/error-reporting.md)
-- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
+- [Apple Developer Documentation - Video Subscriber Account Framework](https://developer.apple.com/documentation/videosubscriberaccount)
 -->

@@ -1,13 +1,13 @@
 ---
 title: Flux d’API sans client en l’absence d’identifiant d’appareil
 description: Flux d’API sans client en l’absence d’identifiant d’appareil
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 6549a6d6-03a9-4d95-99fb-d3ada832323d
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
-
 
 # Flux d’API sans client en l’absence d’identifiant d’appareil {#clientless-api-flow-in-the-absence-of-device-id}
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Problème
 
-Toutes les applications d’appareils intelligents ne seront pas en mesure de fournir un identifiant d’appareil unique.  Comme deviceId est un paramètre obligatoire, le service renvoie une erreur 400 s’il n’est pas transmis.
+Toutes les applications d’appareils intelligents ne seront pas en mesure de fournir un identifiant d’appareil unique.  Comme deviceId est un paramètre obligatoire, le service renvoie une erreur 400 s’il n’est pas transmis.
 
 
 ## Solution temporaire/solution de contournement
@@ -33,7 +33,7 @@ Pour les clients sans ID d’appareil :
 1. Afficher le code d’enregistrement obtenu à l’étape 3 dans l’interface utilisateur de la console
 
 
-Une fois ces étapes effectuées, l’authentification Adobe Primetime utilise l’UUID comme identifiant de périphérique. Stockez cet identifiant d’appareil (UUID) dans le stockage local de l’appareil. Dans le cas où l’utilisateur génère un nouveau code d’enregistrement, vous devez exécuter à nouveau les étapes 1 à 4, puis remplacer l’UUID précédemment stocké par le nouvel ID de l’appareil.
+Une fois ces étapes effectuées, l’authentification Adobe Primetime utilise l’UUID comme identifiant de périphérique. Stockez cet identifiant d’appareil (UUID) dans le stockage local de l’appareil. Dans le cas où l’utilisateur génère un nouveau code d’enregistrement, vous devez exécuter à nouveau les étapes 1 à 4, puis remplacer l’UUID (ID de périphérique) précédemment stocké par le nouveau.
 
 
 

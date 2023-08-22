@@ -1,13 +1,13 @@
 ---
 title: Gestion de l’enregistrement du client dynamique
 description: Gestion de l’enregistrement du client dynamique
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
 
 ---
-
 
 # Gestion de l’enregistrement du client dynamique {#dynamic-client-registration-management}
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Présentation {#overview}
 
-Avec l&#39;adoption généralisée de [Onglets personnalisés Chrome Android](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} et [Contrôleur de vue Safari Apple](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} dans les applications de nos clients, nous mettons à jour le flux d’authentification de l’utilisateur dans l’authentification Adobe Primetime. Plus précisément, nous ne pouvons plus atteindre l’objectif de maintenance de l’état afin que le flux de l’agent utilisateur d’authentification d’un abonné MVPD puisse être suivi entre les redirections. Cela était auparavant effectué à l’aide de cookies HTTP. Cette limitation est le pilote pour commencer à migrer toutes les API vers OAuth 2.0. [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
+Avec l&#39;adoption généralisée de [Onglets personnalisés Chrome Android](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} et [Contrôleur de vue Safari Apple](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} dans les applications de nos clients, nous mettons à jour le flux d’authentification des utilisateurs dans l’authentification Adobe Primetime. Plus précisément, nous ne pouvons plus atteindre l’objectif de maintenance de l’état afin que le flux de l’agent utilisateur d’authentification d’un abonné MVPD puisse être suivi entre les redirections. Cela était auparavant effectué à l’aide de cookies HTTP. Cette limitation est le pilote pour commencer à migrer toutes les API vers OAuth 2.0. [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
 
 Grâce à cette mise à jour, les clients d’authentification Adobe deviennent des clients OAuth 2.0 et un serveur d’autorisation OAuth 2.0 personnalisé est déployé pour répondre aux besoins du service d’authentification Adobe Primetime.
 
@@ -33,7 +33,7 @@ L’instruction logicielle doit être déployée avec l’application sur l’ap
 
 Avant cette mise à jour, nous avions deux mécanismes permettant aux applications d’effectuer des appels vers l’authentification Adobe Primetime :
 
-* les clients basés sur un navigateur sont enregistrés via les [liste de domaines](/help/authentication/programmer-overview.md#reg-and-init)
+* les clients basés sur un navigateur sont enregistrés via les autorisations [liste de domaines](/help/authentication/programmer-overview.md#reg-and-init)
 * les clients d’applications natives, tels que les applications iOS et Android, sont enregistrés via **demandeur signé** mécanisme
 
 
@@ -63,13 +63,13 @@ Comme illustré ci-dessous, les champs que vous devez renseigner sont les suivan
 
 * **Nom de l’application** : nom de l’application.
 
-* **Attribué au canal** : nom de votre canal, t</span>à laquelle cette application est liée. Le paramètre par défaut du masque déroulant est **Tous les canaux.** L’interface vous permet de sélectionner un canal ou tous les canaux.
+* **Attribué au canal** : nom de votre canal, t</span>à laquelle cette application est liée. Le paramètre par défaut du masque déroulant est **Tous les canaux.** L’interface vous permet de sélectionner un canal ou tous les canaux.
 
-* **Version de l’application** - par défaut, cette valeur est définie sur &quot;1.0.0&quot;, mais nous vous encourageons vivement à la modifier avec votre propre version de l’application. Si vous décidez de modifier la version de votre application, il est recommandé de la refléter en créant une nouvelle application enregistrée.
+* **Version de l’application** - par défaut, cette valeur est définie sur &quot;1.0.0&quot;, mais nous vous encourageons vivement à la modifier avec votre propre version de l’application. Si vous décidez de modifier la version de votre application, il est recommandé de la refléter en créant une nouvelle application enregistrée.
 
-* **Plateformes d’applications** : plateformes avec lesquelles l’application doit être liée. Vous avez la possibilité de les sélectionner toutes ou plusieurs valeurs.
+* **Plateformes d’applications** : plateformes avec lesquelles l’application doit être liée. Vous avez la possibilité de les sélectionner toutes ou plusieurs valeurs.
 
-* **Noms de domaine** : domaines avec lesquels l’application doit être liée. Les domaines de la liste déroulante sont une sélection unifiée de tous les domaines de tous vos canaux. Vous avez la possibilité de sélectionner plusieurs domaines dans la liste. La signification des domaines est les URL de redirection. [RFC6749](https://tools.ietf.org/html/rfc6749). Dans le processus d’enregistrement du client, l’application cliente peut demander l’autorisation d’utiliser une URL de redirection pour finaliser le flux d’authentification. Lorsqu’une application cliente demande une URL de redirection spécifique, elle est validée par rapport aux domaines placés sur la liste autorisée dans cette application enregistrée associée à l’instruction logicielle.
+* **Noms de domaine** : domaines avec lesquels l’application doit être liée. Les domaines de la liste déroulante sont une sélection unifiée de tous les domaines de tous vos canaux. Vous avez la possibilité de sélectionner plusieurs domaines dans la liste. La signification des domaines est les URL de redirection. [RFC6749](https://tools.ietf.org/html/rfc6749). Dans le processus d’enregistrement du client, l’application cliente peut demander à être autorisée à utiliser une URL de redirection pour finaliser le flux d’authentification. Lorsqu’une application cliente demande une URL de redirection spécifique, elle est validée par rapport aux domaines placés sur la liste blanche de cette application enregistrée associée à l’instruction logicielle.
 
 
 ![](assets/new-reg-app.png)
@@ -94,7 +94,7 @@ Comme illustré ci-dessous, ce qui est légèrement différent ici , par rapport
 
 Après avoir créé l’application enregistrée, il est possible d’obtenir une instruction logicielle pour présenter le serveur d’autorisation dans le cadre d’une demande.
 
-Pour ce faire, accédez au programmeur ou au canal pour lequel les applications enregistrées ont été créées, où elles sont répertoriées. 
+Pour ce faire, accédez au programmeur ou au canal pour lequel les applications enregistrées ont été créées, où elles sont répertoriées.
 
 Comme illustré ci-dessous , chaque entrée de la liste est identifiée par un nom, une version et des symboles pour les plateformes auxquelles elle a été liée.
 
@@ -124,13 +124,13 @@ Le nom du fichier est identifié de manière unique en lui ajoutant un préfixe 
 
 Veuillez noter que, pour la même application enregistrée, différentes instructions logicielles seront reçues chaque fois que l’utilisateur cliquera sur le bouton de téléchargement, mais cela n’invalide pas les instructions logicielles précédemment obtenues pour cette application. Cela se produit car ils sont générés sur place, par requête d’action.
 
-Il y en a une. **limitation** concernant l’action de téléchargement. Si une instruction logicielle est requise en cliquant sur le bouton &quot;Télécharger&quot; peu après la création de l’application enregistrée et que celle-ci n’a pas encore été enregistrée et que le fichier json de configuration n’a pas été synchronisé , le message d’erreur suivant s’affiche au bas de la page. 
+Il y en a une. **limitation** concernant l’action de téléchargement. Si une instruction logicielle est requise en cliquant sur le bouton &quot;Télécharger&quot; peu après la création de l’application enregistrée et que celle-ci n’a pas encore été enregistrée et que le fichier json de configuration n’a pas été synchronisé , le message d’erreur suivant s’affiche au bas de la page.
 
 ![](assets/error-sw-statement-notready.png)
 
 Cette opération encapsule un code d’erreur HTTP 404 Not Found reçu du noyau, car l’identifiant de l’application enregistrée n’a pas encore été propagé et le noyau n’en a aucune connaissance.
 
-Après la création de l’application enregistrée, la solution consiste à attendre au plus 2 minutes que la configuration soit synchronisée. Ensuite, le message d’erreur ne sera plus reçu et le fichier texte contenant l’instruction logicielle sera disponible au téléchargement.
+Après la création de l’application enregistrée, la solution consiste à attendre au plus 2 minutes que la configuration soit synchronisée. Après cela, le message d’erreur ne sera plus reçu et le fichier texte contenant l’instruction logicielle sera disponible au téléchargement.
 
 Pour plus d’informations sur le fonctionnement du processus de bout en bout, ou pour mieux comprendre comment les requêtes sont exécutées et quelles réponses attendre, voir le lien dans les informations connexes ci-dessous, ainsi que d’autres liens utiles.
 

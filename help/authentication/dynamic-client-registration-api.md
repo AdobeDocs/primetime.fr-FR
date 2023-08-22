@@ -1,13 +1,13 @@
 ---
 title: API d’enregistrement de client dynamique
 description: API d’enregistrement de client dynamique
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
-
 
 # API d’enregistrement de client dynamique {#dynamic-client-registration-api}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Actuellement, l’authentification Primetime peut identifier et enregistrer des applications de deux manières :
 
-* les clients basés sur un navigateur sont enregistrés via les [liste de domaines](/help/authentication/programmer-overview.md)
+* les clients basés sur un navigateur sont enregistrés via les autorisations [liste de domaines](/help/authentication/programmer-overview.md)
 * les clients d’application natifs, tels que les applications iOS et Android, sont enregistrés par le biais du mécanisme de requête signé.
 
 L’authentification Adobe Primetime propose un nouveau mécanisme d’enregistrement des applications. Ce mécanisme est décrit dans les paragraphes suivants.
@@ -52,17 +52,17 @@ Après avoir récupéré une instruction logicielle du tableau de bord TVE, vous
 
 **Requête**
 
-| appel HTTP |  |
+| appel HTTP |                    |
 |-----------|--------------------|
 | path | /o/client/register |
 | method | POST |
 
-| fields |  |  |
+| fields |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | Instruction logicielle créée dans le tableau de bord TVE. | mandatory |
 | redirect_uri | URI utilisé par l’application pour terminer le flux d’authentification. | facultatif |
 
-| en-têtes de requête |  |  |
+| en-têtes de requête |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | mandatory |
 | X-Device-Info | Informations sur le périphérique telles que définies dans Transmission des informations de périphérique et de connexion | mandatory |
@@ -70,17 +70,17 @@ Après avoir récupéré une instruction logicielle du tableau de bord TVE, vous
 
 **Réponse**
 
-| en-têtes de réponse |  |  |
+| en-têtes de réponse |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | mandatory |
 
-| champs de réponse |  |  |
+| champs de réponse |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | Chaîne | mandatory |
 | client_secret | Chaîne | mandatory |
 | client_id_issue_at | long | mandatory |
 | redirect_uris | liste de chaînes | mandatory |
-| grant_types | liste de chaînes<br/> **valeur acceptée**<br/> `client_credentials`: Utilisé par les clients non sécurisés, tels que le SDK Android. | mandatory |
+| grant_types | liste de chaînes<br/> **valeur acceptée**<br/> `client_credentials`: utilisé par les clients non sécurisés, tels que le SDK Android. | mandatory |
 | error | **valeurs acceptées**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | obligatoire dans un flux d’erreurs |
 
 
@@ -160,26 +160,26 @@ Après avoir récupéré l’identifiant client unique (identifiant client et se
 **Requête**
 
 
-| **appel HTTP** |  |
+| **appel HTTP** | |
 | --- | --- |
 | path | `/o/client/token` |
 | method | POST |
 
-| **paramètres de requête** |  |
+| **paramètres de requête** | |
 | --- | --- |
-| `grant_type` | Reçu dans le processus d’enregistrement du client.<br/> **Valeur acceptée**<br/>`client_credentials`: Utilisé pour les clients non sécurisés, tels que le SDK Android. |
+| `grant_type` | Reçu dans le processus d’enregistrement du client.<br/> **Valeur acceptée**<br/>`client_credentials`: utilisé pour les clients non sécurisés, tels que le SDK Android. |
 | `client_id` | Identifiant du client obtenu dans le processus d’enregistrement du client. |
 | `client_secret` | Identifiant du client obtenu dans le processus d’enregistrement du client. |
 
 **Réponse**
 
-| champs de réponse |  |  |
+| champs de réponse | | |
 | --- | --- | --- |
 | `access_token` | La valeur du jeton d’accès que vous devez utiliser pour appeler les API Primetime | mandatory |
 | `expires_in` | Durée en secondes jusqu’à l’expiration de access_token | mandatory |
 | `token_type` | Type du jeton **porteur** | mandatory |
 | `created_at` | L’heure d’émission du jeton | mandatory |
-| **en-têtes de réponse** |  |  |
+| **en-têtes de réponse** | | |
 | `Content-Type` | application/json | mandatory |
 
 **Réponse d’erreur**
@@ -192,7 +192,7 @@ En cas d’erreur, le serveur d’autorisation répond avec un code d’état HT
 | HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | L’authentification du client a échoué car le client était inconnu. Le SDK DOIT à nouveau s’enregistrer auprès du serveur d’autorisation. |
 | HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | Le client authentifié n’est pas autorisé à utiliser ce type d’autorisation. |
 
-#### Exemple d’obtention d’un jeton d’accès : {#obt-access-token}
+#### Exemple d’obtention du jeton d’accès : {#obt-access-token}
 
 **Requête :**
 
@@ -236,11 +236,11 @@ Utilisation du jeton d’accès pour exécuter Adobe Primetime [Appels d’API d
 
 * en ajoutant un nouveau paramètre de requête à la requête. Ce nouveau paramètre s’appelle **access_token**.
 
-* en ajoutant un nouvel en-tête HTTP à la requête : Authorization: Porteur. Nous vous recommandons d’utiliser l’en-tête HTTP, car les chaînes de requête ont tendance à être visibles dans les journaux du serveur.
+* en ajoutant un nouvel en-tête HTTP à la requête : Authorization: Bearer. Nous vous recommandons d’utiliser l’en-tête HTTP, car les chaînes de requête ont tendance à être visibles dans les journaux du serveur.
 
 En cas d’erreur, les réponses d’erreur suivantes peuvent être renvoyées :
 
-| Réponses d’erreur |  |  |
+| Réponses d’erreur |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | La requête est incorrecte. |
 | invalid_client | 403 | L’ID client n’est plus autorisé à effectuer des requêtes. De nouvelles informations d’identification client doivent être générées. |

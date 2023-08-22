@@ -1,13 +1,13 @@
 ---
 title: Débogage du SDK AccessEnabler iOS/tvOS à l’aide des journaux d’application de la console
 description: Débogage du SDK AccessEnabler iOS/tvOS à l’aide des journaux d’application de la console
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0dad325e-db15-4ea0-a87a-75409eaf8d46
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%
 
 ---
-
 
 # Débogage du SDK AccessEnabler iOS/tvOS à l’aide des journaux d’application de la console {#debugging-the-accessenabler-iostvos-sdk-using-console-app-logs}
 
@@ -32,9 +32,9 @@ Le mécanisme de journalisation d’AccessEnabler iOS/tvOS a pour objectif d’�
 
 * La structure AccessEnabler introduit la possibilité de filtrer les journaux d’application de la console en fonction du sous-système : **com.adobe.pass.AccessEnabler**. Tous les messages émis par le SDK font partie de com.adobe.pass.AccessEnabler.
 
-* La structure AccessEnabler introduit la possibilité de filtrer les journaux d’application de la console en fonction de n’importe quel (préfixe) : **[AccessEnabler]**. Tous les messages émis par le SDK sont précédés du préfixe [AccessEnabler].
+* La structure AccessEnabler introduit la possibilité de filtrer les journaux d’application de la console en fonction de n’importe quel (préfixe) : **[AccessEnabler]**. Tous les messages émis par le SDK sont précédés du préfixe [AccessEnabler].
 
-* La structure AccessEnabler introduit la possibilité de filtrer les journaux d’application de la console en fonction de la catégorie : **debug**, **error** en association avec l’un des deux critères ci-dessus : Subsystem ou Any (préfixe).
+* La structure AccessEnabler introduit la possibilité de filtrer les journaux d’application de la console en fonction de la catégorie : **debug**, **error** en association avec l’un des deux critères ci-dessus : Subsystem ou Any (préfixe).
 
 ## Débogage à l’aide des journaux de l’application Console
 
@@ -43,32 +43,32 @@ En fonction des problèmes qui font l’objet d’une enquête, vous pouvez incl
 
 ### AccessEnabler iOS/tvOS 3.5.0 et versions ultérieures
 
-#### Inclusion {#including}
+#### Inclusion {#including}
 
 Tout d’abord, afin de pouvoir voir tous les messages de journalisation émis par la structure AccessEnabler que vous avez **must** sélectionnez les options &quot;Inclure les messages d’informations&quot; et &quot;Inclure les messages de débogage&quot; dans la section Action de l’application Console, comme présenté dans l’image ci-dessous.
 
 ![](assets/include-info-debug-msg.png)
 
 
-Pour pouvoir déboguer les fonctionnalités du SDK AccessEnabler iOS/tvOS et **see** Les journaux de la structure AccessEnabler vous permettent :
+Pour pouvoir déboguer les fonctionnalités du SDK AccessEnabler iOS/tvOS et **see** Les journaux de la structure AccessEnabler vous permettent d’effectuer les opérations suivantes :
 
 * Recherche dans l’application Console à l’aide de **Subsystem** qui Correspond à la valeur com.adobe.pass.AccessEnabler comme dans l’image ci-dessous.
 
 ![](assets/subsys-console-app.png)
 
 * Recherche dans l’application Console à l’aide de **Quelconque** qui contient la variable
-   [AccessEnabler] comme dans l’image ci-dessous.
+  [AccessEnabler] comme dans l’image ci-dessous.
 
 ![](assets/any-optn-console-app.png)
 
-Outre les deux critères ci-dessus, vous pouvez également utiliser la variable **Catégorie** en conjonction avec **Subsystem** ou **Any (préfixe)** pour rechercher explicitement **debug** ou **error** messages de niveau émis par le SDK AccessEnabler iOS/tvOS.
+Outre les deux critères ci-dessus, vous pouvez également utiliser la variable **Catégorie** en conjonction avec **Subsystem** ou **Any (préfixe)** pour rechercher explicitement **debug** ou **error** messages de niveau émis par le SDK AccessEnabler iOS/tvOS.
 
 #### Exclusion
 
-Afin de pouvoir mieux déboguer les fonctionnalités d’autres composants et **exclude** Les journaux de la structure AccessEnabler vous permettent :
+Afin de pouvoir mieux déboguer les fonctionnalités d’autres composants et **exclude** Les journaux de la structure AccessEnabler vous permettent d’effectuer les opérations suivantes :
 
 * Recherche dans l’application Console à l’aide de **Subsystem** qui n’est pas égale à la valeur com.adobe.pass.AccessEnabler .
-* Recherche dans l’application Console à l’aide de **Quelconque** qui ne contient pas l’option [AccessEnabler] .
+* Recherche dans l’application Console à l’aide de **Quelconque** qui ne contient pas l’option [AccessEnabler] .
 
 ## Signalement d’un problème
 
@@ -77,4 +77,4 @@ Lorsque vous signalez un problème à l’authentification Adobe Primetime, veui
 * veuillez essayer de fournir les étapes de reproduction.
 * essayez de fournir la ou les versions du système d’exploitation et le ou les modèles de périphérique sur lesquels le problème se produit.
 * essayez de fournir la version du SDK AccessEnabler iOS/tvOS qui rencontre le problème.
-* essayez de capturer et de joindre tous les messages de journalisation du SDK AccessEnabler iOS/tvOS à l’aide de l’une des deux options présentées dans la section [Inclusion](#including) .
+* essayez de capturer et de joindre tous les messages de journalisation du SDK AccessEnabler iOS/tvOS à l’aide de l’une des deux options présentées dans la section [Inclusion](#including) .

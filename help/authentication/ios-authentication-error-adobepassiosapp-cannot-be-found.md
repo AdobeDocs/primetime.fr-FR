@@ -1,13 +1,13 @@
 ---
 title: Erreur d’authentification iOS - Impossible de trouver adobepass.ios.app
 description: Erreur d’authentification iOS - Impossible de trouver adobepass.ios.app
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
-
 
 # Erreur d’authentification iOS - Impossible de trouver adobepass.ios.app {#ios-authentication-error-adobepass.ios.app-cannot-be-found}
 
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ## Problème {#issue}
 
-L’utilisateur traverse le flux d’authentification et, une fois qu’il a saisi ses informations d’identification avec son fournisseur, il est redirigé vers une page d’erreur, une page de recherche ou une autre page personnalisée l’informant que `adobepass.ios.app` Impossible de trouver/résoudre.
+L’utilisateur traverse le flux d’authentification et, une fois qu’il a saisi ses informations d’identification avec son fournisseur, il est redirigé vers une page d’erreur, une page de recherche ou une autre page personnalisée l’informant que `adobepass.ios.app` Impossible de trouver/résoudre.
 
 ## Explication {#explanation}
 
-Sur iOS, `adobepass.ios.app` est utilisé comme URL de redirection finale pour indiquer que le flux AuthN est terminé. À ce stade, l’application doit adresser une requête à AccessEnabler pour obtenir le jeton AuthN et finaliser le flux AuthN.
+Sur iOS, `adobepass.ios.app` est utilisé comme URL de redirection finale pour indiquer que le flux AuthN est terminé. À ce stade, l’application doit adresser une requête à AccessEnabler pour obtenir le jeton AuthN et finaliser le flux AuthN.
 
-Le problème est que `adobepass.ios.app` n’existe pas et déclenche un message d’erreur dans la variable `webView`. Les anciennes versions de DemoApp d’iOS supposaient que cette erreur serait toujours déclenchée à la fin du flux AuthN et étaient configurées pour la gérer en conséquence (`indidFailLoadWithError`).
+Le problème est que `adobepass.ios.app` n’existe pas et déclenche un message d’erreur dans la variable `webView`. Les anciennes versions de DemoApp d’iOS supposaient que cette erreur serait toujours déclenchée à la fin du flux AuthN et étaient configurées pour la gérer en conséquence (`indidFailLoadWithError`).
 
 **Remarque :** Ce problème a été corrigé dans les versions ultérieures de DemoApp (incluses avec le téléchargement du SDK iOS).
 
-Malheureusement, cette hypothèse n&#39;est PAS correcte. Il existe des serveurs DNS ou proxy &quot;intelligents&quot; qui ne se contentent pas de transmettre l’erreur générée, mais qui effectuent à la place l’une des opérations suivantes : 
+Malheureusement, cette hypothèse n&#39;est PAS correcte. Il existe des serveurs DNS ou proxy &quot;intelligents&quot; qui ne se contentent pas de transmettre l’erreur générée, mais qui effectuent à la place l’une des opérations suivantes :
 
 - Création d’une page d’erreur personnalisée
 - Transférez vers une page de recherche ou tout autre type de page client ou de portail.
@@ -36,7 +36,7 @@ Dans ces cas, la réponse qui revient au webView d’iOS sera une réponse parfa
 
 ## Solution {#solution}
 
-Ne prenez PAS la même hypothèse que celle de DemoApp. Au lieu de cela, interceptez la requête avant de l’exécuter (dans `shouldStartLoadWithRequest`) et gérez-le de manière appropriée.
+Ne prenez PAS la même hypothèse que celle de DemoApp. Au lieu de cela, interceptez la requête avant de l’exécuter (dans `shouldStartLoadWithRequest`) et gérez-le de manière appropriée.
 
 Exemple d’interception de la requête avant son exécution :
 
@@ -60,7 +60,6 @@ return YES;
 
 Quelques éléments à noter :
 
-- NE jamais utiliser `adobepass.ios.app` n’importe où directement dans le code. Utilisez plutôt la constante `ADOBEPASS_REDIRECT_URL`
-- Le `return NO;` empêche le chargement de la page.
-- Veillez à ce que la variable `getAuthenticationToken` est appelé une seule fois et une seule fois dans votre code. Plusieurs appels à `getAuthenticationToken` aura des résultats indéfinis.
-
+- NE JAMAIS utiliser `adobepass.ios.app` n’importe où directement dans le code. Utilisez plutôt la constante `ADOBEPASS_REDIRECT_URL`
+- La variable `return NO;` empêche le chargement de la page.
+- Veillez à ce que la variable `getAuthenticationToken` est appelé une seule fois et une seule fois dans votre code. Plusieurs appels à `getAuthenticationToken` aura des résultats indéfinis.

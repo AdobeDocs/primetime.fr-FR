@@ -1,13 +1,13 @@
 ---
 title: Lancer l’authentification
 description: Lancement de l’authentification
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
-
 
 # Lancer l’authentification {#initiate-authentication}
 
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Description {#description}
 
-Lance le processus d’authentification en informant un événement de sélection MVPD. Crée un enregistrement sur la base de données d’authentification Primetime, qui est réconcilié lorsqu’une réponse réussie est reçue du MVPD. 
+Lance le processus d’authentification en informant un événement de sélection MVPD. Crée un enregistrement sur la base de données d’authentification Primetime, qui est réconcilié lorsqu’une réponse réussie est reçue du MVPD.
 
 
 
-| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
+| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/authenticate | Module AuthN | 1. requestor_id (obligatoire)</br>2.  mso_id (obligatoire)</br>3.  reg_code (obligatoire)</br>4.  domain_name (obligatoire)</br>5.  noflash=true -  </br>    (obligatoire, paramètre résiduel)</br>6.  no_iframe=true (obligatoire, paramètre résiduel)</br>7.  Paramètres supplémentaires (facultatif)</br>8.  redirect_url (obligatoire) | GET | L’application web de connexion est redirigée vers la page de connexion MVPD. | 302 pour les mises en oeuvre de redirection complètes |
 
@@ -60,10 +60,9 @@ Lance le processus d’authentification en informant un événement de sélectio
 >**Important : Paramètres obligatoires -** Quel que soit l’implémentation côté client, tous les paramètres ci-dessus sont obligatoires.
 >
 >
->Exemple :    
+>Exemple :
 >
->
-```
+>```
 >domain_name=loginwebapp.com
 >mso_id=sampleMvpdId
 >reg_code=RO0885W
@@ -76,7 +75,7 @@ Lance le processus d’authentification en informant un événement de sélectio
 > 
 >**Important : Paramètres facultatifs**
 >
->L&#39;appel peut également contenir des paramètres facultatifs qui permettent d&#39;accéder à d&#39;autres fonctionnalités telles que :
+>L&#39;appel peut également contenir des paramètres facultatifs qui permettent d&#39;accéder à d&#39;autres fonctionnalités, telles que :
 >
 > * generic\_data : permet l’utilisation de [TempPass Promotionnel](/help/authentication/promotional-temp-pass.md)
 >
@@ -88,12 +87,10 @@ Lance le processus d’authentification en informant un événement de sélectio
 
 ### **Remarques** {#notes}
 
-* La valeur de la variable `domain_name` doit être défini sur l’un des noms de domaine enregistrés avec l’authentification Primetime. Pour plus d’informations, reportez-vous à la section [Enregistrement et initialisation](/help/authentication/programmer-overview.md).
+* La valeur de la variable `domain_name` doit être défini sur l’un des noms de domaine enregistrés avec l’authentification Primetime. Pour plus d’informations, voir [Enregistrement et initialisation](/help/authentication/programmer-overview.md).
 
 * [Évitez d’utiliser &#39;&amp;&#39;reg\_code dans /authenticate request (note technique)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* Le `redirect_url` doit être le dernier dans l’ordre.
+* La variable `redirect_url` doit être le dernier dans l’ordre.
 
-* La valeur de la variable `redirect_url` doit être codé en URL
-
-
+* La valeur de la variable `redirect_url` doit être codé en URL

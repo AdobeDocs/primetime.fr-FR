@@ -1,13 +1,13 @@
 ---
 title: Flux de droits du programmeur
 description: Flux de droits du programmeur
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
 
 ---
-
 
 # Flux de droits du programmeur {#prog-entitlement-flow}
 
@@ -22,9 +22,9 @@ Ce document décrit le flux de droits de base du point de vue du programmeur.  P
 L’authentification Adobe Primetime médiatique le flux de droits entre les programmeurs et les MVPD en fournissant des interfaces sécurisées et cohérentes pour les deux parties.  Du côté du programmeur, l’authentification Primetime fournit deux types généraux d’interface de droits :
 
 1. AccessEnabler : composant client qui fournit une bibliothèque d’API pour les applications sur les appareils qui peuvent effectuer le rendu des pages web (applications web, applications pour smartphone/tablette, par exemple).
-2. API sans client - services Web RESTful pour les appareils qui ne peuvent pas effectuer le rendu des pages web (par exemple, décodeurs, consoles de jeux, téléviseurs intelligents). L’exigence de rendu des pages web provient de l’exigence du MVPD selon laquelle les utilisateurs doivent s’authentifier sur le site web du MVPD.
+2. API sans client - services Web RESTful pour les appareils qui ne peuvent pas effectuer le rendu des pages web (par exemple, décodeurs, consoles de jeux, télévisions dynamiques). L’exigence de rendu des pages web provient de l’exigence du MVPD selon laquelle les utilisateurs doivent s’authentifier sur le site web du MVPD.
 
-Outre la présentation neutre sur le plan de la plateforme présentée ici, vous trouverez une présentation spécifique à l’API sans client ici : Documentation de l’API sans client. AccessEnabler s’exécute en mode natif sur les plateformes prises en charge (AS/JS sur le Web, Objective-C sur iOS et Java sur Android). Les API AccessEnabler sont cohérentes entre les plateformes prises en charge. Toutes les plateformes qui ne prennent pas en charge AccessEnabler utilisent la même API sans client.
+Outre la présentation sans plateforme présentée ici, vous trouverez une présentation spécifique à l’API sans client ici : Documentation sur l’API sans client. AccessEnabler s’exécute en mode natif sur les plateformes prises en charge (AS/JS sur le Web, Objective-C sur iOS et Java sur Android). Les API AccessEnabler sont cohérentes entre les plateformes prises en charge. Toutes les plateformes qui ne prennent pas en charge AccessEnabler utilisent la même API sans client.
 
 Pour les deux types d’interface, l’authentification Primetime permet de arbitrer de manière sécurisée le flux de droits entre l’application du programmeur et le MVPD de l’utilisateur :
 
@@ -56,17 +56,17 @@ Lors de la première visite d’un utilisateur sur le site d’un programmeur, l
 
 * **`setRequestor()`** - Établit votre identification avec AccessEnalber, et par extension, les serveurs d’authentification Adobe Primetime. Cet appel est un précurseur du reste du flux de droits. Par exemple, dans JavaScript :
 
-   ```JavaScript
-     /* Define the requestor ID (Programmer/aggregator ID). */
-       var requestorID = "sample_requestor_Id";
-       ...
-       // Callback indicating that the AccessEnabler swf has initialized
-       function swfLoaded() {
-           // AccessEnabler is loaded so we can use the API function it provides
-           accessEnablerObject.setRequestor(requestorID); 
-       ...
-       }
-   ```
+  ```JavaScript
+    /* Define the requestor ID (Programmer/aggregator ID). */
+      var requestorID = "sample_requestor_Id";
+      ...
+      // Callback indicating that the AccessEnabler swf has initialized
+      function swfLoaded() {
+          // AccessEnabler is loaded so we can use the API function it provides
+          accessEnablerObject.setRequestor(requestorID); 
+      ...
+      }
+  ```
 
 **API sans client**
 
@@ -94,7 +94,7 @@ Un jeton AuthN est considéré comme valide si les deux points suivants sont vra
 
 #### Processus d’authentification initiale d’AccessEnabler générique {#generic-ae-initial-authn-flow}
 
-1. Votre application lance le processus d’authentification avec un appel à `getAuthentication()`, qui recherche un jeton d’authentification mis en cache valide. Cette méthode est facultative. `redirectURL` paramètre ; si vous n’indiquez pas de valeur pour `redirectURL`, après une authentification réussie, l’utilisateur est renvoyé à l’URL à partir de laquelle l’authentification a été initialisée.
+1. Votre application lance le processus d’authentification avec un appel à `getAuthentication()`, qui recherche un jeton d’authentification mis en cache valide. Cette méthode est facultative. `redirectURL` si vous ne fournissez pas de valeur pour `redirectURL`, après une authentification réussie, l’utilisateur est renvoyé à l’URL à partir de laquelle l’authentification a été initialisée.
 1. AccessEnabler détermine l’état d’authentification actuel. Si l’utilisateur est actuellement authentifié, AccessEnabler appelle votre `setAuthenticationStatus()` fonction de rappel, transmission d’un état d’authentification indiquant la réussite.
 1. Si l’utilisateur n’est pas authentifié, AccessEnabler poursuit le flux d’authentification en déterminant si la dernière tentative d’authentification de l’utilisateur a réussi avec un MVPD donné. Si un ID MVPD est mis en cache ET que la variable `canAuthenticate` L’indicateur est défini sur true OU un MVPD a été sélectionné à l’aide de `setSelectedProvider()`, l’utilisateur n’est pas invité à saisir la boîte de dialogue de sélection MVPD. Le flux d’authentification continue à utiliser la valeur mise en cache du MVPD (c’est-à-dire le même MVPD qui a été utilisé lors de la dernière authentification réussie). Un appel réseau est effectué au serveur principal et l’utilisateur est redirigé vers la page de connexion MVPD.
 
@@ -110,6 +110,7 @@ Un jeton AuthN est considéré comme valide si les deux points suivants sont vra
 
 >[!IMPORTANT]
 >Comcast est le seul MVPD pour le moment qui ne fournit pas d’URL statique pour le logo. Les programmeurs doivent extraire les derniers logos à jour à partir de [Portail des développeurs XFINITY](https://developers.xfinity.com/products/tv-everywhere).
+>
 
 ### Flux d’autorisation {#authorization}
 
@@ -121,7 +122,7 @@ Votre application lance une autorisation lorsqu’un utilisateur demande l’acc
 
 * `checkAuthorization()` - Vérifie l’autorisation sans initialiser le flux d’autorisation complet. Il est souvent utilisé pour mettre à jour les informations d’état affichées dans l’interface utilisateur de l’application de programmation.
 
-* `getAuthorization()` : lance le flux d’autorisation complet.
+* `getAuthorization()` - Lance le flux d’autorisation complet.
 
 Vous fournissez les fonctions de rappel suivantes pour gérer les résultats de l’appel d’autorisation :
 
@@ -131,7 +132,7 @@ Vous fournissez les fonctions de rappel suivantes pour gérer les résultats de 
 
 **API sans client**
 
-* `\<FQDN\>/.../authorize` : lance le flux d’autorisation complet.
+* `\<FQDN\>/.../authorize` - Lance le flux d’autorisation complet.
 
 #### Workflow d’autorisation d’AccessEnabler générique {#generic-ae-authr-wf}
 
@@ -158,7 +159,7 @@ Efface les jetons et autres données associés au flux de droits de l’utilisat
 
 ## Comprendre le comportement d’AccessEnabler {#ae-behavior}
 
-Tous les appels de l’API AccessEnabler sont asynchrones (à une exception près, indiqués dans les références de l’API). Vous pouvez appeler une API un nombre arbitraire de fois, mais il n’y a aucune garantie que les actions déclenchées par les appels seront terminées dans le même ordre que celui où les appels ont été effectués. (Une exception à cette règle est l’exécution du Flash Player en cours ; n’étant pas multi-thread, il assure les appels *do* terminez dans l’ordre dans lequel ils sont appelés.)
+Tous les appels de l’API AccessEnabler sont asynchrones (à une exception près, indiqués dans les références de l’API). Vous pouvez appeler une API un nombre arbitraire de fois, mais il n’y a aucune garantie que les actions déclenchées par les appels seront terminées dans le même ordre que celui où les appels ont été effectués. (Une exception à cette règle est l’exécution du Flash Player en cours ; si vous n’êtes pas multi-thread, les appels seront assurés. *do* terminez dans l’ordre dans lequel ils sont appelés.)
 
 Afin de faire la distinction entre les réponses et de pouvoir associer des réponses à des appels, tous les rappels reviennent sur leurs paramètres d’entrée. Cela inclut `setToken()` et`tokenRequestFailed()`, qui sont déclenchées ultimement par `checkAuthorization()`. (Pour `checkAuthorization()` callbacks, la ressource utilisée est renvoyée.) En tirant parti de cette fonctionnalité, vous pouvez distinguer la réponse qui correspond à l’appel . Pour utiliser cette fonctionnalité, vous pouvez coder quelque chose comme ceci :
 

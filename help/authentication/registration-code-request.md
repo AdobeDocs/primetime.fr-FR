@@ -1,13 +1,13 @@
 ---
 title: Page d’enregistrement
 description: Page d’enregistrement
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # Page d’enregistrement {#registration-page}
 
@@ -19,23 +19,23 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## Description {#create-reg-code-svc}
 
 Renvoie le code d’enregistrement généré de manière aléatoire et l’URI de page de connexion.
 
-| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètre | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
+| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètre | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Par exemple :</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Application de diffusion en continu</br>ou</br>Service de programmation | 1. demandeur  </br>    (composant Chemin)</br>2.  deviceId (Hashed)   </br>    (obligatoire)</br>3.  device_info/X-Device-Info (obligatoire)</br>4.  mvpd (facultatif)</br>5.  ttl (facultatif)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsolète)</br>8.  _appId_ (Obsolète) | POST | XML ou JSON contenant un code d’enregistrement et des informations ou des détails d’erreur en cas d’échec. Voir schémas et exemples ci-dessous. | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Par exemple :</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Application de diffusion en continu</br>ou</br>Service de programmation | 1. demandeur  </br>    (composant Chemin)</br>2.  deviceId (Hashed)   </br>    (obligatoire)</br>3.  device_info/X-Device-Info (obligatoire)</br>4.  mvpd (facultatif)</br>5.  ttl (facultatif)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Obsolète)</br>8.  _appId_ (Obsolète) | POST | XML ou JSON contenant un code d’enregistrement et des informations ou des détails d’erreur en cas d’échec. Voir schémas et exemples ci-dessous. | 201 |
 
 {style="table-layout:auto"}
 
@@ -43,12 +43,12 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
 | --- | --- |
 | demandeur | Identifiant du demandeur du programmeur pour lequel cette opération est valide. |
 | deviceId | Octets d’identifiant de l’appareil. |
-| device_info/</br>X-Device-Info | Informations sur les périphériques de diffusion en continu.</br>**Remarque**: Cela peut être transmis device_info comme paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, il doit être transmis sous la forme X-Device-Info dans l’en-tête http. </br>Consultez les détails complets de la section [Transmission des informations de périphérique et de connexion](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| device_info/</br>X-Device-Info | Informations sur les périphériques de diffusion en continu.</br>**Remarque**: cette variable peut être transmise à device_info en tant que paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, elle doit être transmise sous la forme X-Device-Info dans l’en-tête http. </br>Consultez les détails complets de la section [Transmission des informations de périphérique et de connexion](/help/authentication/passing-client-information-device-connection-and-application.md). |
 | mvpd | Identifiant MVPD pour lequel cette opération est valide. |
-| ttl | Durée de vie de ce regcode en secondes.</br>**Remarque**: La valeur maximale autorisée pour ttl est de 36 000 secondes (10 heures). Des valeurs plus élevées entraînent une réponse HTTP 400 (mauvaise requête). If `ttl` est vide, l’authentification Primetime définit une valeur par défaut de 30 minutes. |
-| _deviceType_ | Type d’appareil (par exemple, Roku, PC).</br>Si ce paramètre est correctement défini, ESM propose des mesures qui sont [ventilation par type d’appareil](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) lors de l’utilisation de Clientless, de sorte que différents types d’analyses puissent être effectués, par exemple, Roku, Apple TV et Xbox.</br>Voir [Avantages de l’utilisation d’un paramètre de type d’appareil sans client dans les mesures de transmission ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Remarque**: device_info remplace ce paramètre. |
+| ttl | Durée de vie de ce regcode en secondes.</br>**Remarque**: la valeur maximale autorisée pour tl est de 3 600 secondes (10 heures). Des valeurs plus élevées entraînent une réponse HTTP 400 (mauvaise requête). If `ttl` est vide, l’authentification Primetime définit une valeur par défaut de 30 minutes. |
+| _deviceType_ | Type d’appareil (par exemple, Roku, PC).</br>Si ce paramètre est correctement défini, ESM propose des mesures qui sont [ventilation par type d’appareil](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) lors de l’utilisation de Clientless, de sorte que différents types d’analyses puissent être effectués, par exemple, Roku, Apple TV et Xbox.</br>Voir [Avantages de l’utilisation d’un paramètre de type d’appareil sans client dans les mesures de transmission ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Remarque**: device_info remplace ce paramètre. |
 | _deviceUser_ | Identifiant de l’utilisateur de l’appareil. |
-| _appId_ | ID/nom de l’application. </br>**Remarque**: device_info remplace ce paramètre. |
+| _appId_ | ID/nom de l’application. </br>**Remarque**: device_info remplace ce paramètre. |
 
 {style="table-layout:auto"}
 
@@ -57,11 +57,10 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
 >
 >**Adresse IP du périphérique de diffusion**
 ></br>
->Pour les mises en oeuvre client-serveur, l’adresse IP du périphérique en flux continu est implicitement envoyée avec cet appel.  Pour les implémentations serveur à serveur, où la variable **regcode** L’appel est effectué à partir du service de programmation et non du périphérique de diffusion en continu. L’en-tête suivant est nécessaire pour transmettre l’adresse IP du périphérique de diffusion en continu :
+>Pour les mises en oeuvre client-serveur, l’adresse IP du périphérique en flux continu est implicitement envoyée avec cet appel.  Pour les implémentations serveur à serveur, où la variable **regcode** L’appel est effectué à partir du service de programmation et non du périphérique de diffusion en continu. L’en-tête suivant est nécessaire pour transmettre l’adresse IP du périphérique de diffusion en continu :
 >
 >
->
-```
+>```
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
@@ -69,10 +68,10 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
 ></br></br>
 >Exemple :</br>
 >
->
-```
+>```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1</br>X-Forwarded-For:203.45.101.20
 >```
+>
 </br>
 
 ### Schéma XML de réponse {#xml-schema}
@@ -112,7 +111,7 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
     </xs:schema>
 ```
 
- </br>
+</br>
 
 | Nom de l’élément | Description |
 | --------------- | ------------------------------------------------------------------------------------ |
@@ -124,15 +123,15 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
 | expires | Horodatage de l’expiration du code d’enregistrement (en millisecondes depuis le 1er janvier 1970 GMT) |
 | deviceId | ID d’appareil unique (ou jeton XSTS) |
 | deviceType | Type de périphérique |
-| deviceUser | L’utilisateur connecté à l’appareil |
+| deviceUser | Utilisateur connecté à l’appareil |
 | appId | ID de l’application |
 | appVersion | Version de l’application |
 | registrationURL | URL de l’application Web de connexion à afficher à l’utilisateur final |
 
 {style="table-layout:auto"}
- </br>
+</br>
 
- 
+
 
 ### Message d’erreur XSD  {#error-message}
 
@@ -153,7 +152,7 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
         </xs:element>
     </xs:schema>
 ```
- 
+
 
 ### Exemple de réponse {#sample-response}
 
@@ -178,7 +177,7 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
         </info>
     </ns2:regcode>
 ```
- 
+
 **JSON :**
 
 ```JSON
@@ -199,4 +198,3 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
         }
     }
 ```
-

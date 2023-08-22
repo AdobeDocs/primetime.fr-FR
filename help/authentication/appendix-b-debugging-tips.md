@@ -2,7 +2,7 @@
 title: Annexe B "Conseils de débogage"
 description: Annexe B "Conseils de débogage"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -21,20 +21,20 @@ ht-degree: 0%
 L’authentification Adobe Primetime stocke des données temporaires telles que le cache du navigateur, le cache des LSO et les cookies. L’effacement des données temporaires est important, afin de vous assurer que vous obtenez une page nette lors du test.
 
 - [Effacement du cache du navigateur et des cookies](#clearing-the-browser-cache-and-cookies)
-- [Effacement du cache des LSOs](#clearing-lsos-cache)\
-   
+- [Effacement du cache des LSOs](#clearing-lsos-cache)
+
 
 ## Effacement du cache du navigateur et des cookies {#clearing-the-browser-cache-and-cookies}
 
-Il est fiable pour le navigateur, mais dans Firefox : &quot;Outils&quot; -\> &quot;Effacer l’historique récent...&quot; -\> Sur &quot;Période à effacer&quot; : sélectionnez &quot;Tout&quot; ; et sur &quot;Détails&quot; : cochez les cases &quot;Cookies&quot; et &quot;Cache&quot; -\> cliquez sur &quot;Effacer maintenant&quot;.\
- 
+Il est fiable pour le navigateur, mais dans Firefox : &quot;Outils&quot; -\> &quot;Effacer l’historique récent...&quot; -\> Dans &quot;Période à effacer&quot; : sélectionnez &quot;Tout&quot; ; et dans &quot;Détails&quot; : cochez les &quot;Cookies&quot; et &quot;Cache&quot; -\> Cliquez sur &quot;Effacer maintenant&quot;.
+
 
 ## Effacement du cache des LSOs {#clearing-lsos-cache}
 
-Accédez au [Aide sur les Flashs Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
+Accédez au [Aide de Flash Player](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
 
-Sélectionnez la ```entitlement.\*``` (en fonction des tests) et cliquez sur &quot;Supprimer le site web&quot;.\
- 
+Sélectionnez la variable ```entitlement.\*``` (en fonction des tests) et cliquez sur &quot;Supprimer le site web&quot;.
+
 
 ## Outils de débogage {#tools}
 

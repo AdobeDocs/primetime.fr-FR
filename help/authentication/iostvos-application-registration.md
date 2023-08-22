@@ -1,15 +1,15 @@
 ---
 title: Enregistrement de l’application iOS/tvOS
 description: Enregistrement de l’application iOS/tvOS
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
 
 ---
 
-
-# Enregistrement de l’application iOS/tvOS {#iostvos-application-registration}
+# Enregistrement de l’application iOS/tvOS {#iostvos-application-registration}
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Pour plus d’informations, voir [Enregistrement du client dynamique](/help/auth
 
 Une instruction logicielle est un jeton JWT qui contient des informations sur votre application. Chaque application doit avoir une instruction logicielle unique utilisée par nos serveurs pour identifier l’application dans le système d’Adobe. L’instruction logicielle doit être transmise lorsque vous initialisez le SDK AccessEnabler et elle sera utilisée pour enregistrer l’application avec Adobe. Lors de l’enregistrement, le SDK reçoit un identifiant client et un secret client qui seront utilisés pour obtenir un jeton d’accès. Tout appel du SDK à nos serveurs nécessite un jeton d’accès valide. Le SDK est chargé d’enregistrer l’application, d’obtenir et d’actualiser le jeton d’accès.
 
-**Remarque :** Une instruction logicielle est spécifique à l’application et la même instruction logicielle ne peut pas être utilisée sur plusieurs applications. Veuillez noter que les instructions logicielles au niveau du programmeur suivent également la même chose, c’est-à-dire qu’elles ne peuvent être utilisées que pour une seule application, qu’il s’agisse d’un seul canal ou d’un multicanal. Cette limitation s’applique également au schéma personnalisé.
+**Remarque :** Une instruction logicielle est spécifique à l’application et la même instruction logicielle ne peut pas être utilisée sur plusieurs applications. Notez que les instructions logicielles au niveau du programmeur suivent également la même chose, c’est-à-dire qu’elles ne peuvent être utilisées que pour une seule application, qu’il s’agisse d’un seul canal ou d’un multicanal. Cette limitation s’applique également au schéma personnalisé.
 
 ## Comment obtenir un relevé logiciel ? {#obtain}
 
@@ -46,7 +46,7 @@ Pour plus d’informations, voir [Gestion dynamique de l&#39;enregistrement des 
 
 Envoyer un ticket à <tve-support@adobe.com>. Veuillez inclure toutes les informations nécessaires, telles que le canal, le nom de l’application, la version et les plateformes, et quelqu’un de notre équipe d’assistance créera une déclaration logicielle pour vous.
 
-## Comment utiliser le relevé logiciel ? {#use}
+## Comment utiliser l’instruction logicielle ? {#use}
 
 Après avoir obtenu votre instruction logicielle, vous devez la transmettre en tant que paramètre dans le constructeur Access Enabler. Nous vous recommandons d’héberger l’instruction logicielle sur un emplacement distant. Ainsi, vous pouvez facilement révoquer et modifier l’instruction logicielle sans publier une nouvelle version de votre application.
 

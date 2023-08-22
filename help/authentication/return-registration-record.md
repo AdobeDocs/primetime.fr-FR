@@ -1,13 +1,13 @@
 ---
 title: Enregistrement des retours
 description: Enregistrement des retours
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
-
 
 # Enregistrement des retours {#return-registration-record}
 
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Description {#description}
 
-Renvoie l’enregistrement du code d’enregistrement contenant le code d’enregistrement UUID, le code d’enregistrement et l’identifiant d’appareil haché. 
+Renvoie l’enregistrement du code d’enregistrement contenant le code d’enregistrement UUID, le code d’enregistrement et l’identifiant d’appareil haché.
 
- 
+
 
 <div>
 
 
-| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
+| Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Par exemple :</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Application de diffusion en continu</br></br>ou</br></br>Service de programmation | 1. demandeur  </br>    (composant Chemin)</br>2.  code d&#39;enregistrement  </br>    (composant Chemin) | GET | XML ou JSON contenant un code d’enregistrement et des informations. Voir schéma et exemple ci-dessous. | 200 |
 
@@ -101,7 +101,7 @@ Renvoie l’enregistrement du code d’enregistrement contenant le code d’enre
 | expires | Horodatage de l’expiration du code d’enregistrement (en millisecondes depuis le 1er janvier 1970 GMT) |
 | deviceId | ID d’appareil unique (ou jeton XSTS) |
 | deviceType | Type de périphérique |
-| deviceUser | L’utilisateur connecté à l’appareil |
+| deviceUser | Utilisateur connecté à l’appareil |
 | appId | ID de l’application |
 | appVersion | Version de l’application |
 | registrationURL | URL de l’application Web de connexion à afficher à l’utilisateur final |

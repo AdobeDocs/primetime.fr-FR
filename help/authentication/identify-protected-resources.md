@@ -1,13 +1,13 @@
 ---
 title: Identification des ressources protégées
 description: Identification des ressources protégées
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
-
 
 # Identification des ressources protégées {#identifying-protected-resources}
 
@@ -23,15 +23,14 @@ Chaque demande d’autorisation (ou demande d’autorisation) doit contenir un i
    - Canal
       - Afficher
          - Épisode
-            - Ressource\
-                
+            - Ressource
 
 </br>
 
 ## Format RSS du média {#media_rss}
 
-Les ressources peuvent être identifiées par une chaîne simple (un identifiant unique d’un canal) ou peuvent être représentées au format Media RSS (MRSS), comme convenu entre Adobe (ou un partenaire autorisé pour l’authentification Adobe Primetime) et les MVPD et programmeurs participants. La chaîne RSS utilisée comme spécificateur de ressource peut inclure des informations supplémentaires, telles que des évaluations et des métadonnées de contrôle parental.\
- 
+Les ressources peuvent être identifiées par une chaîne simple (un identifiant unique d’un canal) ou peuvent être représentées au format Media RSS (MRSS), comme convenu entre Adobe (ou un partenaire autorisé pour l’authentification Adobe Primetime) et les MVPD et programmeurs participants. La chaîne RSS utilisée comme spécificateur de ressource peut inclure des informations supplémentaires, telles que des évaluations et des métadonnées de contrôle parental.
+
 
 Si vous utilisez un identifiant de ressource simple, tel que &quot;TNT&quot;, il est supposé représenter un canal et est traduit dans ce spécificateur de ressource RSS :
 
@@ -42,7 +41,7 @@ Si vous utilisez un identifiant de ressource simple, tel que &quot;TNT&quot;, il
         </channel>
     </rss>
 ```
- 
+
 
 Un spécificateur plus complexe peut inclure, par exemple, des informations d’évaluation supplémentaires. Vous pouvez transmettre la chaîne RSS entière aux fonctions d’activation d’accès nécessitant un identifiant de ressource, telles que [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 

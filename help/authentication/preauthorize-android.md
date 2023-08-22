@@ -1,16 +1,15 @@
 ---
 title: Préautoriser Android
 description: Préautoriser Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
-# Préautoriser {#preuthorize-android}
+# Préautoriser {#preuthorize-android}
 
 >[!NOTE]
 >
@@ -23,27 +22,26 @@ La méthode API de préautorisation doit être utilisée par les applications af
 
 
 
-En cas d’erreur inattendue (par exemple, problème réseau, point d’entrée d’autorisation MVPD indisponible, etc.) Dans le cadre du résultat de la réponse de l’API de préautorisation, une ou plusieurs informations d’erreur séparées seront incluses lorsqu’une demande de préautorisation d’API est traitée par les services d’authentification d’Adobe Primetime.
+En cas d’erreur inattendue (par exemple, problème réseau, point d’entrée d’autorisation MVPD indisponible, etc.) Lorsqu’une demande d’API de préautorisation est traitée par les services d’authentification Adobe Primetime, une ou plusieurs informations d’erreur séparées seront incluses pour la ou les ressources concernées dans le résultat de la réponse de l’API de préautorisation.
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Description :** 
+**Description :**
 
 **Disponibilité :** v3.6.0+
 
 **Paramètres :**
 
-- *PreauthorizedRequest*: Objet du créateur utilisé pour définir la requête
+- *PreauthorizedRequest*: objet de créateur utilisé pour définir la requête.
 - AccessEnablerCallback : rappel utilisé pour renvoyer la réponse de l’API
-- PreauthorizedResponse : Objet utilisé pour renvoyer le contenu de réponse de l’API
+- PreauthorizedResponse : objet utilisé pour renvoyer le contenu de réponse de l’API.
 
 
 ### public class PreauthorizedRequest {#androidpreauthorizerequest}
 
-**class PreauthorizedRequest.Builder**\
- 
+**class PreauthorizedRequest.Builder**
 
 ```java
     ///
@@ -130,18 +128,18 @@ features)**
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### class PreauthorizedResponse {#preauthorizeresponse}
 
@@ -151,16 +149,16 @@ features)**
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -173,7 +171,7 @@ features)**
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -237,9 +235,9 @@ features)**
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -247,9 +245,9 @@ features)**
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -258,14 +256,14 @@ features)**
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-Exemple : 
+Exemple :
 
 
 ```java
@@ -289,4 +287,3 @@ Exemple : 
         }
     });
 ```
-

@@ -1,13 +1,13 @@
 ---
 title: Guide de migration d’iOS/tvOS v3.x
 description: Guide de migration d’iOS/tvOS v3.x
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
 
 ---
-
 
 # Guide de migration d’iOS/tvOS v3.x {#iostvos-v3x-migration-guide}
 
@@ -21,7 +21,6 @@ ht-degree: 0%
 >
 > - À partir de la version 3.1 du sdk iOS, les implémentateurs peuvent désormais utiliser WKWebView ou UIWebView de manière interchangeable. Etant donné que UIWebView est obsolète, les applications doivent migrer vers WKWebView, afin d’éviter tout problème lié aux futures versions d’iOS.
 > - Notez que la migration impliquerait simplement de changer la classe UIWebView avec WKWebView. Il n’y a aucun travail spécifique à faire concernant AccessEnabler de l’Adobe.
-
 
 </br>
 
@@ -43,7 +42,7 @@ Une fois que vous disposez de l’instruction logicielle, nous vous recommandons
     accessEnabler = AccessEnabler("YOUR_SOFTWARE_STATEMENT_HERE");
 ```
 
-> Informations sur l’API ici : [Référence de l’API iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md)
+> Informations sur l’API : [Référence de l’API iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md)
 
 </br>
 
@@ -69,9 +68,9 @@ Après avoir obtenu le modèle d’URL personnalisé, vous devez l’ajouter au 
 
 ## Interception d’appels sur le modèle d’URL personnalisé {#intercept}
 
-Cela ne s’applique que si votre application a auparavant activé la gestion manuelle du contrôleur de vue Safari (SVC) via l’ [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) appelez et pour des MVPD spécifiques nécessitant un contrôleur de vue Safari (SVC), ce qui nécessite de charger les URL des points de terminaison d’authentification et de déconnexion par un contrôleur SFSafariViewController au lieu d’un contrôleur UIWebView/WKWebView .
+Cela ne s’applique que si votre application a auparavant activé la gestion manuelle du contrôleur de vue Safari (SVC) via l’ [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) appelez et pour des MVPD spécifiques nécessitant un contrôleur de vue Safari (SVC), ce qui nécessite de charger les URL des points de terminaison d’authentification et de déconnexion par un contrôleur SFSafariViewController au lieu d’un contrôleur UIWebView/WKWebView .
 
-Lors des flux d’authentification et de déconnexion, votre application doit surveiller l’activité de la variable `SFSafariViewController `contrôleur lors de plusieurs redirections. Votre application doit détecter le moment où elle charge une URL personnalisée spécifique définie par votre `application's custom URL scheme` (par exemple,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Lorsque le contrôleur charge cette URL personnalisée spécifique, votre application doit fermer la variable `SFSafariViewController` et appelez AccessEnabler&#39;s `handleExternalURL:url `méthode API.
+Lors des flux d’authentification et de déconnexion, votre application doit surveiller l’activité de la variable `SFSafariViewController `contrôleur lors de plusieurs redirections. Votre application doit détecter le moment où elle charge une URL personnalisée spécifique définie par votre `application's custom URL scheme` (par exemple,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Lorsque le contrôleur charge cette URL personnalisée spécifique, votre application doit fermer la variable `SFSafariViewController` et appelez AccessEnabler&#39;s `handleExternalURL:url `méthode API.
 
 Dans votre `AppDelegate` ajoutez la méthode suivante :
 
@@ -84,13 +83,13 @@ Dans votre `AppDelegate` ajoutez la méthode suivante :
         }
 ```
 
-> Informations sur l’API ici : [Gérer l’URL externe](/help/authentication/iostvos-sdk-api-reference.md)
+> Informations sur l’API : [Gérer l’URL externe](/help/authentication/iostvos-sdk-api-reference.md)
 
 </br>
 
 ## Mettre à jour la signature de la méthode setRequestor {#update-setreq}
 
-Le nouveau SDK utilisant un nouveau mécanisme d’authentification, il n’est pas nécessaire d’utiliser le paramètre signedRequestId ni la clé publique ni le secret (pour tvOS). Le `setRequestor` est simplifiée et ne nécessite que le requestorID.
+Le nouveau SDK utilisant un nouveau mécanisme d’authentification, il n’est pas nécessaire d’utiliser le paramètre signedRequestId ni la clé publique ni le secret (pour tvOS). La variable `setRequestor` est simplifiée et ne nécessite que le requestorID.
 
 ### iOS
 
@@ -123,7 +122,7 @@ devient :
     accessEnabler.setRequestor(requestorId)
 ```
 
-> Informations sur l’API ici : [Définition du demandeur](/help/authentication/iostvos-sdk-api-reference.md)
+> Informations sur l’API : [Définition du demandeur](/help/authentication/iostvos-sdk-api-reference.md)
 
 </br>
 
@@ -143,4 +142,4 @@ en ceci :
     accessEnabler.handleExternalURL(request.url?.description);
 ```
 
-> Informations sur l’API ici : [Gérer l’URL externe](/help/authentication/iostvos-sdk-api-reference.md)
+> Informations sur l’API : [Gérer l’URL externe](/help/authentication/iostvos-sdk-api-reference.md)

@@ -1,13 +1,13 @@
 ---
 title: Amazon fireTV SSO - Guide de démarrage du programmeur
 description: Amazon fireTV SSO - Guide de démarrage du programmeur
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
 
 ---
-
 
 # Amazon fireTV SSO - Guide de démarrage du programmeur {#amazon-firetv-sso---programmer-kick-off-guide}
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Introduction {#intro}
 
-Ce document décrit les informations nécessaires à l’intégration de la nouvelle **SDK FireTV de l’authentification Adobe Primetime** dans votre application fireTV. Ce nouveau SDK tire parti de l’intégration au niveau du système d’exploitation sur la plateforme Amazon FireTV pour offrir **Authentification unique** prise en charge. Pour bénéficier de l’authentification unique, votre côté doit faire quelques efforts afin de migrer votre application de l’API sans client vers le nouveau SDK FireTV. Des modifications seront apportées aux flux d’authentification, qui seront présentés ci-dessous.
+Ce document décrit les informations nécessaires à l’intégration de la nouvelle **SDK FireTV de l’authentification Adobe Primetime** dans votre application fireTV. Ce nouveau SDK tire parti de l’intégration au niveau du système d’exploitation sur la plateforme Amazon FireTV pour offrir **Authentification unique** la prise en charge. Pour bénéficier de l’authentification unique, votre côté doit faire quelques efforts afin de migrer votre application de l’API sans client vers le nouveau SDK FireTV. Des modifications seront apportées aux flux d’authentification, qui seront présentés ci-dessous.
 
 ## Intégration de haut niveau à l’architecture et au niveau du système d’exploitation {#high}
 
@@ -56,7 +56,7 @@ Par rapport au SDK Android existant, le processus d’authentification sera plus
 1. Comment la variable **SSO** travail ?
 
    * SSO fonctionnera dans toutes les applications de programmeur optimisées par l’authentification Adobe Primetime qui utilisent le nouveau SDK FireTV sur le même appareil FireTV Amazon.
-   * SSO entre les applications de programmeur implémentées sur l’API REST sans client et les applications implémentées sur le SDK FireTV **ne sera PAS pris en charge**
+   * SSO entre les applications de programmation implémentées sur l’API REST sans client et les applications implémentées sur le SDK FireTV **ne sera PAS pris en charge**
 
 1. Quelle est la couverture MVPD de fireTV SSO ?
 

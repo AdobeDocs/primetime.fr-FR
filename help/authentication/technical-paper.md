@@ -1,13 +1,13 @@
 ---
 title: À propos de l’authentification Adobe Primetime et de TV partout
 description: À propos de l’authentification Adobe Primetime et de TV partout
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
 
 ---
-
 
 # À propos de l’authentification Adobe Primetime et de TV partout {#about-auth-tve}
 
@@ -73,7 +73,7 @@ En outre, l’authentification Adobe Primetime fournit la structure qui rend l�
 
 ![](assets/programmers-connect-authn.png)
 
-*Figure 1 : Quelques-uns des programmeurs et des fournisseurs de télévision payante qui se connectent via l&#39;authentification Adobe Primetime...*
+*Figure 1 : Certains programmeurs et fournisseurs de télévision payante qui se connectent par le biais de l&#39;authentification Adobe Primetime...*
 
 Adobe Pass assure la médiation sécurisée des transactions de droits entre les programmeurs et les fournisseurs de télévision payante, ce qui facilite l’accès des téléspectateurs au contenu des abonnements. Ou, en d&#39;autres termes...
 
@@ -92,7 +92,7 @@ Pour **Programmeurs**, l’authentification Adobe Primetime fournit :
 * Intégration aisée et connectivité instantanée avec les principaux fournisseurs de télévision payante, sans la douleur des intégrations multiples et directes
 * Optimisation des recettes d’abonnement (licences) et publicitaires en prenant en charge le plus grand nombre d’audiences possible pour le contenu
 * Authentification sécurisée, avec accès au contenu Premium accordé uniquement aux utilisateurs/appareils autorisés
-* un cadre ouvert et flexible qui soit à la fois indépendant des lecteurs et des plates-formes DRM ; La lecture peut avoir lieu sur un large éventail de plateformes, y compris iOS, Android, Windows 8, des consoles de jeux, des décodeurs, etc.
+* Une structure ouverte et flexible qui est à la fois indépendante du lecteur et de la plateforme DRM ; la lecture peut se produire sur un large éventail de plateformes, y compris iOS, Android, Windows 8, des consoles de jeux, des décodeurs, etc.
 * Compatibilité avec toute technologie DRM, telle que Flash Access d’Adobe® ou Prêt pour la lecture®.
 * Prise en charge de l’authentification et de l’autorisation de connexion unique (SSO), de sorte que les abonnés n’aient pas à se reconnecter après leur première authentification sur leur propre système.
 
@@ -117,8 +117,8 @@ L’authentification Adobe Primetime se compose des composants de base suivants 
 
 * Composant client (l’un des éléments suivants) :
 
-   * Access Enabler : bibliothèque spécifique à une plateforme. fournit des API et des exemples de code simples d’utilisation pour la mise en oeuvre des flux de droits ;
-   * API sans client - services Web RESTful ; fournit des points de terminaison de flux de droits pour les plateformes sans fonctionnalités de rendu de page web (comme les consoles de jeux, les décodeurs, etc.)
+   * Access Enabler - Bibliothèque spécifique à une plateforme ; fournit des API et des exemples de code simples d’utilisation pour implémenter les flux de droits
+   * L’API sans client - les services Web RESTful ; fournit des points de terminaison de flux de droits pour les plateformes sans fonctionnalités de rendu de page web (telles que les consoles de jeux, les décodeurs, etc.)
 
 * Serveurs principaux hébergés par Adobe
 * Vérification du jeton multimédia
@@ -198,14 +198,14 @@ Une fois l’autorisation effectuée, l’authentification Adobe Primetime crée
 
 Une fois que l’authentification Adobe Primetime génère le jeton AuthZ, il l’utilise pour générer un jeton multimédia de courte durée à usage unique, signé par Adobe et chiffré afin d’éviter toute modification lors de l’échange :
 
-* TTL du jeton de courte durée (par défaut : 5 minutes) est défini pour permettre des problèmes de synchronisation de l’horloge entre le serveur générant le jeton et le serveur validant le jeton.
+* La durée de vie (TTL) du jeton de courte durée (valeur par défaut : 5 minutes) est définie pour permettre des problèmes de synchronisation de l’horloge entre le serveur générant le jeton et le serveur validant le jeton.
 * Le jeton de courte durée est exposé au site d’intégration avant de permettre l’accès à la ressource protégée. Par conséquent, le programmeur doit valider le jeton à l’aide de l’outil de vérification de jeton multimédia pour les intégrations Access Enabler ou du service de vérification de jeton dans le cas d’intégrations API sans client.
 
 #### Vérificateur de jeton multimédia {#media-token-verifier}
 
 Les programmeurs sont chargés d’intégrer la bibliothèque du vérificateur de jeton multimédia à leur serveur d’applications existant, de sorte que le vérificateur puisse effectuer les validations de l’utilisateur final avant qu’un flux vidéo ne soit réellement démarré. La bibliothèque du vérificateur de jeton multimédia définit :
 
-* Une API de vérification de jeton qui récupère des informations du jeton, telles que s’il est valide, l’heure à laquelle le jeton a été émis et d’autres données pertinentes.
+* Une API de vérification de jeton qui récupère des informations du jeton, telles que s’il est valide, l’heure d’émission du jeton et d’autres données pertinentes.
 * Clé publique Adobe utilisée pour vérifier que le jeton provient bien d’un Adobe
 * Mise en oeuvre de référence montrant comment utiliser l’API de vérification et comment utiliser la clé publique d’Adobe contenue dans la bibliothèque pour vérifier son origine
 
@@ -215,11 +215,11 @@ Les programmeurs sont chargés d’intégrer la bibliothèque du vérificateur d
 
 ## Intégration à l’authentification Adobe Primetime {#integrate-auth}
 
-Que vous soyez fournisseur de télévision payante ou programmeur, le processus d’intégration à l’authentification Adobe Primetime nécessite une certaine part de votre principale participation. Chacun de ces processus est décrit ci-dessous.
+Que vous soyez fournisseur de télévision payante ou programmeur, le processus d’intégration à l’authentification Adobe Primetime nécessite une partie de votre participation active. Chacun de ces processus est décrit ci-dessous.
 
 ### Le processus des fournisseurs de télévision payante
 
-La Principale responsabilité du fournisseur de télévision payante dans l&#39;authentification Adobe Primetime est de vérifier qu&#39;un utilisateur requérant est bien un abonné connu qui a le droit d&#39;accéder au contenu du programmeur. À un niveau élevé, le processus d&#39;authentification Adobe Primetime pour l&#39;intégration à un nouveau fournisseur de télévision payante nécessite les étapes suivantes :
+La principale responsabilité du fournisseur de télévision payante dans l&#39;authentification Adobe Primetime est de vérifier qu&#39;un utilisateur requérant est bien un abonné connu qui a le droit d&#39;accéder au contenu du programmeur. À un niveau élevé, le processus d&#39;authentification Adobe Primetime pour l&#39;intégration à un nouveau fournisseur de télévision payante nécessite les étapes suivantes :
 
 1. Le fournisseur signe le contrat de non-divulgation d’authentification Adobe Primetime (NDA).
 1. Le fournisseur fournit à l’Adobe des spécifications pour son système d’authentification et d’autorisation. Pour une intégration plus simple, il est recommandé que les opérateurs de télévision payante disposent d&#39;un fournisseur d&#39;identité basé sur SAML (IdP) pour l&#39;authentification et la possibilité de communiquer via le protocole d&#39;accès SOAP pour l&#39;autorisation.
@@ -239,7 +239,7 @@ Adobe propose également des services de limitation de la fraude. Pour plus d’
 
 ### Le processus de programmation {#programmer-process}
 
-Pour réussir l’intégration de l’authentification Adobe Primetime, les programmeurs doivent configurer leur application de lecteur multimédia ou leur page web pour utiliser l’authentification Adobe Primetime dans la gestion des processus de droits principaux : authentification, autorisation et déconnexion.
+Pour réussir l’intégration de l’authentification Adobe Primetime, les programmeurs doivent configurer leur application de lecteur multimédia ou leur page web pour qu’elle fonctionne avec l’authentification Adobe Primetime dans la gestion des processus de droits principaux : authentification, autorisation et déconnexion.
 
 
 Avant de commencer une intégration avec l’authentification Adobe Primetime, les programmeurs doivent disposer des éléments suivants :
@@ -264,7 +264,7 @@ Dans un premier temps, les programmeurs doivent s&#39;inscrire auprès d&#39;un 
 
 ##### Configuration De L’Intégration De L’Activateur D’Accès Initial {#access-enabler-int-setup}
 
-Avant tout client demandant l’accès au contenu, les programmeurs doivent intégrer le composant client d’authentification Adobe Primetime - l’ Activateur d’accès - à l’application de leur lecteur multimédia ou de leur page web existante. Il existe différentes options pour ce faire :
+Avant tout client demandant l’accès au contenu, les programmeurs doivent intégrer le composant client d’authentification Adobe Primetime - l’ Activateur d’accès - à leur application de lecteur multimédia ou à leur page web existante. Il existe différentes options pour ce faire :
 
 * Vous pouvez incorporer la version par Flash, AccessEnabler.swf, dans un lecteur vidéo basé sur les Flashs sur une page web ou directement dans HTML. Vous pouvez communiquer avec le SWF dans ActionScript ou JavaScript. L’API de base est ActionScript, mais une bibliothèque wrapper JavaScript complète est disponible.
 * Pour les appareils non Flashs, vous pouvez :
@@ -282,7 +282,7 @@ Lorsqu’un client demande une ressource protégée à un programmeur pour la pr
 ![](assets/providr-selection-ui.png)
 
 
-*Tableau 3 : Exemple d’interface utilisateur de sélection de fournisseur*
+*Figure 3 : Exemple d’interface utilisateur de sélection de fournisseur*
 
 >[!NOTE]
 >
@@ -290,13 +290,12 @@ Lorsqu’un client demande une ressource protégée à un programmeur pour la pr
 >* L’autorisation utilise un échange de services Web back-channel (serveur à serveur) entre l’authentification Adobe Primetime (le SP) et un fournisseur de télévision payante (le IdP).
 
 
-
 ##### Communication avec le programmeur à l’aide de Access Enabler
 
 Le canal de communication bidirectionnel entre Access Enabler et la page web ou l’application de lecteur du programmeur suit un modèle entièrement asynchrone. Le programmeur envoie des messages à Access Enabler via les méthodes exposées par l’API Access Enabler. Access Enabler répond par des rappels enregistrés dans la bibliothèque Access Enabler.
 
 * Toute demande d’autorisation demande automatiquement l’authentification en premier, si un jeton d’authentification est introuvable sur le système local. Lorsque l’authentification réussit, le jeton du client est stocké localement, de sorte qu’il n’est pas nécessaire de se reconnecter pendant une période donnée. S’ils ont réussi à s’authentifier par le biais de la solution de droits d’authentification Adobe Primetime dans un autre contexte (par exemple, par le biais du site web du fournisseur de télévision payante ou d’un autre programmeur), Access Enabler a accès au jeton local et ne nécessite pas d’authentification supplémentaire.
-* Lorsqu&#39;un client demande une ressource spécifique, le programmeur demande l&#39;autorisation au fournisseur de télévision payante via le gestionnaire d&#39;accès. Après avoir vérifié (ou initié) l’authentification, le responsable de l’accès contacte le fournisseur de télévision payante (par le biais de l’authentification Adobe Primetime) pour déterminer si le client est autorisé à afficher la ressource. L’authentification Adobe Primetime gère la communication avec le fournisseur de télévision payante pour obtenir une autorisation. Le programmeur doit uniquement envoyer la demande à l’activateur d’accès et gérer la réponse (succès ou échec de l’autorisation). Si l’autorisation réussit, un jeton d’autorisation est stocké sur le système client et le rappel reçoit un jeton multimédia de courte durée.
+* Lorsqu&#39;un client demande une ressource spécifique, le programmeur demande l&#39;autorisation au fournisseur de télévision payante via le gestionnaire d&#39;accès. Après avoir vérifié (ou initié) l’authentification, le gestionnaire d’accès contacte le fournisseur de télévision payante (par le biais de l’authentification Adobe Primetime) pour déterminer si le client est autorisé à afficher la ressource. L’authentification Adobe Primetime gère la communication avec le fournisseur de télévision payante pour obtenir une autorisation. Le programmeur doit uniquement envoyer la demande à l’activateur d’accès et gérer la réponse (succès ou échec de l’autorisation). Si l’autorisation réussit, un jeton d’autorisation est stocké sur le système client et le rappel reçoit un jeton multimédia de courte durée.
 
 ##### Communication avec le programmeur à l’aide de l’API sans client {#progr-comm-clientless-api}
 
@@ -304,8 +303,8 @@ La communication entre l’application du programmeur et l’authentification Ad
 
 ##### Exemple de workflow avec authentification SSO du navigateur web SAML {#sample-wf}
 
-1. Visionneuse Accède à un site (factice1.com) et tente d’accéder au contenu autorisé.
-1. La page/le lecteur vidéo charge l’activateur d’accès à partir d’adobe.com et, lorsqu’il est invité par l’action de l’utilisateur, demande l’autorisation du contenu demandé.
+1. Visionneuse Accède à un site (dummy1.com) et tente d’accéder au contenu autorisé.
+1. La page/le lecteur vidéo charge l’activateur d’accès à partir de adobe.com et, lorsqu’il est invité par l’action de l’utilisateur, demande l’autorisation du contenu demandé.
 1. Access Enabler exécute et valide le demandeur et la requête.
 1. Access Enabler recherche un jeton d’autorisation valide dans le magasin local. Si une autorisation valide est trouvée, Access Enabler produit un jeton multimédia de courte durée (voir l’étape 14).
 1. Si aucune autorisation valide pour la ressource demandée n’est trouvée, mais qu’il existe un jeton d’authentification valide, Access Enabler lance une demande d’autorisation auprès du fournisseur de télévision payante auprès duquel l’utilisateur est authentifié. Le serveur d’Adobe fournit l’échange de demande/réponse d’autorisation avec le fournisseur de télévision payante.
@@ -313,7 +312,7 @@ La communication entre l’application du programmeur et l’authentification Ad
 1. Access Enabler navigue dans le navigateur pour accéder au service SAML SP (Service Provider) de l’Adobe, en lui transmettant tous les paramètres appropriés.
 1. Le fournisseur SAML appelle le fournisseur d’identité SAML approprié auprès du fournisseur de télévision payante de l’utilisateur, à l’aide du profil de navigateur Web SAML, comme indiqué dans les métadonnées IdP. L’utilisateur accède ainsi efficacement au site IdP (du fournisseur de télévision payante), où il s’authentifie.
 1. Après une authentification réussie, l’utilisateur est redirigé vers le SP SAML d’Adobe, en lui transmettant un GUID d’authentification dans la réponse SAML.
-1. Le SP SAML d’Adobe crée une session côté serveur où le GUID d’authentification est stocké et redirige l’utilisateur vers la page Programmeur d’origine. (La session du serveur est supprimée lors de la récupération d’Access Enabler du jeton authN.)
+1. Le SP SAML d’Adobe crée une session côté serveur où le GUID d’authentification est stocké et redirige l’utilisateur vers la page du programmeur d’origine. (La session du serveur est supprimée lors de la récupération d’Access Enabler du jeton authN.)
 1. Access Enabler récupère le GUID d’authentification du serveur d’Adobe à inclure dans le jeton avec un ID d’appareil conservé par l’authentification Adobe Primetime. Lorsque Flash DRM se trouve sur l’appareil, cela est effectué par le biais des API de Flash Access (composant DRM du Flash Player) qui permettent de lier le GUID à l’ID de l’appareil et de renvoyer un jeton d’authentification. Dans le cas contraire, cette opération est effectuée via les API JS via HTTPS à l’aide du stockage basé sur HTML5 ou via des composants natifs spécifiques.
 1. Le jeton d’authentification est utilisé par Access Enabler pour adresser des demandes d’autorisation au fournisseur de télévision payante. Sur les appareils compatibles avec les Flashs Access, les demandes sont toujours effectuées par le biais des API de Flash Access, de sorte que le jeton d’autorisation qui en résulte soit lié à l’appareil. Sur les appareils non Flashs Access, HTTPS est utilisé pour la communication sécurisée du client au serveur.
 1. Une fois l’autorisation effectuée, l’authentification Adobe Primetime crée un jeton d’autorisation de longue durée (&quot;authZ&quot;) et le transmet à l’Activateur d’accès, qui le stocke dans le système local.
@@ -322,9 +321,9 @@ La communication entre l’application du programmeur et l’authentification Ad
 ![](assets/authn-authz-entitlmnt-flow.png)
 
 
-*Tableau 4 : Workflow d’authentification et d’autorisation d’accès*
+*Figure 4 : Workflow d’activation d’accès d’authentification et d’autorisation*
 
-##### Fournir une interface utilisateur de droit {#entitlement-ui}
+##### Fourniture d’une interface utilisateur de droit {#entitlement-ui}
 
 Les programmeurs doivent créer leur propre interface utilisateur pour le workflow d’accès dans leur site web ou application. Certains éléments, tels que le processus de connexion réel, sont fournis par le fournisseur de télévision payante et certains éléments sont éventuellement disponibles dans le cadre de l’authentification Adobe Primetime. Au minimum, le programmeur effectue les opérations suivantes :
 
@@ -335,7 +334,7 @@ Les programmeurs doivent créer leur propre interface utilisateur pour le workfl
 
 #### Prise en charge de la connexion unique {#single-logout-support}
 
-Dans la plupart des cas, le programmeur est chargé de gérer les connexions des utilisateurs via un simple appel API. L’appel logout() demande une authentification Primetime pour déconnecter l’utilisateur actuel en :
+Dans la plupart des cas, le programmeur est chargé de gérer les connexions des utilisateurs par le biais d’un simple appel API. L’appel logout() demande une authentification Primetime pour déconnecter l’utilisateur actuel en :
 
 * Suppression de tous les jetons AuthN et AuthZ
 * Effacement de toutes les informations d’authentification et d’autorisation pour cet utilisateur
@@ -360,16 +359,16 @@ Cette section met en évidence la sécurité et l’intégrité de l’infrastru
 
 ### Sécurité des jetons {#token-security}
 
-L’un des Principaux objectifs de l’authentification Adobe Primetime est de s’assurer que le système peut résister aux attaques sur les données de droits du contenu par un utilisateur non autorisé ou un agrégateur de contenu. Par conséquent, l’accès aux données est sécurisé à différents niveaux du workflow, en protégeant la génération et l’utilisation des données du jeton d’autorisation avec la plus grande importance. L’architecture d’authentification Adobe Primetime est conçue pour garantir la maintenance sécurisée du contenu des jetons et pour s’assurer que le jeton reste sur le périphérique sur lequel il a été émis.
+L’un des principaux objectifs de l’authentification Adobe Primetime est de s’assurer que le système peut résister aux attaques sur les données de droits du contenu par un utilisateur non autorisé ou un agrégateur de contenu. Par conséquent, l’accès aux données est sécurisé à différents niveaux du workflow, en protégeant la génération et l’utilisation des données du jeton d’autorisation avec la plus grande importance. L’architecture d’authentification Adobe Primetime est conçue pour garantir la maintenance sécurisée du contenu des jetons et pour s’assurer que le jeton reste sur le périphérique sur lequel il a été émis.
 
 * **Sécurité des jetons AuthN et AuthZ de longue durée** - Tous les jetons de longue durée sont signés numériquement par le serveur d’authentification Adobe Primetime. La signature numérique, en revanche, diffère d’une plateforme à l’autre, dans la mesure où elle utilise un identifiant d’appareil qui diffère de la manière dont il est généré, protégé et validé. Dans tous les cas, une validation côté client garantit que la signature numérique est intacte et que l’intégrité du jeton est préservée. L’Activateur d’accès stocke en toute sécurité les jetons validés dans des emplacements spécifiques à l’environnement dans lequel il est en cours d’exécution. Si la validation de l’identifiant d’appareil échoue, la session d’authentification est invalidée, les jetons sont réinitialisés et l’utilisateur est invité à se reconnecter.
-* **Sécurité des jetons multimédias de courte durée** - Les jetons multimédias de courte durée, qui sont produits à l’étape finale avant l’accès au contenu, sont signés par Adobe et chiffrés afin d’éviter toute manipulation pendant l’échange. Les jetons multimédias de courte durée nécessitent également une étape de validation supplémentaire de la part d’un composant d’authentification Adobe Primetime supplémentaire, le vérificateur de jeton multimédia. La durée de vie du jeton de courte durée est définie sur une valeur par défaut de 5 minutes et peut être raccourcie, si vous le souhaitez. Le jeton multimédia de courte durée n’est jamais mis en cache ; un nouveau jeton est récupéré à partir du serveur chaque fois qu’une API d’autorisation est appelée.
+* **Sécurité des jetons multimédias de courte durée** - Les jetons multimédias de courte durée, qui sont produits à l’étape finale avant l’accès au contenu, sont signés par Adobe et chiffrés afin d’éviter toute manipulation pendant l’échange. Les jetons multimédias de courte durée nécessitent également une étape de validation supplémentaire de la part d’un composant d’authentification Adobe Primetime supplémentaire, le vérificateur de jeton multimédia. La durée de vie par défaut du jeton de courte durée est de 5 minutes et peut être raccourcie, si vous le souhaitez. Le jeton multimédia de courte durée n’est jamais mis en cache ; un nouveau jeton est récupéré à partir du serveur chaque fois qu’une API d’autorisation est appelée.
 
 ### Sécurité des appareils spécifique à la plateforme {#platform-sp-security}
 
 Les mesures de sécurité utilisées par l&#39;authentification Adobe Primetime varient selon les plateformes, mais elles sont toutes robustes et dernier cri.
 
-* **Périphériques compatibles avec les Flashs** - Lorsque Flash Player 10.1+ ou AIR 2.5+ se trouve sur l’appareil, l’authentification Adobe Primetime utilise la fonctionnalité Flash Player DRM pour la protection, également appelée Flash Access. Le Flash offre un niveau de protection supplémentaire; l’assurance forte de la liaison de périphériques pour les jetons basés sur le Flash signifie que, dans la plupart des cas, la durée de vie peut être plus longue, que l’utilisateur n’a pas à se connecter aussi souvent et que l’expérience de l’utilisateur est généralement plus fluide.
+* **Périphériques compatibles avec les Flashs** - Lorsque Flash Player 10.1+ ou AIR 2.5+ se trouve sur l’appareil, l’authentification Adobe Primetime utilise la fonctionnalité Flash Player DRM pour la protection, également appelée Flash Access. Flash offre un niveau de protection supplémentaire ; l’assurance forte d’une liaison d’appareil pour les jetons basés sur le Flash signifie que dans la plupart des cas, la durée de vie peut être plus longue, l’utilisateur n’a pas à se connecter aussi souvent et l’expérience de l’utilisateur est généralement plus fluide.
 * **Expériences dans le navigateur sur des appareils compatibles avec HTML5**- Sur les appareils non Flashs qui incluent la fonctionnalité de navigateur HTML5, l’authentification Adobe Primetime dispose d’un autre moyen de protection limitée pour les intégrations basées sur un navigateur. Cependant, comme la liaison de l’appareil pour HTML5 n’est pas aussi forte, la durée de vie (TTL) des jetons sur les plateformes HTML5 est généralement plus courte.
 * **Prise en charge d’applications natives pour les appareils intégrés et sortants** - Adobe propose des SDK natifs par système d’exploitation (iOS, Android, Windows 8, etc.) qui offrent une sécurité renforcée par rapport à la solution HTML5. Ces SDK utilisent des API natives pour récupérer un ID d’appareil et le transmettre de manière sécurisée au serveur d’authentification Adobe Primetime.
 * **Sans client** - L’authentification Adobe Primetime utilise le protocole HTTPS pour la communication sécurisée. En outre, tous les appels d’un appareil dynamique doivent être signés numériquement.
@@ -389,7 +388,7 @@ L&#39;authentification Adobe Primetime est proposée via le modèle Software as 
 
 
 **En quoi l’authentification Adobe Primetime est-elle différente des autres solutions TV Everywhere ?**
-L’authentification Adobe Primetime présente des avantages distincts par rapport aux solutions alternatives de TV partout. Les intégrations directes avec des fournisseurs individuels ne offrent pas la flexibilité d’une connexion unique et permanente (SSO) lorsque les utilisateurs se déplacent d’un site à l’autre sur Internet. L’authentification Adobe Primetime a également une remarquable pénétration du marché ; une fois qu’un programmeur s’intègre à l’authentification Adobe Primetime, il est immédiatement connecté à des opérateurs de télévision payante qui desservent plus de 90 % des ménages aux États-Unis. En outre, l’authentification Adobe Primetime utilise des fonctionnalités de sécurité uniques intégrées au runtime Flash (le cas échéant) pour atténuer la fraude, tout en fournissant des SDK afin que les programmeurs puissent bénéficier de la même fonctionnalité TV partout intégrée dans les applications natives pour les appareils mobiles ou domestiques où Flash n’est pas disponible. Enfin, bien que l’authentification Adobe Primetime soit disponible en tant que service autonome, nous offrons également la possibilité d’une intégration étroite avec d’autres produits et services d’Adobe (y compris Primetime et Adobe Analytics) liés à la diffusion, la protection et la monétisation du contenu TV Everywhere.
+L’authentification Adobe Primetime présente des avantages distincts par rapport aux solutions alternatives de TV partout. Les intégrations directes avec des fournisseurs individuels ne offrent pas la flexibilité d’une connexion unique et permanente (SSO) lorsque les utilisateurs se déplacent d’un site à l’autre sur Internet. L&#39;authentification Adobe Primetime a également une remarquable pénétration du marché ; une fois qu&#39;un programmeur s&#39;intègre à l&#39;authentification Adobe Primetime, il est immédiatement connecté avec des opérateurs de télévision payante qui desservent plus de 90 % des ménages aux États-Unis. En outre, l’authentification Adobe Primetime utilise des fonctionnalités de sécurité uniques intégrées au runtime Flash (le cas échéant) pour atténuer la fraude, tout en fournissant des SDK afin que les programmeurs puissent bénéficier de la même fonctionnalité TV partout intégrée dans les applications natives pour les appareils mobiles ou domestiques où Flash n’est pas disponible. Enfin, bien que l’authentification Adobe Primetime soit disponible en tant que service autonome, nous offrons également la possibilité d’une intégration étroite avec d’autres produits et services d’Adobe (y compris Primetime et Adobe Analytics) liés à la diffusion, la protection et la monétisation du contenu TV Everywhere.
 
 **Quelle est la sécurité de l’authentification Adobe Primetime ?**
 La priorité numéro un de l’architecture d’authentification Adobe Primetime est de s’assurer que seules les visionneuses autorisées sont authentifiées et qu’elles ont accès au contenu Premium. L’authentification Adobe Primetime lie étroitement l’accès à l’appareil d’affichage et peut aider à limiter les diffusions, les sessions et/ou les appareils pour un foyer donné.
@@ -403,14 +402,14 @@ Adobe Flash Player 11.x ou version ultérieure est requis pour la sécurité de 
 L’authentification Adobe Primetime est prise en charge par pratiquement tous les appareils dotés du kit web HTML5 pour l’affichage dans le navigateur. En outre, l’authentification Adobe Primetime continue à déployer des kits de développement logiciel (SDK) natifs pour diverses plateformes spécifiques aux appareils, notamment iOS, Android™ et Windows 8. L’authentification Adobe Primetime prend partiellement en charge certains appareils non compatibles avec le web (téléviseurs intelligents, décodeurs, consoles de jeux, etc.) via ses API de services Web RESTful.
 
 **L’authentification Adobe Primetime prend-elle en charge les nouvelles normes pour TV partout ?**
-L’authentification Adobe Primetime est conforme au **CableLabs OLCA (Online Content Access)** [spécification](https://www.cablelabs.com/specifications), qui fournit des exigences techniques et une architecture pour la diffusion de vidéos à un client de la télévision payante à partir de sources en ligne. Adobe a participé au projet conjoint de tests d&#39;interaction de CableLabs en juin 2011 et a passé le processus de test pour une mise en oeuvre par un fournisseur de services. L’authentification Adobe Primetime est vérifiée (complète et testée) par rapport aux spécifications OLCA pour l’authentification. Le composant d’autorisation est terminé, mais la vérification des tests attend la sortie de l’environnement de test de CableLabs (ETA Nov 2011).
+L’authentification Adobe Primetime est conforme au **CableLabs OLCA (Online Content Access)** [spécification](https://www.cablelabs.com/specifications), qui fournit des exigences techniques et une architecture pour la diffusion de vidéos à un client de la télévision payante à partir de sources en ligne. Adobe a participé au projet conjoint de test d&#39;interaction de CableLabs en juin 2011 et a passé le processus de test pour une mise en oeuvre par un fournisseur de services. L’authentification Adobe Primetime est vérifiée (complète et testée) par rapport aux spécifications OLCA pour l’authentification. Le composant d’autorisation est terminé, mais la vérification des tests attend la sortie de l’environnement de test de CableLabs (ETA Nov 2011).
 
-Adobe est également un membre principal de la **OATC (Open Authentication Technical Consortium)** et participe à plusieurs projets de rédaction de spécifications des sous-comités au sein de cet organe.
+Adobe est également un membre actif de la fonction **OATC (Open Authentication Technical Consortium)** et participe à plusieurs projets de rédaction de spécifications des sous-comités au sein de cet organe.
 
 **Comment l’authentification Adobe Primetime gère-t-elle la gestion des identités fédérées/l’authentification unique (SSO) ?**
 L’authentification Adobe Primetime vous permet de fournir aux clients une authentification et une autorisation de connexion unique (SSO), en utilisant la communication back-channel (serveur à serveur) entre l’authentification Adobe Primetime et les opérateurs payants participants. Ainsi, avec l’authentification Adobe Primetime, les abonnés n’ont pas besoin de se reconnecter après leur première authentification, tant que cette authentification est permise par l’opérateur de télévision payante. En règle générale, cette limite est définie sur 30 jours. Pour ce faire, l’authentification Adobe Primetime fournit un domaine commun pour les jetons d’authentification de nos clients. Ces informations d’état d’authentification sont disponibles pour tous les sites participants qui sont intégrés à un opérateur de télévision payante donné.
 
-Actuellement, la plupart des intégrations d’authentification Adobe Primetime avec les opérateurs de télévision payante utilisent le protocole SAML, l’une des normes d’authentification Principales. L’authentification Adobe Primetime agit en tant que fournisseur de service proxy dans l’architecture SAML et conserve la réponse de l’authentification SAML en tant que jeton sécurisé dans le domaine commun de l’Adobe. L’authentification Adobe Primetime est compatible avec SAML 2.0.
+Actuellement, la plupart des intégrations d’authentification Adobe Primetime avec les opérateurs de télévision payante utilisent le protocole SAML, l’une des principales normes d’authentification. L’authentification Adobe Primetime agit en tant que fournisseur de service proxy dans l’architecture SAML et conserve la réponse de l’authentification SAML en tant que jeton sécurisé dans le domaine commun de l’Adobe. L’authentification Adobe Primetime est compatible avec SAML 2.0.
 
 Bien que l’authentification Adobe Primetime soit généralement utilisée avec les solutions SAML SSO à ce stade, l’architecture de l’authentification Adobe Primetime extrait toutes les caractéristiques de protocole de l’intégration du programmeur. Par conséquent, la prise en charge de nouveaux protocoles, tels que ceux basés sur OAuth 2.0 ou des protocoles personnalisés, peut être ajoutée au fil du temps.
 
@@ -419,4 +418,5 @@ L’utilisation de l’authentification Adobe Primetime n’entraîne aucun coû
 
 >[!NOTE]
 >
->**Étapes suivantes :** Pour plus d’informations, contactez votre représentant d’Adobe ou remplissez le formulaire de demande d’informations . [here](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>**Étapes suivantes :** Pour plus d’informations, contactez votre représentant Adobe ou remplissez le formulaire de demande d’informations . [here](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>
