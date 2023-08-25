@@ -1,7 +1,7 @@
 ---
 title: Présentation de la surveillance des simultanés
 description: Présentation de la surveillance des simultanés
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 La surveillance simultanée permet aux fournisseurs d’identité et de contenu (MVPD et programmeurs) de définir et d’appliquer des limites sur l’utilisation simultanée dans plusieurs applications (potentiellement propriété de plusieurs partenaires).
 
-**L’API de surveillance de la simultanéité est hébergée à l’emplacement suivant :
+**L’API de surveillance de la simultanéité est hébergée à l’emplacement suivant :**
 
-* V2.0 : [API de surveillance de la simultanéité](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0 : [API de surveillance de la simultanéité](http://docs.adobeptime.io/cm-api-v2/)**
 
 Pour vous inscrire à notre service de surveillance de la simultanéité, contactez notre [Équipe d’assistance](mailto:tve-support@adobe.com). Indiquez les informations suivantes et notre équipe se fera un plaisir de vous aider :
 
