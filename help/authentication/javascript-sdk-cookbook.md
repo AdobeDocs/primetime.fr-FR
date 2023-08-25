@@ -2,9 +2,9 @@
 title: Guide pas à pas du SDK JavaScript
 description: Guide pas à pas du SDK JavaScript
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >Le contenu de cette page est fourni à titre d’information uniquement. L’utilisation de cette API nécessite une licence actuelle de Adobe. Aucune utilisation non autorisée n’est autorisée.
 
-## Introduction (#intro)
+## Introduction {#intro}
 
 Ce document décrit les processus de droits que l’application de niveau supérieur d’un programmeur implémente pour une intégration JavaScript avec le service d’authentification Adobe Primetime. Les liens vers la référence API JavaScript sont inclus dans tout le contenu.
 
 Notez également que la variable [Informations connexes](#related) comprend un lien vers un ensemble d’exemples de code JavaScript.
 
-## Flux de droits (#entitlement)
+## Flux de droits {#entitlement}
 
 1. [Conditions préalables](#prereq)
 2. [Flux de démarrage](#startup)
@@ -34,7 +34,7 @@ Notez également que la variable [Informations connexes](#related) comprend un l
 ![](assets/javascript-flows.png)
 
 
-## Conditions préalables(#prereq)
+## Conditions préalables {#prereq}
 
 **Dépendances :**
 
@@ -141,7 +141,7 @@ Appeler `getAuthentication()` pour obtenir l’état d’authentification OU pou
 
 La fin du flux d’authentification est atteinte lors des appels AccessEnabler `setAuthenticationStatus()`avec `isAuthenticated == 1`.
 
-## 4. Flux d’autorisation (#authz)
+## 4. Flux d’autorisation {#authz}
 
 **Dépendances :**
 
@@ -164,7 +164,7 @@ Utilisez le vérificateur de jeton multimédia pour valider le shortMediaToken r
 - Si la validation réussit : affichez/relayez le média demandé à l’utilisateur.
 - En cas d’échec : le jeton AuthZ n’était pas valide, la demande de média doit être refusée et un message d’erreur doit s’afficher à l’utilisateur.
 
-## 5. Afficher le flux multimédia (#logout)
+## 5. Afficher le flux multimédia {#logout}
 
 - L’utilisateur sélectionne le média à afficher.
    - Les médias sont-ils protégés ?
@@ -173,7 +173,7 @@ Utilisez le vérificateur de jeton multimédia pour valider le shortMediaToken r
          - Si le média n’est pas protégé, passez à l’étape Afficher le flux multimédia .
          - Média de lecture
 
-## Configuration de l’identifiant visiteur (#visitorID)
+## Configuration de l’identifiant visiteur {#visitorID}
 
 Configuration d’un [visitorID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html) est très important du point de vue d’analytics. Une fois la valeur visitorID d’un EC définie, le SDK envoie ces informations avec chaque appel réseau et le service d’authentification Adobe Primetime collecte ces informations. De cette manière, vous pourrez mettre en corrélation les données d’analyse du service d’authentification Adobe Primetime avec tout autre rapport d’analyse que vous pourriez avoir d’autres applications ou sites web. Vous trouverez des informations sur la configuration d’EC visitorID [here](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
