@@ -2,7 +2,7 @@
 title: Page d’enregistrement
 description: Page d’enregistrement
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 58657dda8528e9f33b3cee4a84904cc5ae28d81f
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
@@ -129,9 +129,9 @@ Renvoie le code d’enregistrement généré de manière aléatoire et l’URI d
 | registrationURL | URL de l’application Web de connexion à afficher à l’utilisateur final |
 
 {style="table-layout:auto"}
+
+
 </br>
-
-
 
 ### Message d’erreur XSD  {#error-message}
 
