@@ -2,7 +2,7 @@
 title: Présentation du SDK Android
 description: Présentation du SDK Android
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Une fois l’authentification et l’autorisation réussies, l’authentificatio
 
 #### Jeton d’authentification
 
-- **AccessEnabler 1.6 et versions antérieures** - **** La manière dont les jetons d’authentification sont mis en cache sur l’appareil dépend du **Authentification par demandeur&quot;** Indicateur associé au MVPD actuel :
+- **AccessEnabler 1.6 et versions antérieures** - La manière dont les jetons d’authentification sont mis en cache sur l’appareil dépend du **Authentification par demandeur&quot;** Indicateur associé au MVPD actuel :
 
 
 1. Si la fonction &quot;Authentification par demandeur&quot; est *disabled*, alors un jeton d’authentification unique est stocké localement dans le tableau de bord global. Ce jeton sera partagé entre toutes les applications intégrées au MVPD actuel.
