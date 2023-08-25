@@ -2,7 +2,7 @@
 title: Guide d’intégration Amazon FireOS
 description: Guide d’intégration Amazon FireOS
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: e5e42763fecae437cfc34bae98a5d2bd5adc4643
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -198,7 +198,6 @@ La variable `event` indique quel événement de droit s’est produit ; `data` e
 
 ### F. Flux de déconnexion {#logout_flow}
 
-1. Appeler [`logout()`](#$logout) pour déconnecter l’utilisateur.\
-   AccessEnabler efface toutes les valeurs et tous les jetons mis en cache obtenus par l’utilisateur pour le MVPD actuel sur tous les demandeurs partageant la connexion par l’authentification unique. Après avoir vidé le cache, AccessEnabler effectue un appel au serveur pour nettoyer les sessions côté serveur.  Puisque l’appel au serveur peut entraîner une redirection SAML vers l’IdP (cela permet le nettoyage de session du côté IdP), cet appel doit suivre toutes les redirections. C’est pourquoi cet appel est géré dans un contrôle WebView, invisible pour l’utilisateur.
+1. Appeler [`logout()`](#$logout) pour déconnecter l’utilisateur. AccessEnabler efface toutes les valeurs et tous les jetons mis en cache obtenus par l’utilisateur pour le MVPD actuel sur tous les demandeurs partageant la connexion par l’authentification unique. Après avoir vidé le cache, AccessEnabler effectue un appel au serveur pour nettoyer les sessions côté serveur.  Puisque l’appel au serveur peut entraîner une redirection SAML vers l’IdP (cela permet le nettoyage de session du côté IdP), cet appel doit suivre toutes les redirections. C’est pourquoi cet appel est géré dans un contrôle WebView, invisible pour l’utilisateur.
 
    **Remarque :** Le flux de déconnexion diffère du flux d’authentification dans la mesure où l’utilisateur n’est pas tenu d’interagir de quelque manière que ce soit avec WebView. Il est donc possible (et recommandé) de rendre le contrôle WebView invisible (c’est-à-dire masqué) pendant le processus de déconnexion.
