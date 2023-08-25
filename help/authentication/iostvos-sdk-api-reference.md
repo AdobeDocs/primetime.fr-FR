@@ -2,9 +2,9 @@
 title: Référence de l’API iOS/tvOS
 description: Référence de l’API iOS/tvOS
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: d4fd2590ec0e7388c1d4df6c2c1313141659ed9e
 workflow-type: tm+mt
-source-wordcount: '7000'
+source-wordcount: '6990'
 ht-degree: 0%
 
 ---
@@ -1554,10 +1554,3 @@ Instructions pour l’interprétation des valeurs dans la variable *data* tablea
    * **3** - Type de système d’exploitation
 
 </br>
-
-## Informations connexes {#related}
-
-* [Guide d’intégration iOS](/help/authentication/iostvos-sdk-cookbook.md)
-* [Présentation technique d’iOS](/help/authentication/iostvos-sdk-overview.md)
-* [Flux de droits](/help/authentication/entitlement-flow.md)
-  <!--* [Tracking Data in Primetime authentication](https://tve.helpdocsonline.com/tracking-data-in-adobe-pass)-->
