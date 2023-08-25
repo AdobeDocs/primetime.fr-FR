@@ -1,13 +1,13 @@
 ---
 title: Authentification à l’aide du protocole OAuth 2.0
 description: Authentification à l’aide du protocole OAuth 2.0
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
+source-git-commit: d7d284e7e8563c5ca1ab1c8627cb75ecb1e1cbe5
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
 
 ---
-
 
 # Authentification à l’aide du protocole OAuth 2.0
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Présentation {#overview}
 
-Bien que SAML reste le protocole principal utilisé pour l’authentification par les distributeurs multicanaux de programmes audiovisuels américains et par les entreprises en général, il existe une tendance claire à passer à OAuth 2.0 en tant que protocole d’authentification Principal. Le protocole OAuth 2.0 (https://tools.ietf.org/html/rfc6749) a été principalement développé pour les sites consommateurs et a été rapidement adopté par des géants Internet tels que Facebook, Google et Twitter.
+Bien que SAML reste le protocole principal utilisé pour l’authentification par les distributeurs multicanaux de programmes audiovisuels américains et par les entreprises en général, il existe une tendance claire à passer à OAuth 2.0 comme protocole d’authentification principal. Le protocole OAuth 2.0 (https://tools.ietf.org/html/rfc6749) a été principalement développé pour les sites de consommation et a été rapidement adopté par des géants Internet comme Facebook, Google &amp; Twitter.
 
 OAuth 2.0 est un énorme succès, ce qui a conduit les entreprises à mettre à niveau lentement leurs infrastructures pour les soutenir.
 
@@ -39,26 +39,26 @@ Le protocole offre également plus de flexibilité en termes de données exposé
 
 Pour prendre en charge l’authentification avec OAuth 2.0, un MVPD doit respecter les conditions préalables suivantes :
 
-Tout d&#39;abord, le MVPD doit s&#39;assurer qu&#39;il prend en charge le *[Subvention du code d’autorisation](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flux.
+Tout d&#39;abord, la police doit s&#39;assurer qu&#39;elle prend en charge la fonction [Subvention du code d’autorisation](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) flux.
 
 Après avoir confirmé qu’il prend en charge le flux, le MVPD doit nous fournir les informations suivantes :
 
 * le point de terminaison de l’authentification
    * le point de fin fournit le code d’autorisation qui sera ensuite utilisé en échange de l’actualisation et du jeton d’accès.
 * le point de terminaison /token
-   * vous obtenez ainsi le jeton d’actualisation et le jeton d’accès.
+   * cela fournira le jeton d’actualisation et le jeton d’accès.
    * le jeton d’actualisation doit être stable (il ne doit pas changer chaque fois que nous demandons un nouveau jeton d’accès).
-   * le MVPD doit autoriser plusieurs jetons d’accès principaux pour chaque jeton d’actualisation.
+   * le MVPD doit autoriser plusieurs jetons d’accès actifs pour chaque jeton d’actualisation.
    * ce point de fin échangera également un jeton d’actualisation pour un jeton d’accès.
 * nous avons besoin d’une **point d’entrée pour le profil utilisateur**
    * ce point de fin fournit l’ID utilisateur, qui doit être unique pour un compte et ne doit pas contenir d’informations d’identification personnelle.
 * la valeur **/logout** point de fin (facultatif)
-   * L’authentification Adobe Primetime redirigera vers ce point de terminaison, fournissant au MVPD un URI de redirection ; sur ce point de terminaison, le MVPD peut effacer les cookies sur l’ordinateur client ou appliquer la logique souhaitée pour la déconnexion.
+   * L’authentification Adobe Primetime redirige vers ce point de terminaison, fournit au MVPD un URI de redirection. Sur ce point de terminaison, le MVPD peut effacer les cookies sur l’ordinateur client ou appliquer la logique souhaitée pour se déconnecter.
 * il est vivement recommandé d’avoir une prise en charge des clients autorisés (applications clientes qui ne déclenchent pas de page d’autorisation de l’utilisateur).
 * nous aurons également besoin des éléments suivants :
    * **clientID** et **secret client** pour les configurations d’intégration
    * **temps de vie** Valeurs (TTL) du jeton d’actualisation et du jeton d’accès
-   * Nous pouvons fournir au MVPD un URI de rappel d’autorisation et de rappel de déconnexion. En outre, si nécessaire, nous pouvons fournir aux distributeurs multicanaux une liste d’adresses IP à placer sur la liste autorisée dans les paramètres de votre pare-feu.
+   * Nous pouvons fournir au MVPD un URI de rappel d’autorisation et de rappel de déconnexion. En outre, si nécessaire, nous pouvons fournir aux distributeurs multicanaux une liste d’adresses IP à whitelister dans les paramètres de votre pare-feu.
 
 
 ## Flux d’authentification {#authn-flow}
@@ -111,4 +111,3 @@ D’un point de vue technique :
 1. Les utilisateurs déjà authentifiés, qui disposent déjà d’un jeton AuthN local contenant l’objet-id SAML, seront automatiquement acheminés par Adobe via l’intégration SAML.
 1. Pour les utilisateurs de l’étape 3, une fois que leur jeton AuthN généré par SAML expire, l’Adobe les traite comme de nouveaux utilisateurs et se comporte comme les utilisateurs de l’étape 2.
 1. Adobe examine les schémas d’utilisation afin de déterminer le moment où l’intégration SAML peut être désactivée en toute sécurité.
-
