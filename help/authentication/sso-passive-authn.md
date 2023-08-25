@@ -1,13 +1,13 @@
 ---
 title: SSO via l’authentification passive
 description: SSO via l’authentification passive
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
+source-git-commit: 914ef0b9baaf5c51e6c26a280af9102ea0df5271
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
 
 ---
-
 
 # SSO via l’authentification passive
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Ce document décrit la mise en oeuvre du flux d’authentification passive et son fonctionnement avec notre approche standard de l’authentification unique.
 
-## Utilisation
+## Usectes
 
 L’authentification Adobe Primetime active l’authentification unique (SSO) entre les applications et les sites. Une fois qu’un utilisateur s’est connecté à l’aide de ses informations d’identification MVPD, l’authentification Adobe Primetime génère un jeton sécurisé qui représente la session d’authentification du MVPD et lie ce jeton à l’appareil de l’utilisateur à l’aide d’un identifiant de périphérique. L’authentification Adobe Primetime stocke le jeton/ID de périphérique sur un serveur ou sur l’appareil.
 
@@ -28,15 +28,15 @@ Tant que le jeton est toujours valide, les utilisateurs s’affichent directemen
 
 
 
-Le cas d’utilisation commerciale présenté ici est très spécifique : que l’utilisateur DOIT être authentifié au moins une fois pour chaque site visité. Cela permet au MVPD d’appliquer des règles de fonctionnement associées à la session authN qui peuvent varier selon le réseau. Elle entre en conflit avec la promesse TVE actuelle qu’un utilisateur ne doit se connecter qu’une seule fois et sera authentifié sur tous les sites qui font partie de l’écosystème d’authentification Adobe Primetime.
+Le cas d’utilisation commerciale présenté ici est une exigence très spécifique : l’utilisateur DOIT être authentifié au moins une fois pour chaque site visité. Cela permet au MVPD d’appliquer des règles de fonctionnement associées à la session authN qui peuvent varier selon le réseau. Elle entre en conflit avec la promesse TVE actuelle qu’un utilisateur ne doit se connecter qu’une seule fois et sera authentifié sur tous les sites qui font partie de l’écosystème d’authentification Adobe Primetime.
 
 
 
-Pour conserver la règle de fonctionnement, mais aussi une bonne expérience utilisateur, le MVPD NE nécessite PAS qu’un utilisateur fournisse manuellement des informations d’identification. Nous pouvons bénéficier du cookie de session précédemment défini et tenter d’effectuer une réauthentification automatique à l’aide du flux passif ; du point de vue de l’utilisateur, il apparaît comme étant automatiquement connecté.
+Pour conserver la règle de fonctionnement, mais aussi une bonne expérience utilisateur, le MVPD n’exige PAS qu’un utilisateur fournisse manuellement des informations d’identification. Nous pouvons tirer parti du cookie de session précédemment défini et essayer d’effectuer une réauthentification automatique à l’aide du flux passif ; du point de vue de l’utilisateur, il apparaîtra comme étant connecté automatiquement.
 
 
 
-Pour résoudre ces problèmes, nous avons mis en oeuvre 2 fonctionnalités distinctes : l’authentification par réseau et l’authentification passive. Les MVPD prennent en charge l’authN passif SAML lorsqu’ils se contentent de réauthentifier un utilisateur s’il existe une session authN sur l’IdP, quel que soit le site sur lequel cette session a été créée.
+Pour résoudre ces problèmes, nous avons mis en place 2 fonctionnalités distinctes : authentification par réseau et prise en charge de l’authentification passive. Les MVPD prennent en charge l’authN passif SAML lorsqu’ils se contentent de réauthentifier un utilisateur s’il existe une session authN sur l’IdP, quel que soit le site sur lequel cette session a été créée.
 
 
 
@@ -101,8 +101,10 @@ Exemple de requête SAML Voici un exemple de requête SAML pour le flux authN pa
 </saml2p:AuthnRequest>
 ```
 
-Les MVPD de règles métier ont des restrictions de domaine de portée d’authentification unique spécifiques. Par exemple, seuls certains domaines peuvent être autorisés par certains MVPD (SSO pour la même société de médias, mais pas entre plusieurs entreprises).
-Certains MVPD peuvent nécessiter l’application de règles d’authentification différentes. Par exemple, les MVPD peuvent avoir des TTL d’authentification différents selon les réseaux différents. En outre, les MVPD peuvent activer l’authentification à domicile pour certains réseaux, mais pas pour d’autres (les cas d’utilisation du contrôle parental sont fortement représentés ici).
+## Règles de fonctionnement
+
+Les MVPD ont des restrictions de domaine de portée d’authentification unique spécifiques. Par exemple, seuls certains domaines peuvent être autorisés par certains MVPD (SSO pour la même société de médias, mais pas entre plusieurs entreprises).
+Certains MVPD peuvent nécessiter l’application de règles d’authentification différentes. Par exemple, les MVPD peuvent avoir des TTL d’authentification différents par réseau. En outre, les MVPD peuvent activer l’authentification à domicile pour certains réseaux, mais pas pour d’autres (les cas d’utilisation du contrôle parental sont fortement représentés ici).
 
 
 Ces exigences commerciales doivent garder à l’esprit que le cas d’utilisation principal est que l’utilisateur ne doit pas être tenu de se reconnecter après s’être connecté avec son MVPD.
@@ -111,7 +113,9 @@ Pour ce faire, utilisez l’authentification par réseau avec l’indicateur aut
 
 
 
-Limites connues d’iOS : en raison de la nature du stockage local dans iOS, les flux d’authentification unique ne fonctionnent pas sur iOS pour les applications développées par différents fournisseurs. Pour plus d’informations sur la connexion unique dans iOS 8 et versions ultérieures, reportez-vous à cette note technique.
+## Limites connues
+
+iOS : en raison de la nature du stockage local dans iOS, les flux d’authentification unique ne fonctionnent pas sur iOS pour les applications développées par différents fournisseurs. Pour plus d’informations sur la connexion unique dans iOS 8 et versions ultérieures, reportez-vous à cette note technique.
 
 
 <!--
