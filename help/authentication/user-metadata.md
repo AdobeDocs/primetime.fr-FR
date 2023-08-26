@@ -2,7 +2,7 @@
 title: Métadonnées utilisateur
 description: Métadonnées utilisateur
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 6779e20e37f1396402f36564e2c85d48d8c581a3
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -33,8 +33,6 @@ ht-degree: 0%
 
 Récupérez les métadonnées que MVPD a partagées à propos de l’utilisateur authentifié.
 
-<div>
-
 
 | Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +52,8 @@ Récupérez les métadonnées que MVPD a partagées à propos de l’utilisateur
 > 
 >Les informations de métadonnées utilisateur doivent être disponibles une fois le flux d’authentification terminé, mais peuvent être mises à jour sur le flux d’autorisation, en fonction du MVPD et du type de métadonnées.
 
-</br>
+
+
 
 ## Exemple de réponse {#sample-response}
 
@@ -87,6 +86,6 @@ Après un appel réussi, le serveur répond avec un objet XML (par défaut) ou J
 
 En cas d’erreur, le serveur renvoie un objet XML ou JSON spécifiant un message d’erreur détaillé.
 
-Pour plus d’informations, voir [Métadonnées utilisateur](/help/authentication/user-metadata.md).
+Pour plus d’informations, voir [Métadonnées utilisateur](/help/authentication/user-metadata-feature.md).
 
 ### [Retour à la référence de l’API REST](/help/authentication/rest-api-reference.md).
