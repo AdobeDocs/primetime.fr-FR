@@ -2,9 +2,9 @@
 title: Enregistrement des retours
 description: Enregistrement des retours
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## Points de terminaison de l’API REST {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+`<REGGIE_FQDN>`:
 
 * Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+`<SP_FQDN>`:
 
 * Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ Renvoie l’enregistrement du code d’enregistrement contenant le code d’enre
 
 | Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Par exemple :</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Application de diffusion en continu</br></br>ou</br></br>Service de programmation | 1. demandeur  </br>    (composant Chemin)</br>2.  code d&#39;enregistrement  </br>    (composant Chemin) | GET | XML ou JSON contenant un code d’enregistrement et des informations. Voir schéma et exemple ci-dessous. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>Par exemple :<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | Application de diffusion en continu</br></br>ou</br></br>Service de programmation | 1. demandeur  </br>    (composant Chemin)</br>2.  code d&#39;enregistrement  </br>    (composant Chemin) | GET | XML ou JSON contenant un code d’enregistrement et des informations. Voir schéma et exemple ci-dessous. | 200 |
 
 {style="table-layout:auto"}
 
