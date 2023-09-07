@@ -2,7 +2,7 @@
 title: Enregistrement des retours
 description: Enregistrement des retours
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Production - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Évaluation - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Description {#description}
@@ -37,7 +37,7 @@ Renvoie l’enregistrement du code d’enregistrement contenant le code d’enre
 
 
 
-<div>
+
 
 
 | Point d’entrée | Appelé  </br>Par | Entrée   </br>Paramètres | HTTP  </br>Méthode | Réponse | HTTP  </br>Réponse |
@@ -46,14 +46,16 @@ Renvoie l’enregistrement du code d’enregistrement contenant le code d’enre
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Paramètre d’entrée | Description |
 | --- | --- |
 | demandeur | Identifiant du demandeur du programmeur pour lequel cette opération est valide. |
 | code d&#39;enregistrement | La valeur du code d’enregistrement qui s’afficherait sur le périphérique de diffusion (à saisir dans le flux d’authentification). |
 
-</br>
+
+
 
 ## Schéma XML de réponse {#response-xml-schema}
 
