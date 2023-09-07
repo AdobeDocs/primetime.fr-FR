@@ -2,7 +2,7 @@
 title: Métadonnées utilisateur
 description: Métadonnées utilisateur
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 4479df7985da16e8632a538f1042de05109f2392
+source-git-commit: 895438e2b915f8745d685dfc76340b18eccd48bc
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 0%
@@ -43,10 +43,10 @@ Récupérez les métadonnées que MVPD a partagées à propos de l’utilisateur
 | --- | --- |
 | demandeur | Identifiant du demandeur du programmeur pour lequel cette opération est valide. |
 | deviceId | Octets d’identifiant de l’appareil. |
-| device_info/<p>X-Device-Info | Informations sur les périphériques de diffusion en continu.<p>**Remarque**: cette variable peut être transmise à device_info en tant que paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, elle doit être transmise sous la forme X-Device-Info dans l’en-tête http. </br></br>Consultez les détails complets de la section **Transmission des informations de périphérique et de connexion** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | Type d’appareil (par exemple, Roku, PC).<p>Si ce paramètre est correctement défini, ESM propose des mesures qui sont [ventilation par type d’appareil](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) lors de l’utilisation de Clientless, de sorte que différents types d’analyses puissent être effectués pour Roku, Apple TV, Xbox, etc.<p>Voir [Avantages de l’utilisation d’un paramètre de type d’appareil sans client dans Pass etrics](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)<p>**Remarque :** La variable `device_info` remplace ce paramètre. |
-| _deviceUser_ | Identifiant de l’utilisateur de l’appareil.</br></br>**Remarque :**En cas d’utilisation, `deviceUser` doivent avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
-| _appId_ | ID/nom de l’application. <p>**Remarque :**Le `device_info` remplace ce paramètre. En cas d’utilisation, `appId` doivent avoir les mêmes valeurs que dans la variable **Créer un code d’enregistrement** requête. |
+| device_info/<p>X-Device-Info | Informations sur les périphériques de diffusion en continu.</br></br> **Remarque :** Il peut s’agir de transférer device_info comme paramètre d’URL, mais en raison de la taille potentielle de ce paramètre et des limitations de longueur d’une URL de GET, il doit être transmis sous la forme X-Device-Info dans l’en-tête http. </br></br> Consultez les détails complets de la section [Transmission des informations de périphérique et de connexion](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | Type d’appareil (par exemple, Roku, PC).</br></br> Si ce paramètre est correctement défini, ESM propose des mesures qui sont [ventilation par type d’appareil](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) lors de l’utilisation de Clientless, de sorte que différents types d’analyses puissent être effectués pour Roku, Apple TV, Xbox, etc.</br></br> Voir [Avantages de l’utilisation d’un paramètre de type d’appareil sans client dans les mesures de transmission](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br> **Remarque :** La variable `device_info` remplace ce paramètre. |
+| _deviceUser_ | Identifiant de l’utilisateur de l’appareil.</br></br> **Remarque :** En cas d’utilisation, `deviceUser` doivent avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
+| _appId_ | ID/nom de l’application. </br></br> **Remarque :** La variable `device_info` remplace ce paramètre. En cas d’utilisation, `appId` doivent avoir les mêmes valeurs que dans la variable [Créer un code d’enregistrement](/help/authentication/registration-code-request.md) requête. |
 
 >[!NOTE]
 > 
@@ -80,9 +80,9 @@ Après un appel réussi, le serveur répond avec un objet XML (par défaut) ou J
 
 À la racine de l’objet, il y a trois noeuds :
 
-* **mis à jour**: spécifie un horodatage UNIX qui représente la dernière fois où les métadonnées ont été mises à jour. Cette propriété est définie initialement par le serveur lors de la génération des métadonnées pendant la phase d’authentification. Les appels suivants (une fois les métadonnées mises à jour) génèrent un horodatage incrémenté.
-* **data**: contient les valeurs réelles des métadonnées.
-* **encrypted**: un tableau répertoriant les propriétés chiffrées. Pour déchiffrer une valeur de métadonnées spécifique, le programmeur doit effectuer un décodage Base64 sur les métadonnées, puis appliquer un déchiffrement RSA sur la valeur obtenue, en utilisant sa propre clé privée (l’Adobe chiffre les métadonnées sur le serveur à l’aide du certificat public du programmeur).
+* *mis à jour*: spécifie un horodatage UNIX qui représente la dernière fois où les métadonnées ont été mises à jour. Cette propriété est définie initialement par le serveur lors de la génération des métadonnées pendant la phase d’authentification. Les appels suivants (une fois les métadonnées mises à jour) génèrent un horodatage incrémenté.
+* *data*: contient les valeurs réelles des métadonnées.
+* *encrypted*: un tableau répertoriant les propriétés chiffrées. Pour déchiffrer une valeur de métadonnées spécifique, le programmeur doit effectuer un décodage Base64 sur les métadonnées, puis appliquer un déchiffrement RSA sur la valeur obtenue, en utilisant sa propre clé privée (l’Adobe chiffre les métadonnées sur le serveur à l’aide du certificat public du programmeur).
 
 En cas d’erreur, le serveur renvoie un objet XML ou JSON spécifiant un message d’erreur détaillé.
 
