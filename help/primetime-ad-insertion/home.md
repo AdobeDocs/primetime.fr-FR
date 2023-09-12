@@ -1,53 +1,51 @@
 ---
-title: Ad Insertion Adobe Primetime
-description: Aide à l’Ad Insertion Adobe Primetime
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+title: Adobe Primetime Ad Insertion
+description: Aide pour Adobe Primetime Ad Insertion
+exl-id: e758044e-a1f5-498a-a809-b6a351dfe8f0
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 27%
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
+# Présentation {#ptai-overview}
 
-# Aperçu {#ptai-overview}
-
-L’Ad Insertion Primetime est une solution de monétisation côté serveur dotée de fonctionnalités de suivi des publicités côté client qui aide les éditeurs à créer des expériences TV de nouvelle génération dans des flux en direct, linéaires et VOD.
+Primetime Ad Insertion est une solution de monétisation côté serveur qui offre des fonctionnalités de suivi des publicités côté client. Elle permet aux éditeurs de créer des expériences télévisées de nouvelle génération dans des diffusions VOD, linéaires et en direct.
 
 ## Aide de l’Ad Insertion Primetime {#ad-insertion-user-guide}
 
-Ce guide explique comment l’Ad Insertion Primetime aide les éditeurs à maximiser les recettes publicitaires en offrant à leurs téléspectateurs des expériences publicitaires personnalisées de qualité TV sur différents appareils, même dans des situations complexes comme les événements en direct ou lors de l’utilisation de la prise de décision programmatique en temps réel.
+Ce guide explique comment l’Ad Insertion Primetime aide les éditeurs à maximiser les recettes publicitaires en offrant à leurs téléspectateurs des expériences publicitaires de qualité télévisuelle personnalisées sur différents appareils, même dans des situations complexes comme des événements en direct ou lors de l’utilisation de la prise de décision programmée en temps réel.
 
 ## Voir aussi {#ptai-see-also}
 
 | Guide de l’utilisateur | Description |
 |---|---|
-| [Commencer avec l’Ad Insertion Primetime](getting-started/get-started-overview.md) | Fournit des informations détaillées sur la façon de commencer avec l’Ad Insertion Primetime |
-| [Annonces Ad Insertion Primetime](announcements/overview.md) | Fournit les derniers articles et annonces concernant l’Ad Insertion Primetime |
-| [Notes de mise à jour de l’Ad Insertion Primetime](../release-notes/ptai-20x-release-notes.md) | Ce guide fournit des informations spécifiques à la version, aux configurations requises, aux limitations, aux problèmes résolus et aux problèmes connus. |
-| [Transcodage publicitaire juste à temps](just-in-time-transcoding/jit-transcoding-overview.md) | Explique comment l’encodage juste à temps garantit que les créatifs indépendants se lisent correctement dans vos flux HLS/DASH. |
-| [Référence technique Ad Insertion Primetime](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md) | Référence d’API technique et Bootstrap pour l’Ad Insertion Primetime. |
+| [Prise en main de Primetime Ad Insertion](getting-started/get-started-overview.md) | Fournit des informations détaillées sur la prise en main de Primetime Ad Insertion |
+| [Annonces Ad Insertion Primetime](announcements/overview.md) | Fournit les derniers articles et annonces relatifs à Primetime Ad Insertion |
+| [Notes de mise à jour de l’Ad Insertion Primetime](../release-notes/ptai-20x-release-notes.md) | Fournit des informations spécifiques à la version, aux exigences du système, aux limites, aux problèmes résolus et aux problèmes connus. |
+| [Transcodage de publicité juste à temps](just-in-time-transcoding/jit-transcoding-overview.md) | Explique comment le codage juste à temps permet aux créatifs indépendants de se relayer correctement dans vos flux HLS/DASH. |
+| [Référence technique de l’Ad Insertion Primetime](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md) | Référence d’API technique et Bootstrap pour Primetime Ad Insertion. |
 | [Surveillance et débogage](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/performance-overview.md) | Fournit des informations sur les outils de surveillance et de débogage des Ad Insertion Primetime. |
 
-## Guides d’utilisateur Primetime pour les bibliothèques côté client {#other-primetime-helps}
+## Guides de l’utilisateur Primetime pour les bibliothèques côté client {#other-primetime-helps}
 
 | Guide de l’utilisateur | Description |
 |---|---|
-| [Aide à la programmation sur Primetime](../programming/home.md) | Ce guide vous apprend à développer des applications et des lecteurs vidéo à l’aide de Java pour les appareils Android et d’Objective-C pour les appareils iOS. |
-| [Aide sur la migration et les conversions de Primetime](../migration-guides/home.md) | Décrit le processus de conversion et de migration permettant de passer de la suite Primetime TVSDK existante à la suite de nouvelle génération. |
+| [Aide à la programmation de Primetime](../programming/home.md) | Permet d’apprendre à développer des applications et des lecteurs vidéo à l’aide de Java sur les appareils Android et d’Objective-C sur les appareils iOS. |
+| [Aide sur la migration et la conversion de Primetime](../migration-guides/home.md) | Explique le processus de conversion et de migration pour passer de votre suite Primetime TVSDK existante à la suite de nouvelle génération. |
 | [Implémentation de référence](../android-reference-implementation/home.md) | Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
-| [Digital Rights Management](../digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
-| [Références API Primetime](../reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
-| [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez des fichiers PDF de la documentation archivée. |
+| [Digital Rights Management](../digital-rights-management/home.md) | Permet d’en savoir plus sur divers scénarios utilisateur dans Digital Rights Management (DRM). |
+| [Références de l’API Primetime](../reference/api-references.md) | Fournit des informations détaillées sur les fonctions TVSDK, les structures de données et autres structures de programmation. |
+| [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez les PDF de la documentation archivée. |
 
 ## Ressources utiles {#helpful-resources}
 
 * [Connaître Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Surveillance des conversions](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Surveillance de simultanéité](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Authentification Primetime](https://tve.helpdocsonline.com/home)
 
-* [Forums DRM Adobe Primetime](https://forums.adobe.com/community/adobe_access)
+* [Forums Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
 
-* [Ressources pour les développeurs Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

@@ -2,9 +2,9 @@
 title: Guide pas à pas du SDK Android
 description: Guide pas à pas du SDK Android
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ L’activité réseau d’AccessEnabler a lieu dans un autre thread, de sorte qu
 
    **Remarque :** À ce stade, l’utilisateur a la possibilité d’annuler le flux d’authentification. Si cela se produit, votre couche d’interface utilisateur est chargée d’informer AccessEnabler de cet événement en appelant `setSelectedProvider()` avec `null` comme paramètre. Cela permet à AccessEnabler de nettoyer son état interne et de réinitialiser le flux d’authentification.
 
-1. Lors d’une connexion réussie de l’utilisateur, votre couche d’application détecte le chargement d’une &quot;URL de redirection personnalisée&quot; (c.-à-d. : [http://adobepass.android.app](http://adobepass.android.app/)). Cette URL personnalisée est en fait une URL non valide qui n’est pas destinée au chargement de WebView. Il s’agit d’un signal indiquant que le flux d’authentification est terminé et que WebView doit être fermé.
+1. Lors d’une connexion réussie de l’utilisateur, votre couche d’application détecte le chargement d’une &quot;URL de redirection personnalisée&quot; (c.-à-d. : `http://adobepass.android.app`). Cette URL personnalisée est en fait une URL non valide qui n’est pas destinée au chargement de WebView. Il s’agit d’un signal indiquant que le flux d’authentification est terminé et que WebView doit être fermé.
 
 1. Fermez le contrôle et l’appel WebView `getAuthenticationToken()`, qui demande à AccessEnabler de récupérer le jeton d’authentification à partir du serveur principal.
 
@@ -207,7 +207,7 @@ L’activité réseau d’AccessEnabler a lieu dans un autre thread, de sorte qu
 
    a. Suivant le même modèle que le workflow d’authentification, le domaine AccessEnabler émet une requête à la couche de l’application de l’interface utilisateur (via l’opérateur`navigateToUrl()` callback) pour créer un contrôle WebView et demander à ce contrôle de charger l’URL du point de terminaison de fermeture de session sur le serveur principal.
 
-   b. Là encore, l’interface utilisateur doit surveiller l’activité du contrôle WebView et détecter le moment où le contrôle, lorsqu’il passe par plusieurs redirections, charge l’URL personnalisée de l’application (c’est-à-dire : [http://adobepass.android.app/](http://adobepass.android.app/)). Une fois cet événement survenu, la couche de l’application de l’interface utilisateur ferme le WebView et le processus de déconnexion est terminé.
+   b. Là encore, l’interface utilisateur doit surveiller l’activité du contrôle WebView et détecter le moment où le contrôle, lorsqu’il passe par plusieurs redirections, charge l’URL personnalisée de l’application (c’est-à-dire : `http://adobepass.android.app/`). Une fois cet événement survenu, la couche de l’application de l’interface utilisateur ferme le WebView et le processus de déconnexion est terminé.
 
    **Remarque :** Le flux de déconnexion diffère du flux d’authentification dans la mesure où l’utilisateur n’est pas tenu d’interagir de quelque manière que ce soit avec WebView. La couche de l’application de l’interface utilisateur utilise un WebView pour s’assurer que toutes les redirections sont suivies. Il est donc possible (et recommandé) de rendre le contrôle WebView invisible (c’est-à-dire masqué) pendant le processus de déconnexion.
 

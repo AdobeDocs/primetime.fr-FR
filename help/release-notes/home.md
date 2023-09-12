@@ -3,10 +3,10 @@ title: Notes de mise à jour de Primetime
 description: Notes de mise à jour de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 36%
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Bienvenue dans les notes de mise à jour d’Adobe Primetime. Les documents rép
 
 Cette version de se concentre sur les améliorations apportées aux données de télémétrie des performances publicitaires afin d’inclure les données d’appel publicitaire et de journalisation Avail.
 
-Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de l’Ad Insertion](/help/release-notes/ptai-22x-release-notes.md).
+Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour des Ad Insertion](/help/release-notes/ptai-22x-release-notes.md).
 
 ## Correctifs dans TVSDK 3.15 Android
 
@@ -36,12 +36,12 @@ Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de T
 
 | Guide de l’utilisateur | Description |
 |--- |--- |
-| [Aide à la programmation sur Primetime](/help/programming/home.md) | Ce guide vous apprend à développer des applications et des lecteurs vidéo à l’aide de Java pour les appareils Android et d’Objective-C pour les appareils iOS. |
-| [Aide sur la migration et la conversion de Primetime](/help/migration-guides/home.md) | Décrit le processus de conversion et de migration permettant de passer de la suite Primetime TVSDK existante à la suite de nouvelle génération. |
+| [Aide à la programmation de Primetime](/help/programming/home.md) | Permet d’apprendre à développer des applications et des lecteurs vidéo à l’aide de Java sur les appareils Android et d’Objective-C sur les appareils iOS. |
+| [Aide sur la migration et la conversion de Primetime](/help/migration-guides/home.md) | Explique le processus de conversion et de migration pour passer de votre suite Primetime TVSDK existante à la suite de nouvelle génération. |
 | [Implémentation de référence](/help/android-reference-implementation/home.md) | Permet de comprendre le TVSDK et de modifier les gestionnaires de fonctionnalités pour personnaliser votre lecteur personnel. |
-| [Références de l’API Primetime](/help/reference/api-references.md) | Offre des informations détaillées sur les fonctions TVSDK, les structures de données et d’autres structures de programmation. |
-| [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM) |
-| [Aide de Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des publicités dynamiques ciblées et en engageant l’audience grâce à des publicités personnalisées. |
+| [Références de l’API Primetime](/help/reference/api-references.md) | Fournit des informations détaillées sur les fonctions TVSDK, les structures de données et autres structures de programmation. |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Permet d’en savoir plus sur divers scénarios utilisateur dans Digital Rights Management (DRM). |
+| [Aide de l’Ad Insertion Primetime](/help/primetime-ad-insertion/home.md) | Explique comment monétiser du contenu en insérant sur le serveur des annonces dynamiques ciblées par les utilisateurs et en engageant l’audience avec des annonces personnalisées. |
 | [Archives](https://helpx.adobe.com/primetime/archives.html) | Téléchargez les PDF de la documentation archivée. |
 
 ## Ressources utiles
@@ -54,4 +54,3 @@ Pour obtenir d’autres correctifs et détails, voir [Notes de mise à jour de T
 
 * [Forums Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
 
-* [Ressources pour les développeurs Adobe Primetime](https://www.adobe.com/devnet/primetime.html)

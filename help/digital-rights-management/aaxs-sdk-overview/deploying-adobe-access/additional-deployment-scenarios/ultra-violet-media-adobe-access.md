@@ -1,37 +1,35 @@
 ---
-description: Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en flux continu pour configurer un écosystème complet et sécurisé de distribution de médias à base de DRM.
-title: Accès aux médias et aux Adobes UltraViolet
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en continu pour configurer un écosystème complet et sécurisé de distribution de médias DRM.
+title: Média UltraViolet et accès Adobe
+exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
+# Média UltraViolet et accès Adobe {#ultraviolet-media-and-adobe-access}
 
-# Accès aux médias et aux Adobes UltraViolet {#ultraviolet-media-and-adobe-access}
+Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en continu pour configurer un écosystème complet et sécurisé de distribution de médias DRM.
 
-Adobe Access peut être utilisé avec d’autres solutions tierces de diffusion de contenu en flux continu pour configurer un écosystème complet et sécurisé de distribution de médias à base de DRM.
+UltraViolet est un système d’authentification des droits numériques et de distribution dans le cloud qui permet aux consommateurs de contenu de divertissement numérique domestique de diffuser et de télécharger du contenu acheté sur plusieurs plateformes et appareils. Le contenu UltraViolet sera téléchargé (ou diffusé en continu) dans un format de fichier commun (CFF) à l’aide d’un chiffrement commun (CENC).
 
-UltraViolet ( [](https://www.uvvu.com/)) est un système d&#39;authentification des droits numériques et de distribution en mode cloud qui permet aux utilisateurs de contenus de divertissement numérique domestique de diffuser en continu et de télécharger du contenu acheté sur plusieurs plates-formes et appareils. Le contenu UltraViolet sera téléchargé (ou diffusé en continu) dans un format de fichier commun (CFF) à l&#39;aide de Common Encryption (CENC).
-
-Il est facile de configurer un système UltraViolet avec Adobe Access. La casse d’utilisation suivante illustre le comportement de flux de contenu :
+Il est facile de configurer un système UltraViolet avec un accès Adobe. Le cas d’utilisation suivant illustre le comportement du flux de contenu :
 
 <!--<a id="fig_cxy_dc2_44"></a>-->
 
 ![](assets/AdobeUV_web.png)
 
-1. Le propriétaire du contenu code et regroupe le contenu dans CFF. Le contenu assemblé est concédé sous licence à un détaillant pour distribution.
-1. Le détaillant télécharge le contenu vers un prestataire numérique, tel que CDN. Le contenu est désormais disponible en téléchargement. Notez que certains de ces rôles peuvent être joués par une ou plusieurs sociétés.
+1. Le propriétaire du contenu code et regroupe le contenu dans CFF. Le contenu conditionné est mis sous licence pour distribution à un détaillant.
+1. Le détaillant télécharge le contenu vers un fournisseur de services numériques, comme CDN. Le contenu est maintenant disponible en téléchargement. Notez que certains de ces rôles peuvent être joués par une ou plusieurs entreprises.
 
-   L’utilisateur final dispose d’un périphérique qui prend en charge l’Adobe AIR. En outre, l&#39;utilisateur doit installer une application compatible UltraViolet. L&#39;application comprend le code nécessaire pour analyser le fichier CFF et le présenter pour consommation au moment de l&#39;exécution. Toutes les opérations cryptographiques sensibles sont gérées dans le runtime sécurisé.
-1. L’application peut déclencher une jointure de domaine pour le périphérique, qui interagit avec le coordinateur. Le coordinateur gère un casier des droits, une base de données utilisateur et des domaines. Le gestionnaire de domaine du coordinateur est créé à l&#39;aide du SDK d&#39;accès aux Adobes pour mettre en oeuvre des opérations de jointure/sortie de domaine spécifiques à Adobe Access.
-1. L’utilisateur peut alors utiliser l’application pour sélectionner la vidéo qu’il souhaite acquérir auprès du détaillant. Le détaillant fournit généralement un portail Web et traite toute la logique commerciale.
-1. Le détaillant interagit ensuite avec le coordinateur pour ajouter un jeton de droits. Le détaillant redirige ensuite la demande vers le prestataire pour le téléchargement de contenu réel.
-1. Si le périphérique ne dispose pas encore d’une licence du contenu, il déclenche une demande de licence à l’aide du CFF. La demande comprend généralement un certificat de domaine, des informations d’identification d’utilisateur et des informations sur l’application. Le prestataire exploite un serveur de licence d&#39;accès à l&#39;Adobe (développé à l&#39;aide du Adobe Access SDK) qui suit les spécifications UltraViolet.
-1. La logique commerciale UltraViolet du prestataire interagit avec le coordinateur si nécessaire pour récupérer le jeton de droits approprié afin de déterminer si une licence de contenu doit être délivrée.
+   L’utilisateur final dispose d’un appareil qui prend en charge Adobe AIR. En outre, l’utilisateur doit installer une application compatible UltraViolet. L’application comprend le code nécessaire pour analyser le CFF et le présenter pour consommation par le runtime. Toutes les opérations cryptographiques sensibles sont gérées dans le runtime sécurisé.
+1. L’application peut déclencher une jointure de domaine pour l’appareil, qui interagit avec le coordinateur. Le coordinateur gère un casier des droits, une base de données utilisateur et des domaines. Le gestionnaire de domaine du coordinateur est créé à l’aide du SDK Adobe Access pour mettre en oeuvre des opérations de sortie/jointure de domaine spécifiques à un accès par Adobe.
+1. L’utilisateur peut ensuite utiliser l’application pour sélectionner une vidéo qu’il souhaite acquérir auprès du détaillant. Le détaillant fournit généralement un portail web et gère toute la logique commerciale.
+1. Le détaillant interagit ensuite avec le coordinateur pour ajouter un jeton de droits. Le détaillant redirige ensuite la demande vers le fournisseur de services pour le téléchargement réel de contenu.
+1. Si le périphérique ne dispose pas encore d’une licence pour le contenu, il déclenche une demande de licence à l’aide du CFF. La requête inclut généralement un certificat de domaine, des informations d’identification de l’utilisateur et des informations sur l’application. Le fournisseur de services gère un serveur de licences d’accès Adobe (développé à l’aide du SDK Adobe Access) conforme aux spécifications UltraViolet.
+1. La logique commerciale UltraViolet du fournisseur de services interagit avec le coordinateur si nécessaire pour récupérer le jeton de droits approprié afin de déterminer si une licence de contenu doit être émise.
 
-   La licence de contenu est liée au domaine. L’application cliente peut insérer la licence dans le fichier CFF. Il est désormais possible de lire le contenu dans l’application, avec l’application de toutes les règles de protection et d’utilisation gérée par le composant Accès à l’Adobe au moment de l’exécution.
-1. D&#39;autres appareils et applications appartenant au même utilisateur final peuvent être enregistrés auprès du coordinateur. Le contenu peut désormais être chargé sur d&#39;autres périphériques d&#39;accès à l&#39;Adobe sans nécessiter de transaction externe.
-
+   La licence de contenu est liée au domaine. L’application cliente peut insérer la licence dans le fichier CFF. Le contenu peut désormais être lu dans l’application, avec l’application de toutes les règles de protection et d’utilisation gérée par le composant Accès à l’Adobe dans le composant d’exécution.
+1. D’autres appareils et applications appartenant au même utilisateur final peuvent être enregistrés auprès du coordinateur. Le contenu peut désormais être chargé dans d’autres appareils Adobe Access sans nécessiter de transaction externe.
