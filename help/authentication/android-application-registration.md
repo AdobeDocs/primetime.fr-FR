@@ -1,14 +1,12 @@
 ---
 title: Enregistrement d’applications Android
 description: Enregistrement d’applications Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
 
 ---
-
-
 
 # Enregistrement d’applications Android {#android-application-registration}
 
@@ -41,7 +39,7 @@ Une instruction logicielle est un jeton JWT qui contient des informations sur vo
 * Attribuez un nom et une version à votre application et sélectionnez les plateformes sur lesquelles elle sera disponible. Android dans notre cas.
 * Indiquez un nom de domaine en effectuant une sélection dans une liste de domaines déjà configurés pour votre programmeur.
 * Envoyez vos modifications au serveur, puis revenez à l’onglet Applications enregistrées de votre canal.
-* Une liste devrait s’afficher avec toutes les applications enregistrées. Sélectionnez la **Télécharger** sur l’application que vous venez de créer. Vous devrez peut-être attendre quelques minutes avant que votre déclaration logicielle ne soit prête à être téléchargée.
+* Une liste devrait s’afficher avec toutes les applications enregistrées. Sélectionnez la variable **Télécharger** sur l’application que vous venez de créer. Vous devrez peut-être attendre quelques minutes avant que votre déclaration logicielle ne soit prête à être téléchargée.
 * Un fichier texte sera téléchargé. Utilisez son contenu comme déclaration logicielle.
 
 Pour plus d’informations, voir [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md)
@@ -50,7 +48,7 @@ Pour plus d’informations, voir [Gestion dynamique de l&#39;enregistrement des 
 
 Envoyer un ticket à `tve-support@adobe.com`. Veuillez inclure toutes les informations nécessaires, telles que le canal, le nom de l’application, la version et les plateformes. Une personne de notre équipe d’assistance créera une déclaration logicielle pour vous.
 
-## Comment utiliser le relevé logiciel ? {#how-to-use-ss}
+## Comment utiliser l’instruction logicielle ? {#how-to-use-ss}
 
 Après avoir obtenu votre instruction logicielle, vous devez la transmettre en tant que paramètre dans le constructeur Access Enabler. Nous vous recommandons d’héberger l’instruction logicielle sur un emplacement distant. Ainsi, vous pouvez facilement révoquer et modifier l’instruction logicielle sans publier une nouvelle version de votre application.
 
@@ -68,4 +66,3 @@ Dans le fichier de ressources de votre application `strings.xml` ajoutez le code
     <string name="software_statement">softwarestatement value</string>
     <string name="redirect_uri">com.domain_name</string>
 ```
-

@@ -1,35 +1,33 @@
 ---
-description: La classe CustomRangeMetadata identifie différents types de plages de temps dans un flux VOD, marqué, supprimé et remplacé. Pour chacun de ces types de plage de temps personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement de contenu publicitaire.
-title: Opérations de plage de temps personnalisées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La classe CustomRangeMetadata identifie différents types de plages temporelles dans un flux VOD, que vous marquez, supprimez ou remplacez. Pour chacun de ces types de période personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement du contenu publicitaire.
+title: Opérations de période personnalisées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
+# Opérations de période personnalisées {#custom-time-range-operations}
 
-# Opérations de plage de temps personnalisée {#custom-time-range-operations}
-
-La classe CustomRangeMetadata identifie différents types de plages de temps dans un flux VOD : marquer, supprimer et remplacer. Pour chacun de ces types de plage de temps personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement de contenu publicitaire.
+La classe CustomRangeMetadata identifie différents types de plages dans un flux VOD : marquage, suppression et remplacement. Pour chacun de ces types de période personnalisés, vous pouvez effectuer les opérations correspondantes, y compris la suppression et le remplacement du contenu publicitaire.
 
 <!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
 
-Pour la suppression et le remplacement des publicités, TVSDK utilise les modes *opération de plage de temps personnalisée* suivants :
+Pour la suppression et le remplacement des publicités, TVSDK utilise les éléments suivants : *opération de période personnalisée* modes :
 
-* **** MARKTce mode était appelé marques publicitaires personnalisées dans les versions précédentes de TVSDK. Le mode marque les heures de début et de fin des publicités qui sont déjà placées dans le flux VOD. Lorsqu&#39;il y a des marqueurs de plage de temps de type `MARK` dans le flux, un emplacement initial de `Mode.MARK` est généré par `CustomMarkerOpportunityGenerator` et résolu par `CustomRangeResolver`. Aucune publicité n&#39;est insérée.
+* **MARQUE** Ce mode était appelé marqueurs publicitaires personnalisés dans les versions précédentes de TVSDK. Le mode marque les heures de début et de fin pour les publicités déjà placées dans le flux VOD. Lorsqu’il existe des marqueurs de période de type `MARK` dans le flux, un emplacement initial de `Mode.MARK` est généré par `CustomMarkerOpportunityGenerator` et résolus par `CustomRangeResolver`. Aucune publicité n’est insérée.
 
-* **** DELETEFou  `DELETE` plages de temps, une initiale  `placementInformation` de type  `Mode.DELETE` est créée et résolue par  `CustomRangeResolver`. `DeleteRangeTimelineOperation` définit les plages à supprimer de la chronologie et TVSDK utilise  `removeByLocalTime` de l’API AVE (Adobe Video Engine) pour terminer cette opération. S’il existe des plages de DELETE et des métadonnées de prise de décision de publicité Adobe Primetime, ces plages sont d’abord supprimées, puis `AuditudeResolver` résout les publicités à l’aide du processus de prise de décision de publicité Adobe Primetime standard.
+* **DELETE** Pour `DELETE` périodes, une période initiale `placementInformation` de type `Mode.DELETE` est créé et résolu par `CustomRangeResolver`. `DeleteRangeTimelineOperation` définit les plages à supprimer de la chronologie ; TVSDK utilise `removeByLocalTime` à partir de l’API Adobe Video Engine (AVE) pour terminer cette opération. S’il existe des plages de DELETE et des métadonnées de prise de décision publicitaire Adobe Primetime, elles sont d’abord supprimées, puis la variable `AuditudeResolver` résout les publicités à l’aide du processus de prise de décision publicitaire standard d’Adobe Primetime.
 
-* **** REPLACEFou  `REPLACE` plages de temps, deux initiales  `placementInformations` sont créées, une  `Mode.DELETE` et une  `Mode.REPLACE`. `CustomRangeResolver` supprime d’abord les plages de temps, puis  `AuditudeResolver` insère les publicités de la plage spécifiée  `replaceDuration` dans la chronologie. Si aucun `replaceDuration` n&#39;est spécifié, le serveur détermine le contenu à insérer.
+* **REMPLACER** Pour `REPLACE` plages horaires, deux plages initiales `placementInformations` sont créés, un `Mode.DELETE` et un `Mode.REPLACE`. `CustomRangeResolver` supprime d’abord les périodes, puis la fonction `AuditudeResolver` insère les publicités du `replaceDuration` dans la chronologie. Si non `replaceDuration` est spécifié, le serveur détermine les éléments à insérer.
 
-Pour prendre en charge ces opérations de plage de temps personnalisée, TVSDK fournit les éléments suivants :
+Pour prendre en charge ces opérations de période personnalisées, TVSDK fournit les éléments suivants :
 
 * Résolveurs de contenu multiples
 
-   Un flux peut comporter plusieurs résolveurs de contenu en fonction du mode de signalisation publicitaire et des métadonnées publicitaires. Le comportement change avec différentes combinaisons de modes de signalisation publicitaire et de métadonnées publicitaires.
-* Plusieurs opportunités initiales à l&#39;aide de `CustomMarkerOpportunityGenerator`.
-* Nouveau mode de signalisation de publicité, `CUSTOM_RANGES`.
+  Un flux peut comporter plusieurs résolveurs de contenu en fonction du mode de signalisation de la publicité et des métadonnées de publicité. Le comportement change avec différentes combinaisons de modes de signal publicitaire et de métadonnées publicitaires.
+* Plusieurs opportunités initiales utilisant `CustomMarkerOpportunityGenerator`.
+* un nouveau mode de signalisation des publicités, `CUSTOM_RANGES`.
 
-   Les publicités sont placées en fonction des données de la période provenant d’une source externe, telle qu’un fichier JSON.
+  Les publicités sont placées en fonction des données de période d’une source externe, telle qu’un fichier JSON.

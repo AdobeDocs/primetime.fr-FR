@@ -1,13 +1,12 @@
 ---
 title: Portée du fournisseur de services
 description: Portée du fournisseur de services
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
-
 
 # Portée du fournisseur de services {#service-provoider-scoping}
 
@@ -31,7 +30,7 @@ L’authentification Adobe Primetime prend en charge les deux méthodes suivante
 
 >[!NOTE]
 >
->L’&quot;identifiant du demandeur&quot; est la manière dont l’authentification Adobe Primetime fait référence à la marque réseau du programmeur (par exemple : &quot;CNN&quot; est l&#39;une des marques du réseau Turner).
+>&quot;Identifiant du demandeur&quot; est la manière dont l’authentification Adobe Primetime fait référence à la marque réseau du programmeur (par exemple : &quot;CNN&quot; est l’une des marques du réseau Turner).
 
 ### Approche de l’émetteur SAML {#saml-issuer-approach}
 

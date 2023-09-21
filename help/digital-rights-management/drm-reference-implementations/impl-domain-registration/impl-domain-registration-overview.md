@@ -2,18 +2,16 @@
 title: Présentation
 description: Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '50'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Présentation {#implement-domain-registration-overview}
 
-# Aperçu {#implement-domain-registration-overview}
+Le serveur de licence de mise en oeuvre de référence présente deux variations de la logique métier d’enregistrement de domaine :
 
-Le serveur de licences d’implémentation de référence montre deux variations de la logique métier d’enregistrement de domaine :
-
-* **Basé sur**  l’identité : chaque utilisateur authentifié dispose d’un domaine et d’un nombre spécifique de périphériques qui peuvent le rejoindre.
-* **Anonyme**  : un grand nombre de périphériques appartiennent à un domaine et l’authentification peut ne pas être requise.
+* **Basé sur les identités** - Chaque utilisateur authentifié possède un domaine et un nombre spécifique d’appareils pouvant le rejoindre.
+* **Anonyme** - Un grand nombre d’appareils appartiennent à un domaine et l’authentification peut ne pas être requise.

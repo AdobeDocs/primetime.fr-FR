@@ -1,8 +1,7 @@
 ---
 title: Comment afficher des rapports pour les 10 principaux MVPD par personnage de programmeur.
 description: Affichez les rapports pour les 10 principaux distributeurs multicanaux de programmes de diffusion de contenu.
-exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Le compte IQ dispose de fonctionnalités pour vous aider à afficher et analyser
 
 >[!NOTE]
 >
->Seuls les MVPD disposant d&#39;un minimum de 50 000 comptes d&#39;abonnés principaux sont considérés pour obtenir ces rapports.
+>Seuls les distributeurs multicanaux qui possèdent au moins 50 000 comptes d’abonnés actifs sont considérés pour obtenir ces rapports.
 
 Pour un utilisateur programmeur connecté, trois sélections par défaut (pour afficher les rapports des dix premiers MVPD) sont disponibles :
 
@@ -43,7 +42,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs de progr
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **10 MVPD principaux en partageant le score** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 
@@ -57,7 +56,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs de progr
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **10 principaux MVPD par utilisation** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 
@@ -71,7 +70,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs multican
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **10 principaux MVPD par compte** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 

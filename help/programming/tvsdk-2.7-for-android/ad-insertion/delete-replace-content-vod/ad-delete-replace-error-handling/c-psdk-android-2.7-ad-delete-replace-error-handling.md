@@ -1,43 +1,40 @@
 ---
-description: TVSDK traite les erreurs de plage de temps en fonction du problème spécifique en fusionnant ou en réordonnant les plages de temps mal définies.
+description: TVSDK gère les erreurs de période en fonction du problème spécifique en fusionnant ou en réorganisant les périodes mal définies.
 title: Gestion des erreurs de suppression et de remplacement des publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
+# Présentation {#ad-deletion-and-replacement-error-handling-overview}
 
-# Aperçu {#ad-deletion-and-replacement-error-handling-overview}
+TVSDK gère les erreurs de période en fonction du problème spécifique en fusionnant ou en réorganisant les périodes mal définies.
 
-TVSDK traite les erreurs de plage de temps en fonction du problème spécifique en fusionnant ou en réordonnant les plages de temps mal définies.
+Gestion de TVSDK `timeRanges` erreurs via les processus de fusion et de réorganisation par défaut. Tout d’abord, le lecteur trie les périodes définies par le client en fonction de la variable *begin* temps. En fonction de cet ordre de tri, s’il existe des sous-ensembles et des intersections entre les plages, TVSDK fusionne les plages adjacentes et les relie.
 
-TVSDK gère les erreurs `timeRanges` par le biais de processus de fusion et de réorganisation par défaut. Tout d’abord, le lecteur trie les plages de temps définies par le client selon l’*heure de début*. En fonction de cet ordre de tri, s’il existe des sous-ensembles et des intersections entre les plages, TVSDK fusionne les plages adjacentes et les joint.
+TVSDK gère les erreurs de période avec les options suivantes :
 
-TVSDK traite les erreurs de plage de temps avec les options suivantes :
+* **En panne** TVSDK réorganise les périodes.
 
-* **Hors** commande, TVSDK réorganise les plages de temps.
+* **Sous-ensemble** TVSDK fusionne les sous-ensembles de périodes.
 
-* **** SubsetTVSDK fusionne les sous-ensembles de plages de temps.
+* **Intersection** TVSDK fusionne les plages intersections.
 
-* **** IntersectTVSDK fusionne les plages de temps croisées.
+* **Conflit de plages de remplacement** TVSDK sélectionne la durée de remplacement à partir du plus ancien `timeRange` qui apparaît dans le groupe en conflit.
 
-* **Remplacer les plages** conflitTVSDK sélectionne la durée de remplacement à partir du plus ancien  `timeRange` apparaissant dans le groupe en conflit.
+TVSDK gère les conflits en mode de signalisation avec les métadonnées publicitaires des manières suivantes :
 
-TVSDK gère les conflits en mode de signalisation avec les métadonnées publicitaires de différentes manières :
+* Si le mode de signalisation de la publicité est en conflit avec les métadonnées de période, les métadonnées de période ont toujours la priorité.
 
-* Si le mode de signalisation de la publicité est en conflit avec les métadonnées de la plage de temps, les métadonnées de la plage de temps ont toujours la priorité.
+  Par exemple, si le mode de signalisation de la publicité est défini comme carte du serveur ou comme indicateurs de manifeste, et qu’il existe également des plages horaires MARK dans les métadonnées de publicité, le comportement résultant est que les plages sont marquées et qu’aucune publicité n’est insérée.
+* Pour les plages REPLACE, si le mode de signalisation est défini comme carte du serveur ou comme indices manifestes, les plages sont remplacées comme spécifié dans les plages REPLACE et il n’y a pas d’insertion de publicités par le biais de la carte du serveur ou des indices manifestes.
 
-   Par exemple, si le mode de signalisation de la publicité est défini en tant que carte du serveur ou indices de manifeste et qu’il existe également des plages de temps MARK dans les métadonnées de la publicité, le comportement obtenu est que les plages sont marquées et qu’aucune publicité n’est insérée.
-* Pour les plages REPLACE, si le mode de signalisation est défini en tant que carte du serveur ou indices de manifeste, les plages sont remplacées comme spécifié dans les plages REPLACE et il n&#39;y a pas d&#39;insertion publicitaire par le biais du mappage du serveur ou des indices de manifeste.
+  Pour plus d’informations, voir *Mode de signature/Comportements de combinaison des métadonnées* dans [Effet sur l’insertion et la suppression de publicités depuis le mode de signalisation publicitaire...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
 
-   Pour plus d’informations, voir le tableau *Mode de signature / Comportements de combinaison des métadonnées* dans [Effet sur l’insertion et la suppression d’une publicité depuis le mode de signalisation publicitaire...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
+Gardez à l’esprit les éléments suivants :
 
-Souvenez-vous des points suivants :
+* Lorsque le serveur ne retourne pas valide `AdBreaks`, TVSDK génère et traite un `NOPTimelineOperation` pour l’AdBreak vide, et aucune publicité n’est lue.
 
-* Lorsque le serveur ne renvoie pas un `AdBreaks` valide, TVSDK génère et traite un `NOPTimelineOperation` pour l’AdBreak vide, et aucune publicité n’est lue.
-
-* Bien que la fonction de suppression/remplacement de publicités C3 soit destinée à être prise en charge uniquement pour VOD, si elle est spécifiée dans les métadonnées de la publicité, des plages de temps sont également traitées pour les flux en direct.
-
+* Bien que la suppression et le remplacement des publicités C3 soient prévus pour être pris en charge uniquement pour VOD, si spécifié dans les métadonnées de publicité, les plages de temps sont également traitées pour les diffusions en direct.

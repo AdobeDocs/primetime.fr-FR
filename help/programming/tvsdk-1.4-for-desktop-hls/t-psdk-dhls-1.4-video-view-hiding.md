@@ -1,31 +1,29 @@
 ---
-description: Une fois qu’une vue MediaPlayer a été utilisée pour lire une vidéo, vous pouvez la masquer et l’afficher de nouveau à l’aide d’une méthode TVSDK ou manuellement.
-title: Masquer une vue vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Une fois qu’une vue MediaPlayer a été utilisée pour lire une vidéo, vous pouvez la masquer et l’afficher à nouveau à l’aide d’une méthode TVSDK ou manuellement.
+title: Masquage d’un affichage vidéo
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Masquage d’un affichage vidéo{#hide-a-video-view}
 
-# Masquer une vue vidéo{#hide-a-video-view}
+Une fois qu’une vue MediaPlayer a été utilisée pour lire une vidéo, vous pouvez la masquer et l’afficher à nouveau à l’aide d’une méthode TVSDK ou manuellement.
 
-Une fois qu’une vue MediaPlayer a été utilisée pour lire une vidéo, vous pouvez la masquer et l’afficher de nouveau à l’aide d’une méthode TVSDK ou manuellement.
+Vous devez suspendre une vidéo avant de l’effacer ou de la déplacer à partir de l’affichage.
+* Option 1 : effacer la image vidéo avec `MediaPlayer.clearVideo`&#x200B; et remplacez le cadre ultérieurement.
+   * Mettez la vidéo en pause à masquer.
+   * Supprimez la image vidéo affichée en appelant `MediaPlayer.clearVideo`.
+   * Pour réinitialiser la variable `MediaPlayer` pour qu’il puisse être relu, appelez `replaceCurrentResource` ou `replaceCurrentItem`.
+* Option 2 : déplacez le `MediaPlayer` affichez l’écran et revenez-le plus tard sans avoir à le remplacer.
+   * Mettez la vidéo en pause à masquer.
+   * Déplacez la vue hors de la scène. Par exemple :
 
-Vous devez mettre une vidéo en pause avant de la supprimer ou de la déplacer de l’affichage.
-* Option 1 : Effacez l’image vidéo avec `MediaPlayer.clearVideo` &#x200B; et remplacez-la ultérieurement.
-   * Mettez la vidéo en pause que vous souhaitez masquer.
-   * Supprimez la trame vidéo affichée en appelant `MediaPlayer.clearVideo`.
-   * Pour réinitialiser le `MediaPlayer` afin qu&#39;il puisse être relu, appelez `replaceCurrentResource` ou `replaceCurrentItem`.
-* Option 2 : Déplacez la vue `MediaPlayer` hors de l&#39;écran et déplacez-la plus tard sans avoir à la remplacer.
-   * Mettez la vidéo en pause que vous souhaitez masquer.
-   * Sortez la vue de la scène. Par exemple :
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
-
-   * Pour afficher à nouveau la vidéo, replacez la vue sur la scène.
+   * Pour afficher à nouveau la vidéo, déplacez la vue vers la scène.

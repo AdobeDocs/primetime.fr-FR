@@ -1,8 +1,7 @@
 ---
-description: Vous pouvez configurer votre lecteur pour effectuer le suivi et analyser l’utilisation de la vidéo.
+description: Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
 title: Initialisation et configuration des analyses vidéo
-exl-id: 3f108ca4-2562-4400-b4e2-10933bde3254
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Initialisation et configuration des analyses vidéo {#initialize-and-configure-video-analytics}
 
-Vous pouvez configurer votre lecteur pour effectuer le suivi et analyser l’utilisation de la vidéo.
+Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
 
 Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous disposez des éléments suivants :
 
@@ -21,16 +20,16 @@ Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous dispos
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Important :  Ce nom de fichier de configuration JSON doit rester <span class="codeph"> ADBMobileConfig.json </span>. Le nom et le chemin d’accès de ce fichier de configuration ne peuvent pas être modifiés. Le chemin d’accès à ce fichier doit être <span class="codeph"> &lt;racine source&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>Important : Ce nom de fichier de configuration JSON doit rester <span class="codeph"> ADBMobileConfig.json </span>. Le nom et le chemin d’accès de ce fichier de configuration ne peuvent pas être modifiés. Le chemin d’accès à ce fichier doit être : <span class="codeph"> &lt;source root=""&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Point d’entrée  </span> du serveur de suivi AppMeasurement </td> 
+   <td colname="col1"> <span class="codeph"> AppMeasurement </span> point d’entrée du serveur de suivi </td> 
    <td colname="col2"> URL du point de terminaison de la collection principale Adobe Analytics (anciennement SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Point d’entrée du serveur de suivi Video Analytics </td> 
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyse vidéo. C’est là que tous les appels de suivi de pulsation vidéo sont envoyés. <p>Conseil :  L’URL du serveur de suivi des visiteurs est identique à celle du serveur de suivi des analyses. Pour plus d’informations sur la mise en oeuvre du service d’identification des visiteurs, voir <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Mise en oeuvre du service d’identification </a>. </p> </td> 
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyse vidéo. C’est là que tous les appels de suivi de pulsation vidéo sont envoyés. <p>Conseil : L’URL du serveur de suivi des visiteurs est identique à celle du serveur de suivi des analyses. Pour plus d’informations sur l’implémentation du service d’identification des visiteurs, voir <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nom du compte </td> 
@@ -42,14 +41,14 @@ Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous dispos
   </tr> 
   <tr> 
    <td colname="col1"> Éditeur </td> 
-   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil :  Cet identifiant n’est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
+   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil : Cet identifiant n’est pas seulement une chaîne portant le nom de la marque/de la télévision. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Pour configurer le suivi vidéo dans votre lecteur :
 
-1. Vérifiez que les options de temps de chargement dans le fichier de ressources `ADBMobileConfig.json` sont correctes.
+1. Vérifiez que les options de temps de chargement dans la variable `ADBMobileConfig.json` Le fichier de ressources est correct.
 
    ```
    { 
@@ -82,14 +81,14 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    Pour configurer les options de temps de chargement :
 
-   1. Vérifiez que le fichier `ADBMobileConfig.json` contient les valeurs appropriées fournies par Adobe.
-   1. Vérifiez que ce fichier se trouve dans le dossier `AdobeMobile`.
+   1. Confirmez que la variable `ADBMobileConfig.json` contient les valeurs appropriées fournies par Adobe.
+   1. Vérifiez que ce fichier se trouve dans la variable `AdobeMobile` dossier.
 
       Ce dossier doit se trouver à la racine de l’arborescence de la source de votre application.
    1. Compilez et créez votre application.
    1. Déployez et exécutez l’application groupée.
 
-      Pour plus d’informations sur ces paramètres AppMeasurement, voir [Mesure vidéo dans Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
+      Pour plus d’informations sur ces paramètres d’AppMeasurement, voir [Mesure vidéo dans Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 1. Initialisez et configurez les métadonnées de suivi de pulsation vidéo.
 
    >[!IMPORTANT]
@@ -98,7 +97,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    1. Créez une instance des métadonnées Video Analytics.
 
-      Cette instance contient toutes les informations de configuration nécessaires pour activer le suivi de pulsation vidéo. Par exemple :
+      Cette instance contient toutes les informations de configuration nécessaires pour activer le suivi de pulsation vidéo. Par exemple :
 
       ```
       - (PTVideoAnalyticsTrackingMetadata *)getVideoAnalyticsTrackingMetadata 
@@ -162,7 +161,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    1. Détruisez le suivi Video Analytics.
 
-      Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente de l’outil de suivi vidéo. Une fois que vous avez reçu l’événement de fin de contenu (ou la notification), attendez quelques minutes avant de détruire l’instance de suivi vidéo. La suppression immédiate de l’instance peut affecter la capacité du dispositif de suivi Video Analytics à envoyer un ping de fin vidéo.
+      Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente du dispositif de suivi vidéo. Une fois que vous avez reçu l’événement de fin de contenu (ou la notification), attendez quelques minutes avant de détruire l’instance de suivi vidéo. La suppression immédiate de l’instance peut affecter la capacité du dispositif de suivi Video Analytics à envoyer un ping de fin vidéo.
 
       ```
       self.videoAnalyticsTracker = nil;

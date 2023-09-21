@@ -2,25 +2,23 @@
 title: Présentation
 description: Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
+# Présentation {#overview}
 
-# Aperçu {#overview}
+Les outils de ligne de commande des mises en oeuvre de référence DRM Adobe Primetime vous permettent d’effectuer diverses tâches liées à DRM directement depuis la ligne de commande.
 
-Les outils de ligne de commande des implémentations de référence DRM Adobe Primetime vous permettent d&#39;exécuter une variété de tâches liées à DRM directement à partir de la ligne de commande.
+La mise en oeuvre de référence DRM Primetime comprend les outils de ligne de commande suivants :
 
-La mise en oeuvre de référence DRM de Primetime comprend les outils de ligne de commande suivants :
-
-* Gestionnaire de stratégies - Crée et gère les stratégies DRM
-* Media Packager - Crée des fichiers chiffrés
-* Gestionnaire de Listes de mise à jour des stratégies - Crée et affiche des listes de mise à jour des stratégies DRM
-* Gestionnaire de Listes de révocation : crée et affiche des listes de révocation.
-* ID d&#39;éditeur AIR - Calcule l&#39;ID d&#39;éditeur d&#39;une application AIR
-* Générateur de licence d&#39;utilitaire : génère des licences localement (sans demande de licence à un serveur)
-* Incorporation de licences - Incorpore les licences prégénérées dans le contenu
+* Gestionnaire de stratégies : crée et gère des stratégies DRM.
+* Media Packager : crée des fichiers chiffrés.
+* Gestionnaire de listes de mises à jour de stratégie : crée et affiche des listes de mises à jour de stratégie DRM.
+* Gestionnaire de listes de révocation : crée et affiche des listes de révocation.
+* AIR Publisher ID : calcule l’identifiant de l’éditeur d’une application AIR
+* Générateur de licence utilitaire : génère des licences localement (sans demande de licence à un serveur).
+* Incorporation de licences : incorpore les licences prégénérées dans du contenu.

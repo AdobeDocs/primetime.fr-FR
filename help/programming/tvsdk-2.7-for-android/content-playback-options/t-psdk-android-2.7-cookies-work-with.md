@@ -1,23 +1,21 @@
 ---
 description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 title: Utilisation des cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
-
-# Utilisation de cookies {#work-with-cookies}
+# Utilisation des cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
-Voici un exemple de demande au serveur clé avec une certaine authentification :
+Voici un exemple de requête au serveur clé avec une authentification :
 
-1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique que ce client est autorisé à vue du contenu.
-1. En fonction des attentes du serveur de licences, votre application génère un jeton d’authentification.
+1. Votre client se connecte à votre site web dans un navigateur et son login indique que ce client est autorisé à afficher le contenu.
+1. Selon les attentes du serveur de licences, votre application génère un jeton d’authentification.
 
    Cette valeur est transmise à TVSDK.
 1. TVSDK définit cette valeur dans l’en-tête du cookie.
@@ -29,7 +27,7 @@ Pour utiliser des cookies :
 
 Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
 
-Par exemple :
+Par exemple :
 
 ```java
 CookieManager cookieManager=new CookieManager(); 
@@ -43,11 +41,11 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 
 >[!TIP]
 >
->Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
+>Lorsque la redirection 302 est activée, la requête de publicité peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
-TVSDK requête ce `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
+TVSDK interroge cette `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et utilise automatiquement ces cookies.
 
-Le événement MediaPlayerEvent.COOKIES_UPDATED est appelé lorsque les cookies C++ sont mis à jour. Cette variable cookiesUpdateEvent possède une méthode getCookieString() qui renvoie une valeur de chaîne pour le cookie.
+L’événement MediaPlayerEvent.COOKIES_UPDATED est appelé lorsque les cookies C++ sont mis à jour. Ce cookieUpdatedEvent comporte une méthode getCookieString() qui renvoie une valeur de chaîne pour le cookie.
 
 Voici un exemple de fragment de code :
 
@@ -62,4 +60,3 @@ public void onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)
  }  
 };
 ```
-

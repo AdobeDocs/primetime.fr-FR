@@ -2,19 +2,18 @@
 title: À propos des fichiers CRL
 description: À propos des fichiers CRL
 copied-description: true
-exl-id: 126a323d-9433-4a1e-a617-2d3bbf717cce
-source-git-commit: 6a00df9c061da43f6efa49d927873db629568597
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
 # À propos des fichiers CRL {#about-crl-files}
 
-Pour fonctionner correctement, les serveurs d’individualisation et de licence doivent disposer de plusieurs fichiers de liste de révocation des certificats (CRL) mis en cache sur le disque sur le serveur d’applications en cours d’exécution (Tomcat, par exemple). Les nouveaux fichiers CRL doivent être téléchargés et mis en cache sur le disque de manière régulière. Si la période de validité des fichiers CRL sur le disque est annulée, le serveur d’individualisation refuse d’individualiser les clients et le serveur de licences refuse d’émettre des licences.
+Pour fonctionner correctement, les serveurs d’individualisation et de licence doivent disposer de plusieurs fichiers CRL (Certificate Revocation List) mis en cache sur le disque sur le serveur d’applications en cours d’exécution (Tomcat, par exemple). Les nouveaux fichiers CRL doivent être téléchargés et mis en cache sur le disque de manière régulière. Si la période de validité des fichiers CRL sur le disque est annulée, le serveur d’individualisation refusera d’individualiser les clients et le serveur de licences refusera d’émettre des licences.
 
-Les CRL mises en cache sur le disque doivent avoir des noms de fichier correspondant aux URL correspondantes. Les caractères spéciaux tels que les barres obliques &#39;:&#39; et &#39;/&#39; sont convertis en traits de soulignement &#39;_&#39; dans les noms de fichier.
+Les listes CRL mises en cache sur le disque doivent avoir des noms de fichier correspondant aux URL correspondantes. Les caractères spéciaux tels que les barres obliques &#39;:&#39; et &#39;/&#39; sont convertis en traits de soulignement &#39;_&#39; dans les noms de fichier.
 
 Voici une liste des listes CRL hébergées en externe qui sont utilisées par les serveurs d’individualisation et de licence :
 
@@ -22,19 +21,19 @@ Voici une liste des listes CRL hébergées en externe qui sont utilisées par le
 
    * URL : [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
    * Fichier : [!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * Validité : Bon pour environ 12 mois à partir de la création
+   * Validité : valable environ 12 mois à compter de la création
 
 * **CRL racine :**
 
    * URL : [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
    * Fichier : [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * Validité : Bon pour environ 5 ans à partir de la création
+   * Validité : valable environ 5 ans à partir de la création
 
 * **Dernière CRL :**
 
    * URL : [!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
    * Fichier : [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
-   * Validité : Bon pour environ 3 mois à partir de la création
+   * Validité : valable environ 3 mois à partir de la création
 
 Pour en savoir plus sur les listes CRL hébergées en externe qui peuvent être utilisées par les serveurs de licences, contactez le support Adobe.
 

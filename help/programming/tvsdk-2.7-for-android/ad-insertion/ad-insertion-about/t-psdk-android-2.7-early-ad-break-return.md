@@ -1,29 +1,27 @@
 ---
-description: Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
-title: Mise en oeuvre d’un retour anticipé de coupures publicitaires
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour l’insertion de publicités en continu, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
+title: Mise en oeuvre d’un retour de coupure publicitaire anticipée
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Mise en oeuvre d’un retour de coupure publicitaire anticipée  {#implement-an-early-ad-break-return}
 
-# Mettre en oeuvre un retour de coupure publicitaire anticipée {#implement-an-early-ad-break-return}
+Pour l’insertion de publicités en continu, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
 
-Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
+Par exemple, la durée de la coupure publicitaire dans certains événements sportifs peut ne pas être connue avant le début de la coupure. TVSDK fournit une durée par défaut, mais si le jeu reprend avant que la coupure ne se termine, la coupure publicitaire doit être quittée. Un autre exemple est un signal d’urgence pendant une coupure publicitaire dans un flux en direct.
 
-Par exemple, la durée de la coupure publicitaire dans certains événements sportifs peut ne pas être connue avant les débuts de coupure. TVSDK fournit une durée par défaut, mais si le jeu reprend avant la fin de la pause, la coupure publicitaire doit être quittée. Un autre exemple est un signal d’urgence pendant une coupure publicitaire dans un flux en direct.
+1. Abonner à `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, et `#EXT-X-CUE`, qui sont les divisions/divisions dans les marqueurs.
 
-1. Abonnez-vous à `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` et `#EXT-X-CUE`, qui sont les séparations/splices des marqueurs.
+   Pour plus d’informations sur la manière de diviser/dans les marqueurs d’annonce, voir [Générateurs d’opportunités et programmes de résolution de contenu](../../ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md).
 
-   Pour plus d’informations sur la manière de diviser/dans les marqueurs publicitaires, voir [Générateurs d’opportunités et résolveurs de contenu](../../ad-insertion/content-resolver/c-psdk-android-2.7-content-resolver-about.md).
+1. Utilisation d’une `ContentFactory`.
+1. Dans `retrieveGenerators`, utilisez le `SpliceInPlacementOpportunityGenerator`.
 
-1. Utilisez un `ContentFactory` personnalisé.
-1. Dans `retrieveGenerators`, utilisez `SpliceInPlacementOpportunityGenerator`.
-
-   Par exemple :
+   Par exemple :
 
    ```java
    public List<OpportunityGenerator> retrieveGenerators(MediaPlayerItem item) { 
@@ -33,11 +31,11 @@ Par exemple, la durée de la coupure publicitaire dans certains événements spo
    }
    ```
 
-   Pour plus d&#39;informations sur l&#39;utilisation d&#39;un `ContentFactory` personnalisé, voir l&#39;étape 1 dans [Mise en oeuvre d&#39;un générateur d&#39;opportunités personnalisé](../../ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md).
+   Pour plus d’informations sur l’utilisation d’un `ContentFactory`, voir l’étape 1 dans [Mise en oeuvre d’un créateur d’opportunités personnalisé](../../ad-insertion/content-resolver/t-psdk-android-2.7-opp-detector-impl-android.md).
 
-1. Sur la même personnalisée `ContentFactory`, implémentez `retrieveResolvers` et incluez `AuditudeResolver` et `SpliceInCustomResolver`.
+1. Sur la même `ContentFactory`, implémenter `retrieveResolvers` et inclure `AuditudeResolver` et `SpliceInCustomResolver`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    List<ContentResolver> contentResolvers = new ArrayList<ContentResolver>(); 
@@ -45,4 +43,3 @@ Par exemple, la durée de la coupure publicitaire dans certains événements spo
    contentResolvers.add(new SpliceInCustomResolver()); 
    return contentResolvers;
    ```
-

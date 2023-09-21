@@ -2,8 +2,7 @@
 title: Références de l’API Adobe Primetime
 description: Les API vous aident à créer rapidement et facilement une application ou une intégration fonctionnelle.
 topic-tags: API-references
-exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
-source-git-commit: 61904f8bf2ed2942072f75fd4b2d9b3f4bbe21f9
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%

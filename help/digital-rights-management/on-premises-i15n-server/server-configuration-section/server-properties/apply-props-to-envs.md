@@ -1,8 +1,7 @@
 ---
 description: 'Vous devez configurer les propriétés du serveur pour qu’elles reflètent votre environnement. Pour ce faire, utilisez l’une des méthodes suivantes : '
 title: Application des propriétés aux environnements de serveur
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,16 +16,16 @@ Vous devez configurer les propriétés du serveur pour qu’elles reflètent vot
 
 * [!DNL AdobeInitial.properties] - Exemple situé dans le [!DNL /shared] dossier sur le DVD
 
-   Vous pouvez utiliser ce fichier pour remplacer les propriétés définies dans le fichier WAR comme suit :
+  Vous pouvez utiliser ce fichier pour remplacer les propriétés définies dans le fichier WAR comme suit :
 
    1. Définissez les valeurs de propriété de remplacement dans [!DNL AdobeInitial.properties]
    1. Placer [!DNL AdobeInitial.properties] sur le chemin d’accès aux classes.
 
-   >[!NOTE]
-   >
-   >Adobe vous recommande d’utiliser la variable [!DNL AdobeInitial.properties] , car cela vous permet de mettre à jour vos fichiers WAR d’application sans risquer de perdre toute configuration de propriété précédente que vous avez effectuée dans la variable [!DNL flashaccess-i15n.properties] fichier .
+  >[!NOTE]
+  >
+  >Adobe vous recommande d’utiliser la variable [!DNL AdobeInitial.properties] car cela vous permet de mettre à jour vos fichiers WAR d’application sans risquer de perdre toute configuration de propriété précédente que vous avez effectuée dans la variable [!DNL flashaccess-i15n.properties] fichier .
 
-* Mécanisme des propriétés système Java.
+* Mécanisme des propriétés du système Java.
 
 Vous pouvez appliquer des propriétés individuelles à ces environnements de serveur spécifiques :
 
@@ -65,4 +64,4 @@ Le serveur utilise cet ordre de recherche pour les propriétés :
 >[!NOTE]
 >
 >Vous devez spécifier le nom d’environnement du serveur en tant que propriété système Java lors du démarrage du serveur. Par exemple, lors du démarrage de Tomcat avec [!DNL catalina.bat], définissez la variable `CATALINA_OPTS` Variable d’environnement comme suit :
->-DENVIRONMENT_NAME=[ DEV | ÉTAPE | PROD ]
+>-DENVIRONMENT_NAME=[DEV | ÉTAPE | PROD]

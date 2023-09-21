@@ -1,30 +1,28 @@
 ---
-description: Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, l’Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+description: Pour tenir compte des clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte les mesures d’utilisation et les utilise pour déterminer le montant de facturation des clients.
 title: Mesures de facturation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
-
 # Mesures de facturation {#billing-metrics}
 
-Afin d’accommoder les clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, l’Adobe collecte des mesures d’utilisation et les utilise pour déterminer le montant à facturer aux clients.
+Pour tenir compte des clients qui souhaitent payer uniquement pour ce qu’ils utilisent, plutôt qu’un taux fixe, quelle que soit leur utilisation réelle, Adobe collecte les mesures d’utilisation et les utilise pour déterminer le montant de facturation des clients.
 
-Chaque fois que le lecteur génère un événement de début de flux, TVSDK début à envoyer des messages HTTP régulièrement au système de facturation de l&#39;Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le contenu pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec l’Adobe détermine les valeurs réelles.
+Chaque fois que le lecteur génère un événement de démarrage de flux, TVSDK commence à envoyer régulièrement des messages HTTP au système de facturation de l’Adobe. La période, appelée durée facturable, peut être différente pour le contenu VOD standard, le pro VOD (publicités mid-roll activées) et le contenu en direct. La durée par défaut de chaque type de contenu est de 30 minutes, mais votre contrat avec Adobe détermine les valeurs réelles.
 
 Les messages contiennent les informations suivantes :
 
-* Type de contenu (dynamique, linéaire ou VOD)
+* Type de contenu (actif, linéaire ou VOD)
 * URL de contenu
-* Activation ou non des publicités
-* Activation ou non des publicités preroll moyennes (VOD uniquement)
+* Si les publicités sont activées
+* Si les publicités mid-roll sont activées (VOD uniquement)
 * Si le flux est protégé par DRM
-* Version et plate-forme du SDK TVSDK
+* Version et plateforme TVSDK
 
-L’Adobe préconfigure cette disposition, mais vous pouvez collaborer avec votre représentant d’Adobe Enablement pour modifier l’arrangement, travailler avec votre représentant d’Adobe Enablement.
+Adobe préconfigure cet arrangement, mais vous pouvez travailler avec votre représentant d’activation de l’Adobe pour le modifier, en collaboration avec votre représentant d’activation de l’Adobe.
 
-Pour surveiller les statistiques envoyées par TVSDK à l’Adobe, obtenez l’URL auprès de votre représentant d’activation d’Adobe et utilisez un outil de capture réseau, comme Charles, pour voir les données.
+Pour surveiller les statistiques envoyées par TVSDK à Adobe, obtenez l’URL auprès de votre représentant d’activation de l’Adobe et utilisez un outil de capture réseau, comme Charles, pour afficher les données.

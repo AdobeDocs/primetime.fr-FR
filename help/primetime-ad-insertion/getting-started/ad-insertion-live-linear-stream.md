@@ -1,10 +1,9 @@
 ---
 title: Utilisation d’un Ad Insertion dans un flux continu en direct/linéaire
 description: Utilisation de l’Ad Insertion dans un flux en direct/linéaire
-exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ L’Ad Insertion Primetime permet aux éditeurs de gérer des situations standar
 
 ## Formats de repère pris en charge {#cue-formats-supported}
 
-L’Ad Insertion Primetime prend en charge un large éventail de formats de repère standard et non standard, notamment :
+Primetime Ad Insertion prend en charge un large éventail de formats de repère standard et non standard, notamment :
 
 * DPI SCTE-35 (marqueurs d’annonce améliorés SCTE-35)
 
@@ -33,4 +32,4 @@ Les coupures publicitaires partielles peuvent être utilisées lorsqu’une visi
 
 ## Retour anticipé (sortie anticipée de la publicité) {#early-return-early-ad-exit}
 
-Dans certains cas, il peut être nécessaire de revenir plus tôt d’une coupure publicitaire dans un flux linéaire/en direct, par exemple lorsqu’un événement sportif revient soudainement à l’action. Chaque format de prise de décision relative aux publicités contient une balise &quot;indice&quot; (publicités) ou &quot;indice&quot; (contenu).  Si une balise &quot;indice&quot; est rencontrée avant la fin d’une coupure publicitaire, l’Ad Insertion Adobe Primetime honore le repère.  Contactez votre module de contenu pour activer un retour anticipé.
+Il peut être nécessaire de revenir tôt d’une coupure publicitaire dans un flux linéaire/en direct, par exemple lorsqu’un événement sportif revient soudainement à l’action. Chaque format de prise de décision relative aux publicités contient une balise &quot;indice&quot; (publicités) ou &quot;indice&quot; (contenu).  Si une balise &quot;indice&quot; est rencontrée avant la fin d’une coupure publicitaire, l’Ad Insertion Adobe Primetime honore le repère.  Contactez votre module de contenu pour activer un retour anticipé.

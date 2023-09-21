@@ -1,19 +1,17 @@
 ---
-title: Propriétés de la diffusion des clés distantes (iOS)
-description: Propriétés de la diffusion des clés distantes (iOS)
+title: Propriétés de diffusion à clé distante (iOS)
+description: Propriétés de diffusion à clé distante (iOS)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Propriétés de diffusion à clé distante (iOS){#remote-key-delivery-properties-ios}
 
-# Propriétés de la diffusion des clés distantes (iOS){#remote-key-delivery-properties-ios}
-
-Pour prendre en charge la génération de licences pour la diffusion de clés distantes à un client iOS dans Adobe Primetime DRM, vous devez spécifier le certificat du serveur de clés dans le fichier `flashaccess-refimpl.properties`.
+Pour prendre en charge la génération de licences pour la diffusion de clé à distance à un client iOS dans Adobe Primetime DRM , vous devez spécifier le certificat de serveur de clé dans la variable `flashaccess-refimpl.properties` fichier .
 
 Les propriétés suivantes ont été ajoutées dans Primetime DRM :
 
@@ -27,12 +25,11 @@ Les propriétés suivantes ont été ajoutées dans Primetime DRM :
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Certificat serveur de licences du serveur de clés émis par Adobe. </p> <p>Ce certificat génère des licences pour les périphériques iOS lorsque les métadonnées indiquent qu’un serveur clé est requis. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Certificat du serveur de licences de clé émis par Adobe. </p> <p>Ce certificat génère des licences pour les appareils iOS lorsque les métadonnées indiquent qu’un serveur de clés est requis. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Alias du certificat serveur de licences émis par Adobe d'un serveur de clés qui est stocké sur HSM. </p> <p>Lorsque vous activez HSM, vous pouvez appliquer cette propriété au lieu de la propriété <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>L’alias du certificat de serveur de licences émis par un Adobe par un serveur de clés, stocké sur HSM. </p> <p>Lorsque vous activez HSM, vous pouvez appliquer cette propriété au lieu de la propriété <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> . </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

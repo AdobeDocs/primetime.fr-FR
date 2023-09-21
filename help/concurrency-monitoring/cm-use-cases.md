@@ -27,6 +27,6 @@ Cet appel API permet au client de créer une session CM lorsque l’utilisateur 
 
 ## Activité de création de rapports {#reporting-activity}
 
-Une fois une session créée, l’application doit envoyer régulièrement des pulsations pour que ce flux reste principal. En outre, il est recommandé que l’application cliente arrête la diffusion une fois que l’utilisateur a arrêté la lecture, de sorte que la diffusion ne soit pas comptée comme principale avant l’expiration du délai.
+Une fois une session créée, l’application doit envoyer des pulsations régulièrement pour que ce flux reste actif. En outre, il est recommandé que l’application cliente arrête la diffusion une fois que l’utilisateur a arrêté la lecture, de sorte que la diffusion ne soit pas considérée comme active avant l’expiration du délai.
 
 La réponse de l’appel de pulsation peut permettre à l’application cliente de poursuivre la lecture vidéo (lorsqu’elle est conforme à la stratégie) ou lui demander d’arrêter la lecture vidéo. Si le flux vidéo n’est pas compatible, l’application cliente doit l’arrêter. La réponse fournit des informations afin que l’application cliente affiche un message d’erreur et/ou les actions disponibles pour que l’utilisateur puisse continuer la lecture.

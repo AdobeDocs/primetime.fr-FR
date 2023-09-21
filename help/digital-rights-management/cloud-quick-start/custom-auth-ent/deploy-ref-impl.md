@@ -2,20 +2,18 @@
 title: Déploiement de l’implémentation de référence BEES
 description: Déploiement de l’implémentation de référence BEES
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%
 
 ---
 
+# Déploiement de l’implémentation de référence BEES {#deploy-the-bees-reference-implementation}
 
-# Déployer l&#39;implémentation de référence BEES {#deploy-the-bees-reference-implementation}
+1. Configurez votre serveur d’applications Tomcat. (Voir votre documentation Tomcat.)
+1. Copiez le `[!DNL bees.war]` dans le fichier Tomcat [!DNL webapps/] dossier.
+1. Envoi d’une requête à `https://localhost:8080/bees`.
 
-1. Configurez votre serveur d’applications Tomcat. (Consultez votre documentation Tomcat.)
-1. Copiez le fichier `[!DNL bees.war]` dans le dossier [!DNL webapps/] de Tomcat.
-1. Envoyez une demande à `https://localhost:8080/bees`.
-
-   Si le message &quot;BEES is Operational&quot; s’affiche, le déploiement est terminé.
+   Si un message &quot;BEES est opérationnel&quot; s’affiche, le déploiement est terminé.
 1. Activez SSL sur votre serveur.

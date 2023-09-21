@@ -1,36 +1,34 @@
 ---
-description: Pour utiliser le Flash Player, assurez-vous que votre environnement répond aux exigences requises.
-title: Flash Player requis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour utiliser Flash Player, assurez-vous que votre environnement répond aux exigences nécessaires.
+title: Exigences en matière de Flash Player
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Exigences en matière de Flash Player{#flash-player-requirements}
 
-# Exigences du Flash Player{#flash-player-requirements}
-
-Pour utiliser le Flash Player, assurez-vous que votre environnement répond aux exigences requises.
+Pour utiliser Flash Player, assurez-vous que votre environnement répond aux exigences nécessaires.
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Voici les conditions requises pour le Flash Player :
+Voici les exigences du Flash Player :
 
-* Pour lire avec `Primetime.js`, installez au moins la version 23 du Flash Player.
-* Pour être invité à fournir des mises à jour vers la version 23 ou ultérieure du Flash Player, installez au moins Flash Player version 11.0.0.
+* Pour lire avec `Primetime.js`, installez au moins Flash Player version 23.
+* Pour être invité à fournir des mises à jour de la version 23 ou ultérieure de Flash Player, installez au moins la version 11.0.0 de Flash Player.
 
-## Exigences en matière d&#39;emballage {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
+## Exigences de groupement {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
 La lecture avec Flash Player nécessite les fichiers SWF suivants :
 
-* Fichier SWF d’application principal qui gère les API du navigateur TVSDK.
-* Fichier SWF `playerProductInstall.swf` qui gère l’installation et les mises à jour des Flashs Player.
+* Le fichier de SWF d’application principal qui gère les API Browser TVSDK.
+* La variable `playerProductInstall.swf` Fichier SWF qui gère l’installation et les mises à jour des Flashs Player.
 
-En outre, la lecture vidéo dans le Flash nécessite un fichier de jeton d’autorisation qui peut être un fichier SWF ou un fichier `.DAT`. Le chemin d’accès aux fichiers SWF, au fichier de jeton d’autorisation, ainsi que le nom et le type de fichier de jeton peuvent être spécifiés à l’aide des API AdobePSDK.
+En outre, la lecture vidéo en Flash nécessite un fichier de jeton d’autorisation, qui peut être un SWF ou un `.DAT` fichier . Le chemin d’accès aux fichiers du SWF, au fichier de jeton d’autorisation, ainsi qu’au nom et au type du fichier de jeton peuvent être spécifiés à l’aide des API AdobePSDK.
 
-Par exemple :
+Par exemple :
 
 ```js
 // Set relative or http path to directory containing SWF.  
@@ -47,4 +45,3 @@ AdobePSDK.setAuthorizationTokenFilename("hlsaf_localhost.swf");
 //Set the token type, "DAT" or "SWF". Defaults to "DAT" 
 AdobePSDK.setAuthorizationTokenType("SWF");
 ```
-

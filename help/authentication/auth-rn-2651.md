@@ -34,4 +34,4 @@ Cette version ajoute les éléments suivants :
 
 L’objectif initial est de surveiller le comportement des applications afin d’établir les valeurs limites appropriées et aucune limite ne sera appliquée dans le cadre de cette version. Dans les cas où le trafic généré par une application spécifique dépasse certaines limites, nous collaborerons avec chaque client pour valider l’implémentation.
 
-Les règles de limitation de débit seront appliquées plus tard cette année, une fois le trafic généré à partir de toutes les applications du client validées.
+Les règles de limitation de taux seront appliquées plus tard cette année, une fois le trafic généré à partir de toutes les applications du client validées.

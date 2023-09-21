@@ -1,34 +1,31 @@
 ---
-description: Vous pouvez ajouter le comportement du navigateur TVSDK pour mettre en pause et lire les boutons.
+description: Vous pouvez ajouter le comportement Browser TVSDK pour suspendre et lire les boutons.
 title: Lecture et mise en pause d’une vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Lecture et mise en pause d’une vidéo{#play-and-pause-a-video}
 
-# Lecture et mise en pause d’une vidéo {#play-and-pause-a-video}
+Vous pouvez ajouter le comportement Browser TVSDK pour suspendre et lire les boutons.
 
-Vous pouvez ajouter le comportement du navigateur TVSDK pour mettre en pause et lire les boutons.
-
-1. Créez un bouton Pause/Lecture qui effectue les opérations suivantes.
-   1. Attendez que votre lecteur soit au moins à l’état PRÉPARÉ.
-   1. Pour début la lecture, appelez la méthode de lecture du navigateur TVSDK :
+1. Créez un bouton de pause/lecture qui effectue les opérations suivantes.
+   1. Attendez que votre lecteur soit à au moins l’état PRÉPARÉ .
+   1. Pour démarrer la lecture, appelez la méthode de lecture Browser TVSDK :
 
       ```js
       play() → {AdobePSDK.PSDKErrorCode.SUCCESS}
       ```
 
-   1. Pour mettre la lecture en pause, appelez la méthode de mise en pause du navigateur TVSDK :
+   1. Pour mettre la lecture en pause, appelez la méthode de pause Browser TVSDK :
 
       ```java
       void pause() throws IllegalStateException;
       ```
 
-1. Prêtez attention au événement `AdobePSDK.MediaPlayerStatusChangeEvent` pour rechercher les erreurs ou prendre d&#39;autres mesures appropriées.
+1. Écoute de la `AdobePSDK.MediaPlayerStatusChangeEvent` pour rechercher des erreurs ou pour prendre d’autres mesures appropriées.
 
-   Le navigateur TVSDK déclenche ce événement lorsque des méthodes pause ou play sont appelées et transmet des informations sur l’objet événement, y compris le nouvel état, tel que `MediaPlayerStatus.PLAYING` ou `MediaPlayerStatus.PAUSED`.
-
+   Le TVSDK du navigateur déclenche cet événement lorsque des méthodes de mise en pause ou de lecture sont appelées et transmet des informations sur l’objet d’événement, y compris le nouvel état, tel que `MediaPlayerStatus.PLAYING` ou `MediaPlayerStatus.PAUSED`.

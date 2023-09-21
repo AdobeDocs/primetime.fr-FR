@@ -1,14 +1,12 @@
 ---
 description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 title: Ignorer les coupures publicitaires pour une période
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
 
 ---
-
 
 # Ignorer les coupures publicitaires pour une période {#skip-ad-breaks-for-a-period-of-time}
 
@@ -16,9 +14,9 @@ Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’uti
 
 >[!IMPORTANT]
 >
->En cas de recherche interne pour ignorer une publicité, la lecture peut présenter une légère pause.
+>En cas de recherche interne pour ignorer une publicité, il peut y avoir une légère pause dans la lecture.
 
-L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
+L’exemple suivant d’un sélecteur de stratégie de publicité personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur a visionné une coupure publicitaire.
 
 1. Enregistrez l’heure actuelle du système lorsque l’utilisateur termine de regarder une coupure publicitaire.
 
@@ -32,7 +30,7 @@ L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ig
    }
    ```
 
-1. Etendez le sélecteur de stratégie d’annonce par défaut pour remplacer le comportement par défaut.
+1. Étendez le sélecteur de stratégie de publicité par défaut pour remplacer le comportement par défaut.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
@@ -188,4 +186,3 @@ L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ig
        } 
    } 
    ```
-

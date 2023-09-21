@@ -1,13 +1,12 @@
 ---
 title: Échange de métadonnées utilisateur MVPD
 description: Échange de métadonnées utilisateur MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%
 
 ---
-
 
 # Échange de métadonnées utilisateur MVPD
 
@@ -68,7 +67,7 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-L’authentification Adobe Primetime prend en charge une autorisation plus granulaire, jusqu’au niveau de la ressource, lorsqu’elle est prise en charge par le MVPD et le programmeur. La ressource et ses métadonnées sont opaques à l’Adobe ; l’objectif est d’établir un format standard pour la spécification de l’ID de ressource et des métadonnées d’une manière normalisée, afin d’envoyer des ID de ressource à différents MVPD.
+L’authentification Adobe Primetime prend en charge une autorisation plus granulaire, jusqu’au niveau de la ressource, lorsqu’elle est prise en charge à la fois par le MVPD et par le programmeur. La ressource et ses métadonnées sont opaques à Adobe. L’objectif est d’établir un format standard pour spécifier l’ID de ressource et les métadonnées de manière normalisée, afin d’envoyer des ID de ressource à différents MVPD.
 
 >[!NOTE]
 >
@@ -129,34 +128,34 @@ Les cas d’utilisation sont en constante évolution et se développent à mesur
 * Informations de connexion réelles de l’utilisateur, telles qu’elles sont hachées par le MVPD
 * Peut être utilisé pour indiquer des problèmes avec ou pour des utilisateurs spécifiques
 * Chiffré
-* Prise en charge MVPD : Tous les MVPD
+* Prise en charge MVPD : tous les MVPD
 
 ### Identifiant utilisateur du foyer {#household-user-id}
 
 * Permet d’obtenir de bonnes informations sur les mesures
 * Chiffré
-* Prise en charge MVPD : Certains MVPD
+* Prise en charge MVPD : certains MVPD
 
 ### Code postal {#zip-code}
 
 * Code postal de facturation de l’utilisateur
 * Principalement utilisé pour appliquer les règles de période de gel des événements sportifs
 * Peut être fourni avec la réponse AuthZ pour les mises à jour rapides.
-* Prise en charge MVPD : Certains MVPD
+* Prise en charge MVPD : certains MVPD
 
 ### Évaluation max. (contrôle parental) {#max-rating-parental-control}
 
 * AuthN initialement, plus l’actualisation AuthZ
 * Filtrage du contenu en dehors de l’interface utilisateur
 * Scores MPAA ou VChip
-* Prise en charge MVPD : Certains MVPD
+* Prise en charge MVPD : certains MVPD
 
 ### Liaison de canal {#channel-line-up}
 
-* Les MVPD peuvent fournir une liste des canaux que l’utilisateur est autorisé à afficher
+* Les MVPD peuvent fournir une liste des canaux que l’utilisateur est autorisé à afficher.
 * Permet d’effectuer un aperçu rapide de l’interface utilisateur.
 * La spécification OLCA permet cela sous la forme d’une instruction AttributeStatement dans la réponse AuthN.
-* Prise en charge des MVPD : Certains MVPD
+* Prise en charge des MVPD : certains MVPD
 
 <!--
 >[!RELATEDINFORMATION]

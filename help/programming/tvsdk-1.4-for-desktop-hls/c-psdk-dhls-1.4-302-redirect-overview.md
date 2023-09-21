@@ -1,39 +1,37 @@
 ---
-description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
-title: Optimisation de la redirection HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer plus efficacement la charge.
+title: Optimisation des redirections HTTP 302
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Optimisation des redirections HTTP 302{#http-redirect-optimization}
 
-# Optimisation de la redirection HTTP 302{#http-redirect-optimization}
+L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer plus efficacement la charge.
 
-L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
+Si une requête de manifeste principale est redirigée et que l’optimisation 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires.
 
-Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires.
+Cette fonctionnalité est désactivée par défaut et vous pouvez la modifier.
 
-Cette fonction est désactivée par défaut et vous pouvez modifier ce paramètre.
+Si vous activez cette fonction, elle ne fonctionne correctement que si *all* des conditions suivantes sont vraies ; dans le cas contraire, aucune optimisation de la redirection ne se produit et 302 réponses continuent à se produire :
 
-Si vous activez cette fonction, elle ne fonctionne correctement que si *toutes* des conditions suivantes sont vraies ; dans le cas contraire, aucune optimisation de la redirection n’est effectuée et 302 réponses continuent à se produire :
-
-* Votre application a été compilée pour Adobe Flash Player 11.8, en utilisant `-swf-version` 21 ou une version ultérieure.
-* Les utilisateurs finaux ont installé Adobe Flash Player 11.8 ou version ultérieure.
+* Votre application a été compilée pour Adobe Flash Player 11.8, à l’aide de `-swf-version` 21 ou version ultérieure.
+* Les utilisateurs finaux disposent d’Adobe Flash Player 11.8 ou d’une version ultérieure.
 
 >[!IMPORTANT]
 >
->Pour vous assurer que les cookies sont transmis avec les demandes d’annonce, désactivez la redirection 302. Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine d’origine du cookie.
+>Pour vous assurer que les cookies sont transmis avec les demandes d’annonce, désactivez la redirection 302. Lorsque la redirection 302 est activée, la requête de publicité peut être redirigée vers un domaine différent du domaine d’origine du cookie.
 
-## Désactivation ou activation de l&#39;optimisation de la redirection 302 {#section_D6687FC44C61446F878008B629A5FA19}
+## Désactivation ou activation de l’optimisation de la redirection 302 {#section_D6687FC44C61446F878008B629A5FA19}
 
-Utilisez la propriété `useRedirectedUrl` pour activer la redirection 302 (true) ou la désactiver (false).
+Utilisez la variable `useRedirectedUrl` pour activer la redirection 302 (true) ou la désactiver (false).
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
-Par exemple :
+Par exemple :
 
 ```
 // Set useRedirectedUrl property to true 
@@ -50,4 +48,3 @@ var mediaResource = new MediaResource( url, MediaResourceType.HLS, result);
 // load the resource 
 mediaPlayer.replaceCurrentResource( mediaResource, mediaPlayerItemConfig );
 ```
-

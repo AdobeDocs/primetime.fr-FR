@@ -1,18 +1,16 @@
 ---
-description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+description: TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques QoS, tels que la mise en mémoire tampon et la recherche d’événements.
 title: Événements QoS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
-
 # Événements QoS{#qos-events}
 
-TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques QoS, tels que la mise en mémoire tampon et la recherche d’événements.
 
 L’exemple suivant illustre une progression type de ces événements :
 
@@ -34,4 +32,3 @@ private function onSeekCompleted(event:SeekEvent):void { ... }
 ...  SeekEvent.SEEK_POSITION_ADJUSTED...  //if the desired 
 // seek position is modified by the current advertising policies 
 ```
-

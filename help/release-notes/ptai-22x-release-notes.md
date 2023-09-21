@@ -1,8 +1,7 @@
 ---
 title: Notes de mise à jour de PTAI 2.2.9.2
 description: Les notes de mise à jour de l’API décrivent les nouveautés ou les modifications, les problèmes résolus et connus de l’Ad Insertion Primetime en 2022.
-exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Les notes de mise à jour de l’Ad Insertion Primetime 2.x.x décrivent les nou
 
 **Lorsque :** Mercredi 7 septembre 2022 de 3 h 00 à 6 h 00, heure de l’Est
 
-* Améliorations apportées aux données de télémétrie des performances publicitaires dans l’Ad Insertion Primetime afin d’inclure des données de journalisation d’appel publicitaire et de publicité supplémentaires.
+* Améliorations des données de télémétrie des performances publicitaires dans l’Ad Insertion Primetime afin d’inclure des données d’appel publicitaire supplémentaires et de journalisation Avail.
 
 ## Améliorations et correctifs des versions précédentes
 

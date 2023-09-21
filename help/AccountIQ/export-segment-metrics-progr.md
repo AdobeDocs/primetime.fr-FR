@@ -1,7 +1,7 @@
 ---
 title: Exporter des mesures pour un programmeur et des MVPD sélectionnés dans un segment
 description: Exporter des mesures pour un programmeur et des MVPD sélectionnés dans un segment
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -19,15 +19,15 @@ Pour exporter des mesures pour des programmeurs spécifiques et les MVPD sélect
 1. Accédez à l’un des panneaux suivants :
 
    * Scores de partage globaux dans l’industrie, pour certains distributeurs multicanaux de programmes audiovisuels
-      ![](assets/ind-sharpanel-export-option.png)
+     ![](assets/ind-sharpanel-export-option.png)
 
    * Score de partage par canaux et MVPD
 
-      ![](assets/sharscorepanel-export-option.png)
+     ![](assets/sharscorepanel-export-option.png)
 
    * Nombre de comptes et d’utilisations en partageant le niveau de probabilité
 
-      ![](assets/usage-panel-export-option.png)
+     ![](assets/usage-panel-export-option.png)
 
 1. Sélectionner **Exporter** dans le coin supérieur droit du panneau.
 
@@ -35,12 +35,12 @@ Les données sont exportées au format CSV et le fichier est téléchargé local
 
 * Scores de partage au niveau du secteur pour les MVPD sélectionnés
 
-   ![](assets/export-ind-sharing-score.png)
+  ![](assets/export-ind-sharing-score.png)
 
 * Score de partage par canaux et MVPD dans le segment
 
-   ![](assets/export-risk-index-by-mvpdchannels.png)
+  ![](assets/export-risk-index-by-mvpdchannels.png)
 
 * Nombre de comptes et d’utilisations en partageant le niveau de probabilité
 
-   ![](assets/export-acc-usage.png)
+  ![](assets/export-acc-usage.png)

@@ -1,32 +1,30 @@
 ---
-description: Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
+description: Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision publicitaire Adobe Primetime.
 title: Configuration des métadonnées d’insertion de publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
+# Configuration des métadonnées d’insertion de publicités {#set-up-ad-insertion-metadata}
 
-# Configurer les métadonnées d&#39;insertion de publicité {#set-up-ad-insertion-metadata}
-
-Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
+Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision publicitaire Adobe Primetime.
 
 >[!TIP]
 >
 >La prise de décision publicitaire Adobe Primetime était auparavant connue sous le nom d’Auditude.
 
-Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.Metadata`. Lors du démarrage de la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires appropriées.
+Les métadonnées publicitaires se trouvent dans la variable `MediaResource.Metadata` . Lorsque vous démarrez la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires correctes.
 
-1. Créez l&#39;instance `AuditudeSettings`.
+1. Créez la variable `AuditudeSettings` instance.
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Définissez les paramètres de ciblage facultatifs pour la prise de décision de publicité Adobe Primetime `mediaID`, `zoneID`, `domain`.
+1. Définition de la prise de décision relative aux publicités Adobe Primetime `mediaID`, `zoneID`, `domain`et les paramètres de ciblage facultatifs.
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -44,10 +42,9 @@ Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.M
 
    >[!TIP]
    >
-   >L’ID de média est utilisé par TVSDK sous la forme d’une chaîne, convertie en valeur md5, et est utilisé pour la valeur `u` dans la demande d’URL de prise de décision et de Primetime. Par exemple :
+   >L’identifiant du média est utilisé par TVSDK sous forme de chaîne, converti en valeur md5 et utilisé pour la variable `u` dans la requête d’URL de prise de décision publicitaire Primetime. Par exemple :
    >
-   >
-   ```
+   >```
    >https://ad.auditude.com/adserver?
    >u=c76d04ee31c91c4ce5c8cee41006c97d
    >   &z=114100 
@@ -57,25 +54,25 @@ Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.M
    >   &g=1000002
    >```
 
-1. Créez une instance `MediaResource` en utilisant l’URL du flux média et les métadonnées publicitaires créées précédemment.
+1. Créez un `MediaResource` en utilisant l’URL du flux multimédia et les métadonnées publicitaires créées précédemment.
 
    ```java
    MediaResource mediaResource = new MediaResource( 
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. Chargez l&#39;objet `MediaResource` par l&#39;intermédiaire de la méthode `MediaPlayer.replaceCurrentResource`.
+1. Chargez la variable `MediaResource` via l’objet `MediaPlayer.replaceCurrentResource` .
 
-   Le `MediaPlayer` début le chargement et le traitement du manifeste de flux média.
+   La variable `MediaPlayer` démarre le chargement et le traitement du manifeste de flux multimédia.
 
-1. Lorsque `MediaPlayer` transition à l&#39;état `INITIALIZED`, obtenez les caractéristiques du flux média sous la forme d&#39;une instance `MediaPlayerItem` par le biais de la méthode `MediaPlayer.CurrentItem`.
-1. (Facultatif) Requête l’instance `MediaPlayerItem` pour déterminer si le flux est actif, qu’il comporte des pistes audio de remplacement ou qu’il soit protégé.
+1. Lorsque la variable `MediaPlayer` les transitions vers la `INITIALIZED` statut, obtenir les caractéristiques de diffusion multimédia sous la forme d’un `MediaPlayerItem` via l’instance `MediaPlayer.CurrentItem` .
+1. (Facultatif) Interrogez le `MediaPlayerItem` pour voir si la diffusion est active, qu’elle dispose de pistes audio alternatives ou si la diffusion est protégée.
 
-   Ces informations peuvent vous aider à préparer l’interface utilisateur à la lecture. Par exemple, si vous savez qu&#39;il y a deux pistes audio, vous pouvez inclure une commande d&#39;interface utilisateur qui bascule entre ces pistes.
+   Ces informations peuvent vous aider à préparer l’interface utilisateur pour la lecture. Par exemple, si vous savez qu’il existe deux pistes audio, vous pouvez inclure une commande de l’interface utilisateur qui bascule entre ces pistes.
 
-1. Appelez `MediaPlayer.prepareToPlay` pour début du processus publicitaire.
+1. Appeler `MediaPlayer.prepareToPlay` pour démarrer le workflow publicitaire.
 
-   Une fois les publicités résolues et placées dans la chronologie, l&#39;`MediaPlayer` transition à l&#39;état `PREPARED`.
-1. Appelez `MediaPlayer.play` pour début de la lecture.
+   Une fois les publicités résolues et placées dans la chronologie, la variable `MediaPlayer` les transitions vers la `PREPARED` état.
+1. Appeler `MediaPlayer.play` pour démarrer la lecture.
 
 TVSDK comprend désormais des publicités lorsque votre média est lu.

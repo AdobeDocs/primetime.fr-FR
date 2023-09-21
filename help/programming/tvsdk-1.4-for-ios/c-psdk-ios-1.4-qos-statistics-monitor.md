@@ -1,35 +1,33 @@
 ---
-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-title: Statistiques sur la qualité des services
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
+title: Statistiques de qualité du service
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Statistiques de qualité du service{#quality-of-service-statistics}
 
-# Statistiques sur la qualité du service{#quality-of-service-statistics}
+La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
 
-La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+## Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils {#section_9996406E2D814FA382B77E3041CB02BC}
 
-## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
+Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir du `PTQOSProvider` classe .
 
-Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe `PTQOSProvider`.
+La variable `PTQOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les taux d’images, les données temporelles, etc.
 
-La classe `PTQOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
-
-Il fournit également des informations sur le périphérique, telles que le modèle, le système d’exploitation et l’ID du périphérique du fabricant.
+Il fournit également des informations sur l’appareil, telles que le modèle, le système d’exploitation et l’identifiant de l’appareil du fabricant.
 
 >[!TIP]
 >
->Vous ne pouvez pas modifier la taille de la mémoire tampon de lecture, mais vous pouvez contrôler l’état de la taille de la mémoire tampon pour le débogage ou l’analyse. `PTPlaybackInformation` inclut des propriétés telles que  `playbackBufferFull` et  `playbackLikelyToKeepUp`.
+>Vous ne pouvez pas modifier la taille de la mémoire tampon de lecture, mais vous pouvez surveiller l’état de la taille de la mémoire tampon pour le débogage ou l’analyse. `PTPlaybackInformation` inclut des propriétés telles que `playbackBufferFull` et `playbackLikelyToKeepUp`.
 
-1. Instanciez un lecteur multimédia.
-1. Créez un objet `PTQOSProvider` et joignez-le au lecteur de médias.
+1. Instanciation d’un lecteur multimédia
+1. Créez un `PTQOSProvider` et joignez-la au lecteur multimédia.
 
-   Le constructeur `PTQOSProvider` prend en compte le contexte du lecteur afin de pouvoir récupérer des informations spécifiques au périphérique.
+   La variable `PTQOSProvider` le constructeur utilise un contexte du lecteur afin de pouvoir récupérer des informations spécifiques à l’appareil.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +35,7 @@ Il fournit également des informations sur le périphérique, telles que le mod�
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, tel qu’un `NSTimer`, qui récupère périodiquement les nouvelles valeurs QoS de `PTQOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, tel qu’une `NSTimer`, qui récupère régulièrement les nouvelles valeurs QoS de la variable `PTQOSProvider`. Par exemple :
 
    ```
    - (void)printPlaybackInfoLog { 
@@ -51,7 +49,7 @@ Il fournit également des informations sur le périphérique, telles que le mod�
    }
    ```
 
-1. (Facultatif) Lisez les informations spécifiques au périphérique.
+1. (Facultatif) Lisez les informations spécifiques à l’appareil.
 
    ```
     PTDeviceInformation *devInfo = qosProvider.deviceInformation; 
@@ -62,4 +60,3 @@ Il fournit également des informations sur le périphérique, telles que le mod�
    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self  
       selector:@selector(printPlaybackInfoLog) userInfo:nil repeats:YES];
    ```
-

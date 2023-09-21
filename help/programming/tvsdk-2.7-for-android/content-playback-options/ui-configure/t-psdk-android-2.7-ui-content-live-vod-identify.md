@@ -1,21 +1,19 @@
 ---
-description: Vous devrez peut-être savoir si le contenu multimédia est en direct ou sur demande (VOD).
+description: Vous devrez peut-être savoir si le contenu multimédia est en direct ou vidéo à la demande (VOD).
 title: Déterminer si le contenu est actif ou VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Déterminer si le contenu est actif ou VOD {#identify-whether-the-content-is-live-or-vod}
 
-Vous devrez peut-être savoir si le contenu multimédia est en direct ou sur demande (VOD).
+Vous devrez peut-être savoir si le contenu multimédia est en direct ou vidéo à la demande (VOD).
 
-1. Assurez-vous que le lecteur est à au moins l’état `PREPARED`.
-1. Déterminez si le contenu `MediaPlayerItem` est actif ( `true`) ou VOD ( `false`).
+1. Assurez-vous que le lecteur se trouve au moins dans la variable `PREPARED` état.
+1. Déterminez si la variable `MediaPlayerItem` le contenu est actif ( `true`) ou VOD ( `false`).
 
    ```java
    boolean isLive();

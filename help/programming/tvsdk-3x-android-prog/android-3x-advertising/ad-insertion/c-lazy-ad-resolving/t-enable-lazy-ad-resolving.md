@@ -1,32 +1,30 @@
 ---
-description: Vous pouvez activer ou désactiver la fonction Résolution des publicités en différé à l’aide du mécanisme de chargement des publicités en différé existant (la résolution des publicités en différé est désactivée par défaut).
-keywords: Lazy ; Résolution de la publicité ; Chargement de la publicité ; Délai de chargement
-title: Activer la résolution des annonces parentes
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez activer ou désactiver la fonction Résolution des publicités différées à l’aide du mécanisme de chargement de publicités différées existant (la résolution des publicités différées est désactivée par défaut).
+keywords: Lazy;résolution de publicité;chargement de publicité;delayLoading
+title: Activation de la résolution des publicités différées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
 
 ---
 
+# Activation de la résolution des publicités différées {#enable-lazy-ad-resolving}
 
-# Activer la résolution des publicités parentes {#enable-lazy-ad-resolving}
+Vous pouvez activer ou désactiver la fonction Résolution des publicités différées à l’aide du mécanisme de chargement de publicités différées existant (la résolution des publicités différées est désactivée par défaut).
 
-Vous pouvez activer ou désactiver la fonction Résolution des publicités en différé à l’aide du mécanisme de chargement des publicités en différé existant (la résolution des publicités en différé est désactivée par défaut).
+Vous pouvez activer ou désactiver la résolution des publicités différées en appelant [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) avec true ou false.
 
-Vous pouvez activer ou désactiver la résolution de publicités diffuses en appelant [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) avec true ou false.
+* Utilisation du booléen *hasDelayAdLoading* et *setDelayAdLoading* méthodes dans AdvertisingMetadata pour contrôler le délai de résolution de la publicité et le placement des publicités sur la chronologie :
 
-* Utilisez les méthodes booléennes *hasDelayAdLoading* et *setDelayAdLoading* dans AdvertisingMetadata pour contrôler le timing de la résolution de la publicité et le positionnement des publicités sur le plan de montage chronologique :
-
-   * Si *hasDelayAdLoading* renvoie false, TVSDK attend que toutes les publicités soient résolues et placées avant de passer à l’état PRÉPARÉ.
-   * Si *hasDelayAdLoading* renvoie true, TVSDK résout uniquement les publicités et les transitions initiales à l’état PRÉPARÉ.
+   * If *hasDelayAdLoading* renvoie false, TVSDK attend que toutes les publicités soient résolues et placées avant de passer à l’état PRÉPARÉ.
+   * If *hasDelayAdLoading* renvoie true, TVSDK résout uniquement les publicités initiales et les transitions à l’état PRÉPARÉ.
 
       * Les publicités restantes sont résolues et placées pendant la lecture.
-   * Lorsque *hasPreroll *ou *hasLivePreroll* renvoie false, TVSDK suppose qu’il n’y a aucune publicité preroll et début la lecture du contenu immédiatement. Il s’agit par défaut de la valeur true.
 
+   * Lorsque *hasPreroll* ou *hasLivePreroll* return false, TVSDK suppose qu’il n’y a pas de publicité preroll et commence la lecture du contenu immédiatement. Par défaut, ils sont définis sur true.
 
-**API relatives à la résolution des publicités parentes :**
+**API relatives à la résolution de publicités différée :**
 
 ```
 Class:    com.adobe.mediacore.metadata.AdvertisingMetadata 
@@ -46,11 +44,11 @@ Methods:
     public Placement.Type getPlacementType() // Returns whether
 ```
 
-Pour représenter précisément les publicités comme des indices sur une barre de défilement, écoutez le `TimelineEvent`événement et retracez la barre de défilement chaque fois que vous recevez ce événement.
+Pour représenter précisément les publicités comme repères sur une barre de défilement, écoutez le `TimelineEvent`et redessinez la barre de défilement chaque fois que vous recevez cet événement.
 
-Lorsque l’option Résolution des publicités différées est activée pour les flux VOD, toutes les coupures publicitaires sont placées sur la chronologie, mais la plupart des coupures publicitaires ne seront pas encore résolues. L&#39;application peut déterminer si ces marqueurs doivent être dessinés ou non en vérifiant le `TimelineMarker::getDuration()`. Si la valeur est supérieure à zéro, les publicités au sein de la coupure publicitaire ont été résolues.
+Lorsque la résolution différée des publicités est activée pour les flux VOD, toutes les coupures publicitaires sont placées sur la chronologie. Toutefois, de nombreuses coupures publicitaires ne seront pas encore résolues. L’application peut déterminer si ces marqueurs doivent être dessinés ou non en vérifiant la variable `TimelineMarker::getDuration()`. Si la valeur est supérieure à zéro, les publicités dans la coupure publicitaire ont été résolues.
 
-TVSDK distribue ce événement lorsqu’une coupure publicitaire a été résolue, ainsi que lorsque le lecteur transition à l’état PRÉPARÉ.
+TVSDK distribue cet événement lorsqu’une coupure publicitaire a été résolue, ainsi que lorsque le lecteur passe à l’état PRÉPARÉ .
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 

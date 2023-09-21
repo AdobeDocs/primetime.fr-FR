@@ -40,7 +40,7 @@ Pour plus d’informations, voir la documentation mise à jour .
 
 >[!NOTE]
 >
->La définition de session utilisée pour répertorier les sessions principales a été mise à jour afin d’inclure le nom de l’application et le nom du périphérique (au lieu de l’ID de l’application).
+>La définition de session utilisée pour répertorier les sessions actives a été mise à jour afin d’inclure le nom de l’application et le nom de l’appareil (au lieu de l’ID de l’application).
 
 
 

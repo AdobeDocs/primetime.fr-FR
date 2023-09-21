@@ -1,33 +1,31 @@
 ---
-description: Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu début plus tôt car une partie de la mise en mémoire tampon est déjà terminée.
-title: Instant-on
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu commence plus tôt, car une partie de la mise en mémoire tampon est déjà terminée.
+title: Instant
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Instant {#instant-on}
 
-Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu début plus tôt car une partie de la mise en mémoire tampon est déjà terminée.
+Instant-on précharge des parties du média sur un ou plusieurs canaux. Une fois qu’un utilisateur sélectionne ou change de canal, le contenu commence plus tôt, car une partie de la mise en mémoire tampon est déjà terminée.
 
-Lorsque votre lecteur est à l’état `PTMediaPlayerStatusReady`, appelez `prepareToPlay` pour précharger et traiter une partie du contenu en vue d’une lecture ultérieure.
+Lorsque votre lecteur se trouve dans la variable `PTMediaPlayerStatusReady` status, appel `prepareToPlay` pour précharger et traiter une partie du contenu en vue d’une lecture ultérieure.
 
 >[!TIP]
 >
->Si vous n&#39;appelez pas `prepareToPlay`, l&#39;appel de `play` appelle automatiquement `prepareToPlay` en premier. Le préchargement et le traitement sont terminés pour le moment.
+>Si vous n’appelez pas `prepareToPlay`, appel `play` appels automatiques `prepareToPlay` en premier. Le préchargement et le traitement sont terminés à ce stade.
 
-TVSDK complète certaines ou la totalité des tâches suivantes pour `prepareToPlay` :
+TVSDK effectue certaines ou toutes les tâches suivantes pour `prepareToPlay`:
 
-* Si la clé de métadonnées `kSyncCookiesWithAVAsset` est définie, TVSDK émet une requête au fichier M3U8 d’origine pour synchroniser les cookies.
+* Si la clé de métadonnées `kSyncCookiesWithAVAsset` est défini, TVSDK émet une requête au fichier M3U8 d’origine pour synchroniser les cookies.
 * Charge les clés de métadonnées DRM.
-* Crée et prépare certaines structures, éléments ou ressources nécessaires à la lecture du contenu.
+* Crée et prépare certaines structures, éléments ou ressources nécessaires à la lecture de contenu.
 
 >[!TIP]
 >
->Les méthodes `PTMediaPlayer` et `PTMediaPlayerItem` `prepareToPlay` sont égales. Pour éviter de créer une instance `PTMediaPlayer` distincte pour chaque ressource, utilisez la méthode `PTMediaPlayerItem`.
+>La variable `PTMediaPlayer` et `PTMediaPlayerItem` `prepareToPlay` sont égales. Pour éviter de créer une `PTMediaPlayer` pour chaque ressource, utilisez la méthode `PTMediaPlayerItem` .
 
-Instant-on vous permet de lancer simultanément plusieurs instances de lecteur de médias ou de chargeur d’élément de lecteur de médias en arrière-plan et de mettre en mémoire tampon les flux vidéo dans toutes ces instances. Lorsqu’un utilisateur modifie le canal et que le flux est mis en mémoire tampon correctement, l’appel à `play` sur le nouveau canal début la lecture plus tôt.
+Instant-on vous permet de lancer plusieurs instances de lecteur multimédia, ou instances de chargeur d’éléments du lecteur multimédia, simultanément en arrière-plan et dans la mémoire tampon des diffusions vidéo dans toutes ces instances. Lorsqu’un utilisateur modifie le canal et que la diffusion a été mise en mémoire tampon correctement, l’appel de la fonction `play` sur le nouveau canal, la lecture démarre plus tôt.

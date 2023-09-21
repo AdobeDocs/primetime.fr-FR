@@ -1,35 +1,34 @@
 ---
-description: Vous pouvez effectuer le suivi de l’utilisation des vidéos en intégrant le navigateur TVSDK à Adobe Analytics.
+description: Vous pouvez effectuer le suivi de l’utilisation de la vidéo en intégrant Browser TVSDK à Adobe Analytics.
 title: Analyses vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-
 # Analyses vidéo{#video-analytics}
 
-Vous pouvez effectuer le suivi de l’utilisation des vidéos en intégrant le navigateur TVSDK à Adobe Analytics.
+Vous pouvez effectuer le suivi de l’utilisation de la vidéo en intégrant Browser TVSDK à Adobe Analytics.
 
-Le suivi vidéo dans le navigateur TVSDK utilise le service **Adobe Analytics Video Essentials**, qui fournit des mesures d’engagement vidéo, telles que les vues vidéo, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d&#39;informations sur ce service, contactez votre représentant d&#39;Adobe.
+Le suivi vidéo dans le navigateur TVSDK utilise la variable **Principes fondamentaux des vidéos Adobe Analytics** service qui fournit des mesures d’engagement vidéo, telles que les affichages de vidéos, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d’informations sur ce service, contactez votre représentant Adobe.
 
 La procédure suivante résume les étapes d’activation du suivi vidéo dans votre lecteur :
 
 1. Initialisez et/ou configurez les composants de suivi vidéo suivants :
 
-   * **Bibliothèque**  AppMeasurement : contient la logique de base de collecte de données de bas niveau. Il s’agit de l’endroit où les données de pulsation vidéo sont accumulées et envoyées sur le réseau.
-   * **Bibliothèque**  Video Heartbeat : contient la logique de base de collecte de données Video Heartbeat. La bibliothèque Video Heartbeat accède à un sous-ensemble des API de bibliothèque AppMeasurement.
+   * **Bibliothèque d’AppMeasurements** - Contient la logique de base de la collecte de données de bas niveau. C’est là que les données de pulsation vidéo sont accumulées et envoyées sur le réseau.
+   * **Bibliothèque Video Heartbeat** - Contient la logique de base de la collecte de données de la pulsation vidéo. La bibliothèque Video Heartbeat accède à un sous-ensemble des API de bibliothèque AppMeasurement.
 
-      >[!TIP]
-      >
-      >Votre application n’interagit pas directement avec le code de pulsation vidéo. L’application utilise plutôt les API du navigateur TVSDK pour configurer les fonctionnalités de suivi vidéo de votre lecteur.
+     >[!TIP]
+     >
+     >Votre application n’interagit pas directement avec le code de pulsation vidéo. L’application utilise plutôt les API Browser TVSDK pour configurer les fonctionnalités de suivi vidéo de votre lecteur.
 
-   * **Bibliothèque**  d’identifiants visiteur : identifie de manière unique les visiteurs sur la page Web qui héberge le lecteur vidéo.
+   * **Bibliothèque VisitorID** - Identifie de manière unique les visiteurs de la page web qui héberge le lecteur vidéo.
+
    >[!IMPORTANT]
    >
-   >La fonctionnalité de suivi vidéo intégrée du SDK du navigateur dépend d’une instance AppMeasurement correctement configurée. Les éléments de suivi supposent que la bibliothèque AppMeasurement est déjà instanciée et configurée avant de configurer et d’activer le suivi vidéo. Les fonctionnalités de suivi vidéo du SDK du navigateur dépendent de l’existence d’une instance entièrement fonctionnelle et correctement configurée de la bibliothèque AppMeasurement.
+   >La fonctionnalité de suivi vidéo intégrée Browser TVSDK dépend d’une instance d’AppMeasurement correctement configurée. Les éléments de suivi supposent que la bibliothèque AppMeasurement est déjà instanciée et configurée avant de configurer et d’activer le suivi vidéo. Les fonctionnalités de suivi vidéo TVSDK du navigateur dépendent de l’existence d’une instance entièrement fonctionnelle et correctement configurée de la bibliothèque AppMeasurement.
 
-1. Configurez le rapports d’analyses vidéo côté serveur à l’aide des outils d’administration Adobe Analytics.
+1. Configurez les rapports d’analyse vidéo côté serveur à l’aide des outils d’administration Adobe Analytics.

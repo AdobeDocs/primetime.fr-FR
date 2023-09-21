@@ -1,15 +1,14 @@
 ---
 title: Plan d’intégration directe MVPD
 description: Plan d’intégration directe MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 0%
 
 ---
 
-
-# Guide de démarrage rapide MVPD : Plan d’intégration directe MVPD {#mvpd-dir-int-plan}
+# Guide de démarrage rapide MVPD : plan d’intégration directe MVPD {#mvpd-dir-int-plan}
 
 >[!NOTE]
 >
@@ -23,7 +22,7 @@ Bienvenue dans l’authentification Adobe Primetime pour TV partout.  Nous nous 
 >
 >Il s’agit du Guide de démarrage rapide pour les distributeurs de programmes vidéo multicanaux (MVPD). Si vous êtes programmeur (fournisseur de contenu), reportez-vous à la section [Guide de démarrage rapide des programmeurs](/help/authentication/programmer-kickstart-guide.md).
 
-La prise en charge est toujours disponible via le système de ticket d’authentification Primetime sur Zendesk. C’est également là que vous trouverez des exemples, de la documentation et des tutoriels vidéo pour nos processus. Pour utiliser [Zendesk](https://adobeprimetime.zendesk.com/), vous devrez vous enregistrer et créer un compte à l’adresse https://tve.zendesk.com/home. Il n’existe aucune limite quant au nombre d’utilisateurs que vous pouvez enregistrer et qui peut voir ou publier des commentaires sur un ticket déposé. Toutes les questions relatives à l’assistance doivent être adressées à : tve-support sur adobe.com
+La prise en charge est toujours disponible via le système de ticket d’authentification Primetime sur Zendesk. C’est également là que vous trouverez des exemples, de la documentation et des tutoriels vidéo pour nos processus. Pour utiliser [Zendesk](https://adobeprimetime.zendesk.com/), vous devrez vous enregistrer et créer un compte à l’adresse https://tve.zendesk.com/home. Il n’existe aucune limite quant au nombre d’utilisateurs que vous pouvez enregistrer et qui peut voir ou publier des commentaires sur un ticket déposé. Toutes les questions d’assistance doivent être adressées à : tve-support à l’adresse adobe.com
 
 **Contacts d’équipe**:
 
@@ -67,7 +66,7 @@ Les deux parties doivent échanger les métadonnées pour tous les environnement
 
 ## 4. Autoriser la liste des adresses IP {#allow-ip-list}
 
-Les adresses IP suivantes doivent être placées sur la liste autorisée dans le pare-feu du MVPD. Veuillez contacter Adobe pour obtenir la liste des adresses IP.
+Les adresses IP suivantes doivent être whitelistées dans le pare-feu du MVPD. Veuillez contacter Adobe pour obtenir la liste des adresses IP.
 
 * L’authentification Primetime requiert l’ouverture des pare-feu sur les ports 80 et 443, afin d’autoriser l’accès aux ressources restreintes.
 
@@ -85,8 +84,8 @@ La durée de la phase de développement sera déterminée après avoir examiné 
 
 Adobe fournit différents environnements pour différentes étapes du processus de développement :
 
-* **Préqualification** (PRE-QUAL) : L’environnement PRE-QUAL contient le prochain candidat de version. Adobe intègre initialement de nouveaux partenaires dans cet environnement, avant de mettre à niveau l’intégration vers l’environnement Version . Les partenaires disposent de deux semaines pour tester l’environnement PRE-QUAL et doivent demander explicitement toute modification de la configuration PRE-QUAL (contactez votre représentant Adobe pour plus d’informations sur le processus de demande de modification). Les correctifs de bogues déclenchent de nouveaux déploiements dans cet environnement.
-* **Version** (VERSION) : La version de production actuelle d’Adobe est déployée dans un environnement en ligne ici.
+* **Préqualification** (PRE-QUAL) : l’environnement PRE-QUAL contient le prochain candidat de version. Adobe intègre initialement de nouveaux partenaires dans cet environnement, avant de mettre à niveau l’intégration vers l’environnement Version . Les partenaires disposent de deux semaines pour tester l’environnement PRE-QUAL et doivent demander explicitement toute modification de la configuration PRE-QUAL (contactez votre représentant Adobe pour plus d’informations sur le processus de demande de modification). Les correctifs de bogues déclenchent de nouveaux déploiements dans cet environnement.
+* **Version** (VERSION) : la version de production actuelle de l’Adobe est déployée dans un environnement en ligne ici.
 
 Pour plus d’informations sur l’utilisation des environnements d’Adobe, voir [Présentation des environnements Adobe](/help/authentication/understanding-the-adobe-environments.md)
 
@@ -94,11 +93,11 @@ Pour plus d’informations sur l’utilisation des environnements d’Adobe, voi
 
 En fonction des métadonnées reçues du MVPD, Adobe crée et configure un nouveau MVPD dans le système d’authentification Primetime. Il sera déployé dans l’environnement d’évaluation prédéfini d’Adobe et configuré avec notre programmeur de test (TestDistributors).
 
-Le MVPD doit effectuer le même déploiement dans son environnement d’assurance qualité/d’évaluation/de test/de test.
+Le MVPD doit effectuer le même déploiement dans son environnement de contrôle qualité/d’évaluation/de test.
 
 ## 8. Test et dépannage {#tes-troubleshoot}
 
-Au cours de cette phase, Adobes et le test MVPD et résolvez les problèmes d’intégration. Pour aider à tester l’intégration, l’équipe d’authentification Primetime peut utiliser le site de test de l’API d’Adobe. Pour en savoir plus sur l’utilisation du site de test d’API d’Adobe, voir [Tester les flux d’authentification et d’autorisation à l’aide du site de test de l’API Adobe](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
+Au cours de cette phase, Adobe et le test MVPD et résolvez les problèmes d’intégration. Pour aider à tester l’intégration, l’équipe d’authentification Primetime peut utiliser le site de test de l’API d’Adobe. Pour en savoir plus sur l’utilisation du site de test d’API d’Adobe, voir [Tester les flux d’authentification et d’autorisation à l’aide du site de test de l’API Adobe](/help/authentication/test-authn-authz-flows-using-adobes-api-test-site.md).
 
 Une fois le test et la résolution des problèmes terminés, l’intégration est activée dans l’environnement d’évaluation de la version d’Adobe. À ce stade, Adobe peut intégrer le MVPD à un programmeur réel.
 

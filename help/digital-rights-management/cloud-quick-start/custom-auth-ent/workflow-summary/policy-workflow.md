@@ -2,10 +2,9 @@
 title: Détails du workflow de stratégie
 description: Détails du workflow de stratégie
 copied-description: true
-exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -54,7 +53,7 @@ Procédez comme suit pour associer ce jeton à Primetime Cloud DRM , de sorte qu
 
 Instanciation de la variable `DRMManager` avec les métadonnées DRM du contenu qui a été mis en package pour Primetime Cloud DRM.
 
-Le `setAuthenticationToken()` fonctionne en associant le tableau d’octets donné à l’URL du serveur de licences fournie dans les métadonnées DRM utilisées pour instancier. `DRMManager`.
+La variable `setAuthenticationToken()` fonctionne en associant le tableau d’octets donné à l’URL du serveur de licences fournie dans les métadonnées DRM utilisées pour instancier. `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  

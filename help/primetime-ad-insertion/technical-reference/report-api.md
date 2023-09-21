@@ -1,8 +1,7 @@
 ---
 title: API de rapport
-description: API du rapport Auditude
-exl-id: 50eb4869-3765-4591-8c41-794b29d50044
-source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
+description: API de rapport Auditude
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -30,17 +29,17 @@ Pour explorer le [!DNL Primetime Ad Insertion] APIs voir [Points de terminaison 
 ## Paramètres de requête
 
 
-| Nom | Significativité | Type de valeur | Obligatoire ? | Valeur par défaut | Contraintes | Exemple/Valeurs d’exemple valides |
+| Nom | Significativité | Type de valeur | Obligatoire ? | Valeur par défaut | Contrainte | Exemple/Valeurs d’exemple valides |
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| endDate | Date de fin des données du rapport | date | Y | AUCUN | pas plus récent qu’hier en UTC-8 | ####### |
-| filtres | filtrer sur une ou plusieurs colonnes | string | N | AUCUN | ad_config_id , zone_id | ad_config_id=990,900;state=principal |
-|  |  |  |  |  | Lorsque metaData est défini sur &quot;true&quot; dans la requête, vous pouvez également filtrer par nom. |  |
-|  |  |  |  |  |  | Plusieurs clés de filtre sont séparées par des points-virgules. |
-|  |  |  |  |  |  | Utiliser des valeurs séparées par des virgules pour fournir une liste de valeurs pour la clé de filtre |
+| endDate | Date de fin des données du rapport | date | Y | AUCUN | pas plus récent qu’hier en UTC-8 | ######## |
+| filtres | filtrer sur une ou plusieurs colonnes | string | N | AUCUN | ad_config_id , zone_id | ad_config_id=990,900;state=active |
+|          |                                                                                               |                |                |                     | Lorsque metaData est défini sur &quot;true&quot; dans la requête, vous pouvez également filtrer par nom. |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Plusieurs clés de filtre sont séparées par des points-virgules. |
+|          |                                                                                               |                |                |                     |                                                                                    | Utiliser des valeurs séparées par des virgules pour fournir une liste de valeurs pour la clé de filtre |
 | groupBy | Regroupez par heure d’activation (année \| mois \| jour) ou ad_config_id. Adconfig est synonyme d’AdRule. | string | N | AUCUN | y \| m \| d , ad_config_id | m , ad_config_id |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  | Pour groupBy à l’heure, indiquez l’une des valeurs y ou m ou d |
-|  |  |  |  |  |  |  |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Pour groupBy à l’heure, indiquez l’une des valeurs y ou m ou d |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
 
 
 
@@ -49,14 +48,15 @@ Pour explorer le [!DNL Primetime Ad Insertion] APIs voir [Points de terminaison 
 | Nom | Type de valeur | Obligatoire | Exemple de valeur | Significativité |
 |-----------------------|----------------|---------------|-------------------------------------|------------------------------------|
 | Accepter | string | Y | text/csv pour CSV | Type de réponse attendue de l’API |
-|  |  |  | application/json ou &#39;*/*&#39; pour JSON |  |
+|                       |                |               | application/json ou &#39;*/*&#39; pour JSON |                                    |
 | Jeton d’autorisation | string | Y | xyz | jeton d’autorisation |
 | x-api-key | string | Y | xyz | Clé API |
-| x-gw-ims-org-id | string | Y | xyz12345 | Identifiant de l’organisation IMS de votre compte |
+| x-gw-ims-org-id | string | Y | xyz12345 | ID d’organisation IMS de votre compte |
 
 * Vous pouvez générer le jeton d’autorisation (également appelé jeton d’accès) en suivant les étapes présentées dans la page d’aide sur l’authentification JWT d’Adobe.io.
-   >[!NOTE]
-   >Le jeton d’autorisation expire après 24 heures. Ainsi, si vous utilisez l’API de rapport avec un script récurrent, veillez à générer le jeton d’authentification avant son expiration ou lorsque vous obtenez une erreur Oauth indiquant que le jeton n’est pas valide.
+  >>
+  [!NOTE]
+  >Le jeton d’autorisation expire après 24 heures. Ainsi, si vous utilisez l’API de rapport avec un script récurrent, veillez à générer le jeton d’authentification avant son expiration ou lorsque vous obtenez une erreur Oauth indiquant que le jeton n’est pas valide.
 
 * Pour définir les valeurs correctes dans l’en-tête de la requête et générer un jeton d’autorisation (à l’aide de l’authentification JWT), vous devez connaître les configurations suivantes pour votre compte. Contactez l’équipe d’assistance de Primetime pour obtenir ces valeurs.
 Identifiant du compte technique
@@ -90,7 +90,7 @@ Par défaut, le résultat de la requête de l’API de rapport est au format JSO
 
 ### Format de réponse d’erreur {#error-response-format}
 
-Erreur de rendu de macro &#39;code&#39; : Valeur non valide spécifiée pour le paramètre `com.atlassian.confluence.ext.code.render.InvalidValueException`
+Erreur de rendu de la macro &#39;code&#39; : valeur non valide spécifiée pour le paramètre `com.atlassian.confluence.ext.code.render.InvalidValueException`
 
 ```Shell
 {
@@ -108,7 +108,7 @@ Le tableau ci-dessous répertorie les codes d’erreur et les messages que l’A
 | 5001010 | Une erreur interne s’est produite. |
 | 4001011 | Les dates ne sont pas envoyées au format requis. |
 | 4001012 | Les dates sont hors plage. |
-| 4001013 | Paramètre obligatoire manquant. |
+| 4001013 | Le paramètre obligatoire est manquant. |
 | 4001014 | La liste de zones est vide pour le compte. |
 | 4001015 | Clés de filtre non valides dans la requête. |
 | 4001016 | Option GroupBy non valide dans la requête. |
@@ -132,16 +132,16 @@ curl --location --request GET 'https://dai-sandbox1-primetime.adobe.io/report?st
 |---|---|
 | Récupérer le rapport avec les GET de dates de début et de fin : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2021-01-01 header : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte total_impressions |
 | Récupérer le rapport avec GroupBy = d \| m \| y GET : [API_ENDPOINT]//report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d \| m \| y header : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant aux dates de ce compte (jj-mm-aaaa \| mm-aaaa \| format aaaa) total_impressions |
-| Récupérer le rapport avec GroupBy = ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id header : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id total_impressions |
-| Récupérer le rapport avec GroupBy = d \| m \| y et ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d,ad_config_id en-tête : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id dates (mm-jj-aaaa \| mm-aaaa \| format aaaa) total_impressions |
-| Récupérer le rapport avec metaData=true et groupBy=d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id en-tête : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id name total_impressions |
-| Récupérer le rapport avec groupBy=d \| m \| y et ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y,ad_config_id en-tête : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id nom total_impressions dates (mm-jj-aaaa \| mm-aaaa \| format aaaa) |
+| Récupérer le rapport avec GroupBy = ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=ad_config_id header : Acceptez = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id total_impressions |
+| Récupérer le rapport avec GroupBy = d \| m \| y et ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;groupBy=d,ad_config_id header : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id dates (mm-jj-aaaa \| mm-aaaa \| format aaaa) total_impressions |
+| Récupérer le rapport avec metaData=true et groupBy=d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=ad_config_id header : Accept = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id name total_impressions |
+| Récupérer le rapport avec groupBy=d \| m \| y et ad_config_id GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-05-01&amp;metaData=true&amp;groupBy=d \| m \| y,ad_config_id header : Accepter = application/json. ou */* | Json avec les paramètres suivants avec toutes les publicités appartenant à ce compte ad_config_id nom total_impressions dates (mm-jj-aaaa \| mm-aaaa \| format aaaa) |
 | Récupérer le rapport pour obtenir toutes les lignes pour une période donnée (avec unpaged = true) GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;groupBy=d&amp;unpaged=true | 31 entrées dans le tableau Json renvoyé |
 | Récupérer le rapport avec des paramètres de requête de page valides GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-31&amp;page=0&amp;size=5&amp;groupBy=d | 5 entrées dans le tableau renvoyé |
-| Récupérer le rapport, avec GET au format csv : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10 header : Accepter = texte/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_impressions |
-| Récupérer le rapport, avec le format csv et groupBy = d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y header : Accepter = texte/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_dates d’impressions (mm-jj-aaaa \| mm-aaaa \| format aaaa) |
-| Récupérer le rapport, avec le format csv et les métadonnées = GET true : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true header : Accepter = texte/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_impressions |
-| Récupérer le rapport, avec le format csv , les métadonnées = true et groupBy = d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y header : Accepter = texte/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_dates d’impressions (mm-jj-aaaa \| mm-aaaa \| format aaaa) |
+| Récupérer le rapport, avec GET au format csv : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10 header : Accept = text/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_impressions |
+| Récupérer le rapport, avec le format csv et groupBy = d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;groupBy=d\|m\|y header : Accept = text/csv | Une chaîne CSV est renvoyée, avec l’en-tête : dates total_impressions (jj-mm-aaaa \| mm-aaaa \| format aaaa). |
+| Récupérer le rapport, avec le format csv et les métadonnées = GET true : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true header : Accepter = text/csv | Une chaîne CSV est renvoyée, avec l’en-tête : total_impressions |
+| Récupérer le rapport, avec le format csv , les métadonnées = true et groupBy = d \| m \| y GET : [API_ENDPOINT]/report?startDate=2020-01-01&amp;endDate=2020-01-10&amp;metaData=true&amp;groupBy=d\|m\|y header : Accept = text/csv | Une chaîne CSV est renvoyée, avec l’en-tête : dates total_impressions (jj-mm-aaaa \| mm-aaaa \| format aaaa). |
 
 
 ## Stratégie de limitation de l’API de rapport {#report-api-throttling-policy}

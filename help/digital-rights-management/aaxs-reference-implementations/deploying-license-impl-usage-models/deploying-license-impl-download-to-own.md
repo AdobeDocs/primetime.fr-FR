@@ -1,16 +1,14 @@
 ---
-title: Téléchargement en direct
-description: Téléchargement en direct
+title: Téléchargement à soi
+description: Téléchargement à soi
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
-
 # Téléchargement à soi {#download-to-own}
 
-Avec le modèle d’utilisation Télécharger vers soi (DTO), un utilisateur peut télécharger le contenu pour l’utiliser en ligne ou hors ligne et obtient une licence permanente pour le contenu. Lors de la demande de licence, l’utilisateur doit s’authentifier afin que le serveur puisse vérifier que l’utilisateur a acheté le contenu.
+Avec le modèle d’utilisation Téléchargement vers soi (DTO), un utilisateur peut télécharger le contenu pour l’utiliser en ligne ou hors ligne et se voit attribuer une licence permanente pour le contenu. Lorsque vous demandez une licence, l’utilisateur doit s’authentifier afin que le serveur puisse vérifier que l’utilisateur a acheté le contenu.

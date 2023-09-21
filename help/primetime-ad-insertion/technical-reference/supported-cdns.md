@@ -1,22 +1,20 @@
 ---
-title: CDN pris en charge
-description: CDN pris en charge
+title: Réseau de diffusion de contenu pris en charge
+description: Réseau de diffusion de contenu pris en charge
 copied-description: true
-exl-id: 4620c84d-965d-4ecd-b17e-e21c74427282
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
-# CDN pris en charge {#cdn-supported}
+# Réseau de diffusion de contenu pris en charge {#cdn-supported}
 
-L’Ad Insertion Adobe Primetime prend en charge la récupération de contenu et de fragments à partir de n’importe quel réseau de diffusion de contenu, mais il offre une prise en charge étendue de l’authentification/de la segmentation en jetons pour la plupart des principaux réseaux de diffusion de contenu.  Veuillez nous contacter pour plus d&#39;informations sur le support CDN supplémentaire ou les besoins d&#39;authentification/d&#39;autorisation.
+Adobe Primetime Ad Insertion prend en charge la récupération de contenu et de fragments à partir de n’importe quel réseau de diffusion de contenu, mais offre une prise en charge étendue de l’authentification/de la segmentation en jetons pour la plupart des principaux réseaux de diffusion de contenu.  Veuillez nous contacter pour plus d’informations sur la prise en charge supplémentaire du réseau de diffusion de contenu ou sur les besoins d’authentification/autorisation.
 
 * Akamai
 * Limelight
 * Réseaux Limelight
-* Niveau3
+* Level3
 * CenturyLink

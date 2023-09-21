@@ -1,8 +1,7 @@
 ---
 title: Présentation du compte IQ
 description: L’intelligence artificielle du compte aide les distributeurs multicanaux et les programmeurs à comprendre les risques qui pèsent sur leurs recettes et leurs activités commerciales, et à déterminer les mesures les plus efficaces à prendre pour atténuer l’impact de la fraude sur les informations d’identification.
-exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
-source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -19,7 +18,7 @@ En règle générale, les fournisseurs de services de diffusion vidéo en contin
 
 ![Diagramme de flux Account IQ](assets/aiq-intro.png)
 
-*Figure : Flux d’informations sur le compte IQ*
+*Figure : Flux d’informations de Account IQ*
 
 Adobe Primetime Account IQ permet aux services de diffusion vidéo en continu de comprendre les schémas d’utilisation des abonnés et d’identifier le partage d’informations d’identification. En analysant en profondeur le long cheminement des données laissées par chaque abonné à l’aide du modèle d’apprentissage automatique multi-couches propriétaire de l’Adobe, les services de diffusion en continu peuvent comprendre le comportement d’utilisation et identifier le partage des informations d’identification avec un plus grand degré de certitude. En outre, elle permet d’agir par le biais d’intégrations à d’autres systèmes, comme la limitation des flux simultanés ou la personnalisation des offres, et valide l’impact de ces actions, que ce soit en encourageant un comportement de visualisation légitime ou en augmentant les abonnés et les recettes.
 
@@ -44,7 +43,6 @@ Explorons en détail les graphiques et les rapports de chacune de ces sections.
 >* [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)
 >* [Glossaire des termes du produit](/help/AccountIQ/product-concepts.md)
 >* [Livre blanc de Account IQ](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
-
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.
 

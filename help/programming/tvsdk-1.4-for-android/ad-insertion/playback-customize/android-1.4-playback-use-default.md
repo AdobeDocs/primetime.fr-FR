@@ -1,21 +1,19 @@
 ---
-description: Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
-title: Utiliser le comportement de lecture par défaut
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez choisir d’utiliser les comportements de publicité par défaut.
+title: Utilisation du comportement de lecture par défaut
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# Utilisation du comportement de lecture par défaut {#use-the-default-playback-behavior}
 
-# Utiliser le comportement de lecture par défaut {#use-the-default-playback-behavior}
+Vous pouvez choisir d’utiliser les comportements de publicité par défaut.
 
-Vous pouvez choisir d’utiliser les comportements publicitaires par défaut.
+Pour utiliser les comportements par défaut :
 
-Pour utiliser des comportements par défaut :
-
-    * Si vous implémentez votre propre classe &quot;AdvertisingFactory&quot;, renvoyez la valeur null pour &quot;createAdPolicySelector&quot;.
+    * Si vous implémentez votre propre classe `AdvertisingFactory`, renvoyez null pour `createAdPolicySelector` .
     
-    * Si vous n’avez pas d’implémentation personnalisée pour la classe &quot;AdvertisingFactory&quot;, TVSDK utilise un sélecteur de stratégie d’annonce par défaut.
+    * Si vous ne disposez pas d’une implémentation personnalisée pour la classe &quot;AdvertisingFactory&quot;, TVSDK utilise un sélecteur de stratégie de publicité par défaut.

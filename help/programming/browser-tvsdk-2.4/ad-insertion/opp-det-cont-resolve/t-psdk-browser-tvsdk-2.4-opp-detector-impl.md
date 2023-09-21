@@ -1,22 +1,20 @@
 ---
-description: Vous pouvez mettre en oeuvre votre propre générateur d'opportunités en étendant l'interface OpportunityGenerator.
+description: Vous pouvez mettre en oeuvre votre propre générateur d’opportunités en étendant l’interface OpportunityGenerator.
 title: Mise en oeuvre d’un générateur d’opportunités personnalisé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
-
 # Mise en oeuvre d’un générateur d’opportunités personnalisé{#implement-a-custom-opportunity-generator}
 
-Vous pouvez mettre en oeuvre votre propre générateur d&#39;opportunités en étendant l&#39;interface OpportunityGenerator.
+Vous pouvez mettre en oeuvre votre propre générateur d’opportunités en étendant l’interface OpportunityGenerator.
 
 1. Créez le générateur d’opportunités personnalisé.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    /** 
@@ -46,7 +44,7 @@ Vous pouvez mettre en oeuvre votre propre générateur d&#39;opportunités en é
 
 1. Créez la fabrique de contenu personnalisée, qui utilise le générateur d’opportunités personnalisé.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    /** 
@@ -66,9 +64,9 @@ Vous pouvez mettre en oeuvre votre propre générateur d&#39;opportunités en é
    }; 
    ```
 
-1. Enregistrez la fabrique de contenu personnalisée pour que le flux média soit lu.
+1. Enregistrez la fabrique de contenu personnalisée pour que le flux multimédia soit lu.
 
-   Dans le lecteur UI Framework, vous pouvez spécifier une fabrique de contenu personnalisée comme suit :
+   Dans le lecteur de structure de l’interface utilisateur, vous pouvez spécifier la fabrique de contenu personnalisée comme suit :
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +81,3 @@ Vous pouvez mettre en oeuvre votre propre générateur d&#39;opportunités en é
      } 
    }); 
    ```
-

@@ -1,8 +1,7 @@
 ---
 description: Vous pouvez décider de ne résoudre que les publicités qui surviennent après le point d’activation actuel de l’utilisateur ou de résoudre également les publicités qui surviennent avant le point d’activation actuel.
 title: Chargement de la publicité pour une fenêtre DVR
-exl-id: 3e8542a8-0912-4023-904d-0fdb28411a9d
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Pour charger toutes les publicités pour la diffusion entière, définissez la v
 >
 >La valeur par défaut est `NO`et cette option charge uniquement les publicités à partir du point d’entrée actif actuel.
 
-Par exemple :
+Par exemple :
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 

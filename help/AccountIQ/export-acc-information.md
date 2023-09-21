@@ -1,8 +1,7 @@
 ---
 title: Exporter des informations pour les comptes avec un score de partage élevé
 description: Exportez des informations pour les comptes ayant un score de partage élevé.
-exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 1%
@@ -25,7 +24,7 @@ Pour exporter les informations de partage de compte des abonnés :
 
 1. Définissez un segment de votre choix en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation à partir de [segment et période](/help/AccountIQ/segments-timeframe.md) du panneau.
 
-1. Sélectionnez la **Exporter les 1 000 premiers comptes** pour exporter les informations du compte de 1 000 abonnés avec la probabilité de partage la plus élevée.
+1. Sélectionnez la variable **Exporter les 1 000 premiers comptes** pour exporter les informations du compte de 1 000 abonnés avec la probabilité de partage la plus élevée.
 
 Lorsque vous utilisez l’option d’exportation, les statistiques de 1 000 comptes présentant les plus fortes probabilités de partage (pour une période définie) sont téléchargées dans le dossier Téléchargements de votre ordinateur local.
 
@@ -61,7 +60,7 @@ Le nombre réel d’appareils (ce contenu de diffusion en continu) est presque c
 
 **Nombre minimum de personnes**
 
-Nombre minimum absolu de personnes qui diffusaient du contenu principal en continu à l’aide de ces appareils.
+Nombre minimum absolu de personnes qui étaient actives dans le contenu en continu à l’aide de ces appareils.
 
 >[!NOTE]
 >
@@ -85,7 +84,7 @@ Nombre d’états où la diffusion en continu a eu lieu.
 
 **# Clusters**
 
-Le nombre de [grappes](/help/AccountIQ/product-concepts.md#cluster-def) où la diffusion en continu a eu lieu.
+Le nombre de variables distinctes [grappes](/help/AccountIQ/product-concepts.md#cluster-def) où la diffusion en continu a eu lieu.
 
 **span géographique (miles)**
 
@@ -101,7 +100,7 @@ Nombre de fois où un MVPD a autorisé un flux, ou accordé l’accès (au conte
 
 >[!NOTE]
 >
->Le **# AuthZ OK** est lié à la variable **# Lecture de requêtes**; il est plus petit que le **# Lecture de requêtes** car Adobe met en cache les autorisations qui sont envoyées pour les distributeurs multicanaux de programmes audiovisuels pendant 24 heures.
+>La variable **# AuthZ OK** est lié à la variable **# Lecture de requêtes**; il est plus petit que le **# Lecture de requêtes** car Adobe met en cache les autorisations qui sont envoyées pour les distributeurs multicanaux de programmes audiovisuels pendant 24 heures.
 
 **# Lecture de requêtes**
 
@@ -121,7 +120,7 @@ Nombre total de canaux différents que le compte a visionnés au cours de la pé
 
 Les nombres de cette colonne sont des identifiants qui correspondent à l’un des 14 modèles que nous identifions comme tous les comptes d’utilisateurs.
 
-*Tableau : Identifiants de modèle d’utilisation dans le mappage CSV exporté avec les modèles d’utilisation*
+*Tableau : Identifiants des modèles d’utilisation dans le mappage CSV exporté avec les modèles d’utilisation*
 
 | ID | 1 | 2 | 3 | 4 | 5 et 8 | 6 | 7 | 9 | 10 et 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|

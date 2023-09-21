@@ -243,7 +243,7 @@ Exemple : https://mgmt.auth.adobe.com/cmu/v2/year/month.csv produira un fichier 
 
 Bien que la requête contienne un en-tête Last-Modified, elle **NE FAIT PAS** reflètent l’heure de la dernière mise à jour du rapport dans le corps. Les rapports généraux sont calculés régulièrement, avec les règles suivantes :
 
-* si la granularité temporelle est **year** ou **month**, le rapport est mis à jour tous les 2 jours
+* si la granularité temporelle est **year** ou **month**, le rapport est mis à jour tous les 2 jours.
 * si la granularité temporelle est **day**, le rapport est mis à jour toutes les 3 heures.
 * si la granularité temporelle est **hour**, le rapport est mis à jour toutes les heures.
 * si la granularité temporelle est **minute**, le rapport est mis à jour toutes les minutes.

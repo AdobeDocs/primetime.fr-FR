@@ -1,20 +1,18 @@
 ---
-description: Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
+description: Vous pouvez configurer des visuels pour informer l’utilisateur que le contenu est mis en mémoire tampon.
 title: Mise en mémoire tampon
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-
 # Mise en mémoire tampon{#buffering}
 
-Vous pouvez configurer des visuels pour avertir l’utilisateur que le contenu est mis en mémoire tampon.
+Vous pouvez configurer des visuels pour informer l’utilisateur que le contenu est mis en mémoire tampon.
 
-Prêtez attention aux événements `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END`. Par exemple :
+Listen for `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` et `AdobePSDK.PSDKEventType.BUFFERING_END` événements . Par exemple :
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -30,7 +28,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-La structure de l’interface utilisateur fournit une implémentation par défaut du comportement d’incrustation de mise en mémoire tampon, qui peut être étendue comme illustré ci-dessous :
+La structure de l’interface utilisateur fournit une implémentation par défaut du comportement de la mise en mémoire tampon, qui peut être étendue comme illustré ci-dessous :
 
 ```js
 // Using UI Framework 
@@ -49,7 +47,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Voici à quoi ressemble le DOM obtenu :
+Voici à quoi ressemble le DOM de résultat :
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
@@ -58,4 +56,3 @@ Voici à quoi ressemble le DOM obtenu :
 </div> 
 </div> 
 ```
-

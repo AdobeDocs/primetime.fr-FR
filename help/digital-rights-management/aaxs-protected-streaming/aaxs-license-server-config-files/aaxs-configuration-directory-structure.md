@@ -1,24 +1,22 @@
 ---
-description: 'L’Adobe Access Server for Protected Streaming nécessite deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration de client pour chaque client (flashaccess-locataire.xml).'
-title: Structure d'annuaire de configuration
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 'Adobe Access Server for Protected Streaming requiert deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration client pour chaque client (flashaccess-tenant.xml).'
+title: Structure du répertoire de configuration
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
-
 # Fichiers de configuration du serveur de licences et structure du répertoire de configuration {#configuration-directory-structure}
 
-L’Adobe Access Server for Protected Streaming nécessite deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration de client pour chaque client (flashaccess-locataire.xml).
+Adobe Access Server for Protected Streaming requiert deux types de fichiers de configuration : un fichier de configuration global (flashaccess-global.xml) et un fichier de configuration client pour chaque client (flashaccess-tenant.xml).
 
-Après avoir modifié les fichiers de configuration, l’Adobe recommande d’utiliser les utilitaires fournis avec l’Adobe Access Server for Protected Streaming pour vérifier que les fichiers sont bien formés. Pour plus d’informations, voir &quot;[Configuration Validator](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
+Après avoir modifié les fichiers de configuration, Adobe recommande d’utiliser les utilitaires fournis avec Adobe Access Server for Protected Streaming pour vérifier que les fichiers sont bien formés. Pour plus d’informations, voir &quot;[Validation de configuration](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-Pour éviter de rendre les mots de passe disponibles en texte clair dans les fichiers de configuration, tous les mots de passe spécifiés dans les fichiers de configuration globale et locataire doivent être chiffrés. Pour plus d&#39;informations sur le chiffrement des mots de passe, consultez &quot;[Mot de passe Scrambler](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
+Pour éviter de rendre les mots de passe disponibles en texte clair dans les fichiers de configuration, tous les mots de passe spécifiés dans les fichiers de configuration globale et client doivent être chiffrés. Pour plus d’informations sur le chiffrement des mots de passe, voir &quot;[Scrambler de mot de passe](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
 
-Les répertoires de configuration ont la structure suivante :
+Les répertoires de configuration présentent la structure suivante :
 
 ```
 <i class="+ topic ph hi-d="" i "="">
@@ -43,4 +41,3 @@ Les répertoires de configuration ont la structure suivante :
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

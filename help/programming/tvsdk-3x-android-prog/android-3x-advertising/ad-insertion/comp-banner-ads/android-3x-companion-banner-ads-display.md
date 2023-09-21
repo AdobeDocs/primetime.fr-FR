@@ -1,38 +1,36 @@
 ---
-description: Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
+description: Pour afficher les bannières publicitaires, vous devez créer des instances de bannière et permettre à TVSDK d’écouter les événements liés aux publicités.
 title: Afficher les bannières publicitaires
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-
 # Afficher les bannières publicitaires {#display-banner-ads}
 
-Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
+Pour afficher les bannières publicitaires, vous devez créer des instances de bannière et permettre à TVSDK d’écouter les événements liés aux publicités.
 
-TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement `AdPlaybackEventListener.onAdBreakStart`.
+TVSDK fournit une liste des bannières publicitaires associées à une publicité linéaire par le biais de la variable `AdPlaybackEventListener.onAdBreakStart` .
 
-Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
+Les manifestes peuvent spécifier des bannières publicitaires d’accompagnement en :
 
-* Un extrait de code HTML
+* Fragment de HTML
 * URL d’une page iFrame
-* URL d’une image statique ou d’un fichier SWF de Flash d’Adobe
+* URL d’une image statique ou d’un fichier de SWF de Flash Adobe
 
-Pour chaque publicité connexe, TVSDK indique les types disponibles pour votre application.
+Pour chaque publicité compagnon, TVSDK indique les types disponibles pour votre application.
 
-1. Ajoutez un écouteur pour le événement `AdPlaybackEventListener.onAdBreakStart` qui effectue les opérations suivantes :
+1. Ajoutez un écouteur pour la fonction `AdPlaybackEventListener.onAdBreakStart` qui effectue les opérations suivantes :
 
    * Efface les publicités existantes dans l’instance de bannière.
-   * Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets`.
-   * Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
+   * Récupère la liste des publicités compagnons à partir de `Ad.getCompanionAssets`.
+   * Si la liste des publicités d’accompagnement n’est pas vide, passez la souris sur la liste pour les instances de bannière.
 
-      Chaque instance de bannière (une `AdAsset`) contient des informations telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
-   * Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
+     Chaque instance de bannière (une `AdAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou statique), ainsi que les données requises pour afficher la bannière compagnon.
+   * Si une publicité vidéo ne comporte aucune publicité compagnon enregistrée, la liste des ressources compagnons ne contient aucune donnée pour cette publicité vidéo.
    * Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire standard DFP (DoubleClick for Publishers) dans l’instance de bannière appropriée.
-   * Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
+   * Envoie les informations sur la bannière à une fonction de votre page qui affiche les bannières à un emplacement approprié.
 
-      Il s&#39;agit généralement d&#39;un `div` et votre fonction utilise le `div ID` pour afficher la bannière.
+     Il s’agit généralement d’une `div`, et votre fonction utilise la fonction `div ID` pour afficher la bannière.

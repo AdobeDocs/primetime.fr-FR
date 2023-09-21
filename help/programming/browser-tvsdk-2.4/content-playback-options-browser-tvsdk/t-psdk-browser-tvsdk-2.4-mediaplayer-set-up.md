@@ -1,34 +1,32 @@
 ---
 description: Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un lecteur multimédia.
 title: Configuration de MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
 # Configuration de MediaPlayer{#set-up-the-mediaplayer}
 
 Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un lecteur multimédia.
 
-1. Instanciez un `MediaPlayer` à l&#39;aide des éléments suivants :
+1. Instanciation d’une `MediaPlayer` à l’aide des éléments suivants :
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Créez une instance `MediaPlayerView` :
+1. Créez un `MediaPlayerView` instance :
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   où `container` est l’élément de cible `div` qui contient votre `HTMLMediaElement`.
+   where `container` est la cible `div` élément qui contient votre `HTMLMediaElement`.
 
-   Par exemple, sur une page HTML :
+   Par exemple, sur une page de HTML :
 
    ```
    <div id="videoDiv"> 
@@ -40,7 +38,7 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    </div>
    ```
 
-   Appel :
+   Appelez :
 
    ```js
    var view = new  
@@ -50,13 +48,13 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
          document.getElementById("videoDiv"));  
    ```
 
-1. Joignez votre instance `MediaPlayerView` à votre instance `MediaPlayer` :
+1. Joindre vos `MediaPlayerView` à votre instance `MediaPlayer` instance :
 
    ```js
    player.view = view;
    ```
 
-1. Joignez l’élément `div` contrôles personnalisés à votre instance MediaPlayer.
+1. Joindre les contrôles personnalisés `div` à votre instance MediaPlayer.
 
    Par exemple, en HTML :
 
@@ -68,7 +66,7 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    </div>
    ```
 
-   Appel :
+   Appelez :
 
    ```js
    if (typeof player.getView() !== 'undefined') { 
@@ -77,4 +75,4 @@ Un objet MediaPlayer encapsule le comportement et les fonctionnalités d’un le
    }
    ```
 
-L&#39;instance `MediaPlayer` est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l&#39;écran du périphérique.
+La variable `MediaPlayer` est maintenant disponible et correctement configurée pour afficher le contenu vidéo sur l’écran de l’appareil.

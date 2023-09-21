@@ -1,25 +1,23 @@
 ---
 description: TVSDK pour iOS comprend diverses fonctionnalités.
-title: Fonctionnalités de TVSDK Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Fonctionnalités de Primetime TVSDK
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# Fonctionnalités de Primetime TVSDK {#primetime-tvsdk-features}
 
-# Fonctionnalités de TVSDK Primetime {#primetime-tvsdk-features}
+TVSDK pour iOS comprend diverses fonctionnalités et fournit les principales fonctionnalités suivantes :
 
-TVSDK pour iOS comprend diverses fonctionnalités et offre les principales fonctionnalités suivantes :
+* Lecture VOD et linéaire
 
-* VOD et lecture en direct/linéaire
-
-   * Gestion de la fenêtre de lecture, y compris les méthodes permettant de lire, arrêter, suspendre, rechercher et récupérer la position du curseur de lecture
-   * Prise en charge de la relecture en événement complet
-   * Sous-titrage (608, WebVTT) et autres formes audio pour une plus grande accessibilité
-   * Capacité DVR
+   * Gestion de la fenêtre de lecture, y compris les méthodes permettant de lire, arrêter, mettre en pause, rechercher et récupérer la position du curseur de lecture
+   * Prise en charge de la relecture d’événement complet
+   * Sous-titrage codé (608, WebVTT) et autres formes audio pour une accessibilité accrue
+   * Fonctionnalité DVR
    * Logique de débit adaptatif (ABR) et configuration initiale des contrôles ABR
    * Abonnement aux balises non HLS et HLS
    * Prise en charge du basculement du manifeste en direct
@@ -27,26 +25,25 @@ TVSDK pour iOS comprend diverses fonctionnalités et offre les principales fonct
 * Publicité
 
    * VPAID 2.0
-   * Collecte de publicités côté client
+   * Groupement publicitaire côté client
 
-      * Insertion d’annonces en toute transparence, y compris la prise en charge de VAST/VMAP
+      * Insertion de publicités transparente, notamment prise en charge de VAST/VMAP
       * Prise en charge des balises de repère personnalisées pour les publicités
       * Prise en charge du marquage, du remplacement et de la suppression des publicités C3
-      * Flux de travaux personnalisable d&#39;insertion de contenu/publicités, y compris le signalement d&#39;interruption de service
+      * Processus personnalisable d’insertion de contenu/de publicités, y compris le signal d’arrêt
 
 * Protection du contenu
 
    * Accès aux services liés à la gestion des droits numériques
-   * Lecture des flux HLS non chiffrés ou avec la diffusion en flux continu HTTP en direct protégée (PHLS)
-   * Contrôle de la sortie basé sur la résolution, basé sur la stratégie DRM
+   * Lecture des diffusions HLS non chiffrées ou avec la diffusion en continu HTTP protégée (PHLS)
+   * Contrôle de sortie basé sur la résolution, basé sur la stratégie DRM
 
-* Suivi des vidéos et des publicités
+* Suivi vidéo et publicitaire
 
    * Suivi des événements QoS
-   * Notifications qui aident TVSDK et votre application à communiquer de manière asynchrone sur l’état des vidéos, des publicités et d’autres éléments, ainsi que sur l’activité du journal
+   * Notifications qui aident TVSDK et votre application à communiquer de manière asynchrone sur l’état des vidéos, publicités et autres éléments, ainsi que sur l’activité de journal
    * Intégration à Adobe Analytics et prise en charge de pulsation
 
 * Journalisation
 
-   * Journalisation du débogage
-
+   * Journalisation de débogage

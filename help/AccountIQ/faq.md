@@ -1,8 +1,7 @@
 ---
 title: FAQ sur Account IQ
 description: Réponses aux questions fréquemment posées des clients.
-exl-id: d6e11fc9-0d14-46d8-9a85-f1006ac81fb1
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -37,7 +36,7 @@ ht-degree: 0%
 
 1. Quelle est la moyenne de l&#39;industrie ?
 
-   **Répondez.** La moyenne du secteur se reflète dans les trois Principaux indicateurs de partage : niveau de partage, utilisation à partir des comptes partagés et score de partage global. Ces valeurs représentent la moyenne de tous les abonnés pour tous les services.
+   **Répondez.** La moyenne du secteur se reflète dans les trois principaux indicateurs de partage : niveau de partage, utilisation à partir des comptes partagés et score de partage global. Ces valeurs représentent la moyenne de tous les abonnés pour tous les services.
 
 1. AccountIQ est-il un outil de mise en oeuvre ? Si ce n&#39;est pas le cas, comment l&#39;utiliser pour arrêter le partage ?
 

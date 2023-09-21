@@ -1,45 +1,43 @@
 ---
-description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s'agit d'une façon de charger une ressource multimédia.
+description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s’agit d’une méthode de chargement d’une ressource multimédia.
 title: Chargement d’une ressource multimédia dans MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
+# Chargement d’une ressource multimédia dans MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
 
-# Charger une ressource multimédia dans MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
+Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s’agit d’une méthode de chargement d’une ressource multimédia.
 
-Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s&#39;agit d&#39;une façon de charger une ressource multimédia.
+1. Définissez vos `MediaPlayer` élément lisible de l’objet avec la nouvelle ressource à lire.
 
-1. Définissez l&#39;élément jouable de l&#39;objet `MediaPlayer` avec la nouvelle ressource à lire.
-
-   Remplacez l’élément MediaPlayer actuellement lisible par l’appel de `MediaPlayer.replaceCurrentResource` et par une instance `MediaResource` existante.
+   Remplacez l’élément MediaPlayer actuellement lisible existant en appelant `MediaPlayer.replaceCurrentResource` et transmettre un `MediaResource` instance.
 
 1. Recherchez au moins les modifications suivantes :
 
-   * INITIALISÉ
+   * INITIALIZED
    * PRÉPARÉ
-   * ERREUR
+   * ERROR
 
-      Grâce à ces événements, l&#39;objet `MediaPlayer` peut avertir votre application lorsque la ressource multimédia est chargée avec succès.
+     Au cours de ces événements, `MediaPlayer` peut avertir votre application lorsque la ressource multimédia est chargée avec succès.
 
-1. Lorsque l&#39;état du lecteur multimédia devient INITIALISÉ, vous pouvez appeler `MediaPlayer.prepareToPlay`
+1. Lorsque l’état du lecteur multimédia passe à INITIALIZED, vous pouvez appeler `MediaPlayer.prepareToPlay`
 
-   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel de `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
+   L’état INITIALIZED (INITIALISÉ) indique que le fichier multimédia a bien été chargé. Appel `prepareToPlay` lance le processus de résolution publicitaire et d’emplacement, le cas échéant.
 
-1. Lorsque l’état du lecteur multimédia devient PRÉPARÉ, le flux multimédia est chargé correctement et préparé pour la lecture.
+1. Lorsque l’état du lecteur multimédia passe à PREPARED (PRÉPARÉ), le flux multimédia a été chargé avec succès et est préparé pour la lecture.
 
-   Lorsque le flux média est chargé, un `MediaPlayerItem` est créé.
+   Lorsque le flux multimédia est chargé, une `MediaPlayerItem` est créée.
 
-En cas d’échec, MediaPlayer passe à l’état ERROR. Il informe également votre application en envoyant le événement `STATUS_CHANGED` à votre rappel `MediaPlayerStatusChangeEvent`.
+En cas d’échec, le MediaPlayer passe à l’état ERROR. Il informe également votre application en distribuant la variable `STATUS_CHANGED` à votre `MediaPlayerStatusChangeEvent` rappel.
 
 Il transmet plusieurs paramètres :
-* Un paramètre `type` de type chaîne avec la valeur `ERROR`.
+* A `type` paramètre de type chaîne avec la valeur `ERROR`.
 
-* Paramètre `MediaError` que vous pouvez utiliser pour obtenir une notification contenant des informations de diagnostic sur le événement d&#39;erreur.
+* A `MediaError` que vous pouvez utiliser pour obtenir une notification contenant des informations de diagnostic sur l’événement d’erreur.
 
 
 <!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->

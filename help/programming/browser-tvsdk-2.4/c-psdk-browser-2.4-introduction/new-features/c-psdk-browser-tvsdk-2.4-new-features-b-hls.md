@@ -1,24 +1,22 @@
 ---
-description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités HLS que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
+description: Le TVSDK du navigateur prend en charge un certain nombre de fonctionnalités HLS que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
 title: Fonctionnalités HLS prises en charge
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
-
 # Fonctionnalités HLS prises en charge {#supported-hls-features}
 
-Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités HLS que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
+Le TVSDK du navigateur prend en charge un certain nombre de fonctionnalités HLS que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications vidéo.
 
 * [Lecture principale HLS](#hls-core-playback)
 * [Fonctionnalités de lecture avancées HLS](#hls-advanced-playback)
-* [Fonctionnalités de protection du contenu HLS](#hls-content-protection)
-* [Fonctionnalités d&#39;insertion des publicités HLS Core](#hls-core-ad-insertion)
-* [Fonctionnalités d&#39;insertion de publicités HLS avancées](#hls-advanced-ad-insertion)
+* [Fonctionnalités de protection de contenu HLS](#hls-content-protection)
+* [Fonctionnalités d’insertion des publicités principales HLS](#hls-core-ad-insertion)
+* [Fonctionnalités d’insertion de publicités avancées HLS](#hls-advanced-ad-insertion)
 * [Intégrations HLS](#hls-integrations)
 
 >[!TIP]
@@ -27,7 +25,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités HLS qu
 
 >[!TIP]
 >
->Dans la colonne Safari, &quot;Limitation des plateformes&quot; signifie que le cas d’utilisation n’est pas pris en charge car cette plateforme n’autorise pas l’implémentation de la prise en charge. En cas d’insertion, utilisez SSAI. S’il existe des limitations de lecture importantes pour vous, forcez le Flash de la reprise sur Safari jusqu’à ce que la plate-forme prenne en charge le cas d’utilisation de l’insertion d’annonces.
+>Dans la colonne Safari, &quot;Limitation de plateforme&quot; signifie que le cas d’utilisation n’est pas pris en charge, car cette plateforme n’autorise pas l’implémentation de la prise en charge. Dans le cas d&#39;une insertion, utilisez SSAI. S’il existe des limitations de lecture importantes pour vous, forcez la reprise sur le Flash sur Safari jusqu’à ce que la plateforme prenne en charge le cas d’utilisation de l’insertion de publicités.
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -83,71 +81,71 @@ Removed Nielsen row
 
 ## Intégrations HLS {#hls-integrations}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Intégrations | VOD + Live | Intégration d’Adobe Analytics VHL | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Intégrations | VOD + En direct | Intégration d’Adobe Analytics VHL | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 
-## Fonctionnalités avancées d&#39;insertion d&#39;annonces HLS (CSAI) {#hls-advanced-ad-insertion}
+## Fonctionnalités avancées d’insertion de publicités HLS (CSAI) {#hls-advanced-ad-insertion}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD | Publicité uniquement | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Paramètres de ciblage | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Stratégie publicitaire personnalisée | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Ad Insertion | VOD + Live | Chargement de publicités différé | ![icône prise en charge](assets/supported15.png) | Non pris en charge | Limitation des plateformes |
-| Ad Insertion | VOD | Publicités d’accompagnement, bannières publicitaires et publicités cliquables | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | Paramètres de ciblage | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | Stratégie d’annonce personnalisée | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Ad Insertion | VOD + En direct | Chargement différé des publicités | ![icône prise en charge](assets/supported15.png) | Non pris en charge | Limitation de la plateforme |
+| Ad Insertion | VOD | Publicités d’accompagnement, bannières publicitaires et annonces cliquables | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 | Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
-## Fonctionnalités d&#39;insertion d&#39;annonces HLS de base (CSAI) {#hls-core-ad-insertion}
+## Fonctionnalités principales d’insertion d’annonces HLS (CSAI) {#hls-core-ad-insertion}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | VOD + Live | Pré-roll | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Mid-roll | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Ad Insertion | VOD + Live | Post-roll | VOD uniquement | VOD uniquement | VOD uniquement |
-| Ad Insertion | FER VOD | Résolution et comportements des publicités | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Ad Insertion | VOD + Live | Stratégie publicitaire par défaut | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Ad Insertion | VOD + Live | VMAP 1.0 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Ad Insertion | VOD + Live | CRS v3.1 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | Pré-roll | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | Mid-roll | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Ad Insertion | VOD + En direct | Post-roll | VOD uniquement | VOD uniquement | VOD uniquement |
+| Ad Insertion | FER VOD | Résolution et comportements des publicités | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Ad Insertion | VOD + En direct | Stratégie de publicité par défaut | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Ad Insertion | VOD + En direct | VAST 2.0/3.0 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | VMAP 1.0 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Ad Insertion | VOD + En direct | CRS v3.1 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 
-## Fonctionnalités de protection du contenu HLS {#hls-content-protection}
+## Fonctionnalités de protection de contenu HLS {#hls-content-protection}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Protection du contenu | VOD + Live | AES-128 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Protection du contenu | VOD + Live | Sample-AES | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Protection du contenu | VOD + En direct | AES-128 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Protection du contenu | VOD + En direct | Sample-AES | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 | Protection du contenu | VOD | DRM | Accès aux Adobes | Non pris en charge | FairPlay |
 
-## Fonctions de lecture avancées HLS {#hls-advanced-playback}
+## Fonctionnalités de lecture avancées HLS {#hls-advanced-playback}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Lecture | VOD | Lecture au décalage | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD | Lecture audio uniquement | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD | Jeu de cartes | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD | Lecture lisse | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Analyse ID3 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Non pris en charge |
-| Lecture | VOD + Live | Prise en charge des marqueurs de discontinuité | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | Flux jetés | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Facturation | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | Naviguer | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD | Lecture audio seule | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD | Lecture de piste | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD | Lecture de l’astuce | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Analyse d’ID3 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Non pris en charge |
+| Lecture | VOD + En direct | Prise en charge des marqueurs de discontinuité | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | Flux jetés | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Facturation | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | Browserify | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 
-## Lecture noyau HLS {#hls-core-playback}
+## Lecture principale HLS {#hls-core-playback}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Lecture | VOD + Live | Lecture générale (Lecture, Pause, Recherche) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | Lecture générale (Lecture, Pause, Recherche) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 | Lecture | FER VOD | Lecture générale (Lecture, Pause, Recherche) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | Débit adaptatif | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | Légendes 608/708 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | WebVTT | ![icône prise en charge](assets/supported15.png) | VOD uniquement | VOD uniquement |
-| Lecture | VOD + Live | Basculement du manifeste | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
-| Lecture | VOD + Live | Basculement avancé | ![icône prise en charge](assets/supported15.png) | VOD uniquement | Limitation des plateformes |
-| Lecture | VOD + Live | Notifications de la qualité de service et du lecteur | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Prise en charge limitée de la qualité de service |
-| Lecture | VOD + Live | Prise en charge des en-têtes de cookie | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Définition des paramètres de contrôle du tampon | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Définition des commandes de débit binaire adaptatif | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Balises personnalisées | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | Audio à liaison tardive | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
-| Lecture | VOD + Live | 302 redirection | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation des plateformes |
+| Lecture | VOD + En direct | Débit adaptatif | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | légendes 608/708 | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | WebVTT | ![icône prise en charge](assets/supported15.png) | VOD uniquement | VOD uniquement |
+| Lecture | VOD + En direct | Basculement du manifeste | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
+| Lecture | VOD + En direct | Basculement avancé | ![icône prise en charge](assets/supported15.png) | VOD uniquement | Limitation de la plateforme |
+| Lecture | VOD + En direct | Notifications QoS et du lecteur | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Prise en charge limitée de QoS |
+| Lecture | VOD + En direct | Prise en charge des en-têtes de cookie | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Définition des paramètres de contrôle de la mémoire tampon | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Définition des contrôles de débit adaptatif | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Balises personnalisées | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | Liaison audio tardive | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |
+| Lecture | VOD + En direct | 302 redirect | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) | Limitation de la plateforme |

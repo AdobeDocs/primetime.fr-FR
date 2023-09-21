@@ -1,18 +1,16 @@
 ---
-description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications.
+description: Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications.
 title: Fonctionnalités MP3 et MP4 prises en charge
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
 # Fonctionnalités MP3 et MP4 prises en charge {#supported-mp-and-mp-features}
 
-Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez implémenter pour ajouter des fonctionnalités à vos applications.
+Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et MP4 que vous pouvez mettre en oeuvre pour ajouter des fonctionnalités à vos applications.
 * [Fonctionnalités audio MP3 - Lecture principale](#core-playback)
 * [Fonctionnalités audio MP4 - Lecture principale](#mp4-audio-features)
 * [Fonctionnalités vidéo MP4 - Ad Insertion principal](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
@@ -25,7 +23,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 ### Lecture principale {#core-playback}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Lecture | MP3 VOD | Lecture générale (Lecture, Pause, Recherche) | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 
@@ -33,7 +31,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 ### Lecture principale {#mp4-core-playback}
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Lecture | MP4 VOD | Lecture générale (Lecture, Pause, Recherche) | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 
@@ -41,7 +39,7 @@ Le navigateur TVSDK prend en charge un certain nombre de fonctionnalités MP3 et
 
 ### Insertion de l’annonce principale
 
-| Catégorie | Type de contenu | Fonction | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
+| Catégorie | Type de contenu | Fonctionnalité | Flash | HTML5 : FF, IE, Chrome, Android Chrome | HTML5 : Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | MP4 VOD | Pré-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |
 | Ad Insertion | MP4 VOD | Post-roll | Non pris en charge | ![icône prise en charge](assets/supported15.png) | ![icône prise en charge](assets/supported15.png) |

@@ -1,26 +1,24 @@
 ---
-description: Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView.
-title: Contrôle de la position et de la taille de la vue vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView .
+title: Contrôle de la position et de la taille de l’affichage vidéo
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
+# Contrôle de la position et de la taille de l’affichage vidéo{#control-the-position-and-size-of-the-video-view}
 
-# Contrôler la position et la taille de la vue vidéo{#control-the-position-and-size-of-the-video-view}
+Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView .
 
-Vous pouvez contrôler la position et la taille de la vue vidéo à l’aide de l’objet MediaPlayerView.
+TVSDK tente par défaut de conserver les proportions de l’affichage vidéo chaque fois que la taille ou la position de la vidéo change (en raison d’une modification apportée par l’application, ou par un commutateur de profil, ou un commutateur de contenu, etc.).
 
-TVSDK tente par défaut de conserver les proportions de la vue vidéo chaque fois que la taille ou la position de la vidéo change (en raison d’un changement apporté par l’application, par un commutateur de profil, ou par un commutateur de contenu, etc.).
+Vous pouvez remplacer le comportement des proportions par défaut en spécifiant un autre *stratégie d&#39;échelle*. Définissez la stratégie de mise à l’échelle à l’aide du `MediaPlayerView` de `scalePolicy` . La variable `MediaPlayerView`La stratégie d’échelle par défaut de est définie avec une instance de la variable `MaintainAspectRatioScalePolicy` classe . Pour réinitialiser la stratégie d’échelle, remplacez l’instance par défaut de `MaintainAspectRatioScalePolicy` on `MediaPlayerView.scalePolicy` avec votre propre politique. (Vous ne pouvez pas définir la variable `scalePolicy` à une valeur nulle.)
 
-Vous pouvez remplacer le comportement par défaut des proportions en spécifiant une autre *stratégie d’échelle*. Spécifiez la stratégie d&#39;échelle à l&#39;aide de la propriété `scalePolicy` de l&#39;objet `MediaPlayerView`. La stratégie d&#39;échelle par défaut de `MediaPlayerView` est définie avec une instance de la classe `MaintainAspectRatioScalePolicy`. Pour réinitialiser la stratégie d&#39;échelle, remplacez l&#39;instance par défaut de `MaintainAspectRatioScalePolicy` sur `MediaPlayerView.scalePolicy` par votre propre stratégie. (Vous ne pouvez pas définir la propriété `scalePolicy` sur une valeur nulle.)
+1. Mettez en oeuvre le `MediaPlayerViewScalePolicy` pour créer votre propre stratégie à l’échelle.
 
-1. Implémentez l&#39;interface `MediaPlayerViewScalePolicy` pour créer votre propre stratégie d&#39;échelle.
-
-   Le `MediaPlayerViewScalePolicy` comporte une méthode :
+   La variable `MediaPlayerViewScalePolicy` possède une méthode :
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -29,13 +27,12 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
 
    >[!NOTE]
    >
-   >TVSDK utilise un objet `StageVideo` pour l’affichage de la vidéo. Comme les objets `StageVideo` ne figurent pas sur la liste d’affichage, le paramètre `viewPort` contient les coordonnées absolues de la vidéo.
+   >TVSDK utilise une `StageVideo` pour afficher la vidéo, et pour `StageVideo` ne figurent pas dans la liste d’affichage, la variable `viewPort` contient les coordonnées absolues de la vidéo.
    >
    >
-   >Par exemple :
+   >Par exemple :
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -57,15 +54,16 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
    >       } 
    >}
    >```
+   >
 
-1. Affectez votre implémentation à la propriété `MediaPlayerView`.
+1. Affectez votre mise en oeuvre au `MediaPlayerView` .
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Ajoutez votre vue à la propriété `view` du lecteur multimédia.
+1. Ajoutez votre vue au `view` .
 
    ```
    addChild(view); 
@@ -75,7 +73,7 @@ Vous pouvez remplacer le comportement par défaut des proportions en spécifiant
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**Par exemple : Mettez la vidéo à l’échelle pour remplir toute la vue vidéo, sans conserver les proportions :**
+**Par exemple : mettez la vidéo à l’échelle pour remplir l’ensemble de l’affichage vidéo, sans conserver les proportions :**
 
 ```
 package com.adobe.mediacore.samples.utils { 
@@ -107,4 +105,3 @@ view.scalePolicy = new CustomScalePolicy();
 addChild(view); 
 mediaPlayer.view = view;
 ```
-

@@ -1,25 +1,22 @@
 ---
-title: Consommer des listes CRL générées localement
-description: Consommer des listes CRL générées localement
+title: Utilisation de listes CRL générées localement
+description: Utilisation de listes CRL générées localement
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
+# Utilisation de listes CRL générées localement{#consume-locally-generated-crls}
 
-# Consommer des listes CRL générées localement{#consume-locally-generated-crls}
+Pour utiliser des listes de révocation des certificats générées localement et des listes de mise à jour de stratégie, utilisez les API Adobe Access pour vérifier la signature. Les API vérifient que les listes n’ont pas été modifiées et qu’elles ont été signées par le bon serveur de licences.
 
-Pour utiliser des listes de révocation des certificats générées localement et des listes de mise à jour de stratégie, utilisez les API d’accès aux Adobes pour vérifier la signature. Les API vérifient que les listes n’ont pas été modifiées et qu’elles ont été signées par le serveur de licence approprié.
+* Appeler `RevocationList.verifySignature` pour vérifier la signature avant de fournir RevocationList à toute API.
 
-* Appelez `RevocationList.verifySignature` pour vérifier la signature avant de fournir RevocationList à toute API.
+  Pour plus d’informations, voir `RevocationListFactory` dans le *Référence de l’API Adobe Access*.
 
-   Pour plus d&#39;informations, voir `RevocationListFactory` dans le *Guide de référence de l&#39;API d&#39;accès aux Adobes*.
+* Appeler `PolicyUpdateList.verifySignature`pour vérifier la signature avant de fournir l’événement `PolicyUpdateList` à toute API.
 
-* Appelez `PolicyUpdateList.verifySignature`pour vérifier la signature avant de fournir `PolicyUpdateList` à toute API.
-
-   Pour plus d&#39;informations, voir `PolicyUpdateList` dans le *Guide de référence de l&#39;API d&#39;accès aux Adobes*.
-
+  Pour plus d’informations, voir `PolicyUpdateList` dans le *Référence de l’API Adobe Access*.

@@ -1,8 +1,7 @@
 ---
 description: Pour commencer à utiliser Primetime DRM Cloud, optimisé par ExpressPlay, vous devez configurer des comptes Adobe Cert et ExpressPlay avec l’aide de votre représentant d’Adobe.
 title: Obtention de la configuration (comptes, etc.)
-exl-id: 2543d997-3495-4545-9395-072c07431aba
-source-git-commit: a0917e128862184ce18050792c2ee2ac265050d2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Pour commencer à utiliser Primetime DRM Cloud, optimisé par ExpressPlay, vous 
 
 1. Sur le portail Adobe cert, demandez un *Évaluation* cert.
 
-   Pour l’évaluation multi-DRM, un seul certificat d’évaluation couvrira tous les aspects de la protection du contenu : emballage, licences et transport. Vous devrez fournir les vôtres. [CSR](../../../digital-rights-management/certificate-enrollment-guide/request-certs/gen-cert-signing-req.md) pour effectuer une demande de certificat :
+   Pour l’essai Multi-DRM, un seul certificat d’essai couvrira tous les aspects de la protection du contenu : emballage, licences et transport. Vous devrez fournir les vôtres. [CSR](../../../digital-rights-management/certificate-enrollment-guide/request-certs/gen-cert-signing-req.md) pour effectuer une demande de certificat :
    <!--<a id="fig_op1_xwj_wv"></a>-->
 
    ![](assets/cert_portal_trial_request-web.png)

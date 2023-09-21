@@ -1,18 +1,16 @@
 ---
-description: Vous obtenez ainsi des informations sur l’activité du Digital Rights Management (DRM).
+description: Cela fournit des informations sur l’activité de Digital Rights Management (DRM).
 title: Classes de Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
-
 # Classes de Digital Rights Management{#digital-rights-management-classes}
 
-Vous obtenez ainsi des informations sur l’activité du Digital Rights Management (DRM).
+Cela fournit des informations sur l’activité de Digital Rights Management (DRM).
 
 | **Classe** | **Description** |
 |---|---|

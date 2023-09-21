@@ -1,46 +1,44 @@
 ---
 description: Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
-title: Répondre aux clics sur les publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Réponse aux clics sur les publicités
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# Réponse aux clics sur les publicités {#respond-to-clicks-on-ads}
 
-# Répondre aux clics sur les publicités {#respond-to-clicks-on-ads}
-
-TVSDK fournit des informations vous permettant d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur du lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
+TVSDK fournit des informations qui vous permettent d’agir sur les publicités par clic publicitaire. Lorsque vous créez l’interface utilisateur de votre lecteur, vous devez décider comment répondre lorsqu’un utilisateur clique sur une publicité cliquable.
 
 Pour TVSDK pour Android, seules les publicités linéaires peuvent être cliquées.
 Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, votre application doit répondre. TVSDK fournit des informations sur l’URL de destination du clic.
 
-1. Pour configurer un écouteur de événement pour TVSDK et fournir les informations de clic publicitaire, enregistrez `AdClickedEventListener.onAdClicked`.
+1. Pour configurer un écouteur d’événement pour TVSDK et fournir les informations sur les clics publicitaires, enregistrez-vous. `AdClickedEventListener.onAdClicked`.
 
    Lorsqu’un utilisateur clique sur une publicité ou un bouton associé, TVSDK envoie cette notification, y compris des informations sur la destination du clic.
 1. Surveillez les interactions des utilisateurs sur les annonces cliquables.
-1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, pour avertir TVSDK, appelez `notifyClick` sur le `MediaPlayerView`.
-1. Prêtez attention au événement `onAdClick(AdClickEvent event)` de TVSDK.
-1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour l’instance `AdClickEvent`.
+1. Lorsque l’utilisateur touche ou clique sur la publicité ou le bouton, appelez pour avertir TVSDK. `notifyClick` sur le `MediaPlayerView`.
+1. Écoute de la `onAdClick(AdClickEvent event)` de TVSDK.
+1. Pour récupérer l’URL de clic publicitaire et les informations connexes, utilisez les méthodes getter pour la variable `AdClickEvent` instance.
 1. Mettez la vidéo en pause.
 
-   Pour plus d’informations sur la mise en pause de la vidéo, voir [Mise en pause et reprise de la lecture](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
-1. Utilisez les informations de clic publicitaire pour afficher l’URL de clic publicitaire et les informations associées. Vous pouvez, par exemple, afficher les informations de l’une des manières suivantes :
+   Pour plus d’informations sur la suspension de la vidéo, voir  [Suspension et reprise de la lecture](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
+1. Utilisez les informations sur les clics publicitaires pour afficher l’URL des clics publicitaires et les informations associées. Vous pouvez, par exemple, afficher les informations de l’une des manières suivantes :
 
-   * Dans votre application, en ouvrant l’URL de clic publicitaire dans un navigateur.
+   * Dans votre application, en ouvrant l’URL du clic publicitaire dans un navigateur.
 
-      Sur les plateformes de bureau, la zone de lecture des publicités vidéo est utilisée pour appeler des URL de clic publicitaire au moment des clics des utilisateurs.
+     Sur les plateformes de bureau, la zone de lecture des publicités vidéo est utilisée pour appeler les URL de clic publicitaire lors des clics de l’utilisateur.
    * Redirigez les utilisateurs vers leur navigateur Web mobile externe.
 
-      Sur les périphériques mobiles, la zone de lecture des publicités vidéo est utilisée pour d’autres fonctions, telles que masquer et afficher les commandes, suspendre la lecture, passer en mode plein écran, etc. Sur ces périphériques, une vue distincte, telle qu’un bouton de parrainage, est utilisée pour lancer l’URL de clic publicitaire.
+     Sur les appareils mobiles, la zone de lecture des publicités vidéo est utilisée pour d’autres fonctions, telles que le masquage et l’affichage des commandes, la mise en pause de la lecture, le passage en plein écran, etc. Sur ces périphériques, une vue distincte, telle qu’un bouton de parrainage, est utilisée pour lancer l’URL de clic publicitaire.
 
 1. Fermez la fenêtre du navigateur dans laquelle les informations de clic publicitaire s’affichent et relancez la lecture de la vidéo.
 
 <!--<a id="example_2D93228E510D438C8AB5559897817A47"></a>-->
 
-Par exemple :
+Par exemple :
 
 ```java
 private AdStartedEventListener adStartedEventListener =  

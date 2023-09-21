@@ -1,8 +1,7 @@
 ---
 title: Bonnes pratiques
 description: Lisez la suite pour comprendre comment mieux utiliser l’outil Account IQ.
-exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -36,13 +35,13 @@ Utilisez l’outil Opération pour définir le segment cible et une période op�
 
 * Créez une opération qui définit le segment cible et la période de l’opération.
 
-* En fonction d’objectifs tels que la vente, l’augmentation de la charge publicitaire ou la limitation de l’accès à des comptes frauduleux, prenez les mesures appropriées sur l’ensemble d’utilisateurs défini, par exemple : dans les offres de l’application, les publicités supplémentaires ou une authentification multifactorielle requise.
+* En fonction d’objectifs tels que la vente, l’augmentation de la charge publicitaire ou l’atténuation de l’accès à des comptes frauduleux, prenez les mesures appropriées sur l’ensemble d’utilisateurs défini, par exemple : dans les offres d’application, les publicités supplémentaires ou une authentification multifactorielle requise.
 
 <!--If necessary, gauge the affect [by measuring the impact of actions taken](#track-measure-impact).-->
 
 ## Suivi et mesure de l’impact des actions {#track-measure-impact}
 
-Les actions nécessitent du temps pour être prises en compte. Utilisez l’opération et les graphiques associés pour effectuer le suivi de l’état de l’opération et des caractéristiques de segment au cours des semaines ou des mois suivants de la période de l’opération. Combinez ces informations à toute autre analyse pour répondre ou comprendre le résultat. Par exemple : Quel pourcentage d&#39;emprunteurs se sont convertis en abonnés ? Combien de publicités supplémentaires ont-elles été vues ? Le nombre d&#39;emprunteurs a-t-il diminué ?
+Les actions nécessitent du temps pour être prises en compte. Utilisez l’opération et les graphiques associés pour effectuer le suivi de l’état de l’opération et des caractéristiques de segment au cours des semaines ou des mois suivants de la période de l’opération. Combinez ces informations à toute autre analyse pour répondre ou comprendre le résultat. Par exemple : quel pourcentage d’emprunteurs ont converti en abonnés ? Combien de publicités supplémentaires ont-elles été vues ? Le nombre d&#39;emprunteurs a-t-il diminué ?
 
 * Utilisez des graphiques des opérations et d’autres analyses pour suivre et mesurer l’effet des actions.
 

@@ -2,7 +2,6 @@
 title: Conditions requises pour la synchronisation
 description: Conditions requises pour la synchronisation
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '163'
@@ -13,15 +12,15 @@ ht-degree: 0%
 
 # Conditions requises pour la synchronisation{#requirements-for-synchronization}
 
-Indique la fréquence à laquelle le client synchronise son état avec le serveur. Si le client a reçu une licence hors bande (sans contact avec un serveur de licences), les règles d’utilisation peuvent spécifier que le client doit envoyer des messages de synchronisation au serveur afin de synchroniser l’heure sécurisée du client et de signaler l’état du client au serveur.
+Indique la fréquence à laquelle le client synchronise son état avec le serveur. Si le client a reçu une licence hors-bande (sans contact avec un serveur de licences), les règles d’utilisation peuvent spécifier que le client doit envoyer des messages de synchronisation au serveur afin de synchroniser l’heure sécurisée du client et de signaler l’état du client au serveur.
 
-Le comportement de synchronisation est défini à l’aide des paramètres suivants :
+Le comportement de synchronisation est défini à l&#39;aide des paramètres suivants :
 
-* Intervalle de début : indique le délai d&#39;attente après la dernière synchronisation réussie pour début d&#39;une autre demande de synchronisation.
-* Intervalle d’arrêt définitif — (facultatif). Interdire la lecture si une synchronisation réussie n’a pas eu lieu pendant la durée spécifiée.
-* Forcer la probabilité de synchronisation — (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l&#39;intervalle de début suivant.
+* Intervalle de début : indique la durée d’attente après la dernière synchronisation réussie pour démarrer une autre requête de synchronisation.
+* Intervalle d’arrêt hard (facultatif). Interdire la lecture si une synchronisation réussie ne s’est pas produite pendant la durée spécifiée.
+* Forcer la probabilité de synchronisation — (facultatif). Probabilité avec laquelle le client doit envoyer un message de synchronisation avant l’intervalle de démarrage suivant.
 
 >[!NOTE]
 >
->Cette règle d&#39;utilisation est prise en charge par les clients Adobe Access version 3.0 et ultérieure. Le comportement des clients plus anciens dépend de la version minimale du client prise en charge par le serveur de licences. Voir [Version minimale du client](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Cette règle d’utilisation est prise en charge par les clients Adobe Access versions 3.0 et ultérieures. Le comportement sur les clients plus anciens dépend de la version client minimale prise en charge par le serveur de licences. Voir [Version minimale du client](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
 

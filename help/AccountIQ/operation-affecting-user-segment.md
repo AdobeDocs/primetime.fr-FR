@@ -1,26 +1,25 @@
 ---
 title: Création d’une opération sur un segment d’utilisateur et suivi de l’effet
 description: Découvrez comment créer une opération qui a un effet et en effectue le suivi sur un segment défini d’utilisateurs.
-exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Création d’une opération sur un segment d’utilisateur {#operation-to-track-segment}
 
-Chaque page de rapports sur le compte IQ comporte une **Créer une opération** l’option permettant de créer des workflows afin d’automatiser (et de simplifier) diverses actions (en bloc) sur les comptes d’abonnés ; définir des règles pour spécifier un exemple, définir des actions, enregistrer et analyser les effets de ces actions ; Sur la page de création des opérations, vous pouvez définir l’exemple de groupes d’utilisateurs sur lequel les opérations seront effectuées et planifier l’exécution de l’opération à une date ultérieure.
+Chaque page de rapports sur le compte IQ comporte une **Créer une opération** pour vous aider à créer des workflows afin d’automatiser (et de simplifier) diverses actions (en bloc) sur les comptes d’abonnés ; définir des règles pour spécifier un exemple, définir des actions, enregistrer et analyser les effets de ces actions. Sur la page de création des opérations, vous pouvez définir l’exemple de groupes d’utilisateurs sur lequel les opérations seront effectuées et planifier l’exécution de l’opération à une date ultérieure.
 
 Pour créer une opération :
 
 1. Définissez votre segment (cohorte) à des fins d’analyse sur l’une des pages de rapports ou de tableaux de bord, en suivant les étapes de la section [Définition des segments et période](/help/AccountIQ/howto-select-segment-timeframe.md).
 
-1. Sélectionner **Créer une opération** option disponible sur l’une des pages de rapports ou de tableaux de bord. Le **Créer une opération** s’affiche.
+1. Sélectionner **Créer une opération** option disponible sur l’une des pages de rapports ou de tableaux de bord. La variable **Créer une opération** s’affiche.
 
    ![Page pour créer une opération](assets/create-new-operations.png)
-   *Figure : Page pour créer une opération*
+   *Figure : Page permettant de créer une opération*
 
 1. Sur le **Créer une opération** , renseignez les détails dans les champs de formulaire pour :
 
@@ -50,7 +49,7 @@ Nommez la nouvelle opération dans **Nom de l’opération** sous Détails de l�
 
 +++Programmeur - Segment Target
 
-Le **Segment** définit ici les utilisateurs qui seront exploités par cette opération ; ou le groupe d’exemple de votre opération. Le segment par défaut est le suivant : **segment** vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
+La variable **Segment** ici définit les utilisateurs qui seront exploités au cours de cette opération, ou le groupe d’échantillons pour votre opération. Le segment par défaut est : **segment** que vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -58,13 +57,13 @@ Le **Segment** définit ici les utilisateurs qui seront exploités par cette op�
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Ce segment définit les abonnés qui seront affectés par l’opération en cours de création. Par exemple, le segment sélectionné peut spécifier *tous les comptes abonnés du MVPD nommés &quot;C&quot; qui affichent le canal &quot;N Sports&quot;*.
+Ce segment définit les abonnés qui seront affectés par l’opération en cours de création. Par exemple, le segment sélectionné peut spécifier : *tous les comptes abonnés du MVPD nommés &quot;C&quot; qui affichent le canal &quot;N Sports&quot;*.
 
 +++
 
 +++MVPD - Segment cible
 
-Le **Segment** définit ici les utilisateurs qui seront exploités par cette opération ; ou le groupe d’exemple de votre opération. Le segment par défaut est le suivant : **segment** vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
+La variable **Segment** ici définit les utilisateurs qui seront exploités au cours de cette opération, ou le groupe d’échantillons pour votre opération. Le segment par défaut est : **segment** que vous avez sélectionné à l’aide de [panneau de segments et de périodes](/help/AccountIQ/howto-select-segment-timeframe.md) sur la page principale des rapports ou des tableaux de bord à l’étape 1 ci-dessus.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -72,7 +71,7 @@ Le **Segment** définit ici les utilisateurs qui seront exploités par cette op�
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Ce segment définit vos abonnés (qui sont des visionneuses de canaux spécifiques) qui seront affectés par l’opération en cours de création. Par exemple, votre segment (par défaut) comprend *tous les comptes abonnés qui affichent le canal &quot;N Sports&quot;*.
+Ce segment définit vos abonnés (qui sont des visionneuses de canaux spécifiques) qui seront affectés par l’opération en cours de création. Par exemple, votre segment (par défaut) comprend : *tous les comptes abonnés qui consultent le canal &quot;N Sports&quot;*.
 +++
 
 ### Segmentation supplémentaire {#additional-segmentation}
@@ -97,7 +96,7 @@ Le type de segment est la manière dont un segment est traité tout au long de l
 
 ![](assets/segment-type.png)
 
-*Figure : Affiner le nombre de segments à utiliser à l’aide du type Segment*
+*Figure : Affinage du nombre de segments à utiliser à l’aide du type Segment*
 
 <!--The segment type option allows you to further refine your segment based on the evaluation period (or time).
 
@@ -142,11 +141,11 @@ if not fixed segment, then I won't initially evaluate or have initial set of 500
 
 ## Action {#action}
 
-Le **Action** définit l’opération que vous exécuterez sur le segment défini.
+La variable **Action** définit l’opération que vous exécuterez sur le segment défini.
 
 Vous pouvez effectuer deux types d’actions :
 
-* Actions utilisant des systèmes intégrés à Account IQ ; par exemple **Surveillance de simultanéité** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
+* Actions utilisant des systèmes intégrés à Account IQ, tels que **Surveillance de simultanéité** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Actions pour créer et traiter des workflows externes à Account IQ et non intégrés au système de compte IQ. Par exemple, une action pour le programmeur de canal &quot;N&quot; pour envoyer des emails en masse à tous les abonnés du MVPD &quot;C&quot;.
 
@@ -163,7 +162,7 @@ Vous pouvez planifier l’activation de l’opération en définissant les dates
 >La date de début et la date de fin ont une granularité identique à celle que vous avez sélectionnée pour l’évaluation lors de la définition d’un segment à l’aide de **panneau de segments et de périodes**, à l’étape 1.
 >
 >
->Ainsi, si vous avez sélectionné la granularité Semaine, les dates de début et de fin sont exprimées en termes de semaine (par exemple, Semaine 14) ; si vous sélectionnez la granularité Mois, les dates de début et de fin sont exprimées en mois.
+>Ainsi, si vous avez sélectionné la granularité Semaine, les dates de début et de fin sont exprimées en termes de semaine (Semaine 14, par exemple) ; si vous sélectionnez la granularité Mois, les dates de début et de fin sont définies en termes de mois.
 
 
 >[!IMPORTANT]
@@ -172,7 +171,7 @@ Vous pouvez planifier l’activation de l’opération en définissant les dates
 
 ### Enregistrer l’opération {#save-operation}
 
-Lorsque vous enregistrez l’opération, un écran de message s’affiche pour vous informer que le segment que vous avez défini dans cette opération est également enregistré pour une utilisation ultérieure. Vous devez toutefois nommer ce segment.
+Lorsque vous enregistrez l’opération, un écran de message s’affiche pour vous informer que le segment que vous avez défini dans cette opération est également enregistré pour une utilisation ultérieure. Cependant, vous devez nommer ce segment.
 
 ![](assets/save-operation.png)
 
@@ -200,4 +199,4 @@ Les détails de votre opération enregistrée sont visibles sur la page principa
 
 ![](assets/new-operation-created.png)
 
-*Figure : L’opération nouvellement créée est répertoriée sur la page Opérations principale.*
+*Figure : L’opération nouvellement créée est répertoriée sur la page Opérations principale*

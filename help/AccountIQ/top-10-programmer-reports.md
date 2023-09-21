@@ -1,7 +1,7 @@
 ---
 title: Affichage des rapports de partage de compte pour les 10 premiers programmeurs
 description: Affichage des rapports de partage de compte pour les 10 premiers programmeurs
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs de progr
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **les 10 premiers programmeurs en partageant le score** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 
@@ -58,7 +58,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs de progr
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **les 10 premiers programmeurs par utilisation** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 
@@ -72,7 +72,7 @@ Pour afficher la liste et les rapports des dix principaux distributeurs multican
 
 1. Utilisez la variable [panneau de segments et de périodes](/help/AccountIQ/segments-timeframe.md), pour définir un segment en suivant les étapes de la section [Comment définir un segment et sélectionner une période](/help/AccountIQ/howto-select-segment-timeframe.md) pour l’évaluation. Pour cette évaluation, sélectionnez **les 10 premiers programmeurs par compte** dans la liste des MVPD.
 
-1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
+1. Sélectionnez une page de rapports dans l’une des [Utilisation générale](/help/AccountIQ/general-usage-reports.md), [Comptes partagés](/help/AccountIQ/shared-acc-reports.md), [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md), ou [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
 Chacune de ces pages reflète l’activité.
 

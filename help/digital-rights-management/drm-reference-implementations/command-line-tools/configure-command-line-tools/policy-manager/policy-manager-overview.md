@@ -2,20 +2,18 @@
 title: Présentation
 description: Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# Présentation {#overview}
 
-# Aperçu {#overview}
+Utilisez l’outil de ligne de commande Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) pour créer et gérer des stratégies DRM.
 
-Utilisez l&#39;outil de ligne de commande Primetime DRM Policy Manager ( [!DNL AdobePolicyManager.jar]) pour créer et gérer des stratégies DRM.
-
-Avant d&#39;exécuter [!DNL AdobePolicyManager.jar], vous devez définir les propriétés dans la section Propriétés de Policy Manager de votre fichier de configuration. Les valeurs que vous définissez dans le fichier de configuration sont appliquées à toutes les stratégies DRM.
+Avant l’exécution [!DNL AdobePolicyManager.jar], vous devez définir les propriétés dans la section Propriétés du Gestionnaire de stratégies de votre fichier de configuration. Les valeurs que vous définissez dans le fichier de configuration sont appliquées à toutes les stratégies DRM.
 
 >[!NOTE]
 >

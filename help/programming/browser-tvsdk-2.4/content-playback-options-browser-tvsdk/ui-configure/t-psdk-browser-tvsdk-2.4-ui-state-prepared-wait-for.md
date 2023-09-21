@@ -1,30 +1,27 @@
 ---
 description: Avant de pouvoir utiliser la plupart des méthodes du lecteur Browser TVSDK, le lecteur doit être dans un état valide.
-title: Attendre un état valide
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Attente d’un état valide
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
-# Attendre un état {#wait-for-a-valid-state} valide
+# Attente d’un état valide {#wait-for-a-valid-state}
 
 Avant de pouvoir utiliser la plupart des méthodes du lecteur Browser TVSDK, le lecteur doit être dans un état valide.
 
-Le joueur se déplace à travers différents états. En attendant que le lecteur soit à l’état correct, vous avez la garantie que la ressource multimédia a été chargée avec succès. Si le lecteur n&#39;est pas dans l&#39;état requis au moins, de nombreuses méthodes du lecteur lancent `IllegalStateException`.
+Le lecteur se déplace à travers différents états. En attendant que le lecteur se trouve dans l’état correct, vérifiez que la ressource multimédia a bien été chargée. Si le lecteur n’est pas dans l’état requis au moins, de nombreuses méthodes du lecteur sont lancées `IllegalStateException`.
 
 L’état requis est généralement PRÉPARÉ.
 
 1. Pour confirmer que l’état est PRÉPARÉ :
 
-   Une fois le lecteur initialisé, attendez que le navigateur TVSDK distribue le événement `AdobePSDK.MediaPlayerStatusChangeEvent` avec un `event.status` de `MediaPlayerStatus.PREPARED`.
+   Lorsque le lecteur est en cours d’initialisation, attendez que le navigateur TVSDK distribue le `AdobePSDK.MediaPlayerStatusChangeEvent` avec un événement `event.status` de `MediaPlayerStatus.PREPARED`.
 
    Pour vérifier si l’état actuel de l’objet MediaPlayer est au moins PRÉPARÉ.
 
    ```
    <readonly> status :AdobePSDK.MediaPlayerStatus
    ```
-

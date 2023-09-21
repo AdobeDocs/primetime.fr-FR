@@ -1,26 +1,24 @@
 ---
-description: Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, vous pouvez effectuer une authentification pendant la lecture.
+description: Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux multimédia, vous pouvez effectuer une authentification pendant la lecture.
 title: Authentification DRM pendant la lecture
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Authentification DRM pendant la lecture {#drm-authentication-during-playback}
 
-Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux média, vous pouvez effectuer une authentification pendant la lecture.
+Lorsque les métadonnées DRM d’une vidéo sont incluses dans le flux multimédia, vous pouvez effectuer une authentification pendant la lecture.
 
-Avec la rotation des licences, un fichier est chiffré avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, les méthodes `DRMHelper` sont utilisées pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
+Avec la rotation des licences, une ressource est chiffrée avec plusieurs licences DRM. Chaque fois que de nouvelles métadonnées DRM sont découvertes, la variable `DRMHelper` sont utilisées pour vérifier si les métadonnées DRM nécessitent une authentification DRM.
 
 >[!TIP]
 >
->Avant de commencer la lecture, déterminez si vous avez affaire à une licence liée au domaine et si l’authentification de domaine est requise. Si oui, effectuez l’authentification de domaine et joignez le domaine.
+>Avant de commencer la lecture, déterminez si vous avez affaire à une licence liée à un domaine et si l’authentification de domaine est requise. Si oui, effectuez l’authentification de domaine et rejoignez le domaine.
 
-1. Lorsque de nouvelles métadonnées DRM sont découvertes dans une ressource, un événement est distribué dans la couche de l’application.
+1. Lorsque de nouvelles métadonnées DRM sont découvertes dans une ressource, un événement est distribué au niveau de la couche de l’application.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -35,18 +33,18 @@ Avec la rotation des licences, un fichier est chiffré avec plusieurs licences D
    };
    ```
 
-1. Utilisez `DRMMetadata` pour vérifier si une authentification est nécessaire.
+1. Utilisez la variable `DRMMetadata` pour vérifier si l’authentification est nécessaire.
 
    * Si l’authentification n’est pas requise, vous n’avez rien à faire et la lecture se poursuit sans interruption.
-   * Si l&#39;authentification est requise, effectuez l&#39;authentification DRM.
+   * Si l’authentification est requise, effectuez l’authentification DRM.
 
-      Cette opération étant asynchrone et gérée dans un thread différent, elle n’a aucun impact sur l’interface utilisateur ni sur la lecture vidéo.
+     Cette opération étant asynchrone et gérée dans un autre thread, elle n’a aucun impact sur l’interface utilisateur ni sur la lecture vidéo.
 
 1. Si l’authentification échoue, l’utilisateur ne peut pas continuer à regarder la vidéo et la lecture s’arrête.
 
 <!--<a id="example_939B95F831A245869F9248E2767F260C"></a>-->
 
-Par exemple :
+Par exemple :
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  
@@ -111,4 +109,3 @@ DRMMetadataInfoEventListener drmMetadataInfoEventListener =
     } 
 }; 
 ```
-

@@ -2,11 +2,11 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Aide à la migration vers Primetime
-user-guide-description: Décrit le processus de conversion et de migration permettant de passer de la suite Primetime TVSDK existante à la suite de nouvelle génération.
+user-guide-description: Explique le processus de conversion et de migration pour passer de votre suite Primetime TVSDK existante à la suite de nouvelle génération.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '37'
-ht-degree: 64%
+ht-degree: 0%
 
 ---
 

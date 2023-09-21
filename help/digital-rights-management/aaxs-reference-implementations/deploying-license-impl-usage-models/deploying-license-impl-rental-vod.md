@@ -1,16 +1,14 @@
 ---
-title: Location/Vidéo à la demande
-description: Location/Vidéo à la demande
+title: Location/Video-On-Demand
+description: Location/Video-On-Demand
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
+# Location/Video-On-Demand {#rental-video-on-demand}
 
-# Location/Vidéo à la demande {#rental-video-on-demand}
-
-Avec le modèle d’utilisation de la vidéo à la demande (VOD), le contenu est proposé avec des restrictions temporelles. Par exemple, un utilisateur peut lire le contenu pendant une période de 30 jours ; toutefois, une fois la lecture commencée, l’utilisateur dispose de 48 heures pour terminer la lecture, après quoi le contenu ne sera plus lisible. Lors de la demande de licence, l’utilisateur doit s’authentifier afin que le serveur puisse vérifier que l’utilisateur dispose d’un compte de location.
+Avec le modèle d’utilisation de la vidéo à la demande (VOD), le contenu est proposé avec des restrictions temporelles. Par exemple, un utilisateur a la possibilité de lire le contenu pendant une période de 30 jours. Cependant, une fois la lecture commencée, l’utilisateur a jusqu’à 48 heures pour terminer la lecture, après quoi le contenu ne pourra plus être lu. Lorsque vous demandez une licence, l’utilisateur doit s’authentifier afin que le serveur puisse vérifier que l’utilisateur dispose d’un compte de location.

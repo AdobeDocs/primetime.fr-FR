@@ -1,24 +1,22 @@
 ---
-description: Le SDK TVSDK informe le client du lecteur de la disponibilité de la variable availableMediaCharacteristicsWithMediaSelectionOptions du fichier AVAsset interne en utilisant la notification PTMediaPlayerMediaSelectionOptionsAvailableNotification.
+description: Le TVSDK informe votre client de lecteur de la disponibilité de l’option availableMediaCharacterlorsWithMediaSelectionOptions de la visionneuse interne AVAediaPlayerMediaSelectionOptionsAvailableNotification en utilisant la notification PTMediaPlayerMediaSelectionNotification .
 title: Exposer les sous-titres
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
-
 # Exposer les sous-titres {#expose-subtitles}
 
-Le SDK TVSDK informe le client du lecteur de la disponibilité de la variable availableMediaCharacteristicsWithMediaSelectionOptions du fichier AVAsset interne en utilisant la notification PTMediaPlayerMediaSelectionOptionsAvailableNotification.
+Le TVSDK informe votre client de lecteur de la disponibilité de l’option availableMediaCharacterlorsWithMediaSelectionOptions de la visionneuse interne AVAediaPlayerMediaSelectionOptionsAvailableNotification en utilisant la notification PTMediaPlayerMediaSelectionNotification .
 
-Vous pouvez accéder aux sous-titres disponibles par l&#39;intermédiaire de la propriété `subtitlesOptions`  de la propriété `PTMediaPlayerItem`.
+Vous pouvez accéder aux sous-titres disponibles à l’aide du `PTMediaPlayerItem` de propriété `subtitlesOptions`.
 
-Pour exposer les sous-titres :
+Pour exposer des sous-titres :
 
-1. Enregistrez le client en tant que processus d’écoute pour la notification `PTMediaPlayerMediaSelectionOptionsAvailableNotification`.
+1. Enregistrez le client en tant qu’écouteur pour le `PTMediaPlayerMediaSelectionOptionsAvailableNotification` notification.
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -26,8 +24,8 @@ Pour exposer les sous-titres :
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   Lorsque votre client reçoit cette notification, les sous-titres sont prêts dans le `PTMediaPlayerItem`.
-1. Implémentez la méthode `onMediaPlayerItemMediaSelectionOptionsAvailable` comme dans l&#39;exemple suivant :
+   Lorsque votre client reçoit cette notification, les sous-titres sont prêts dans la `PTMediaPlayerItem`.
+1. Mettez en oeuvre le `onMediaPlayerItemMediaSelectionOptionsAvailable` similaire à l’exemple suivant :
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +34,4 @@ Pour exposer les sous-titres :
    }
    ```
 
-   Pour plus d&#39;informations sur les pistes audio de remplacement, voir [Autre audio](../../alternate-audio/ios-3x-alternate-audio.md).
+   Pour plus d’informations sur les autres pistes audio, voir  [Autre audio](../../alternate-audio/ios-3x-alternate-audio.md).

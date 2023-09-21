@@ -1,13 +1,12 @@
 ---
 title: Comment effectuer une demande d’accès à des informations personnelles
 description: Comment effectuer une demande d’accès à des informations personnelles
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
 
 ---
-
 
 # Comment effectuer une demande d’accès à des informations personnelles {#howto-make-privacy-request}
 
@@ -17,14 +16,14 @@ ht-degree: 0%
 
 ## Identifiants et espaces de noms {#identifier-namespace}
 
-Lors de l’envoi d’une demande d’accès ou de suppression de données personnelles, l’application client doit inclure les identifiants suivants :
+Lors de l’envoi d’une demande d’accès ou de suppression d’informations personnelles, l’application client doit inclure les identifiants suivants :
 
 * **mvpdID** - Identifiant unique du MVPD.
 * **userID** - Identifie de manière unique l’utilisateur d’une application de programmeur, mais provient du MVPD. Voir Présentation des ID utilisateur dans la présentation du programmeur.
 * **IMSOrgID** - Identifiant de l’organisation du service Adobe Experience Cloud Identity Management, qui identifie de manière unique le client dans Adobe Experience Cloud
 
 
-Consultez l’exemple ci-dessous :
+Veuillez consulter l’exemple ci-dessous :
 
 ```JSON
 "userIDs": [{
@@ -222,7 +221,7 @@ Pour une demande de suppression :
 Deux options permettent aux clients d’envoyer des demandes d’accès à des informations personnelles à Adobe :
 
 * **manuellement** - en utilisant [Interface utilisateur du Privacy Service](#privacy-service-ui)
-* **automatiquement** - en utilisant [API Privacy Service ](#privacy-service-api)
+* **automatiquement** - en utilisant [API PRIVACY SERVICE](#privacy-service-api)
 
 ### Utilisation de l’interface utilisateur de Privacy Service {#privacy-service-ui}
 
@@ -232,13 +231,13 @@ Dans l’interface utilisateur, les clients doivent charger leur propre IMSOrgID
 
 ### Utilisation de l’API Privacy Service {#privacy-service-api}
 
-Adobe Experience Platform Privacy Service fournit une facilitation centralisée et commune des demandes d’accès/de suppression et des demandes d’opposition à la vente des données privées.
+Adobe Experience Platform Privacy Service offre une facilitation centralisée et commune des demandes d’accès/de suppression et des demandes d’opposition à la vente des données privées.
 
-Le **Documentation de l’API Privacy Service** Décrit en détail la manière dont un client Adobe peut s’intégrer à l’API Adobe.
+La variable **Documentation de l’API Privacy Service** Décrit en détail la manière dont un client Adobe peut s’intégrer à l’API Adobe.
 
 **Visualisez les appels d’API avec Postman (un logiciel tiers gratuit) :**
 
-* [Collection Postman de l’API du Privacy Service sur GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
+* [Collection Postman d’API Privacy Service sur GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
 * [Guide vidéo pour la création de l’environnement Postman](https://video.tv.adobe.com/v/28832)
 * [Procédure d’importation d’environnements et de collections dans Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
@@ -253,7 +252,7 @@ Le **Documentation de l’API Privacy Service** Décrit en détail la manière d
 **En-têtes requis :**
 
 * Tous les appels nécessitent des en-têtes `Authorization`, `x-gw-ims-org-id`, et `x-api-key`. Pour plus d’informations sur l’obtention de ces valeurs, voir la section **tutoriel sur l’authentification**.
-* Toutes les requêtes comportant un payload dans le corps de la requête (comme les appels de POST, de PUT et de PATCH) doivent inclure l’en-tête `Content-Type` avec la valeur `application/json`.
+* Toutes les requêtes comportant un payload dans le corps de la requête (comme les appels POST, PUT et PATCH) doivent inclure l’en-tête . `Content-Type` avec la valeur de `application/json`.
 
 <!--
 

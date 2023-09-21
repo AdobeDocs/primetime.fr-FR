@@ -1,16 +1,16 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide de Primetime Ad Insertion
+user-guide-title: Aide de l’Ad Insertion Primetime
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Aide de Primetime Ad Insertion {#ad-insertion}
+# Aide de l’Ad Insertion Primetime {#ad-insertion}
 
 + [Adobe Primetime Ad Insertion](home.md)
 + Annonces Ad Insertion Primetime{#announcements}
@@ -28,14 +28,14 @@ ht-degree: 4%
    + [Présentation](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Transcodage et normalisation](just-in-time-transcoding/transcoding-and-normalization.md)
    + [Diffusion et stockage](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
-   + [API de prétranscodage](just-in-time-transcoding/pre-transcoding-api.md)
+   + [API de pré-transcodage](just-in-time-transcoding/pre-transcoding-api.md)
    + [Prise en charge des injections ID3](just-in-time-transcoding/id3-injection-support.md)
 + Fonctionnalités avancées{#advanced-features}
    + [Itinéraires publicitaires basés sur des règles](advanced-features/route-ads-based-on-rules.md)
    + [Optimisation des expériences publicitaires](advanced-features/optimize-ad-experiences.md)
    + [Ajouter des pare-chocs de contenu](advanced-features/add-content-bumpers.md)
    + [Rapports et ciblage contextuels](advanced-features/contextual-reporting-and-targeting.md)
-+ Performances : surveillance, débogage et création de rapports{#performance}
++ Performances : surveillance, débogage et reporting{#performance}
    + [Présentation](performance-monitoring-debugging-reporting/performance-overview.md)
    + Surveillance et débogage{#monitor-debug}
       + [Suivi des performances](performance-monitoring-debugging-reporting/performance-monitoring.md)
@@ -46,7 +46,7 @@ ht-degree: 4%
    + [Mesures clés et dimensions de données](advanced-telemetry/key-metrics.md)
 + [Surveillance des événements en direct](live-event-monitoring.md)
 + Référence {#technical-reference}
-   + [API Bootstrap](technical-reference/bootstrap-api.md)
+   + [API BOOTSTRAP](technical-reference/bootstrap-api.md)
    + [API de rapports](technical-reference/report-api.md)
    + Bonnes pratiques{#best-practices}
       + [Présentation](best-practices/best-practices-overview.md)
@@ -62,4 +62,4 @@ ht-degree: 4%
    + [Diffusion et stockage](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md)
    + [Faciliter le passage du lecteur HLS aux diffusions de basculement/sauvegarde](technical-reference/hls-switching-to-failover.md)
    + [Cookies](technical-reference/cookies.md)
-   + [Exigences du lecteur vidéo](technical-reference/video-player-requirements.md)
+   + [Configuration requise du lecteur vidéo](technical-reference/video-player-requirements.md)

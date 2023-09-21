@@ -2,20 +2,18 @@
 title: Utilisation de la ligne de commande
 description: Utilisation de la ligne de commande
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
-
 # Utilisation de la ligne de commande {#command-line-usage}
 
-Avant d’utiliser Media Packager, assurez-vous de satisfaire aux exigences répertoriées dans la section Conditions requises et assurez-vous que le fichier de configuration contient les informations requises (voir Fichier de configuration dans le *Utilisation des implémentations de référence d’accès à l’Adobe*.
+Avant d’utiliser Media Packager, assurez-vous de respecter les exigences répertoriées dans Exigences et que le fichier de configuration contient les informations requises (voir Fichier de configuration dans la section *Utilisation des implémentations de référence d’accès Adobe*.
 
-Media Packager se trouve dans le répertoire [!DNL \Reference Implementation\Command Line tools] du DVD. Pour chiffrer un fichier unique, utilisez la syntaxe suivante :
+Media Packager se trouve dans la variable [!DNL \Reference Implementation\Command Line tools] répertoire sur le DVD. Pour chiffrer un seul fichier, utilisez la syntaxe suivante :
 
 ```
 java -jar AdobePackager.jar  
@@ -31,7 +29,7 @@ java -jar AdobePackager.jar
 ```
 
 * `source` est le fichier à chiffrer.
-* `dest` indique où le contenu chiffré sera écrit. Si un répertoire est spécifié, le fichier chiffré est enregistré dans ce dossier en utilisant le même nom de fichier que le fichier source, mais le répertoire ne doit pas être celui qui contient le fichier source.
+* `dest` indique l’emplacement d’écriture du contenu chiffré. Si un répertoire est spécifié, le fichier chiffré sera enregistré dans ce dossier avec le même nom de fichier que le fichier source, mais le répertoire ne doit pas être celui qui contient le fichier source.
 
 Pour chiffrer plusieurs fichiers avec la même clé (pour la prise en charge de débits multiples), utilisez la syntaxe suivante :
 
@@ -48,10 +46,10 @@ java -jar AdobePackager.jar
 </i class="+ topic>
 ```
 
-* `sourcefiles` est une série d’entrées source délimitées par des espaces blancs représentant les fichiers à chiffrer.
-* `dest-directory` indique où le contenu chiffré sera écrit. Les fichiers chiffrés seront enregistrés dans ce dossier en utilisant les mêmes noms de fichier que les fichiers source, mais le répertoire ne doit pas être celui qui contient les fichiers source.
+* `sourcefiles` est une série d’entrées source délimitées par des espaces qui représentent les fichiers à chiffrer.
+* `dest-directory` indique l’emplacement d’écriture du contenu chiffré. Les fichiers cryptés seront enregistrés dans ce dossier avec les mêmes noms que les fichiers source, mais le répertoire ne doit pas être celui contenant les fichiers source.
 
-Pour vue des informations sur un fichier chiffré, utilisez la syntaxe suivante :
+Pour afficher des informations sur un fichier chiffré, utilisez la syntaxe suivante :
 
 ```
 java -jar AdobePackager.jar -d  
@@ -62,19 +60,19 @@ java -jar AdobePackager.jar -d
 
 * `encryptedfile` est le fichier chiffré.
 
-Pour vue des informations sur un fichier de métadonnées, utilisez la syntaxe suivante :
+Pour afficher des informations sur un fichier de métadonnées, utilisez la syntaxe suivante :
 
 ```
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` est un  [!DNL .metadata] fichier contenant les métadonnées DRM.
+* `metadatafile` est un [!DNL .metadata] fichier contenant les métadonnées DRM.
 
 >[!NOTE]
 >
->Lors de l’assemblage, Media Packager ne génère plus par défaut un fichier .header. Pour générer ce fichier, utilisez l&#39;option `-h` lors de la création de package.
+>Lors du conditionnement, Media Packager ne génère plus de fichier .header par défaut. Pour générer ce fichier, utilisez la méthode `-h` lors de l’emballage.
 
-Le tableau suivant contient la description des options de ligne de commande affichées dans la syntaxe ci-dessus :
+Le tableau suivant contient des descriptions des options de ligne de commande affichées dans la syntaxe ci-dessus :
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4"> 
  <thead class="- topic/thead "> 
@@ -86,48 +84,47 @@ Le tableau suivant contient la description des options de ligne de commande affi
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique l’emplacement du fichier de configuration. Si cette option n’est pas utilisée, Media Packager recherchera <span class="filepath"> flashaccesstools.properties </span> dans le répertoire de travail. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique l’emplacement du fichier de configuration. Si cette option n’est pas utilisée, Media Packager recherche <span class="filepath"> flashaccesstools.properties </span> dans le répertoire de travail. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur un fichier déjà compressé. Les fichiers source et de destination ne sont pas requis. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur un fichier qui a déjà été compressé. Les fichiers source et de destination ne sont pas requis. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> fichier de métadonnées </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Affiche des informations sur les métadonnées existantes. Les fichiers source et de destination ne sont pas requis. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez cette option avec <span class="codeph"> -d </span> pour extraire les stratégies d’un fichier compressé. Un fichier est créé dans le même répertoire que le fichier chiffré à l’aide du nom de fichier et de l’identifiant de stratégie. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez cette option avec <span class="codeph"> -d </span> pour extraire des stratégies à partir d’un fichier compressé. Un fichier sera créé dans le même répertoire que le fichier chiffré à l’aide du nom de fichier et de l’identifiant de stratégie. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez <span class="codeph"> -d </span> pour extraire l’en-tête DRM d’un fichier compressé. Un fichier est créé dans le même répertoire que le fichier chiffré, en utilisant le nom de fichier et l’extension <span class="filepath"> .header </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisation avec <span class="codeph"> -d </span> pour extraire l’en-tête DRM d’un fichier empaqueté. Un fichier est créé dans le même répertoire que le fichier chiffré, à l’aide du nom de fichier et de l’extension <span class="filepath"> .header </span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique un identifiant unique pour cet élément de contenu. Si aucun identifiant n’est spécifié, le nom du fichier destfile est utilisé. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique un identifiant unique pour ce élément de contenu. Si aucun identifiant n’est spécifié, le nom du fichier destfile est utilisé. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> clé </span>= <span class="+ topic/ph pr-d/codeph codeph"> valeur </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Spécifie une clé/valeur personnalisée à ajouter aux métadonnées de contenu. Plusieurs options <span class="codeph"> -k </span> peuvent être spécifiées. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> value </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Spécifie une clé/valeur personnalisée à ajouter aux métadonnées de contenu. Multiple <span class="codeph"> -k </span> Les options peuvent être spécifiées. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez cette option avec <span class="codeph"> -d </span> pour extraire les métadonnées d’un fichier compressé. Un fichier sera créé dans le même répertoire que le fichier chiffré en utilisant le nom de fichier et l'extension <span class="codeph"> .metadata </span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez cette option avec <span class="codeph"> -d </span> pour extraire les métadonnées d’un fichier empaqueté. Un fichier sera créé dans le même répertoire que le fichier chiffré à l’aide du nom de fichier et de l’extension. <span class="codeph"> .metadata </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-noprompt </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et que <span class="codeph"> -o </span> n'est pas défini, une erreur est renvoyée. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ne demandez pas si le fichier de destination doit être remplacé. Si le fichier de destination existe déjà et <span class="codeph"> -o </span> n’est pas définie, une erreur est renvoyée. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Remplace le fichier de destination sans invite, s’il existe déjà. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nom de fichier [domaine-transport-cert] </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique le nom du fichier contenant la stratégie. Si la stratégie requiert l’enregistrement de domaine auprès d’un serveur qui utilise un certificat de transport différent de celui spécifié dans le fichier de propriétés, le certificat de transport de domaine doit également être fourni. </p> <p class="- topic/p ">Plusieurs options <span class="codeph"> -p </span> peuvent être spécifiées et le client utilisera la première par défaut. Les valeurs spécifiées sur la ligne de commande sont prioritaires sur celles spécifiées dans le fichier de configuration. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> filename [domain-transport-cert] </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indique le nom du fichier contenant la stratégie. Si la stratégie nécessite l’enregistrement de domaine avec un serveur qui utilise un certificat de transport différent de celui spécifié dans le fichier de propriétés, le certificat de transport de domaine doit également être fourni. </p> <p class="- topic/p ">Multiple <span class="codeph"> -p </span> Les options peuvent être spécifiées et le client utilisera la première par défaut. Les valeurs spécifiées sur la ligne de commande sont prioritaires sur celles spécifiées dans le fichier de configuration. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

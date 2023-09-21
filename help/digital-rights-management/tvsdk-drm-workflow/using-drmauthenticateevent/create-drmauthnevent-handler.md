@@ -1,22 +1,20 @@
 ---
-description: L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire du contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
+description: L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire un contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
 title: Création d’un gestionnaire DRMAuthenticateEvent
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
-
 # Création d’un gestionnaire DRMAuthenticateEvent{#create-a-drmauthenticateevent-handler}
 
-L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire du contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
+L’objet DRMAuthenticateEvent est distribué lorsqu’un objet Primetime tente de lire un contenu protégé qui nécessite des informations d’identification utilisateur pour l’authentification avant la lecture (et l’authentification n’a pas encore été effectuée). Le gestionnaire DRMAuthenticateEvent est chargé de rassembler les informations d’identification requises (nom d’utilisateur, mot de passe et type) et de transmettre les valeurs à la méthode .setDRMAuthenticationCredentials() pour validation.
 
-L’application doit fournir un mécanisme pour obtenir les informations d’identification de l’utilisateur. Par exemple, l’application peut fournir à un utilisateur une interface utilisateur simple pour entrer des valeurs de nom d’utilisateur et de mot de passe. En outre, il doit fournir un mécanisme de gestion et de limitation des tentatives d&#39;authentification répétées en cas d&#39;échec.
+L’application doit fournir un mécanisme pour obtenir les informations d’identification de l’utilisateur. Par exemple, l’application peut fournir à un utilisateur une interface utilisateur simple pour saisir les valeurs de nom d’utilisateur et de mot de passe. En outre, il doit fournir un mécanisme pour gérer et limiter les tentatives d’authentification répétées en échec.
 
-Créez un gestionnaire de événements qui transmet un ensemble d’informations d’identification d’authentification codées en dur à l’objet Primetime à l’origine du événement :
+Créez un gestionnaire d’événements qui transmet un ensemble d’informations d’authentification codées en dur à l’objet Primetime à l’origine de l’événement :
 
 ```
 var connection:NetConnection = new NetConnection();  

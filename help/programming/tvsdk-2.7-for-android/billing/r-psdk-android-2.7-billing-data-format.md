@@ -1,22 +1,20 @@
 ---
-description: TVSDK envoie les mesures de facturation à l’Adobe dans un format XML.
+description: TVSDK envoie les mesures de facturation à Adobe au format XML.
 title: Transmettre les mesures de facturation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
 # Transmettre les mesures de facturation {#transmit-billing-metrics}
 
-TVSDK envoie les mesures de facturation à l’Adobe dans un format XML.
+TVSDK envoie les mesures de facturation à Adobe au format XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Si vous utilisez un outil de capture réseau pour surveiller les statistiques transmises par TVSDK à l’Adobe, vous devriez voir des unités comme celles-ci :
+Si vous utilisez un outil de capture réseau pour surveiller les statistiques que TVSDK transmet à Adobe, vous devriez voir des unités comme celles-ci :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +38,4 @@ Si vous utilisez un outil de capture réseau pour surveiller les statistiques tr
 </request>
 ```
 
-Les propriétés booléennes `drmProtected`, `adsEnabled` et `midrollEnabled` n&#39;apparaissent que si elles sont vraies.
+Propriétés booléennes `drmProtected`, `adsEnabled`, et `midrollEnabled` apparaissent uniquement s’ils sont vrais.

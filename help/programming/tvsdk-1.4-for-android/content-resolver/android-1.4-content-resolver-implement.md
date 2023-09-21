@@ -1,24 +1,22 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
-
 
 # Mise en oeuvre d’un outil de résolution de contenu personnalisé {#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Comme le processus de résolution du contenu est généralement asynchrone, il incombe au résolveur de contenu d’en avertir la fin.
+Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité. La première qui renvoie true (vrai) est sélectionnée pour résoudre l’opportunité. Si aucun résolveur de contenu n’est capable, cette opportunité est ignorée. Comme le processus de résolution de contenu est généralement asynchrone, le résolveur de contenu est chargé d’informer une fois le processus terminé.
 
-1. Créez une instance `AdvertisingFactory` personnalisée et remplacez `createContentResolver`.
+1. Création d’une `AdvertisingFactory` instance et remplacement `createContentResolver`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    new AdvertisingFactory() { 
@@ -43,9 +41,9 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via
    }
    ```
 
-1. Enregistrez la fabrique du client publicitaire dans `MediaPlayer`.
+1. Enregistrez la fabrique de clients d’annonces sur la page `MediaPlayer`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    // register the custom advertising factory with media player 
@@ -53,9 +51,9 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Transmettez un objet `AdvertisingMetadata` à TVSDK comme suit :
-   1. Créez un objet `AdvertisingMetadata` et un objet `MetadataNode`.
-   1. Enregistrez l&#39;objet `AdvertisingMetadata` dans `MetadataNode`.
+1. Transmettre `AdvertisingMetadata` vers TVSDK comme suit :
+   1. Créez un `AdvertisingMetadata` et `MetadataNode` .
+   1. Enregistrez le `AdvertisingMetadata` vers `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,21 +61,21 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via
                   advertisingMetadata);
    ```
 
-1. Créez une classe de résolution d&#39;annonces personnalisée qui étend la classe `ContentResolver`.
-   1. Dans le résolveur d’annonces personnalisé, remplacez cette fonction protégée :
+1. Créez une classe de résolveur d’annonces personnalisée qui étend la variable `ContentResolver` classe .
+   1. Dans le programme de résolution de publicités personnalisé, remplacez cette fonction protégée :
 
       ```java
       void doResolveAds(Metadata metadata,  
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Les métadonnées contiennent votre `AdvertisingMetada`. Utilisez-le pour la génération de vecteurs `TimelineOperation` suivante.
+      Les métadonnées contiennent vos `AdvertisingMetada`. Utilisez-le pour les `TimelineOperation` génération vectorielle.
 
-   1. Pour chaque opportunité de placement, créez un `Vector<TimelineOperation>`.
+   1. Pour chaque opportunité d’emplacement, créez une `Vector<TimelineOperation>`.
 
       Le vecteur peut être vide, mais pas nul.
 
-      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement` :
+      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -92,7 +90,7 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via
 
    1. Une fois les publicités résolues, appelez l’une des fonctions suivantes :
 
-      * Si la résolution de la publicité réussit : `notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * Si la résolution de publicité réussit : `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Si la résolution de la publicité échoue : `notifyResolveError(Error error)`
 
       Par exemple, en cas d’échec :
@@ -103,10 +101,9 @@ Lorsque TVSDK détecte une nouvelle opportunité, il effectue une itération via
       error.setMetadata(metadata);
       ```
 
-
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Cet exemple de résolveur d’annonces personnalisé effectue une requête HTTP au serveur d’annonces et reçoit une réponse JSON.
+Cet exemple de résolveur d’annonces personnalisé émet une requête HTTP au serveur d’annonces et reçoit une réponse JSON.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -125,7 +122,7 @@ public class CustomAdResolver extends ContentResolver {
 }
 ```
 
-Exemple de réponse du serveur d’annonces JSON pour un flux en direct :
+Exemple de réponse du serveur de publicités JSON pour un flux en direct :
 
 ```
 {     
@@ -162,7 +159,7 @@ Exemple de réponse du serveur d’annonces JSON pour un flux en direct :
 } 
 ```
 
-Exemple de réponse du serveur d’annonces JSON pour VOD :
+Exemple de réponse du serveur de publicités JSON pour VOD :
 
 ```
 {     
@@ -223,4 +220,3 @@ Exemple de réponse du serveur d’annonces JSON pour VOD :
     } 
 } 
 ```
-

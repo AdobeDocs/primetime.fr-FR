@@ -1,18 +1,16 @@
 ---
-description: Création du gestionnaire d’analyses vidéo
-title: Création du gestionnaire d’analyses vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Création de Video Analytics Manager
+title: Création de Video Analytics Manager
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# Création de Video Analytics Manager {#create-the-video-analytics-manager}
 
-# Création du gestionnaire d’analyses vidéo {#create-the-video-analytics-manager}
-
-Une nouvelle classe manager ( `VAManager`) a été ajoutée à l&#39;implémentation de référence Android. `VAManager` crée et détruit simplement une instance de la  `VideoHeartbeat` classe. L&#39;implémentation de référence crée une instance `VAManager` lorsqu&#39;une nouvelle instance `MediaPlayer` est créée et détruit cette instance lorsque l&#39;instance `MediaPlayer` est détruite. Ceci est implémenté dans `PlayerFragment.java`.
+Une nouvelle classe de gestionnaire ( `VAManager`) a été ajouté à l’implémentation de référence Android. `VAManager` crée et détruit simplement une instance de la fonction `VideoHeartbeat` classe . L’implémentation de référence crée une `VAManager` lorsqu’une nouvelle instance `MediaPlayer` est créé et détruit cette instance lorsque la fonction `MediaPlayer` est détruite. Cela est implémenté dans `PlayerFragment.java`.
 
 ## Pour créer un gestionnaire d’analyses vidéo
 
@@ -21,9 +19,8 @@ VAManager vaManager = ManagerFactory.getVAManager(true, config, mediaPlayer);
 vaManager.createVAProvider(getActivity().getApplicationContext()); 
 ```
 
-La variable de configuration est une implémentation concrète de `IVAConfig` et contient les configurations d&#39;exécution `VideoHeartbeat`.
+La variable config est une mise en oeuvre concrète de la variable `IVAConfig` et contient l’exécution `VideoHeartbeat` configurations.
 
 >[!NOTE]
 >
->Si l&#39;application Android n&#39;est pas configurée avec un compte Adobe Analytics, les données de suivi vidéo ne seront pas générées, même si une instance de `VAManager` est créée et activée.
-
+>Si l’application Android n’est pas configurée avec un compte Adobe Analytics, les données de suivi vidéo ne sont pas générées, même si une instance de `VAManager` est créée et activée.

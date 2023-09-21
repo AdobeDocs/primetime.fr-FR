@@ -1,13 +1,12 @@
 ---
-title: Service Web MVPD proxy
-description: Service Web MVPD proxy
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Service Web MVPD de proxy
+description: Service Web MVPD de proxy
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
 
 ---
-
 
 # Service Web MVPD de proxy {#proxy-mvpd-wbservice}
 
@@ -35,7 +34,7 @@ Récupère la liste actuelle des MVPD proxy pour le ProxyMVPD identifié par le 
 
 | Point d’entrée | Appelé par | En-têtes de requête | Méthode HTTP | Réponse HTTP |
 |---|---|---|---|---|
-| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (obligatoire) | GET | <ul><li> 200 (ok) - La requête a été traitée avec succès et la réponse contient une liste de ProxiedMVPD au format XML.</li><li>401 (non autorisé) - Authentification de l’utilisateur requise ou autorisation non accordée pour les informations d’identification fournies.  Indique l’une des options suivantes :<ul><li>Le jeton apikey n’est pas présent dans l’en-tête de la requête.</li><li>La requête provient d’une adresse IP qui n’est pas présente dans la liste autorisée.</li><li>Le jeton n’est pas valide</li></ul></li><li>403 (interdit) - Indique que l’opération n’est pas prise en charge pour les paramètres fournis ou que le proxy MVPD n’est pas défini comme proxy ou est manquant.</li><li>405 (méthode non autorisée) - Une méthode HTTP autre que GET ou POST a été utilisée. La méthode HTTP n’est généralement pas prise en charge ou n’est pas prise en charge pour ce point de terminaison spécifique.</li><li>500 (erreur de serveur interne) : une erreur a été générée côté serveur pendant le processus de demande.</li></ul> |
+| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatoire) | GET | <ul><li> 200 (ok) - La requête a été traitée avec succès et la réponse contient une liste de ProxiedMVPD au format XML.</li><li>401 (non autorisé) - Authentification de l’utilisateur requise ou autorisation non accordée pour les informations d’identification fournies.  Indique l’une des options suivantes :<ul><li>Le jeton apikey est absent de l’en-tête de requête.</li><li>La requête provient d’une adresse IP qui n’est pas présente dans la liste autorisée.</li><li>Le jeton n’est pas valide</li></ul></li><li>403 (interdit) - Indique que l’opération n’est pas prise en charge pour les paramètres fournis ou que le proxy MVPD n’est pas défini comme proxy ou est manquant.</li><li>405 (méthode non autorisée) - Une méthode HTTP autre que GET ou POST a été utilisée. La méthode HTTP n’est généralement pas prise en charge ou n’est pas prise en charge pour ce point de terminaison spécifique.</li><li>500 (erreur de serveur interne) : une erreur a été générée côté serveur pendant le processus de demande.</li></ul> |
 
 Exemple de curl :
 
@@ -82,7 +81,7 @@ Envoie un tableau de MVPD intégrés au MVPD du proxy identifié par le paramèt
 
 | Point d’entrée | Appelé par | En-têtes de requête | Méthode HTTP | Réponse HTTP |
 |:------------------------------:|:---------:|:--------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (obligatoire) proxied-mvpds (obligatoire) | POST | <ul><li>201 (créé) - La notification push a été traitée avec succès</li><li>400 (mauvaise requête) - Le serveur ne sait pas comment traiter la requête :<ul><li>Le code XML entrant ne se conforme pas au schéma publié dans cette spécification.</li><li>Les mvpds proxy ne comportent pas d’identifiants uniques.</li><li>Les ID de demandeur poussés n’existent pas Autre raison de conteneur de servlet pour le code de réponse 400</li></ul><li>401 (non autorisé) - La clé apikey n’est pas valide ou l’adresse IP de l’appelant n’est pas sur la liste autorisée</li><li>403 (interdit) - Indique que l’opération n’est pas prise en charge pour les paramètres fournis ou que le proxy MVPD n’est pas défini comme proxy ou est manquant.</li><li>405 (méthode non autorisée) - Une méthode HTTP autre que GET ou POST a été utilisée. La méthode HTTP n’est généralement pas prise en charge ou n’est pas prise en charge pour ce point de terminaison spécifique.</li><li>500 (erreur de serveur interne) : une erreur a été générée côté serveur pendant le processus de demande.</li></ul> |
+| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatoire) proxied-mvpds (obligatoire) | POST | <ul><li>201 (créé) - La notification push a été traitée avec succès</li><li>400 (mauvaise requête) - Le serveur ne sait pas comment traiter la requête :<ul><li>Le code XML entrant ne se conforme pas au schéma publié dans cette spécification.</li><li>Les mvpds proxy ne comportent pas d’identifiants uniques.</li><li>Les ID de demandeur poussés n’existent pas Autre raison de conteneur de servlet pour le code de réponse 400</li></ul><li>401 (non autorisé) - La clé apikey n’est pas valide ou l’adresse IP de l’appelant n’est pas sur la liste autorisée</li><li>403 (interdit) - Indique que l’opération n’est pas prise en charge pour les paramètres fournis ou que le proxy MVPD n’est pas défini comme proxy ou est manquant.</li><li>405 (méthode non autorisée) - Une méthode HTTP autre que GET ou POST a été utilisée. La méthode HTTP n’est généralement pas prise en charge ou n’est pas prise en charge pour ce point de terminaison spécifique.</li><li>500 (erreur de serveur interne) : une erreur a été générée côté serveur pendant le processus de demande.</li></ul> |
 
 Exemple de curl :
 
@@ -207,14 +206,14 @@ Adobe a défini le format accepté suivant pour la publication/récupération de
 **Remarques sur les éléments :**
 
 * `id` (obligatoire) - L’identifiant MVPD proxy doit être une chaîne pertinente pour le nom du MVPD, en utilisant l’un des caractères suivants (car il sera exposé aux programmeurs à des fins de suivi) :
-   * Caractères alphanumériques, trait de soulignement (&quot;_&quot;) et trait d’union (&quot;-&quot;).
+   * Caractères alphanumériques, trait de soulignement (&quot;_&quot;) et tiret (&quot;-&quot;).
    * L’idID doit être conforme à l’expression régulière suivante :
-      `(a-zA-Z0-9((-)|_)*)`
+     `(a-zA-Z0-9((-)|_)*)`
 
-      Il doit donc comporter au moins un caractère, commencer par une lettre et continuer par n’importe quelle lettre, chiffre, tiret ou trait de soulignement.
+     Il doit donc comporter au moins un caractère, commencer par une lettre et continuer par n’importe quelle lettre, chiffre, tiret ou trait de soulignement.
 
 * `iframeSize` (facultatif) - L’élément iframeSize est facultatif et définit la taille de l’iFrame si la page d’authentification MVPD est censée se trouver dans un iFrame. Dans le cas contraire, si l’élément iframeSize n’est pas présent, l’authentification se produit dans une page de redirection complète du navigateur.
-* `requestorIds` (facultatif) - Les valeurs requestorIds seront fournies par Adobe. Un MVPD proxy doit être intégré à au moins un requestorId. Si la balise &quot;requestorIds&quot; n’est pas présente sur l’élément MVPD proxy, ce MVPD proxy sera intégré à tous les demandeurs disponibles intégrés dans le MVPD proxy.
+* `requestorIds` (facultatif) - Les valeurs requestorIds seront fournies par Adobe. Une exigence est qu’un MVPD proxy soit intégré à au moins un requestorId. Si la balise &quot;requestorIds&quot; n’est pas présente sur l’élément MVPD proxy, ce MVPD proxy sera intégré à tous les demandeurs disponibles intégrés dans le MVPD proxy.
 * `ProviderID` (facultatif) - Lorsque l’attribut ProviderID est présent sur l’élément id, la valeur de ProviderID est envoyée sur la demande d’authentification SAML au MVPD du proxy en tant que MVPD proxy / SubMVPD ID (au lieu de la valeur d’id). Dans ce cas, la valeur de l’identifiant sera utilisée uniquement dans le sélecteur MVPD présenté sur la page Programmeur et en interne par l’authentification Adobe Primetime. La longueur de l’attribut ProviderID doit être comprise entre 1 et 128 caractères.
 
 ## Sécurité {#security}

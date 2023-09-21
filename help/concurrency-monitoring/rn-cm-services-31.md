@@ -21,8 +21,8 @@ Date de publication : 09/03/2020
 
 ## Présentation des versions {#release-overview}
 
-* Nouveau rapport au niveau de la simultanéité. Ce rapport reflète le nombre de diffusions principales simultanées pour le même compte, dans un intervalle de temps. Un flux principal est défini comme un flux qui a bien été démarré.
-* Nouveau rapport au niveau de l’activité. Ce rapport reflète toutes les activités des utilisateurs, dans un laps de temps défini : principaux flux et tentatives d’initialisation de flux refusées après application des politiques.
+* Nouveau rapport au niveau de la simultanéité. Ce rapport reflète le nombre de diffusions actives simultanées pour le même compte, dans une fenêtre de temps. Un flux actif est défini comme étant un flux qui a bien été démarré.
+* Nouveau rapport au niveau de l’activité. Ce rapport reflète toutes les activités des utilisateurs, dans un délai : les diffusions actives et les tentatives d’initialisation de diffusions refusées après application des politiques.
 * Cette version apporte des améliorations internes qui simplifieront le processus de publication de nouveaux rapports à l’avenir.
 * Nouvelle interface utilisateur de gestion des configurations interne qui utilise l’API de configuration REST interne lancée en mai 2020.
 * Divers correctifs de bogues et améliorations de l’API de configuration REST afin de faciliter la nouvelle interface utilisateur de gestion des configurations.

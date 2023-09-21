@@ -1,13 +1,12 @@
 ---
 title: Intégration du vérificateur de jeton multimédia
 description: Intégration du vérificateur de jeton multimédia
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
 
 ---
-
 
 # Intégration du vérificateur de jeton multimédia
 
@@ -26,7 +25,7 @@ Un jeton AuthZ autorise l’utilisateur du site à afficher une ressource donné
 Dans les intégrations AccessEnabler, vous obtenez le jeton multimédia de courte durée via le `setToken()` rappel. Pour les intégrations d’API sans client, vous obtenez le jeton multimédia de courte durée avec le `<SP_FQDN>/api/v1/tokens/media` appel API. Le jeton est une chaîne envoyée en texte clair, signée par l’Adobe, à l’aide de la protection des jetons basée sur PKI (Public Key Infrastructure, infrastructure de clé publique). Avec cette protection basée sur PKI, le jeton est signé à l’aide d’une clé asymétrique, émise à l’Adobe par une autorité de certification.
 
 
-Comme il n’existe aucune validation côté client pour le jeton, un utilisateur malveillant peut utiliser des outils pour injecter du faux. `setToken()` appels . Par conséquent, **cannot** s&#39;appuyer simplement sur le fait que `setToken()` a été déclenché lors de la prise en compte d’un utilisateur autorisé ou non. Vous devez vérifier que le jeton de courte durée lui-même est légitime. L’outil pour effectuer la validation est la bibliothèque du vérificateur de jeton multimédia.
+Comme il n’existe aucune validation côté client pour le jeton, un utilisateur malveillant peut utiliser des outils pour injecter du faux. `setToken()` appels . Par conséquent **cannot** s&#39;appuyer simplement sur le fait que `setToken()` a été déclenché lors de la prise en compte d’un utilisateur autorisé ou non. Vous devez vérifier que le jeton de courte durée lui-même est légitime. L’outil pour effectuer la validation est la bibliothèque du vérificateur de jeton multimédia.
 
 
 >[!TIP]
@@ -39,7 +38,7 @@ Nous recommandons aux programmeurs d’envoyer le jeton à un service web qui ut
 
 
 
-Le [Bibliothèque du vérificateur de jeton multimédia](https://adobeprimetime.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Ftve.zendesk.com%2Fhc%2Fen-us%2Farticles%2F204963159-Media-Token-Verifier-library&amp;theme=hc&amp;locale=en-us&amp;brand_id=343429&amp;auth_origin=343429%2Cfalse%2Ctrue){target=_blank} est disponible pour les partenaires d’authentification Primetime.
+La variable [Bibliothèque du vérificateur de jeton multimédia](https://adobeprimetime.zendesk.com/auth/v2/login/signin?return_to=https%3A%2F%2Ftve.zendesk.com%2Fhc%2Fen-us%2Farticles%2F204963159-Media-Token-Verifier-library&amp;theme=hc&amp;locale=en-us&amp;brand_id=343429&amp;auth_origin=343429%2Cfalse%2Ctrue){target=_blank} est disponible pour les partenaires d’authentification Primetime.
 
 
 
@@ -47,7 +46,7 @@ La bibliothèque du vérificateur de jeton multimédia est contenue dans l’arc
 
 * Une API de vérification de jeton (`ITokenVerifier` ), avec la documentation JavaDoc
 * Clé publique Adobe utilisée pour vérifier que le jeton provient bien d’un Adobe
-* Une implémentation de référence (`com.adobe.entitlement.test.EntitlementVerifierTest.java`) qui indique comment utiliser l’API de vérification et comment utiliser la clé publique d’Adobe contenue dans la bibliothèque pour vérifier son origine.
+* Une implémentation de référence (`com.adobe.entitlement.test.EntitlementVerifierTest.java`) qui indique comment utiliser l’API de vérification et comment utiliser la clé publique Adobe contenue dans la bibliothèque pour vérifier son origine.
 
 
 L’archive contient toutes les dépendances et les clés de certificat. Le mot de passe par défaut du fichier de stockage des clés de certificat inclus est &quot;123456&quot;.
@@ -56,24 +55,24 @@ L’archive contient toutes les dépendances et les clés de certificat. Le mot 
 * Utilisez votre fournisseur JCE préféré pour l’algorithme de signature &quot;SHA256WithRSA&quot;.
 
 
-**La bibliothèque de vérification doit être le seul moyen utilisé pour analyser le contenu du jeton. Les programmeurs ne doivent pas analyser le jeton et extraire les données eux-mêmes, car le format du jeton n’est pas garanti et est sujet à de futurs changements.** Seule l’API de vérification est garantie pour fonctionner correctement. L’analyse directe de la chaîne peut fonctionner temporairement, mais peut entraîner des problèmes à l’avenir lorsque le format risque de changer. L’API Vérificateur récupère des informations à partir du jeton, telles que :
+**La bibliothèque de vérification doit être le seul moyen utilisé pour analyser le contenu du jeton. Les programmeurs ne doivent pas analyser le jeton et extraire les données eux-mêmes, car le format du jeton n’est pas garanti et est sujet à de futurs changements.** Seule l’API de vérification est garantie pour fonctionner correctement. L’analyse directe de la chaîne peut fonctionner temporairement, mais peut entraîner des problèmes lors du changement de format. L’API Vérificateur récupère des informations à partir du jeton, telles que :
 
 * Le jeton est valide (la variable `isValid()` ) ?
-* L’ID de ressource associé au jeton (le `getResourceID()` ); il peut être comparé à (et il doit correspondre) l’autre paramètre de la variable `setToken()` rappel de fonction. Si elle ne correspond pas, cela peut indiquer un comportement frauduleux.
+* L’ID de ressource associé au jeton (le `getResourceID()` ) ; cela peut être comparé à (et doit correspondre) l’autre paramètre de la fonction `setToken()` rappel de fonction. Si elle ne correspond pas, cela peut indiquer un comportement frauduleux.
 * L’heure à laquelle le jeton a été émis (`getTimeIssued()` ).
 * TTL (`getTimeToLive()` ).
 * Un GUID d’authentification anonyme reçu du MVPD (`getUserSessionGUID()` ).
-* L’ID du distributeur qui a authentifié l’utilisateur et, dans le cas présent, le proxy-MVPD qui a fourni l’authentification pour le distributeur.
+* L’ID du distributeur qui a authentifié l’utilisateur et, si c’est le cas, le proxy-MVPD qui a fourni l’authentification pour le distributeur.
 
 ## Utilisation de l’API de vérification {#using-verifier-api}
 
-Le `ITokenVerifier` définit les méthodes que vous utilisez pour valider l’authentification des jetons pour une ressource donnée. Utilisez la variable `ITokenVerifier` méthodes d’analyse d’un jeton reçu en réponse à un `setToken()` requête.
+La variable `ITokenVerifier` définit les méthodes que vous utilisez pour valider l’authentification des jetons pour une ressource donnée. Utilisez la variable `ITokenVerifier` méthodes d’analyse d’un jeton reçu en réponse à un `setToken()` requête.
 
 
-Le `isValid()` est le moyen Principal de valider un jeton. Il prend un argument, un ID de ressource. Si vous transmettez un identifiant de ressource nul, la méthode ne valide que l’authenticité et la période de validité du jeton.
+La variable `isValid()` est le principal moyen de valider un jeton. Il prend un argument, un ID de ressource. Si vous transmettez un identifiant de ressource nul, la méthode ne valide que l’authenticité et la période de validité du jeton.
 
 
-Le `isValid()` renvoie l’une des valeurs d’état suivantes :
+La variable `isValid()` renvoie l’une des valeurs d’état suivantes :
 
 
 

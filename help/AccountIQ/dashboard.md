@@ -1,8 +1,7 @@
 ---
 title: Tableau de bord du compte IQ
 description: Le tableau de bord permet d’identifier les instances de partage de mot de passe en analysant un large éventail de données d’abonnés.
-exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Le tableau de bord résume et agrège les données dans une collection de graphi
 ![Tableau de bord du compte IQ pour les utilisateurs programmeurs](assets/dashboard-programr.png)
 
 
-Figure : Le tableau de bord pour les utilisateurs programmeurs
+Figure : Tableau de bord pour les utilisateurs de programmeurs
 
 +++
 
@@ -42,7 +41,7 @@ Les valeurs vous aident à comprendre l’ampleur du partage des informations d�
 ![](assets/aggregate-sharing-score.png)
 
 
-*Figure : Panneau Note de partage moyenne - agrégé pour le segment actuel*
+*Figure : Panneau Note de partage moyen - agrégé pour le segment actuel*
 
 Les trois mesures suivantes sont des composants de la note de partage moyenne.
 
@@ -107,7 +106,7 @@ Ce tableau fournit une vue comparative du partage des scores des canaux sélecti
 ![](assets/sharing-scores-by-channels-mvpds.png)
 
 
-*Figure : Partage de scores par canaux et MVPD*
+*Figure : Partage des scores par canaux et MVPD*
 
 ## Probabilité de partage des comptes {#accounts-sharing-probability}
 
@@ -121,7 +120,7 @@ Ce graphique partitionne les comptes en plages de quintiles de probabilité de p
 ![](assets/dashboard-ac-sharing-prob.png)
 
 
-*Figure : Nombres et pourcentages de comptes abonnés dans différentes plages de probabilités de partage*
+*Figure : Nombre et pourcentages de comptes abonnés dans différentes plages de probabilités de partage*
 
 ## Nombre de comptes et d’utilisations en partageant le niveau de probabilité {#number-of-accounts-usage-sharing-probability}
 
@@ -130,7 +129,7 @@ Ce panneau fournit une vue tabulaire des comptes partitionnés en plages de quin
 ![](assets/no-acc-usage-prob-level.png)
 
 
-*Figure : Nombre de comptes, de tendances et d’utilisations appartenant à différentes périodes de probabilité*
+*Figure : Nombre de comptes, de tendances et d’utilisations appartenant à diverses plages de probabilités*
 
 <!--
 +++Dashboard for programmers

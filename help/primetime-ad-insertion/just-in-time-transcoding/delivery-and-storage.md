@@ -1,24 +1,22 @@
 ---
-title: Diffusion et enregistrement
-description: Diffusion et enregistrement
+title: Diffusion et stockage
+description: Diffusion et stockage
 copied-description: true
-exl-id: 84ccc140-02e6-4293-b087-13f87aee355b,8af58261-9277-4f46-9349-10b641238e1d
-translation-type: tm+mt
-source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-# Diffusion et enregistrement {#delivery-and-storage}
+# Diffusion et stockage {#delivery-and-storage}
 
-L’Ad Insertion Primetime prend en charge l’enregistrement créatif sur les réseaux de diffusion de contenu client ou sur les réseaux de diffusion de contenu hébergés par Adobe.
+Primetime Ad Insertion prend en charge le stockage publicitaire sur les réseaux de diffusion de contenu client ou les réseaux de diffusion de contenu hébergés par Adobe.
 
-## Prise en charge de CDN multiple {#multi-cdn-support}
+## Prise en charge multi-CDN {#multi-cdn-support}
 
-Par défaut, l’Ad Insertion Primetime diffuse des éléments créatifs publicitaires transcodés à partir de CDN (Akamai) hébergés par Adobe.  Les clients peuvent choisir d’autres emplacements CDN pour héberger la ressource transcodée ou utiliser le CDN hébergé par l’Adobe comme origine pour leurs propres CDN.  Ces deux cas permettent de diffuser du contenu et des éléments créatifs publicitaires à partir du même CDN et/ou nom d’hôte.
+Par défaut, l’Ad Insertion Primetime diffuse des créations publicitaires transcodées à partir de CDN (Akamai) hébergés sur l’Adobe.  Les clients peuvent choisir d’autres emplacements de réseau de diffusion de contenu pour héberger la ressource transcodée ou utiliser le réseau de diffusion de contenu hébergé par l’Adobe comme origine de leurs propres réseaux de diffusion de contenu.  Ces deux cas permettent que le contenu et les créations publicitaires soient diffusés à partir du même réseau de diffusion de contenu et/ou du même nom d’hôte.
 
-Pour la diffusion multi-CDN, en utilisant l’Ad Insertion Primetime comme origine CDN, veuillez consulter : [Réécriture du manifeste](../technical-reference/manifest-rewriting.md)
+Pour une diffusion multi-CDN, en utilisant Primetime Ad Insertion comme origine CDN, reportez-vous à : [Réécriture du manifeste](../technical-reference/manifest-rewriting.md)
 
-Pour activer l’enregistrement/le transfert multi-CDN, contactez votre gestionnaire de compte technique.
+Pour activer le stockage/chargement multi-CDN, contactez votre gestionnaire de compte technique.

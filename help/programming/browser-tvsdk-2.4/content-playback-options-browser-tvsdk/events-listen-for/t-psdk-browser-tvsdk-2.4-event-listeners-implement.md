@@ -1,43 +1,41 @@
 ---
-description: Les gestionnaires de événements permettent au navigateur TVSDK de répondre aux événements.
-title: Mise en oeuvre des écouteurs et des rappels de événement
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Les gestionnaires d’événements permettent au TVSDK du navigateur de répondre aux événements.
+title: Mise en oeuvre des écouteurs d’événement et des rappels
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
+# Mise en oeuvre des écouteurs d’événement et des rappels{#implement-event-listeners-and-callbacks}
 
-# Mettre en oeuvre des écouteurs et des rappels de événement{#implement-event-listeners-and-callbacks}
+Les gestionnaires d’événements permettent au TVSDK du navigateur de répondre aux événements.
 
-Les gestionnaires de événements permettent au navigateur TVSDK de répondre aux événements.
+Lorsqu’un événement se produit, le mécanisme d’événement du navigateur TVSDK appelle votre gestionnaire d’événements enregistré et transmet les informations d’événement au gestionnaire.
 
-Lorsqu&#39;un événement se produit, le mécanisme de événement du navigateur TVSDK appelle votre gestionnaire de événements enregistré et transmet les informations du événement au gestionnaire.
+Votre application doit mettre en oeuvre des écouteurs d’événements pour les événements Browser TVSDK qui affectent votre application.
 
-Votre application doit mettre en oeuvre des écouteurs de événement pour les événements Browser TVSDK qui affectent votre application.
+1. Déterminez les événements que votre application doit écouter.
 
-1. Déterminez quels événements votre application doit écouter.
+   * **Événements requis**: écoute tous les événements de lecture.
 
-   * **Événements** requis : Prêtez attention à tous les événements de lecture.
+     >[!IMPORTANT]
+     >
+     >Événement de lecture `STATUS_CHANGED` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante de votre lecteur.
 
-      >[!IMPORTANT]
-      >
-      >Le événement de lecture `STATUS_CHANGED` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante de votre lecteur.
+   * **Autres événements**: facultatif, selon votre application.
 
-   * **Autres événements** : Facultatif, selon votre application.
+     Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les `AdBreakPlaybackEvent` et `AdPlaybackEvent` événements .
 
-      Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les événements `AdBreakPlaybackEvent` et `AdPlaybackEvent`.
+1. Mettez en oeuvre des écouteurs d’événement pour chaque événement.
 
-1. Mettez en oeuvre des écouteurs de événement pour chaque événement.
+   Le navigateur TVSDK renvoie des valeurs de paramètre à vos rappels d’écouteurs d’événements. Ces valeurs fournissent des informations pertinentes sur l’événement que vous pouvez utiliser dans vos écouteurs pour effectuer les actions appropriées.
 
-   Le navigateur TVSDK renvoie des valeurs de paramètre à vos rappels d’écouteur de événement. Ces valeurs fournissent des informations pertinentes sur le événement que vous pouvez utiliser dans vos écouteurs pour effectuer les actions appropriées.
+   Par exemple :
 
-   Par exemple :
-
-   * Type d&#39;événement : `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Propriété du événement : `MediaPlayerStatus.<event>` utilisé comme suit :
+   * Type d’événement : `AdobePSDK.PSDKEventType.STATUS_CHANGED`
+   * Propriété d’événement : `MediaPlayerStatus.<event>` utilisé comme suit :
 
 ```js
 player.addEventListener( 
@@ -52,7 +50,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Enregistrez vos écouteurs de rappel avec l&#39;objet `MediaPlayer` en utilisant `MediaPlayer.addEventListener`.
+1. Enregistrez vos écouteurs de rappel avec l’événement `MediaPlayer` en utilisant `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

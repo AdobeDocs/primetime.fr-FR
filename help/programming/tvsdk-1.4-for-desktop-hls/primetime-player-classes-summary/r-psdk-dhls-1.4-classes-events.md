@@ -1,8 +1,7 @@
 ---
 description: Ces classes décrivent les événements distribués par TVSDK à votre lecteur multimédia en réponse à diverses activités.
 title: Classes d’événements
-exl-id: a349984a-5e47-4895-a56f-ef25eb372c79
-source-git-commit: 776d3d1668f063f1595bd3ecb53603171905014a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Package : [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/ap
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Classe. Un élément du lecteur multimédia a été créé. |
 | [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Classe. Une opération de chargement est terminée. Distribué par `MediaPlayerItemLoader` pour notifier ses clients. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Classe. Le statut du lecteur multimédia a changé. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. Le `MediaPlayerView` a fait l’objet d’un clic. |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Classe. La variable `MediaPlayerView` a été cliqué. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Classe. Le taux de lecture du lecteur multimédia change. |
 | [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Classe. L’algorithme de changement de débit adaptatif du lecteur multimédia est passé à un autre profil en raison des conditions réseau ou machine. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Classe. Le lecteur a commencé la recherche ou l’opération de recherche s’est terminée. |

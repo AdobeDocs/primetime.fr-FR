@@ -1,19 +1,16 @@
 ---
-title: Structure du noeud publicitaire avec des plages de temps
-description: Structure du noeud publicitaire avec des plages de temps
+title: Structure de noeuds Advertising avec périodes
+description: Structure de noeuds Advertising avec périodes
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '15'
 ht-degree: 0%
 
 ---
 
-
-# Structure du noeud publicitaire avec des plages de temps{#advertising-node-structure-with-timeranges}
+# Structure de noeuds Advertising avec périodes{#advertising-node-structure-with-timeranges}
 
 <!--<a id="fig_CD71214FBF8945729FC34CD2F0047EF8"></a>-->
 
 ![](assets/psdk_ad-node-structure_web.png)
-

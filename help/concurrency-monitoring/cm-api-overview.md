@@ -58,7 +58,7 @@ L’appel d’initialisation de session est effectué par une application après
 
 ![](assets/session-init.png)
 
-Il n’est pas nécessaire de fournir un code de terminaison au premier appel, car nous n’avons pas d’autres flux principaux. Et aucun attribut de métadonnées, car aucun n’a été renvoyé à partir de l’appel Récupération des métadonnées .
+Il n’est pas nécessaire de fournir un code de terminaison au premier appel, car nous n’avons pas d’autres flux actifs. Et aucun attribut de métadonnées, car aucun n’a été renvoyé à partir de l’appel Récupération des métadonnées .
 
 La variable **subject** et la variable **idp** sont obligatoires, ils seront spécifiés comme des variables de chemin d’accès URI. Vous pouvez obtenir la variable **subject** et **idp** en lançant un appel pour **mvpd** et **amontUserID** champs de métadonnées de l’authentification Adobe Primetime. Voir également la section [Présentation des API de métadonnées](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#). Pour cet exemple, nous allons fournir la valeur &quot;12345&quot; comme objet et &quot;adobe&quot; comme idp.
 

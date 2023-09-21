@@ -1,24 +1,22 @@
 ---
-description: Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d'événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
-title: Types d'événement et classes pour les rappels
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Lorsque vous enregistrez des écouteurs d’événement avec le Browser TVSDK, vous spécifiez un type d’événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le TVSDK du navigateur appelle votre rappel et lui transmet un objet d’événement du type approprié.
+title: Types et classes d’événements pour les rappels
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# Types et classes d’événements pour les rappels{#event-types-and-classes-for-callbacks}
 
-# Types d&#39;événement et classes pour les rappels{#event-types-and-classes-for-callbacks}
-
-Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK, vous spécifiez un type d&#39;événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le navigateur TVSDK appelle votre rappel et lui transmet un objet événement du type approprié.
+Lorsque vous enregistrez des écouteurs d’événement avec le Browser TVSDK, vous spécifiez un type d’événement à écouter et le nom de votre rappel. Lorsqu’un événement se produit, le TVSDK du navigateur appelle votre rappel et lui transmet un objet d’événement du type approprié.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Lorsque vous écoutez ce nom de événement (AdobePSDK.EventType) </th> 
-   <th class="entry">expressions/browser-tvsdk-name transmet un événement à votre rappel de ce type d’objet (<span class="codeph"> AdobePSDK.Événement</span>) </th> 
+   <th colname="2" class="entry"> Lorsque vous écoutez ce nom d’événement (AdobePSDK.EventType) </th> 
+   <th class="entry">expressions/browser-tvsdk-name transmet un événement à votre rappel de ce type d’objet (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -65,9 +63,9 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
      <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> Principal_UPDATED</span> </li> 
-     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
-     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> PRINCIPAL_UPDATED</span> </li> 
+     <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEMENT_CREATED</span> </li> 
+     <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEMENT_UPDATED</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> MediaPlayerItemEvent</span> </td> 
   </tr> 
@@ -81,7 +79,7 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReservationEvent</span> </td> 
+   <td><span class="codeph"> ReserveEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
@@ -92,11 +90,11 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PROFIL_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAY_DÉBUT</span> </td> 
+   <td colname="2"><span class="codeph"> PLAY_START</span> </td> 
    <td><span class="codeph"> PSDKEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -109,7 +107,7 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
    <td><span class="codeph"> SeekEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> TAZE_AVAILABLE</span> </td> 
+   <td colname="2"><span class="codeph"> SIZE_AVAILABLE</span> </td> 
    <td><span class="codeph"> SizeAvailableEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -130,4 +128,3 @@ Lorsque vous enregistrez des écouteurs de événement avec le navigateur TVSDK,
   </tr> 
  </tbody> 
 </table>
-

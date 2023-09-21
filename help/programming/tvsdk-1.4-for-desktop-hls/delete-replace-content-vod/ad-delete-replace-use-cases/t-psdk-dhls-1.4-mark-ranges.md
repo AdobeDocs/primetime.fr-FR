@@ -1,21 +1,19 @@
 ---
-title: Marquer les plages
-description: Marquer les plages
+title: Marquer des plages
+description: Marquer des plages
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
+# Marquer des plages{#mark-ranges}
 
-# Marquer les plages{#mark-ranges}
+Marquer `TimeRanges` entre le `begin` et `end` in `localTime` as a `AdBreak` dans la chronologie. Les autres paramètres de publicité sont ignorés.
 
-Marquez `TimeRanges` entre `begin` et `end` dans `localTime` comme `AdBreak` dans la chronologie. Les autres paramètres de publicité sont ignorés.
-
-1. Marquer les plages de temps.
+1. Marquez les périodes.
 
    ```
    {   
@@ -58,4 +56,3 @@ Marquez `TimeRanges` entre `begin` et `end` dans `localTime` comme `AdBreak` dan
        "id": "vod_004"
    }
    ```
-

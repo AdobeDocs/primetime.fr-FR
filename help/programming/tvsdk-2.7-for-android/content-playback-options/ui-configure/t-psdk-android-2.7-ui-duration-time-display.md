@@ -1,8 +1,7 @@
 ---
 description: Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du lecteur dans le média et les afficher dans la barre de recherche.
 title: Afficher la durée, l’heure actuelle et l’heure restante de la vidéo
-exl-id: d9832f19-c2d1-413a-b094-091052912c96
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Vous pouvez utiliser TVSDK pour récupérer des informations sur la position du 
       * Pour VOD, la plage commence toujours par zéro et la valeur de fin est égale à la somme de la durée du contenu principal et des durées du contenu supplémentaire dans le flux (publicités).
       * Pour une ressource linéaire/active, la plage représente la plage de la fenêtre de lecture. Cette plage change pendant la lecture.
 
-         TVSDK appelle la fonction `ITEM_Updated` rappel pour indiquer que l’élément multimédia a été actualisé et que ses attributs, y compris la plage de lecture, ont été mis à jour.
+        TVSDK appelle la fonction `ITEM_Updated` rappel pour indiquer que l’élément multimédia a été actualisé et que ses attributs, y compris la plage de lecture, ont été mis à jour.
 
 1. Utilisation des méthodes disponibles sur `MediaPlayer` et sur le `SeekBar` dans le SDK Android pour configurer les paramètres de barre de recherche.
 

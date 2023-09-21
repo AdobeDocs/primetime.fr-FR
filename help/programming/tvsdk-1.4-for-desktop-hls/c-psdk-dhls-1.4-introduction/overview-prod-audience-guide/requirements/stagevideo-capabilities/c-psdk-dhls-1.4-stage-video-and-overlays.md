@@ -1,40 +1,38 @@
 ---
-description: Vous pouvez utiliser des incrustations HTML avec StageVideo pour afficher des éléments d’interface dans le plan vidéo de la liste d’affichage du Flash. Ce plan se trouve au-dessus du plan StageVideo, de sorte que StageVideo s’affiche toujours derrière n’importe quel élément de liste d’affichage de Flash.
-title: Incrustations StageVideo et HTML
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser des incrustations de HTML avec StageVideo pour afficher les éléments de l’interface utilisateur dans le plan vidéo de la liste d’affichage des Flashs. Ce plan se trouve au-dessus du plan StageVideo. StageVideo s’affiche donc toujours derrière les éléments de la liste d’affichage de Flash.
+title: Superpositions de HTMLS et de vidéos dans l’environnement intermédiaire
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
+# Superpositions de HTMLS et de vidéos dans l’environnement intermédiaire{#stagevideo-and-html-overlays}
 
-# Incrustations StageVideo et HTML{#stagevideo-and-html-overlays}
+Vous pouvez utiliser des incrustations de HTML avec StageVideo pour afficher les éléments de l’interface utilisateur dans le plan vidéo de la liste d’affichage des Flashs. Ce plan se trouve au-dessus du plan StageVideo. StageVideo s’affiche donc toujours derrière les éléments de la liste d’affichage de Flash.
 
-Vous pouvez utiliser des incrustations HTML avec StageVideo pour afficher des éléments d’interface dans le plan vidéo de la liste d’affichage du Flash. Ce plan se trouve au-dessus du plan StageVideo, de sorte que StageVideo s’affiche toujours derrière n’importe quel élément de liste d’affichage de Flash.
-
-Les incrustations HTML sont des éléments de l’interface utilisateur que vous pouvez afficher dans le plan d’affichage du Flash sur une vidéo rendue par `StageVideo` sur son propre plan. Avant le Flash 15, vous ne pouviez pas utiliser d’incrustations HTML lorsque l’accélération matérielle n’était pas disponible. À partir du Flash 15, les incrustations HTML s’affichent lorsque `StageVideo` revient au rendu logiciel.
+Les incrustations de HTML sont des éléments de l’interface utilisateur que vous pouvez afficher dans le plan d’affichage de Flash sur une vidéo rendue par `StageVideo` dans son propre avion. Avant le Flash 15, vous ne pouviez pas utiliser de superpositions de HTML lorsque l’accélération matérielle n’était pas disponible. À partir du Flash 15, les superpositions par HTML s’affichent lorsque `StageVideo` revient au rendu logiciel.
 
 >[!IMPORTANT]
 >
->En fonction des capacités de votre système, les performances peuvent se dégrader à un degré supérieur ou inférieur lorsque vous utilisez des incrustations HTML.
+>Selon les fonctionnalités de votre système, les performances peuvent se dégrader plus ou moins fortement lorsque vous utilisez des incrustations de HTML.
 
 Tenez compte des informations suivantes :
 
-* Au Flash Player 15 :
+* Dans le Flash Player 15 :
 
-   * Vous pouvez utiliser des incrustations HTML pour déterminer si l’accélération matérielle est disponible.
-   * Pour utiliser des incrustations HTML, définissez `wmode` sur `opaque`.
+   * Vous pouvez utiliser des incrustations de HTML pour déterminer si l’accélération matérielle est disponible.
+   * Pour utiliser des incrustations de HTML, définissez `wmode` to `opaque`.
 
-* Au Flash Player 14 :
+* Dans le Flash Player 14 :
 
-   * Lorsque l’accélération matérielle est disponible, `StageVideo` se trouve sous la liste d’affichage du Flash, ce qui vous permet d’utiliser des incrustations HTML.
-   * Lorsque l’accélération matérielle n’est pas disponible, la vidéo est générée par-dessus tous les autres éléments du navigateur, ce qui empêche l’utilisation d’incrustations HTML.
+   * Lorsque l’accélération matérielle est disponible, `StageVideo` se trouve sous la liste d’affichage des Flashs afin que vous puissiez utiliser des superpositions de HTML.
+   * Lorsque l’accélération matérielle n’est pas disponible, la vidéo s’affiche au-dessus de tous les autres éléments du navigateur, ce qui empêche l’utilisation d’incrustations de HTML.
 
-Voici la configuration minimale requise pour le navigateur pour utiliser des incrustations HTML avec `StageVideo` :
+Voici la configuration minimale requise du navigateur pour utiliser des incrustations de HTML avec `StageVideo`:
 
-* Firefox version 4 ou ultérieure
+* Firefox version 4 et ultérieure
 * Safari version 4 et ultérieure
 * Internet Explorer :
 
@@ -43,7 +41,6 @@ Voici la configuration minimale requise pour le navigateur pour utiliser des inc
 
 * Chrome version 26 et ultérieure
 
-   >[!IMPORTANT]
-   >
-   >Chrome Pepper sous Windows XP et Windows Vista n’est pas pris en charge.
-
+  >[!IMPORTANT]
+  >
+  >Chrome Pepper sous Windows XP et Windows Vista n’est pas pris en charge.

@@ -1,21 +1,19 @@
 ---
-description: L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
-title: Insertion de publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’insertion de publicités résout les publicités pour la diffusion vidéo à la demande (VOD), pour la diffusion en direct et pour la diffusion en continu linéaire avec suivi des publicités et lecture de publicité. TVSDK envoie les demandes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et place les publicités dans le contenu par phases.
+title: Insérer des publicités
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# Présentation {#insert-ads-overview}
 
-# Aperçu {#insert-ads-overview}
-
-L’insertion d’une publicité résout les publicités pour la vidéo à la demande (VOD), pour la diffusion en continu en direct et pour la diffusion linéaire avec le suivi des publicités et la lecture des publicités. TVSDK envoie les requêtes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et les place par étapes dans le contenu.
+L’insertion de publicités résout les publicités pour la diffusion vidéo à la demande (VOD), pour la diffusion en direct et pour la diffusion en continu linéaire avec suivi des publicités et lecture de publicité. TVSDK envoie les demandes requises au serveur d’annonces, reçoit des informations sur les publicités pour le contenu spécifié et place les publicités dans le contenu par phases.
 
 Une coupure publicitaire contient une ou plusieurs publicités lues en séquence. TVSDK insère des publicités dans le contenu principal en tant que membres d’une ou de plusieurs coupures publicitaires.
 
 >[!TIP]
 >
->Si la publicité comporte des erreurs, TVSDK ignore la publicité.
+>Si la publicité comporte des erreurs, TVSDK l’ignore.

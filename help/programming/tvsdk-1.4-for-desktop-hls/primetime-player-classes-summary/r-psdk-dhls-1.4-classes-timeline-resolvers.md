@@ -1,20 +1,18 @@
 ---
-description: Ces classes permettent de résoudre le contenu, tel que les publicités, à placer sur la chronologie.
+description: Ces classes permettent de résoudre le contenu, comme les publicités, à placer dans la chronologie.
 title: Classes de résolution de chronologie
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
+# Classes de résolution de chronologie{#timeline-resolvers-classes}
 
-# Timeline résout les classes{#timeline-resolvers-classes}
+Ces classes permettent de résoudre le contenu, comme les publicités, à placer dans la chronologie.
 
-Ces classes permettent de résoudre le contenu, tel que les publicités, à placer sur la chronologie.
-
-Package : [com.adobe.mediacore.timeline.resolvers](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
+Package : [com.adobe.media.timeline.resolvers](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
 
 | Nom | Description |
 |---|---|

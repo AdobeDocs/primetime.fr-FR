@@ -1,42 +1,40 @@
 ---
-description: TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l'affichage des bannières d'accompagnement fournies avec une publicité linéaire.
+description: TVSDK prend en charge les bannières publicitaires connexes, qui accompagnent une publicité linéaire et restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l’affichage des bannières compagnons fournies avec une publicité linéaire.
 title: Bannières publicitaires d’accompagnement
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
 # Bannières publicitaires d’accompagnement {#companion-banner-ads}
 
-TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l&#39;affichage des bannières d&#39;accompagnement fournies avec une publicité linéaire.
+TVSDK prend en charge les bannières publicitaires connexes, qui accompagnent une publicité linéaire et restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l’affichage des bannières compagnons fournies avec une publicité linéaire.
 
-Lors de l’affichage des publicités complémentaires, suivez ces recommandations :
+Lors de l’affichage des publicités compagnons, procédez comme suit :
 
-* Tentez de présenter autant de bannières publicitaires d’accompagnement d’une publicité vidéo que vous le souhaitez dans la mise en page de votre lecteur.
-* Présentez une bannière d’accompagnement uniquement si vous disposez d’un emplacement correspondant exactement à sa hauteur et largeur spécifiées.
+* Essayez de présenter autant de bannières publicitaires d’accompagnement que vous le souhaitez dans la disposition de votre lecteur.
+* Présenter une bannière compagnon uniquement si vous disposez d’un emplacement correspondant exactement à sa hauteur et largeur spécifiées.
 
-   >[!TIP]
-   >
-   >Ne redimensionnez pas la bannière.
+  >[!TIP]
+  >
+  >Ne redimensionnez pas la bannière.
 
-* Présentez la ou les bannières d’accompagnement dès que possible après le début de la publicité.
-* N’incrustez pas le conteneur publicitaire/vidéo principal avec les bannières d’accompagnement.
-* Continuez à afficher les bannières d’accompagnement une fois la publicité terminée.
+* Présenter la ou les bannières d’accompagnement dès que possible après le début de la publicité.
+* Ne superposez pas le conteneur publicitaire/vidéo principal avec les bannières compagnons.
+* Continuez à afficher les bannières compagnons une fois la publicité terminée.
 
-   La norme consiste à afficher chaque bannière d’accompagnement jusqu’à ce que vous ayez un remplaçant pour cette bannière.
+  La norme consiste à afficher chaque bannière compagnon jusqu’à ce que vous ayez un remplacement pour cette bannière.
 
-## Données de bannière d’accompagnement {#companion-banner-data}
+## Companion banner data {#companion-banner-data}
 
-Le contenu d’un fichier PTAdAsset décrit une bannière connexe.
+Le contenu d’une ressource PTAdAsset décrit une bannière compagnon.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-La notification `PTMediaPlayerAdStartedNotification` renvoie une instance `PTAd` contenant une propriété `companionAssets` (tableau de `PtAdAsset`).
-Chaque `PtAdAsset` fournit des informations sur l&#39;affichage de la ressource.
+La variable `PTMediaPlayerAdStartedNotification` la notification renvoie une `PTAd` qui contient une instance `companionAssets` property (tableau de `PtAdAsset`).
+Chaque `PtAdAsset` fournit des informations sur l’affichage de la ressource.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -48,61 +46,61 @@ Chaque `PtAdAsset` fournit des informations sur l&#39;affichage de la ressource.
  <tbody> 
   <tr> 
    <td colname="col1"> width </td> 
-   <td colname="col2"> Largeur de la bannière d’accompagnement en pixels. </td> 
+   <td colname="col2"> Largeur de la bannière compagnon en pixels. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> hauteur </td> 
-   <td colname="col2"> Hauteur de la bannière d’accompagnement en pixels. </td> 
+   <td colname="col1"> height </td> 
+   <td colname="col2"> Hauteur de la bannière compagnon en pixels. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> type de ressource </td> 
-   <td colname="col2">Type de ressource pour cette bannière complémentaire : 
+   <td colname="col2">Type de ressource pour cette bannière compagnon : 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
-     <li id="li_02B7224C67004095B3F6E50FD21E507E">html : Les données sont en code HTML. </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe : Les données sont une URL iframe (src). </li> 
-     <li id="li_76B945007CE842158B5125422765E0B2">static: Les données sont un staticURL qui est une URL directe vers une image. </li> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html : les données se trouvent dans le code du HTML. </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe : les données sont une URL iframe (src). </li> 
+     <li id="li_76B945007CE842158B5125422765E0B2">static : les données sont une staticURL qui est une URL directe vers une image. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> data </td> 
-   <td colname="col2"> Données du type spécifié par <span class="codeph">resourceType</span> pour cette bannière d'accompagnement. </td> 
+   <td colname="col2"> Les données du type spécifié par <span class="codeph">resourceType</span> pour cette bannière compagnon. </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Afficher les bannières publicitaires {#display-banner-ads}
 
-Pour afficher des bannières publicitaires, vous devez créer des instances de bannière et autoriser TVSDK à écouter les événements liés aux publicités.
+Pour afficher les bannières publicitaires, vous devez créer des instances de bannière et permettre à TVSDK d’écouter les événements liés aux publicités.
 
-TVSDK fournit une liste de bannières publicitaires associées associées à une publicité linéaire via le événement de notification `PTMediaPlayerAdPlayStartedNotification`.
+TVSDK fournit une liste des bannières publicitaires associées à une publicité linéaire par le biais de la variable `PTMediaPlayerAdPlayStartedNotification` événement de notification .
 
-Les manifestes peuvent spécifier des bannières publicitaires complémentaires en :
+Les manifestes peuvent spécifier des bannières publicitaires d’accompagnement en :
 
-* Un extrait de code HTML
+* Fragment de HTML
 * URL d’une page iFrame
-* URL d’une image statique ou d’un fichier SWF de Flash d’Adobe
+* URL d’une image statique ou d’un fichier de SWF de Flash Adobe
 
-Pour chaque publicité connexe, TVSDK indique les types disponibles pour votre application.
+Pour chaque publicité compagnon, TVSDK indique les types disponibles pour votre application.
 
-1. Créez une instance `PTAdBannerView` pour chaque emplacement publicitaire secondaire sur votre page.
+1. Créez un `PTAdBannerView`  pour chaque emplacement publicitaire compagnon de votre page.
 
        Assurez-vous que les informations suivantes ont été fournies :
    
-   * Pour empêcher la récupération des publicités complémentaires de différentes tailles, une instance de bannière qui spécifie la largeur et la hauteur.
+   * Pour empêcher la récupération des publicités compagnons de tailles différentes, une instance de bannière qui spécifie la largeur et la hauteur.
    * Taille standard des bannières.
 
-1. Ajoutez un observateur pour le `PTMediaPlayerAdStartedNotification` qui effectue les tâches suivantes :
+1. Ajoutez un observateur pour la fonction `PTMediaPlayerAdStartedNotification` qui effectue les opérations suivantes :
    1. Efface les publicités existantes dans l’instance de bannière.
-   1. Obtient la liste des publicités complémentaires de `Ad.getCompanionAssets` `PTAd.companionAssets`.
-   1. Si la liste des publicités complémentaires n’est pas vide, effectuez une itération sur la liste pour les instances de bannière.
+   1. Récupère la liste des publicités compagnons à partir de `Ad.getCompanionAssets` `PTAd.companionAssets`.
+   1. Si la liste des publicités d’accompagnement n’est pas vide, passez la souris sur la liste pour les instances de bannière.
 
-      Chaque instance de bannière ( `PTAdAsset`) contient des informations telles que la largeur, la hauteur, le type de ressource (html, iframe ou static) et les données requises pour afficher la bannière correspondante.
-   1. Si une publicité vidéo ne comporte aucune publicité connexe, la liste des ressources d’accompagnement ne contient aucune donnée pour cette publicité vidéo.
+      Chaque instance de bannière ( a `PTAdAsset`) contient des informations, telles que la largeur, la hauteur, le type de ressource (html, iframe ou statique), ainsi que les données requises pour afficher la bannière compagnon.
+   1. Si une publicité vidéo ne comporte aucune publicité compagnon enregistrée, la liste des ressources compagnons ne contient aucune donnée pour cette publicité vidéo.
 
       Pour afficher une publicité d’affichage autonome, ajoutez la logique à votre script afin d’exécuter une balise d’affichage publicitaire standard DFP (DoubleClick for Publishers) dans l’instance de bannière appropriée.
-   1. Envoie les informations de la bannière à une fonction de votre page qui affiche les bannières à l’emplacement approprié.
+   1. Envoie les informations sur la bannière à une fonction de votre page qui affiche les bannières à un emplacement approprié.
 
-      Il s&#39;agit généralement d&#39;un `div` et votre fonction utilise le `div ID` pour afficher la bannière. Par exemple :
+      Il s’agit généralement d’une `div`, et votre fonction utilise la fonction `div ID` pour afficher la bannière. Par exemple :
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 

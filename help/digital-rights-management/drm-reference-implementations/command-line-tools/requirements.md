@@ -2,22 +2,20 @@
 title: Exigences relatives aux outils de ligne de commande
 description: Exigences relatives aux outils de ligne de commande
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
-
-# Exigences des outils de ligne de commande {#command-line-tools-requirements}
+# Exigences relatives aux outils de ligne de commande {#command-line-tools-requirements}
 
 * Java 1.5 ou version ultérieure.
-* Informations d’identification de Packager, de transport et de serveur de licences (certificat et mot de passe) émises par l’Adobe.
+* Informations d’identification du Packager, du transport et du serveur de licences (certificat et mot de passe) délivrées par Adobe.
 
-   Il s’agit des informations d’identification utilisées pour chiffrer et signer des fichiers vidéo, pour signer des listes de mise à jour et de révocation de stratégie et pour prégénérer des licences.
+  Il s’agit des informations d’identification utilisées pour chiffrer et signer des fichiers vidéo, signer des listes de mise à jour et de révocation des stratégies et prégénérer des licences.
 
 >[!NOTE]
 >
->En raison d&#39;un bogue Java, les arguments que vous tapez sur la ligne de commande (tels que les noms de fichier, les noms de stratégie DRM ou les descriptions) ne peuvent utiliser que les caractères du jeu de caractères par défaut de votre système d&#39;exploitation.
+>En raison d’un bogue Java, les arguments que vous saisissez sur la ligne de commande (noms de fichier, noms de stratégie DRM ou descriptions, par exemple) ne peuvent utiliser que les caractères du jeu de caractères par défaut de votre système d’exploitation.

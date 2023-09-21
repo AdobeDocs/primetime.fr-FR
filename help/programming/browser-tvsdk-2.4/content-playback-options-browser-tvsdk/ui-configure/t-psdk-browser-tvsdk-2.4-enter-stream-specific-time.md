@@ -1,29 +1,27 @@
 ---
-description: Par défaut, lors des débuts de lecture, les débuts de médias VOD à 0 et les débuts de médias en direct au point de production client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
-title: Entrer un flux à un moment donné
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Par défaut, au démarrage de la lecture, le média VOD démarre à 0 et le média en direct à partir du point d’activation du client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
+title: Saisie d’un flux à un moment spécifique
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Saisie d’un flux à un moment spécifique{#enter-a-stream-at-a-specific-time}
 
-# Entrer un flux à un moment précis{#enter-a-stream-at-a-specific-time}
+Par défaut, au démarrage de la lecture, le média VOD démarre à 0 et le média en direct à partir du point d’activation du client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
 
-Par défaut, lors des débuts de lecture, les débuts de médias VOD à 0 et les débuts de médias en direct au point de production client (MediaPlayer.LIVE_POINT). Vous pouvez remplacer le comportement par défaut.
-
-1. Transmettez une position à `MediaPlayer.prepareToPlay`.
-1. Le navigateur TVSDK utilise cette position comme point de départ de la ressource.
+1. Transmettre une position à `MediaPlayer.prepareToPlay`.
+1. Le TVSDK du navigateur utilise cette position comme point de départ de la ressource.
 
    >[!NOTE]
    >
-   >Aucune opération de recherche n&#39;est requise.
+   >Aucune opération de recherche n’est requise.
 
-1. Si la position n’est pas comprise dans la plage recherchée, les positions par défaut sont utilisées.
+1. Si la position ne se trouve pas dans la plage pouvant faire l’objet d’une recherche, les positions par défaut sont utilisées.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    var desiredPostion = //choose a value; 
@@ -34,4 +32,3 @@ Par défaut, lors des débuts de lecture, les débuts de médias VOD à 0 et les
            break; 
    } 
    ```
-

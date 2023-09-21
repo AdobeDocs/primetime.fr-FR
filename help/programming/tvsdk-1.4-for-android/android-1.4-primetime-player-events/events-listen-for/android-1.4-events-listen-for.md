@@ -1,28 +1,25 @@
 ---
-description: Les événements de TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
+description: Les événements de TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles que le démarrage de la lecture d’une vidéo ou les actions qui se produisent implicitement, telles qu’une fin de publicité.
 title: Écoute des événements du lecteur Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
+# Présentation {#listen-for-primetime-player-events-overview}
 
-# Aperçu {#listen-for-primetime-player-events-overview}
+Les événements de TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles que le démarrage de la lecture d’une vidéo ou les actions qui se produisent implicitement, telles qu’une fin de publicité.
 
-Les événements de TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles qu’une vidéo qui commence à lire, ou les actions qui se produisent implicitement, telles qu’une publicité qui se termine.
-
-Comme votre application doit répondre à un grand nombre de ces événements, vous devez mettre en oeuvre des routines de gestion de événement et enregistrer ces routines avec TVSDK. Les routines appellent les méthodes TVSDK appropriées pour répondre de manière appropriée.
+Comme votre application doit répondre à la plupart de ces événements, vous devez mettre en oeuvre des routines de gestion des événements et enregistrer ces routines avec TVSDK. Les routines appellent les méthodes TVSDK appropriées pour répondre de manière appropriée.
 
 Voici quelques informations supplémentaires sur les événements :
 
-* La nature en temps réel de la lecture vidéo requiert une activité asynchrone (non bloquante) pour de nombreuses opérations TVSDK.
-* TVSDK prend en charge un lecteur vidéo piloté par événement.
+* La nature en temps réel de la lecture vidéo nécessite une activité asynchrone (non bloquante) pour de nombreuses opérations TVSDK.
+* TVSDK prend en charge un lecteur vidéo piloté par un événement.
 
-   Il fournit des événements qui correspondent à toutes les étapes importantes du processus de lecture. Vous enregistrez ces événements avec le mécanisme de événement de votre plateforme et créez des gestionnaires de événements qui seront appelés lorsque ces événements se produiront. *`Event Handlers`* sont également connues sous le nom de routines de rappel ou d’écouteurs de événement. TVSDK fournit une gamme complète de méthodes qui peuvent être utilisées par les gestionnaires de événement.
-* En règle générale, votre application lance des opérations non bloquantes, telles que la demande de lecture d’un début vidéo.
+  Il fournit des événements qui correspondent à toutes les étapes importantes du processus de lecture. Vous enregistrez ces événements avec le mécanisme d’événement de votre plateforme et créez des gestionnaires d’événements qui seront appelés lorsque ces événements se produisent. *`Event Handlers`* sont également appelées routines de rappel ou écouteurs d’événement. TVSDK fournit une gamme complète de méthodes pouvant être utilisées par les gestionnaires d’événements.
+* Votre application lance généralement des opérations non bloquantes, comme la demande de démarrage de la lecture d’une vidéo.
 
-   TVSDK communique de manière asynchrone avec votre application en distribuant des événements, par exemple lorsque la lecture de la vidéo se début et un événement lorsque la vidéo se termine. D’autres événements peuvent indiquer des changements d’état dans votre lecteur et des conditions d’erreur. Les gestionnaires de événement prennent les mesures appropriées.
-
+  TVSDK communique de manière asynchrone avec votre application en distribuant des événements, comme lorsque la lecture de la vidéo démarre et un événement lorsque la vidéo se termine. D’autres événements peuvent indiquer des modifications d’état dans votre lecteur et des conditions d’erreur. Les gestionnaires d’événements prennent les mesures appropriées.

@@ -1,75 +1,73 @@
 ---
-description: Pour une visualisation plus fluide, TVSDK met parfois en mémoire tampon le flux vidéo. Vous pouvez configurer la manière dont le lecteur met en mémoire tampon.
+description: Pour offrir une expérience de visionnage plus fluide, TVSDK place parfois la vidéo en mémoire tampon. Vous pouvez configurer la manière dont le lecteur met en mémoire tampon.
 title: Définition des heures de mise en mémoire tampon
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
 
 ---
 
-
 # Mise en mémoire tampon {#buffering}
 
-Pour une visualisation plus fluide, TVSDK met parfois en mémoire tampon le flux vidéo. Vous pouvez configurer la manière dont le lecteur met en mémoire tampon.
+Pour offrir une expérience de visionnage plus fluide, TVSDK place parfois la vidéo en mémoire tampon. Vous pouvez configurer la manière dont le lecteur met en mémoire tampon.
 
-TVSDK définit une durée de mémoire tampon de lecture d’au moins 30 secondes et une durée initiale de mémoire tampon d’au moins 2 secondes avant le début de lecture du média. Après l’appel de l’application `play`, mais avant le début de la lecture, TVSDK met le média en mémoire tampon jusqu’à la mise en mémoire tampon initiale afin d’offrir un début fluide lorsqu’il début effectivement la lecture.
+TVSDK définit une durée de mémoire tampon de lecture d’au moins 30 secondes et une durée de mémoire tampon initiale d’au moins 2 secondes avant le début de la lecture du média. Après les appels de l’application `play` mais avant le début de la lecture, TVSDK met le média en mémoire tampon jusqu’à la date initiale pour offrir un démarrage fluide lorsqu’il commence réellement la lecture.
 
-Vous pouvez modifier les temps de mise en mémoire tampon en définissant de nouvelles stratégies de mise en mémoire tampon et vous pouvez modifier le moment où la mise en mémoire tampon initiale se produit en utilisant la fonction de mise en mémoire tampon instantanée.
+Vous pouvez modifier les temps de mise en mémoire tampon en définissant de nouvelles stratégies de mise en mémoire tampon et vous pouvez modifier le moment où la mise en mémoire tampon initiale se produit à l’aide de l’instantané.
 
 ## Définition des heures de mise en mémoire tampon {#set-buffering-times}
 
-`MediaPlayer` fournit des méthodes pour définir et obtenir la mise en mémoire tampon initiale et la mise en mémoire tampon de la lecture.
+La variable `MediaPlayer` fournit des méthodes pour définir et obtenir l’heure de mise en mémoire tampon initiale et l’heure de mise en mémoire tampon de la lecture.
 
 >[!TIP]
 >
->Si vous ne définissez pas les paramètres de contrôle de la mémoire tampon avant de commencer la lecture, le lecteur multimédia prend par défaut 2 secondes pour la mémoire tampon initiale et 30 secondes pour la durée de la mémoire tampon de lecture en cours.
+>Si vous ne définissez pas les paramètres de contrôle de la mémoire tampon avant de commencer la lecture, le lecteur multimédia met par défaut 2 secondes pour la mémoire tampon initiale et 30 secondes pour la durée de la mémoire tampon de lecture en cours.
 
-1. Configurez l&#39;objet `BufferControlParameters`, qui encapsule les paramètres de contrôle de la durée de la mémoire tampon initiale et de la durée de la mémoire tampon de lecture :
+1. Configurez la variable `BufferControlParameters` qui encapsule les paramètres initiaux de durée de la mémoire tampon et de durée de la lecture :
 
-       Cette classe fournit deux méthodes de fabrication :
+       Cette classe fournit deux méthodes d’usine :
    
    * Pour définir la durée initiale de la mémoire tampon sur celle de la lecture :
 
-      ```java
-      public static BufferControlParameters createSimple( 
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createSimple( 
+         long bufferTime)
+     ```
 
-   * Pour définir à la fois les heures de mémoire tampon initiale et de lecture :
+   * Pour définir les heures de mémoire tampon initiales et de lecture :
 
-      ```java
-      public static BufferControlParameters createDual( 
-          long initialBuffer,   
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createDual( 
+         long initialBuffer,   
+         long bufferTime)
+     ```
 
-      Ces méthodes lancent un `IllegalArgumentException` si les paramètres ne sont pas valides, par exemple quand :
+     Ces méthodes renvoient une `IllegalArgumentException` si les paramètres ne sont pas valides, par exemple :
 
-   * Le temps de mémoire tampon initial est inférieur à zéro.
-   * La durée initiale de la mémoire tampon est supérieure à la durée de la mémoire tampon.
+   * La durée initiale de la mémoire tampon est inférieure à zéro.
+   * Le temps de mémoire tampon initial est supérieur au temps de mémoire tampon.
 
-1. Pour définir les valeurs des paramètres de mémoire tampon, utilisez la méthode `MediaPlayer` suivante :
+1. Pour définir les valeurs des paramètres de mémoire tampon, utilisez cette méthode. `MediaPlayer` method :
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Pour obtenir les valeurs de paramètre de mémoire tampon actuelles, utilisez la méthode `MediaPlayer` suivante :
+1. Pour obtenir les valeurs actuelles du paramètre de mémoire tampon, utilisez cette méthode. `MediaPlayer` method :
 
    ```java
       BufferControlParameters getBufferControlParameters()  
    ```
 
-   Si l&#39;AVE ne parvient pas à définir les valeurs spécifiées, le lecteur de médias entre l&#39;état `ERROR` avec le code d&#39;erreur `SET_BUFFER_PARAMETERS_ERROR`.
+   Si l’AVE ne parvient pas à définir les valeurs spécifiées, le lecteur multimédia entre dans la variable `ERROR` État avec le code d’erreur `SET_BUFFER_PARAMETERS_ERROR`.
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
-Par exemple, pour définir la mémoire tampon initiale sur 2 secondes et la durée de lecture sur 30 secondes :
+Par exemple, pour définir la mémoire tampon initiale sur 2 secondes et la durée de la mémoire tampon de lecture sur 30 secondes :
 
 ```java
 mediaPlayer.setBufferControlParameters(BufferControlParameters.createDual(2000, 30000));
 ```
 
-L’implémentation de référence Primetime illustre cette fonctionnalité ; utilisez les paramètres de l&#39;application pour définir les valeurs de la mémoire tampon.
+L’implémentation de la référence Primetime illustre cette fonctionnalité. Utilisez les paramètres de l’application pour définir les valeurs de la mémoire tampon.

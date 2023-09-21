@@ -1,22 +1,20 @@
 ---
-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
-title: Mise en oeuvre de la gestion des interruptions de service
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
+title: Mise en oeuvre de la gestion des blackout
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre de la gestion des blackout{#implement-blackout-handling}
 
-# Mise en oeuvre de la gestion du blocage{#implement-blackout-handling}
+TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
 
-TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+Pour mettre en oeuvre la gestion des blackout, notamment en fournissant un contenu alternatif pendant la panne :
 
-Pour mettre en oeuvre la gestion des interruptions de service, notamment en fournissant du contenu alternatif pendant la coupure de service :
-
-1. Configurez votre application pour détecter les balises d’arrêt dans un manifeste de flux en direct.
+1. Configurez votre application pour détecter les balises de blackout dans un manifeste de flux en direct.
 
    ```java
    public void createMediaPlayer { 
@@ -27,7 +25,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Créez des écouteurs de événement pour les événements de métadonnées minutés dans les flux de premier plan et d’arrière-plan.
+1. Créez des écouteurs d’événement pour les événements de métadonnées minutés dans les flux de premier plan et d’arrière-plan.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +34,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Mettez en oeuvre des gestionnaires de événement de métadonnées chronométrés pour les flux de premier plan et d’arrière-plan.
+1. Mettez en oeuvre des gestionnaires d’événements de métadonnées minutés pour les flux de premier plan et d’arrière-plan.
 
    Premier plan :
 
@@ -75,7 +73,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }; 
    ```
 
-1. Gérez les objets `TimedMetadata` lorsque l&#39;heure `MediaPlayer` s&#39;exécute.
+1. Handle `TimedMetadata` objets lorsque `MediaPlayer` s’exécute.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +96,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    };
    ```
 
-1. Créez des méthodes pour changer de contenu le début et la fin de la période d’interruption.
+1. Créez des méthodes pour changer de contenu au début et à la fin de la période de blackout.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +148,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Mettez à jour les plages impossibles à rechercher si la plage d’interruption se trouve dans le DVR du flux de lecture.
+1. Mettez à jour les plages non consultables si la plage d’interruption se trouve dans le répertoire de stockage global de documents (DVR) de la diffusion.
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +181,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
 
    >[!NOTE]
    >
-   >Actuellement, pour plusieurs flux dynamiques à débit binaire, les profils de débit binaire (ABR) ajustables peuvent parfois être désynchronisés. Ceci provoque l’affichage d’objets de duplicata `timedMetadata` pour la même balise d’abonnement. Pour éviter des calculs incorrects non recherchables, il est vivement recommandé de vérifier si des plages non recherchables se chevauchent après vos calculs, comme dans l’exemple suivant :
+   >Actuellement, pour plusieurs flux en direct à débit binaire, les profils à débit binaire ajustable (ABR) peuvent parfois être désynchronisés. Cela entraîne la duplication `timedMetadata` pour la même balise d’abonnement. Pour éviter des calculs incorrects qui ne peuvent pas faire l’objet d’une recherche, il est vivement recommandé de rechercher après vos calculs des plages impossibles à rechercher qui se chevauchent, comme dans l’exemple suivant :
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +207,3 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

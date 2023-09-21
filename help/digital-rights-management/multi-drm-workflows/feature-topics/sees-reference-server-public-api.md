@@ -1,26 +1,24 @@
 ---
-description: La demande de droits et la réponse sont transmises via une connexion SSL mutuellement authentifiée entre le serveur de licences et le service de droits du client.
-title: VOIR API publique
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La demande de droits et la réponse sont transmises par le biais d’une connexion SSL authentifiée mutuelle entre le serveur de licences et le service de droits du client.
+title: API publique SEES
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
+# API publique SEES {#sees-public-api}
 
-# VOIR API publique {#sees-public-api}
+La demande de droits et la réponse sont transmises par le biais d’une connexion SSL authentifiée mutuelle entre le serveur de licences et le service de droits du client.
 
-La demande de droits et la réponse sont transmises via une connexion SSL mutuellement authentifiée entre le serveur de licences et le service de droits du client.
+Schéma d’URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) est utilisé pour définir le point de terminaison des droits et la méthode de requête du POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) est utilisé pour la requête. Le point de terminaison des droits, ainsi qu’un indicateur indiquant les droits en arrière-plan, sont obligatoires et doivent être inclus dans la stratégie au moment du conditionnement.
 
-Le schéma URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) est utilisé pour définir le point de terminaison des droits et la méthode de requête du POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) est utilisée pour la requête. Le point de terminaison des droits, ainsi qu’un indicateur indiquant les droits dorsaux, sont obligatoires et doivent être inclus dans la stratégie au moment de l’assemblage.
-
-## Demande de droits {#section_BFBFEF0795CA46D6842C479256B95F95}
+## Demande de droit {#section_BFBFEF0795CA46D6842C479256B95F95}
 
 Le corps de la demande de droits est un objet JSON défini comme illustré ci-dessous.
 
-**Définition de l&#39;objet de demande de droits JSON**
+**Définition de l’objet de demande de droit JSON**
 
 ```
 { 
@@ -52,11 +50,11 @@ Le corps de la demande de droits est un objet JSON défini comme illustré ci-de
 }
 ```
 
-## Réponse aux droits {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## Réponse des droits {#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
-Le corps de la réponse de droits est un objet JSON.
+Le corps de la réponse de droit est un objet JSON.
 
-**Définition de l’objet de réponse de droits JSON**
+**Définition de l’objet de réponse de droit JSON**
 
 ```
 { 

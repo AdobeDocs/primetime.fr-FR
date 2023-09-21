@@ -1,18 +1,16 @@
 ---
-description: Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
-title: Classes de chronologie
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ces classes fournissent des informations sur la chronologie d’un média particulier, y compris le placement des publicités.
+title: Classes de journal
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
+# Classes de journal{#timeline-classes}
 
-# Classes de chronologie{#timeline-classes}
-
-Ces classes fournissent des informations sur la chronologie du média particulier, y compris l’emplacement des publicités.
+Ces classes fournissent des informations sur la chronologie d’un média particulier, y compris le placement des publicités.
 
 Package : [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/package-summary.html)
 
@@ -25,20 +23,20 @@ Package : [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/PlacementOpportunity.html" format="html" scope="external"> PlacementOpportunité</a></span> </td> 
-   <td colname="2"> Une classe d'opportunité représente un point d'intérêt sur la chronologie. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/PlacementOpportunity.html" format="html" scope="external"> PlacementOpportunity</a></span> </td> 
+   <td colname="2"> Une classe d’opportunité représente un point ciblé sur la chronologie. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/Timeline.html" format="html" scope="external"> Chronologie</a> </td> 
-   <td colname="2"> Interface qui fournit un itérateur pour le traitement des marqueurs de chronologie. Représente la chronologie du contenu, y compris les pauses publicitaires. </td> 
+   <td colname="2"> Interface qui fournit un itérateur pour le traitement des marqueurs de chronologie. Représente la chronologie du contenu, y compris les coupures publicitaires. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
-   <td colname="2"> Classe. Représentation générique immuable d’un élément de chronologie. </td> 
+   <td colname="2"> Classe. Représentation générique non modifiable d’un élément de chronologie. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a> </span> </td> 
-   <td colname="2"> Interface qui représente un marqueur sur la chronologie. Il s’agit d’une région présentant un intérêt pour la chronologie actuelle. Actuellement, les zones d’intérêt sont les publicités, que vous pouvez marquer, par exemple, avec une couleur différente sur l’interface utilisateur de la barre de défilement. Chaque marqueur est défini par une position et une durée (exprimées chacune en millisecondes). </td> 
+   <td colname="2"> Interface qui représente un marqueur sur la chronologie. Ceci marque une région d’intérêt sur la chronologie réelle. Actuellement, les zones d’intérêt sont les publicités, que vous pouvez par exemple marquer avec une couleur différente sur l’interface utilisateur de la barre de défilement. Chaque marqueur est défini par une position et une durée (chacune exprimée en millisecondes). </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineOperation.html" format="html" scope="external"> TimelineOperation</a> </td> 
@@ -46,4 +44,3 @@ Package : [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/
   </tr> 
  </tbody> 
 </table>
-

@@ -1,14 +1,12 @@
 ---
 description: 'Lors de la détermination des règles de pare-feu, tenez compte des types d’URL suivants : '
 title: Règles de pare-feu
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Règles de pare-feu {#firewall-rules}
 
@@ -41,7 +39,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier des utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez les API client DRM Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour authentifier les utilisateurs. </p> <p>Cette URL doit être accessible si vous utilisez des API client DRM Adobe Primetime pour l’authentification des utilisateurs. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -52,7 +50,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_5112283BDCF1457099056733B633FAF1"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
      <li id="li_F73A570E2C1A45E1BBF21C1468B90D3A"><span class="filepath"> /flashaccess/license/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour délivrer des licences aux utilisateurs finaux. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Envoi de licences aux utilisateurs finaux. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -62,7 +60,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_2222D27F73D0421396A4F0E18140B3F9"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
      <li id="li_18020B7CE36B4C209F65FF01A00B6737"><span class="filepath"> /flashaccess/sync/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour synchroniser des requêtes. </p> <p>Cette URL doit être accessible si vous spécifiez les conditions de synchronisation requises dans vos licences. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour synchroniser les requêtes. </p> <p>Cette URL doit être accessible si vous spécifiez les exigences de synchronisation de vos licences. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -72,7 +70,7 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_CF7590FDAF694EDF9685434BE8EE10CA"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
      <li id="li_CA73424FDFAA4BD8BBE2C1AD165D2C31"><span class="filepath"> /flashaccess/domain/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour enregistrer des domaines. </p> <p>Cette URL doit être accessible si vous implémentez la prise en charge des domaines. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Enregistrement des domaines. </p> <p>Cette URL doit être accessible si vous implémentez la prise en charge des domaines. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -86,11 +84,11 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permet au client de convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM Primetime. </p> <p>Remarque :  Cette URL doit utiliser SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Pour permettre au client de convertir les métadonnées DRM FMRMS 1.x en métadonnées DRM Primetime. </p> <p>Remarque : cette URL doit utiliser SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL du service Web LiveCycle Rights Management ES. Si le contenu a été publié à l’aide d’une version antérieure de FMRMS, cette URL permet aux anciens clients de se connecter au serveur. Ces clients sont invités à effectuer la mise à niveau vers Adobe Primetime DRM. </p> <p class="- topic/p ">Remarque : Cette URL doit utiliser SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL du service Web LiveCycle Rights Management ES. Si le contenu a été publié à l’aide d’une version antérieure de FMRMS, cette URL permet aux anciens clients de se connecter au serveur. Ces clients sont invités à effectuer la mise à niveau vers Adobe Primetime DRM. </p> <p class="- topic/p ">Remarque : cette URL doit utiliser SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -98,18 +96,18 @@ Les utilisateurs externes peuvent accéder aux URL suivantes à l’aide du pare
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Pour renvoyer des licences. </p> <p> L’URL doit être accessible si vous mettez en oeuvre la prise en charge du retour de licence. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Pour renvoyer des licences. </p> <p> L’URL doit être accessible si vous implémentez la prise en charge du retour de licence. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Le pare-feu interne ne doit autoriser que les connexions au serveur de licences DRM Primetime via le proxy inverse et uniquement aux URL du tableau. Pour améliorer l’évolutivité, utilisez HTTP pour les connexions entre le proxy inverse et le DRM Primetime.
+>Le pare-feu interne ne doit autoriser que les connexions au serveur de licences DRM Primetime par le biais du proxy inverse, et uniquement aux URL du tableau. Pour améliorer l’évolutivité, utilisez HTTP pour les connexions entre le proxy inverse et Primetime DRM.
 
 ## URL sortantes {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Les URL sortantes permettent au serveur de licences de télécharger les listes CRL à partir d’Adobe.
+Les URL sortantes permettent au serveur de licences de télécharger les CRL depuis Adobe.
 
 Voici une liste des URL sortantes que vous pouvez utiliser :
 
@@ -117,4 +115,3 @@ Voici une liste des URL sortantes que vous pouvez utiliser :
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
 * `https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
-

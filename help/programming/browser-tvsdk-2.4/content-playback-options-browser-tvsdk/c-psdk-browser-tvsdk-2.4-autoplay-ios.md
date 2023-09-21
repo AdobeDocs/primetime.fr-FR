@@ -2,20 +2,18 @@
 title: Lecture automatique sur iOS
 description: Lecture automatique sur iOS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
-
 # Lecture automatique sur iOS{#autoplay-on-ios}
 
-L’implémentation de l’API de volume d’AdobePSDK.MediaPlayer permet la lecture automatique du contenu sur les périphériques exécutant iOS version 10 ou ultérieure. iOS autorise la lecture automatique uniquement lorsque le volume est coupé. Lorsque le volume est défini sur zéro, l’API définit la propriété `muted` de la balise vidéo sur `true`, sinon la propriété `muted` est définie sur `false`. L’API `play` début la lecture sans aucune interaction de l’utilisateur ni geste de l’utilisateur.
+La mise en oeuvre de l’API de volume d’AdobePSDK.MediaPlayer permet la lecture automatique du contenu sur les appareils exécutant iOS version 10 ou ultérieure. iOS autorise la lecture automatique uniquement lorsque le volume est en mode muet. Lorsque le volume est défini sur zéro, l’API définit la variable `muted` de la balise vidéo à `true`, sinon la variable `muted` est définie sur `false`. La variable `play` L’API lance la lecture sans intervention de l’utilisateur ni geste de l’utilisateur.
 
-Pour la lecture automatique sur iPhone, définissez en outre la propriété `playsInline` de la balise `video` sur `true`.
+Pour une lecture automatique sur iPhone, définissez également la variable `playsInline` de la propriété `video` de `true`.
 
 ```
 videoDiv.getElementsByTagName('video')[0].playsInline = true;
@@ -23,5 +21,4 @@ videoDiv.getElementsByTagName('video')[0].playsInline = true;
 
 >[!NOTE]
 >
->L’utilisation de la propriété `playsInline` début la lecture sans le mode plein écran.
-
+>Utilisation de `playsInline` permet de lancer la lecture sans passer par le mode plein écran.

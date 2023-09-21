@@ -1,26 +1,24 @@
 ---
-description: Lorsque TVSDK rencontre un VMAP endommagé dans une réponse du serveur d’annonces, il envoie une erreur 1109 (NETWORK_AD_URL_FAILED).
+description: Lorsque TVSDK rencontre une VMAP endommagée dans une réponse du serveur de publicités, il envoie une erreur 1109 (NETWORK_AD_URL_FAILED).
 keywords: 1109;NETWORK_AD_URL_FAILED;VMAP endommagée
-title: Gestion des erreurs du client pour le VMAP endommagé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Gestion des erreurs du client pour VMAP endommagée
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
+# Gestion des erreurs du client pour VMAP endommagée {#client-error-handling-for-broken-vmap}
 
-# Gestion des erreurs du client pour le VMAP endommagé {#client-error-handling-for-broken-vmap}
+Lorsque TVSDK rencontre une VMAP endommagée dans une réponse du serveur de publicités, il envoie une erreur 1109 (NETWORK_AD_URL_FAILED).
 
-Lorsque TVSDK rencontre un VMAP endommagé dans une réponse du serveur d’annonces, il envoie une erreur 1109 (NETWORK_AD_URL_FAILED).
+Selon la nature de la réponse du serveur de publicités et les paramètres de chargement de la publicité, votre lecteur peut recevoir différents nombres d’erreurs 1109 lorsque TVSDK rencontre un VMAP endommagé dans une réponse du serveur de publicités.
 
-En fonction de la nature de la réponse du serveur d’annonces et des paramètres de chargement des annonces, votre lecteur peut recevoir différents nombres d’erreurs 1109 lorsque TVSDK rencontre un VMAP endommagé dans une réponse du serveur d’annonces.
+Examinons un scénario dans lequel la réponse du serveur d’annonces pointe vers le code XML VMAP. Supposons également que la réponse du serveur d’annonces comporte quatre emplacements d’annonces disponibles, chacun pointant vers le même VMAP. Enfin, supposons que ce VMAP soit rompu.
 
-Examinons un scénario dans lequel la réponse du serveur d’annonces pointe vers le fichier XML VMAP. Supposons également que la réponse du serveur d’annonces comporte quatre emplacements d’annonces disponibles, chacun pointant vers le même VMAP. Enfin, disons que ce VMAP est cassé.
-
-Dans ce scénario, si la résolution des publicités parentes est activée ([Activer la résolution des publicités paresseuses](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)), TVSDK enverra deux erreurs 1109 (et non une erreur comme prévu) : une erreur est envoyée sur chaque passe d’analyse sur la chronologie. En effet, lorsque la résolution différée des publicités est activée, TVSDK analyse les publicités en 2 passes : la première passe se produit juste avant les débuts de lecture du contenu pour les publicités preroll, et la seconde passe après les débuts de lecture, pour les publicités mid-roll et post-roll.
+Dans ce scénario, si la résolution de publicité différée est activée ([Activation de la résolution des publicités différées](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/t-enable-lazy-ad-resolving.md)), TVSDK enverra deux erreurs 109 (pas une comme prévu) : une erreur est envoyée à chaque analyse au-dessus de la chronologie. En effet, lorsque la résolution différée des publicités est activée, TVSDK analyse les publicités en 2 passages : la première passe se produit juste avant que la lecture du contenu ne commence pour les publicités preroll, et la seconde passe après le démarrage de la lecture pour les publicités mid-roll et post-roll.
 
 >[!NOTE]
 >
->Dans ce scénario, si vous désactivez la résolution des publicités paresseuses, TVSDK déclenche uniquement une erreur 1109 (une seule passe d’analyse).
+>Dans ce scénario, si vous désactivez la résolution des publicités différées, TVSDK déclenche une seule erreur 1109 (une seule analyse).

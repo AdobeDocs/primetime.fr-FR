@@ -1,24 +1,22 @@
 ---
-title: Gestion des demandes de synchronisation
-description: Gestion des demandes de synchronisation
+title: Gestion des requêtes de synchronisation
+description: Gestion des requêtes de synchronisation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
+# Gestion des requêtes de synchronisation{#handling-synchronization-requests}
 
-# Gestion des demandes de synchronisation{#handling-synchronization-requests}
-
-. Si une licence spécifie des exigences de synchronisation ([Exigences de synchronisation](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)), le client envoie périodiquement des demandes de synchronisation au serveur, en fonction de la fréquence spécifiée dans la licence. Pour activer les messages de synchronisation, définissez SyncFrequencyRequirements dans un PlayRight.
+. Si une licence spécifie des exigences de synchronisation ([Conditions requises pour la synchronisation](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md#requirements-for-synchronization)), le client enverra régulièrement des demandes de synchronisation au serveur, selon la fréquence spécifiée dans la licence. Pour activer les messages de synchronisation, définissez SyncFrequencyRequirements dans un PlayRight.
 
 * La classe du gestionnaire de requêtes est `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
-* La classe de message de demande est `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
-* Si le client et le serveur prennent en charge la version 5 du protocole, l’URL de demande est &quot;URL du serveur de licence dans les métadonnées : + &quot;/flashaccess/sync/v4&quot;. Sinon, l’URL de demande est &quot;URL du serveur de licences dans les métadonnées&quot; + &quot;/flashaccess/sync/v3&quot;
+* La classe de message de requête est `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
+* Si le protocole de prise en charge du client et du serveur version 5, l’URL de demande est &quot;URL du serveur de licences dans les métadonnées : + &quot;/flashaccess/sync/v4&quot;. Sinon, l’URL de demande est &quot;URL du serveur de licences dans les métadonnées&quot; + &quot;/flashaccess/sync/v3&quot;
 
-Les messages de synchronisation permettent de synchroniser l’heure du client avec celle du serveur. Si des licences sont intégrées au contenu et qu’elles n’ont pas besoin d’être récupérées sur un serveur de licences, il est important de synchroniser le temps du client pour empêcher le client de modifier son horloge afin de contourner l’expiration de la licence.
+Les messages de synchronisation sont utilisés pour synchroniser l’heure du client avec celle du serveur. Si des licences sont incorporées dans le contenu et n’ont pas besoin d’être récupérées à partir d’un serveur de licences, il est important de synchroniser l’heure du client pour empêcher le client de modifier son horloge afin de contourner l’expiration de licence.
 
-Les messages de synchronisation peuvent également être utilisés pour communiquer les informations sur l&#39;état du client au serveur ( `getClientState()`) pour la détection de restauration. Voir [Protection de restauration](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).
+Les messages de synchronisation peuvent également être utilisés pour communiquer les informations d’état du client au serveur ( `getClientState()`) pour la détection de restauration. Voir [Protection de restauration](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).

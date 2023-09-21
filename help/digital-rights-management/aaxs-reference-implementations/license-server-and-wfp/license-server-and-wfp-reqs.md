@@ -1,22 +1,20 @@
 ---
-title: Conditions requises
-description: Conditions requises
+title: Conditions
+description: Conditions
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-
-# Exigences {#requirements}
+# Conditions {#requirements}
 
 Vous devez vous assurer que les éléments suivants sont installés :
 
 * Tomcat 6.0 ou version ultérieure
-* Une base de données telle que MySQL (requise uniquement pour le composant License Server)
+* Une base de données telle que MySQL (nécessaire uniquement pour le composant License Server)
 * Java 1.6 ou version ultérieure
 * Ant 1.8 ou version ultérieure (pour utiliser les exemples de scripts de génération)
 

@@ -1,23 +1,20 @@
 ---
-description: MediaResource représente le contenu qui est sur le point d’être chargé par l’instance MediaPlayer.
+description: Une ressource MediaResource représente le contenu sur le point d’être chargé par l’instance MediaPlayer.
 title: Classes MediaPlayer et MediaResource
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# Classes MediaPlayer et MediaResource {#mediaplayer-and-mediaresource-classes}
 
-# classes MediaPlayer et MediaResource {#mediaplayer-and-mediaresource-classes}
-
-MediaResource représente le contenu qui est sur le point d’être chargé par l’instance MediaPlayer.
+Une ressource MediaResource représente le contenu sur le point d’être chargé par l’instance MediaPlayer.
 
 <!--<a id="section_431AB7221E0249BF949EC72EEB9B428A"></a>-->
 
-TVSDK permet de charger et de préparer le contenu pour la lecture en utilisant la méthode `replaceCurrentResource` dans `MediaPlayer`. Cette méthode utilise deux arguments, une instance de `MediaPlayerResource` et, éventuellement, une instance de `MediaPlayerItemConfig`, que vous pouvez utiliser pour transmettre des paramètres personnalisés définis par l&#39;application.
+TVSDK permet de charger et de préparer le contenu en vue de la lecture à l’aide de la fonction `replaceCurrentResource` dans `MediaPlayer`. Cette méthode prend deux arguments, une instance de `MediaPlayerResource` et, éventuellement, une instance de `MediaPlayerItemConfig`, que vous pouvez utiliser pour transmettre des paramètres personnalisés définis par l’application.
 
-* Pour plus d’informations, voir mediaplayer-reuse-reuse-or-remove .
-* Pour plus d&#39;informations sur `MediaPlayerResource`, consultez media-resource-create
-
+* Pour plus d’informations, voir Media-player-réutilisation-ou-suppression .
+* Pour plus d’informations sur `MediaPlayerResource`, voir media-resource-create

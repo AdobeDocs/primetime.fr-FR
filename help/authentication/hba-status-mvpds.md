@@ -1,13 +1,12 @@
 ---
 title: État de l’adaptateur de bus hôte pour les MVPD
 description: État de l’adaptateur de bus hôte pour les MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
-
 
 # État de l’adaptateur de bus hôte pour les MVPD
 
@@ -24,25 +23,24 @@ ht-degree: 0%
 
 | MVPD | Fonctionnalités de base disponibles ? | Envoie l’indicateur sur la réponse d’authentification | SSO ? | Commentaires |
 |---|---|---|---|---|
-| DirectTV | Oui | Non |  |  |
-| Disposition | En cours | En cours |  |  |
-| Spectrum | Oui | Oui |  |  |
-| Charte | Oui | Non |  |  |
-| Cox | Oui | Non |  | Les contrôles parentaux doivent être activés. |
-| AT&amp;T | Oui | Non |  |  |
-| Verizon | Oui | Oui |  |  |
-| Cablevision | En cours | En cours |  |  |
-| Suddenlink | Oui | En cours |  |  |
-| Mediacom | Oui | En cours |  |  |
-| Midcontinent | Oui | En cours |  |  |
-| Massilon | Oui | Non |  |  |
-| Google Fiber | Oui | En cours |  |  |
-| ArticleOne | Oui | Oui |  |  |
+| DirectTV | Oui | Non |      |                                      |
+| Disposition | En cours | En cours |      |                                      |
+| Spectrum | Oui | Oui |      |                                      |
+| Charte | Oui | Non |      |                                      |
+| Cox | Oui | Non |      | Les contrôles parentaux doivent être activés. |
+| AT&amp;T | Oui | Non |      |                                      |
+| Verizon | Oui | Oui |      |                                      |
+| Cablevision | En cours | En cours |      |                                      |
+| Suddenlink | Oui | En cours |      |                                      |
+| Mediacom | Oui | En cours |      |                                      |
+| Midcontinent | Oui | En cours |      |                                      |
+| Massilon | Oui | Non |      |                                      |
+| Google Fiber | Oui | En cours |      |                                      |
+| ArticleOne | Oui | Oui |      |                                      |
 
 
 ## Adaptateur de bus hôte avec MVPD compatibles avec OAuth 2.0 {#hba-with-oauth2-enabled-mvpds}
 
 | MVPD | Fonctionnalités de base disponibles ? | Envoie l’indicateur sur la réponse d’authentification | SSO ? | Commentaires |
 |---|---|---|---|---|
-| Comcast | Oui | Oui |  |  |
-
+| Comcast | Oui | Oui | | |

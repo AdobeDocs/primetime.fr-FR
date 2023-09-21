@@ -1,19 +1,17 @@
 ---
-title: Structure du répertoire de journalisation
-description: Structure du répertoire de journalisation
+title: Structure du répertoire de journal
+description: Structure du répertoire de journal
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '16'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Structure du répertoire de journal{#log-directory-structure}
 
-# Structure du répertoire de journalisation{#log-directory-structure}
-
-Le répertoire des journaux possède la structure suivante :
+Le répertoire des journaux présente la structure suivante :
 
 ```
 <i class="+ topic ph hi-d="" i "="">
@@ -29,4 +27,3 @@ Le répertoire des journaux possède la structure suivante :
  </i class="+ topic>
 </i class="+ topic>
 ```
-

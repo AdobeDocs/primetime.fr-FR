@@ -1,8 +1,7 @@
 ---
-description: Vous pouvez configurer votre lecteur pour effectuer le suivi et analyser l’utilisation de la vidéo.
+description: Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
 title: Initialisation et configuration des analyses vidéo
-exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Initialisation et configuration des analyses vidéo {#initialize-and-configure-video-analytics}
 
-Vous pouvez configurer votre lecteur pour effectuer le suivi et analyser l’utilisation de la vidéo.
+Vous pouvez configurer votre lecteur pour suivre et analyser l’utilisation de la vidéo.
 
 Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous disposez des éléments suivants :
 
@@ -20,12 +19,12 @@ Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous dispos
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
-   <td colname="col1"> Point d’entrée du serveur de suivi AppMeasurement </td>
+   <td colname="col1"> Point d’entrée du serveur de suivi des AppMeasurements </td>
    <td colname="col2"> URL du point de terminaison de la collection principale Adobe Analytics (anciennement SiteCatalyst). </td>
   </tr>
   <tr>
    <td colname="col1"> Point d’entrée du serveur de suivi Video Analytics </td>
-   <td colname="col2"> URL du point de terminaison de la collection principale d’analyse vidéo. C’est là que tous les appels de suivi de pulsation vidéo sont envoyés. <p>Conseil :  L’URL du serveur de suivi des visiteurs est identique à celle du serveur de suivi des analyses. Pour plus d’informations sur la mise en oeuvre du service d’identification des visiteurs, voir <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Mise en oeuvre du service d’identification </a>. </p> </td>
+   <td colname="col2"> URL du point de terminaison de la collection principale d’analyse vidéo. C’est là que tous les appels de suivi de pulsation vidéo sont envoyés. <p>Conseil : L’URL du serveur de suivi des visiteurs est identique à celle du serveur de suivi des analyses. Pour plus d’informations sur l’implémentation du service d’identification des visiteurs, voir <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Mise en oeuvre du service d’ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nom du compte </td>
@@ -41,7 +40,7 @@ Avant d’activer le suivi vidéo (pulsations vidéo), vérifiez que vous dispos
   </tr>
   <tr>
    <td colname="col1"> Éditeur </td>
-   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil :  Cet identifiant n’est pas simplement une chaîne portant le nom de la marque/de la télévision. </p> </td>
+   <td colname="col2"> Il s’agit de l’identifiant d’éditeur, fourni aux clients par leur représentant d’Adobe. <p>Conseil : Cet identifiant n’est pas seulement une chaîne portant le nom de la marque/de la télévision. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -54,11 +53,11 @@ Pour configurer le suivi vidéo dans votre lecteur :
    
    * L’instanciation nécessite un paramètre d’entrée ID d’organisation de Marketing Cloud fourni par Adobe.
 
-      Il s’agit d’une valeur string .
+     Il s’agit d’une valeur string .
    * La seule option de configuration de la bibliothèque VisitorAPI est l’URL du point de terminaison principal qui fournit l’identifiant unique de l’utilisateur actuel.
    * L’URL du serveur de suivi des visiteurs est identique à celle du serveur de suivi des analyses.
 
-      Pour plus d’informations sur la mise en oeuvre du service d’identification des visiteurs, voir [Mise en oeuvre du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
+     Pour plus d’informations sur l’implémentation du service d’identification des visiteurs, voir [Mise en oeuvre du service d’identification des visiteurs](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -67,11 +66,11 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
 2. Instanciez et configurez le composant AppMeasurement.
 
-   L’instance AppMeasurement comporte de nombreuses options de configuration. Pour plus d’informations, consultez la [documentation Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) . Les options de l’exemple de code suivant ( `account`, `visitorNamespace` et `trackingServer`) sont requises et les valeurs sont fournies par Adobe.
+   L’instance d’AppMeasurement comporte de nombreuses options de configuration. Pour plus d’informations, voir [Développeur Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) la documentation. Les options de l’exemple de code suivant ( `account`, `visitorNamespace`, et `trackingServer`) sont obligatoires et les valeurs sont fournies par Adobe.
 
    >[!IMPORTANT]
    >
-   >Vous devez vous assurer que la chaîne de dépendance est correctement configurée. L’instance AppMeasurement agrège (dépend) le composant API visiteur.
+   >Vous devez vous assurer que la chaîne de dépendance est correctement configurée. L’instance d’AppMeasurement agrège (dépend) le composant API visiteur.
 
    ```js
    var appMeasurement = new AppMeasurement();
@@ -85,7 +84,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
 
    >[!IMPORTANT]
    >
-   >Dans votre application, assurez-vous que la valeur `appMeasurementObject.visitor` est renseignée avant de lancer le flux d’analyse vidéo, sinon vous risquez de ne pas obtenir de résultats de suivi. Ces résultats sont indiqués par les messages de votre journal. Vous pouvez ajouter un appel de suivi vide ( `appMeasurementObject.track`), interroger la propriété `visitor` jusqu’à ce qu’elle soit renseignée, puis lancer l’analyse vidéo.
+   >Dans votre application, assurez-vous que `appMeasurementObject.visitor` est renseignée avant de lancer le flux d’analyse vidéo, ou vous risquez de ne pas obtenir de résultats de suivi. Ces résultats sont indiqués par les messages de votre journal. Vous pouvez ajouter un appel de suivi vide ( `appMeasurementObject.track`), interroge la variable `visitor` jusqu’à ce qu’elle soit renseignée, puis lancez video analytics.
 
 3. Initialisez et configurez les métadonnées de suivi de pulsation vidéo.
 
@@ -94,7 +93,7 @@ Pour configurer le suivi vidéo dans votre lecteur :
    >Vous pouvez arrêter le module d’analyse vidéo en cours et le réinitialiser à nouveau, si nécessaire. Avant de réinitialiser le module, assurez-vous que les métadonnées d’analyse vidéo sont également mises à jour vers les métadonnées de contenu correctes. Pour recréer les métadonnées, répétez les sous-étapes 1 et 2.
 
    1. Créez une instance des métadonnées Video Analytics.
-Cette instance contient toutes les informations de configuration nécessaires pour activer le suivi de pulsation vidéo. Par exemple :
+Cette instance contient toutes les informations de configuration nécessaires pour activer le suivi de pulsation vidéo. Par exemple :
 
       ```js
       function getVideoAnalyticsMetadata() {
@@ -119,13 +118,14 @@ Gardez à l’esprit les éléments suivants :
       * Créez toujours une instance de suivi pour chaque session de lecture de contenu, puis supprimez la référence précédente (après avoir désolidarisé l’instance du lecteur multimédia).
       * Les métadonnées créées à la sous-étape 1 doivent être fournies dans le constructeur de Video Analytics Tracker.
 
-         ```js
-         var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
-         videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
-         videoAnalyticsProvider.attachMediaPlayer(player);
-         ```
+        ```js
+        var videoAnalyticsMetadata = getVideoAnalyticsMetadata();
+        videoAnalyticsProvider = new AdobePSDK.VA.VideoAnalyticsProvider(videoAnalyticsMetadata);
+        videoAnalyticsProvider.attachMediaPlayer(player);
+        ```
+
    3. Détruisez le suivi Video Analytics.
-Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente de l’outil de suivi vidéo. Une fois que vous avez reçu l’événement de fin de contenu (ou la notification), attendez quelques minutes avant de détruire l’instance de suivi vidéo. La suppression immédiate de l’instance peut affecter la capacité du dispositif de suivi Video Analytics à envoyer un ping de fin vidéo.
+Avant de commencer une nouvelle session de lecture de contenu, détruisez l’instance précédente du dispositif de suivi vidéo. Une fois que vous avez reçu l’événement de fin de contenu (ou la notification), attendez quelques minutes avant de détruire l’instance de suivi vidéo. La suppression immédiate de l’instance peut affecter la capacité du dispositif de suivi Video Analytics à envoyer un ping de fin vidéo.
 
       ```js
       if (videoAnalyticsProvider) {

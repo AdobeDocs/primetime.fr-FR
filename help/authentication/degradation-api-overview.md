@@ -1,13 +1,12 @@
 ---
 title: Présentation de l’API de dégradation
 description: Présentation de l’API de dégradation
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Présentation de l’API de dégradation {#degradation-api-overview}
 
@@ -25,7 +24,7 @@ Cette fonctionnalité fournit les trois parties restantes d’une intégration (
 
 Le cas d’utilisation principal de cette fonctionnalité se produit lors d’événements sportifs ou de grande envergure. Dans de tels scénarios de trafic élevé, il est possible que la charge sur un point de terminaison MVPD spécifique devienne trop élevée, ce qui entraîne des temps de réponse très longs pour les utilisateurs. Afin de préserver une bonne expérience utilisateur dans un tel scénario, le programmeur peut décider de déclencher une règle de dégradation qui peut temporairement s’authentifier/autoriser automatiquement les utilisateurs, ou désactiver un MVPD en le supprimant de la liste des MVPD disponibles.
 
-Une règle de dégradation n’est appliquée que pour une période fixe. Bien que les Principaux clients de cette fonctionnalité soient des canaux sportifs et des canaux d’actualités en direct, tout programmeur peut souhaiter avoir accès à cette fonctionnalité, car les services des distributeurs multicanaux de programmes audiovisuels s’arrêtent de temps à autre.
+Une règle de dégradation n’est appliquée que pour une période fixe. Bien que les principaux clients de cette fonctionnalité soient les canaux de sports et d’actualités en direct, tout programmeur peut souhaiter avoir accès à cette fonctionnalité, car les services des distributeurs multicanaux de programmes audiovisuels disparaissent de temps en temps.
 
 Notes de mise à niveau :
 

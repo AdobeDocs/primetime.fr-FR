@@ -1,8 +1,7 @@
 ---
 title: Affichage des rapports en mode d’isolation
 description: Affichez les rapports en mode d’isolation pour Xfinity.
-exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Par exemple, dans l’image suivante, si un abonné B d’un MVPD de mode d’is
 
 ![](assets/isolation-diff-new.png)
 
-*Figure : Mode d’isolation Le MVPD identifie quatre abonnés différents au lieu de deux.*
+*Figure : Le mode Isolation MVPD identifie quatre abonnés différents au lieu de deux.*
 
 Pour gérer la distorsion des données (en raison de l’identification du même abonné que différent selon l’accès à différents programmeurs), le mode Isolation limite l’activité signalée sur un programmeur à l’activité uniquement sur les applications de ce programmeur. Par exemple, pour le mode Isolation dans l’image ci-dessus, le programmeur L voit les données basées uniquement sur l’activité des identités W et Y, ignorant les identités X et Z.
 
@@ -34,7 +33,7 @@ Pour afficher les mesures en mode d’isolation :
 
    ![](assets/xfinity-in-segment.gif)
 
-   *Figure : Sélection MVPD en mode Isolation*
+   *Figure : Sélection du MVPD en mode Isolation*
 
 1. Sélectionnez les canaux de votre choix dans la **Canaux dans le segment** , puis sélectionnez **Appliquer la sélection**. Sélectionnez également un [période](/help/AccountIQ/product-concepts.md#granularity-def).
 
@@ -44,6 +43,6 @@ Pour afficher les mesures en mode d’isolation :
 
    ![](assets/aggregate-sharing-isolation.png)
 
-   *Figure : Partage des jauges de probabilité en mode Isolation*
+   *Figure : Jauges de probabilité du partage en mode Isolation*
 
-   Notez que les jauges ci-dessus montrent que seulement 6 % de tous les comptes sont partagés ; et seulement 8 % du contenu est consommé par ces 8 %. Ainsi, les canaux peuvent comparer leurs scores en mode Isolation avec ceux des autres MVPD. Par conséquent, les informations obtenues en utilisant le mode Isolation doivent être interprétées différemment des autres données.
+   Notez que les jauges ci-dessus montrent que seulement 6 % de tous les comptes sont partagés ; et que seulement 8 % du contenu est consommé par ces 8 %. Ainsi, les canaux peuvent comparer leurs scores en mode Isolation avec ceux des autres MVPD. Par conséquent, les informations obtenues en utilisant le mode Isolation doivent être interprétées différemment des autres données.

@@ -1,52 +1,50 @@
 ---
-description: TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une playlist de fenêtre coulissante, à la fois dans la vidéo à la demande (VOD) et les flux en direct.
-title: Affichage d’une barre de défilement de recherche avec la position de lecture actuelle
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK prend en charge la recherche vers une position spécifique (heure) où la diffusion est une liste de lecture de fenêtre glissante, à la fois dans la vidéo à la demande (VOD) et dans les diffusions en direct.
+title: Afficher une barre de défilement de recherche avec la position de lecture actuelle
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# Afficher une barre de défilement de recherche avec la position de lecture actuelle {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# Affichage d’une barre de défilement de recherche avec la position de lecture actuelle {#display-a-seek-scrub-bar-with-the-current-playback-position}
-
-TVSDK prend en charge la recherche à une position spécifique (temps) où le flux est une playlist de fenêtre coulissante, à la fois dans la vidéo à la demande (VOD) et les flux en direct.
+TVSDK prend en charge la recherche vers une position spécifique (heure) où la diffusion est une liste de lecture de fenêtre glissante, à la fois dans la vidéo à la demande (VOD) et dans les diffusions en direct.
 
 >[!IMPORTANT]
 >
->La recherche dans un flux en direct n&#39;est autorisée que pour le magnétoscope numérique.
+>La recherche dans une diffusion en direct n’est autorisée que pour les enregistrements DVR.
 
 1. Configurez les rappels pour la recherche.
 
-       La recherche étant asynchrone, TVSDK distribue les événements suivants liés à la recherche :
+       La recherche étant asynchrone, TVSDK distribue les événements liés à la recherche suivants :
    
-   * `QOSEventListener.onSeekStart` - Cherche à démarrer.
-   * `QOSEventListener.onSeekComplete` - Recherche de succès.
+   * `QOSEventListener.onSeekStart` - Recherche en cours.
+   * `QOSEventListener.onSeekComplete` - Recherche réussie.
    * `QOSEventListener.onOperationFailed` - Échec de la recherche.
 
 1. Attendez que le lecteur soit dans un état valide pour la recherche.
 
-   Les états valides sont PRÉPARÉS, TERMINÉS, PAUSED et PLAYING.
+   Les états valides sont PRÉPARÉS, TERMINÉS, EN PAUSE et EN LECTURE.
 
-1. Utilisez la barre de recherche native pour définir `OnSeekBarChangeListener` pour déterminer quand l’utilisateur fait défiler les données.
-1. Prêtez attention à `QOSEventListener.onOperationFailed` et prenez les mesures appropriées.
+1. Utilisez la barre de recherche native pour définir `OnSeekBarChangeListener` pour voir quand l’utilisateur effectue un défilement.
+1. Listen for `QOSEventListener.onOperationFailed` et prendre les mesures appropriées.
 
-   Ce événement transmet l&#39;avertissement approprié. Votre application détermine comment procéder, par exemple, en essayant de relancer la recherche ou en continuant la lecture à partir de la position précédente.
+   Cet événement transmet l’avertissement approprié. Votre application détermine comment procéder, par exemple, en essayant de relancer la recherche ou en continuant la lecture à partir de la position précédente.
 
-1. Attendez que TVSDK appelle le rappel `QOSEventListener.onSeekComplete`.
-1. Récupérez la position de lecture modifiée finale à l’aide du paramètre de position du rappel.
+1. Attendez que TVSDK appelle la fonction `QOSEventListener.onSeekComplete` rappel.
+1. Récupérez la position de lecture ajustée finale à l’aide du paramètre position du rappel.
 
-   Ceci est important car la position réelle du début après la recherche peut être différente de la position demandée. Le comportement de lecture peut être affecté si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou saute des pauses publicitaires.
+   Ceci est important, car la position de départ réelle après la recherche peut être différente de celle requise. Le comportement de lecture peut être affecté si une recherche ou un autre repositionnement se termine au milieu d’une coupure publicitaire ou ignore les coupures publicitaires.
 
-1. Utilisez les informations de position lors de l&#39;affichage d&#39;une barre de défilement de recherche.
+1. Utilisez les informations de position lors de l’affichage d’une barre de défilement de recherche.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
 **Exemple de recherche**
 
-Dans cet exemple, l’utilisateur fait défiler la barre de recherche pour rechercher la position souhaitée.
+Dans cet exemple, l’utilisateur fait défiler la barre de recherche pour accéder à la position souhaitée.
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
@@ -79,4 +77,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

@@ -1,20 +1,18 @@
 ---
-description: TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut implémenter des actions en réponse à ces événements.
-title: ÉVÉNEMENTS DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK distribue des événements DRM (Digital Rights Management, gestion des droits numériques) en réponse aux opérations liées à DRM, comme lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut mettre en oeuvre des actions en réponse à ces événements.
+title: Événements DRM
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Événements DRM{#drm-events}
 
-# ÉVÉNEMENTS DRM{#drm-events}
+TVSDK distribue des événements DRM (Digital Rights Management, gestion des droits numériques) en réponse aux opérations liées à DRM, comme lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut mettre en oeuvre des actions en réponse à ces événements.
 
-TVSDK distribue des événements de gestion des droits numériques (DRM) en réponse à des opérations liées à la gestion des droits numériques, par exemple lorsque de nouvelles métadonnées DRM deviennent disponibles. Votre lecteur peut implémenter des actions en réponse à ces événements.
-
-Pour être informé de tous les événements relatifs à la gestion des droits numériques, veuillez tenir compte des points suivants :
+Pour être averti de tous les événements liés à DRM, écoutez ce qui suit :
 
 ```
 DRMMetadataInfoEvent.DRM_METADATA_INFO_AVAILABLE
@@ -30,4 +28,3 @@ private function onDRMMetadataInfoAvailable(event:DRMMetadataInfoEvent){
     ... 
 } 
 ```
-

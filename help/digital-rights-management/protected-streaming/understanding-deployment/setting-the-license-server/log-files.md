@@ -1,7 +1,6 @@
 ---
-description: Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en flux continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
-title: Fichiers journaux
-translation-type: tm+mt
+description: Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
+title: Fichiers de log
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '186'
@@ -10,17 +9,17 @@ ht-degree: 0%
 ---
 
 
-# Fichiers journaux{#log-files}
+# Fichiers de log{#log-files}
 
-Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en flux continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
+Les fichiers journaux générés par le serveur DRM Adobe Primetime pour l’application de diffusion en continu protégée se trouvent dans le répertoire spécifié par LicenseServer.LogRoot.
 
 >[!NOTE]
 >
->Si les fichiers journaux actuels sont supprimés ou déplacés pendant l&#39;exécution du serveur, il est possible que le fichier journal ne soit pas recréé. Par conséquent, certaines informations de journal peuvent être supprimées.
+>Si les fichiers journaux actuels sont supprimés ou déplacés pendant l’exécution du serveur, il est possible que le fichier journal ne soit pas recréé. Par conséquent, certaines informations de journal peuvent être supprimées.
 
-## Structure du répertoire de journalisation {#section_F490A483D60145ADBC21038914C39203}
+## Structure du répertoire de journal {#section_F490A483D60145ADBC21038914C39203}
 
-Les répertoires de journaux sont structurés pour faciliter leur utilisation. Le répertoire des journaux possède la structure suivante :
+Les répertoires de logs sont structurés pour faciliter leur utilisation. Le répertoire des journaux présente la structure suivante :
 
 ```
 <i class="+ topic ph hi-d="" i "="">
@@ -39,12 +38,12 @@ Les répertoires de journaux sont structurés pour faciliter leur utilisation. L
 
 ## Fichier journal global {#section_1CFA90748142439C9F3BE380969539DA}
 
-Le fichier journal global, `flashaccess-global.log`, se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal que le SDK Java DRM d&#39;Adobe Primetime ou des messages de journal peuvent avoir générés au moment de l&#39;initialisation du serveur.
+Le fichier journal global, `flashaccess-global.log`, se trouve dans *LicenseServer.LogRoot*. Le journal peut inclure des messages de journal générés par le SDK Java DRM d’Adobe Primetime ou des messages de journal pendant l’initialisation du serveur.
 
 ## Fichier journal de partition {#section_5660137CD6AA40519E72A4315534846B}
 
-Le fichier journal des partitions, `flashaccess-partition.log`, se trouve dans le répertoire `<LicenseServer.LogRoot>/flashaccesserver`. Il comprend les messages du journal qui ont été générés pendant le traitement d’une demande de licence.
+Le fichier journal de la partition, `flashaccess-partition.log`, se trouve dans la variable `<LicenseServer.LogRoot>/flashaccesserver` répertoire . Il inclut les messages de journal qui ont été générés pendant le traitement d’une demande de licence.
 
 ## Fichier journal du client {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Le fichier journal du client de chaque client, `flashaccess-tenant.log`, se trouve dans `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Le journal du client contient des informations de contrôle décrivant chaque licence générée pour ce client.
+le fichier journal du client de chaque client, `flashaccess-tenant.log`, se trouve dans `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Le journal du client comprend des informations d’audit qui décrivent chaque licence générée pour ce client.

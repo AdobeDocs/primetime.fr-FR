@@ -1,17 +1,16 @@
 ---
 title: Modèles d’utilisation
 description: Afficher le comportement de partage de compte pour différentes typologies d’utilisateurs.
-exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
-source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Modèles d’utilisation {#usage-patterns}
 
-Account IQ classe les utilisateurs des comptes d’abonnés dans différentes catégories en fonction de leur comportement social, comme les voyageurs ou les navetteurs, la grande famille et le partage communautaire. Le **Modèles d’utilisation** présente plusieurs analyses et rapports différents pour ces typologies d’utilisateurs. Par exemple : **Distribution des modèles d’utilisation - Utilisateurs dans le segment par rapport au total** compare le comportement d’utilisation du segment actuel par rapport à l’ensemble du secteur.
+Account IQ classe les utilisateurs des comptes d’abonnés dans différentes catégories en fonction de leur comportement social, comme les voyageurs ou les navetteurs, la grande famille et le partage communautaire. La variable **Modèles d’utilisation** présente plusieurs analyses et rapports différents pour ces typologies d’utilisateurs. Par exemple : **Distribution des modèles d’utilisation - Utilisateurs dans le segment par rapport au total** compare le comportement d’utilisation du segment actuel par rapport à l’ensemble du secteur.
 
 Comme les autres pages de l’application, les analyses et les rapports ici sont basés sur le segment actuel tel que défini dans la variable [panneau des segments](/help/AccountIQ/segments-timeframe.md).
 
@@ -23,7 +22,7 @@ Le graphique en barres dans **Distribution des modèles d’utilisation - Utilis
 
 ## Distribution du modèle d’utilisation dans le segment (#usage-pattern-dis-segment)
 
-Le **Distribution des modèles d’utilisation dans le segment** panneau présente les informations suivantes pour chaque modèle d’utilisateur :
+La variable **Distribution des modèles d’utilisation dans le segment** panneau présente les informations suivantes pour chaque modèle d’utilisateur :
 
 * Plage de probabilité de partage dans laquelle les comptes individuels sont classés
 * Nombre et pourcentage de comptes dans ce modèle
@@ -41,9 +40,9 @@ Par exemple, dans l’image ci-dessus :
 
 ## Distribution du modèle d’utilisation par partenaire de segment {#usage-pattern-dis-mvpd}
 
-+++Programmeur - Distribution du modèle d’utilisation pour les segments totaux et les partenaires de segments
++++Programmeur - Répartition du modèle d’utilisation pour les segments totaux et les partenaires de segments
 
-Le **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les MVPD dans le segment actuel.
+La variable **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les MVPD dans le segment actuel.
 
 ![](assets/usage-patterns-mvpdwise.png)
 
@@ -51,7 +50,7 @@ Le **Distribution du modèle d’utilisation** Le tableau fournit une comparaiso
 
 +++MVPD : distribution des schémas d’utilisation pour le nombre total de segments et de partenaires de segments.
 
-Le **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les canaux programmeurs dans le segment actuel.
+La variable **Distribution du modèle d’utilisation** Le tableau fournit une comparaison de la distribution des schémas d’utilisation pour les canaux programmeurs dans le segment actuel.
 
 ![](assets/usage-patterns-programmerwise.png)
 

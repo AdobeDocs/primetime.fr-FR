@@ -1,26 +1,23 @@
 ---
-title: A propos de l'accès aux Adobes
-description: A propos de l'accès aux Adobes
+title: À propos de l’accès aux Adobes
+description: À propos de l’accès aux Adobes
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
+# À propos de l’accès aux Adobes {#about-adobe-access}
 
-# À propos de l&#39;accès aux Adobes {#about-adobe-access}
+Adobe Access permet aux propriétaires et aux distributeurs de contenu de contrôler comment et où leur contenu peut être distribué et expérimenté, offrant ainsi une protection de bout en bout tout au long du cycle de vie du contenu. Il chiffre les fichiers vidéo FLV et F4V Flash, qui peuvent ensuite être diffusés en continu ou téléchargés vers les plateformes Microsoft® Windows®, Apple® Mac OS®, Linux® et Android®, et applique les modèles d’entreprise tels que la location de vidéos en ligne. Les consommateurs peuvent profiter de contenus de haute qualité à leur convenance, qu’ils soient en ligne ou hors ligne. Adobe Access offre des avantages clés que les propriétaires et les distributeurs de contenu peuvent utiliser pour fournir rapidement de nouveaux services qui les différencient de la concurrence.
 
-Adobe Access permet aux propriétaires et aux distributeurs de contenu de contrôler comment et où leur contenu peut être distribué et expérimenté, offrant ainsi une protection de bout en bout tout au long du cycle de vie du contenu. Il chiffre les fichiers vidéo FLV et F4V Flashs, qui peuvent ensuite être diffusés en continu ou téléchargés sur les plateformes Microsoft® Windows®, Apple® Mac OS®, Linux® et Android®, et applique des modèles d’entreprise tels que la location de vidéos en ligne. Les consommateurs peuvent profiter d&#39;un contenu de haute qualité à leur convenance, qu&#39;ils soient en ligne ou hors ligne. Adobe Access offres des avantages clés que les propriétaires et les distributeurs de contenu peuvent utiliser pour fournir rapidement de nouveaux services qui les différencient de la concurrence.
-
-Cette solution multiplate-forme peut être intégrée dans les systèmes de facturation et d&#39;authentification existants, ce qui permet aux propriétaires et aux distributeurs de contenu de conserver le contrôle du contenu audio et vidéo, quelle que soit la diffusion. L&#39;accès aux Adobes permet de protéger et de monétiser le contenu en toute confiance et offre la souplesse nécessaire pour gérer comment et où le contenu protégé est vécu.
+Cette solution multi-plateformes peut être intégrée aux systèmes de facturation et d’authentification existants, ce qui permet aux propriétaires et aux distributeurs de contenu de maintenir le contrôle du contenu audio et vidéo, quelle que soit la diffusion. Adobe Access vous aide à protéger et monétiser le contenu en toute confiance et vous offre la possibilité de gérer le contenu protégé et son emplacement.
 
 Adobe Access donne :
 
-* Les propriétaires et les distributeurs de contenu ont une portée plus large sur les ressources multimédia et un moyen de récupérer les coûts de production tout en protégeant ces ressources contre un mauvais usage.
-* Le contenu distribue la possibilité de distribuer rapidement du contenu et de récupérer les coûts de production par le biais d’une compensation directe (payée par l’utilisateur) ou indirecte (payée par l’annonceur).
-* Vous offre la possibilité de profiter d&#39;un contenu haut de gamme grâce à une expérience de visualisation riche, intuitive, non intrusive, pratique et attrayante.
-* Développe la capacité d&#39;automatiser les capacités d&#39;accès aux Adobes, y compris l&#39;autorisation et l&#39;authentification, dans l&#39;environnement existant d&#39;un distributeur de contenu.
-
+* Les propriétaires et les distributeurs de contenu ont une portée plus large pour les ressources multimédias et un moyen de récupérer les coûts de production tout en protégeant ces ressources contre une mauvaise utilisation.
+* Le contenu distribue la possibilité de diffuser rapidement du contenu et de récupérer les coûts de production par le biais d&#39;une compensation directe (payée par l&#39;utilisateur) ou indirecte (payée par l&#39;annonceur).
+* Vous offre la possibilité de profiter d’un contenu haut de gamme avec une expérience de visionnage riche, intuitive, non intrusive, pratique et attrayante.
+* Développe la possibilité d’automatiser les fonctionnalités d’accès aux Adobes, y compris l’autorisation et l’authentification, dans l’environnement existant d’un distributeur de contenu.

@@ -1,22 +1,20 @@
 ---
-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
-title: Mise en oeuvre de la gestion des interruptions de service
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
+title: Mise en oeuvre de la gestion des blackout
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre de la gestion des blackout{#implement-blackout-handling}
 
-# Mise en oeuvre de la gestion du blocage{#implement-blackout-handling}
+TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
 
-TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+Pour mettre en oeuvre la gestion des blackout, notamment en fournissant un contenu alternatif pendant la panne :
 
-Pour mettre en oeuvre la gestion des interruptions de service, notamment en fournissant du contenu alternatif pendant la coupure de service :
-
-1. Configurez votre application pour détecter les balises d’arrêt dans un manifeste de flux en direct.
+1. Configurez votre application pour détecter les balises de blackout dans un manifeste de flux en direct.
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -30,7 +28,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Créez des écouteurs de événement pour les événements de métadonnées minutés dans les flux de premier plan et d’arrière-plan.
+1. Créez des écouteurs d’événement pour les événements de métadonnées minutés dans les flux de premier plan et d’arrière-plan.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +40,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Mettez en oeuvre des gestionnaires de événement de métadonnées chronométrés pour les flux de premier plan et d’arrière-plan.
+1. Mettez en oeuvre des gestionnaires d’événements de métadonnées minutés pour les flux de premier plan et d’arrière-plan.
 
    Premier plan :
 
@@ -86,7 +84,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Préparez MediaPlayer pour les pannes d’électricité.
+1. Préparez MediaPlayer pour les pannes de courant.
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 
@@ -157,7 +155,7 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
    }
    ```
 
-1. Créez des méthodes pour changer de contenu le début et la fin de la période d’interruption.
+1. Créez des méthodes pour changer de contenu au début et à la fin de la période de blackout.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
@@ -195,4 +193,3 @@ Pour mettre en oeuvre la gestion des interruptions de service, notamment en four
        } 
    }
    ```
-

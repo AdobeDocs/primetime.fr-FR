@@ -1,48 +1,46 @@
 ---
-description: Pour que le résolveur d’annonces puisse fonctionner, les fournisseurs d’annonces, tels que la prise de décision d’annonces Adobe Primetime, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
+description: Pour que le résolveur de publicités fonctionne, les fournisseurs de publicités, comme Adobe Primetime et la prise de décision, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
 title: Métadonnées d’insertion publicitaire
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 0%
 
 ---
 
+# Métadonnées d’insertion publicitaire {#ad-insertion-metadata}
 
-# Métadonnées d’insertion d’annonce {#ad-insertion-metadata}
+Pour que le résolveur de publicités fonctionne, les fournisseurs de publicités, comme Adobe Primetime et la prise de décision, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
 
-Pour que le résolveur d’annonces puisse fonctionner, les fournisseurs d’annonces, tels que la prise de décision d’annonces Adobe Primetime, ont besoin de valeurs de configuration pour activer votre connexion au fournisseur.
+TVSDK comprend la bibliothèque de prise de décision publicitaire Primetime. Pour que votre contenu inclue de la publicité provenant du serveur de prise de décision publicitaire Primetime, votre application doit fournir les éléments suivants : `AuditudeSettings` information :
 
-TVSDK comprend la bibliothèque de prise de décision publicitaire Primetime. Pour que votre contenu comprenne des publicités provenant du serveur de prise de décision publicitaire Primetime, votre application doit fournir les `AuditudeSettings` informations  requises suivantes :
+* `mediaID`, qui est un identifiant unique de la vidéo à lire.
 
-* `mediaID`, qui est un identifiant unique pour la vidéo à lire.
+  L’éditeur affecte l’identifiant mediaID lors de l’envoi de contenu vidéo et d’informations publicitaires au serveur de prise de décision publicitaire Adobe Primetime. Cet identifiant est utilisé par Primetime ad Decisioning pour récupérer les informations publicitaires associées pour la vidéo du serveur.
 
-   L’éditeur affecte l’ID de média lors de l’envoi de contenu vidéo et d’informations publicitaires au serveur de prise de décision publicitaire Adobe Primetime. Cet identifiant est utilisé par la prise de décision publicitaire Primetime pour récupérer les informations publicitaires associées à la vidéo sur le serveur.
-
-* Votre `zoneID`, qui est attribué par Adobe, identifie votre société ou votre site Web.
-* Domaine du serveur d’annonces affecté.
+* Votre `zoneID`, qui est attribué par Adobe, identifie votre société ou votre site web.
+* Domaine du serveur de publicités affecté.
 * Autres paramètres de ciblage.
 
-   Vous pouvez inclure ces paramètres en fonction de vos besoins et des besoins du fournisseur d’annonces.
+  Vous pouvez inclure ces paramètres en fonction de vos besoins et des besoins du fournisseur d’annonces publicitaires.
 
-## Configurer les métadonnées d&#39;insertion de publicité {#set-up-ad-insertion-metadata}
+## Configuration des métadonnées d’insertion de publicités {#set-up-ad-insertion-metadata}
 
-Utilisez la classe d’assistance AuditudeSettings, qui étend la classe MetadataNode, pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
+Utilisez la classe d’assistance AuditudeSettings , qui étend la classe MetadataNode , pour configurer les métadonnées de prise de décision publicitaire Adobe Primetime.
 
 >[!TIP]
 >
 >La prise de décision publicitaire Adobe Primetime était auparavant connue sous le nom d’Auditude.
 
-Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.metadata`. Lors du démarrage de la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires appropriées.
+Les métadonnées publicitaires se trouvent dans la variable `MediaResource.metadata` . Lorsque vous démarrez la lecture d’une nouvelle vidéo, votre application est chargée de définir les métadonnées publicitaires correctes.
 
-1. Créez l&#39;instance `AuditudeSettings`.
+1. Créez la variable `AuditudeSettings` instance.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings();
    ```
 
-1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domain et Adobe Primetime pour la prise de décision publicitaire.
+1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domaine et Adobe Primetime Ad Decisioning.
 
    ```
    auditudeSettings.zoneId = "yourZoneID"; 
@@ -55,12 +53,12 @@ Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.m
 
    >[!TIP]
    >
-   >L’ID de média est utilisé par TVSDK sous la forme d’une chaîne, convertie en valeur md5, et est utilisé pour la valeur `u` dans la demande d’URL de prise de décision et de Primetime. Par exemple :
+   >L’identifiant du média est utilisé par TVSDK sous forme de chaîne, converti en valeur md5 et utilisé pour la variable `u` dans la requête d’URL de prise de décision publicitaire Primetime. Par exemple :
    >
    >
    >` https://ad.auditude.com/adserver? **u**=c76d04ee31c91c4ce5c8cee41006c97d &z=114100&l=20150206141527&of=1.4&tm=15&g=1000002`
 
-1. Créez une instance `MediaResource` en utilisant l’URL du flux média et les métadonnées publicitaires créées précédemment.
+1. Créez un `MediaResource` en utilisant l’URL du flux multimédia et les métadonnées publicitaires créées précédemment.
 
    ```
    var mediaResourceMetadata:MetadataNode = new MetadataNode(); 
@@ -71,17 +69,17 @@ Les métadonnées publicitaires se trouvent dans la propriété `MediaResource.m
          mediaResourceMetadata);
    ```
 
-1. Chargez l&#39;objet `MediaResource` par l&#39;intermédiaire de la méthode `MediaPlayer.replaceCurrentResource`.
+1. Chargez la variable `MediaResource` via l’objet `MediaPlayer.replaceCurrentResource` .
 
-   Le `MediaPlayer` début le chargement et le traitement du manifeste de flux média.
+   La variable `MediaPlayer` démarre le chargement et le traitement du manifeste de flux multimédia.
 
-1. (Facultatif) Requête l’instance `MediaPlayerItem` pour déterminer si le flux est actif, qu’il comporte des pistes audio de remplacement ou qu’il soit protégé.
+1. (Facultatif) Interrogez le `MediaPlayerItem` pour voir si la diffusion est active, qu’elle dispose de pistes audio alternatives ou si la diffusion est protégée.
 
-   Ces informations peuvent vous aider à préparer l’interface utilisateur à la lecture. Par exemple, si vous savez qu&#39;il y a deux pistes audio, vous pouvez inclure une commande d&#39;interface utilisateur qui bascule entre ces pistes.
+   Ces informations peuvent vous aider à préparer l’interface utilisateur pour la lecture. Par exemple, si vous savez qu’il existe deux pistes audio, vous pouvez inclure une commande de l’interface utilisateur qui bascule entre ces pistes.
 
-1. Appelez `MediaPlayer.prepareToPlay` pour début du processus publicitaire.
+1. Appeler `MediaPlayer.prepareToPlay` pour démarrer le workflow publicitaire.
 
-   Une fois les publicités résolues et placées dans la chronologie, `MediaPlayer` transition à l’état PRÉPARÉ.
-1. Appelez `MediaPlayer.play` pour début de la lecture.
+   Une fois les publicités résolues et placées dans la chronologie, la variable `MediaPlayer` passe à l’état PRÉPARÉ .
+1. Appeler `MediaPlayer.play` pour démarrer la lecture.
 
 TVSDK comprend désormais des publicités lorsque votre média est lu.

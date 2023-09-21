@@ -32,5 +32,5 @@ En bref, le flux de message habituel est le suivant :
 1. Le service de surveillance de la simultanéité renvoie la nouvelle ressource de diffusion pour les pulsations, ainsi que l’activité de l’utilisateur actuelle.
 1. Pendant la lecture vidéo, l’application instrumentée effectue des appels de pulsation au service de surveillance de la simultanéité, indiquant que l’utilisateur consomme actuellement une vidéo.
 1. À tout autre moment, d’autres applications instrumentées peuvent effectuer des appels de requête d’état au service de surveillance de la simultanéité, qui renverra l’activité de l’utilisateur actuel.
-1. Au niveau de la lecture vidéo, l’application instrumentée peut effectuer un appel de pulsation avec &quot;event=stop&quot;, ce qui signifie que la vidéo a été arrêtée et que la diffusion actuelle ne doit plus être comptée comme principale diffusion.
+1. À la fin de la lecture vidéo, l’application instrumentée peut effectuer un appel de pulsation avec &quot;event=stop&quot;, ce qui signifie que la vidéo a été arrêtée et que le flux actuel ne doit plus être compté comme un flux actif.
 

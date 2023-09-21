@@ -1,20 +1,18 @@
 ---
-description: Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-title: Autoriser les utilisateurs à modifier le suivi des légendes
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titres fermé.
+title: Autoriser les utilisateurs à modifier le suivi des sous-titres
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Autoriser les utilisateurs à modifier le suivi des sous-titres {#allow-users-to-change-the-caption-track}
 
-# Autoriser les utilisateurs à modifier le suivi des légendes {#allow-users-to-change-the-caption-track}
+Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titres fermé.
 
-Cette procédure est un exemple de création d’un bouton qui permet à un utilisateur de sélectionner un suivi de sous-titrage fermé.
-
-1. Créez un bouton pour modifier le suivi des sous-titres fermés.
+1. Créez un bouton pour modifier le suivi des sous-titres.
 
    ```xml
    <Button 
@@ -28,9 +26,9 @@ Cette procédure est un exemple de création d’un bouton qui permet à un util
      android:text="CC" /> 
    ```
 
-1. Convertissez la liste des pistes de sous-titrage disponibles en tableau de chaînes.
+1. Convertissez la liste des pistes de sous-titres disponibles en tableau de chaînes.
 
-   Les pistes de sous-titrage fermées qui ont une activité, c’est-à-dire les canaux pour lesquels TVSDK a découvert des données, sont marquées en conséquence.
+   Les suivis de sous-titres fermés qui comportent une activité, c’est-à-dire les canaux pour lesquels TVSDK a découvert des données, sont marqués en conséquence.
 
    ```java
    /** 
@@ -58,7 +56,7 @@ Cette procédure est un exemple de création d’un bouton qui permet à un util
    } 
    ```
 
-1. Lorsque l’utilisateur clique sur le bouton, affiche une boîte de dialogue qui liste toutes les pistes de sous-titrage par défaut.
+1. Lorsque l’utilisateur clique sur le bouton, affichez une boîte de dialogue qui répertorie toutes les opérations de suivi des sous-titres par défaut.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 

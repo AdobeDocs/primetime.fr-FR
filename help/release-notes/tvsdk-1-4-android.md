@@ -1,43 +1,41 @@
 ---
 title: Notes de mise à jour de TVSDK 1.4 pour Android
-description: Les Notes de mise à jour de TVSDK 1.4 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 1.4.
+description: Les notes de mise à jour de TVSDK 1.4 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes d’appareil dans TVSDK Android 1.4.
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7802'
 ht-degree: 0%
 
 ---
 
-
 # Notes de mise à jour de TVSDK 1.4 pour Android {#tvsdk-for-android-release-notes}
 
-Les Notes de mise à jour de TVSDK 1.4 pour Android décrivent ce qui est nouveau ou modifié, les problèmes résolus et connus et les problèmes de périphérique dans TVSDK Android 1.4.
+Les notes de mise à jour de TVSDK 1.4 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes d’appareil dans TVSDK Android 1.4.
 
 ## Nouvelles fonctionnalités {#new-features}
 
 **Version 1.4.43**
 
-**Chargement sécurisé des publicités via HTTPS**
+**Chargement sécurisé des publicités par HTTPS**
 
-Adobe Primetime offre une option permettant de demander un premier appel au serveur d’annonces avant la date limite et au serveur CRS via HTTPS.
+Adobe Primetime offre une option pour demander le premier appel au serveur de publicités primetime et CRS via HTTPS.
 
 **alwaysUseAudioOutputLatency(valeur booléenne) dans la classe MediaPlayer**
 
 Lorsque ce paramètre est défini, utilisez la latence de sortie audio dans le calcul de l’horodatage audio.
 
-Il accepte une valeur de paramètres booléens. Si sa valeur est `True`, le client utilise la latence de sortie audio dans le calcul de l’horodatage audio.
+Il accepte un val de paramètres booléens. Si sa valeur est `True`, le client utilise la latence de sortie audio dans le calcul de l’horodatage audio.
 
 **Version 1.4.42**
 
-**Insertion publicitaire partielle : expérience**
-télévisuelle consistant à se joindre au milieu d’une publicité sans déclencher le suivi pour la publicité partiellement visionnée.
-Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Ceci est 10 secondes après la seconde publicité pendant la coupure.
-* La seconde publicité est lue pour la durée restante (20 s) suivie de la troisième publicité.
-* Les suivis publicitaires pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les suivis de la troisième publicité seulement sont déclenchés.
+**Insertion de coupure publicitaire partielle :**
+Expérience de type télévision consistant à se joindre au milieu d’une publicité sans déclencher le suivi pour la publicité visionnée partiellement.
+Exemple : l’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Cette coupure intervient 10 secondes dans la seconde publicité.
+* La deuxième publicité est lue pendant la durée restante (20 secondes), suivie de la troisième publicité.
+* Les dispositifs de suivi des publicités pour la publicité partielle lue (deuxième publicité) ne sont pas déclenchés. Les dispositifs de suivi de la troisième publicité uniquement sont déclenchés.
 
 **Version 1.4.41**
 
@@ -49,131 +47,131 @@ Aucune nouvelle fonctionnalité.
 
 >[!NOTE]
 >
->Vous n’aurez pas besoin des modifications d’API si vous utilisez une version antérieure à la version 1.4.39.
+>Vous n’aurez pas besoin des modifications de l’API si vous utilisez une version antérieure à 1.4.39.
 
 **Version 1.4.39**
 
 * TVSDK est certifié avec VHL 2.0.1 et avec VHL 2.0.1 avec Nielsen.
-* Android TVSDK est mis à jour afin d’envoyer des requêtes CRS du nouvel hôte Akamai `primetime-a.akamaihd.net`.
-* La nouvelle configuration du nom d’hôte fournit une diffusion de ressources CRS via HTTP et HTTPS (SSL) à plus grande échelle.
+* Android TVSDK est mis à jour pour envoyer des requêtes CRS à partir du nouvel hôte Akamai. `primetime-a.akamaihd.net`.
+* La nouvelle configuration du nom d’hôte permet la diffusion de ressources CRS via HTTP et HTTPS (SSL) à plus grande échelle.
 * TVSDK prend en charge la version Android Oreo.
-* Une nouvelle fonction est ajoutée à la classe `AdClientFactory` pour prendre en charge l&#39;enregistrement de plusieurs détecteurs d&#39;opportunités :
+* Une nouvelle fonction est ajoutée à la fonction `AdClientFactory` pour prendre en charge l’enregistrement de plusieurs détecteurs d’opportunités :
 
-   ```
-   public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-   ```
+  ```
+  public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
+  ```
 
-   Ceci doit renvoyer un tableau de PlacementOpportunityDetector. Vous pouvez désormais enregistrer plusieurs détecteurs d&#39;opportunités. Par exemple, pour la fonctionnalité de sortie anticipée d’une publicité, deux détecteurs d’opportunités étaient requis : un pour l’insertion d’une publicité et un autre pour la sortie anticipée de la publicité. Vous devez implémenter cette nouvelle fonction uniquement si vous avez mis en oeuvre votre propre AdvertisingFactory (et n’utilisez pas DefaultAdvertisingFactory). Pour obtenir le comportement existant, vous devez créer un seul Détecteur d&#39;opportunité, comme dans la fonction createOpportunityDetector() , le placer dans un tableau et le renvoyer :
+  Cela doit renvoyer un tableau de PlacementOpportunityDetector. Vous pouvez désormais enregistrer plusieurs détecteurs d’opportunités. Par exemple, pour la fonction de sortie anticipée de la publicité, deux détecteurs d’opportunités étaient nécessaires : l’un pour l’insertion de publicités et l’autre pour une sortie anticipée de la publicité. Vous devez implémenter cette nouvelle fonction uniquement si vous avez implémenté votre propre AdvertisingFactory (et n’utilisez pas DefaultAdvertisingfactory). Pour obtenir le comportement existant, vous devez créer un seul détecteur d’opportunités, comme dans la fonction createOpportunityDetector() , le placer dans un tableau et le renvoyer :
 
-   ```
-   public class MyAdvertisingFactory extends AdvertisingFactory {  
-   …  
-   @Override  
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
-   return opportunityDetectors;  
-   } }
-   ```
+  ```
+  public class MyAdvertisingFactory extends AdvertisingFactory {  
+  …  
+  @Override  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
+  return opportunityDetectors;  
+  } }
+  ```
 
 >[!NOTE]
 >
->Vous n’aurez pas besoin des modifications d’API si vous utilisez une version antérieure à la version 1.4.39.
+>Vous n’aurez pas besoin des modifications de l’API si vous utilisez une version antérieure à 1.4.39.
 
 **Version 1.4.36**
 
-Correction de bogues pour l’option Ignorer le contenu sous Android.
+Correction de bogue pour le saut de contenu sur Android.
 
 **Version 1.4.35**
 
-* **Informations sur les publicités réseau**
+* **Informations sur la publicité réseau**
 
-   Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’identifiant de publicité, le système d’annonces et les extensions d’annonce VAST sont fournis dans la classe NetworkAdInfo accessible par le biais de la propriété networkAdInfo sur une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plates-formes d’analyses d’annonces, telles que **Analyses de douleurs**.
+  Les API TVSDK fournissent désormais des informations supplémentaires sur les réponses VAST tierces. L’identifiant de publicité, le système d’annonces et les extensions d’annonce VAST sont fournis dans la classe NetworkAdInfo accessible par le biais de la propriété networkAdInfo sur une ressource d’annonce. Ces informations peuvent être utilisées pour l’intégration à d’autres plateformes Ad Analytics telles que **Analyses de cheminement**.
 
 **Version 1.4.31**
 
-**Prise en charge multiCDN pour les annonces CRS**
-* Par défaut, toutes les ressources transcodées sont hébergées sur le réseau de diffusion de contenu détenu par l’Adobe sur Akamai. Avec la dernière version, Adobe Creative Repackaging Service (CRS) permet de télécharger les éléments créatifs transcodés sur plusieurs réseaux de diffusion de contenu selon les spécifications du client.
-* De nouvelles API sont ajoutées à TVSDK pour permettre la spécification de l’URL créative CRS finale lorsque l’URL par défaut n’est pas utilisée. Consultez la documentation pour savoir comment utiliser ces nouvelles API.
+**Prise en charge multi-réseau de diffusion de contenu pour les annonces CRS**
+* Par défaut, toutes les ressources transcodées seront hébergées sur le réseau de diffusion de contenu détenu par l’Adobe sur Akamai. Avec la dernière version, Adobe Creative Repackaging Service (CRS) permet de charger les créatifs transcodés sur plusieurs CDN, comme spécifié par le client.
+* De nouvelles API sont ajoutées à TVSDK pour permettre la spécification de l’URL créative CRS finale lorsque l’URL par défaut n’est pas utilisée. Reportez-vous à la documentation pour savoir comment utiliser ces nouvelles API.
 
-**La version 1.4.18 de**
-Primetime TVSDK Android prend désormais en charge les éléments créatifs JavaScript VPAID 2.0 pour permettre une expérience de publicité interactive enrichie en continu. Pour plus d&#39;informations sur VPAID 2.0, voir [Prise en charge des publicités VPAID](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md).
+**Version 1.4.18**
+Primetime Android TVSDK prend désormais en charge les créatifs JavaScript VPAID 2.0 pour permettre une expérience publicitaire interactive riche en flux continu. Pour plus d’informations sur VPAID 2.0, voir [Prise en charge des publicités VPAID](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md).
 
 **Version 1.4.17**
 
-AC-3 5.1 est uniquement pris en charge sur Amazon FireTV.
+AC-3 5.1 est pris en charge uniquement sur Amazon FireTV.
 
 **Version 1.4.11**
 
-* **Retournement de publicité, chaînement de banqueroute dans la logique de sélection des publicités (Zendesk #3103** Pour les publicités VAST (créatifs) avec la règle de secours activée, TVSDK traite une publicité avec un type MIME non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
+* **Secours de la publicité, formation de Daisy dans la logique de sélection des publicités (Zendesk #3103** Pour les publicités VAST (créatives) avec la règle de secours activée, TVSDK traite une publicité avec un type MIME non valide comme une publicité vide et tente d’utiliser des publicités de secours à sa place. Vous pouvez configurer certains aspects du comportement de secours.
 
-Pour plus d’informations, voir [Reprise publicitaire pour les annonces VAST et VMAP](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md).
+Pour plus d’informations, voir [Reprise de publicité pour les publicités VAST et VMAP](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-fallback/android-3x-ad-fallback.md).
 
-* **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.5**
-   * Capacité d’envoyer des métadonnées avec un début vidéo et/ou un début vidéo/publicitaire/chapitre en tant que données contextuelles
-   * Moins de trafic réseau - Les pulsations sont moins nombreuses en moyenne et de taille plus petite
+* **Mise à jour de la bibliothèque Video Heartbeats (VHL) vers la version 1.5**
+   * Possibilité d’envoyer des métadonnées avec le démarrage de la vidéo et/ou vidéo/ad/chapitre en tant que données contextuelles
+   * Moins de trafic réseau : les pulsations sont moins nombreuses en moyenne et de taille inférieure.
 
 **Version 1.4.7**
 
-* **Prise en** charge de l’individualisation sur sitePrise en charge des installations sur site de l’Adobe Individualization Server pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
+* **Prise en charge de l’individualisation sur site** Prise en charge des installations on-premise du serveur d’individualisation Adobe pour personnaliser la demande d’individualisation du client afin d’accéder à un autre point de terminaison.
 
 **Version 1.4.6**
 
-* **Exemple de chiffrement AES (nécessite la version 17.0.0.134 du Flash Player)**Exemple de chiffrement AES pris en charge.
+* **Exemple de chiffrement AES (nécessite la version 17.0.0.134 du Flash Player) **Le chiffrement AES par exemple est désormais pris en charge.
 
 **Version 1.4.2**
 
-* **Mise à jour de la bibliothèque Video Heartbeats Library (VHL) vers la version 1.4.0.1**
+* **Mise à jour de la bibliothèque Video Heartbeats (VHL) vers la version 1.4.0.1**
 
-   * Ajouté la possibilité de regrouper différents cas d’utilisation des analyses, provenant d’autres kits SDK ou lecteurs, avec Adobe Analytics Video Essentials.
-   * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete. La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete.
+   * Ajout de la possibilité de regrouper différents cas d’utilisation d’analyse, à partir d’autres SDK ou lecteurs, avec les composants vidéo essentiels d’Adobe Analytics.
+   * Le suivi des publicités a été optimisé en supprimant les méthodes trackAdBreakStart et trackAdBreakComplete . La coupure publicitaire est déduite des appels des méthodes trackAdStart et trackAdComplete .
    * La propriété playhead n’est plus nécessaire lors du suivi des publicités.
 
-* **Intégration** du SDK NielsenLe SDK TVSDK prend désormais en charge l’envoi d’informations de suivi d’utilisateur au SDK Nielsen sans intégration personnalisée.
+* **Intégration du SDK Nielsen** TVSDK prend désormais en charge l’envoi d’informations de suivi utilisateur au SDK Nielsen sans intégration personnalisée.
 
 **Version 1.4.0**
 
-* **Signalisation par coupure d&#39;électricité avec remplacement de contenu alternatifDans le cadre de la mise à jour TVSDK 1.4, TVSDK prend également en charge le renvoi et le retour des coupures d&#39;électricité régionales par rapport au contenu linéaire.** TVSDK peut maintenant traiter deux fichiers manifestes en parallèle, principal et alternatif, pour surveiller les signaux d&#39;arrêt même lorsque la programmation alternative est présentée à la programmation originale.
+* **Signalisation par blackout avec remplacement de contenu alternatif** Dans le cadre de la mise à jour de la version 1.4 de TVSDK, TVSDK prend également en charge l’entrée et le retour de pannes régionales de contenu linéaire. TVSDK peut désormais traiter deux fichiers manifestes en parallèle, principal et alternatif, pour surveiller les signaux d’interruption même lorsque des programmes alternatifs sont affichés à la place de la programmation d’origine.
 
-* **Supprimez/Remplacez les** publicités C3. Désormais, aucune préparation supplémentaire n’est nécessaire pour insérer dynamiquement de nouvelles publicités dans les ressources vidéo à la demande (VOD) qui sortent de la fenêtre C3. TVSDK fournit désormais une API permettant de supprimer des plages de contenu personnalisées et d’insérer dynamiquement de nouvelles publicités. Cette nouvelle fonctionnalité puissante est également utile dans les cas où du contenu en direct/linéaire est diffusé pendant la diffusion et est immédiatement retiré pour être utilisé comme contenu à la demande sans le temps nécessaire pour &quot;nettoyer&quot; la ressource.
+* **Supprimer/Remplacer des publicités C3** Désormais, aucun travail de préparation supplémentaire n’est nécessaire pour insérer dynamiquement de nouvelles publicités dans les ressources vidéo à la demande (VOD) qui sortent de la fenêtre C3. TVSDK fournit désormais une API pour supprimer des plages de contenu personnalisées et insérer dynamiquement de nouvelles publicités. Cette nouvelle fonctionnalité puissante est également utile dans les cas où le contenu en direct/linéaire est diffusé pendant la diffusion et est immédiatement retiré pour être utilisé comme contenu à la demande sans temps approprié pour &quot;nettoyer&quot; la ressource.
 
-* L&#39;interface PlaybackEventListener comporte une nouvelle méthode appelée onReplaceMediaPlayerItem, que vous pouvez utiliser pour écouter un nouveau événement, `ITEM_REPLACED`. Ce événement est distribué chaque fois qu’une instance MediaPlayeritem est remplacée sur MediaPlayer. L’application cliente qui implémente ce PlaybackEventListener doit implémenter ou remplacer cette nouvelle méthode.
-* AdClientFactory a une nouvelle fonction ajoutée à la classe pour s&#39;inscrire à plusieurs détecteurs d&#39;opportunités :
+* L’interface PlaybackEventListener comporte une nouvelle méthode appelée onReplaceMediaPlayerItem, que vous pouvez utiliser pour écouter un nouvel événement, `ITEM_REPLACED`. Cet événement est distribué chaque fois qu’une instance MediaPlayeritem est remplacée sur MediaPlayer. L’application cliente implémentant ce PlaybackEventListener doit implémenter ou remplacer cette nouvelle méthode.
+* AdClientFactory comporte une nouvelle fonction ajoutée à la classe pour s’enregistrer pour plusieurs détecteurs d’opportunités :
 
-   ```
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
-   
-   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
-   
-   To override this new function create a single Opportunity Detector, and put into an array and return:
-   
-   @Override
-   
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-   
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
-   
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-   
-   return opportunityDetectors;
-   }
-   
-   }
-   ```
+  ```
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+  
+  For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+  
+  To override this new function create a single Opportunity Detector, and put into an array and return:
+  
+  @Override
+  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+  
+  return opportunityDetectors;
+  }
+  
+  }
+  ```
 
-## Modifications du SDK TVSDK pour la version 1.4 {#tvsdk-changes}
+## Modifications de TVSDK pour la version 1.4 {#tvsdk-changes}
 
-* L’interface PlaybackEventListener comporte une nouvelle méthode appelée onReplaceMediaPlayerItem, que vous pouvez utiliser pour écouter un nouveau événement, ITEM_REPLACED. Ce événement est distribué chaque fois qu’une instance MediaPlayeritem est remplacée sur MediaPlayer. L’application cliente qui implémente ce PlaybackEventListener doit implémenter ou remplacer cette nouvelle méthode.
+* L’interface PlaybackEventListener comporte une nouvelle méthode appelée onReplaceMediaPlayerItem, que vous pouvez utiliser pour écouter un nouvel événement, Item_REPLACED. Cet événement est distribué chaque fois qu’une instance MediaPlayeritem est remplacée sur MediaPlayer. L’application cliente implémentant ce PlaybackEventListener doit implémenter ou remplacer cette nouvelle méthode.
 
-* AdClientFactory a une nouvelle fonction ajoutée à la classe pour s&#39;inscrire à plusieurs détecteurs d&#39;opportunités :
+* AdClientFactory comporte une nouvelle fonction ajoutée à la classe pour s’enregistrer pour plusieurs détecteurs d’opportunités :
 
 ```
 public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
 ```
 
-Par exemple, pour la fonctionnalité de sortie anticipée d’une publicité, vous avez besoin de deux détecteurs d’opportunités : l’un pour l’insertion d’une publicité et l’autre pour la sortie anticipée de la publicité.
+Par exemple, pour la fonctionnalité de sortie anticipée de publicité, vous avez besoin de deux détecteurs d’opportunités : l’un pour l’insertion de publicités et l’autre pour une sortie anticipée de la publicité.
 
-Pour remplacer cette nouvelle fonction, créez un seul Détecteur d&#39;opportunité, puis placez-le dans un tableau et renvoyez :
+Pour remplacer cette nouvelle fonction, créez un seul détecteur d’opportunités, placez-le dans un tableau et renvoyez :
 
 ```
 @Override
@@ -195,77 +193,76 @@ return opportunityDetectors;
 
 >[!NOTE]
 >
->Les fonctionnalités suivantes **ne sont pas** prises en charge dans TVSDK :
+>Les fonctionnalités suivantes sont disponibles : **not** pris en charge dans TVSDK :
 >
->* Mouvement lent, sur n’importe quelle plate-forme ou version.
->* Jeu de ficelles en direct.
-
+>* Déplacement lent, sur n’importe quelle plateforme ou version.
+>* Jouer aux tours en direct.
 
 **Version 1.4.43**
 
-TVSDK 1.4.43 a été certifié avec les périphériques Android dotés d’Android 6.0.1/ 7.0 et 8.1 (Oreo).
+TVSDK 1.4.43 a été certifié avec les périphériques Android possédant Android 6.0.1/7.0 et 8.1 (Oreo).
 
 * **Version 1.4.23 :**
 
-   * TVSDK 1.4.23 a été certifié pour les périphériques Android avec Android N.
+   * TVSDK 1.4.23 a été certifié pour les appareils Android avec Android N.
 
 * **Version 1.4.18 :**
 
    * Primetime a été certifié pour Amazon Fire TV.
-   * VPAID 2.0 est pris en charge uniquement sur les appareils dotés d’Android 4.0 et versions ultérieures.
+   * VPAID 2.0 n’est pris en charge que sur les appareils dotés d’Android 4.0 et versions ultérieures.
 
-## Problèmes résolus dans la version 1.4 {#resolved-issues-in}
+## Problèmes résolus dans 1.4 {#resolved-issues-in}
 
 >[!NOTE]
 >
->Tous les clients TVSDK qui utilisent CRS sont fortement encouragés à effectuer la mise à niveau vers TVSDK 1.4.39 ou version ultérieure sur iOS et Android. Cette mise à niveau remplace la mise en oeuvre de l’application existante. Après la mise à niveau, recherchez les demandes d’URL créatives CRS dans un outil proxy (Charles, par exemple) pour vérifier que la version du chemin d’accès reflète la version 3.1. Par exemple :
+>Tous les clients TVSDK qui utilisent CRS sont fortement encouragés à effectuer la mise à niveau vers TVSDK 1.4.39 ou la version la plus récente sur iOS et Android. Cette mise à niveau est une version complémentaire de la mise en oeuvre de l’application existante. Après la mise à niveau, recherchez les demandes d’URL de création CRS dans un outil de proxy (Charles, par exemple) pour vérifier que la version du chemin d’accès reflète la version 3.1. Par exemple :
 >
 >`https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8`
 
 **Version 1.4.43**
 
-* Billet n° 27143 - Impossible de lire la piste audio 5.1 sur les périphériques FireTV
+* Ticket #27143 - Impossible de lire la piste audio 5.1 sur les appareils FireTV
 
-   * TVSDK est désormais capable de lire du son AC3 sur les appareils FireTV. La lecture est toujours en stéréo.
+   * TVSDK peut désormais lire du son AC3 sur les appareils FireTV. La lecture est toujours en stéréo.
 
-* Billet n° 33902 - Diffusion publicitaire sécurisée via HTTPS
+* Ticket #33902 - Diffusion sécurisée des publicités via HTTPS
 
-   * Adobe Primetime offre une option permettant de demander un premier appel au serveur d’annonces avant la mise en service et au serveur CRS sur https.
+   * Adobe Primetime offre une option pour demander le premier appel au serveur de publicités en temps réel et à CRS sur https.
 
-* Billet n° 34493 - Délai audio Bluetooth
+* Ticket #34493 - Délai audio Bluetooth
 
-   * Ajouté `alwaysUseAudioOutputLatency` dans la classe MediaPlayer qui, lorsqu&#39;il est défini, entraînera l&#39;utilisation de la latence de sortie audio dans le calcul de l&#39;horodatage audio.
+   * Ajout `alwaysUseAudioOutputLatency` dans la classe MediaPlayer qui, lorsqu’elle est définie, entraîne l’utilisation de la latence de sortie audio dans le calcul de l’horodatage audio.
 
-* Billet n° 34949 - Nouvelle version de la bibliothèque Video Heartbeat (VHL) intégrée.
+* Ticket #34949 - Nouvelle version de la bibliothèque Video Heartbeat (VHL) intégrée.
 
 **Version 1.4.42 (1791)**
 
-* Zendesk #33719 : Le débit adaptatif de FireTV 4k évolue lentement. Prise en charge Ajoutée d’ABR pour les périphériques FireTV 4K.
-* Zendesk #33338 :  resetDRM efface toutes les données de l’application.  Traitement d’un cas supplémentaire lorsque des exceptions dans des threads non TVSDK entraînaient le remplissage des files d’attente d’opération TVSDK.
+* Zendesk #33719 : FireTV 4k Le débit adaptatif évolue lentement. Ajout de la prise en charge d’ABR pour les appareils FireTV 4K.
+* Zendesk #33338 : resetDRM efface toutes les données de l’application.  Traitement de la casse supplémentaire lorsque des exceptions dans des threads non TVSDK provoquaient le remplissage des files d’attente d’opération TVSDK.
 
 **Version 1.4.41 (1776)**
 
-* Zendesk #33002 - Companion asset data from TVSDK on Fire TV. Mise en oeuvre d’une nouvelle classe AdBannerAsset qui renverra les données Companion sous la forme Liste &lt;AdBannerAsset> et AdAsset::id est désormais une chaîne plutôt que longue.
-* Zendesk #32821 - Le lecteur Android Primetime se fige lorsqu’il rencontre un horodatage de présentation (PTS) pour WWE. Ce problème a été corrigé dans cette version.
-* Zendesk #33572 - Crash du Début publicitaire VideoAnalyticsProvider. L’utilisation de la bonne combinaison de la version commune du SDK VHL+Nielsen de VideoHeartbeat.jar a résolu ce problème.
-* Zendesk #33355 - Fire TV : Revenez à 15 secondes de publication. Aucun correctif du client et du côté TVSDK ne vérifie cette information à leur niveau de fin et tiers.
+* Zendesk #33002 - Companion asset data from TVSDK sur Fire TV. Mise en oeuvre d’une nouvelle classe AdBannerAsset qui renverra les données d’accompagnement sous forme de liste &lt;adbannerasset> et AdAsset::id est désormais une chaîne au lieu d’une chaîne longue.
+* Zendesk #32821 - Le lecteur Android Primetime se fige lorsqu’il rencontre l’horodatage de présentation (PTS) pour la guerre. Ce problème a été corrigé dans cette version.
+* Zendesk #33572 - Blocage de démarrage de la publicité VideoAnalyticsProvider. L’utilisation de la bonne combinaison de la version du SDK commun VHL+Nielsen de VideoHeartbeat.jar a résolu ce problème.
+* Zendesk #33355 - Fire TV : Retour à 15 secondes numéro. Aucun correctif du côté TVSDK et du client ne le vérifie à leur niveau de fin et tiers.
 
 **Version 1.4.40 (1764)**
 
-* Zendesk #33068 - Problème de synchronisation de lèvres en Amazon sur le nouvel appareil. Le problème de synchronisation des lèvres a été corrigé dans ces versions.
-* Zendesk #32215 - Android TVSDK 1.4.38 Problèmes de sécurité `[Hotlist]`. Mise à jour vers les dernières versions d’OpenSSL-1.1.0 et de curl-7.5.1.
-* Zendesk #32920 - Ecran vierge au sein d’une coupure publicitaire et sans fin de coupure publicitaire. Correction d’un problème en raison duquel un conteneur VPAID pouvait se retrouver dans un état figé et où les publicités Facebook VPAID renvoyaient souvent plusieurs blocs CDATA dans un \&amp;lt;AdParameters\&amp;gt ; Noeud VAST.
+* Zendesk #33068 - Problème de synchronisation en forme Amazon sur le nouvel appareil. Le problème de synchronisation des lèvres a été corrigé dans cette version.
+* Zendesk #32215 - Problèmes de sécurité d’Android TVSDK 1.4.38 `[Hotlist]`. Mise à jour vers les dernières versions d’OpenSSL-1.1.0 et de curl-7.55.1.
+* Zendesk #32920 : écran vierge dans une coupure publicitaire et fin de la coupure publicitaire. Correction d’un problème en raison duquel un conteneur VPAID pouvait se trouver dans un état vide et entraînait le renvoi fréquent de plusieurs blocs CDATA dans un seul noeud \&amp;lt;AdParameters\&amp;gt; VAST.
 
 **Version 1.4.39 (1744)**
 
-* Zendesk #28976 - La demande de licence prend plus d&#39;une seconde. Tandis que les appels de demande de licence DRM qui utilisent le POST sont en cours d&#39;exécution, Curl ajoute &quot;Attendez : En-tête &quot;100-continue&quot;. Suppression de l’en-tête &quot;Expect:&quot; dans TVSDK.
-* Zendesk n° 27707 - environnements de l’ISAC qui ne respectent pas les marqueurs CUE IN pour un retour anticipé ou un retour au contenu. Fourniture d&#39;un soutien à plusieurs générateurs d&#39;opportunités.
+* Zendesk #28976 - La demande de licence dure plus d&#39;une seconde. Tandis que les appels de demande de licence DRM utilisant POST sont en cours d’exécution, Curl ajoute un en-tête supplémentaire &quot;Expect: 100-continue&quot;. Suppression de l’en-tête &quot;Expect:&quot; dans TVSDK .
+* Zendesk #27707 - Les environnements CSAI ne respectent pas les CUE DANS les marqueurs pour un retour ou un retour au contenu anticipé. Prise en charge de plusieurs générateurs d’opportunités.
 
 **Version 1.4.38 (1722)**
 
-* Zendesk n° 21590 - Performances vidéo et suivi dans les derniers Origines
+* Zendesk #21590 - Performance vidéo et suivi dans les derniers builds d’origine
 
-Intégration et certification de VHL 2.0 dans TVSDK afin de réduire les obstacles dans la mise en oeuvre de VideoHeartbeatsLibrary en réduisant la complexité des API.
+Intégration et certification de VHL 2.0 dans TVSDK pour réduire la barrière de mise en oeuvre de VideoHeartbeatsLibrary en réduisant la complexité des API.
 
 * Zendesk #29688 - Prise en charge des clients Android O Beta.
 
@@ -273,604 +270,544 @@ Prise en charge de TVSDK pour la nouvelle version bêta d’Android.
 
 **Version 1.4.36 (1713)**
 
-* Zendesk #27392 - Ignorer le contenu sur Android
+* Zendesk #27392 - Saut de contenu sur Android
 
-Pour faciliter le déchiffrement, le TVSDK Android élargissait incorrectement la plage d’octets du contenu non iframe de 16 octets. L’élargissement est nécessaire pour les flux Iframe, mais pas pour les flux non iframe.
+Pour s’adapter au décryptage, le TVSDK Android élargissait incorrectement la plage d’octets du contenu non iframe de 16 octets. L’élargissement est nécessaire pour les flux Iframe, mais pas pour les flux non iframe.
 
 **Version 1.4.34 (1702)**
 
-* Zendesk #27638 - Fuite dans l’objet INet cURL
+* Zendesk #27638 - Fuite dans l’objet cURL INet
 
-L’objet INet cURL Posix fuyait tout en conservant le gestionnaire de partage et le cache DNS utilisé dans les connexions cURL.
+L’objet Posix cURL inet fuyait tout en conservant le gestionnaire de partage et le cache DNS utilisé dans les connexions cURL.
 
-Ce problème a été résolu en supprimant l’objet INet cURL Posix du déconstructeur INet.
+Ce problème a été résolu en supprimant l’objet Posix cURL INet du déconstructeur INet .
 
 **Version 1.4.33 (1694)**
 
 * **Bibliothèque OpenSSL**
 
-La bibliothèque OpenSSL a été mise à jour avec la version 1.0.2j d&#39;OpenSSL.
+La bibliothèque OpenSSL a été mise à jour avec la version 1.0.2j d’OpenSSL.
 
-* Zendesk #21701 - Envoyez l’URL de création originale pour la demande CRS 1401 au lieu de l’URL normalisée.
-Ce problème est résolu en envoyant les URL créatives d’origine.
+* Zendesk #21701 - Envoyez l’URL de création d’origine pour la demande CRS 1401 au lieu de l’URL normalisée.
+Ce problème est résolu en envoyant les URL de création d’origine.
 
-* Zendesk #25023 - Lecture vidéo de longue durée : gel des vidéos, scintillements d’écran
-Ce problème a été résolu en définissant le nombre maximal de dimensions de format vidéo pour les périphériques décodeurs CenturyLink.
+* Zendesk #25023 - Lecture vidéo de longue durée : gel de la vidéo, scintillement de l’écran Ce problème a été résolu en définissant le nombre maximal de dimensions de format vidéo pour les périphériques de la boîte de dialogue CenturyLink.
 
-* Zendesk #27460 - Le nouveau compte Akamai ne peut pas gérer une demande de cdn POST.
-Le code a été mis à jour pour que la demande d&#39;annonce `cdn.auditude.com` soit GET et non POST.
+* Zendesk #27460 - Le nouveau compte Akamai ne peut pas gérer une demande de réseau de diffusion de contenu de POST.
+Le code a été mis à jour pour que la variable `cdn.auditude.com` demande d’annonce à GET au lieu de POST.
 
-* Zendesk #28245 - L’état de lecture n’est pas averti correctement lorsque l’application passe de l’arrière-plan au premier plan.
-Ce problème a été résolu en restaurant correctement l’état de lecture pour qu’il soit lu ou mis en pause lorsque l’application revient au premier plan.
+* Zendesk #28245 - L’état de lecture n’est pas averti correctement lorsque l’application passe d’arrière-plan au premier plan. Ce problème a été résolu en restaurant correctement l’état de lecture à lire ou à suspendre lorsque l’application revient au premier plan.
 
 **Version 1.4.32 (1682)**
 
-* Zendesk #25779 - Vulnérabilité de sécurité détectée avec TVSDK
-Android 4.2 et versions ultérieures présente une vulnérabilité de sécurité lorsque JavaScript est activé dans WebView. L’utilisation de WebView par TVSDK a été désactivée pour les périphériques exécutant OS 4.2 ou version ultérieure. Ceci désactive l’utilisation de publicités VPAID dans TVSDK sur ces périphériques.
+* Zendesk #25779 - La vulnérabilité de sécurité détectée avec TVSDK Android 4.2 et versions antérieures présente une vulnérabilité de sécurité lorsque JavaScript est activé dans une vue WebView. L’utilisation de WebView par TVSDK a été désactivée pour les appareils exécutant OS 4.2 ou version inférieure. Cela désactive l’utilisation des publicités VPAID dans TVSDK sur ces périphériques.
 
-* Zendesk #26890 - Problème dans l’état ÉCRAN (Activé/Désactivé) avec gestion de la référence. Player
-Lorsque le moteur de vidéo d’Adobe (AVE) reprend à partir d’un état SUSPENDU, DefaultMediaPlayer ne met pas à jour son état. Par conséquent, DefaultMediaPlayer reste à l’état SUSPENDU même si l’AVE est à l’état LECTURE. Ce problème a été résolu en définissant l&#39;état DefaultMediaPlayer sur PLAYING lors de la réception d&#39;un état PLAY à partir de l&#39;AVE, même si l&#39;état actuel de DefaultMediaPlayer est SUSPENDU.
+* Zendesk #26890 - Problème dans l’état ÉCRAN (ON/OFF) lors de la gestion de la référence. Lecteur Lorsque le moteur vidéo d’Adobe (AVE) reprend à partir d’un état SUSPENDU, DefaultMediaPlayer ne met pas à jour son état. Par conséquent, DefaultMediaPlayer reste à l’état SUSPENDU même si l’AVE est à l’état LECTURE. Ce problème a été résolu en définissant l’état DefaultMediaPlayer sur LECTURE lors de la réception d’un état LECTURE à partir de l’AVE, même si l’état actuel de DefaultMediaPlayer est SUSPENDU.
 
 **Version 1.4.31 (1675)**
 
-* Zendesk #21974 - Exceptions en raison d’objets nuls
-   * AdIndex est rarement incrémenté lorsque la valeur est nulle. Cela peut être dû à des appels d’API incorrects reçus pour adBreak preroll. Correction des types de données pour éviter de telles exceptions
+* Zendesk #21974 - Exceptions dues à des objets nuls
+   * AdIndex est rarement incrémenté lorsque la valeur est nulle. Cela peut être dû à des appels d’API incorrects reçus pour adBreak preroll. Correction des types de données pour éviter de telles exceptions.
 
-* Zendesk #24714 - Désactivez la journalisation superflue.
-   * Mise à jour de TVSDK pour désactiver la journalisation superflue
+* Zendesk #24714 - Désactivez la journalisation superflue
+   * Mise à jour du TVSDK pour désactiver la journalisation superflue
 
-* Zendesk #24488 - AV Sync issues on Fire TV
-   * Correction en améliorant la gestion des threads de décodeur AV. En particulier, chaque fois que les files d’attente de cadres d’entrée ou de sortie sont modifiées, le thread de décodeur spécifique au type de contenu du cadre est exécuté.
+* Zendesk #24488 - Problèmes de synchronisation A/V sur Fire TV
+   * Corrigé en améliorant la gestion des threads de décodage A/V. Plus précisément, lorsque les files d’attente d’entrée ou de sortie sont modifiées, le thread de décodage spécifique au type de contenu du cadre est exécuté.
 
-* Zendesk #26551 - Réparer les défaillances du CRS
-   * Lorsque la requête est HEAD (http head), il n’est pas nécessaire de lire le contenu car il est vide. Bien qu&#39;il soit possible de le lire, l&#39;ancien Android (4.0.x) se bloque pendant que nous appelons read() et les Android plus récents renvoient la valeur correcte (-1) lorsque nous appelons read(). En fonction de cela, le code a été remplacé par ne pas lire le contenu pour &quot;head&quot;.
+* Zendesk #26551 - Réparer les échecs CRS
+   * Lorsque la requête est HEAD (en-tête http), il n’est pas nécessaire de lire le contenu, car il est vide. Bien qu’il soit possible de le lire, l’ancien Android (4.0.x) se bloque pendant que nous appelons read() et la valeur correcte renvoyée par Android plus récente (-1) lors de l’appel read(). En fonction de cela, le code a été remplacé par ne pas lire le contenu pour &quot;head&quot;.
 
-* Exception de pointeur nul Zendesk #26696 lors de l’accès à TrickPlayManager
-   * Correction en vérifiant si l&#39;objet TrickPlayManager n&#39;est pas nul avant de l&#39;utiliser.
+* Zendesk #26696 Null Pointer Exception lors de l’accès à TrickPlayManager
+   * Corrigé en vérifiant si l’objet TrickPlayManager n’est pas nul avant de l’utiliser.
 
 **Version 1.4.30 (1659)**
 
-* Zendesk #22675 La durée des ressources n’est pas mise à jour pour les flux en direct/linéaires.
-Ce problème a été résolu en fournissant une nouvelle API, assetDuration, dans PTVideoAnalyticsTrackingMetadata qui fournit la durée des ressources pour les flux en direct et linéaires.
+* Zendesk #22675 La durée des ressources n’est pas mise à jour pour les flux en direct/linéaire Ce problème a été résolu en fournissant une nouvelle API, assetDuration, dans PTVideoAnalyticsTrackingMetadata qui fournit la durée des ressources pour les flux en direct et linéaire.
 
-* Zendesk #25853 Fuite de mémoire dans TVSDK lors du changement de canal
-Le problème de fuite d&#39;un tampon de lecture de fichier lors de la réinitialisation ou de la libération de MediaPlayer lors du téléchargement d&#39;un fichier a été résolu.
+* Zendesk #25853 Fuite de mémoire dans TVSDK lors du changement de canaux Le problème de fuite de mémoire tampon de lecture de fichier lorsqu’un lecteur multimédia est réinitialisé ou publié lors du téléchargement d’un fichier a été résolu.
 
 **Version 1.4.29 (1653)**
 
-* Zendesk #21200 - Le lecteur ne récupère pas de l&#39;état suspendu lorsque l&#39;application se trouvait en arrière-plan.
-Lorsque le lecteur a été suspendu après que le commutateur de diffusion ait été signalé, la résolution permet au lecteur d&#39;exécuter le commutateur de diffusion lors de la restauration du lecteur à partir de l&#39;état de suspension, au lieu de restaurer sa position précédente.
+* Zendesk #21200 - Le lecteur ne récupère pas de l’état suspendu lorsque l’application était en arrière-plan. Lorsque le lecteur a été suspendu après que le commutateur de diffusion a été signalé, la résolution permet au lecteur d’exécuter le commutateur de diffusion lors de la restauration du lecteur à partir de l’état de suspension, au lieu de restaurer la position précédente.
 
-* Zendesk #23412 - Le lecteur est coincé avec une zone noire si vous cliquez sur n’importe quelle publicité dans les 3 dernières années de la coupure publicitaire.
-Ce problème est le même que celui de Zendesk #21200.
+* Zendesk #23412 - Le lecteur est bloqué avec une boîte noire si vous cliquez sur n’importe quelle publicité dans les 3 derniers jours de la coupure publicitaire. Ce problème est le même que Zendesk #21200.
 
-* Zendesk #23616 - Les coupures publicitaires ignorées cherchent trop loin dans le futur.
-Selon le type d’insertion de la publicité (insertion/remplacement), TVSDK détermine si la durée de la publicité est utilisée dans le calcul pour déterminer le point de terminaison de la coupure publicitaire.
+* Zendesk #23616 - La coupure publicitaire ignorée recherche trop loin dans le futur Selon le type d’insertion de publicité (insertion/remplacement), TVSDK détermine si la durée de publicité est utilisée dans le calcul pour déterminer le point de fin de coupure publicitaire.
 
-* Zendesk #25078 - Fuite de mémoire DRM TVSDK sur Android TV STB
-La fuite de mémoire de l&#39;objet adaptateur DRM a été localisée et corrigée.
+* Zendesk #25078 - Fuite de mémoire TVSDK DRM sur Android TV STB La fuite de mémoire pour l’objet adaptateur DRM a été localisée et corrigée.
 
-* Zendesk #25067 - Blocage dans VideoEngineTimeline
-Cela se produit parce que les objets n&#39;ont pas été correctement nettoyés et que des événements ont été appelés après la destruction des objets. Le problème a été résolu en ajoutant des vérifications pour empêcher les exceptions nulles.
+* Zendesk #25067 - Blocage dans VideoEngineTimeline Cela se produit parce que les objets n’ont pas été nettoyés correctement et que des événements ont été appelés après la destruction des objets. Le problème a été résolu en ajoutant des vérifications pour empêcher les exceptions nulles.
 
-* Zendesk #25352 - Définition d’un en-tête HTTP personnalisé
-Ce problème a été résolu en ajoutant un nouvel en-tête personnalisé à la liste autorisée sur TVSDK.
+* Zendesk #25352 - Set custom HTTP header Ce problème a été résolu en ajoutant un nouvel en-tête personnalisé à la liste autorisée sur TVSDK.
 
-* Zendesk n° 25617 - Survol PTS en flux continu en direct provoquant une discontinuité du lecteur et un blocage de la mémoire
-Ce problème a été résolu en ajoutant une gestion de roulement PTS dans FragmentedHTTPStreamer lorsqu’un roulement survient au milieu d’un segment.
+* Zendesk #25617 - Rollover PTS de diffusion en direct provoquant une discontinuité du lecteur et un blocage de la mémoire Ce problème a été résolu en ajoutant une gestion de survol PTS dans FragmentedHTTPStreamer lorsqu’un survol se produit au milieu d’un segment.
 
 **Version 1.4.28 (1637)**
 
-* Zendesk #23618 - événements de coupures publicitaires déclenchés avant la consultation de la politique publicitaire
-Ce problème a été résolu en ne déclenchant pas les événements AD_BREAK_DÉBUT et AD_DÉBUT lorsque la publicité est ignorée en raison d’adFordon. Le événement AD_BREAK_SKIPPED est envoyé à la place.
+* Zendesk #23618 - Événements de coupure publicitaire déclenchés avant la consultation de la politique publicitaire Ce problème a été résolu en ne déclenchant pas les événements AD_BREAK_START et AD_START lorsque la publicité est sautée en raison de adFordon. L’événement AD_BREAK_SKIPPED est envoyé à la place.
 
 **Version 1.4.27 (1631)**
 
-* Zendesk #23174 - Problème de performances lors du redimensionnement de la vidéo
-Ce problème a été résolu en fournissant une nouvelle API, MediaPlayerView.setSurfaceFixedSize, qui permet à TVSDK d’accéder à SurfaceHolder.setFixedSize() à partir de MediaPlayerView.
+* Zendesk #23174 - Problème de performance lors du redimensionnement de la vidéo Ce problème a été résolu en fournissant une nouvelle API, MediaPlayerView.setSurfaceFixedSize, qui permet à TVSDK d’accéder à SurfaceHolder.setFixedSize() à partir de MediaPlayerView.
 
-* Zendesk #24450 - TVSDK effectue des duplicata et des demandes
-Ce problème survenait lorsque le temps écoulé était converti en long et non en doublon, et que ce problème avait été corrigé.
+* Zendesk #24450 - TVSDK effectue des requêtes de publicité en double Ce problème se produisait lorsque le temps écoulé était converti en long et non pas en double, et ce problème a été corrigé.
 
 **Version 1.4.26 (1627)**
 
 * Zendesk #21436 - Mise à jour de la bibliothèque OpenSSL vers la version 1.0.2h Mise à jour de la bibliothèque OpenSSL vers OpenSSL version 1.0.2h
-* Zendesk #23825 - Les cookies ne sont pas inclus dans les rappels Corrigés en fournissant la prise en charge des cookies android.
+* Zendesk #23825 - Les cookies ne sont pas inclus dans les rappels corrigés en fournissant la prise en charge des cookies android.
 
 **Version 1.4.25 (1620)**
 
-* Zendesk #22900 - Le flux DRM Adobe Primetime en direct n’est pas lu sur le lecteur de référence Android.
-Le problème d&#39;allocation de mémoire a été résolu.
-* Zendesk #23176 - L&#39;application se bloque lorsqu&#39;elle tente de lire des publicités VPAID
-Le blocage s&#39;est produit car l&#39;application ne crée pas de vue publicitaire personnalisée pour générer une publicité VPAID. Ce problème a été résolu en ignorant les publicités VPAID dans la réponse du serveur d’annonces lorsqu’il n’existe aucune vue d’annonces personnalisée.
+* Zendesk #22900 - Live Adobe Primetime DRM stream n’est pas lu sur le lecteur de référence Android Le problème d’allocation de mémoire a été corrigé.
+* Zendesk #23176 - L’application se bloque lorsqu’elle tente de lire des publicités VPAID Le blocage s’est produit car l’application ne crée pas d’affichage d’annonce personnalisé pour effectuer le rendu d’une publicité VPAID. Ce problème a été résolu en ignorant les publicités VPAID dans la réponse du serveur d’annonces lorsqu’il n’y a pas d’affichage d’annonces personnalisé.
 
-* Zendesk #23153 - SampleAES DRM Stream - Playback stalling in the TVSDK Reference Player (blocage de lecture dans le lecteur de référence TVSDK)
-Ce problème est le même que Zendesk #22900.
+* Zendesk #23153 - SampleAES DRM Stream - Playback stalling dans le lecteur de référence TVSDK Ce problème est identique à Zendesk #22900.
 
 **Version 1.4.24 (1612)**
 
-* Zendesk #20784 - Analytics : Déclenchement du contenu terminé pour les transitions de vidéo en direct
-Ce problème a été résolu en ajoutant une API (trackVideoComplete) afin de déclencher manuellement la fin du contenu au cours d’une session de suivi vidéo linéaire/en direct.
+* Zendesk #20784 - Analytics : Déclenchement du contenu terminé pour les transitions vidéo en direct Ce problème a été résolu en ajoutant une API (trackVideoComplete) pour déclencher manuellement la fin du contenu lors d’une session de suivi vidéo en direct/linéaire.
 
-* Blocage du journal du moteur vidéo Zendesk #21977 lors de l’opération placeAdBreak/acceptAd
+* Zendesk #21977 Blocage de VideoEngineTimeline lors de l’opération placeAdBreak/acceptAd
    * Dans ce numéro, les bibliothèques suivantes ont été mises à jour :
       * Bibliothèque AdobeMobile vers la version 4.10.0
       * Bibliothèque VHL vers la version 1.5.6
-      * Bibliothèque VHL-Nielsen à la version 1.6.7
+      * Bibliothèque VHL-Nielsen vers la version 1.6.7
 
-Ce problème a été résolu en ajoutant une vérification nulle avant d&#39;ajouter des publicités à la liste publicitaire acceptée.
+Ce problème a été résolu en ajoutant une vérification nulle avant d’ajouter des publicités à la liste des publicités acceptées.
 
-* Zendesk #22313 Le débit des STB avec chipset Amilogic ne dépasse pas 1,2 M
-Ce problème a été résolu en préchargeant les fonctionnalités du codec multimédia et en désactivant le commutateur transparent pour les chipsets Amilogic.
+* Zendesk #22313 Le débit pour les STB avec le jeu de puces Amilogic ne va pas au-delà de 1.2M Ce problème a été résolu en préchargeant les fonctionnalités du codec multimédia et en désactivant le commutateur transparent pour les chipset Amilogic.
 
-* Zendesk #19520 Exemple de fichier AES HLS non lu dans les lecteurs TVSDK
-Ce problème a été résolu en gérant plusieurs descripteurs PMT pour les flux HLS chiffrés Sample AES.
+* Zendesk #19520 Exemple de ressource AES HLS non lu dans les lecteurs TVSDK Ce problème a été résolu en gérant plusieurs descripteurs PMT pour les diffusions HLS chiffrées Sample AES.
 
 **Version 1.4.23 (1602)**
 
-* Zendesk #18852 - Mettre à jour la logique de sélection créative en fonction des règles CRS
-Ce problème a été résolu en ajoutant un fichier de configuration JSON pour spécifier la priorité de sélection créative.
+* Zendesk #18852 - Mise à jour de la logique de sélection créative en fonction des règles CRS Ce problème a été résolu en ajoutant un fichier de configuration JSON pour spécifier la priorité de sélection créative.
 
-* Zendesk #20861 - Android N
-Cette version prend en charge Android N en supprimant la possibilité d’utiliser directement les bibliothèques natives de la plate-forme Android qui ne sont plus accessibles aux applications s’exécutant sur Android N.
+* Zendesk #20861 - Android N Cette version prend en charge Android N en supprimant la possibilité d’utiliser directement les bibliothèques natives de la plateforme Android qui ne sont plus accessibles aux applications s’exécutant sur Android N.
 
-* Zendesk #21018 - Android N crash
-Même résolution que ZD# 20861.
+* Zendesk #21018 - Blocage Android N Même résolution que ZD# 20861.
 
-* Zendesk #21266 - VideoEngineAdapter se bloque sur une erreur Invalid_Key
-L&#39;erreur Invalid_Key n&#39;inclut pas de description d&#39;AVE. L&#39;analyse du texte a donc abouti à NPE. Le problème a été résolu en ajoutant une vérification nulle pour la description pendant onError avant d&#39;analyser la description.
+* Zendesk #21266 - VideoEngineAdapter se bloque sur une erreur Invalid_Key L’erreur Invalid_Key n’inclut pas de description de AVE. L’analyse du texte a donc abouti à NPE. Le problème a été résolu en ajoutant une vérification null pour la description pendant onError avant d’analyser la description.
 
-* Zendesk #22286 - La bibliothèque native alloue de la mémoire à la lecture de clés/fragments provoquant un blocage
-Ce blocage qui se produisait sur Android lors d&#39;une tentative de chargement simultané d&#39;un manifeste avec plusieurs clés a été corrigé.
+* Zendesk #22286 - La bibliothèque native alloue la clé/le fragment de lecture de mémoire provoquant un blocage Ce blocage qui s’est produit sur Android lors de la tentative de chargement d’un manifeste avec plusieurs clés simultanément a été corrigé.
 
 **Version 1.4.22 (1581)**
 
-* Zendesk #17236 - Temps de lecture non fiable pour les vidéos HLS avec DRM
-Le saut de temps avec les flux LBA, où l’heure de début du segment audio ne correspond pas à l’heure de début du segment vidéo, a été corrigé.
+* Zendesk #17236 - Heure de début de lecture non fiable pour les vidéos HLS avec DRM Le saut de temps avec les flux LBA, où l’heure de début du segment audio ne correspond pas à l’heure de début du segment vidéo, a été corrigé.
 
-* Zendesk #17680 - La lecture vidéo se fige sur la zone Selevision Andredo
-Le décodeur vidéo de ce périphérique renvoie parfois un saut de temps de sortie important lors de la mise en file d’attente d’une image vidéo du tampon de sortie, et cet horodatage de sortie reste élevé. Ce problème a été résolu en renvoyant une erreur *profil vidéo non prise en charge* qui ne force pas le lecteur à essayer de nouveau le même profil ou à choisir un autre profil.
+* Zendesk #17680 - La lecture vidéo se bloque sur la boîte Selevision Andredo Le décodeur vidéo de cet appareil renvoie parfois un saut de temps de sortie important lors de la suppression de l’image vidéo du tampon de sortie, et cet horodatage de sortie reste élevé. Ce problème a été résolu en renvoyant une *profil vidéo non pris en charge* qui ne force pas le lecteur à réessayer le même profil ou à choisir un autre profil.
 
-* Zendesk #19074 - Gel vidéo pendant les jeux de ficelles FFWD et REW
-Ce problème a été résolu en ajoutant un nouvel avertissement TRICKPLAY_ENDED_DUE_TO_ERROR afin d’informer l’application que le trickplay s’est arrêté et que la vidéo a été suspendue en raison d’une erreur irrécupérable.
+* Zendesk #19074 - gel des vidéos pendant FFWD et REW trick play Ce problème a été résolu en ajoutant un nouvel avertissement TRICKPLAY_ENDED_DUE_TO_ERROR pour informer l’application que le trickplay a été quitté et que la vidéo a été mise en pause en raison d’une erreur irrécupérable.
 
-* Zendesk #19574 - TVSDK ne renvoie pas de données de réponse M3U8 pour le contenu DRM ou non DRM.
-Ce problème a été résolu de la manière suivante :
+* Zendesk #19574 - TVSDK ne renvoie pas de données de réponse M3U8 pour le contenu DRM ou non DRM Ce problème a été résolu de la manière suivante :
 
 * Zendesk #19986 - Comportement OP rompu pour certains appareils comme Android TV
-* Ajouter une erreur FILE_NOT_FOUND à la condition.
-* Lorsque l&#39;erreur provient d&#39;une erreur *fichier introuvable*, séparant l&#39;URL et la réponse de la description de l&#39;erreur si la réponse est disponible.
-L&#39;erreur logique qui a été introduite par la prise en charge de NVidia shield OP a été corrigée. Sur les périphériques de protection non NVidia, faites confiance aux indicateurs d&#39;affichage sécurisés même si le type d&#39;affichage est inconnu.
+* Ajout d’une erreur FILE_NOT_FOUND à la condition.
+* Lorsque l’erreur provient d’une *fichier introuvable* en séparant l’URL et la réponse de la description de l’erreur si la réponse est disponible.
+L’erreur logique introduite par la prise en charge d’OP par le bouclier NVidia a été corrigée. Sur les périphériques de protection non NVidia, faites confiance aux indicateurs sécurisés de l’affichage même lorsque le type d’affichage est inconnu.
 
-* Zendesk #20549 - Gestion des listes de lecture obsolètes. Ce problème a été résolu en réduisant l&#39;intervalle entre la mise à jour du manifeste en direct à la moitié de la durée prévue du segment, si la récupération précédente ne reçoit pas de nouveaux segments.
+* Zendesk #20549 - Manipulation de listes de lecture périmées. Ce problème a été résolu en réduisant l’intervalle entre la mise à jour du manifeste en direct à la moitié de la durée attendue du segment, si la récupération précédente ne reçoit pas de nouveaux segments.
 
-* Zendesk #20742 - L&#39;utilisation de la mémoire semble continuer à augmenter lors de la lecture de contenu en direct sur FireTV. Le blocage est causé par la table de référence d&#39;objet JNI qui a atteint la limite. Ce problème a été résolu en supprimant la référence à l’objet MediaFormat qui a été créé lors du redémarrage du décodeur.
+* Zendesk #20742 - L’utilisation de la mémoire semble continuer à augmenter lors de la lecture de contenu en direct sur FireTV. Le blocage est dû à la table de référence d’objet JNI qui a atteint la limite. Ce problème a été résolu en supprimant la référence à l’objet MediaFormat créé lors du redémarrage du décodeur.
 
-* Zendesk #21125 - Retour d’une coupure publicitaire linéaire/en direct tôt (CSAI). Ajouté une fonction permettant au lecteur de revenir au contenu principal pendant une coupure publicitaire si le lecteur enregistre la scission dans les signaux publicitaires en utilisant le scintillement dans le détecteur d&#39;opportunités.
+* Zendesk #21125 - Revenez de la coupure publicitaire linéaire/en direct tôt (CSAI). Ajout d’une fonctionnalité qui permet au lecteur de revenir au contenu principal au cours d’une coupure publicitaire si le lecteur enregistre la scission dans les signaux publicitaires à l’aide du détecteur d’opportunités scission.
 
-* Zendesk #21334 - Valeur du délai d’expiration de la demande d’annonce TVSDK pour les demandes d’annonce tierces. Un paramètre adRequestTimeout a été ajouté à AdvertisingMetadata afin d’activer un délai d’attente global pour l’appel de publicité.
+* Zendesk #21334 - valeur du délai d’expiration de la demande d’annonce TVSDK pour la demande d’annonce tierce. Un paramètre adRequestTimeout a été ajouté à AdvertisingMetadata afin d’activer un délai d’expiration global pour l’appel de publicité.
 
 **Version 1.4.21 (1566)**
 
-* Zendesk #17781 - L’encapsulation d’écran ADB ne fonctionne plus
-Ce problème a été résolu en ajoutant l’API DefaultMediaPlayer.create(Context context, booléen secureSurface), qui permet la capture d’écran.
+* Zendesk #17781 - L’encapsulation d’écran ADB ne fonctionne plus Ce problème a été résolu en ajoutant l’API DefaultMediaPlayer.create(Context context, booléen secureSurface), qui permet la capture d’écran.
 Pour autoriser les captures d’écran, transmettez false pour secureSurface.
 Important : Nous vous recommandons vivement de ne pas activer cette fonction de capture d’écran dans un paramètre de production.
 
-* Zendesk #19074 - Gel vidéo pendant les jeux de ficelles FFWD et REW
-Les problèmes suivants qui se produisaient lorsque la lecture de l’astuce pouvait se figer dans la lecture ont été résolus :
+* Zendesk #19074 - Gel vidéo pendant FFWD et lecture de la astuce REW Les problèmes suivants qui se produisaient lorsque la lecture de l’astuce pouvait se figer ont été résolus :
 
-* Zendesk #19532 - La légende de fermeture semble irrecevable.
-   * FHS début le trickplay, mais le premier segment d&#39;iframe n&#39;avait pas d&#39;image dedans.
-   * Lors du téléchargement d’un segment iFrame, si FHS rencontre une condition d’erreur, il quitte le jeu vidéo et interrompt la lecture.
-   * L’implémentation de MediaCodec en mode Android attend pour toujours la disponibilité de la file d’attente d’entrée pendant qu’on lui demandait de vider toutes les tampons d’entrée/sortie.
-Ce problème a été résolu en inversant l’ordre des signaux WebVTT de sorte que plusieurs signaux qui se chevauchent semblent &quot;faire défiler&quot;.
+* Zendesk #19532 - Le sous-titrage codé apparaît dans l&#39;ordre.
+   * FHS commence l’exécution par flux, mais le premier segment d’iframe n’avait pas d’image dedans.
+   * Lors du téléchargement d’un segment iFrame, si le FHS atteint une condition d’erreur, il quitte le flux de production et met la lecture en pause.
+   * L’implémentation de MediaCodec attend indéfiniment la disponibilité de la file d’attente d’entrée lorsqu’il a été demandé de vider toutes les tampons d’entrée/sortie.
+Ce problème a été résolu en inversant l’ordre des signaux WebVTT, de sorte que plusieurs signaux qui se chevauchent semblent &quot;faire défiler vers le haut&quot;.
 
-* Zendesk #19574 - TVSDK ne renvoie pas de données de réponse M3U8 pour le contenu DRM ou non DRM.
-Lors du chargement initial du fichier manifeste dans PTMediaPlayerItem.prepareToPlay, si le chargement échoue, TVSDK ne signale pas le corps de la réponse d’échec à l’application.
+* Zendesk #19574 - TVSDK ne renvoie pas de données de réponse M3U8 pour le contenu DRM ou non DRM Dans le chargement initial du fichier manifeste dans PTMediaPlayerItem.prepareToPlay, si le chargement échoue, TVSDK ne signale pas le corps de la réponse d’échec à l’application.
 Ce problème a été résolu en permettant à TVSDK de signaler la réponse à l’échec comme une erreur à l’application.
 
-* Zendesk #19701 - Verrouillage de la lecture avec SAP/Discontinuité
-Le blocage du lecteur lorsque le son et la vidéo ne sont pas alignés en cas de discontinuité a été résolu.
+* Zendesk #19701 - Blocage de la lecture avec SAP/Discontinuité Le blocage du lecteur lorsque le contenu audio et vidéo n’est pas aligné en cas de discontinuité a été résolu.
 
 * Bogue #PTPLAY-11162 - La mise à jour de la bibliothèque OpenSSL vers la version 1.0.2f a été résolue.
 
 **Version 1.4.20 (1546)**
 
-* Zendesk #17384 - Demande de fonctionnalités : Prise en charge des métadonnées ID3 pour la lecture AAC
-La prise en charge des balises ID3 dans les médias AAC a été fournie dans le SDK TVSDK pour Android à partir de la version 1.4.20.
+* Zendesk #17384 - Feature Request : la prise en charge des métadonnées ID3 pour la prise en charge de la lecture AAC pour les balises ID3 dans les médias AAC a été fournie dans le TVSDK pour Android à partir de la version 1.4.20.
 
-* Zendesk #18358 - Le lecteur se fige sur les interrupteurs de débit avec discontinuités désynchronisées
-Ce problème a été résolu en gérant correctement les dossiers d&#39;arête de raccordement ABR.
+* Zendesk #18358 - Le lecteur gèle le commutateur à débit binaire avec des discontinuités désynchronisées Ce problème a été résolu en gérant les cas de périphérie de raccordement ABR de manière appropriée.
 
-* Zendesk #19232 - L&#39;application utilisant TVSDK 1.4.18 se comporte étrangement sur la version 4 de Amazon OS plus ancienne.
-Ce problème a été résolu en supprimant la création de vue Web masquée dans le processus d’initialisation du lecteur TVSDK afin d’éviter tout conflit avec les périphériques qui ne prennent pas en charge Android Webview.
+* Zendesk #19232 - L’application utilisant TVSDK 1.4.18 se comporte étrangement sur la version 4 antérieure d’Amazon OS. Ce problème a été résolu en supprimant la création d’affichage web masquée dans le processus d’initialisation du lecteur TVSDK afin d’éviter tout conflit avec les appareils qui ne prennent pas en charge Android Webview.
 
-* Zendesk #19585 - Lecture à mouvement lent lorsque la transition du débit adaptatif se produit.
-Lors d’un changement d’ABR, si le nouveau profil présente une fréquence d’échantillonnage audio différente de celle du profil actuel, la lecture devient rapide ou lente. En effet, le présentateur vidéo n’est pas averti que le format audio a changé.
-Ce problème a été résolu en s’assurant que l’indicateur de notification est défini au bon endroit.
+* Zendesk #19585 - Lecture à mouvement lent lorsque la transition de débit adaptatif se produit.
+Lors d’un commutateur ABR, si le nouveau profil a un débit d’échantillonnage audio différent du profil actuel, la lecture devient rapide ou lente. En effet, le présentateur vidéo n’est pas informé de la modification du format audio.
+Ce problème a été résolu en s’assurant que l’indicateur notify est défini au bon endroit.
 
-* Zendesk #19683 - Lecture SAP DAI - Pas de son pendant quelques secondes.
-Dans plusieurs cas de la logique TVSDK, lorsque l’horodatage de deux segments de rendu a été comparé, RENDITION_TIMEOUT_THRESHOLD était utilisé comme plage de valeurs acceptable, car l’horodatage ne peut pas toujours être comparé avec une différence de 0 ms. Si l’écart se trouve dans la plage de RENDITION_TIMEOUT_THRESHOLD, l’hypothèse est qu’il s’agit d’une correspondance.
+* Zendesk #19683 - SAP DAI playback - Pas de son pendant quelques secondes.
+Dans plusieurs cas de la logique TVSDK, lorsque l’horodatage de deux segments de rendu a été comparé, RENDITION_TIMEOUT_THRESHOLD a été utilisé comme plage de valeurs acceptable, car l’horodatage ne peut pas toujours être mis en correspondance avec une différence de 0 ms. Si l’écart se trouve dans la plage de RENDITION_TIMEOUT_THRESHOLD, l’hypothèse est qu’il s’agit d’une correspondance.
 
-Le paramètre RENDITION_TIMEOUT_THRESHOLD a été défini à 100 ms, mais il s&#39;est avéré insuffisant pour certains flux. Ce problème a été résolu en augmentant à 200 ms la valeur de RENDITION_TIMEOUT_THRESHOLD.
+Le paramètre RENDITION_TIMEOUT_THRESHOLD a été défini sur 100 ms, mais il s’est avéré insuffisant pour certains flux. Ce problème a été résolu en augmentant à 200 ms la valeur de RENDITION_TIMEOUT_THRESHOLD .
 
-* Zendesk #19699 - TVSDK ne parvient pas à basculer entre les pistes de sous-titres VTT
-Ce problème a été résolu en faisant le vidage du lecteur et en rechargeant le manifeste lorsqu’un suivi change et en corrigeant le problème de conversion de chaîne UTF8 qui affectait les noms de suivi des sous-titres WebVTT sur doublon d’octets.
+* Zendesk #19699 - Le TVSDK ne parvient pas à basculer entre les suivis de sous-titres VTT Ce problème a été résolu en faisant le vidage du lecteur et en rechargeant le manifeste lorsqu’un suivi change et en corrigeant le problème de conversion de chaîne UTF8 qui affectait les noms de suivi de sous-titres WebVTT sur deux octets.
 
-* Zendesk #19717 - Problème d’affichage des options CC
-Ce problème a été résolu en gérant correctement la chaîne Unicode.
+* Zendesk #19717 - Option CC Problème d’affichage Ce problème a été résolu en gérant correctement la chaîne Unicode.
 
-* Zendesk #19910 - Les balises TIT2 ID3 ne sont pas détectées
-Ce problème a été résolu en fournissant une prise en charge plus complète des codages de chaînes ID3 v2.4 et en prenant en charge ID3 v2.3.
+* Zendesk #19910 - Balises TIT2 ID3 non détectées Ce problème a été résolu en fournissant une prise en charge plus complète des encodages de chaîne ID3 v2.4 et de la prise en charge de l’ID3 v2.3.
 
-* Zendesk #20135 - TVSDK déclenche plusieurs contenus onComplete pour le contenu VOD.
-Ce problème a été résolu en ajoutant l’écouteur de événement post_roll_compelete au bon endroit, plutôt qu’à la casse complète du événement de modification d’état.
+* Zendesk #20135 - TVSDK déclenche plusieurs onComplete pour le contenu VOD.
+Ce problème a été résolu en ajoutant l’écouteur d’événement post_roll_COMPelete au bon endroit, au lieu de la casse complète de l’événement de changement d’état.
 
 **Version 1.4.19 (1521)**
 
-* Zendesk #4180 - TVSDK n&#39;applique pas HDCP.
-   * Il s&#39;agit d&#39;un correctif partiel pour ce ticket et ne traite que le problème des périphériques de protection NVidia.
-Vous devez utiliser l&#39;API de détection HDCP correctement implémentée dans le Bouclier Nvidia pour effectuer un suivi dynamique de l&#39;état HDCP.
+* Zendesk #4180 - TVSDK n’applique pas HDCP.
+   * Il s’agit d’une solution partielle pour ce ticket et ne traite que le problème des périphériques de protection NVidia.
+Vous devez utiliser l’API de détection HDCP correctement mise en oeuvre dans le Bouclier Nvidia pour effectuer un suivi dynamique de l’état HDCP.
 
-* Zendesk #18358 - Le TVSDK gèle le commutateur de débit avec des discontinuités désynchronisées.
-   * Ce problème a été résolu en ajoutant un nouvel avertissement pour détecter la discontinuité PTS et en obligeant la vérification PTS à rétablir la recherche du segment correct pour chaque commutateur ABR.
-Pour corriger le blocage, l’appel à la méthode mediaPlayer.setCustomConfiguration doit inclure forcePTSCheckForABR comme argument.
+* Zendesk #18358 - TVSDK gèle le changement de débit avec des discontinuités désynchronisées.
+   * Ce problème a été résolu en ajoutant un nouvel avertissement pour détecter la discontinuité du PTS et en obligeant la vérification PTS à rétablir la recherche du segment correct pour chaque commutateur ABR.
+Pour résoudre le blocage, l’appel de la méthode mediaPlayer.setCustomConfiguration doit inclure forcePTSCchakForABR comme argument.
 
 * Zendesk #19038 - Pas de diffusion en direct sur Asus Zenpad 10.
 
-   Ce problème a été résolu en préchargeant les informations du codec multimédia, de sorte que vous ne puissiez pas requête à la fonction au moment de l’exécution.
+  Ce problème a été résolu en préchargeant les informations du codec multimédia, de sorte que vous ne puissiez pas interroger la fonction au moment de l’exécution.
 
 * Les problèmes suivants sont les mêmes que Zendesk #19038 :
-   * Zendesk #19483 - Le TVSDK s&#39;effondre sur la plate-forme Intel.
+   * Zendesk #19483 - Le TVSDK se bloque sur la plate-forme Intel.
    * Zendesk #19171 - Blocages sur Asus Memo Pad 7 avec Android 5.0.
 
 **Version 1.4.18 (1503)**
 
-* Zendesk #3324 - Le rapports publicitaire Primetime ne suit pas les coupures publicitaires lorsqu’il n’y a aucun média publicitaire dans un VMAP.
-Lorsqu’une coupure publicitaire est vide, le début de coupure publicitaire et les événements de suivi complets n’étaient pas en cours d’épinglage. Ce problème a été résolu en envoyant des pings de début de coupures publicitaires lors de coupures publicitaires vides, telles que VMAP AdBreak, avec un noeud AdSource valide.
+* Zendesk #3324 - La création de rapports de publicités Primetime ne permet pas de suivre les coupures publicitaires lorsqu’il n’y a aucun média publicitaire dans un VMAP.
+Lorsqu’une coupure publicitaire est vide, les événements de début et de fin de coupure publicitaire n’étaient pas en cours de ping. Ce problème a été résolu en envoyant des pings de démarrage de coupure publicitaire pour les coupures publicitaires vides, comme VMAP AdBreak, avec un noeud AdSource valide.
 
-* Zendesk #18229 - SetCCVisiblity(VISIBLE) est ignoré après l’appel de MediaPlayer.reset().
-Ce problème a été résolu en ajoutant setCCVisibility(Visibility.INVISIBLE); à la fonction reset() dans la classe MediaPlayer.
+* Zendesk #18229 - SetCCVisiblity(VISIBLE) est ignoré après l’appel de MediaPlayer.reset() Ce problème a été résolu en ajoutant setCCVisibility(Visibility.INVISIBLE); à la fonction reset() dans la classe MediaPlayer.
 
-* Zendesk #18328 - Problème d&#39;image perdue sur les périphériques Amazon Fire TV 2e génération pour les contenus à 60 i/s
-Ce problème a été résolu en appliquant le format FPS codé pour la prise de décision du temps de veille et avec une logique de prédiction FPS mieux codée.
+* Zendesk #18328 - Problème d’image perdue sur les appareils Amazon Fire TV 2e génération pour le contenu avec 60 i/s Ce problème a été résolu en appliquant les i/s codées pour la prise de décision du temps de sommeil et avec une logique de prédiction FPS mieux codée.
 
 **Version 1.4.17 (1472)**
 
-* Zendesk #2231 - Erreur renvoyée en raison de la récupération du manifeste non disponible dans MediaPlayerNotification.
-Ce problème a été résolu en incluant le corps de réponse du manifeste en cas d’erreur d’analyse.
+* Zendesk #2231 - Erreur retournée lors de la récupération du manifeste indisponible dans MediaPlayerNotification Ce problème a été résolu en incluant le corps de réponse du manifeste en cas d’erreur d’analyse.
 
-* Zendesk #17703 - VideoEngineView n’empêche pas les captures d’écran pendant la lecture vidéo.
-La méthode setSecure est disponible depuis l’API 17, mais comme l’API 17 couvre les versions 4.2, 4.2.1 et 4.2.2, on ne sait pas lequel va déclencher une exception ou si elle est spécifique au périphérique. Ce problème a été résolu en plaçant VideoEngineView.setSecure dans la clause try catch.
+* Zendesk #17703 - VideoEngineView n’empêche pas les captures d’écran lors de la lecture vidéo La méthode setSecure est disponible depuis l’API 17, mais comme l’API 17 couvre les versions 4.2, 4.2.1 et 4.2.2, il n’est pas connu lequel générera une exception ou si l’appareil est spécifique. Ce problème a été résolu en plaçant VideoEngineView.setSecure dans la clause try catch.
 
-* Zendesk #17919 - La recherche de contenu provoque une erreur de pulsation
-Une erreur de position des données d’entrée non valide se produisait suite à l’appel de pulsation généré lors du démarrage de la recherche après le pré-roulement. Ce problème a été résolu.
+* Zendesk #17919 - La recherche de contenu provoque une erreur de pulsation Une erreur de position des données d’entrée non valide se produisait suite à l’appel de pulsation généré lors du démarrage de la recherche après le preroll. Ce problème a été résolu.
 
-**1.4.16a**  (1454a)
+**1.4.16a** (1454a)
 
 * Zendesk #18215 - Certains flux AES ne peuvent pas se charger.
 Ce problème a été résolu en vérifiant la taille des métadonnées DRM du profil avant de charger la clé AES.
 
 **Version 1.4.16 (1454)**
 
-* Zendesk #3875 - Blocs d’onglet S pendant la lecture
-Rétablissement de la dépendance d’OKHTTP sur Auditude pour CRS parce que TVSDK utilise désormais directement httpurlconnection au lieu de curl. Le problème a été résolu en supprimant les exceptions avant d’effectuer tout autre appel JNI.
+* Zendesk #3875 - Tab S Blocages pendant la lecture Révélant la dépendance d’OKHTTP sur l’Auditude pour CRS car TVSDK utilise désormais directement httpurlconnection au lieu de curl. Le problème a été résolu en effaçant les exceptions avant d’effectuer tout autre appel JNI.
 
-* Zendesk #4487 - Suivi du Canal linéaire du contenu
-Le problème a été résolu en autorisant la réinitialisation du suivi de pulsation vidéo pendant une session de lecture de flux linéaire.
+* Zendesk #4487 - Tracking du canal linéaire du contenu Le problème a été résolu en permettant la réinitialisation de l’outil de suivi de pulsation vidéo lors d’une session de lecture de flux linéaire.
 
-* Zendesk #17919 - Android - la recherche de contenu provoque une erreur de pulsation
-Le problème de l’état d’erreur de la pulsation en cas de recherche dans un chapitre a été résolu.
+* Zendesk #17919 - Android - La recherche de contenu provoque une erreur de pulsation Le problème lorsque la pulsation est dans un état d’erreur lorsqu’une recherche dans un chapitre est résolue.
 
-* Zendesk #18053 - Adobe Primetime s&#39;écrase sur Marshmallow
-TVSDK se bloquait sur Android M OS lorsque la bibliothèque TVSDK utilisait du code néon qui convertissait les couleurs YUV -> RVB. Le problème a été résolu en mettant à jour les fonctions à l’origine de ce problème en utilisant la version non néon du code.
+* Zendesk #18053 - Adobe Primetime se bloque sur Marshmallow Le TVSDK se bloquait sur Android M OS lorsque la bibliothèque TVSDK utilisait du code neon qui convertissait les couleurs du RGB YUV. Le problème a été résolu en mettant à jour les fonctions à l’origine de ce problème à l’aide de la version non néon du code.
 
-* Zendesk #18072 - Android M - Crash d&#39;application
-Lors de la vérification de la prise en charge du profil et du niveau, un blocage survient lors de l’appel des API MediaCodecList et MediaCodecInfo. Le problème a été résolu en fournissant une solution temporaire en chargeant toutes les informations de codec à l’avance afin d’éviter d’appeler ces API uniquement lorsque des informations de codec sont nécessaires.
+* Zendesk #18072 - Android M - Panne d’application Lors de la vérification de la prise en charge du profil et du niveau, un blocage se produit lors de l’appel des API MediaCodecList et MediaCodecInfo . Le problème a été résolu en fournissant une solution temporaire en chargeant toutes les informations de codec à l’avance afin d’éviter d’appeler ces API uniquement lorsque des informations de codec sont nécessaires.
 
-* Zendesk #18074 - Sous-titres arabes ne fonctionnant pas sur Nexus avec Android 6.0
-Le problème a été résolu en fournissant la prise en charge de la mise en correspondance des polices CTS pour Android.
+* Zendesk #18074 - Les sous-titres en arabe ne fonctionnent pas sur Nexus avec Android 6.0 Le problème a été résolu en fournissant la prise en charge de la carte des polices CTS pour Android.
 
 **Mise à jour de la version 1.4.15 (1438)**
 
-* Zendesk #17437 - Long délai dans le démarrage du contenu VOD avec certains flux AES.
+* Zendesk #17437 - Longue durée au démarrage du contenu VOD avec certains flux AES.
 Pour résoudre ce problème, si plusieurs clés sont répertoriées dans le manifeste, téléchargez toutes les clés AES en parallèle.
 
 **Version 1.4.15 (1435)**
 
-* Zendesk #4278 - Glitches sur Android set top box when Adaptive bitrate changes (ABR).
-Le correctif consistait à ajouter la prise en charge du commutateur ABR transparent avec le dernier codec média Android.
+* Zendesk #4278 : s’étend sur les décodeurs des paramètres Android lors des changements de débit adaptatif (ABR).
+Le correctif consistait à ajouter la prise en charge d’un commutateur ABR transparent avec le dernier codec multimédia Android.
 
-* Zendesk #17063 - L’appel de mediaPlayer.reset() provoque une erreur de réinitialisation du moteur vidéo.
+* Zendesk #17063 - L’appel de mediaPlayer.reset() entraîne une erreur de réinitialisation du moteur vidéo.
 Le correctif consistait à inclure le MediaErrorCode d’origine de VideoEngineExceptions lors de la distribution d’ErrorEvents.
 
-* Zendesk #17130 - Une pause brève mais perceptible quand on change le débit de transmission vu sur FireTV.
-(Identique au n° 4278 ci-dessus) Le correctif consistait à ajouter la prise en charge du commutateur ABR transparent avec le dernier codec média Android.
+* Zendesk #17130 - Une pause brève mais perceptible lors d&#39;un changement de débit vu sur FireTV.
+(Identique à #4278 ci-dessus) Le correctif consistait à ajouter la prise en charge d’un commutateur ABR transparent avec le dernier codec multimédia Android.
 
-* Zendesk #17666 - Autres marqueurs publicitaires, publicités inattendues ou sans publicité lors de la reprise de contenu.
-Le correctif posait un problème lors de l’exécution de prepareToPlay sur du contenu vidéo à la demande (VOD), la recherche initiale s’exécute sur l’heure locale plutôt que sur l’heure virtuelle.
+* Zendesk #17666 - Autres marqueurs publicitaires, inattendus ou aucune publicité lors de la reprise de contenu.
+Le correctif était un problème lors de l’exécution de prepareToPlay sur le contenu vidéo à la demande (VOD), la recherche initiale s’effectue sur l’heure locale au lieu de l’heure virtuelle.
 
-* Zendesk #17437 - Long délai dans le démarrage du contenu VOD avec certains flux AES.
+* Zendesk #17437 - Longue durée au démarrage du contenu VOD avec certains flux AES.
 Le correctif consistait à télécharger toutes les clés AES en parallèle lorsque plusieurs clés étaient répertoriées dans le manifeste.
 
-* Zendesk #17851 - Android TV - Black Frame in ABR
-Le correctif consistait à spécifier KEY_MAX_WIDTH et KEY_MAX_HEIGHT pour activer la lecture adaptative.
+* Zendesk #17851 - Android TV - Black Frame during ABR Le correctif consistait à spécifier KEY_MAX_WIDTH et KEY_MAX_HEIGHT pour activer la lecture adaptative.
 
 **Version 1.4.14 (1415)**
 
-* Zendesk #3875 - Tab S Blocage pendant la lecture.
+* Zendesk #3875 - Tab S Blocages pendant la lecture.
 Un correctif supplémentaire était nécessaire pour empêcher le blocage.
 
-* Zendesk #17245 - Le retour sur investissement sur Android TV ne fonctionne pas.
+* Zendesk #17245 - Les secours sur Android TV ne fonctionnent pas.
 Correction d’un autre problème en raison duquel la lecture se bloque lorsque la reprise est activée et que la réponse VMAP comporte une coupure publicitaire vide.
 
 **Version 1.4.14 (1412)**
 
-* Zendesk #17245 - Le retour sur investissement sur Android TV ne fonctionne pas.
-Suppression d’une restriction pour la désactivation du reconditionnement créatif sur les publicités de secours.
+* Zendesk #17245 - Les secours sur Android TV ne fonctionnent pas.
+Suppression d’une restriction pour la désactivation du reconditionnement créatif sur les annonces de secours.
 
 **Version 1.4.13 (1388)**
 
-* Zendesk #3502 - Prise en charge du basculement sur incident sur la base du client HLS pendant une coupure publicitaire
-Autoriser le basculement vers le manifeste principal lors de la mise à jour d’une erreur de profil en direct survient pendant la période de coupure publicitaire.
+* Zendesk #3502 - Prise en charge du basculement HLS basé sur le client lors d’une coupure publicitaire Autoriser le basculement vers le manifeste principal lors de la mise à jour de l’erreur de profil en direct survient pendant la période de coupure publicitaire.
 
-* Zendesk #3875 - Blocs d’onglet S pendant la lecture
-Pour résoudre le conflit entre HttpUrlConnection et cURLm, utilisez une bibliothèque tierce.
+* Zendesk #3875 - Blocages S de l’onglet pendant la lecture Pour résoudre le conflit entre HttpUrlConnection et cURLm, utilisez une bibliothèque tierce.
 
-* Zendesk #4450 - Problème de définition de métadonnées personnalisées pour un emplacement unique dans un résolveur de contenu
-Ajoutez un paramètre sur les paramètres Opportunité.
+* Zendesk #4450 : problème de définition des métadonnées personnalisées pour un emplacement unique dans un résolveur de contenu Ajoutez un paramètre aux paramètres d’opportunité .
 
 **Version 1.4.12 (1388)**
 
-* Zendesk #2751 - CSAI et CRS | Améliorer : Gérez les éléments dynamiques dans certaines URL de fichier multimédia.
-Mise à jour de Creative Repackaging Service afin de gérer correctement les publicités avec des URL créatives dynamiques.
+* Zendesk #2751 - CSAI et CRS | Améliorer : gérez les éléments dynamiques dans certaines URL de fichier multimédia.
+Mise à jour de Creative Repackaging Service pour gérer correctement les annonces avec des URL de création dynamiques.
 
-* Zendesk #3965 - Le retour à la lecture normale à partir d’un scénario de trickplay produit un bond en avant avant avant de commencer la lecture.
-   * Le correctif inclut TVSDK renvoyant l’heure avant le changement de taux jusqu’à ce que toutes les variables soient mises à jour, au lieu d’essayer de calculer GetStreamTime.
-   * Correction d’un blocage lors du changement de la vitesse de lecture des astuces à la fin du flux.
-   * Correction du calcul de l&#39;heure actuelle lors de la lecture de l&#39;astuce.
+* Zendesk #3965 - Revenir à la lecture normale à partir de l’exécution à l’aide d’un trickplay entraîne un saut en avant avant avant de commencer la lecture.
+   * Le correctif inclut TVSDK renvoyant le temps avant le changement de taux jusqu’à ce que toutes les variables soient mises à jour, au lieu d’essayer de calculer GetStreamTime.
+   * Correction d’un blocage lors du changement de la vitesse de lecture des astuces près de la fin du flux.
+   * Correction du calcul de l’heure actuelle lors de la lecture de l’astuce.
 
-* Zendesk #3978 - Le jeu de cartes à 8x et 16x gèle fréquemment.
-   * Choisissez toujours le profil de lecture de l’astuce avec le débit binaire le plus bas pour éviter la mise en mémoire tampon constante.
-   * Augmentez l&#39;intervalle d&#39;image de saut pour un taux de lecture de l&#39;astuce élevé.
-   * Correction d’un problème en raison duquel la mémoire tampon continuait de s’étendre après avoir atteint sa cible pendant la lecture de l’astuce.
+* Zendesk #3978 - Le trickplay 8x et 16x gèle fréquemment.
+   * Sélectionnez toujours le profil de lecture de l’astuce avec le débit le plus faible pour éviter une mise en mémoire tampon constante.
+   * Augmentez l’intervalle d’image de saut pour un taux de lecture de l’astuce élevé.
+   * Correction d’un problème en raison duquel la mémoire tampon continue de croître après avoir atteint sa longueur cible lors de la lecture de l’astuce.
 
-* Zendesk #3992 - Vitesses de jeu vidéo supplémentaires.
-TrickPlay a été mis à jour pour accepter des taux supérieurs à 16x ; +/- 32, +/-64 et +/-128 sont désormais également autorisés.
+* Zendesk #3992 - Vitesses supplémentaires de Trickplay.
+La fonction TrickPlay a été mise à jour afin d’accepter des taux supérieurs à 16x ; +/- 32, +/-64 et +/-128 sont désormais également autorisés.
 
-* Zendesk n° 4007 - Interprétation de l’objet GEOB dans le cadre des métadonnées de la chronologie (Android et Web).
-API setByteArray et getByteArray Ajoutées.
+* Zendesk #4007 - Interprétation de l’objet GEOB dans les métadonnées de la chronologie (Android et web).
+Ajout de l’API setByteArray et getByteArray.
 
-* PTPLAY-7301 - Instant On début at Random Access Point.
+* PTPLAY-7301 - Démarrage instantané au point d’accès aléatoire.
 Instant On a été mis à jour pour permettre un point de départ non nul.
 
 **Version 1.4.11 (1363)**
 
-* Zendesk n° 2076 - Fréquente bégustation lors de la lecture vidéo sur Motorola Xoom avec Android 4.0.3
-Périphériques Ajoutés à la liste autorisée pour les empêcher de lire du contenu à profil élevé.
+* Zendesk #2076 - Souvent bloquée lors de la lecture vidéo sur Motorola Xoom avec Android 4.0.3 Ajout de périphériques à la liste autorisée pour empêcher qu’ils n’essaient de lire du contenu de profil élevé.
 
-* Zendesk #2197 - `[Ads]` Suivi des erreurs et des erreurs
-distribuer OperationFailedEvent avec notification d&#39;avertissement.
+* Zendesk #2197 - `[Ads]` Le suivi des erreurs de publicité envoie OperationFailedEvent avec une notification d’avertissement.
 
-* Zendesk #3304 - Macro VAST 3.0 `[ERRORCODE]` non renseignée
-   * le code d’erreur 400 sera affiché si la publicité intégrée comporte un élément créatif incorrect.
-   * `[ERRORCODE]` macro sera encodée dans l&#39;URL
+* Zendesk #3304 - VAST 3.0 `[ERRORCODE]` macro non renseignée
+   * le code d’erreur 400 sera révélé si la publicité intégrée comporte un contenu créatif incorrect.
+   * `[ERRORCODE]` La macro sera encodée en URL
 
 **Version 1.4.10 (1354)**
 
-* Zendesk #2941 - Les actifs en direct n’ont pas &quot;0&quot; dans la plage de valeurs recherchées
-Auparavant, il y avait un tampon de segment de 3 lorsque vous recherchiez le début d’un flux en direct, il est maintenant possible de rechercher le tout début d’un flux en direct (c.-à-d. le début du premier segment).
+* Zendesk #2941 - Les ressources en direct n’ont pas &quot;0&quot; dans la plage pouvant faire l’objet d’une recherche Auparavant, il existait un tampon de segment 3 lors de la recherche au début d’un flux en direct. Il est désormais possible de rechercher jusqu’au tout début d’un flux en direct (c’est-à-dire le début du premier segment).
 
-* Zendesk #3169 - Mise à jour du lecteur de référence avec l’intégration Adobe AnalyticsLe lecteur de référence a été mis à jour avec la bibliothèque Adobe Analytics comme exemple d’implantation.
-* Zendesk #3299 - Comportement inexplicable de jeux de ficelles
+* Zendesk #3169 - Mise à jour du lecteur de référence avec l’intégration d’Adobe Analytics : le lecteur de référence a été mis à jour avec la bibliothèque Adobe Analytics comme exemple d’implantation.
+* Zendesk #3299 - Comportement inexplicable de jeux de fiction
    * Correction d’un bogue en raison duquel le retour à l’état de lecture après l’arrêt de la lecture du tour pouvait prendre plusieurs secondes (parfois 25 secondes ou plus).
-   * Correction d’un bogue en raison duquel l’appel d’une astuce était lancé une seconde fois sur le même support et pouvait provoquer le blocage du flux à l’heure actuelle.
-* Zendesk #3433 - Android et Flash - Problèmes de sous-titres
+   * Correction d’un bogue en raison duquel l’appel d’une astuce était relu une seconde fois sur le même média, ce qui entraînait le gel du flux à l’heure actuelle.
+* Zendesk #3433 - Android et Flash - Problèmes avec les sous-titres
 
-GetLine pour WebVTT ne respectait pas la longueur ajustée &lt;CR>&lt;LF> d&#39;un paquet ; la dernière légende peut contenir des caractères de légendes précédentes.
+GetLine pour WebVTT ne respectait pas un &lt;cr>&lt;lf> longueur ajustée d’un paquet ; la dernière légende peut contenir des caractères des légendes précédentes.
 
-* PTPLAY-6243 - Améliorer le lecteur de référence pour capturer les informations de débogage
+* PTPLAY-6243 - Amélioration du lecteur de référence pour capturer les informations de débogage
 
-Les exemples de lecteurs de référence Android ont été améliorés avec une option permettant d’activer les journaux de débogage et d’envoyer les résultats par courrier électronique. Cette option se trouve sous le menu Journal du lecteur de référence.
+Les exemples de lecteurs de référence Android ont été améliorés avec une option permettant d’activer les journaux de débogage et d’envoyer les résultats par courriel. Cette option se trouve sous le menu Journal dans le lecteur de référence.
 
 **Version 1.4.9 (1332)**
 
-* Zendesk #2649 - La mémoire tampon terminée survient avant que la mémoire tampon initiale ne soit pleine.
+* Zendesk #2649 - La fin de la mémoire tampon survient avant que la mémoire tampon initiale ne soit pleine
 
-Après une recherche, il est possible que le moteur de vidéo définisse l’état Lecture avant que le présentateur vidéo ne soit prêt à lire. Se produit lorsque l&#39;état de la mémoire tampon est élevé avant la recherche. Correction en avertissant le moteur vidéo de l&#39;état de mémoire tampon faible. L’état de mémoire tampon du moteur vidéo étant faible, l’appel de Play entraîne la modification de l’état de BUFFERING au lieu de PLAYING. La lecture reprend lorsque l’état devient LECTURE.
+Après une recherche, cas où le moteur vidéo définit l’état sur LECTURE avant que le présentateur vidéo ne soit prêt à être lu. Se produit lorsque l’état de mémoire tampon est élevé avant la recherche. Correction en avertissant le moteur vidéo de l’état de mémoire tampon faible. Avec le moteur vidéo dont l’état de mémoire tampon est faible, l’appel de Play entraîne la modification de l’état à la mise en MÉMOIRE TAMPON au lieu de LECTURE. La lecture reprend lorsque l’état devient LECTURE.
 
-* Zendesk #2846 - Demande d&#39;amélioration : Permet de définir une chaîne d’agent utilisateur différente pour les appels effectués par la bibliothèque Auditude.
+* Zendesk #2846 - Demande d’amélioration : permet de définir différentes chaînes agent-utilisateur pour les appels effectués par la bibliothèque Auditude.
 
-Une nouvelle API a été ajoutée pour définir l’agent utilisateur pour les appels liés à la publicité, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Si aucun agent utilisateur n’est défini, la valeur par défaut est utilisée. Cela affecte uniquement l’agent utilisateur pour les appels liés à la publicité, l’agent utilisateur pour les appels de médias n’est pas modifié, qui est &quot;Adobe Primetime&quot;+&lt;agent utilisateur par défaut>.
+Une nouvelle API a été ajoutée pour définir l’agent utilisateur pour les appels liés aux publicités, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Si aucun agent utilisateur n’est défini, la valeur par défaut est utilisée. Cela affecte uniquement l’agent utilisateur pour les appels liés aux publicités. L’agent utilisateur pour les appels médias reste inchangé, c’est-à-dire &quot;Adobe Primetime&quot;+.&lt;default useragent=&quot;&quot;>.
 
 **Version 1.4.8 (1324)**
 
-* Zendesk #1218 - 106000.33 Erreur avec local ... Si le chargement du manifeste dans FragmentedHTTPStreamer::ThreadParseManifest() échoue, vérifiez si le domaine d&#39;URL est localhost et, dans l&#39;affirmative, remplacez le domaine par 127.0.0.1 et rappelez ThreadParseManifest.
-* Zendesk #3072 - Passage automatique à des débits inférieurs. Modification du calcul de la longueur de la mémoire tampon pour ignorer la charge utile PTS zéro.
-* Zendesk #3168 - Les sous-titres WebVTT ne s’affichaient que pour les 10 premières secondes.
-* Zendesk #3193 - Demande d’API de modification de Profil dans TVSDK, PlaybackEventListener.onProfileChanged() a été ajoutée.
+* Zendesk #1218 - 106000.33 Erreur avec local ... Si le chargement du manifeste dans FragmentedHTTPStreamer::ThreadParseManifest() échoue, vérifiez si le domaine d’URL est localhost et, dans l’affirmative, remplacez le domaine par 127.0.0.1 et rappelez ThreadParseManifest.
+* Zendesk #3072 - Passage automatique à des débits inférieurs. Modification du calcul de la longueur de la mémoire tampon afin d’ignorer la charge utile PTS zéro.
+* Zendesk #3168 - Les sous-titres WebVTT ne s’affichent que pour les 10 premières secondes.
+* Zendesk #3193 - La demande d’une API de changement de profil dans TVSDK, PlaybackEventListener.onProfileChanged() a été ajoutée.
 
 **Version 1.4.7 (1311)**
 
-* Zendesk #2197 - Suivi des erreurs et des erreurs. Échec du chargement du manifeste de la notification Ajoutée pour l&#39;actif
-* Zendesk #2575 - PSDK ignore la publicité personnalisée MARK en flux continu avant la vidéo.
-* Zendesk #2719 - Win Death with auditude ads (Gagner la mort avec publicités d&#39;auditude), fixed beacon tracking (Correction du suivi des balises lorsqu&#39;elles sont redirigées vers l&#39;URL relative dans le module externe Auditude)
-* Zendesk #2760 - Balise DISCONTINUITY ignorée en mode TrickPlay.
-* Zendesk #2805 - Crash du lecteur au début de la lecture, même correction que Zendesk #2719
-* Zendesk #2817 - Lecteur Android - Le lecteur est parfois suspendu et s’arrête de lire, corrigé en étendant la mise en mémoire tampon du décodage de 2,0 à 3,0 secondes.
-* Zendesk #2839 - Adobe Primetime PSDK prend-il en charge les chipsets ARMv8 ?, a ajouté un correctif pour le blocage trouvé sur Galaxy S6.
-* Zendesk #2885 - Auditude Blocage de la lecture, même correction que Zendesk #2719
-* Zendesk #2895 - Echec constant de Live HLS après 10 minutes de lecture
-* Zendesk #2925 - Commentaires concernant la version de développement Android (1.4.5), sur certains périphériques lorsque nous mettons le paquet en file d&#39;attente vers la file d&#39;attente d&#39;entrée, si le PTS est négatif, le décodeur passe dans un état bizarre où nous obtenons toujours un PTS de sortie négatif pour les paquets futurs. Le correctif définit le PTS d&#39;entrée sur zéro s&#39;il est négatif pour éviter ce problème.
-* PTPLAY-4645 - Désactivez la prise en charge du chiffrement RC4 dans openssl. Il y a des exploits connus pour RC4. Cela signifie que si une tentative de connexion à un serveur prenant uniquement en charge RC4 est effectuée, elle échoue.
+* Zendesk #2197 - Tracking des erreurs de publicité. Ajout d’une notification pour l’échec du chargement du manifeste
+* Zendesk #2575 - PSDK ignore la publicité MARK personnalisée en continu avant la vidéo
+* Zendesk #2719 - Win Death with auditude ads (Gagner la mort avec publicités audacieuses), fixed beacon tracking (suivi fixe des balises lorsqu’elle est redirigée vers l’URL relative dans le module externe auditude)
+* Zendesk #2760 - balise DISCONTINUITY ignorée pendant le mode TrickPlay
+* Zendesk #2805 - Joueur en panne au début de la lecture, même correction que Zendesk #2719
+* Zendesk #2817 - Lecteur Android - Le lecteur se bloque et arrête parfois la lecture, corrigé en étendant les tampons de décodage de 2.0 à 3.0 secondes.
+* Zendesk #2839 - Adobe Primetime PSDK prend-il en charge les chipsets ARMv8 ?, ajout d&#39;un correctif pour le blocage trouvé sur Galaxy S6.
+* Zendesk #2885 - Auditude Lecture de blocage, même correction que Zendesk #2719
+* Zendesk #2895 - Échec de Live HLS systématiquement après 10 minutes de lecture
+* Zendesk #2925 - Commentaires concernant le build de développement Android (1.4.5), sur certains appareils lorsque nous mettons le paquet en file d’attente dans la file d’attente d’entrée, si le PTS est négatif, le décodeur passe dans un état bizarre où nous obtenons toujours un PTS de sortie négatif pour les paquets futurs. Le correctif définit le PTS d’entrée sur zéro s’il est négatif pour éviter ce problème.
+* PTPLAY-4645 - Désactivez la prise en charge du chiffrement RC4 dans openssl. Il existe des exploits connus pour RC4. En d’autres termes, si une tentative de connexion à un serveur prenant uniquement en charge RC4 est effectuée, elle échoue.
 
 **Version 1.4.6 (1282)**
 
-* Zendesk #2192 - Le débit n&#39;est pas toujours plus faible dans les mauvaises conditions réseau, corrigé en supprimant l&#39;implémentation rapide des commutateurs.
-* Zendesk #2631 - Sous-titres arabes sur Android : Le texte sur plusieurs lignes apparaît coupé, corrigé en ajustant la taille de police des polices arabes.
-* Zendesk #2844 - La mise en mémoire tampon de la note 4 et le temps de téléchargement des fragments ne sont pas exacts.
+* Zendesk #2192 - Le débit ne diminue pas toujours dans de mauvaises conditions réseau, corrigées par la suppression de l’implémentation de commutation rapide.
+* Zendesk #2631 - Sous-titres en arabe sur Android : le texte sur plusieurs lignes apparaît coupé, corrigé par l’ajustement de la taille des polices pour les polices arabes.
+* Zendesk #2844 - La mise en mémoire tampon sur la note 4 et le temps de téléchargement des fragments ne sont pas précis.
 
-Ce problème a été corrigé en ajoutant une latence entre les téléchargements de segments de vidéo dans le calcul de la bande passante et en demandant à la logique de calcul du temps de téléchargement d’utiliser le temps de cycle de requête complet.
+Ce problème a été corrigé en ajoutant une latence entre les téléchargements de segments vidéo dans le calcul de la bande passante et en configurant la logique de calcul du temps de téléchargement pour utiliser le temps de cycle de requête complet.
 
-* Zendesk #2908 - Les sous-titres arabes ne fonctionnent pas sur Nexust 5, 6 et 7, corrigés en ajoutant 2 polices de substitution supplémentaires pour les scripts arabes.
-* PTPLAY-4627 - Mettez à jour Nielson appsdk vers la version 1.2.3.7
+* Zendesk #2908 - Les sous-titres arabes ne fonctionnent pas sur les 5, 6 et 7 novembre, corrigés par l’ajout de 2 polices de remplacement supplémentaires pour les scripts arabes.
+* PTPLAY-4627 - Mise à jour de l’appsdk Nielson vers la version 1.2.3.7
 * PTPLAY-5084 - Prise en charge du basculement de mise à jour du manifeste de Principal en direct
 
 **Version 1.4.5 (1248)**
 
-* Zendesk #1757 - Uniquement audio lu ou plantages du lecteur pour certains profils de débit vidéo, le blocage de Nexus 4 et Nexus 7 corrigé
-* Zendesk #2072 - TimedMetadata pour AdEvent ne contient pas l’URL complète juste &quot;http&quot;
-* Zendesk #2192 - Le débit ne diminue pas toujours dans les mauvaises conditions réseau
-* Zendesk #2256 - Accès à la liste de lecture du Principal, mise à jour du PSDK pour distribuer des événements de métadonnées temporisées pour les balises abonnées sur la liste de lecture principale.
-* Zendesk #2269 - Deux langues de sous-titres différentes apparaissent simultanément à l’écran avec WebVTT.
-* Zendesk #2417 - Lecteur essayant de télécharger des sous-titres avant le début de lecture, WebVTT utilisait la variable de numéro de segment incorrecte pour la correspondance des numéros de segment. Le bogue ne s’affichait que pour les médias dont les indices de segmentation commençaient à zéro.
-* Zendesk #2470 - PSDK ne revient pas de l&#39;état SUSPENDU lorsque le changement de débit survient après la suspension. Dans une situation particulière où la recherche intelligente est appelée par RestoreGPUResource (restaurer le lecteur à partir de l&#39;état de suspension) et que le commutateur de diffusion détecté avant cela, la recherche intelligente est incapable de se terminer et résulte en une mise en mémoire tampon constante.
-* Zendesk #2451 - Sous-titrage &quot;bottom inset&quot;, ajout du paramètre &quot;bottomInset&quot; au code de sous-titrage
-* Zendesk #2480 - Désactivation de l’optimisation de la redirection HTTP 302, prise en charge Ajoutée pour la définition de la propriété useRedirectUrl
+* Zendesk #1757 - Seul le contenu audio lu ou les blocages du lecteur pour un profil de débit vidéo, le blocage de Nexus 4 et Nexus 7 a été corrigé.
+* Zendesk #2072 - TimedMetadata pour AdEvent ne contient pas d’URL complète simplement &quot;http&quot;
+* Zendesk #2192 - Le débit n&#39;est pas toujours plus faible dans de mauvaises conditions de réseau
+* Zendesk #2256 - Accès à la liste de lecture des Principal, mise à jour du PSDK pour distribuer des événements timedMetadata pour les balises inscrites sur la liste de lecture principale.
+* Zendesk #2269 - Deux langues de sous-titres différentes apparaissent à l’écran en même temps que WebVTT.
+* Zendesk #2417 - Lecteur tentant de télécharger des sous-titres avant le début de la lecture, WebVTT utilisait une variable de numéro de segment incorrecte pour la correspondance de numéro de segment. Le bogue s’affichait uniquement pour les médias dont les index de segment commençaient à zéro.
+* Zendesk #2470 - PSDK ne revient pas de l’état SUSPENDU lorsque le changement de débit se produit après la suspension. Dans une situation spéciale, lorsque la recherche dynamique est appelée par RestoreGPUResource (restaurer le lecteur à partir de l’état de suspension) et que le commutateur de diffusion est détecté avant, la recherche dynamique ne peut pas se terminer et entraîne une mise en mémoire tampon constante.
+* Zendesk #2451 - Sous-titrage codé &#39;bottom inset&#39;, ajout du paramètre &#39;bottomInset&#39; au code de sous-titrage
+* Zendesk #2480 - désactivation de l’optimisation de la redirection HTTP 302, prise en charge supplémentaire pour la définition de la propriété useRedirectUrl
 * Zendesk #2486 - Balises tierces
-* Zendesk #2547 - Sous-titres arabes : Le texte doit être aligné à droite justifié
+* Zendesk #2547 - Sous-titres en arabe : le texte doit être aligné à droite
 
 **Version 1.4.4 (1195)**
 
-* Zendesk #1158 - Échec de la lecture sur le validant Huawei (Y301A1)
+* Zendesk #1158 - Échec de la lecture sur Huawei Valiant (Y301A1)
 * Zendesk #1709 - Taille de média incorrecte et vidéo étirée
-* Zendesk #1757 - Lecture audio uniquement après le basculement de profil entre les flux avec des données spa/pps identiques
-* Zendesk #2095 - État HTTP 307 (redirection) entraînant l’arrêt de la lecture par le lecteur d’Adobe.
-* Zendesk #2126 - événement TimedMetaData manquant pour le dernier ADEVENT, les balises abonnées qui existent après le dernier segment n’ont pas été signalées au PSDK à partir d’AVE.
+* Zendesk #1757 - Lecture audio uniquement après le changement de profil entre les diffusions avec des données spa/pps identiques
+* Zendesk #2095 - État HTTP 307 (redirection) entraînant l’arrêt de la lecture par le lecteur Adobe
+* Zendesk #2126 - Absence de l’événement TimedMetaData pour le dernier ADEVENT, les balises abonnées qui existent après le dernier segment n’ont pas été signalées au PSDK à partir d’AVE.
 * Zendesk #2227 - Verrouillages dans VideoEngine nativeReset et nativePause
 * Bogue #3921755 - Mise à jour de la bibliothèque OpenSSL vers la version 1.0.1L
 
 **Version 1.4.3 (1173)**
 
 * Zendesk #1591 - RENDITION_M3U8_ERROR
-* Zendesk #1870 - Sous-titre fermé Activé et Désactivé
-* PTPLAY-1818 - Rembobiner les taquets de lecture au lieu de revenir en arrière
-* PTPLAY-2736 - Une légende WebVTT précédemment affichée s’affiche à l’écran lorsqu’un flux avec une légende WebVTT se termine à la lecture.
-* PTPLAY-3773 - Une publicité preroll moyenne n’est pas lue lorsque la lecture de flux est lancée après la position de la publicité.
+* Zendesk #1870 - Sous-titrage codé Activé/Désactivé
+* PTPLAY-1818 - Rétablissez les taquets de lecture au niveau de la publicité au lieu de revenir au-delà.
+* PTPLAY-2736 - Une légende WebVTT précédemment affichée s’affiche à l’écran lorsqu’un flux avec une légende WebVTT se termine en lecture.
+* PTPLAY-3773 - Une publicité mid-roll n’est pas lue lorsque la lecture de flux est lancée après la position de la publicité.
 
 **Version 1.4.2**
 
-* Zendesk n° 1561 - Prise en charge du basculement sur incident basé sur le client HLS en temps de primetime. Utilisera la date du programme pour répondre au basculement
-* Zendesk #1590 - LoadInfo.MediaDuration a toujours la valeur 0 (non fixe pour audio uniquement)
-* Zendesk #1626 - Fuite potentielle de mémoire dans le lecteur. Aucune fuite de mémoire réelle, problème lié à l&#39;enregistrement de l&#39;historique des notifications des 1 000 dernières notifications, ceci a été réduit à 100.
-* Zendesk #2192 - Le débit ne diminue pas toujours dans les mauvaises conditions réseau
+* Zendesk #1561 - Prise en charge du basculement client HLS en prime time. Utilisera la date et l’heure du programme pour résoudre le basculement
+* Zendesk #1590 - LoadInfo.MediaDuration est toujours 0 (non fixe pour audio uniquement)
+* Zendesk #1626 - Fuite de mémoire potentielle dans le lecteur. Pas de fuite de mémoire réelle, le problème était lié à l’enregistrement de l’historique des notifications des 1 000 dernières notifications. Ce problème a été réduit à 100.
+* Zendesk #2192 - Le débit n&#39;est pas toujours plus faible dans de mauvaises conditions de réseau
 
 **Version 1.4.1 (1121)**
 
-* Zendesk #1951 - Lockup in VideoEngine.nativeReset() on 4.0.x devices
-* Zendesk n° 2064 - Crash natif SIGSEGV sur des périphériques Android basés sur l&#39;Intel
-* Zendesk #2075 - Verrouillage dans VideoEngine.nativeReleaseGPUResource sur périphériques 4.0.x
-Remarque : Cette version est ***requise*** pour la prise en charge d&#39;Android 5.0 (Lollipop)
-* Zendesk #1513 - Prise en charge de Lollipop pour Android
+* Zendesk #1951 - Verrouillage dans VideoEngine.nativeReset() sur les appareils 4.0.x
+* Zendesk #2064 - Native Crash SIGSEGV sur des appareils Android spécifiques basés sur un intel
+* Zendesk #2075 - Lockup in VideoEngine.nativeReleaseGPUResource sur les appareils 4.0.x Remarque : Cette version est &#42;&#42;&#42;required&#42;&#42;&#42; pour la prise en charge d’Android 5.0 (Lollipop)
+* Zendesk #1513 - Prise en charge d’Android Lollipop
 * Zendesk #1709 - Taille de média incorrecte et vidéo étirée
-* Zendesk #1871 - Les légendes WebVTT disparaissent parfois puis réapparaissent lors de l’affichage d’un flux en direct avec des légendes WebVTT.
+* Zendesk #1871 - Les sous-titres WebVTT disparaissent parfois puis réapparaissent lors de l’affichage d’un flux en direct avec des sous-titres WebVTT.
 * Zendesk #1996 - Aucun marqueur de chronologie n’est visible dans PSDK 1.4.0
-* Zendesk #2046 - Crash avec PSDK 1.4.1.1113, correction d&#39;un blocage pour les flux en direct quand aucune publicité n&#39;est retournée par auditude
-* Bogue #3769657 - Mise à jour de la version de curl à 7.38.0
-* PTPLAY-1575 - Lorsque des débuts de lecture ABR avec diffusion en continu audio uniquement, puis basculent en flux audio/vidéo, la vidéo ne s’affiche jamais pendant que l’audio continue.
-* PTPLAY-2499 - Mise à jour d&#39;OpenSSL vers la version 1.0.1j pour corriger les vulnérabilités récentes
-* PTPLAY-2632 - La vidéo ne se rétablit pas après la fin de la publicité au milieu de la série sur Android Lollipop.
-* PTPLAY-2678 - Stalls de vidéo pendant les tests de longévité en direct sur Android Lollipop
+* Zendesk #2046 - Blocage avec PSDK 1.4.1.1113, blocage corrigé pour les diffusions en direct lorsqu’aucune publicité n’est renvoyée par auditude
+* Bogue #3769657 - Mise à jour de la version de curl vers 7.38.0
+* PTPLAY-1575 - Lorsque la lecture ABR commence avec un flux audio uniquement, puis passe à la diffusion audio/vidéo, la vidéo ne s’affiche jamais pendant que la lecture audio se poursuit.
+* PTPLAY-2499 - Mise à jour d’OpenSSL vers la version 1.0.1j pour répondre aux vulnérabilités récentes
+* PTPLAY-2632 - La vidéo ne se rétablit pas après la fin de la publicité mid-roll sur Android Lollipop.
+* PTPLAY-2678 - Blocages vidéo pendant les tests de longévité en direct sur Android Lollipop
 
 **Version 1.4.0**
 
-* Zendesk #1024 - Fonction permettant de supprimer une publicité du flux via un manifeste
-* Zendesk #1293 - Problème de sélection de la piste de légende fermée.
-* Zendesk #1590 - LoadInfo.MediaDuration a toujours la valeur 0, mediaDuration affiche maintenant la valeur correcte.
-* Zendesk #1629 - plantage du lecteur/de l’application à la fin de la lecture de la publicité sur Galaxy S4
-* Zendesk #1674 - ClosedCaption Ne s’affiche pas, la légende 708 correcte s’affiche lorsque les codes ETX 0x03 sont manquants.
-* PTPLAY-2157 - Les styles de sous-titrage par défaut ont été renvoyés par les utilisateurs, même si un style différent a été défini et vérifié visuellement sur le flux. Les propriétés de style Légende fermée indiquent désormais la valeur sur laquelle elles ont été définies.
+* Zendesk #1024 - Fonctionnalité de suppression de la publicité du flux via le manifeste
+* Zendesk #1293 - Problème de sélection du suivi des sous-titres codés.
+* Zendesk #1590 - LoadInfo.MediaDuration est toujours 0, mediaDuration affiche désormais la valeur correcte.
+* Zendesk #1629 : le lecteur/l’application se bloque à la fin de la lecture de la publicité sur Galaxy S4
+* Zendesk #1674 - ClosedCaption Non affiché, la légende 708 correcte s’affiche lorsque les codes ETX 0x03 sont manquants.
+* PTPLAY-2157 - Les styles de sous-titrage codé par défaut étaient renvoyés par les accesseurs, même si des styles différents avaient été définis et vérifiés visuellement sur le flux. Les propriétés de style Sous-titrage codé affichent désormais la valeur sur laquelle elles ont été définies.
 
 ## Problèmes connus dans la version 1.4 {#known-issues-in}
 
 **Version 1.4.31**
 
-* PTPLAY-16803 - La légende fermée ne fonctionne pas avec le contenu audio uniquement, car le système de sous-titrage a besoin de vidéo pour fonctionner. Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, nous ne pouvons pas afficher de graphiques pour les légendes.
-* PTPLAY-1634 - La même balise d’abonnement comporte différents horodatages dans différentes fenêtres dynamiques. Lorsque la fenêtre active se déplace, la même balise doit comporter les mêmes horodatages. Cependant, parfois, même les mêmes balises ont des horodatages différents.
-* PTPLAY-3197 - Blocage avec le signal 11 erreur SIGSEGV sur le périphérique Acer Iconia après environ 1 heure de lecture continue
-* PTPLAY-3310 - Avec un débit audio plus faible, le son devient bouché/stuttery sur Acer Iconia.
-* PTPLAY-3355 - Blocage WIN sur Motorola Xoom avec 4.0.x après environ 1 heure de lecture continue.
-* PTPLAY-3557 - Le rembobinage lors d’une coupure publicitaire entraîne la fin du flux
-* PTPLAY-7079 - La fenêtre de lecture sur un client android ne fonctionne pas avec Secure Stop/Hard Stop.
-* Bogue n° 3760144 - La résolution peut se décaler ou apparaître à l&#39;impulsion lorsque le flux est en pause sur certains appareils tels que Kindle Fire 7 et Samsung Galaxy Nexus. Uniquement observable sous contrôle rapproché
-* Bogue #3761170 - La recherche de contenu local dans les publicités en direct ne peut pas effectuer de recherche dans le contenu de la publicité, il est préférable d’utiliser les APITime actuelles pour les flux en direct.
-* Bogue #3763370 - Les flux dynamiques avec publicités présenteront parfois deux marqueurs publicitaires qui se rapprochent lorsqu’il ne devrait y en avoir qu’un seul. Ces marques publicitaires représentent la même publicité et une seule est lue
-* Bogue #3763373 - Le marqueur d’annonce peut brièvement disparaître lors de la recherche au-delà d’une publicité dans les flux VOD. Le marqueur publicitaire est restauré et il n&#39;y a aucun autre effet négatif sur la chronologie
-* Certains périphériques connaissent des problèmes de lecture. Voir [Problèmes de périphérique connus dans 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
-* Implémentation de référence - La lecture de la fiche n&#39;est pas implémentée dans l&#39;exemple d&#39;application
-* Sur certains périphériques Android TV, une image noire peut être vue en raison d’une réinitialisation du décodeur aux points de transition suivants :
-   * entrée et sortie du mode trick
-   * commutation entre des pistes audio à liaison tardive
+* PTPLAY-16803 - Le sous-titrage codé ne fonctionne pas avec le contenu audio uniquement, car le système de sous-titrage a besoin de vidéo pour fonctionner. Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, nous ne pouvons pas afficher de graphiques pour les sous-titres.
+* PTPLAY-1634 - La même balise d’abonnement comporte différents horodatages dans différentes fenêtres en direct. Lorsque la fenêtre active se déplace, la même balise doit avoir les mêmes horodatages. Cependant, il arrive parfois que les mêmes balises aient des horodatages différents.
+* PTPLAY-3197 - Blocage avec le signal 11 SIGSEGV sur l’appareil Acer Iconia après environ 1 heure de lecture continue
+* PTPLAY-3310 - Avec un débit audio plus faible, le son devient bouché/bouché sur Acer Iconia.
+* PTPLAY-3355 - Blocage de la MORT WIN sur Motorola Xoom avec 4.0.x après environ 1 heure de lecture continue.
+* PTPLAY-3557 - Le redécoupage lors d’une coupure publicitaire entraîne la fin du flux.
+* PTPLAY-7079 - La fenêtre de lecture sur le client Android ne fonctionne pas avec Arrêt/Arrêt sécurisé
+* Bogue #3760144 - La résolution peut se déplacer ou sembler prendre du pouls lorsque la diffusion est mise en pause sur certains appareils tels que Kindle Fire 7 et Samsung Galaxy Nexus. Uniquement observable sous contrôle serré
+* Bogue #3761170 - searchToLocal en direct avec des publicités ne peut pas effectuer de recherche en amont dans le contenu publicitaire, il est préférable d’utiliser les API currentTime pour les diffusions en direct.
+* Bogue #3763370 - Les diffusions en direct avec des publicités affichent parfois deux marqueurs de publicité qui se rapprochent lorsqu’il ne doit y en avoir qu’un seul. Ces marqueurs publicitaires représentent la même publicité, et un seul affichera
+* Bogue #3763373 - Le marqueur de publicité peut brièvement disparaître lors de la recherche au-delà d’une publicité dans les flux VOD. Le marqueur de publicité est restauré et aucun autre effet négatif n’est affecté sur la chronologie.
+* Certains périphériques ont des problèmes de lecture connus. Voir [Problèmes de périphérique connus dans la version 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
+* Implémentation de référence : la lecture de marque n’est pas implémentée dans l’exemple d’application.
+* Sur certains appareils Android TV, une image noire est visible en raison d’une réinitialisation du décodeur aux points de transition suivants :
+   * en mode tricplay et en dehors
+   * basculement entre des pistes audio à liaison différée
    * d&#39;une publicité au contenu principal.
 
 **Version 1.4.23**
 
-* La légende fermée ne fonctionne pas avec le contenu audio uniquement, car le système de sous-titrage a besoin de vidéo pour fonctionner. Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, vous ne pouvez pas afficher de graphiques pour les légendes.
-* À partir de la version 1.4.23, TVSDK ne prendra pas en charge Gingerbread OS 2.3. En effet, TVSDK a utilisé les bibliothèques Android privées suivantes pour recueillir des informations matérielles sur les périphériques dotés de Gingerbread OS :
+* Le sous-titrage codé ne fonctionne pas avec le contenu audio uniquement, car le système de sous-titrage a besoin d’une vidéo pour fonctionner. Sans vidéo, il n’y a pas de dimension de fenêtre d’affichage et sans dimension de fenêtre d’affichage, vous ne pouvez pas afficher de graphiques pour les sous-titres.
+* À compter de la version 1.4.23, TVSDK ne prendra plus en charge Gingerbread OS 2.3. Cela est dû au fait que TVSDK a utilisé les bibliothèques Android privées suivantes pour collecter des informations matérielles sur les appareils avec Gingerbread OS :
 
    * `libstagefright.so`
    * `libcutils.so`
 
-Dans la version Android N, Google a supprimé l’accès à ces bibliothèques privées. Le système d&#39;exploitation Gingerbread représente actuellement moins de 1 % de la part de marché d&#39;Android OS dans le monde, de sorte qu&#39;après la version 1.4.23, le système d&#39;exploitation Gingerbread ne sera plus pris en charge par TVSDK.
-Lorsque vous utilisez la version 1.4.23 (qui comprend la prise en charge d’Android N) ou ultérieure :
+Dans la version Android N, Google a supprimé l’accès à ces bibliothèques privées. Le système d’exploitation Gingerbread représente actuellement moins de 1 % de la part de marché d’Android OS dans le monde, de sorte qu’après la version 1.4.23, le système d’exploitation Gingerbread ne sera plus pris en charge par TVSDK.
+Lorsque vous utilisez la version 1.4.23 (qui inclut la prise en charge d’Android N) ou une version ultérieure :
 * Mettez à jour vos applications pour utiliser la version 11 de minSdkVersion.
-* Si l’utilisateur final exécute OS 2.3, la version du SDK est inférieure à la version minSdkVersion de l’application. Le système interrompt l’installation ou la mise à niveau de l’application.
-* Si votre utilisateur final exécute une version supérieure à OS 2.3, l’application sera correctement installée.
+* Si votre utilisateur final exécute OS 2.3, la version du SDK est inférieure à la version minSdkVersion de l’application. Le système interrompt l’installation ou la mise à niveau de l’application.
+* Si votre utilisateur final exécute une version supérieure à OS 2.3, l’application sera installée correctement.
 
 Si vous mettez à jour minSdkVersion :
 
-* Si votre utilisateur final exécute OS 2.3, l’application est installée mais la lecture ne fonctionne pas.
-Ceci s’applique à la fois à la mise à jour et à la nouvelle installation.
-* Si votre utilisateur final exécute un système supérieur à OS 2.3, l’application est correctement installée et le contenu est lu correctement.
+* Si votre utilisateur final exécute OS 2.3, l’application est installée, mais la lecture ne fonctionne pas.
+Cela s’applique à la mise à jour et à la nouvelle installation.
+* Si votre utilisateur final exécute un système supérieur à OS 2.3, l’application est installée correctement et le contenu est lu correctement.
 
 **Version 1.4.22**
 
-* Les sorties précoces des publicités ne fonctionnent pas avec certaines publicités preroll moyennes lorsque les balises splice-out et splice-in sont trop proches les unes des autres.
+* La sortie anticipée des publicités ne fonctionne pas avec certaines des publicités mid-roll lorsque les balises s’éloignent trop les unes des autres.
 
 **Version 1.4.2**
 
-* Le rembobinage lors d’une coupure publicitaire entraîne l’achèvement du flux.
+* Le retour en arrière lors d’une coupure publicitaire entraîne la fin du flux.
 
-Le Lecteur Media envoie incorrectement MediaPlayerState.Complete pendant l’opération de rembobinage de la lecture de l’écran lorsqu’il atteint une limite publicitaire. Le lecteur doit ignorer ce événement lorsqu’il est en mode de lecture par astuces, sinon le SDK gère correctement l’état.
+Le lecteur multimédia envoie de manière incorrecte MediaPlayerState.Complete lors de l’opération de rembobinage de lecture lorsqu’il atteint la limite de la publicité. Le lecteur doit ignorer cet événement lorsqu’il est en mode de lecture de l’astuce, sinon le SDK gère correctement l’état.
 
 **Version 1.4.0 (1086)**
 
-* PTPLAY-1634 - La même balise Abonné comporte différents horodatages dans différentes fenêtres dynamiques. Lorsque des fenêtres actives se déplacent, la même balise dans chacune d’elles doit comporter les mêmes horodatages. Cependant, parfois, même les mêmes balises ont des horodatages différents.
-* PTPLAY-2541 - COMPONENT_CREATION_FAILURE est parfois visible après plusieurs commutateurs vers/depuis le courant alternatif lors de pannes d&#39;électricité.
-* Bogue #3726865 - Si un flux LBA à débit multiple est début à partir d’un flux audio uniquement, la vidéo ne s’affichera pas si vous passez à un flux audio/vidéo. Le fait de démarrer à partir d’un flux audio/vidéo n’affichera pas ce problème et peut basculer entre les flux audio et audio/vidéo.
-* Bogue n° 3760144 - La résolution peut se décaler ou apparaître à l&#39;impulsion lorsqu&#39;un flux est en pause sur certains appareils tels que Kindle Fire 7 et Samsung Galaxy Nexus. Uniquement observable sous contrôle rapproché
-* Bogue #3761170 - searchToLocal en direct avec des publicités ne peut pas effectuer de recherche dans le contenu de la publicité ; il est préférable d’utiliser les API currentTime pour les flux en direct.
-* Bogue #3763370 - Les flux dynamiques avec publicités présenteront parfois deux marqueurs publicitaires qui se rapprochent lorsqu’il ne devrait y en avoir qu’un seul. Ces marques publicitaires représentent la même publicité et une seule est lue
-* Bogue #3763373 - Le marqueur d’annonce peut brièvement disparaître lors de la recherche au-delà d’une publicité dans les flux VOD. Le marqueur publicitaire est restauré et il n&#39;y a aucun autre effet négatif sur la chronologie
-* Certains périphériques connaissent des problèmes de lecture. Pour plus d’informations, voir [Problèmes de périphérique connus dans 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
-* Implémentation des références - Trick play n&#39;est pas implémenté dans l&#39;exemple d&#39;application.
+* PTPLAY-1634 - La même balise Abonnée comporte différents horodatages dans différentes fenêtres actives. Lorsque des fenêtres actives se déplacent, la même balise dans chacune d’elles doit avoir les mêmes horodatages. Cependant, parfois, même les mêmes balises ont des horodatages différents.
+* PTPLAY-2541 - COMPONENT_CREATION_FAILURE est parfois détecté après plusieurs pannes de courant vers/depuis le flux alternatif.
+* Bogue #3726865 - Si un flux LBA à débit multiple commence à partir d’un flux audio uniquement, la vidéo ne s’affichera pas si vous passez à un flux audio/vidéo. Le démarrage à partir d’un flux audio/vidéo n’affiche pas ce problème et peut passer d’une diffusion audio/vidéo à une diffusion audio/vidéo.
+* Bogue #3760144 - La résolution peut se déplacer ou sembler prendre du pouls lorsqu’un flux est mis en pause sur certains appareils tels que Kindle Fire 7 et Samsung Galaxy Nexus. Uniquement observable sous contrôle serré
+* Bogue #3761170 - searchToLocal en direct avec des publicités ne peut pas effectuer de recherche en amont dans le contenu publicitaire ; il est préférable d’utiliser les API currentTime pour les diffusions en direct.
+* Bogue #3763370 - Les diffusions en direct avec des publicités affichent parfois deux marqueurs de publicité qui se rapprochent lorsqu’il ne doit y en avoir qu’un seul. Ces marqueurs publicitaires représentent la même publicité, et un seul affichera
+* Bogue #3763373 - Le marqueur de publicité peut brièvement disparaître lors de la recherche au-delà d’une publicité dans les flux VOD. Le marqueur de publicité est restauré et aucun autre effet négatif n’est affecté sur la chronologie.
+* Certains périphériques ont des problèmes de lecture connus. Pour plus d’informations, voir [Problèmes de périphérique connus dans la version 1.4](https://helpx.adobe.com/primetime/release-notes/tvsdk-1-4-android.html#Knownissuesin14).
+* Implémentation de référence : la lecture de l’aperçu n’est pas implémentée dans l’exemple d’application.
 
 ## Problèmes de périphérique connus dans la version 1.4 {#known-device-issues-in}
 
-| Périphérique | Chipset | Problème | Cause | Solution |
+| Appareil | Chipset | Problème | Cause | Solution |
 |--- |--- |--- |--- |--- |
-| Droid X | TI OMAP3 | Le délai d’ABR est attendu depuis le redémarrage du décodeur. |  |  |
-| HTC Desire (différent de HTC Desire HD) | QSD8250 | Impossible de lire la vidéo. Renvoie une erreur VIDEO_PROFIL_NOT_SUPPORTED. | Le désir ne fournit pas un décodeur matériel approprié. Il donne le décodeur SW de Stagefright. | Redémarrez le périphérique. |
-| HTC EVO 4G | QSD8650 | Aucun décodeur HW. | Qualcomm n&#39;a pas de décodeur HW. | Mise à niveau vers Android 4.x. |
+| Droid X | TI OMAP3 | Le délai ABR est attendu depuis le redémarrage du décodeur. |  |  |
+| HTC Desire (différent de HTC Desire HD) | QSD8250 | Impossible de lire la vidéo. Renvoie l’erreur VIDEO_PROFILE_NOT_SUPPORTED . | Le désir ne fournit pas de décodeur de guerre du matériel approprié. Il donne le décodeur SW de Stagefright. | Redémarrez le périphérique. |
+| HTC EVO 4G | QSD8650 | Aucun décodeur HW. | Qualcomm n’a pas de décodeur HW. | Mise à niveau vers Android 4.x. |
 | Kindle FireSystem version 6.0 | TI OMAP4 | Ne lit pas les flux HLS. La vidéo sur AIR ne fonctionne pas. |  | Mise à niveau vers la version 6.3 du système. |
-| Kindle Fire HD | TI OMAP4 | Peut entrer dans un état où il ne peut pas lire la vidéo. Renvoie les erreurs VIDEO_PROFIL_NOT_SUPPORTED et UNRECOVERABLE_ERROR. | Le décodeur HW se retrouve dans un état irrécupérable lorsque l&#39;application n&#39;arrête pas complètement le décodeur HW, par exemple après un blocage. Se produit également sur les applications natives sur le périphérique. | Redémarrez le périphérique. |
+| Kindle Fire HD | TI OMAP4 | Peut entrer dans un état où il ne peut pas lire de vidéo. Renvoie les erreurs VIDEO_PROFILE_NOT_SUPPORTED et UNRECOVERABLE_ERROR . | Le décodeur HW se retrouve dans un état irrécupérable lorsque l’application n’arrête pas entièrement le décodeur HW, par exemple après avoir rencontré un blocage. Se produit également sur les applications natives de l’appareil. | Redémarrez l’appareil. |
 | Kindle Fire HD 8.9 | Snapdragon 800 | AVE se bloque après plusieurs commutateurs ABR. |  |  |
-| Motorola Atrix | Tegra2 | Problèmes de performances globaux avec AVE par rapport à AIR. Audio/vidéo hors synchronisation, la lecture vidéo se fige après 9 à 15 minutes de lecture. Blocs. | Peut-être lié à openGLES que nous activons sur AIR. En cours d&#39;enquête. |  |
-| Nexus 7 (2e génération) | S4Pro APQ8064 (Qualcomm) | L&#39;appareil se bloque lorsqu&#39;un film est suspendu pendant plus de 30 minutes. | Problème de périphérique signalé à Google. | L’application doit expirer afin de ne pas autoriser un état de pause long. |
-| Nexus S (GB) | Humming Bird | Impossible de lire une vidéo à l&#39;aide du décodeur HW. | Il n&#39;y a pas de décodeur HW basé sur Stagefright dans Nexus S, donc pour Android 2.3 nous utilisons un décodeur SW. | Effectuez la mise à niveau vers ICS. |
-| Nexus S (ICS) | Humming Bird | Des vidéos scintillent parfois. | De mauvaises données peuvent entraîner un mauvais état du décodeur. | Redémarrez le périphérique. |
-| Tablette NookAndroid OS : 2,3 | TI OMAP 4 | La vidéo ne fonctionne pas et l&#39;application est suspendue. | Stagefright entre dans un état instable après avoir exécuté l’application plusieurs fois. Les appels à mediaplayer::QueryCodecs sont suspendus. | Redémarrez le périphérique pour réinitialiser l’état. |
-| Samsung Galaxy ACE | Qualcomm MSM7227 | Impossible d&#39;installer l&#39;application SampleMediaPlayer. | utilise ARM v6 au lieu du chipset ARM v7 le plus courant. FP/AIR ne prend pas en charge ce périphérique. |  |
-| Samsung Galaxy ACE2Android OS : 2.3.6 | NovaThor U8500 | Impossible de lire la vidéo. | Ce chipset est un décodeur inconnu pour Android pre-ICS dans AVE. |  |
-| Samsung Galaxy S2 (GT-I9100) | Exynos | Les performances vidéo ne sont pas à la hauteur pour ce périphérique. | Le décodeur HW renvoie des cadres décodés avec un PTS incorrect. Il semble que le décodeur utilise le temps de décodage plutôt que le temps de présentation. |  |
-| Samsung Galaxy S2 GAndroid OS : 2.3.6 | TI OMAP4 | Blocage au démarrage de la vidéo. |  | Mise à niveau vers Android 2.3.7 ou 4.x. |
-| Samsung Galaxy S3 (I747) | Qualcomm MSM8960 | Par intermittence, la vidéo se fige et seul le son est lu, puis ne répond plus. |  |  |
+| Motorola | Tegra2 | Problèmes de performances généraux avec AVE par opposition à AIR. L’audio/la vidéo est hors synchronisation, la lecture vidéo se fige après lecture entre 9 et 15 minutes. Blocages. | Peut-être lié à openGLES que nous activons sur AIR. En cours d&#39;enquête. |  |
+| Nexus 7 (2e génération) | S4Pro APQ8064 (Qualcomm) | L’appareil se bloque lorsqu’un film est mis en pause pendant plus de 30 minutes. | Problème de périphérique signalé à Google. | L’application doit expirer afin de ne pas autoriser un état de pause long. |
+| Nexus S (GB) | Humming Bird | Impossible de lire une vidéo à l’aide du décodeur HW. | Il n’existe pas de décodeur HW basé sur Stagefright dans Nexus S. Pour Android 2.3, nous utilisons donc un décodeur SW. | Effectuez la mise à niveau vers ICS. |
+| Nexus S (ICS) | Humming Bird | La vidéo scintille parfois. | Des données incorrectes peuvent entraîner un mauvais état du décodeur. | Redémarrez l’appareil. |
+| Tablette Nook Android OS : 2.3 | TI OMAP 4 | La vidéo ne se joue pas et l’application se bloque. | Le Stagefright entre dans un état instable après avoir exécuté l’application plusieurs fois. Appels à mediaplayer::QueryCodecs sont suspendus. | Redémarrez l’appareil pour réinitialiser l’état. |
+| Samsung Galaxy ACE | Qualcomm MSM7227 | Impossible d’installer l’application SampleMediaPlayer. | Utilise ARM v6 au lieu du jeu de puces ARM v7 le plus courant. FP/AIR ne prend pas en charge cet appareil. |  |
+| Samsung Galaxy ACE2Android OS : 2.3.6 | NovaThor U8500 | Impossible de lire la vidéo. | Ce jeu de puces est un décodeur inconnu pour Android pre-ICS dans AVE. |  |
+| Samsung Galaxy S2 (GT-I9100) | Exynos | Les performances vidéo ne sont pas à la hauteur pour cet appareil. | Le décodeur HW renvoie des cadres décodés avec le mauvais système de traitement de texte (PTS). Il semble que le décodeur utilise le temps de décodage plutôt que le temps de présentation. |  |
+| Samsung Galaxy S2 GAndroid OS : 2.3.6 | TI OMAP4 | Blocages lors du démarrage de la vidéo. |  | Mise à niveau vers Android 2.3.7 ou 4.x. |
+| Samsung Galaxy S3 (I747) | Qualcomm MSM8960 | Par intermittence, la vidéo se bloque et seul le son est lu, puis ne répond plus. |  |  |
 | Samsung Galaxy S3 I747M | SAMSUNG_M2ATT | La vidéo gèle. | Enquêter. |  |
-| Samsung Galaxy Tab 1 v10.1 | Tegra 2 | La transition MBR peut prendre jusqu&#39;à trois secondes. | En tant que correctif pour les blocages MBR, nous redémarrons le décodeur pour chaque commutateur de flux, qui peut prendre jusqu’à trois secondes. |  |
-| Samsung Galaxy Y |  | Impossible d&#39;installer l&#39;application SampleMediaPlayer. | utilise ARM v6 au lieu du chipset ARM v7 le plus courant. FP/AIR ne prend pas en charge ce périphérique. |  |
-| Xoom | Tegra | Quelques images sont perdues pour le changement. Le décodeur n’est pas redémarré. | Limitation OMXAL. |  |
+| Samsung Galaxy Tab 1 v10.1 | Tegra 2 | La transition MBR peut prendre jusqu’à trois secondes. | Comme correctif pour les blocages MBR, nous redémarrons le décodeur pour chaque commutateur de diffusion, qui peut prendre jusqu’à trois secondes. |  |
+| Samsung Galaxy Y |  | Impossible d’installer l’application SampleMediaPlayer. | Utilise ARM v6 au lieu du jeu de puces ARM v7 le plus courant. FP/AIR ne prend pas en charge cet appareil. |  |
+| Xoom | Tegra | Quelques images sont perdues pour le changement. Le décodeur n’est pas redémarré. | Limitation OMXALE. |  |
 
 ## Ressources utiles {#helpful-resources}
 
-* Consultez la documentation d’aide complète à la [page Apprentissage et support Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consultez la documentation d’aide complète à l’adresse [Formation et assistance pour Adobe Primetime](https://helpx.adobe.com/support/primetime.html) page.

@@ -1,20 +1,18 @@
 ---
-description: L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur Adobe Primetime DRM Server pour les fichiers de configuration de diffusion en flux continu protégé.
-title: Défileur de mots de passe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’utilitaire Password Scrambler crypte un mot de passe pour le serveur Adobe Primetime DRM pour les fichiers de configuration de diffusion en continu protégée.
+title: Délimiteur de mot de passe
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# Délimiteur de mot de passe {#password-scrambler}
 
-# Défileur de mot de passe {#password-scrambler}
+L’utilitaire Password Scrambler crypte un mot de passe pour le serveur Adobe Primetime DRM pour les fichiers de configuration de diffusion en continu protégée.
 
-L’utilitaire Password Scrambler chiffre un mot de passe pour le serveur Adobe Primetime DRM Server pour les fichiers de configuration de diffusion en flux continu protégé.
-
-Pour exécuter le scrambler, tapez :
+Pour exécuter le scrambler, saisissez :
 
 ```
 Scrambler.bat  
@@ -41,8 +39,8 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Tous les mots de passe que vous avez spécifiés dans les fichiers [!DNL flashaccess-global.xml] et [!DNL flashaccess-tenant.xml] doivent être chiffrés.
+Tous les mots de passe que vous avez spécifiés dans la variable [!DNL flashaccess-global.xml] et [!DNL flashaccess-tenant.xml] Les fichiers doivent être cryptés.
 
 >[!NOTE]
 >
->L&#39;utilitaire Password Scrambler du serveur DRM Primetime pour la diffusion en flux continu protégée n&#39;est pas interchangeable avec le scrambler fourni avec le serveur de licence de mise en oeuvre de référence.
+>L’utilitaire Password Scrambler du serveur Primetime DRM for Protected Streaming n’est pas interchangeable avec le scrambler fourni avec le serveur de licence de mise en oeuvre de référence.

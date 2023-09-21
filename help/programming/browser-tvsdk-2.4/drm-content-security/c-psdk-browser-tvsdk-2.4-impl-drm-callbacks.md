@@ -1,22 +1,20 @@
 ---
 description: Les nouvelles API suivantes vous permettent de définir des rappels DRM.
-title: Implémentation de rappels DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implémentation des rappels DRM
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
-
-# Implémentation de rappels DRM{#implementing-drm-callbacks}
+# Implémentation des rappels DRM{#implementing-drm-callbacks}
 
 Les nouvelles API suivantes vous permettent de définir des rappels DRM.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Vous pouvez définir une fonction de rappel (par exemple, `parseContentIdCallback`) pour analyser l’ID de contenu et le définir sur `drmManager` à l’aide de l’API `setParseContentIdCallback`.
+Vous pouvez définir une fonction de rappel (par exemple, `parseContentIdCallback`) pour analyser l’ID de contenu et le définir sur `drmManager` en utilisant la variable `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +37,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Vous pouvez définir une fonction de rappel (par exemple, `onCertificateResponseCallback`) pour traiter une réponse de certificat de texte et définir la fonction sur `drmManager` à l&#39;aide de l&#39;API `setCertificateResponseCallback`. Vous pouvez définir `setCertificateResponseCallback` pour remplacer le comportement par défaut. Par exemple, si vous avez `certificateResponseType` qui n&#39;est pas `ArrayBuffer`, vous pouvez utiliser ce rappel pour convertir la réponse du certificat au type `ArrayBuffer`.
+Vous pouvez définir une fonction de rappel (par exemple, `onCertificateResponseCallback`) pour traiter une réponse de certificat de texte et définir la fonction sur `drmManager` en utilisant la variable `setCertificateResponseCallback` API. Vous pouvez définir `setCertificateResponseCallback` pour remplacer le comportement par défaut. Par exemple, si vous avez une `certificateResponseType` qui est autre que `ArrayBuffer`, vous pouvez utiliser ce rappel pour convertir la réponse du certificat en `ArrayBuffer` type.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +64,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Vous pouvez définir des fonctions de rappel pour analyser le message de licence et la réponse de licence et les transmettre dans un appel à `drmManager.acquireLicense`. `onLicenseResponseCallback` est un nouveau paramètre de l’ `acquireLicense` API.
+Vous pouvez définir des fonctions de rappel pour analyser le message de licence et la réponse de licence et les transmettre dans un appel à `drmManager.acquireLicense`. `onLicenseResponseCallback` est un nouveau paramètre de la variable `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +119,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-Dans les données de protection, le nouveau champ **[!UICONTROL certificateResponseType]** est utilisé pour définir le type de réponse du certificat. Voici un exemple de données de protection :
+Dans les données de protection, la nouvelle **[!UICONTROL certificateResponseType]** est utilisé pour définir le type de réponse du certificat. Voici un exemple de données de protection :
 
 ```js
 { 
@@ -137,4 +135,4 @@ Dans les données de protection, le nouveau champ **[!UICONTROL certificateRespo
 }
 ```
 
-L&#39;utilisation du champ `certificateResponseType` est facultative. Si elle n’est pas utilisée, la valeur est supposée être `ArrayBuffer`.
+En utilisant la variable `certificateResponseType` est facultatif. Si elle n’est pas utilisée, la valeur est supposée être `ArrayBuffer`.

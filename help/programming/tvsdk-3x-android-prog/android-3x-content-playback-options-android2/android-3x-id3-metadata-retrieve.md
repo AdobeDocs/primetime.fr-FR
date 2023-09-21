@@ -1,35 +1,33 @@
 ---
-description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
+description: Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. TVSDK détecte les balises ID3 au niveau du segment du flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
 title: Balises ID3
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-
 # Balises ID3 {#id-tags}
 
-Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. TVSDK détecte les balises ID3 au niveau du segment de flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
+Les balises ID3 fournissent des informations sur un fichier audio ou vidéo, telles que le titre du fichier ou le nom de l’artiste. TVSDK détecte les balises ID3 au niveau du segment du flux de transport (TS) dans les flux HLS et distribue un événement. L’application peut extraire des données de la balise .
 
 >[!IMPORTANT]
 >
->TVSDK reconnaît les métadonnées ID3 (version 2.3.0 ou 2.4.0) dans les flux audio (AAC) et vidéo (H.264) dans n’importe quel de ses encodages possibles (ASCII, UTF8, UTF16-BE ou UTF16-LE). Il ignore les balises ID3 qui ne se trouvent pas dans l’une des versions ou formats reconnus. Le codage non spécifié est traité comme UTF8.
+>TVSDK reconnaît les métadonnées ID3 (version 2.3.0 ou 2.4.0) dans les flux audio (AAC) et vidéo (H.264) dans l’un de ses encodages possibles (ASCII, UTF8, UTF16-BE ou UTF16-LE). Il ignore les balises ID3 qui ne se trouvent pas dans l’une des versions ou l’un des formats reconnus. Le codage non spécifié est traité comme UTF8.
 
-Lorsque TVSDK détecte les métadonnées ID3, il émet une notification contenant les données suivantes :
+Lorsque TVSDK détecte les métadonnées ID3, il émet une notification avec les données suivantes :
 
 * TYPE = ID3
 * NAME = ID3
 
-1. Implémentez un écouteur de événement pour `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et enregistrez-le avec l&#39;objet `MediaPlayer`.
+1. Mise en oeuvre d’un écouteur d’événement pour `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` et l’enregistrer auprès de la fonction `MediaPlayer` .
 
-   TVSDK appelle cet écouteur lorsqu’il détecte des métadonnées `ID3`.
+   TVSDK appelle cet écouteur lorsqu’il détecte `ID3` métadonnées.
 
    >[!TIP]
    >
-   >Les indices publicitaires personnalisés utilisent le même événement `onTimedMetadata` pour indiquer la détection d’une nouvelle balise. Cela ne doit pas entraîner de confusion, car des indices publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir [Balises personnalisées](../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-configure.md).
+   >Les repères de publicité personnalisés utilisent le même `onTimedMetadata` pour indiquer la détection d’une nouvelle balise. Cela ne doit pas prêter à confusion, car des signaux publicitaires personnalisés sont détectés au niveau du manifeste et les balises ID3 sont incorporées dans le flux. Pour plus d’informations, voir [Balises personnalisées](../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-configure.md).
 
 1. Récupérez les métadonnées.
 

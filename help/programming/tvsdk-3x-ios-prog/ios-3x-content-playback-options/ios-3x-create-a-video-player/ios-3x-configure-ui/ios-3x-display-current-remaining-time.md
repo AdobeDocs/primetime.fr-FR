@@ -1,8 +1,7 @@
 ---
 description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 title: Afficher l’heure actuelle et l’heure restante
-exl-id: f1aebeb7-381b-4bd5-8535-32b902f838d2
-source-git-commit: 7e3f1e2dcf855ecd241b2aebc01d9d60c90ed114
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
-1. Pour mettre en oeuvre un affichage qui affiche l’heure actuelle et restante du contenu principal, utilisez l’exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche l’heure actuelle et restante du contenu actif, utilisez l’exemple de code suivant :
 
    ```
       // 1. Register for the PTMediaPlayerTimeChangeNotification 

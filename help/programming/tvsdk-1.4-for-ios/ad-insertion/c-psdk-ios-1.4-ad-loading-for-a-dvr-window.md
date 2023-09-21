@@ -1,36 +1,34 @@
 ---
-description: Vous pouvez décider de résoudre uniquement les publicités qui surviennent après le point d’activation actuel de l’utilisateur ou également les publicités qui surviennent avant le point d’activation actuel.
-title: Charger la publicité pour une fenêtre DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez décider de ne résoudre que les publicités qui surviennent après le point d’activation actuel de l’utilisateur ou de résoudre également les publicités qui surviennent avant le point d’activation actuel.
+title: Chargement de la publicité pour une fenêtre DVR
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Chargement de la publicité pour une fenêtre DVR {#load-ad-for-a-dvr-window}
 
-# Charger la publicité pour une fenêtre DVR {#load-ad-for-a-dvr-window}
+Vous pouvez décider de ne résoudre que les publicités qui surviennent après le point d’activation actuel de l’utilisateur ou de résoudre également les publicités qui surviennent avant le point d’activation actuel.
 
-Vous pouvez décider de résoudre uniquement les publicités qui surviennent après le point d’activation actuel de l’utilisateur ou également les publicités qui surviennent avant le point d’activation actuel.
-
-Lorsqu’un utilisateur début à vue du contenu au début d’un flux d’enregistrement vidéo numérique, TVSDK résout toutes les publicités du flux à ce moment-là. Cependant, lorsque l’utilisateur début de vue du contenu à un moment situé après le début du flux, vous pouvez décider de résoudre uniquement les publicités qui surviennent après le point de diffusion actif de l’utilisateur ou de résoudre également les publicités qui se sont produites avant le point de diffusion actif.
+Lorsqu’un utilisateur commence à afficher du contenu au début d’un flux de diffusion numérique (DVR), TVSDK résout toutes les publicités du flux à ce moment-là. Cependant, lorsque l’utilisateur commence à afficher le contenu à un moment après le début de la diffusion, vous pouvez décider de résoudre uniquement les publicités qui se produisent après le point d’activation actuel de l’utilisateur ou de résoudre également les publicités qui se sont produites avant le point d’activation actuel.
 
 >[!TIP]
 >
->Il est plus rapide de résoudre les publicités une fois le point d’accès actif, mais si l’utilisateur effectue une recherche en amont, cette option empêche le lecteur de lire les publicités qui s’affichaient plus tôt.
+>La résolution des publicités après le point d’activation actuel est plus rapide, mais si l’utilisateur effectue une recherche vers l’arrière, cette option empêche le lecteur de lire les publicités apparues précédemment.
 
-## Contrôler le chargement de la publicité pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
+## Contrôler le chargement des publicités pour une fenêtre DVR {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 Pour contrôler le chargement des publicités pour une fenêtre DVR :
 
-Pour charger toutes les publicités pour l’ensemble du flux, définissez la propriété `PTAdMetadata.enableDVRAds` sur `YES`.
+Pour charger toutes les publicités pour la diffusion entière, définissez la variable `PTAdMetadata.enableDVRAds` de `YES`.
 
 >[!NOTE]
 >
->La valeur par défaut est `NO` et cette option charge les publicités uniquement à partir du point de production actuel.
+>La valeur par défaut est `NO`et cette option charge uniquement les publicités à partir du point d’entrée actif actuel.
 
-Par exemple :
+Par exemple :
 
 ```
 PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 

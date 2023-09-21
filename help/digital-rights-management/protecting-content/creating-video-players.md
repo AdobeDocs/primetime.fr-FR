@@ -2,19 +2,17 @@
 title: Création de lecteurs vidéo
 description: Création de lecteurs vidéo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
-# Créer des lecteurs vidéo{#create-video-players}
+# Création de lecteurs vidéo{#create-video-players}
 
 Si vous souhaitez lire du contenu protégé, votre application doit utiliser les API DRM ActionScript 3 ou Adobe Primetime DRM.
 
-Pour plus d&#39;informations, consultez l&#39;*ActionScript de programmation 3* et le *ActionScript 3.0 Reference for the Adobe Flash Platform*.
+Voir *ActionScript de programmation 3* et la variable *Référence d’ActionScript 3.0 pour Adobe Flash Platform* pour plus d’informations.
 
-Reportez-vous à la documentation Adobe Primetime PSDK sur la création de lecteurs vidéo basés sur iOS.
+Consultez la documentation Adobe Primetime PSDK sur la création de lecteurs vidéo iOS.

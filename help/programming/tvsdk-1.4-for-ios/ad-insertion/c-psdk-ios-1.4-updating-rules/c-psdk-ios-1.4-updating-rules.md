@@ -1,36 +1,31 @@
 ---
-description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection publicitaire créative sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
-keywords: règles de sélection créative ; Adobe TVSDKConfig ; priorités créatives ; règles de transformation
-title: Mettre à jour les règles de sélection publicitaire
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection créative publicitaire sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation des URL sources pour les créatifs publicitaires.
+keywords: règles de sélection créative;AdobeTVSDKConfig;priorités créatives;règles de transformation
+title: Mise à jour des règles de sélection créative
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Présentation {#update-ad-creative-selection-rules-overview}
 
-# Aperçu {#update-ad-creative-selection-rules-overview}
+Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection créative publicitaire sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation des URL sources pour les créatifs publicitaires.
 
-Vous pouvez utiliser le fichier de configuration TVSDK (AdobeTVSDKConfig.json) pour mettre à jour les priorités de la sélection publicitaire créative sur les réponses VAST/VMAP. Vous pouvez également utiliser ce fichier de configuration pour définir les règles de transformation de l’URL source pour les créatifs publicitaires.
-
-Lorsque votre lecteur vidéo envoie une requête à un serveur d’annonces, la réponse VAST/VMAP comprend généralement plusieurs éléments créatifs d’annonces ( `MediaFile` éléments), chacun d’eux fournissant une URL vers une version de conteneur-codec différente. Dans certains cas, les créatifs publicitaires dans la réponse VAST/VMAP fournissent chacun un débit différent pour la publicité. Si vous souhaitez définir vos propres règles de priorité et de transformation pour ces créatifs publicitaires, vous pouvez le faire dans le fichier de configuration [!DNL AdobeTVSDKConfig.json].
+Lorsque votre lecteur vidéo envoie une requête à un serveur de publicités, la réponse VAST/VMAP comprend généralement plusieurs créations publicitaires ( `MediaFile` ), chacun fournissant une URL vers une version de conteneur-codec différente. Dans certains cas, les créatifs publicitaires dans la réponse VAST/VMAP fournissent chacun un débit différent pour la publicité. Si vous souhaitez définir vos propres priorités et règles de transformation pour ces créatifs publicitaires, vous pouvez le faire dans la variable [!DNL AdobeTVSDKConfig.json] fichier de configuration.
 
 >[!IMPORTANT]
 >
 >* Ne modifiez pas le nom du fichier de configuration TVSDK. Le nom doit rester [!DNL AdobeTVSDKConfig.json].
->* Vous pouvez placer ce fichier n’importe où accessible pour votre lot.
-
+>* Vous pouvez placer ce fichier n’importe où accessible à votre lot.
 >
 
-
-
-Vous pouvez spécifier deux types de règles dans [!DNL AdobeTVSDKConfig.json] : *Règles de priorité* et *Normaliser* règles.
+Vous pouvez spécifier deux types de règles dans [!DNL AdobeTVSDKConfig.json]: *Priorité* règles et *Normaliser* règles.
 
 **[!UICONTROL Disabling Pre-Roll]**
 
-Pour désactiver le pré-roulement, vous devez modifier les générateurs d&#39;opportunités par défaut pour ne pas effectuer l&#39;appel pré-roulement. Par défaut, TVSDK utilise les générateurs d’opportunités suivants :
+Pour désactiver le preroll, vous devez modifier les générateurs d’opportunités par défaut afin de ne pas effectuer l’appel preroll. Par défaut, TVSDK utilise les générateurs d’opportunités suivants :
 
 ```
 /** 
@@ -44,7 +39,7 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
 } 
 ```
 
-Pour désactiver le prédéploiement sur les flux en direct, cette modification doit être modifiée afin d’inclure uniquement SpliceOutOpportunityGenerator :
+Pour désactiver le preroll sur les diffusions en direct, cela doit changer afin d’inclure uniquement SpliceOutOpportunityGenerator :
 
 ```
 /** 
@@ -59,4 +54,3 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
     return result; 
 }
 ```
-

@@ -1,30 +1,28 @@
 ---
-description: Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
+description: Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonnées de prise de décision publicitaire d’Adobe Primetime.
 title: Configuration des métadonnées d’insertion de publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Configuration des métadonnées d’insertion de publicités{#set-up-ad-insertion-metadata}
 
-# Configurer les métadonnées d’insertion de publicité{#set-up-ad-insertion-metadata}
-
-Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonnées de prise de décision des publicités Adobe Primetime.
+Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonnées de prise de décision publicitaire d’Adobe Primetime.
 
 >[!TIP]
 >
->La prise de décision publicitaire Adobe Primetime était auparavant connue sous le nom d’Auditude.
+>La prise de décision publicitaire Adobe Primetime était auparavant connue sous le nom d’ Auditude .
 
-1. Créez l&#39;instance `AuditudeSettings`.
+1. Créez la variable `AuditudeSettings` instance.
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domain et Adobe Primetime pour la prise de décision publicitaire.
+1. Définissez les paramètres de ciblage facultatifs MediaID, zoneID, domaine et Adobe Primetime Ad Decisioning.
 
    ```js
    auditudeSettings.domain = "yourdomain"; 
@@ -32,7 +30,7 @@ Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonn
    auditudeSettings.zoneId = "zoneid";
    ```
 
-1. Créez une instance `MediaResource` en utilisant l’URL du flux média et les métadonnées publicitaires créées précédemment.
+1. Créez un `MediaResource` en utilisant l’URL du flux multimédia et les métadonnées publicitaires créées précédemment.
 
    ```js
    mediaResource = new AdobePSDK.MediaResource ( 
@@ -41,17 +39,17 @@ Utilisez la classe d’assistance AuditudeSettings pour configurer les métadonn
          auditudeSettings);
    ```
 
-1. Chargez l&#39;objet `MediaResource` par l&#39;intermédiaire de la méthode `MediaPlayer.replaceCurrentResource(resource)`.
+1. Chargez la variable `MediaResource` via l’objet `MediaPlayer.replaceCurrentResource(resource)` .
 
-   Le `MediaPlayer` début le chargement et le traitement du manifeste de flux média.
+   La variable `MediaPlayer` démarre le chargement et le traitement du manifeste de flux multimédia.
 
-1. Lorsque `MediaPlayer` transition à l&#39;état INITIALISÉ, obtenez les caractéristiques du flux média sous la forme d&#39;une instance `MediaPlayerItem` par le biais de l&#39;attribut `MediaPlayer.CurrentItem`.
-1. (Facultatif) Requête l’instance `MediaPlayerItem` pour déterminer si le flux est actif, qu’il possède ou non d’autres pistes audio.
+1. Lorsque la variable `MediaPlayer` les transitions vers l’état INITIALIZED, obtenir les caractéristiques de diffusion multimédia sous la forme d’une `MediaPlayerItem` via l’instance `MediaPlayer.CurrentItem` attribut.
+1. (Facultatif) Interrogez le `MediaPlayerItem` pour voir si le flux est actif, qu’il possède des pistes audio alternatives ou non.
 
-   Ces informations peuvent vous aider à préparer l’interface utilisateur à la lecture. Par exemple, si vous savez qu&#39;il y a deux pistes audio, vous pouvez inclure une commande d&#39;interface utilisateur qui bascule entre ces pistes.
+   Ces informations peuvent vous aider à préparer l’interface utilisateur pour la lecture. Par exemple, si vous savez qu’il existe deux pistes audio, vous pouvez inclure une commande de l’interface utilisateur qui bascule entre ces pistes.
 
-1. Appelez `MediaPlayer.prepareToPlay` pour début du processus publicitaire.
+1. Appeler `MediaPlayer.prepareToPlay` pour démarrer le workflow publicitaire.
 
-   Une fois les publicités résolues et placées dans la chronologie, `  MediaPlayer ` transition à l’état PRÉPARÉ.
-1. Appelez `MediaPlayer.play` pour début de la lecture.
-Le kit TVSDK du navigateur comprend désormais des publicités lorsque votre média est lu.
+   Une fois les publicités résolues et placées dans la chronologie, la variable `  MediaPlayer ` passe à l’état PRÉPARÉ .
+1. Appeler `MediaPlayer.play` pour démarrer la lecture.
+Le TVSDK du navigateur inclut désormais des publicités lorsque votre média est lu.

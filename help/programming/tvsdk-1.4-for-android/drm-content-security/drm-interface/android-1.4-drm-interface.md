@@ -1,93 +1,91 @@
 ---
-description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
-title: Présentation de l’interface DRM de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces comme alternative à la solution DRM intégrée de Primetime d’Adobe.
+title: Présentation de l’interface DRM Primetime
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
+# Présentation {#primetime-drm-interface-overview}
 
-# Aperçu {#primetime-drm-interface-overview}
-
-Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour assurer un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces en remplacement de la solution DRM intégrée Primetime par Adobe.
+Vous pouvez utiliser les fonctionnalités du système DRM (Primetime Digital Rights Management) pour fournir un accès sécurisé à votre contenu vidéo. Vous pouvez également utiliser des solutions DRM tierces comme alternative à la solution DRM intégrée de Primetime d’Adobe.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Consultez votre représentant Adobe pour obtenir les informations les plus récentes sur la disponibilité de solutions DRM tierces.
+Consultez le représentant de votre Adobe pour obtenir les informations les plus récentes sur la disponibilité de solutions DRM tierces.
 
-L’élément clé côté client du système de gestion des droits numériques (DRM) de Primetime est le Gestionnaire de DRM. L’exemple d’application inclus avec le SDK Android comprend une classe `DRMHelper` qui montre comment faciliter la mise en oeuvre de certaines opérations DRM.
+Le DRM est l’élément clé du système de gestion des droits numériques (DRM) de Primetime côté client. L’exemple d’application fourni avec le SDK Android comprend une `DRMHelper` qui montre comment faciliter la mise en oeuvre de certaines opérations DRM.
 
-Primetime DRM offre un flux de travail évolutif et efficace pour mettre en oeuvre la protection du contenu dans les applications TVSDK. Vous protégez et gérez les droits sur votre contenu vidéo en créant une licence pour chaque fichier multimédia numérique.
+Primetime DRM fournit un workflow évolutif et efficace pour mettre en oeuvre la protection du contenu dans les applications TVSDK. Vous protégez et gérez les droits sur votre contenu vidéo en créant une licence pour chaque fichier multimédia numérique.
 
 Reportez-vous à l’exemple de code du lecteur DRM inclus dans le package TVSDK.
 
-Il s’agit des éléments d’API les plus importants pour travailler avec DRM :
+Voici les éléments d’API les plus importants pour travailler avec DRM :
 
 * Référence dans le lecteur multimédia à l’objet du gestionnaire DRM qui implémente le sous-système DRM :
 
-   ```java
-   MediaPlayer.getDRMManager();
-   ```
+  ```java
+  MediaPlayer.getDRMManager();
+  ```
 
-   >[!TIP]
-   >
-   >Cette API retournera un objet `DRMManager` valide uniquement après le déclenchement de `MediaPlayerEvent.DRM_METADATA`. Si vous appelez `getDRMManager()` avant que ce événement ne se déclenche, il peut renvoyer la valeur NULL.
+  >[!TIP]
+  >
+  >Cette API renverra un `DRMManager` uniquement après l’objet `MediaPlayerEvent.DRM_METADATA` est déclenché. Si vous appelez `getDRMManager()` avant que cet événement ne se déclenche, il peut renvoyer la valeur NULL.
 
-* La classe d&#39;assistance `DRMHelper`, utile lors de l&#39;implémentation de workflows DRM.
+* La variable `DRMHelper` classe d’assistance, utile lors de la mise en oeuvre des processus DRM.
 
-   Vous pouvez voir `DRMHelper` dans `ReferencePlayer`.
+  Vous pouvez voir `DRMHelper` in `ReferencePlayer`.
 
-* Méthode de chargeur de métadonnées `DRMHelper`, qui charge les métadonnées DRM lorsqu’elles sont situées dans une URL distincte du média.
+* A `DRMHelper` méthode de chargeur de métadonnées qui charge les métadonnées DRM lorsqu’elles se trouvent dans une URL distincte du média.
 
-   ```java
-   public static void loadDRMMetadata(final DRMManager drmManager,  
-      final String drmMetadataUrl,  
-      final DRMLoadMetadataListener loadMetadataListener);
-   ```
+  ```java
+  public static void loadDRMMetadata(final DRMManager drmManager,  
+     final String drmMetadataUrl,  
+     final DRMLoadMetadataListener loadMetadataListener);
+  ```
 
-* Méthode `DRMHelper` permettant de vérifier les métadonnées DRM afin de déterminer si une authentification est nécessaire.
+* A `DRMHelper` pour vérifier les métadonnées DRM afin de déterminer si une authentification est nécessaire.
 
-   ```java
-   /** 
-   * Return whether authentication is needed for the provided 
-   * DRMMetadata. 
-   * 
-   * @param drmMetadata 
-   * The desired DRMMetadata on which to check whether auth is needed. 
-   * @return whether authentication is required for the provided metadata 
-   */ 
-   public static boolean isAuthNeeded(DRMMetadata drmMetadata);
-   ```
+  ```java
+  /** 
+  * Return whether authentication is needed for the provided 
+  * DRMMetadata. 
+  * 
+  * @param drmMetadata 
+  * The desired DRMMetadata on which to check whether auth is needed. 
+  * @return whether authentication is required for the provided metadata 
+  */ 
+  public static boolean isAuthNeeded(DRMMetadata drmMetadata);
+  ```
 
 * `DRMHelper` pour effectuer l’authentification.
 
-   ```java
-   /** 
-   * Helper method to perform DRM authentication. 
-   * 
-   * @param drmManager 
-   * the DRMManager, used to perform the authentication. 
-   * @param drmMetadata 
-   * the DRMMetadata, containing the DRM specific information. 
-   * @param authenticationListener 
-   * the listener, on which the user can be notified about the 
-   * authentication process status. 
-   * @param authUser 
-   * the DRM username provider by the user. 
-   * @param authPass 
-   * the DRM password provided by the user. 
-   */ 
-   public static void performDrmAuthentication(final DRMManager drmManager,  
-   final DRMMetadata drmMetadata,  
-   final String authUser,  
-   final String authPass,  
-   final DRMAuthenticationListener authenticationListener);
-   ```
+  ```java
+  /** 
+  * Helper method to perform DRM authentication. 
+  * 
+  * @param drmManager 
+  * the DRMManager, used to perform the authentication. 
+  * @param drmMetadata 
+  * the DRMMetadata, containing the DRM specific information. 
+  * @param authenticationListener 
+  * the listener, on which the user can be notified about the 
+  * authentication process status. 
+  * @param authUser 
+  * the DRM username provider by the user. 
+  * @param authPass 
+  * the DRM password provided by the user. 
+  */ 
+  public static void performDrmAuthentication(final DRMManager drmManager,  
+  final DRMMetadata drmMetadata,  
+  final String authUser,  
+  final String authPass,  
+  final DRMAuthenticationListener authenticationListener);
+  ```
 
-* Événements qui informent votre application de diverses activités et de l’état de DRM.
+* Événements qui informent votre application de divers statuts et activités DRM.
 
 <!--<a id="section_899BD9061D484E1BBA46E84617C36867"></a>-->
 
@@ -108,4 +106,4 @@ Comment Type: draft
 -->
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Pour plus d’informations sur DRM, voir la [documentation Adobe Primetime DRM](https://helpx.adobe.com/primetime/user-guide.html).
+Pour plus d’informations sur DRM, voir [Documentation Adobe Primetime DRM](https://helpx.adobe.com/primetime/user-guide.html).

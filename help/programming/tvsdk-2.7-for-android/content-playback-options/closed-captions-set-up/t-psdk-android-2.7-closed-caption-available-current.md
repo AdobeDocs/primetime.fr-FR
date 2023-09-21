@@ -1,36 +1,34 @@
 ---
-description: Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d'autres sont devenues disponibles.
-title: Sélectionner une piste de sous-titrage actuelle parmi les pistes disponibles
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez sélectionner un suivi dans une liste de suivi de sous-titres actuellement disponibles. Cela devient le suivi actuel, qui s’affiche lorsque la visibilité est activée. Il se peut que certaines pistes ne soient pas disponibles initialement. Par conséquent, écoutez l’événement qui indique que d’autres sont devenues disponibles.
+title: Sélectionner un suivi de légende actuel parmi les pistes disponibles
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Sélectionner un suivi de légende actuel parmi les pistes disponibles {#select-a-current-caption-track-from-among-available-tracks}
 
-# Sélectionnez une piste de légende actuelle parmi les pistes disponibles {#select-a-current-caption-track-from-among-available-tracks}
+Vous pouvez sélectionner un suivi dans une liste de suivi de sous-titres actuellement disponibles. Cela devient le suivi actuel, qui s’affiche lorsque la visibilité est activée. Il se peut que certaines pistes ne soient pas disponibles initialement. Par conséquent, écoutez l’événement qui indique que d’autres sont devenues disponibles.
 
-Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-titres actuellement disponibles. Cela devient la piste actuelle, qui s’affiche lorsque la visibilité est activée. Certaines pistes ne sont peut-être pas disponibles au départ, alors écoutez le événement qui indique que d&#39;autres sont devenues disponibles.
-
-1. Attendez que le lecteur multimédia soit au moins dans l’état `PREPARED`.
+1. Attendez que le lecteur multimédia se trouve au moins dans la balise `PREPARED` statut.
 1. Prêtez attention aux événements suivants :
 
-   * `MediaPlayerEvent.STATUS_CHANGED` avec le statut  `MediaPlayerStatus.INITIALIZED`: La liste initiale des pistes de sous-titrage est disponible.
+   * `MediaPlayerEvent.STATUS_CHANGED` avec état `MediaPlayerStatus.INITIALIZED`: la liste initiale des suivis de sous-titres est disponible.
 
-1. Obtenez une liste de toutes les pistes de sous-titrage actuellement disponibles.
+1. Obtenez une liste de tous les suivi de sous-titres actuellement disponibles.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    List<ClosedCaptionsTrack> ccTracks = 
      mediaPlayer.getCurrentItem().getClosedCaptionsTracks();
    ```
 
-1. Sélectionnez une piste disponible pour être la piste en cours.
+1. Sélectionnez une piste disponible pour la suivi en cours.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    // Select the initial CC track. 
@@ -43,6 +41,6 @@ Vous pouvez sélectionner une piste à partir d’une liste de pistes de sous-ti
    }
    ```
 
-1. Implémentez un écouteur pour le événement qui indique que davantage de pistes sont disponibles. Lorsque TVSDK distribue le événement, récupérez la liste actuelle des pistes disponibles.
+1. Implémentez un écouteur pour l’événement qui indique que d’autres pistes sont disponibles. Lorsque TVSDK distribue l’événement, récupérez la liste actuelle des pistes disponibles.
 
-   Récupérez la liste chaque fois que le événement se produit pour vous assurer que vous disposez toujours de la liste la plus récente.
+   Récupérez la liste chaque fois que l’événement se produit pour vous assurer que vous disposez toujours de la liste la plus récente.

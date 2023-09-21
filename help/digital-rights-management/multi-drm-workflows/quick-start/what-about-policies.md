@@ -1,24 +1,21 @@
 ---
-description: La définition de stratégies consiste à définir des conditions pour qu’un utilisateur soit autorisé à lire du contenu vidéo protégé et quand et comment.
+description: La définition de stratégies est le processus de spécification de conditions pour quand et comment un utilisateur est autorisé à lire du contenu vidéo protégé.
 title: Définition des stratégies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Définition des stratégies{#setting-policies}
 
-# Définition de stratégies{#setting-policies}
+La définition de stratégies est le processus de spécification de conditions pour quand et comment un utilisateur est autorisé à lire du contenu vidéo protégé.
 
-La définition de stratégies consiste à définir des conditions pour qu’un utilisateur soit autorisé à lire du contenu vidéo protégé et quand et comment.
+La création d’une stratégie s’effectue dans le cadre de votre demande de jeton de licence. (Voir [https://www.expressplay.com/developer/restapi/#widevine-license-token-request](https://www.expressplay.com/developer/restapi/#widevine-license-token-request) par exemple avec Widevine).
 
-La création de stratégie se produit dans le cadre de votre demande de jeton de licence. (Voir [https://www.expressplay.com/developer/restapi/#widevine-license-token-request](https://www.expressplay.com/developer/restapi/#widevine-license-token-request) pour un exemple d’utilisation de Widevine).
-
-Une fois que le code côté serveur d&#39;un client a déterminé qu&#39;il délivrera une licence (en fonction des vérifications de droits, de la géolocalisation ou de toute autre information requise), il demande un jeton et *dans le jeton* il spécifie les `securityLevel`, `hdcpOutputControl` et `licenseDuration` requis. Ce sont les options côté client pour une politique Widevine. D&#39;autres solutions DRM offre des approches similaires, mais les détails sont différents dans chaque cas et sont détaillés dans les différents workflows.
+Une fois que le code côté serveur d’un client a déterminé qu’il va émettre une licence (en fonction des contrôles des droits, de la géolocalisation ou de toute autre information requise), il demande un jeton, et *dans le jeton* il spécifie les `securityLevel`, `hdcpOutputControl`, et `licenseDuration`. Il s’agit des options côté client pour une stratégie Windows. D&#39;autres solutions DRM proposent des approches similaires, mais les détails sont différents dans chaque cas et sont détaillés dans les différents workflows.
 
 >[!NOTE]
 >
->Adobe fournit un exemple de serveur de référence qui indique comment implémenter votre propre serveur de droits / vitrine : [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
-
+>Adobe fournit un exemple de serveur de référence qui indique comment mettre en oeuvre votre propre serveur de droits/storefront : [Serveur de référence : exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)

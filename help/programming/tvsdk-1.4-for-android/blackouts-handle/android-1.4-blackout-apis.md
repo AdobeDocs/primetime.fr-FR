@@ -1,63 +1,61 @@
 ---
-description: Vous pouvez gérer les coupures de courant dans les flux vidéo en direct et fournir un autre contenu pendant une coupure de courant.
-title: Eléments de l’API Blackout
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez gérer les pannes de courant dans les diffusions vidéo en direct et fournir un contenu alternatif lors d’une panne.
+title: Éléments de l’API de blackout
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
+# Éléments de l’API de blackout{#blackout-api-elements}
 
-# Eléments de l’API Blackout{#blackout-api-elements}
+Vous pouvez gérer les pannes de courant dans les diffusions vidéo en direct et fournir un contenu alternatif lors d’une panne.
 
-Vous pouvez gérer les coupures de courant dans les flux vidéo en direct et fournir un autre contenu pendant une coupure de courant.
+Lorsqu’un blackout se produit dans un flux en direct, votre lecteur utilise des gestionnaires d’événements pour détecter le blackout et fournir un contenu alternatif à ces utilisateurs qui ne sont pas éligibles pour regarder le flux principal. Votre lecteur détecte le début et la fin de la période d’interruption, bascule la lecture de la diffusion principale vers une diffusion alternative et revient à la diffusion principale lorsque la période d’interruption se termine.
 
-Lorsqu’une panne survient dans un flux en direct, votre lecteur utilise des gestionnaires de événement pour détecter la panne et fournir un autre contenu aux utilisateurs qui ne sont pas admissibles pour regarder le flux principal. Votre lecteur détecte le début et la fin de la période d’interruption, bascule la lecture du flux principal vers un flux alternatif et revient au flux principal à la fin de la période d’interruption.
+Pour gérer les pannes de courant dans les flux en direct :
 
-Pour gérer les pannes de courant en direct :
+1. Configurez votre application pour détecter les balises de blackout en vous abonnant aux balises de blackout dans un manifeste de diffusion en direct.
 
-1. Configurez votre application pour détecter les balises d’arrêt en vous abonnant aux balises d’arrêt dans un manifeste de diffusion en direct.
+   TVSDK ne détecte pas les balises de blackout par lui-même ; vous devez vous abonner aux balises de blackout pour recevoir une notification lorsque les balises sont rencontrées lors de l’analyse du fichier manifeste.
+1. Créez des écouteurs d’événement pour les balises auxquelles votre lecteur est abonné (dans ce cas, les balises LECTURE et SAUF) .
 
-   TVSDK ne détecte pas de balises d’interruption de service par ses propres moyens ; vous devez vous abonner à des balises d&#39;arrêt pour recevoir une notification lorsque les balises sont rencontrées lors de l&#39;analyse du fichier manifeste.
-1. Créez des écouteurs de événement pour les balises auxquelles votre lecteur est abonné (dans ce cas, les balises PLAYBACK et BLACKOUTS).
+   Lorsqu’une balise se produit à laquelle votre lecteur s’est abonné (par exemple, une balise d’interruption) dans les manifestes de diffusion de premier plan (contenu principal) ou en arrière-plan (contenu alternatif), TVSDK envoie une `TimedMetadataEvent` et crée une `TimedMetadataObject` pour le `TimedMetadataEvent`.
 
-   Lorsqu’une balise se produit à laquelle votre lecteur s’est abonné (par exemple, une balise d’arrêt) dans le flux de premier plan (contenu principal) ou d’arrière-plan (contenu alternatif), TVSDK distribue une balise `TimedMetadataEvent` et crée une balise `TimedMetadataObject` pour `TimedMetadataEvent`.
+1. Mettez en oeuvre des gestionnaires pour les événements de métadonnées minutés pour les flux de premier plan et d’arrière-plan.
 
-1. Mettez en oeuvre des gestionnaires pour les événements de métadonnées temporisés pour les flux de premier plan et d’arrière-plan.
+   Dans ces gestionnaires, obtenez les heures de début et de fin de la période d’interruption à partir des objets d’événement de métadonnées minutés.
+1. Créez des méthodes pour changer de contenu au début et à la fin de la période de blackout.
 
-   Dans ces gestionnaires, récupérez les heures de début et de fin de la période d’arrêt à partir des objets de événement de métadonnées minutés.
-1. Créez des méthodes pour changer de contenu le début et la fin de la période d’interruption.
+   Au début de la période d’interruption, basculez le contenu principal en arrière-plan et changez le contenu alternatif pour devenir la diffusion principale. Continuez à récupérer et à analyser le manifeste d’origine en arrière-plan et à rechercher la balise &quot;blackout end&quot;, de sorte que le lecteur puisse rejoindre le flux d’origine à la fin du blackout.
+1. Mettez à jour les plages non consultables si la plage d’interruption se trouve dans le répertoire de stockage global de documents (DVR) de la diffusion.
 
-   Lorsque la période d’interruption début, basculez le contenu principal en arrière-plan et basculez le contenu alternatif pour en faire le flux principal. Continuez à récupérer et à analyser le manifeste d’origine en arrière-plan et continuez à rechercher la balise &quot;blackout end&quot;, de sorte que le lecteur puisse rejoindre le flux d’origine lorsque la coupure se termine.
-1. Mettez à jour les plages impossibles à rechercher si la plage d’interruption se trouve dans le DVR du flux de lecture.
+   Suivez et gérez les `TimedMetadata` dans le flux d’arrière-plan, en préparant et en mettant à jour les plages impossibles à rechercher.
 
-   Assurez le suivi et la gestion de `TimedMetadata` dans le flux d&#39;arrière-plan en préparant et en mettant à jour des plages impossibles à rechercher de blackout.
-
-TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes d’électricité, notamment des méthodes, des métadonnées et des notifications.
+TVSDK fournit des éléments d’API utiles lors de la mise en oeuvre de pannes de courant, notamment des méthodes, des métadonnées et des notifications.
 
 Vous pouvez utiliser les éléments suivants lors de la mise en oeuvre d’une solution de blackout dans votre lecteur.
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Enregistre la ressource actuellement chargée en tant que ressource en arrière-plan. Si `replaceCurrentResource` est appelé après cette méthode, TVSDK continue à télécharger le manifeste de l’élément d’arrière-plan jusqu’à ce que vous appeliez `unregisterCurrentBackgroundItem`, `release` ou `reset`.
+   * `registerCurrentItemAsBackgroundItem` Enregistre la ressource actuellement chargée comme ressource d’arrière-plan. If `replaceCurrentResource` est appelé après cette méthode, TVSDK continue de télécharger le manifeste de l’élément en arrière-plan jusqu’à ce que vous appeliez `unregisterCurrentBackgroundItem`, `release`, ou `reset`.
 
    * `unregisterCurrentBackgroundItem` Définit l’élément d’arrière-plan sur null et arrête la récupération et l’analyse du manifeste d’arrière-plan.
 
 * **BlackoutMetadata** -
 
-   Une classe de métadonnées spécifique aux coupures de courant.
+  Une classe de métadonnées spécifique aux blackout.
 
-   Cela vous permet de définir des plages impossibles à rechercher (un tableau de `TimeRanges`) sur TVSDK. TVSDK vérifie ces plages chaque fois que l’utilisateur effectue une recherche. S’il est défini et que l’utilisateur effectue une recherche dans une plage non recherchée, TVSDK force le lecteur à la fin de la plage non recherchée.
+  Cela vous permet de définir des plages impossibles à rechercher (un tableau de `TimeRanges`) sur TVSDK. TVSDK recherche ces plages chaque fois que l’utilisateur effectue une recherche. S’il est défini et que l’utilisateur effectue une recherche dans une plage non consultable, TVSDK force la visionneuse à la fin de la plage non consultable.
 
-* **DÉBUT ICI NEXT** AdvertisingMetadataActivez ou désactivez la pré-lecture sur un flux en direct en définissant la valeur  `enableLivePreroll` sur true ou false. Si elle est définie sur false, TVSDK ne lance pas d’appel de serveur publicitaire explicite pour les publicités preroll avant la lecture du contenu et ne lit donc pas la lecture preroll. Cela n&#39;a aucun impact sur les moyennes places. La valeur par défaut est true.
+* **COMMENCER ICI NEXT AdvertisingMetadata** Activation ou désactivation de preroll sur un flux en direct en définissant `enableLivePreroll` sur true ou false. Si la valeur est false, TVSDK n’effectue pas d’appel de serveur de publicités explicite pour les publicités preroll avant la lecture du contenu et ne lit donc pas la publicité preroll. Cela n&#39;a aucun impact sur les moyennes. La valeur par défaut est true.
 
 * **MediaPlayer.BlackoutsEventListener**
 
-   * `onTimedMetadataInBackgroundItem` - Distribué lorsque détecte une balise abonnée dans le manifeste d’arrière-plan et qu’une nouvelle  `TimedMetadata` instance est préparée à partir de celui-ci. L&#39;instance `TimedMetadata` est distribuée en tant que paramètre.
+   * `onTimedMetadataInBackgroundItem` - Dispatché lorsqu’il détecte une balise abonnée dans le manifeste d’arrière-plan et une nouvelle balise `TimedMetadata` est préparée à partir de celle-ci. La variable `TimedMetadata` est diffusée en tant que paramètre.
 
-   * `onBackgroundManifestFailed` - Distribué lorsque le lecteur multimédia ne parvient pas à charger le manifeste d’arrière-plan, c’est-à-dire que toutes les URL de diffusion en continu renvoient une erreur ou une réponse non valide.
+   * `onBackgroundManifestFailed` - Distribué lorsque le lecteur multimédia ne parvient pas à charger complètement le manifeste en arrière-plan, c’est-à-dire que toutes les URL de diffusion renvoient une erreur ou une réponse non valide.
 
 * **Notifications**
 

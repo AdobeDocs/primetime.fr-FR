@@ -1,46 +1,44 @@
 ---
-description: La qualité de service (QoS) fournit une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-title: Statistiques sur la qualité des services
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
+title: Statistiques de qualité du service
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 0%
 
 ---
 
+# Statistiques de qualité du service {#quality-of-service-statistics}
 
-# Statistiques sur la qualité du service {#quality-of-service-statistics}
-
-La qualité de service (QoS) fournit une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
 
 TVSDK fournit également des informations sur les ressources téléchargées suivantes :
 
-* Fichiers de liste de lecture/manifestes
+* Lecture/fichiers manifestes
 * Fragments de fichier
-* Suivi des informations relatives aux fichiers
+* Informations de tracking des fichiers
 
 ## Suivi au niveau du fragment à l’aide des informations de chargement {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-Vous pouvez lire les informations de qualité de service (QoS) sur les ressources téléchargées, telles que les fragments et les pistes, à partir de la classe `LoadInformation`.
+Vous pouvez lire des informations sur la qualité du service (QoS) relatives aux ressources téléchargées, telles que des fragments et des traces, à partir de la page `LoadInformation` classe .
 
-1. Mettez en oeuvre et enregistrez l&#39;écouteur de événement `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`.
-1. Appelez `event.getLoadInformation()` pour lire les données pertinentes du paramètre `event` transmis au rappel.
+1. Mettez en oeuvre et enregistrez le `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` écouteur d’événement.
+1. Appeler `event.getLoadInformation()` pour lire les données pertinentes de la `event` qui est transmis au rappel.
 
    >[!NOTE]
    >
-   >Pour plus d’informations sur `LoadInformation`, voir [3.0 pour les docs API Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html).
+   >Pour en savoir plus sur `LoadInformation`, voir [3.0 pour Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html) Documentation API.
 
-## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#section_D21722600F324E67A9F06234D338B243}
+## Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils {#section_D21722600F324E67A9F06234D338B243}
 
-Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe `QOSProvider`.
+Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir du `QOSProvider` classe .
 
-La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc. Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK, l’ID du périphérique du fabricant et la taille/densité d’écran.
+La variable `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les taux d’images, les données temporelles, etc. Il fournit également des informations sur l’appareil, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK, l’identifiant de l’appareil et la taille/densité d’écran.
 
-1. Instanciez un lecteur multimédia.
-1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
+1. Instanciation d’un lecteur multimédia
+1. Créez un `QOSProvider` et joignez-la au lecteur multimédia.
 
-   Le constructeur `QOSProvider` prend en compte le contexte du lecteur afin de pouvoir récupérer des informations spécifiques au périphérique.
+   La variable `QOSProvider` le constructeur utilise un contexte du lecteur afin de pouvoir récupérer des informations spécifiques à l’appareil.
 
    ```java
    // Create Media Player. 
@@ -50,9 +48,9 @@ La classe `QOSProvider` fournit diverses statistiques, notamment des information
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`.
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur qui récupère régulièrement les nouvelles valeurs QoS de la variable `QOSProvider`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
@@ -82,7 +80,7 @@ La classe `QOSProvider` fournit diverses statistiques, notamment des information
    }; 
    ```
 
-1. (Facultatif) Lisez les informations spécifiques au périphérique.
+1. (Facultatif) Lisez les informations spécifiques à l’appareil.
 
    ```java
    // Show device information 

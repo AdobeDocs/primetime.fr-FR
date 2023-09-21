@@ -1,32 +1,30 @@
 ---
-description: Pour le contenu en direct/linéaire, TVSDK remplace un morceau du contenu du flux principal par une coupure publicitaire de même durée, de sorte que la durée du plan de montage chronologique reste la même.
-title: Résolution et insertion d’une publicité dynamique/linéaire
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour le contenu en direct/linéaire, TVSDK remplace une partie du contenu de la diffusion principale par une coupure publicitaire de la même durée, de sorte que la durée de la chronologie reste la même.
+title: Résoudre et insérer une publicité Live/linéaire
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
+# Résoudre et insérer des publicités actives/linéaires {#resolve-and-insert-live-linear-ad}
 
-# Résolution et insertion de publicités dynamiques/linéaires {#resolve-and-insert-live-linear-ad}
+Pour le contenu en direct/linéaire, TVSDK remplace une partie du contenu de la diffusion principale par une coupure publicitaire de la même durée, de sorte que la durée de la chronologie reste la même.
 
-Pour le contenu en direct/linéaire, TVSDK remplace un morceau du contenu du flux principal par une coupure publicitaire de même durée, de sorte que la durée du plan de montage chronologique reste la même.
+Avant et pendant la lecture, TVSDK résout les publicités connues, remplace certaines parties du contenu principal par des coupures publicitaires de la même durée et recalcule la chronologie virtuelle, si nécessaire. Les positions des coupures publicitaires sont spécifiées par des points de repère définis par le manifeste.
 
-Avant et pendant la lecture, TVSDK résout les publicités connues, remplace certaines parties du contenu principal par des coupures publicitaires de la même durée et recalcule la chronologie virtuelle, si nécessaire. Les positions des coupures publicitaires sont spécifiées par des indices définis par le manifeste.
-
-TVSDK insère des publicités de différentes manières :
+TVSDK insère des publicités de la manière suivante :
 
 * **Pré-roll**, qui est placé avant le contenu.
-* **Menu déroulant** intermédiaire, placé au milieu du contenu.
+* **Mid-roll**, qui est placé au milieu du contenu.
 
-TVSDK accepte la coupure publicitaire même si la durée est supérieure ou inférieure à la durée de remplacement du point de repère. Par défaut, TVSDK prend en charge l’indice `#EXT-X-CUE` en tant que marqueur publicitaire valide lors de la résolution et du placement des publicités. Ce marqueur requiert que la valeur `DURATION` du champ de métadonnées soit exprimée en secondes et que l’identifiant unique du signal soit utilisé. Par exemple :
+TVSDK accepte la coupure publicitaire même si la durée est plus longue ou plus courte que la durée de remplacement du point de repère. Par défaut, TVSDK prend en charge la variable `#EXT-X-CUE` Indicateur comme marqueur de publicité valide lors de la résolution et du placement de publicités. Ce marqueur nécessite le champ de métadonnées `DURATION` valeur à exprimer en secondes et identifiant unique du repère. Par exemple :
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
 ```
 
-Vous pouvez définir et vous abonner à d’autres indices (balises).
+Vous pouvez définir et abonner des repères (balises) supplémentaires.
 
-Après les débuts de lecture, le moteur vidéo actualise régulièrement le fichier manifeste. TVSDK résout toute nouvelle publicité et insère les publicités lorsqu’un point de repère est détecté dans le flux en direct ou linéaire défini dans le manifeste. Une fois les publicités résolues et insérées, TVSDK calcule à nouveau la chronologie virtuelle et distribue un événement `TimelineItemsUpdatedEventListener.onTimelineUpdated`.
+Une fois la lecture lancée, le moteur vidéo actualise régulièrement le fichier manifeste. TVSDK résout les nouvelles publicités et insère les publicités lorsqu’un point de repère est rencontré dans le flux en direct ou linéaire qui a été défini dans le manifeste. Une fois les publicités résolues et insérées, TVSDK calcule à nouveau la chronologie virtuelle et distribue une `TimelineItemsUpdatedEventListener.onTimelineUpdated` .

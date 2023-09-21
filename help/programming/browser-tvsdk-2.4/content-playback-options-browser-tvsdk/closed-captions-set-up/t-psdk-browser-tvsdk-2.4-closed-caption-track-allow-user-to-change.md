@@ -1,27 +1,25 @@
 ---
-description: Voici un exemple de la façon dont un utilisateur peut sélectionner un suivi de sous-titrage fermé.
+description: Voici un exemple de la manière dont un utilisateur peut sélectionner un suivi de sous-titres non intégrés.
 title: Autoriser l’utilisateur à modifier le suivi
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# Autoriser l’utilisateur à modifier le suivi{#allow-the-user-to-change-the-track}
 
-# Autoriser l’utilisateur à modifier le suivi {#allow-the-user-to-change-the-track}
+Voici un exemple de la manière dont un utilisateur peut sélectionner un suivi de sous-titres non intégrés.
 
-Voici un exemple de la façon dont un utilisateur peut sélectionner un suivi de sous-titrage fermé.
-
-1. Pour afficher les pistes de sous-titrage disponibles, utilisez la propriété `MediaPlayerItem.closedCaptionsTracks`.
+1. Pour afficher les pistes de sous-titres disponibles, utilisez la méthode `MediaPlayerItem.closedCaptionsTracks` .
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Pour définir quel suivi de sous-titrage est en cours, utilisez la méthode `MediaPlayerItem.selectClosedCaptionsTrack`.
-1. Une fois l&#39;élément du lecteur multimédia préparé, récupérez-le du lecteur multimédia à l&#39;aide de la méthode ` MediaPlayer.  currentItem `.
+1. Pour définir quel suivi de sous-titres est en cours, utilisez la méthode `MediaPlayerItem.selectClosedCaptionsTrack` .
+1. Une fois l’élément du lecteur multimédia préparé, récupérez-le à partir du lecteur multimédia à l’aide de la fonction ` MediaPlayer.  currentItem ` .
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +30,3 @@ Voici un exemple de la façon dont un utilisateur peut sélectionner un suivi de
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

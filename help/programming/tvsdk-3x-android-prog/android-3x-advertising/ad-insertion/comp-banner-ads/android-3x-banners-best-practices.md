@@ -1,31 +1,29 @@
 ---
-title: Recommandations relatives aux bannières publicitaires d’accompagnement
-description: Recommandations relatives aux bannières publicitaires d’accompagnement
+title: Bonnes pratiques relatives aux bannières publicitaires d’accompagnement
+description: Bonnes pratiques relatives aux bannières publicitaires d’accompagnement
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# Bonnes pratiques relatives aux bannières publicitaires d’accompagnement {#best-practices-for-companion-banner-ads}
 
-# Meilleures pratiques pour les bannières publicitaires complémentaires {#best-practices-for-companion-banner-ads}
+TVSDK prend en charge les bannières publicitaires connexes, qui accompagnent une publicité linéaire et restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l’affichage des bannières compagnons fournies avec une publicité linéaire.
 
-TVSDK prend en charge les bannières publicitaires complémentaires, qui sont des publicités qui accompagnent une publicité linéaire et qui restent souvent sur la page après la fin de la publicité linéaire. Votre application est responsable de l&#39;affichage des bannières d&#39;accompagnement fournies avec une publicité linéaire.
+Lors de l’affichage des publicités compagnons, procédez comme suit :
 
-Lors de l’affichage des publicités complémentaires, suivez ces recommandations :
+* Essayez de présenter autant de bannières publicitaires d’accompagnement que vous le souhaitez dans la disposition de votre lecteur.
+* Présenter une bannière compagnon uniquement si vous disposez d’un emplacement correspondant à la hauteur et à la largeur spécifiées de la publicité.
 
-* Tentez de présenter autant de bannières publicitaires d’accompagnement d’une publicité vidéo que vous le souhaitez dans la mise en page de votre lecteur.
-* Présentez une bannière d’accompagnement uniquement si vous disposez d’un emplacement correspondant à la hauteur et à la largeur spécifiées pour la publicité.
+  >[!IMPORTANT]
+  >
+  >Ne redimensionnez pas la publicité.
 
-   >[!IMPORTANT]
-   >
-   >Ne redimensionnez pas la publicité.
+* Commencez à présenter la ou les bannières d’accompagnement dès que possible après le début de la publicité.
+* Ne superposez pas le conteneur publicitaire/vidéo principal avec les bannières compagnons.
+* Vous pouvez afficher les bannières compagnons une fois la publicité terminée.
 
-* Commencez à présenter les bannières d’accompagnement dès que possible après le début de la publicité.
-* N’incrustez pas le conteneur publicitaire/vidéo principal avec les bannières d’accompagnement.
-* Vous pouvez afficher les bannières d’accompagnement une fois la publicité terminée.
-
-La pratique standard consiste à afficher chaque bannière d’accompagnement jusqu’à ce que vous ayez un remplaçant pour la publicité.
+La pratique standard consiste à afficher chaque bannière compagnon jusqu’à ce que vous ayez un remplacement pour la publicité.

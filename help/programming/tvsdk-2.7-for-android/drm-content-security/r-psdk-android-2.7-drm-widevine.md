@@ -1,20 +1,18 @@
 ---
-description: Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
-title: DRM sans fil
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser Android native Widevine DRM avec les flux DASH.
+title: Widevine DRM
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
+# Widevine DRM {#widevine-drm}
 
-# DRM sans fil {#widevine-drm}
+Vous pouvez utiliser Android native Widevine DRM avec les flux DASH.
 
-Vous pouvez utiliser le DRM Android natif de Widevine avec les flux DASH.
-
-Appelez l&#39;API `com.adobe.mediacore.drm.DRMManager` suivante avant de commencer la lecture :
+Appelez ce qui suit `com.adobe.mediacore.drm.DRMManager` API avant de commencer la lecture :
 
 ```java
 public static void setProtectionData( 
@@ -25,12 +23,12 @@ public static void setProtectionData(
 
 Arguments :
 
-* `drm` -  `"com.widevine.alpha"` pour Widevine.
+* `drm` - `"com.widevine.alpha"` pour Widevine.
 
 * `licenseServerURL` - URL du serveur de licences Widevine qui reçoit les demandes de licence.
 * `requestProperties` - Contient des en-têtes supplémentaires à inclure dans la demande de licence sortante.
 
-Par exemple, lors de l’utilisation de contenu compressé pour Expressplay DRM, utilisez le code suivant avant de lire :
+Par exemple, lors de l’utilisation de contenu mis en package pour Expressplay DRM, utilisez le code suivant avant la lecture :
 
 ```java
 DRMManager.setProtectionData( 
@@ -39,4 +37,3 @@ DRMManager.setProtectionData(
 <i>token</i>",  
   null); 
 ```
-

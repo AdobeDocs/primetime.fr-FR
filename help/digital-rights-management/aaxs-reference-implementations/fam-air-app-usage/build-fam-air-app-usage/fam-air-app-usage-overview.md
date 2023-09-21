@@ -1,21 +1,19 @@
 ---
-title: Création de Packager Server et d’une application AIR
-description: Création de Packager Server et d’une application AIR
+title: Création du serveur Packager et de l’application AIR
+description: Création du serveur Packager et de l’application AIR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
 ht-degree: 0%
 
 ---
 
+# Création du serveur Packager et de l’application AIR {#building-the-packager-server-and-air-application}
 
-# Création de Packager Server et d&#39;une application AIR {#building-the-packager-server-and-air-application}
+Deux composants sont nécessaires pour utiliser le Gestionnaire de Flashs Access :
 
-Deux composants sont nécessaires pour utiliser Flash Access Manager :
-
-* Application AIR de Flash Access Manager
-* Serveur Packager ( [!DNL flashaccess-packager.war])
+* Application AIR Flash Access Manager
+* Le serveur Packager ( [!DNL flashaccess-packager.war])
 
 Les deux composants sont distribués dans les formulaires source et binaires avec l’implémentation de référence.

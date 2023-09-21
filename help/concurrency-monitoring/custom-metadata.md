@@ -33,7 +33,7 @@ Les champs personnalisés sont toutes les paires clé/valeur transmises lors de 
 * Définition de stratégies côté serveur basées sur des valeurs de champ ou des cardinalités (les exemples utilisent pseudo-SQL uniquement pour plus de clarté) :
 * Configurez une stratégie de sorte qu’elle s’applique uniquement à des valeurs de champ spécifiques (par exemple, une stratégie iOS dédiée : WHERE osType IS &#39;iOS&#39;).
 * Limitez le nombre de valeurs distinctes pour un champ donné (par exemple, pas plus de X appareils distincts : AVING DISTINCT COUNT(deviceId) >= 2)
-* Limitez le nombre de diffusions principales par valeur de champ (par exemple, pas plus de X diffusions principales pour un seul type d’appareil : GROUP BY deviceType HAVING COUNT(streamId) >= 3)
+* Limitez le nombre de diffusions actives par valeur de champ (par exemple, pas plus de X diffusions actives pour un seul type d’appareil : GROUP BY deviceType HAVING COUNT(streamId) >= 3)
 
 
 En fonction de ces clés/valeurs envoyées, différentes règles peuvent être établies. Il peut s’agir de l’une des étapes suivantes :

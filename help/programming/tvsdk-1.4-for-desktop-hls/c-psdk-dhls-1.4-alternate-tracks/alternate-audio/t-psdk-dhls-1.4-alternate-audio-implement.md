@@ -1,25 +1,23 @@
 ---
-description: Les fichiers audio à liaison tardive utilisent MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-title: Accéder à d'autres pistes audio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Le contenu audio à liaison tardive utilise MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs diffusions audio de remplacement.
+title: Accéder à d’autres pistes audio
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
+# Accéder à d’autres pistes audio{#access-alternate-audio-tracks}
 
-# Accéder à d&#39;autres pistes audio{#access-alternate-audio-tracks}
+Le contenu audio à liaison tardive utilise MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs diffusions audio de remplacement.
 
-Les fichiers audio à liaison tardive utilisent MediaPlayer pour lire une vidéo spécifiée dans une liste de lecture HLS M3U8 et pouvant contenir plusieurs flux audio alternatifs.
-
-1. Attendez que `MediaPlayer` soit au moins dans l’état PRÉPARÉ.
+1. Attendez que la variable `MediaPlayer` pour être au moins en état PRÉPARÉ .
 1. Prêtez attention aux événements suivants :
 
-   * `MediaPlayerItemEvent.ITEM_CREATED`: La liste initiale des pistes audio est disponible.
-   * `MediaPlayerItemEvent.AUDIO_UPDATED`: Suivi audio modifié pendant la lecture
+   * `MediaPlayerItemEvent.ITEM_CREATED`: la liste initiale des pistes audio est disponible.
+   * `MediaPlayerItemEvent.AUDIO_UPDATED`: suivis audio modifiés pendant la lecture.
 
-1. Obtenez les pistes audio disponibles à partir de l&#39;instance `MediaPlayerItem`.
-1. (Facultatif) Présentez les pistes disponibles à l’utilisateur.
-1. Définissez la piste audio sélectionnée sur l&#39;instance `MediaPlayerItem`.
+1. Obtenez les pistes audio disponibles à partir de la fonction `MediaPlayerItem` instance.
+1. (Facultatif) Présente les suivis disponibles à l’utilisateur.
+1. Définissez la piste audio sélectionnée sur la `MediaPlayerItem` instance.

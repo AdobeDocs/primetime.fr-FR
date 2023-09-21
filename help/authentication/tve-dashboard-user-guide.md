@@ -1,13 +1,12 @@
 ---
 title: Guide d’utilisation du tableau de bord Primetime TVE
 description: Guide d’utilisation du tableau de bord Primetime TVE
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4386'
 ht-degree: 0%
 
 ---
-
 
 # Guide d’utilisation du tableau de bord Primetime TVE {#tve-db-user-guide}
 
@@ -48,7 +47,7 @@ Selon les tâches qu’un utilisateur peut être tenu d’accomplir, il doit peu
 
 Le tableau de bord TVE fournit deux environnements nommés Préqualification (Préqualification) et Version, chacun ayant deux profils nommés Évaluation et Production, comme illustré ci-dessous :
 
-* [Évaluation prédéfinie](https://console-prequal.auth-staging.adobe.com/)
+* [Évaluation préquate](https://console-prequal.auth-staging.adobe.com/)
 * [Production prédéfinie](https://console-prequal.auth.adobe.com/)
 * [Évaluation des versions](https://console.auth-staging.adobe.com/)
 * [Version Production](https://console.auth.adobe.com/)
@@ -57,7 +56,7 @@ Pour passer d’un environnement à l’autre, l’utilisateur peut cliquer sur 
 
 ![Liste déroulante Environnements du tableau de bord TVE](assets/tve-dashboard-env.png)
 
-*Figure 2 : Liste déroulante Environnements du tableau de bord Adobe Primetime TVE*
+*Figure 2 : Menu déroulant des environnements du tableau de bord Adobe Primetime TVE*
 
 >[!IMPORTANT]
 >Il est très important de noter que lorsque vous apportez des modifications administratives à votre configuration de l’authentification Adobe Primetime par le biais du tableau de bord TVE, nous vous conseillons vivement de suivre la séquence ci-dessous afin d’assurer le bon fonctionnement.
@@ -73,7 +72,7 @@ Pour apporter des modifications administratives à la configuration de l’authe
 
 ![Tve Dashboard passe en revue une notification push](assets/tve-review-push-notifications.png)
 
-*Tableau 3 : Notification de révision et de modification push du tableau de bord Adobe Primetime TVE*
+*Figure 3 : Notification de révision et de modification push du tableau de bord TVE d’Adobe Primetime*
 
 ## Sections {#sections}
 
@@ -88,7 +87,7 @@ Les utilisateurs travaillant pour des sociétés multimédias (programmeurs) peu
 
 ![Sections du tableau de bord TVE](assets/tve-dashboard-sections.png)
 
-*Tableau 4 : Sections du tableau de bord Adobe Primetime TVE*
+*Figure 4 : Sections du tableau de bord TVE d’Adobe Primetime*
 
 ### Canaux {#tve-db-channels-section}
 
@@ -98,23 +97,23 @@ Cette section permet d’afficher et de modifier les paramètres des canaux disp
    * **Identifiant de canal** - Identifiant unique du canal utilisé dans notre système, également appelé &quot;ID du demandeur&quot;.
    * **Nom d’affichage** - Nom commercial du canal.
 * **Paramètres généraux**
-   * **Configuration d’Analytics** - Configurez les événements d’authentification Adobe Primetime à transférer vers Adobe Analytics. Pour plus d’informations sur la configuration de l’identifiant de suite de rapports (RSID) avant d’activer cette fonctionnalité, contactez l’Adobe.
+   * **Configuration Analytics** - Configurez les événements d’authentification Adobe Primetime à transférer vers Adobe Analytics. Pour plus d’informations sur la configuration de l’identifiant de suite de rapports (RSID) avant d’activer cette fonctionnalité, contactez l’Adobe.
 * **Certificats**
 
-   Contient la liste des certificats utilisés dans le flux d’authentification avec leur organisme d’émission, la date d’émission et la date d’expiration. Ces certificats servent de clés privées/publiques et sont utilisés à des fins de validation.
+  Contient la liste des certificats utilisés dans le flux d’authentification avec leur organisme d’émission, la date d’émission et la date d’expiration. Ces certificats servent de clés privées/publiques et sont utilisés à des fins de validation.
 * **Domaines**
 
-   Contient la liste des domaines à partir desquels le canal respectif communiquera avec l’authentification Adobe Primetime.
+  Contient la liste des domaines à partir desquels le canal respectif communiquera avec l’authentification Adobe Primetime.
 * **Intégrations**
 
-   Contient la liste des intégrations avec les MVPD disponibles, avec le statut de chaque intégration qui peut être activée ou non. Pour accéder à la page Intégration , cliquez sur une entrée spécifique.
+  Contient la liste des intégrations avec les MVPD disponibles, avec le statut de chaque intégration qui peut être activée ou non. Pour accéder à la page Intégration , cliquez sur une entrée spécifique.
 * **Applications enregistrées**
 
-   Contient la liste des enregistrements d’application. Pour plus d’informations, consultez le document . [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
+  Contient la liste des enregistrements d’application. Pour plus d’informations, consultez le document [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
 
 * **Schémas personnalisés**
 
-   Contient la liste des schémas personnalisés. Pour plus d’informations, voir [Enregistrement de l’application iOS/tvOS](/help/authentication/iostvos-application-registration.md) et [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md)
+  Contient la liste des schémas personnalisés. Pour plus d’informations, voir [Enregistrement de l’application iOS/tvOS](/help/authentication/iostvos-application-registration.md) et [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md)
 
 
 #### Ajout/suppression de domaines {#add-delete-domains}
@@ -127,7 +126,7 @@ Pour lancer le processus d’ajout d’un nouveau domaine pour le canal sélecti
 
 ### Programmeurs {#tve-db-programmers-section}
 
-Cette section permet d’afficher et de modifier les paramètres des programmeurs disponibles ou d’en créer un nouveau. Cliquer sur l’un des programmeurs disponibles renvoie un écran avec les onglets suivants :
+Cette section permet d’afficher et de modifier les paramètres des programmeurs disponibles ou d’en créer un nouveau. Cliquez sur l’un des programmeurs disponibles pour renvoyer un écran avec les onglets suivants :
 
 * **Données du programmeur**
    * **Identifiant du programmeur** - Identifiant unique du programmeur utilisé dans notre système.
@@ -137,19 +136,19 @@ Cette section permet d’afficher et de modifier les paramètres des programmeur
 
 * **Certificats**
 
-   Contient la liste des certificats utilisés dans le flux d’authentification avec leur organisme d’émission, la date d’émission et la date d’expiration. Ces certificats servent de clés privées/publiques et sont utilisés à des fins de validation.
+  Contient la liste des certificats utilisés dans le flux d’authentification avec leur organisme d’émission, la date d’émission et la date d’expiration. Ces certificats servent de clés privées/publiques et sont utilisés à des fins de validation.
 
 * **Canaux**
 
-   Contient la liste des canaux appartenant à ce programmeur spécifique. Pour accéder à la section Canaux , cliquez sur une entrée spécifique.
+  Contient la liste des canaux appartenant à ce programmeur spécifique. Pour accéder à la section Canaux , cliquez sur une entrée spécifique.
 
 * **Applications enregistrées**
 
-   Contient la liste des enregistrements d’application. Pour plus d’informations, voir [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
+  Contient la liste des enregistrements d’application. Pour plus d’informations, voir [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
 
 * **Schémas personnalisés**
 
-   Contient la liste des schémas personnalisés. Pour plus d’informations, voir [Enregistrement de l’application iOS/tvOS](/help/authentication/iostvos-application-registration.md) et [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
+  Contient la liste des schémas personnalisés. Pour plus d’informations, voir [Enregistrement de l’application iOS/tvOS](/help/authentication/iostvos-application-registration.md) et [Gestion dynamique de l&#39;enregistrement des clients](/help/authentication/dynamic-client-registration-management.md).
 
 
 ### Intégrations {#tve-db-integrations-sec}
@@ -225,7 +224,7 @@ Cette sous-section peut être utilisée pour remplacer les paramètres de platef
 * **Android** - Définissez les valeurs qui seront appliquées aux implémentations du programmeur sur le SDK Android d’authentification Adobe Primetime.
 * **API REST sans client** - Définissez les valeurs qui seront appliquées aux implémentations du programmeur sur l’API REST d’authentification Adobe Primetime.
 * **FireTV** - Définissez les valeurs qui seront appliquées aux mises en oeuvre du programmeur sur le SDK Adobe Primetime Authentication FireTV.
-* **SDK Flash** - Cette plateforme est obsolète. **obsolète**
+* **SDK FLASH** - Cette plateforme est obsolète. **obsolète**
 * **SDK JavaScript** - Définissez les valeurs qui seront appliquées aux implémentations du programmeur sur le SDK JavaScript d’authentification Adobe Primetime.
 * **Roku** - Définissez des valeurs qui seront appliquées aux implémentations du programmeur sur l’API REST d’authentification Adobe Primetime et qui envoient &quot;Roku&quot; comme type d’appareil. Cette priorité est accordée aux valeurs définies pour la plateforme API REST sans client dans le cas des appareils Roku.
 * **SDK natif Xbox** - Cette plateforme est obsolète. **obsolète**
@@ -247,19 +246,19 @@ Pour activer/désactiver l’authentification unique pour une intégration et un
 * Assurez-vous d’utiliser le mode Espace de travail avancé
 * accéder à l’intégration souhaitée ;
 * accédez à la **Paramètres généraux** tab
-* sélectionnez la plateforme sur laquelle vous souhaitez activer ou désactiver l’authentification unique.
+* sélectionnez la plateforme sur laquelle vous souhaitez activer ou désactiver l’authentification unique
 * bascule **Activer la connexion unique** Indicateur de la valeur souhaitée (Oui/Non)
 
-   >[!IMPORTANT]
-   >Il est important de noter que la variable **Activer la connexion unique** L’indicateur n’est disponible que pour les plateformes iOS, tvOS, Roku et FireTV, et uniquement pour les intégrations avec des MVPD qui prennent en charge l’authentification unique pour ces plateformes.
+  >[!IMPORTANT]
+  >Il est important de noter que le **Activer la connexion unique** L’indicateur n’est disponible que pour les plateformes iOS, tvOS, Roku et FireTV, et uniquement pour les intégrations avec des MVPD qui prennent en charge l’authentification unique pour ces plateformes.
 
 * bascule **Application des autorisations de Platform** Indicateur de la valeur souhaitée (Oui/Non)
 
-   >[!IMPORTANT]
-   >Il est important de noter que la variable **Application des autorisations de Platform** L’indicateur contrôle si la décision de l’utilisateur d’autoriser ou de refuser l’accès à sa plate-forme à son abonnement de fournisseur de télévision est appliquée ou non. En prenant en compte le scénario lors de la **Activer la connexion unique** L’indicateur est défini sur &quot;Oui&quot;, **Application des autorisations de Platform** L’indicateur est également défini sur &quot;Oui&quot; et l’utilisateur choisit de refuser l’accès de la plateforme à son abonnement au fournisseur de télévision, puis l’application (canal) correspondante ne pourra pas utiliser le jeton d’authentification Adobe Primetime obtenu par une autre application (canal).
+  >[!IMPORTANT]
+  >Il est important de noter que le **Application des autorisations de Platform** L’indicateur contrôle si la décision de l’utilisateur d’autoriser ou de refuser l’accès à sa plate-forme à son abonnement de fournisseur de télévision est appliquée ou non. En prenant en compte le scénario lorsque **Activer la connexion unique** L’indicateur est défini sur &quot;Oui&quot;, **Application des autorisations de Platform** L’indicateur est également défini sur &quot;Oui&quot; et l’utilisateur choisit de refuser l’accès de la plateforme à son abonnement au fournisseur de télévision, puis l’application (canal) correspondante ne pourra pas utiliser le jeton d’authentification Adobe Primetime obtenu par une autre application (canal).
 
 
-#### Activation de l’authentification basée sur l’accueil {#enable-hba}
+#### Activation de l’authentification par domicile {#enable-hba}
 
 Suivez les étapes ci-dessous pour activer/désactiver l’authentification de base d’accueil pour **OAuth2** MVPD basés sur :
 
@@ -296,7 +295,7 @@ Cette section permet d’afficher les paramètres des MVPD disponibles. Cliquer 
    * **Sélectionner le point de fin**
       * Ce champ indique le ou les points d’entrée d’authentification exposés par le MVPD. Le point de terminaison peut varier en fonction du protocole d’authentification utilisé.
    * **Paramètres généraux d’AuthN**
-      * Ce sous-onglet affiche le protocole d’authentification utilisé par le MVPD et les informations relatives au protocole.
+      * Ce sous-onglet affiche le protocole d&#39;authentification utilisé par le MVPD et les informations relatives au protocole.
    * **Certificats AuthN**
       * Ce sous-onglet affiche les certificats utilisés par le MVPD dans le flux d’authentification aux côtés de l’organisation de l’émetteur, la date d’émission et la date d’expiration. Ces certificats servent de clés privées/publiques et sont utilisés à des fins de validation.
    * **Règles dynamiques AuthN**
@@ -406,7 +405,7 @@ Pour accéder à ce type de rapport, cliquez sur l’onglet &quot;Rapports TTL A
 
 ![Rapports TTL AuthN](assets/authn-ttl-reports.png)
 
-*Figure 8 : Onglet Rapport TTL du tableau de bord TVE Adobe Primetime*
+*Figure 8 : Onglet Rapport TTL du tableau de bord TVE d’Adobe Primetime*
 
 Le tableau Rapports TTL AuthN contient des pages et peut être défilé horizontalement et verticalement selon la taille de l’écran.
 
@@ -440,7 +439,7 @@ Si vous envisagez d’apporter une modification à une valeur TTL AuthZ, reporte
 
 #### Rapports SSO {#sso-reports}
 
-Ce rapport affiche l’état de connexion unique (SSO) configuré pour votre ou vos intégrations de canaux avec divers MVPD sur toutes les plateformes.
+Ce rapport affiche l’état de connexion unique (SSO) configuré pour votre/vos intégration(s) de canal(s) avec divers MVPD sur toutes les plateformes.
 
 État de connexion unique, également appelé **état SSO**, s’affiche sous la forme d’un tri-état avec les valeurs possibles suivantes : **SSO désactivé, SSO activé, SSO incertain**.
 
@@ -452,7 +451,7 @@ Pour accéder à ce type de rapport, cliquez sur le lien **Rapports SSO**&quot; 
 ![Onglet Rapports SSO du tableau de bord TVE](assets/sso-reports.png)
 
 
-*Figure 10 : Onglet Rapports SSO du tableau de bord Adobe Primetime TVE*
+*Figure 10 : Onglet Rapports SSO du tableau de bord TVE d’Adobe Primetime*
 
 Le tableau Rapports d’authentification unique contient des pages et peut être défilé horizontalement et verticalement selon la taille de l’écran.
 
@@ -481,7 +480,7 @@ Cette section permet aux utilisateurs d’envoyer des commentaires. Suivez les �
 
 ![Formulaire de retour de tableau de bord tv](assets/tve-dashboard-feedback.png)
 
-*Figure 11 : Section Commentaires du tableau de bord Adobe Primetime TVE*
+*Figure 11 : Section Commentaires du tableau de bord TVE Adobe Primetime*
 
 Pour obtenir des instructions sur la capture d’écran, consultez les liens ci-dessous :
 
@@ -508,7 +507,7 @@ Si cela se produit, vous devrez attendre que l’équipe d’ingénierie Authent
 ![Application TVE à l’état dégradé](assets/tve-degraded-state.png)
 
 
-*Figure : Application TVE à l’état dégradé*
+*Figure : Application TVE dans un état dégradé*
 
 Si le tableau de bord TVE est &quot;dégradé&quot;, les utilisateurs n’auront pas de fonctionnalités de recherche et de tri, mais ils pourront afficher ou apporter de nouvelles modifications.
 

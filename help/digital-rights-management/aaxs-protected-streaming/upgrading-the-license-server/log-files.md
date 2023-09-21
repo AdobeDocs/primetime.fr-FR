@@ -1,21 +1,18 @@
 ---
-title: Fichiers journaux
-description: Fichiers journaux
+title: Fichiers de log
+description: Fichiers de log
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
+# Fichiers de log{#log-files}
 
-# Fichiers journaux{#log-files}
-
-Les fichiers journaux générés par l’application Adobe Access Server for Protected Streaming se trouvent dans le répertoire spécifié par *LicenseServer.LogRoot*.
+Les fichiers journaux générés par l’application Adobe Access Server for Protected Streaming seront situés dans le répertoire spécifié par *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
->Si les fichiers journaux actuels sont supprimés ou déplacés pendant l&#39;exécution du serveur, il est possible que le fichier journal ne soit pas recréé et que certaines informations du journal soient perdues.
-
+>Si les fichiers journaux en cours sont supprimés ou déplacés alors que le serveur est en cours d’exécution, il se peut que le fichier journal ne soit pas recréé et que certaines informations de journal soient perdues.

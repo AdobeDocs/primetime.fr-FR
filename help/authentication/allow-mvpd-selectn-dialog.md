@@ -1,13 +1,12 @@
 ---
 title: Autorisation des MVPD dans la boîte de dialogue de sélection
 description: Autorisation des MVPD dans la boîte de dialogue de sélection
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
-
 
 # Autorisation des MVPD dans la boîte de dialogue de sélection {#allow-mvpds-selection-dialog}
 

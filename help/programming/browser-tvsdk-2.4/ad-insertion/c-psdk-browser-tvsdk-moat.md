@@ -1,25 +1,23 @@
 ---
-title: Mesure des publicités à partir de Mois
-description: Mesure des publicités à partir de Mois
+title: Mesure des publicités à partir du canal
+description: Mesure des publicités à partir du canal
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Mesure des publicités à partir du canal {#ad-measurement-from-moat}
 
-# Mesure publicitaire de Moat {#ad-measurement-from-moat}
+TVSDK prend des informations de FreeWheel et d’autres serveurs qui fournissent des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise les impressions publicitaires avec une précision qui montre mieux que les créatifs capturent ou négligent les intérêts d’un public.
 
-TVSDK récupère les informations de FreeWheel et d&#39;autres serveurs qui fournissent des réponses VAST. FreeWheel fournit, dans les réponses VAST, des informations du service Moat. Le service Moat comptabilise et imprime avec une précision qui montre mieux que les créatifs capturent ou négligent les intérêts d’une audience.
+Moat est un service permettant de mesurer et d’afficher les publicités à plusieurs fins, des navigateurs aux applications. Moat génère des données d’analyse marketing en temps réel sur plusieurs plateformes.
 
-Moat est un service permettant de mesurer et d’afficher les données à plusieurs fins, des navigateurs aux applications. Moat génère des données d’analyse marketing en temps réel sur plusieurs plates-formes.
+Le code XML de réponse VAST possède une propriété et un élément que votre code peut lire, la propriété d’ID de publicité la plus éloignée et l’élément d’extension le plus éloigné. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer les informations d’ID de publicité et d’extension et organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à l’endroit où il doit se rendre. La valeur de la propriété d’identifiant de publicité la plus éloignée permet au code de coordonner les informations de la campagne associée.
 
-La réponse VAST XML comporte une propriété et un élément que votre code peut lire, la propriété ad id la plus à l’extérieur et l’élément d’extension la plus à l’extérieur. Dans les deux cas, votre code peut utiliser TVSDK pour enregistrer à la fois les informations d’identification de la publicité et les informations d’extension et organiser les informations dans une arborescence. Avec cette organisation, votre code peut récupérer les données de n’importe quel niveau et les transmettre à n’importe quel emplacement. La valeur de la propriété d’ID d’annonce la plus à l’extérieur permet au code de coordonner les informations de la campagne associée.
-
-Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions. Vous trouverez ci-dessous un exemple d’élément.
+Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions . Vous trouverez ci-dessous un exemple d’élément .
 
 ```
 <?xml version="1.0"?> 
@@ -37,7 +35,7 @@ Par exemple, FreeWheel peut renvoyer des données dans un élément Extensions. 
     </Extensions> 
 ```
 
-La roue libre peut également définir la propriété id dans l’élément Publicité, comme illustré dans l’exemple ci-dessous.
+La roue libre peut également définir la propriété id dans l’élément Ad, comme illustré dans l’exemple ci-dessous.
 
 ```
 <Ad id="118566" sequence="1">

@@ -1,40 +1,38 @@
 ---
-description: TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent des publicités dans la chronologie, et ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application peut avoir besoin de modifier le calendrier en fonction des opportunités identifiées dans le manifeste, telles que les indicateurs d'une période de panne.
-title: Générateurs d’opportunités et résolveurs de contenu
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent les publicités dans la chronologie. Ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application peut devoir modifier le calendrier en fonction des opportunités identifiées dans le manifeste, telles que les indicateurs d'une période de blackout.
+title: Générateurs d’opportunités et programmes de résolution de contenu
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
+# Générateurs d’opportunités et programmes de résolution de contenu{#opportunity-generators-and-content-resolvers}
 
-# Générateurs d&#39;opportunités et résolveurs de contenu{#opportunity-generators-and-content-resolvers}
+Un détecteur d’opportunités est un composant TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au résolveur de contenu, qui personnalise le workflow d’insertion de contenu/de publicité en fonction des propriétés et des métadonnées de l’opportunité de placement.
 
-Un détecteur d’opportunités est un composant TVSDK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-
-TVSDK inclut un détecteur d’opportunités par défaut :
+TVSDK comprend un détecteur d’opportunités par défaut :
 
 * `PTOpportunityResolver`, qui comprend les indices publicitaires par défaut
 
-TVSDK inclut également un résolveur de contenu par défaut qui fournit le contenu à insérer en fonction de la clé de métadonnées dans l’élément du lecteur :
+TVSDK comprend également un résolveur de contenu par défaut qui fournit du contenu à insérer en fonction de la clé de métadonnées dans l’élément de lecteur :
 
 * `PTContentResolver`
 
-Vous pouvez remplacer les détecteurs d’opportunités et les résolveurs de contenu par défaut pour personnaliser le processus de publicité de différentes manières :
+Vous pouvez remplacer les détecteurs d’opportunité et les résolveurs de contenu par défaut pour personnaliser le workflow publicitaire comme suit :
 
-* Prise en charge des Ajoutes pour la détection personnalisée des balises
-* Reconnaître les balises personnalisées pour l’insertion de publicités
-* Créer un fournisseur d’annonces personnalisé
+* Ajout de la prise en charge de la détection de balises personnalisée
+* Reconnaissance des balises personnalisées pour l’insertion de publicités
+* Création d’un fournisseur d’annonces personnalisé
 * Contenu en noir
 
-TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent des publicités dans la chronologie, et ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application peut avoir besoin de modifier le calendrier en fonction des opportunités identifiées dans le manifeste, telles que les indicateurs d&#39;une période de panne.
+TVSDK fournit des générateurs d’opportunités et des résolveurs de contenu par défaut qui placent les publicités dans la chronologie. Ces générateurs et résolveurs sont basés sur des balises non standard dans le manifeste. Votre application peut devoir modifier le calendrier en fonction des opportunités identifiées dans le manifeste, telles que les indicateurs d&#39;une période de blackout.
 
-Un *`opportunity`* représente un point d’intérêt sur la chronologie qui indique généralement une opportunité d’emplacement publicitaire. Cette opportunité peut également indiquer une opération personnalisée qui pourrait affecter la chronologie, telle qu’une période d’interruption. Un *`opportunity generator`* identifie les opportunités spécifiques (balises) dans la chronologie et avertit TVSDK que ces opportunités ont été balisées. Les opportunités sont identifiées dans une chronologie dans `PTTimedMetadata` en incluant une balise non standard (non HLS).
+Un *`opportunity`* représente un point ciblé sur la chronologie qui indique généralement une opportunité d’emplacement publicitaire. Cette opportunité peut également indiquer une opération personnalisée qui peut affecter la chronologie, comme une période d’interruption. Un *`opportunity generator`* identifie les opportunités (balises) spécifiques dans la chronologie et informe TVSDK que ces opportunités ont été balisées. Les opportunités sont identifiées dans une chronologie dans `PTTimedMetadata` en incluant une balise non standard (non HLS).
 
-Lorsque votre application est informée d&#39;une opportunité (balise), elle peut modifier la chronologie en insérant, par exemple, une série de publicités, en passant à un autre flux (coupures de courant) ou en modifiant le contenu de la chronologie. Par défaut, TVSDK appelle le *`content resolver`* approprié pour mettre en oeuvre les modifications ou actions de chronologie requises. Votre application peut utiliser le programme de résolution de contenu publicitaire par défaut TVSDK ou enregistrer son propre programme de résolution de contenu.
+Lorsque votre application est avertie d’une opportunité (balise), elle peut modifier la chronologie en insérant, par exemple, une série de publicités, en passant à un autre flux (coupures) ou en modifiant le contenu de la chronologie. Par défaut, TVSDK appelle la *`content resolver`* pour mettre en oeuvre les modifications ou actions de chronologie requises. Votre application peut utiliser le résolveur de contenu publicitaire par défaut de TVSDK ou enregistrer son propre résolveur de contenu.
 
-Vous pouvez également utiliser `PTSDKConfig.setAdTags` pour ajouter d’autres balises/signaux de marqueurs publicitaires afin que TVSDK reconnaisse et utilise `PTSDKConfig.setSubscribedTags` et avertisse votre application des balises supplémentaires susceptibles de contenir des informations de flux de travaux publicitaires.
+Vous pouvez également utiliser `PTSDKConfig.setAdTags` pour ajouter d’autres balises/signaux de marqueurs publicitaires afin que TVSDK puisse reconnaître et utiliser `PTSDKConfig.setSubscribedTags` et informez votre application des balises supplémentaires pouvant contenir des informations sur le workflow publicitaire.
 
-Une utilisation possible d&#39;un résolveur personnalisé est pour les périodes d&#39;interruption. Pour gérer ces périodes, votre application pourrait mettre en oeuvre et enregistrer un détecteur d&#39;opportunité de panne qui est responsable de la gestion des balises de panne. Lorsque TVSDK rencontre cette balise, il sonde tous les contenus enregistrés afin de trouver le premier qui traite la balise spécifiée. Dans cet exemple, il s’agit du résolveur de contenu d’interruption, qui peut, par exemple, remplacer l’élément actif par un contenu alternatif sur le lecteur pendant la durée spécifiée par la balise .
+Un résolveur personnalisé peut être utilisé pour les périodes d’interruption. Pour gérer ces périodes, votre application peut mettre en oeuvre et enregistrer un détecteur d’opportunités d’blackout responsable de la gestion des balises d’arrêt. Lorsque TVSDK rencontre cette balise, il interroge tous les programmes de résolution de contenu enregistrés pour trouver le premier qui gère la balise spécifiée. Dans cet exemple, il s’agit du programme de résolution de contenu en blackout, qui peut, par exemple, remplacer l’élément actuel par du contenu alternatif sur le lecteur pendant la durée spécifiée par la balise .

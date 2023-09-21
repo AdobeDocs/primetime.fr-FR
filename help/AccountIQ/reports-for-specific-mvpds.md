@@ -1,8 +1,7 @@
 ---
 title: Comment utiliser les mesures de QI du compte pour un MVPD spécifique
 description: Comment utiliser et comprendre les rapports Account IQ.
-exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Si vous êtes connecté à l’application Account IQ en tant que [programmeur](/help/AccountIQ/product-concepts.md#programmer-def), vous pouvez ensuite afficher des rapports de partage sur vos canaux pour des [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) abonnés.
 
-Pour afficher les rapports dans le compte IQ, une fois que vous êtes connecté à l’application en tant que programmeur, procédez comme suit :
+Pour afficher les rapports dans le compte IQ, une fois que vous êtes connecté à l’application en tant que programmeur :
 
 1. Sélectionnez le MVPD spécifique lorsque vous définissez votre segment d’abonnés pour l’analyse et l’affichage de rapports à l’aide des étapes de la section [Définition d’un segment](/help/AccountIQ/howto-select-segment-timeframe.md).
 
@@ -29,17 +28,17 @@ Pour afficher les rapports dans le compte IQ, une fois que vous êtes connecté 
 
 * [Utilisation générale](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Comptes partagés](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Modèles d’utilisation](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Chacune de ces pages reflète l’activité du segment sélectionné.
 

@@ -1,27 +1,25 @@
 ---
-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-title: Statistiques sur la qualité des services
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK du navigateur fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
+title: Statistiques de qualité du service
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Statistiques de qualité du service{#quality-of-service-statistics}
 
-# Statistiques sur la qualité du service{#quality-of-service-statistics}
+La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK du navigateur fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
 
-La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. Le navigateur TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+## Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils {#read-qos-playback-buffering-and-device-statistics}
 
-## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#read-qos-playback-buffering-and-device-statistics}
+Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir de la classe QOSProvider .
 
-Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
+La variable `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les taux d’images, les données temporelles, etc.
 
-La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
-
-1. Instanciez un lecteur multimédia.
-1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
+1. Instanciation d’un lecteur multimédia
+1. Créez un `QOSProvider` et joignez-la au lecteur multimédia.
 
    ```js
    // Create Media Player.qosProvider =  
@@ -31,7 +29,7 @@ La classe `QOSProvider` fournit diverses statistiques, notamment des information
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur qui récupère régulièrement les nouvelles valeurs QoS de la variable `QOSProvider`. Par exemple :
 
    ```js
    var qosTimer = (function () { 
@@ -71,7 +69,7 @@ La classe `QOSProvider` fournit diverses statistiques, notamment des information
    qosTimer.start(); 
    ```
 
-1. (Facultatif) Lisez les informations spécifiques au périphérique.
+1. (Facultatif) Lisez les informations spécifiques à l’appareil.
 
    ```js
    // Show device information 

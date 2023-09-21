@@ -1,14 +1,12 @@
 ---
 description: Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des informations sur le flux de contenu représenté par une ressource MediaResource chargée.
 title: Attributs MediaPlayer pour accéder aux informations MediaResource
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
-
 
 # Attributs MediaPlayer pour accéder aux informations MediaResource{#mediaplayer-attributes-to-access-mediaresource-information}
 
@@ -25,33 +23,33 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Flux en direct </td> 
-   <td colname="2"> <span class="codeph"> live  </span> </td> 
-   <td colname="3"> True si le flux est actif ; false s’il s’agit de VOD. </td> 
+   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="3"> True si le flux est actif ; false s’il est VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="2"> Sous-titres </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
-   <td colname="3"> True si des pistes de sous-titrage sont disponibles. </td> 
+   <td colname="1" morerows="2"> Sous-titres codés </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="3"> True si des pistes de sous-titres sont disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closeCaptionsTracks  </span> </td> 
-   <td colname="3"> Fournit une liste de pistes de sous-titres disponibles. </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="3"> Fournit une liste des suivis de sous-titres disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> Récupère la piste de sous-titrage fermée sélectionnée avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
+   <td colname="3"> Récupère le suivi des sous-titres qui a été sélectionné avec <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Autre son </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
-   <td colname="3"> <p>True si le flux comporte d’autres pistes audio. </p> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="3"> <p>True si le flux comporte des pistes audio alternatives. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
-   <td colname="3"> Fournit une liste de pistes audio alternatives disponibles. </td> 
+   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="3"> Fournit une liste des pistes audio secondaires disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
     <pre>
       Récupère la piste audio actuellement sélectionnée avec 
@@ -60,26 +58,25 @@ Les méthodes de la classe MediaPlayerItem vous permettent d’obtenir des infor
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Métadonnées minutées </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
-   <td colname="3"> True si le flux est associé à des métadonnées temporisées. </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="3"> True si le flux a associé des métadonnées minutées. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
    <td colname="3"> Fournit une liste des objets de métadonnées minutés associés au flux. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"> Plusieurs profils (débit) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profils  </span> </td> 
+   <td colname="1" morerows="1"> Profils multiples (débit) </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profils </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Fournit une liste des profils de débit binaire associés à ce flux. <p>Remarque :  Vous pouvez récupérer le débit binaire pour chaque profil ainsi que la hauteur et la largeur du profil. </p> </td> 
+   <td colname="3"> Fournit une liste des profils de débit associés associés à ce flux. <p>Remarque : vous pouvez récupérer le débit binaire pour chaque profil, ainsi que la hauteur et la largeur du profil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Ressource média </td> 
-   <td colname="2"> <span class="codeph"> ressource  </span> </td> 
-   <td colname="3"> Renvoie la ressource média associée à cet élément. </td> 
+   <td colname="1"> Ressource multimédia </td> 
+   <td colname="2"> <span class="codeph"> resource </span> </td> 
+   <td colname="3"> Renvoie la ressource multimédia associée à cet élément. </td> 
   </tr> 
  </tbody> 
 </table>
-

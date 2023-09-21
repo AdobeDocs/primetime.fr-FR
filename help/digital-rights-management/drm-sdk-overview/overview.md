@@ -1,29 +1,26 @@
 ---
-title: SDK DRM Adobe Primetime - Présentation
-description: SDK DRM Adobe Primetime - Présentation
+title: SDK Adobe Primetime DRM - Présentation
+description: SDK Adobe Primetime DRM - Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
 
 ---
 
-
-# SDK DRM Adobe Primetime - Présentation {#adobe-primetime-drm-sdk-an-overview}
+# SDK Adobe Primetime DRM - Présentation {#adobe-primetime-drm-sdk-an-overview}
 
 >[!NOTE]
 >
->Adobe Primetime DRM s&#39;appelait auparavant Adobe Access, et avant cela, Flash Access.
+>Adobe Primetime DRM s’appelait auparavant Accès aux Adobes, et avant cela, Flash Access.
 
-Primetime DRM SDK est une plate-forme de gestion des droits numériques qui permet de protéger et de diffuser en toute sécurité du contenu vidéo et audio pour une lecture sur des périphériques grand public.
+Primetime DRM SDK est une plateforme de gestion des droits numériques qui permet de protéger et de diffuser en toute sécurité du contenu vidéo et audio pour la lecture sur les appareils consommateurs.
 
-Primetime DRM est une plate-forme flexible qui permet aux propriétaires de contenu de protéger leur contenu et de contrôler la distribution. Les propriétaires de contenu peuvent protéger et gérer leurs droits en créant des licences pour chaque fichier multimédia numérique, en s&#39;assurant qu&#39;un large éventail de contenus de la plus haute qualité soit mis à la disposition des consommateurs.
+Primetime DRM est une plateforme flexible qui permet aux propriétaires de contenu de protéger leur contenu et de contrôler la distribution. Les propriétaires de contenu peuvent protéger et gérer leurs droits en créant des licences pour chaque fichier multimédia numérique, en s’assurant qu’un large éventail de contenus de haute qualité est mis à la disposition des consommateurs.
 
-Primetime DRM prend en charge un large éventail de modèles commerciaux, notamment des vidéos à la demande, la location et la vente électronique. Vous pouvez distribuer le contenu protégé par DRM Primetime de différentes manières, notamment :
+Primetime DRM prend en charge un large éventail de modèles d’entreprise, notamment des vidéos à la demande, la location et la vente électronique. Vous pouvez distribuer du contenu protégé par Primetime DRM de différentes manières, notamment :
 
-* Diffusion en flux continu via les logiciels de Flash Media Server d&#39;Adobe
+* Diffusion en continu via les logiciels de Flash Media Server d’Adobe
 * Offrir un téléchargement progressif via HTTP à l’aide de la technologie de HTTP Dynamic Streaming de l’Adobe
-* Autorisation des téléchargements vers une bibliothèque de contenu pour une lecture locale, à la convenance du consommateur
-
+* Autorisation des téléchargements vers une bibliothèque de contenu pour une lecture locale à la convenance du consommateur

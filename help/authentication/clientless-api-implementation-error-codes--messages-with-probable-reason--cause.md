@@ -1,58 +1,57 @@
 ---
-title: Mise en œuvre d’une API sans client-codes/messages d’erreur avec raison probable/cause
-description: Mise en œuvre d’une API sans client-codes/messages d’erreur avec raison probable/cause
-exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+title: Mise en œuvre de l’API sans client - Codes / Messages d’erreur avec raison/cause probable
+description: Mise en œuvre de l’API sans client - Codes / Messages d’erreur avec raison/cause probable
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# Mise en œuvre d’une API sans client-codes/messages d’erreur avec raison probable/cause {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# Mise en œuvre de l’API sans client - Codes / Messages d’erreur avec raison/cause probable {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->Le contenu de cette page est fourni à titre d’information uniquement. L’utilisation de cette API nécessite une licence en cours de Adobe. Aucune utilisation non autorisée n’est autorisée.
+>Le contenu de cette page est fourni à titre informatif seulement. L’utilisation de cette API nécessite une licence en cours de validité Adobe. Aucune utilisation non autorisée n’est autorisée.
 
 </br>
 
 
-## Erreur : non autorisé
+## Erreur : Non autorisé
 
 ### Causes:
 
-1. En-tête d’autorisation manquant dans la POST
-1. Problème avec l’en-tête d’autorisation-Vérifiez si la durée de la demande est exprimée en millisecondes.
+1. En-tête d’autorisation manquant dans le POST
+1. Problème avec l’en-tête d’autorisation - vérifiez si le délai d’exécution de la demande est en millisecondes.
 
-## Erreur : SC 400 pendant l’authentification
+## Erreur : SC 400 lors de l’authentification
 
 ### Causes:
 
 1. Le serveur n’a pas trouvé le code d’enregistrement, qui a été créé pour un demandeur et un environnement spécifiques.
-1. Vous pourriez être en cours d’exécution dans des problèmes de script inter-domaines.
-1. Un spoof correct doit être ajouté au fichier/etc/hosts.
+1. Vous pourriez rencontrer des problèmes de script inter-domaines
+1. Une usurpation correcte doit être ajoutée au fichier /etc/hosts
 
-## Erreur : requête incorrecte 400
+## Erreur : 400 Demande incorrecte
 
 ### Causes :
 
 1. URL incorrecte pour POST/GET
-1. SAMLAssertionParserException – l’assertion SAML cryptée n’a pas pu être décryptée à la fin de Adobe
+1. SAMLAssertionParserException – L’assertion SAML chiffrée n’a pas pu être déchiffrée à la fin de Adobe.
 
-## Erreur : 403 interdite
+## Erreur : 403 Forbidden
 
 ### Causes:
 
-1. Un trop grand nombre de requêtes rapides, une fonctionnalité de la gestion des API permet d’empêcher les attaques par déni de service.
-2. En cas d’utilisation de l’environnement prequalys, ajoutez l’usurpation, sinon Assurez-vous que l’usurpation a été supprimée du fichier/etc/hosts.
+1. Trop de requêtes rapides - une fonctionnalité de la gestion des API pour empêcher les attaques DoS.
+2. Si vous utilisez un environnement prequal, ajoutez l’usurpation d’identité, sinon assurez-vous que l’usurpation a été supprimée du fichier /etc/hosts
 
-## Erreur : impossible de se connecter à la page MVPD
+## Erreur : impossible de se connecter à la page MVPD
 
 ### Causes:
 
 1. Le nom d’utilisateur et le mot de passe ne correspondent pas.
-2. La connexion a peut-être été désactivée.
+2. L’identifiant a peut-être été désactivé.
 3. Vérifiez si la connexion est destinée à la production ou à l’évaluation
 
 

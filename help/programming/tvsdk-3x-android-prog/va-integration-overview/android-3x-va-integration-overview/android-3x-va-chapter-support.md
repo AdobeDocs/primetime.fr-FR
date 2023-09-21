@@ -2,26 +2,24 @@
 title: Mise en oeuvre de la prise en charge des chapitres
 description: Mise en oeuvre de la prise en charge des chapitres
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
-
 # Mise en oeuvre de la prise en charge des chapitres {#implement-chapter-support}
 
-Vous pouvez définir et suivre *des chapitres personnalisés* pour le suivi vidéo dans les applications basées sur TVSDK.
+Vous pouvez définir et suivre *custom* chapitres pour le suivi vidéo dans les applications TVSDK.
 
-Les chapitres personnalisés sont gérés par l’application et reposent sur des données CMS ou sur une autre méthode utilisée par l’application pour définir des chapitres.
+Les chapitres personnalisés sont gérés par l’application et reposent sur des données CMS ou sur une autre manière dont l’application utilise pour définir des chapitres.
 
 >[!CAUTION]
 >
->Les chapitres par défaut ne sont pas pris en charge dans le SDK Android 3.0.
+>Les chapitres par défaut ne sont pas pris en charge dans le TVSDK Android 3.0.
 
-Définissez et suivez des chapitres personnalisés.
+Définition et suivi de chapitres personnalisés.
 
 ```java
 // First, enable chapter tracking by setting   

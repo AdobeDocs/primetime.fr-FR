@@ -1,15 +1,13 @@
 ---
-description: Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et en téléchargeant les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture des débits haute résolution et les médias associés et poursuit le processus de téléchargement.
+description: Pour les médias en direct et vidéo à la demande (VOD), TVSDK démarre la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et télécharge les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture de débit haute résolution et les médias associés, puis poursuit le processus de téléchargement.
 title: Lecture et basculement du média
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
-
 # Lecture et basculement du média {#media-playback-and-failover}
 
-Pour les médias à la demande (VOD) en direct et vidéo, TVSDK début la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et en téléchargeant les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture des débits haute résolution et les médias associés et poursuit le processus de téléchargement.
+Pour les médias en direct et vidéo à la demande (VOD), TVSDK démarre la lecture en téléchargeant la liste de lecture associée au débit de résolution moyenne et télécharge les segments de médias définis par cette liste de lecture. Il sélectionne rapidement la liste de lecture de débit haute résolution et les médias associés, puis poursuit le processus de téléchargement.

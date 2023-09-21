@@ -1,17 +1,15 @@
 ---
-description: TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
-title: Suivi des publicités clientes
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK effectue automatiquement le suivi des publicités pour la diffusion VOD et la diffusion en continu directe/linéaire.
+title: Suivi des publicités client
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
+# Suivi de la publicité client {#client-ad-tracking}
 
-# Suivre la publicité cliente {#client-ad-tracking}
+TVSDK effectue automatiquement le suivi des publicités pour la diffusion VOD et la diffusion en continu directe/linéaire.
 
-TVSDK effectue automatiquement le suivi des publicités pour VOD et pour la diffusion en flux continu directe/linéaire.
-
-Les notifications sont utilisées pour informer votre application de l&#39;avancement d&#39;une publicité, y compris des informations sur le moment où une publicité commence et se termine.
+Les notifications sont utilisées pour informer votre application de la progression d’une publicité, notamment des informations sur le moment où une publicité commence et le moment où elle se termine.

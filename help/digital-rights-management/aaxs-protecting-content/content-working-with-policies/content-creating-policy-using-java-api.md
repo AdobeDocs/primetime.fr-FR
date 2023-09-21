@@ -2,21 +2,19 @@
 title: Création d’une stratégie à l’aide de l’API Java
 description: Création d’une stratégie à l’aide de l’API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Création d’une stratégie à l’aide de l’API Java {#creating-a-policy-using-the-java-api}
 
 Pour créer une stratégie à l’aide de l’API Java, procédez comme suit :
 
-1. Configurez votre environnement de développement et incluez tous les fichiers JAR mentionnés dans [Configuration de l&#39;environnement de développement](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dans votre projet.
-1. Créez un objet `com.adobe.flashaccess.sdk.policy.Policy` et spécifiez ses propriétés, telles que les droits, la durée de mise en cache des licences et la date de fin de la stratégie.
+1. Configurez votre environnement de développement et incluez tous les fichiers JAR mentionnés dans [Configuration de l’environnement de développement](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dans votre projet.
+1. Créez un `com.adobe.flashaccess.sdk.policy.Policy` et spécifiez ses propriétés, telles que les droits, la durée de mise en cache de la licence et la date de fin de la stratégie.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +50,7 @@ Pour créer une stratégie à l’aide de l’API Java, procédez comme suit :
      }
    ```
 
-1. Sérialisez l’objet `Policy` et stockez-le dans un fichier ou une base de données.
+1. Sérialisez la variable `Policy` et stockez-la dans un fichier ou une base de données.
 
    ```java
      // Serialize the policy  
@@ -66,4 +64,4 @@ Pour créer une stratégie à l’aide de l’API Java, procédez comme suit :
      out.close();
    ```
 
-Pour obtenir la source complète de cet exemple de code, voir *com.adobe.flashaccess.samples.policy.CreatePolicy* dans le répertoire Reference Implementation Command Line Tools &quot;[!DNL samples]&quot;.
+Pour obtenir la source complète de cet exemple de code, voir *com.adobe.flashaccess.samples.policy.CreatePolicy* dans les outils de ligne de commande de mise en oeuvre de référence &quot; [!DNL samples]&quot;.

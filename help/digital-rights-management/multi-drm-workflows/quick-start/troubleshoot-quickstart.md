@@ -1,42 +1,39 @@
 ---
-description: Les problèmes courants au cours du test concernent souvent vos authentificateurs ExpressPlay, les protocoles de transport et les paramètres de demande de service requis.
-title: Dépannage de votre début rapide
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Les problèmes courants au cours des tests impliquent souvent vos authentificateurs ExpressPlay, vos protocoles de transport et vos paramètres de demande de service requis.
+title: Dépannage de votre démarrage rapide
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
+# Dépannage de votre démarrage rapide{#troubleshooting-your-quick-start}
 
-# Dépannage de votre début rapide{#troubleshooting-your-quick-start}
+Les problèmes courants au cours des tests impliquent souvent vos authentificateurs ExpressPlay, vos protocoles de transport et vos paramètres de demande de service requis.
 
-Les problèmes courants au cours du test concernent souvent vos authentificateurs ExpressPlay, les protocoles de transport et les paramètres de demande de service requis.
+Si votre [!DNL curl] les demandes à ExpressPlay pour la génération de jetons échouent. Le corps de la réponse contient un message d’erreur qui explique la raison de l’échec.
 
-Si vos demandes [!DNL curl] à ExpressPlay pour la génération de jetons échouent, le corps de la réponse contient un message d’erreur expliquant la raison de l’échec.
+Si la génération du jeton est réussie, mais que le contenu n’est toujours pas lu, vérifiez dans les journaux de rédemption du jeton ExpressPlay les erreurs telles que &quot;Jeton expiré&quot;.
 
-Si la génération du jeton a réussi, mais que le contenu n’est toujours pas lu, vérifiez dans les journaux de remboursement du jeton ExpressPlay les erreurs telles que &quot;Jeton expiré&quot;.
-
-Si la génération du jeton a réussi et que l’échange n’a pas généré d’erreur, mais que la vidéo ne se lance toujours pas, vérifiez que le CEK correspond au contenu et que le format de contenu correspond aux fonctionnalités du périphérique de cible.
+Si la génération du jeton a réussi et que la rédemption n’a pas rencontré d’erreur, mais que la vidéo n’est toujours pas lue, vérifiez que le CEK correspond au contenu et que le format de contenu correspond aux fonctionnalités de l’appareil cible.
 
 En outre :
 
-* Vérifiez que vous utilisez l’authentificateur de client correct dans vos demandes de service. Il est facile d’utiliser accidentellement l’authentificateur de production lorsque vous vouliez utiliser l’authentificateur de test. Veillez également à utiliser *votre* authentificateur. Par exemple, pendant le test, vous pouvez emprunter la commande `curl` de quelqu&#39;un d&#39;autre et oublier d&#39;échanger votre authentificateur contre la leur.
+* Vérifiez que vous utilisez le bon authentificateur client dans vos demandes de service. Il est facile d’utiliser accidentellement l’authentificateur de production lorsque vous avez l’intention d’utiliser l’authentificateur de test. Vérifiez également que vous utilisez *your* authentificateur. Par exemple, pendant les tests, vous pouvez emprunter le `curl` et oubliez d’échanger votre authentificateur contre le leur.
 
-* Vérifiez que vous utilisez le protocole de transport approprié dans vos demandes ou dans vos manifestes ( `https://` par rapport à `https://`, ou dans le cas de FairPlay, `skd://` par rapport à `https://` par rapport à `https://`.
+* Vérifiez que vous utilisez le protocole de transport approprié dans vos requêtes ou dans vos manifestes ( `https://` versus `https://`, ou dans le cas de FairPlay, `skd://` versus `https://` versus `https://`.
 
-* Veillez à inclure tous les paramètres de requête requis pour la solution DRM que vous utilisez. Par exemple, il est facile d&#39;être confondu entre PlayReady et Widevine, parce qu&#39;ils travaillent tous deux avec DASH, mais les paramètres de demande requis et les configurations de conditionnement sont différents.
-* Vérifiez que votre compte ExpressPlay dispose de suffisamment de crédits de jeton et n’est pas épuisé.
-* Vérifiez que le triplet de données DRM envoyées à TVSDK est correct : Jeton ExpressPlay, URL du serveur de licences et type DRM.
-* Vérifiez que tous vos composants font la même hypothèse quant à l’environnement ExpressPlay en cours d’utilisation, car il existe deux environnements, Test and Production.
-* Sachez que les différents navigateurs ne prennent généralement en charge qu’un seul DRM pour le contenu DASH.
-* Depuis TVSDK 2.4, seul le profil d’emballage DASH-LIVE est pris en charge. (Le support DASH-OnDemand est sur la feuille de route.)
-* La prise en charge d’AndroidTV PlayReady est intermittente en raison des limitations du fabricant du périphérique. Pour donner des exemples,
+* Veillez à inclure tous les paramètres de requête requis pour la solution DRM que vous utilisez. Par exemple, il est facile de vous brouiller entre PlayReady et Widevine, car elles fonctionnent toutes deux avec DASH, mais les paramètres de requête et les configurations de package requis sont différents.
+* Vérifiez que votre compte ExpressPlay dispose de suffisamment de crédits de jeton et n’a pas été épuisé.
+* Vérifiez que le triplet de données DRM envoyé à TVSDK est correct : jeton ExpressPlay, URL du serveur de licences et type DRM.
+* Vérifiez que tous vos composants font la même hypothèse sur l’environnement ExpressPlay en cours d’utilisation, car il existe deux environnements : Test et Production.
+* Gardez à l’esprit que les différents navigateurs ne prennent généralement en charge qu’un seul DRM pour le contenu DASH.
+* Depuis TVSDK 2.4, seul le profil de package DASH-LIVE est pris en charge. (La prise en charge de DASH-OnDemand figure sur la feuille de route.)
+* La prise en charge d’AndroidTV PlayReady est intermittente en raison des restrictions du fabricant de l’appareil. Pour donner des exemples :
 
-   * le périphérique Razer Forge rencontre des problèmes avec le contenu PlayReady
-   * Amazon FireTV ne peut pas consommer de contenu DASH dont la piste audio est chiffrée
+   * Le périphérique Razer Forge a des problèmes avec le contenu PlayReady .
+   * Amazon FireTV ne peut pas utiliser de contenu DASH dont la piste audio est chiffrée
 
-* Depuis TVSDK 2.4, seuls les périphériques AndroidTV prennent généralement en charge les DRM PlayReady et Widevine. Tous les autres périphériques Android ne prennent généralement en charge que Widevine.
-* Depuis TVSDK 2.4, l’Android TVSDK exige actuellement que la zone PSSH figure dans le manifeste .mpd. Ceci est contraire à la norme DASH, qui spécifie que la zone PSSH peut être n&#39;importe où, comme dans le contenu lui-même, et pas seulement dans le .mpd.
-
+* Depuis TVSDK 2.4, seuls les appareils AndroidTV prennent généralement en charge les DRM PlayReady et Windows. En règle générale, tous les autres appareils Android ne prennent en charge que Windows.
+* Depuis TVSDK 2.4, Android TVSDK requiert actuellement que la boîte PSSH soit dans le manifeste .mpd. Cela est contraire à la norme DASH, qui spécifie que la boîte PSSH peut être n’importe où, comme dans le contenu lui-même, et pas seulement dans le fichier .mpd.

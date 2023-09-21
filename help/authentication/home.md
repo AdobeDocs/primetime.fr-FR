@@ -1,13 +1,12 @@
 ---
 title: Bienvenue dans Adobe&reg ; Authentification Primetime !
-description: Bienvenue dans Adobe&reg ; Présentation de l’authentification Primetime
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+description: Bienvenue dans la présentation de l’authentification Adobe&reg; Primetime
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Bienvenue dans l’authentification Adobe® Primetime {#pt-auth-overview}
 
@@ -23,17 +22,19 @@ Vos commentaires sont toujours appréciés !
 >
 >Le contenu de cette page est fourni à titre d’information uniquement. L’utilisation de cette API nécessite une licence actuelle de Adobe. Aucune utilisation non autorisée n’est autorisée.
 
-## Aide et questions fréquentes les plus consultées {#help-faqs}
+## Aide et questions fréquentes les plus populaires {#help-faqs}
 
-| **Éléments en vedette** | |-| | <ul><li>Authentification unique pour iOS</li><li>[Transmet temporaire promouvant](/help/authentication/promotional-temp-pass.md)</li><li>[Authentification basée sur l’accueil (adaptateur de bus hôte)](/help/authentication/home-based-authn-tve.md)</li><li>[Infos sur les adaptateurs](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Guide de l’utilisateur du tableau de bord Primetime TVE](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
+| **Éléments en vedette** |
+|-|
+| <ul><li>Authentification unique pour iOS</li><li>[Transmet temporaire promouvant](/help/authentication/promotional-temp-pass.md)</li><li>[Authentification basée sur l’accueil (adaptateur de bus hôte)](/help/authentication/home-based-authn-tve.md)</li><li>[Infos sur les adaptateurs](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Guide de l’utilisateur du tableau de bord Primetime TVE](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
 
 | **Pour les programmeurs** | **Pour les MVPD** |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <ul><li>[Guide de démarrage rapide du programmeur](/help/authentication/programmer-kickstart-guide.md)</li><li>**Sélecteur MVPD (&quot;picker&quot;)**</li><li>[Métadonnées utilisateur](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[Guide de démarrage rapide MVPD](/help/authentication/mvpd-kickstart-guide.md)</li><li>[Authentification](/help/authentication/authn-usecase.md)</li><li>[Autorisation](/help/authentication/authz-usecase.md)</li><li>[Déconnexion](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
 | **Pour les clients d’applications natifs** | **Pour tout le monde** |
 | <ul><li>[Présentation technique d’iOS](/help/authentication/iostvos-sdk-overview.md)</li><li>[Présentation technique d’Android](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[Document technique](/help/authentication/technical-paper.md)</li><li>[Procédures de réaffectation](/help/authentication/escalation-procedures.md)</li><li>**Systèmes pris en charge**</li><li>[Glossaire](/help/authentication/glossary.md)</li></ul> |
-| **Pour les appareils intelligents** |  |
-| <ul><li>[Présentation technique sans client](/help/authentication/rest-api-overview.md)</li><li>[API sans client](/help/authentication/rest-api-reference.md)</li></ul> |  |
+| **Pour les appareils intelligents** | |
+| <ul><li>[Présentation technique sans client](/help/authentication/rest-api-overview.md)</li><li>[API sans client](/help/authentication/rest-api-reference.md)</li></ul> | |
 
 >[!IMPORTANT]
 >
@@ -42,6 +43,7 @@ Vos commentaires sont toujours appréciés !
 >[Envoi d&#39;un email à notre équipe d&#39;assistance](mailto:tve-support@adobe.com) est également la première étape d’un rapport de problème ou d’incident.
 >
 >Si vous avez une [SEVERITY 1 LIVE](/help/authentication/escalation-procedures.md) et vous nous avez envoyé un e-mail et 30 minutes se sont écoulées sans réponse, puis consultez la [Procédures de réaffectation](/help/authentication/escalation-procedures.md) document pour les numéros de téléphone à appeler.
+>
 
 
 ## Pour trouver ce dont vous avez besoin {#how-to-search}

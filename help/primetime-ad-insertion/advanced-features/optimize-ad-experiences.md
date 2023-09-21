@@ -1,24 +1,22 @@
 ---
-title: Optimiser les expériences publicitaires
-description: Optimiser les expériences publicitaires
+title: Optimisation des expériences publicitaires
+description: Optimisation des expériences publicitaires
 copied-description: true
-exl-id: 0cdfbfe5-95f2-4509-8a67-623b77febbc8
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
-# Optimiser les expériences publicitaires {#optimizing-ad-experiences}
+# Optimisation des expériences publicitaires {#optimizing-ad-experiences}
 
-Bien que l’Ad Insertion Primetime doive choisir la publicité qui servira un lecteur de contenu comme domaine du serveur d’annonces, il dispose également d’un moteur de prise de décision publicitaire avancé qui peut optimiser l’expérience publicitaire globale pour chaque lecteur de contenu. Par exemple, les chargements de publicités peuvent être réduits pour les visionneuses dont la valeur de durée de vie est élevée ou qui surveillent les publicités depuis plus de 3 heures.
+Lors du choix de la publicité à diffuser par une visionneuse comme domaine du serveur de publicités, l’Ad Insertion Primetime propose également un moteur de prise de décision publicitaire avancé qui peut optimiser l’expérience publicitaire globale pour chaque visionneuse. Par exemple, les chargements de publicités peuvent être réduits pour les visionneuses qui sont considérées comme ayant une valeur de durée de vie élevée ou qui observent les publicités depuis plus de 3 heures.
 
-Dans les cas où les chargements d’annonces n’ont pas été prédéfinis (par exemple, dans la programmation VOD), les clients peuvent utiliser l’Ad Insertion Primetime pour personnaliser les chargements d’annonces de la visionneuse en fonction des informations sur la visionneuse, sa session de visionnage, le contenu ou d’autres facteurs.
+Dans les cas où les chargements de publicités n’ont pas été prédéfinis (par exemple, dans la programmation VOD), les clients peuvent utiliser l’Ad Insertion Primetime pour personnaliser le chargement des publicités de la visionneuse en fonction des informations sur la visionneuse, sa session de visionnage, le contenu ou d’autres facteurs.
 
-Les paramètres de chargement des publicités peuvent être configurés dans la section Règles d’annonce de session (sous l’onglet Administration) de la console Ad Insertion Primetime.
+Les paramètres de chargement de publicité peuvent être configurés dans la section Règles de publicité de session (sous l’onglet Administration) de la console de l’Ad Insertion Primetime.
 
-![Configurez les paramètres de chargement des publicités dans la section Règles d’annonce de session de la console Ad Insertion.](/help/primetime-ad-insertion/assets/ad-insertion-console.png)
+![Configuration des paramètres de chargement des publicités dans la section Règles de publicité de session de la console Ad Insertion](/help/primetime-ad-insertion/assets/ad-insertion-console.png)
 
 *Figure : Console Ad Insertion Primetime*

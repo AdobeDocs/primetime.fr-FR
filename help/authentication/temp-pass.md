@@ -1,13 +1,12 @@
 ---
 title: Temp pass
 description: Temp pass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Temp pass {#temp-pass}
 
@@ -19,11 +18,11 @@ ht-degree: 0%
 
 Temp Pass permet aux programmeurs d’offrir un accès temporaire à leur contenu protégé, pour les utilisateurs qui ne disposent pas d’informations d’identification de compte avec un MVPD.  Temp Pass comprend les fonctionnalités suivantes :
 
-* Temp Pass peut être configuré pour fournir un accès temporaire à divers scénarios, notamment :
+* Temp Pass peut être configuré de manière à fournir un accès temporaire pour couvrir divers scénarios, notamment :
    * Un programmeur peut proposer un court aperçu de l&#39;un de ses sites tous les jours (10 minutes, par exemple).
    * Un programmeur peut offrir une seule et longue présentation (par exemple, quatre heures) d&#39;un grand événement sportif comme les Jeux Olympiques, ou la folie de la Marche de NCAA.
-   * Un programmeur peut proposer une combinaison des deux scénarios précédents. par exemple, une période d’affichage initiale plus longue un jour, suivie d’une série de courtes périodes qui se répètent tous les jours pendant un certain nombre de jours consécutifs.
-* Les programmeurs spécifient la durée (durée de vie ou TTL) de leur Temp Pass.
+   * Un programmeur peut fournir une combinaison des deux scénarios précédents ; par exemple, une période d’affichage initiale plus longue un jour, suivie d’une série de courtes périodes qui se répètent tous les jours pendant un certain nombre de jours consécutifs.
+* Les programmeurs spécifient la durée (durée de vie, ou TTL) de leur Temp Pass.
 * Temp Pass fonctionne par demandeur.  Par exemple, NBC peut configurer un laissez-passer temporaire de 4 heures pour le demandeur &quot;NBCOlympics&quot;.
 * Les programmeurs peuvent réinitialiser tous les jetons accordés à un demandeur particulier.  Le &quot;MVPD temporaire&quot; utilisé pour implémenter la transmission temporaire doit être configuré avec l’option &quot;Authentification par demandeur&quot; activée.
 * **L’accès temporaire est accordé à des utilisateurs individuels sur des périphériques spécifiques.**. Une fois que l’accès à Temp Pass expire pour un utilisateur, celui-ci ne pourra pas obtenir un accès temporaire sur le même appareil tant que l’utilisateur n’aura pas expiré. [jeton d’autorisation](/help/authentication/glossary.md#authz-token) est effacé du serveur d’authentification Adobe Primetime.
@@ -35,21 +34,21 @@ Temp Pass permet aux programmeurs d’offrir un accès temporaire à leur conten
 
 ## Détails des fonctionnalités {#tempass-featur-details}
 
-* **Méthode de calcul du temps d’affichage** - La durée de validité d’une transmission temporaire n’est pas corrélée au temps qu’un utilisateur passe à visionner le contenu sur l’application du programmeur.  Lors de la demande d’autorisation initiale de l’utilisateur via Temp Pass, un délai d’expiration est calculé en ajoutant l’heure de requête actuelle initiale au délai d’activation spécifié par le programmeur. Ce délai d’expiration est associé à l’identifiant de l’appareil de l’utilisateur et à l’identifiant du demandeur du programmeur, et stocké dans la base de données d’authentification Primetime. Chaque fois que l’utilisateur tente d’accéder au contenu à l’aide de Temp Pass à partir du même appareil, l’authentification Primetime compare le temps de demande du serveur au temps d’expiration associé à l’identifiant de l’appareil de l’utilisateur et à l’identifiant du demandeur du programmeur. Si le délai de demande du serveur est inférieur au délai d’expiration, l’autorisation est accordée ; sinon, l&#39;autorisation sera refusée.
+* **Méthode de calcul du temps d’affichage** - La durée de validité d’une transmission temporaire n’est pas corrélée au temps qu’un utilisateur passe à visionner le contenu sur l’application du programmeur.  Lors de la demande d’autorisation initiale de l’utilisateur via Temp Pass, un délai d’expiration est calculé en ajoutant l’heure de requête actuelle initiale au délai d’activation spécifié par le programmeur. Ce délai d’expiration est associé à l’identifiant de l’appareil de l’utilisateur et à l’identifiant du demandeur du programmeur, et stocké dans la base de données d’authentification Primetime. Chaque fois que l’utilisateur tente d’accéder au contenu à l’aide de Temp Pass à partir du même appareil, l’authentification Primetime compare le temps de demande du serveur au temps d’expiration associé à l’identifiant de l’appareil de l’utilisateur et à l’identifiant du demandeur du programmeur. Si le délai de demande du serveur est inférieur au délai d’expiration, l’autorisation est accordée ; dans le cas contraire, l’autorisation est refusée.
 * **Paramètres de configuration** - Les paramètres Temp Pass suivants peuvent être spécifiés par un programmeur pour créer une règle Temp Pass :
    * **Token TTL** - La durée pendant laquelle un utilisateur est autorisé à regarder sans se connecter à un MVPD. Cette fois-ci est basée sur l’horloge et expire si l’utilisateur regarde du contenu ou non.
-   >[!NOTE]
-   >Un ID de demandeur ne peut pas être associé à plusieurs règles de transmission temporaire.
-* **Authentification/autorisation** - Dans le flux Temp Pass, vous spécifiez le MVPD comme &quot;Temp Pass&quot;.  L’authentification Primetime ne communique pas avec un MVPD réel dans le flux de transmission temporaire. Le MVPD &quot;Temp Pass&quot; autorise donc toute ressource. Les programmeurs peuvent spécifier une ressource accessible à l’aide de Temp Pass comme ils le font pour le reste des ressources de leur site. La bibliothèque du vérificateur multimédia peut être utilisée comme d’habitude pour vérifier le jeton multimédia court Temp Pass et appliquer la vérification des ressources avant la lecture.
+  >[!NOTE]
+  >Un ID de demandeur ne peut pas être associé à plusieurs règles de transmission temporaire.
+* **Authentification/autorisation** - Dans le flux Temp Pass, vous spécifiez le MVPD comme &quot;Temp Pass&quot;.  L’authentification Primetime ne communique pas avec un MVPD réel dans le flux de transmission temporaire. Par conséquent, le MVPD &quot;Temp Pass&quot; autorise toute ressource. Les programmeurs peuvent spécifier une ressource accessible à l’aide de Temp Pass comme ils le font pour le reste des ressources de leur site. La bibliothèque du vérificateur multimédia peut être utilisée comme d’habitude pour vérifier le jeton multimédia court Temp Pass et appliquer la vérification des ressources avant la lecture.
 * **Suivi des données dans le flux de transmission temporaire** - Deux points concernant le suivi des données lors d’un flux de droits de transmission temporaire :
-   * L’ID de suivi transmis de l’authentification Primetime à votre **sendTrackingData()** callback est un hachage de l’identifiant de l’appareil.
+   * ID de suivi transmis de l’authentification Primetime à votre **sendTrackingData()** callback est un hachage de l’identifiant de l’appareil.
    * Comme l’identifiant MVPD utilisé dans le flux de transmission temporaire est &quot;Temp Pass&quot;, ce même identifiant MVPD est transmis à **sendTrackingData()**. La plupart des programmeurs voudront probablement traiter les mesures de transfert temporaire différemment des mesures MVPD réelles. Cela nécessite un travail supplémentaire dans votre mise en oeuvre d’Analytics.
 
 L’illustration suivante présente le flux de transmission temporaire :
 
 ![Flux de transmission temporaire](assets/temp-pass-flow.png)
 
-*Figure : Flux de transmission temporaire*
+*Figure : Flux de passage à température*
 
 ## Mise en oeuvre de Temp Pass {#implement-tempass}
 
@@ -57,7 +56,7 @@ Côté authentification Primetime, Temp Pass est mis en oeuvre avec l’ajout d�
 
 Côté programmeur, Temp Pass est implémenté comme suit pour les deux scénarios que les MVPD utilisent pour l’authentification :
 
-* **iFrame sur la page du programmeur**. Temp Pass fonctionne indépendamment du type d’authentification d’un MVPD, mais pour le scénario iFrame, des étapes supplémentaires sont requises pour annuler le flux d’authentification actuel et s’authentifier avec Temp Pass. Ces étapes sont présentées dans la section [Connexion à l’iFrame](/help/authentication/temp-pass.md) ci-dessous.
+* **iFrame sur la page du programmeur**. Temp Pass fonctionne indépendamment du type d’authentification d’un MVPD, mais pour le scénario iFrame, des étapes supplémentaires sont requises pour annuler le flux d’authentification actuel et s’authentifier avec Temp Pass. Ces étapes sont présentées dans la section [Connexion à iFrame](/help/authentication/temp-pass.md) ci-dessous
 * **Redirection vers la page de connexion MVPD**. Dans le cas plus classique où l’interface utilisateur de déclenchement de la transmission temporaire est présentée avant de commencer l’authentification avec un MVPD, aucune étape spéciale n’est à prendre. Temp Pass doit être traité comme un MVPD normal.
 
 Les points suivants s’appliquent aux deux scénarios de mise en oeuvre :
@@ -220,7 +219,7 @@ Cet exemple montre comment mettre en oeuvre Temp Pass pour les cas où les MVPD 
 1. L’utilisateur clique sur &quot;Temp Pass&quot;, de sorte que le programmeur ajoute un indicateur à un cookie pour empêcher l’utilisateur de voir le lien &quot;Temp Pass&quot; lors des visites ultérieures sur la page.
 1. La demande d’authentification Temp Pass atteint les serveurs d’authentification Primetime et génère un jeton d’authentification. La durée de vie est égale à la période définie par le programmeur pour la transmission temporaire.
 1. La demande d’autorisation Temp Pass atteint les serveurs d’authentification Primetime.
-1. Les serveurs d’authentification Primetime extraient les identifiants de l’appareil et du demandeur de la requête et les stockent dans la base de données avec le délai d’expiration. Le délai d’expiration est calculé comme suit : temps de requête temporaire initial et temps de transmission (TTL) (spécifié par le programmeur).
+1. Les serveurs d’authentification Primetime extraient les identifiants de l’appareil et du demandeur de la requête et les stockent dans la base de données avec le délai d’expiration. Le délai d’expiration est calculé comme suit : le délai initial de la demande de transmission temporaire plus le délai d’expiration (spécifié par le programmeur).
 1. Les serveurs d’authentification Primetime génèrent un jeton d’autorisation.
 1. L’utilisateur accède au contenu protégé.
 
@@ -474,7 +473,7 @@ L’exemple suivant illustre un cas où un utilisateur est automatiquement conne
 
 ## Utilisation de plusieurs variables temporaires {#use-mult-tempass}
 
-Certains événements nécessitent un accès libre et échelonné au contenu, comme un intervalle initial de libre accès (par exemple, 4 heures), suivi d’un accès gratuit quotidien (par exemple, 10 minutes chaque jour suivant).  Pour qu’un programmeur mette en oeuvre ce scénario, il doit l’organiser avec son contact d’Adobe afin de configurer deux MVPD temporaires pour le programmeur.
+Certains événements nécessitent un accès libre et échelonné au contenu, comme un intervalle initial de libre accès (par exemple, 4 heures), suivi d’un accès gratuit quotidien (par exemple, 10 minutes chaque jour suivant).  Pour qu’un programmeur puisse mettre en oeuvre ce scénario, il doit l’organiser avec son contact d’Adobe afin de configurer deux MVPD temporaires pour le programmeur.
 
 Pour cet exemple de scénario (une session gratuite initiale de 4 heures, suivie de sessions gratuites quotidiennes de 10 minutes), l’Adobe configure un MVPD appelé TempPass1 avec une durée de vie (TTL) de 4 heures et un TempPass2 avec une durée de vie de 10 minutes pour la période suivante.  Ces deux éléments sont associés à l’identifiant du demandeur du programmeur.
 
@@ -506,12 +505,12 @@ DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset
 ```
 
 >[!NOTE]
->L’URL ci-dessus remplace l’API de réinitialisation précédente. L’ancienne API de réinitialisation (v1) n’est plus prise en charge.
+>L’URL ci-dessus remplace l’API de réinitialisation précédente. L’ancienne API reset (v1) n’est plus prise en charge.
 
 * **Protocole :** HTTPS
 * **Hôte :**
-   * Version - mgmt.auth.adobe.com
-   * Prédéfinie - mgmt-prequal.auth.adobe.com
+   * Version : mgmt.auth.adobe.com
+   * Préqualification - mgmt-prequal.auth.adobe.com
 * **Chemin :** /resettempass/v2/reset
 * **Paramètres de requête :** `device_id=all&requestor_id=REQUESTOR_ID&mvpd_id=TEMPPASS_MVPD_ID`
 * **En-têtes :** ApiKey - 1232293681726481
@@ -535,10 +534,10 @@ Prise en charge de l’outil de transfert et de réinitialisation de températur
 | Clients d’authentification Adobe Primetime | Temp Pass | Outil Réinitialiser |
 |:--------------------------------------:|:---------:|:----------:|
 | JS AccessEnabler | OUI | OUI |
-| iOS client natif | OUI | OUI |
+| IOS client natif | OUI | OUI |
 | natif du client tvOS | OUI | OUI |
 | Android du client natif | OUI | OUI |
-| FireTV du client natif | OUI | OUI |
+| Native Client fireTV | OUI | OUI |
 | API sans client | OUI | OUI |
 
 ## Limites et problèmes connus {#limitations}

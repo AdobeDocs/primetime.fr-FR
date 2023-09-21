@@ -1,38 +1,35 @@
 ---
-description: Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en épinglant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
-title: Résolution et insertion de publicités VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en répliquant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
+title: Résoudre et insertion des publicités VOD
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# Résoudre et insertion des publicités VOD{#vod-ad-resolving-and-insertion}
 
-# Résolution et insertion de publicités VOD{#vod-ad-resolving-and-insertion}
+Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en répliquant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
 
-Pour le contenu vidéo à la demande (VOD), TVSDK insère des coupures publicitaires en épinglant les publicités dans le contenu principal afin que la durée de la chronologie augmente.
+Avant la lecture, TVSDK résout les publicités connues, insère et interrompt dans le contenu principal, comme décrit par une chronologie renvoyée par TVSDK, et recalcule la chronologie virtuelle, si nécessaire.
 
-Avant la lecture, TVSDK résout les publicités connues, insère les coupures publicitaires dans le contenu principal, comme décrit par une chronologie qui est renvoyée par TVSDK, et recalcule la chronologie virtuelle, si nécessaire.
+TVSDK insère des publicités de la manière suivante :
 
-TVSDK insère des publicités de différentes manières :
-
-* **Pré-roll**, qui est avant le contenu.
-* **Lecture intermédiaire**, qui se trouve dans le contenu.
-* **Post-roll**, qui suit le contenu.
+* **Pré-roll**, qui se trouve avant le contenu.
+* **Mid-roll**, qui se trouve dans le contenu.
+* **Post-roll**, qui se trouve après le contenu.
 
 >[!IMPORTANT]
 >
->Lors de l&#39;implémentation d&#39;une stratégie personnalisée `AdPolicySelector`, une stratégie différente peut être donnée à chaque type de `AdBreakTimelineItem` (pré-roll, mid-roll ou post-roll) dans `AdPolicyInfo`, en fonction du type de `AdBreakTimelineItem`. Par exemple, vous pouvez conserver le contenu de milieu de gamme après sa lecture, mais supprimer le contenu de pré-lecture après sa lecture.
+>Lors de l’implémentation d’une `AdPolicySelector`, une stratégie différente peut être attribuée à chaque type de `AdBreakTimelineItem` (preroll, mid-roll ou post-roll) dans `AdPolicyInfo`, en fonction du type de la variable `AdBreakTimelineItem`. Par exemple, vous pouvez conserver le contenu mid-roll après sa lecture, mais supprimer le contenu preroll après sa lecture.
 
-Après les débuts de lecture, aucune modification supplémentaire ne peut être apportée au contenu. Les publicités ne peuvent pas être :
+Une fois la lecture lancée, aucune modification supplémentaire ne peut se produire dans le contenu. Les publicités ne peuvent pas être :
 
-* Inséré
+* Insertion
 * Supprimé
 
-   Par exemple, vous ne pouvez pas supprimer des publicités intégrées du contenu vers l’offre d’une expérience sans publicité.
+  Par exemple, vous ne pouvez pas supprimer des publicités intégrées du contenu pour offrir une expérience sans publicité.
 * Remplacé
 
-   Par exemple, vous ne pouvez pas remplacer les publicités intégrées par des publicités ciblées.
-
+  Par exemple, vous ne pouvez pas remplacer les publicités intégrées par des publicités ciblées.

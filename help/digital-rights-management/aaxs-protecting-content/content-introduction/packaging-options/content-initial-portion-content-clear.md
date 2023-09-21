@@ -1,18 +1,16 @@
 ---
-title: Partie initiale du contenu dans la zone claire
-description: Partie initiale du contenu dans la zone claire
+title: Partie initiale du contenu dans le effacement
+description: Partie initiale du contenu dans le effacement
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Partie initiale du contenu dans le effacement{#initial-portion-of-content-in-the-clear}
 
-# Partie initiale du contenu dans clear{#initial-portion-of-content-in-the-clear}
+Indique une durée facultative (en secondes) pendant laquelle le début du contenu est laissé dans le clair (ce qui signifie qu’il n’est pas chiffré).
 
-Spécifie une durée facultative, en secondes, pendant laquelle le début du contenu est laissé dans la clarté (ce qui signifie qu’il n’est pas chiffré).
-
-Exemple de cas d’utilisation : Permet une lecture plus rapide pendant que le client Adobe Access télécharge la licence en arrière-plan. La partie non chiffrée de la vidéo commence immédiatement la lecture, tandis que l’initialisation de l’accès à l’Adobe et l’acquisition de licence se produisent en arrière-plan. Cette fonction étant désactivée, les utilisateurs peuvent constater un retard dans la lecture, car l’ordinateur client effectue toutes les étapes de licence avant la lecture d’une vidéo.
+Exemple de cas d’utilisation : permet une lecture plus rapide pendant que le client Adobe Access télécharge la licence en arrière-plan. La partie non chiffrée de la vidéo commence immédiatement la lecture, tandis que l’initialisation de l’accès à l’Adobe et l’acquisition de licences se produisent en coulisses. Lorsque cette fonction est désactivée, les utilisateurs peuvent constater un retard dans l’expérience de lecture, car l’ordinateur client effectue toutes les étapes de licence avant toute lecture vidéo.

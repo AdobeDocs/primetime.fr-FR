@@ -1,13 +1,12 @@
 ---
 title: Présentation des ID utilisateur
 description: Présentation des ID utilisateur
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
 
 ---
-
 
 # Présentation des ID utilisateur {#understanding-user-ids}
 
@@ -17,7 +16,7 @@ ht-degree: 0%
 
 D’un point de vue conceptuel, chaque utilisateur qui initie un flux de droits est associé à un identifiant utilisateur unique. Cependant, au cours d’un flux de droits, cet identifiant utilisateur peut être présenté de différentes manières, selon l’API à partir de laquelle vous obtenez l’identifiant.
 
-Le `sessionGUID` Dans le jeton de média court, il s’agit de la forme sécurisée de l’identifiant utilisateur, disponible via le `sendTrackingData()` appelez . Dans toutes les intégrations actuelles, il s’agit d’un GUID persistant pour l’utilisateur à travers le temps et les appareils. La source du GUID commence par l’ID utilisateur de la réponse d’authentification provenant du MVPD. Cependant, certains distributeurs pourraient changer d&#39;avis à l&#39;avenir et commencer à envoyer un GUID transitoire. Si un programmeur souhaite s’assurer que l’ID utilisateur source MVPD dans la réponse AuthN est persistant, il doit le prendre en compte dans ses accords avec les MVPD.
+La variable `sessionGUID` Dans le jeton de média court, il s’agit de la forme sécurisée de l’identifiant utilisateur, disponible via le `sendTrackingData()` appelez . Dans toutes les intégrations actuelles, il s’agit d’un GUID persistant pour l’utilisateur à travers le temps et les appareils. La source du GUID commence par l’ID utilisateur de la réponse d’authentification provenant du MVPD. Cependant, certains distributeurs pourraient changer d&#39;avis à l&#39;avenir et commencer à envoyer un GUID transitoire. Si un programmeur souhaite s’assurer que l’ID utilisateur source MVPD dans la réponse AuthN est persistant, il doit le prendre en compte dans ses accords avec les MVPD.
 
 Voici les différentes manières dont l’ID utilisateur est représenté dans les API d’authentification Adobe Primetime :
 
@@ -39,4 +38,3 @@ L’utilisation de l’identifiant utilisateur dépend du cas d’utilisation :
 * Si vous en avez besoin pour le suivi/l’analyse, l’emplacement le plus pratique est de l’obtenir à partir de `sendTrackingData()`.
 * Si vous en avez besoin du côté serveur pour la publication, la fraude ou les données opérationnelles du flux, vous pouvez l’obtenir à partir du programme de validation du jeton multimédia.
 * Si vous en avez besoin pour la liaison de comptes et une fraude plus approfondie, contactez votre Adobe pour connaître la disponibilité.
-

@@ -1,23 +1,20 @@
 ---
-title: Préférences de la Liste de mise à jour des stratégies
-description: Préférences de la Liste de mise à jour des stratégies
+title: Préférences de liste de mise à jour des stratégies
+description: Préférences de liste de mise à jour des stratégies
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
+# Préférences de liste de mise à jour des stratégies {#policy-update-list-preferences}
 
-# Préférences de la Liste de mise à jour des stratégies {#policy-update-list-preferences}
-
-Cet onglet contient les paramètres nécessaires à la création de Listes de mise à jour de stratégie. Le tableau suivant décrit les préférences :
+Cet onglet contient les paramètres requis pour créer des listes de mise à jour de stratégie. Le tableau suivant décrit les préférences :
 
 | Préférence | Description |
 |---|---|
-| Informations d’identification du serveur de licences | Informations d’identification du serveur de licences, émises par l’Adobe. Ces informations d’identification sont utilisées pour signer des Listes de mise à jour de stratégie. |
-| Nom du fichier | Fichier PKCS#12 ( [!DNL .pfx]) contenant le certificat et la clé privée. Le fichier doit se trouver dans le répertoire [!DNL Resource]. |
-| Mot de passe du fichier | Mot de passe du fichier [!DNL .pfx] |
-
+| Informations d’identification du serveur de licences | Informations d’identification du serveur de licences, fournies par Adobe. Ces informations d’identification sont utilisées pour signer les listes de mise à jour de stratégie. |
+| Nom du fichier | Le PKCS#12 ( [!DNL .pfx]) contenant le certificat et la clé privée. Le fichier doit se trouver dans la variable [!DNL Resource] Répertoire. |
+| Mot de passe du fichier | Le mot de passe pour [!DNL .pfx] fichier |

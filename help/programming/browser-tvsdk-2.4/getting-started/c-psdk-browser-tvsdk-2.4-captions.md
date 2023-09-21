@@ -1,20 +1,18 @@
 ---
 description: Vous pouvez afficher des légendes lors de la lecture de contenu vidéo.
-title: Légendes
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Sous-titres
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-
-# Légendes{#captions}
+# Sous-titres{#captions}
 
 Vous pouvez afficher des légendes lors de la lecture de contenu vidéo.
 
-Pour gérer les légendes, vous devez ajouter l’écouteur de événement `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` :
+Pour gérer les sous-titres, vous devez ajouter le `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` écouteur d’événement :
 
 ```js
 ... 
@@ -34,7 +32,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-La structure de l’interface utilisateur fournit une implémentation par défaut des comportements de sous-titrage, qui peut être modifiée. Les comportements de sous-titrage peuvent également être modifiés en étendant les comportements de sous-titrage par défaut. Par exemple :
+La structure de l’interface utilisateur fournit une implémentation des comportements de sous-titres par défaut, qui peut être modifiée. Les comportements de sous-titres codés peuvent également être modifiés en étendant les comportements de sous-titres codés par défaut. Par exemple :
 
 ```js
 // Using UI Framework 

@@ -1,20 +1,18 @@
 ---
-description: En Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
-title: Informations de ciblage
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Dans Adobe Primetime Ad Decisioning, vous pouvez cibler des publicités sur des paires clé-valeur.
+title: Informations sur le ciblage
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
+# Informations sur le ciblage{#targeting-information}
 
-# Informations de ciblage{#targeting-information}
+Dans Adobe Primetime Ad Decisioning, vous pouvez cibler des publicités sur des paires clé-valeur.
 
-En Adobe Primetime, vous pouvez cible des publicités sur des paires clé-valeur.
-
-Pour transmettre ces paires clé-valeur au navigateur TVSDK :
+Pour transmettre ces paires clé-valeur au Browser TVSDK :
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -26,4 +24,3 @@ targetingInfo.setValue(key2, value2);
  
 auditudeSettings.targetingInfo = targetingInfo;
 ```
-

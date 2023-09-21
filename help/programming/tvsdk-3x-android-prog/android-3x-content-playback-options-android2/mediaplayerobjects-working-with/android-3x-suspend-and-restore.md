@@ -1,25 +1,23 @@
 ---
-description: Suspendre et restaurer TVSDK MediaPlayer lorsqu’un écran de périphérique est désactivé et activé doit être géré par votre application.
-keywords: SurfaceView ; Suspendre ; Restaurer ; BroadcastReceiver
+description: La suspension et la restauration de TVSDK MediaPlayer lorsqu’un écran d’appareil est désactivé et activé doit être géré par votre application.
+keywords: SurfaceView;Suspendre;Restaurer;BroadcastReceiver
 title: Suspension et restauration de MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
-
 # Suspension et restauration de MediaPlayer {#suspend-and-restore-mediaplayer}
 
-Suspendre et restaurer TVSDK MediaPlayer lorsqu’un écran de périphérique est désactivé et activé doit être géré par votre application.
+La suspension et la restauration de TVSDK MediaPlayer lorsqu’un écran d’appareil est désactivé et activé doit être géré par votre application.
 
-Vous pouvez gérer les opérations de suspension et de restauration sur `MediaPlayer` dans le récepteur de diffusion Android pour activer/désactiver l’écran.
+Vous pouvez gérer les opérations de suspension et de restauration sur `MediaPlayer` dans le récepteur de diffusion d’Android pour l’écran activé/désactivé.
 
-TVSDK ne peut pas déterminer quand un fragment (ou une Activité) se trouve en arrière-plan ou au premier plan. En outre, l&#39;Android `SurfaceView` n&#39;est pas détruit lorsque l&#39;écran du périphérique est désactivé (mais que l&#39;Activité est suspendue). Cependant, `SurfaceView` *est* détruit lorsque le périphérique met votre application en arrière-plan. TVSDK ne peut détecter aucune de ces modifications. Elles doivent donc être gérées par votre application.
+TVSDK ne peut pas déterminer quand un fragment (ou une activité) se trouve en arrière-plan ou au premier plan. En outre, Android `SurfaceView` ne sera pas détruit lorsque l’écran de l’appareil est désactivé (mais que l’activité est mise en pause). Cependant, `SurfaceView` *does* sont détruits lorsque l’appareil place votre application en arrière-plan. TVSDK ne peut pas détecter ces modifications. Elles doivent donc être gérées par votre application.
 
-L&#39;exemple de code suivant explique comment votre application peut gérer la suspension et la restauration de `MediaPlayer` lorsque l&#39;écran du périphérique est activé et désactivé au niveau de l&#39;application :
+L’exemple de code suivant explique comment votre application peut gérer l’interruption et la restauration de la variable `MediaPlayer` lorsque l’écran du périphérique est activé et désactivé au niveau de l’application :
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 

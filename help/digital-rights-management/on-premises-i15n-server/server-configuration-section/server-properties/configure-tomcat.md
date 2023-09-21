@@ -2,20 +2,18 @@
 title: Configurer Tomcat
 description: Configurer Tomcat
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
 # Configurer Tomcat{#configure-tomcat}
 
-Sur le serveur d’individualisation, modifiez le fichier [!DNL conf/server.xml] de Tomcat afin d’inclure des informations supplémentaires dans le journal d’accès. Vous pouvez utiliser ces informations à des fins de rapports.
+Sur le serveur d’individualisation, modifiez le [!DNL conf/server.xml] pour inclure des informations supplémentaires dans le journal des accès. Vous pouvez utiliser ces informations à des fins de création de rapports.
 
-1. Recherchez la configuration de `AccessLogValve` dans [!DNL server.xml] et modifiez le modèle comme indiqué ci-dessous :
+1. Recherchez la configuration de la variable `AccessLogValve` in [!DNL server.xml] et modifiez le modèle comme illustré ci-dessous :
 
    ```
    <Valve className="org.apache.catalina.valves.AccessLogValve" 
@@ -24,13 +22,12 @@ Sur le serveur d’individualisation, modifiez le fichier [!DNL conf/server.xml]
    %{request-id}r" resolveHosts="false"/>
    ```
 
-   `%{x-forwarded-for}i` enregistre la valeur de l&#39; `x-forwarded-for` en-tête. Si vous utilisez un proxy inverse Apache pour transférer des requêtes au serveur Tomcat, cet en-tête contient l’adresse IP du client d’origine, alors que `%h` enregistre l’adresse IP du serveur Apache. `%{request-id}r` enregistrera l’identifiant de demande, qui correspond à l’identifiant de demande contenu dans le journal de l’application d’individualisation.
+   `%{x-forwarded-for}i` enregistre la valeur de la variable `x-forwarded-for` en-tête . Si vous utilisez un proxy inverse Apache pour transférer des requêtes vers le serveur Tomcat, cet en-tête contiendra l’adresse IP du client d’origine, tandis que `%h` enregistre l’adresse IP du serveur Apache. `%{request-id}r` enregistrera l’identifiant de requête, qui correspond à l’identifiant de requête contenu dans le journal de l’application d’individualisation.
 
-1. Modifiez [!DNL conf/server.xml] et définissez la propriété `unpackwars` sur false.
+1. Modifier [!DNL conf/server.xml] et définissez la variable `unpackwars` sur false.
 
-   Pour les serveurs Individualisation et Génération de clés, il est recommandé de modifier [!DNL conf/server.xml] et de définir la propriété `unpackwars` sur `false`. Sinon, lorsque vous mettez à jour les fichiers WAR, vous devrez peut-être nettoyer les dossiers WAR non emballés.
+   Pour les serveurs d’individualisation et de génération de clés, il est préférable de modifier [!DNL conf/server.xml] et définissez la variable `unpackwars` de `false`. Sinon, lorsque vous mettez à jour les fichiers WAR, vous devrez peut-être également nettoyer les dossiers WAR non remplis.
 
 >[!NOTE]
 >
->Les futurs clients DRM devront activer et configurer le filtre CORS (partage de ressources entre Origines) disponible pour Tomcat. Actuellement, aucun client DRM n&#39;a cette exigence.
-
+>Les futurs clients DRM auront besoin de vous pour activer et configurer le filtre CORS (Cross-Origin Resource Sharing) disponible pour Tomcat. Actuellement, aucun client DRM n’a cette exigence.

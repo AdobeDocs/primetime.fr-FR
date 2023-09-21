@@ -1,37 +1,35 @@
 ---
-description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s'agit d'une façon de charger une ressource multimédia.
-title: Chargement d’une ressource multimédia dans le lecteur de médias
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s’agit d’une méthode de chargement d’une ressource multimédia.
+title: Chargement d’une ressource multimédia dans le lecteur multimédia
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# Chargement d’une ressource multimédia dans le lecteur multimédia {#load-a-media-resource-in-the-media-player}
 
-# Charger une ressource média dans le lecteur de médias {#load-a-media-resource-in-the-media-player}
+Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s’agit d’une méthode de chargement d’une ressource multimédia.
 
-Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire. Il s&#39;agit d&#39;une façon de charger une ressource multimédia.
+1. Définissez le lecteur multimédia pour lire la nouvelle ressource.
 
-1. Définissez le lecteur de médias pour lire la nouvelle ressource.
+   Remplacez l’élément pouvant être lu en appelant `MediaPlayer.replaceCurrentResource()` et transmettre un `MediaResource` instance.
 
-   Remplacez l’élément actuellement lisible en appelant `MediaPlayer.replaceCurrentResource()` et en transmettant une instance `MediaResource` existante.
+   Cela permet de lancer le processus de chargement des ressources.
 
-   Cela début le processus de chargement des ressources.
-
-1. Enregistrez le événement `MediaPlayerEvent.STATUS_CHANGED` avec l&#39;instance `MediaPlayer`. Dans le rappel, recherchez au moins les valeurs d’état suivantes :
+1. Enregistrez le `MediaPlayerEvent.STATUS_CHANGED` avec l’événement `MediaPlayer` instance. Dans le rappel, recherchez au moins les valeurs d’état suivantes :
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Grâce à ces événements, l&#39;objet `MediaPlayer` avertit votre application lorsqu&#39;elle a correctement chargé la ressource multimédia.
-1. Lorsque l&#39;état du lecteur de médias devient `INITIALIZED`, vous pouvez appeler `MediaPlayer.prepareToPlay()`.
+   Au cours de ces événements, `MediaPlayer` informe votre application lorsqu’elle a correctement chargé la ressource multimédia.
+1. Lorsque l’état du lecteur multimédia passe à `INITIALIZED`, vous pouvez appeler `MediaPlayer.prepareToPlay()`.
 
-   Cet état indique que le chargement du média a réussi. Le nouveau `MediaPlayerItem` est prêt pour la lecture. L&#39;appel de `prepareToPlay()` début le processus de résolution de publicité et de placement, le cas échéant.
+   Ce statut indique que le fichier multimédia a bien été chargé. La nouvelle `MediaPlayerItem` est prêt pour la lecture. Appel `prepareToPlay()` lance le processus de résolution publicitaire et d’emplacement, le cas échéant.
 
-En cas d’échec, le lecteur de médias passe à l’état `ERROR`.
+Si un échec se produit, le lecteur multimédia passe à la fonction `ERROR` statut.
 
 L’exemple de code simplifié suivant illustre le processus de chargement d’une ressource multimédia :
 

@@ -1,33 +1,30 @@
 ---
-description: Un détecteur d’opportunités est un composant TVADK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-title: Personnaliser les détecteurs d'opportunités et les résolveurs de contenu
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Un détecteur d’opportunités est un composant TVADK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au résolveur de contenu, qui personnalise le workflow d’insertion de contenu/de publicité en fonction des propriétés et des métadonnées de l’opportunité de placement.
+title: Personnalisation des détecteurs d’opportunités et des programmes de résolution de contenu
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
+# Présentation {#customize-opportunity-detectors-and-content-resolvers-overiew}
 
-# Aperçu {#customize-opportunity-detectors-and-content-resolvers-overiew}
+Un détecteur d’opportunités est un composant TVADK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au résolveur de contenu, qui personnalise le workflow d’insertion de contenu/de publicité en fonction des propriétés et des métadonnées de l’opportunité de placement.
 
-Un détecteur d’opportunités est un composant TVADK qui détecte les balises personnalisées dans un flux et identifie les opportunités de placement. Ces opportunités sont envoyées au programme de résolution de contenu, qui personnalise le processus d’insertion de contenu/publicités en fonction des propriétés et métadonnées de l’opportunité de placement.
-
-TVSDK inclut des détecteurs d’opportunités par défaut :
+TVSDK comprend des détecteurs d’opportunités par défaut :
 
 * `SpliceOutOpportunityDetector`, qui comprend les indices publicitaires par défaut
-* `AdSignalingModeOpportunityGenerator`, qui est chargé de créer les opportunités initiales de placement des publicités en fonction du mode de signalisation des publicités
-* `SpliceOutOpportunityGenerator`, qui est chargé de créer des opportunités de placement d&#39;annonce à partir de n&#39;importe quelle balise #EXT-X-CUE
+* `AdSignalingModeOpportunityGenerator`, responsable de la création des opportunités de placement publicitaire initiales en fonction du mode de signalisation publicitaire.
+* `SpliceOutOpportunityGenerator`, responsable de la création d’opportunités de placement publicitaire à partir de n’importe quelle balise #EXT-X-CUE
 
-TVSDK inclut également un résolveur de contenu par défaut qui fournit le contenu à insérer en fonction de la clé de métadonnées dans l’élément du lecteur :
+TVSDK comprend également un résolveur de contenu par défaut qui fournit du contenu à insérer en fonction de la clé de métadonnées dans l’élément de lecteur :
 
-* `AuditudeResolver`, capable de communiquer avec les serveurs de prise de décision d’annonce Adobe Primetime (précédemment connus sous le nom d’Auditude) et de renvoyer les coupures publicitaires à placer.
+* `AuditudeResolver`, capable de communiquer avec les serveurs de prise de décision publicitaire Adobe Primetime (précédemment appelés Auditude) et de renvoyer des coupures publicitaires à placer.
 
-Vous pouvez remplacer les détecteurs d’opportunités et les résolveurs de contenu par défaut pour personnaliser le processus de publicité de différentes manières :
+Vous pouvez remplacer les détecteurs d’opportunité et les résolveurs de contenu par défaut pour personnaliser le workflow publicitaire comme suit :
 
-* Prise en charge des Ajoutes pour la détection personnalisée des balises
-* Reconnaître les balises personnalisées pour l’insertion de publicités
-* Créer un fournisseur d’annonces personnalisé
+* Ajout de la prise en charge de la détection de balises personnalisée
+* Reconnaissance des balises personnalisées pour l’insertion de publicités
+* Création d’un fournisseur d’annonces personnalisé
 * Contenu en noir
-

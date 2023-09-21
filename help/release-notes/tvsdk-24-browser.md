@@ -4,8 +4,7 @@ description: Les notes de mise à jour de Browser TVSDK 2.4 décrivent les nouve
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
@@ -68,9 +67,9 @@ Les améliorations et ajouts suivants sont disponibles dans la version 2.4.11 de
 
 Les améliorations et ajouts suivants sont disponibles dans la version 2.4.10 de Browser TVSDK :
 
-・ TVSDK fournit enableLogging() pour activer ou désactiver la journalisation. Reportez-vous à la section [Documentation des API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)pour l’utilisation de .
+・ TVSDK fournit enableLogging() pour activer ou désactiver la journalisation. Voir [Documentation de l’API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)pour l’utilisation de .
 
-・ TVSDK ne prend plus en charge les chapitres par défaut lors de l’utilisation d’Adobe Analytics. Définissez et gérez des chapitres à l’aide de votre application.
+・ TVSDK ne prend plus en charge les chapitres par défaut lorsque vous utilisez Adobe Analytics. Définissez et gérez des chapitres à l’aide de votre application.
 
 ・ Cette version contient des correctifs pour les problèmes critiques des clients. Voir *Problèmes résolus *une liste.
 
@@ -104,13 +103,13 @@ Les améliorations et ajouts suivants sont disponibles dans la version 2.4.8 de 
 
 ・ La structure de l’interface utilisateur prend désormais en charge le DRM d’accès HLS sur le Flash, la publicité uniquement et le workflow Informations de ciblage.
 
-・ L’API setDRMAuthenticateData est ajoutée à l’interface utilisateur. Pour lire des flux protégés par Adobe Access DRM, appelez cette API. L’attribut drmAuthenticateData peut également être spécifié dans le lecteur. Voir [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)pour plus d’informations.
+・ L’API setDRMAuthenticateData est ajoutée à l’interface utilisateur. Pour lire des flux protégés par Adobe Access DRM, appelez cette API. L’attribut drmAuthenticateData peut également être spécifié dans le lecteur. Voir [AdobePSDK.videoBehavior](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)pour plus d’informations.
 
 **Version 2.4.7**
 
 Les fonctionnalités suivantes sont nouvelles dans la version 2.4.7 :
 
-・ Ajout du configurateur de l’interface utilisateur dans la structure de l’interface utilisateur
+・ Ajout du configurateur de l’interface utilisateur dans l’interface utilisateur
 
 Vous pouvez configurer le lecteur de l’une des manières suivantes :
 
@@ -122,7 +121,7 @@ Pour faciliter la génération de l’objet JSON, le navigateur TVSDK fournit un
 
 Dans cet outil, vous pouvez sélectionner différents paramètres, cliquer sur **Tester la configuration **pour vérifier les paramètres, puis sur **Télécharger la configuration ** pour télécharger les paramètres. Après avoir téléchargé le fichier, vous pouvez transmettre le contenu de ce fichier sous la forme d’objet JSON à l’API ptp.videoPlayer.
 
-・ Ajout de l’API MediaPlayerItemConfig à la structure de l’interface utilisateur
+・ Ajout de l’API MediaPlayerItemConfig à l’interface utilisateur
 
 Plusieurs fonctionnalités, notamment advertisingMetadata, advertisingFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscribeTags, adTags, thumbnailScrubber, billingMetricsConfiguration, peuvent être configurées via MediaPlayerItemConfig. Pour plus d’informations, voir la documentation AdobePSDK.MediaPlayerItemConfig dans la section [API Browser TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [documentation](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
@@ -158,13 +157,13 @@ Dans la structure de l’interface utilisateur, la manière de transmettre des c
 
 * Prise en charge des processus DRM et Analytics dans l’interface utilisateur
 
-Les configurations DRM et le suivi Analytics peuvent être activés via l’interface utilisateur.
+Les configurations DRM et le suivi Analytics peuvent être activés par le biais de l’interface utilisateur.
 
 * Ajout de `AdobePSDK.embedSWFinFullScreenDiv` API
 
 Cette nouvelle API offre une certaine flexibilité à l’application de lecteur pour sélectionner la balise div dans laquelle elle peut incorporer le fichier FlashFallback.swf.
 
-* Remplacé `getVersion`API à partir de `AdobePSDK.MediaPlayer` classe avec `AdobePSDK.Version` classe pour les informations relatives à la version TVSDK. Pour plus d’informations, voir `AdobePSDK.Version` API [here](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
+* Remplacé `getVersion`API de `AdobePSDK.MediaPlayer` classe avec `AdobePSDK.Version` classe pour les informations relatives à la version TVSDK. Pour plus d’informations, voir `AdobePSDK.Version` API [here](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
 **Version 2.4.6**
 
@@ -188,15 +187,15 @@ Les fonctionnalités suivantes sont nouvelles dans la version 2.4.5 :
 
 * **Lectures et publicités complètes d’événements**
 
-   Les diffusions HLS Full Event Replay (FER) prennent désormais en charge la résolution de publicité et les comportements publicitaires. Pour activer cette prise en charge, définissez le mode de signalisation de la publicité sur `MANIFEST_CUES` lors de la création de la variable `MediaPlayerItemConfig` .
+  Les diffusions HLS Full Event Replay (FER) prennent désormais en charge la résolution de publicité et les comportements publicitaires. Pour activer cette prise en charge, définissez le mode de signalisation de la publicité sur `MANIFEST_CUES` lors de la création de la variable `MediaPlayerItemConfig` .
 
 * **Prise en charge de ScalePolicy par MediaplayerView**
 
-   Les développeurs d’applications peuvent désormais spécifier une propriété scalePolicy différente pour la vue à l’aide de la propriété scalePolicy de MediaPlayerView .
+  Les développeurs d’applications peuvent désormais spécifier une propriété scalePolicy différente pour la vue à l’aide de la propriété scalePolicy de MediaPlayerView .
 
 * **Prise en charge du contenu anamorphique**
 
-   La lecture du contenu anamorphique est désormais prise en charge lors de l’utilisation de la lecture MSE et par Flash.
+  La lecture du contenu anamorphique est désormais prise en charge lors de l’utilisation de la lecture MSE et par Flash.
 
 * **Application sélective de`withCredentials`**
 
@@ -220,11 +219,11 @@ Les nouvelles fonctionnalités suivantes ont été ajoutées à la version 2.4.3
 
 * **Balises personnalisées pour DASH VOD**
 
-   Les balises personnalisées intégrées (événements) peuvent être abonnées à et reçues en tant qu’objet TimedMetadata.
+  Les balises personnalisées intégrées (événements) peuvent être abonnées à et reçues en tant qu’objet TimedMetadata.
 
 * **Lecture des diffusions sans extensions**
 
-   Les flux HLS et DASH sans extensions sont désormais pris en charge. Pour le fichier de manifeste, le paramètre resourceType doit être spécifié lors du chargement de la ressource. Pour les segments et les fichiers VTT, l’en-tête de réponse Content-Type est utilisé pour déterminer le type de contenu.
+  Les flux HLS et DASH sans extensions sont désormais pris en charge. Pour le fichier de manifeste, le paramètre resourceType doit être spécifié lors du chargement de la ressource. Pour les segments et les fichiers VTT, l’en-tête de réponse Content-Type est utilisé pour déterminer le type de contenu.
 
 **Version 2.4.2**
 
@@ -232,19 +231,19 @@ Les nouvelles fonctionnalités suivantes ont été ajoutées à la version 2.4.2
 
 * **Parité de l’API**
 
-Pour obtenir la liste complète de la parité API, reportez-vous à la section [Guide de migration TVSDK pour la version 1.4 DHLS vers Browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
+Pour obtenir la liste complète de la parité API, voir la section [Guide de migration TVSDK pour la version 1.4 DHLS vers Browser TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 * **Prise en charge d’Sample-AES**
 
-   Cette version ajoute la prise en charge de la lecture de contenu chiffré Sample-AES sur MSE et la version de secours de Flash. L’obligation d’héberger le contenu AES sur une origine sécurisée sur Google Chrome a été supprimée.
+  Cette version ajoute la prise en charge de la lecture de contenu chiffré Sample-AES sur MSE et la version de secours de Flash. L’obligation d’héberger le contenu AES sur une origine sécurisée sur Google Chrome a été supprimée.
 
 * **Prise en charge des conteneurs AAC**
 
-   La lecture des fichiers avec l’extension .aac est désormais prise en charge. Il peut s’agir de diffusions audio uniquement ou de fichiers audio alternatifs.
+  La lecture des fichiers avec l’extension .aac est désormais prise en charge. Il peut s’agir de diffusions audio uniquement ou de fichiers audio alternatifs.
 
-   >[!NOTE]
-   >
-   >Les codecs AC3 et AC3 améliorés ne sont pas encore pris en charge.
+  >[!NOTE]
+  >
+  >Les codecs AC3 et AC3 améliorés ne sont pas encore pris en charge.
 
 * **Lecture de flux jetée**
 
@@ -254,11 +253,11 @@ Les flux HLS diffusés par le biais d’un réseau de diffusion de contenu (CDN)
 
 Les nouvelles fonctionnalités suivantes ont été ajoutées à la version 2.4.1 :
 
-* **Structure de l’interface utilisateur**
+* **Structure de l’IU**
 
 Cette structure, conçue pour accélérer le développement de l’interface utilisateur pour les applications de lecteur vidéo basées sur JavaScript, comprend des API permettant d’inclure des commandes de base telles que la lecture/pause et le volume, ainsi que d’ajouter ou de supprimer facilement des éléments tels que les états de la barre de défilement et les paramètres de sous-titres fermés. Vous pouvez spécifier le comportement associé aux contrôles, créer des contrôles personnalisés et appliquer un habillage à l’interface utilisateur du lecteur. Tout cela se fait par le biais de la structure, sans qu’il soit nécessaire de manipuler directement la structure DOM.
 
-* **Améliorations de la lecture HLS pour les diffusions en direct**
+* **Améliorations de la lecture HLS pour les flux en direct**
 
 Cette version prend en charge les discontinuités causées par l’insertion d’annonces. Elle utilise la balise EXT-PROGRAM-DATE-TIME suivie de la balise EXT-MEDIA-SEQUENCE pour synchroniser les profils de débit adaptatif en vue d’une lecture fluide.
 
@@ -274,17 +273,17 @@ Les diffusions multimédia peuvent comporter des métadonnées supplémentaires 
 
 Cette version prend en charge l’affichage des marqueurs publicitaires dans la chronologie du lecteur pour le contenu VOD et en direct. Vous pouvez voir ce comportement dans le lecteur de référence.
 
-**Pris en charge dans la version 2.4**
+**Pris en charge dans 2.4**
 
 Les fonctionnalités suivantes étaient disponibles dans la version 2.4 :
 
 * **Lecture audio MP3**
 
-   Cette version prend en charge la lecture audio MP3 sur les navigateurs utilisant les extensions Media Source (MSE) et la balise vidéo Safari.
+  Cette version prend en charge la lecture audio MP3 sur les navigateurs utilisant les extensions Media Source (MSE) et la balise vidéo Safari.
 
 * **Lecture vidéo MP4**
 
-   Les fonctionnalités suivantes sont prises en charge :
+  Les fonctionnalités suivantes sont prises en charge :
 
    * Lecture en continu unique
    * Publicités MP4 preroll et Post-roll avec comportements publicitaires et suivi
@@ -313,7 +312,7 @@ Le SDK du navigateur présente des exigences spécifiques pour les niveaux de pl
 
    * Edge+
 
-* Apple OS X
+* APPLE OS X
 
    * Safari 9+
    * Chrome 33+
@@ -335,7 +334,7 @@ Le SDK du navigateur présente des exigences spécifiques pour les niveaux de pl
 
    * ・ Chrome 33+
 
-* Apple iOS 9
+* APPLE IOS 9
 
    * Safari 9+
    * Chrome 33+
@@ -345,7 +344,7 @@ Le SDK du navigateur présente des exigences spécifiques pour les niveaux de pl
    * Safari 9+
    * Chrome 33+
 
-**Google Chromecast (seconde génération) pour lecture DASH uniquement)**
+**Google Chromecast (deuxième génération ; pour la lecture DASH uniquement)**
 
 <table> 
  <tbody> 
@@ -542,7 +541,7 @@ Les fonctionnalités suivantes sont prises en charge :
    <td><p>Notifications QoS et du lecteur</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
-   <td><p>Prise en charge limitée de la qualité de service (QoS)</p> </td> 
+   <td><p>Prise en charge limitée de QoS</p> </td> 
   </tr> 
   <tr> 
    <td><p>Lecture</p> </td> 
@@ -595,7 +594,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 5 : Fonctionnalités de lecture avancées HLS**
+**Tableau 5. Fonctionnalités de lecture avancée HLS**
 
 <table> 
  <tbody> 
@@ -634,7 +633,7 @@ Les fonctionnalités suivantes sont prises en charge :
   <tr> 
    <td><p>Lecture</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>Lecture lisser de la carte</p> </td> 
+   <td><p>Lecture de la mbox</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Y</p> </td> 
    <td><p>Limitation de la plateforme</p> </td> 
@@ -674,7 +673,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 6 : Fonctionnalités de protection de contenu HLS**
+**Tableau 6. Fonctionnalités de protection du contenu HLS**
 
 <table> 
  <tbody> 
@@ -713,7 +712,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 7 : Fonctionnalités d’insertion des publicités principales HLS**
+**Tableau 7 : Fonctionnalités principales d’insertion de publicités HLS**
 
 <table> 
  <tbody> 
@@ -792,7 +791,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 8 : Fonctionnalités d’insertion de publicités avancées HLS**
+**Tableau 8 : fonctions avancées d’insertion de publicités HLS**
 
 <table> 
  <tbody> 
@@ -910,7 +909,7 @@ Voici la matrice des fonctionnalités des fonctions DASH dans le navigateur TVSD
 
 Les fonctionnalités suivantes sont prises en charge :
 
-**Tableau 10 : Fonctionnalités de lecture principale DASH**
+**Tableau 10 : fonctions de lecture principale de DASH**
 
 <table> 
  <tbody> 
@@ -1001,7 +1000,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 11 : Fonctionnalités de lecture avancées DASH**
+**Tableau 11 : Fonctionnalités de lecture avancées de DASH**
 
 <table> 
  <tbody> 
@@ -1032,7 +1031,7 @@ Les fonctionnalités suivantes sont prises en charge :
   <tr> 
    <td><p>Lecture</p> </td> 
    <td><p>VOD</p> </td> 
-   <td><p>Lecture lisser de la carte</p> </td> 
+   <td><p>Lecture de la mbox</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
@@ -1093,7 +1092,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 13 : Fonctionnalités d’insertion des publicités principales DASH**
+**Tableau 13 : Fonctionnalités principales d’insertion de publicités dans DASH**
 
 <table> 
  <tbody> 
@@ -1154,7 +1153,7 @@ Les fonctionnalités suivantes sont prises en charge :
  </tbody> 
 </table>
 
-**Tableau 14 : Fonctionnalités d’insertion de publicités avancées DASH**
+**Tableau 14 : Fonctionnalités avancées d’insertion de publicités DASH**
 
 <table> 
  <tbody> 
@@ -1250,21 +1249,21 @@ Les problèmes suivants ont été corrigés dans la version 2.4.11 de Browser TV
 
 ・ **19192**: TVSDK implémente désormais TextFormat:bottomInset et TextFormat:safeArea. En raison de ces améliorations, les sous-titres fermés peuvent être repositionnés si la barre de contrôle s’affiche à l’écran.
 
-・ **21009**: Les sous-titres codés persistent à l’écran en cas de recherche par-delà la discontinuité jusqu’à ce que de nouvelles sous-titres apparaissent.
+・ **21009**: les sous-titres codés persistent à l’écran en cas de recherche par-delà la discontinuité jusqu’à ce que de nouvelles sous-titres apparaissent.
 
-・ **21141**: La recherche en amont est rejetée en raison d’une condition de concurrence lors de l’ajout du segment.
+・ **21141**: la recherche en amont est rejetée en raison d’une condition de concurrence lors de l’ajout du segment.
 
-・ **21142**: Mise à disposition de plages de lecture pouvant être consultées lorsque le lecteur est à l’état INITIALISÉ. En raison de ces modifications, la session de démarrage en position est désormais prise en charge.
+・ **21142**: rend disponibles les plages de lecture pouvant être consultées lorsque le lecteur est à l’état INITIALISÉ. En raison de ces modifications, la session de démarrage en position est désormais prise en charge.
 
 ・ **21363**: 608/708 sous-titres fermés ne sont plus synchronisés après l’insertion de publicités pour les flux DASH.
 
 **Fonctionnalités d’insertion d’annonces :**
 
-・ **21179**: Les problèmes liés au mid-roll (longues pauses, images noires) avec le contenu VOD sont désormais résolus en définissant correctement la propriété ad.primaryAsset.adParameters .
+・ **21179**: les problèmes liés au mid-roll (longues pauses, images noires) avec le contenu VOD sont désormais résolus en définissant correctement la propriété ad.primaryAsset.adParameters .
 
-・ **21257**: Le fichier MP4 avec le débit le plus élevé est sélectionné pour le transcodage si MP4 n’est pas un type MIME valide et que la fonction de reconditionnement créatif est activée.
+・ **21257**: le fichier MP4 avec le débit le plus élevé est sélectionné pour le transcodage si MP4 n’est pas un type MIME valide et que la fonction de reconditionnement créatif est activée.
 
-・ **21361**: TVSDK transmet désormais le système publicitaire et l’identifiant créatif de la réponse VAST en tant que paramètres de requête dans la demande de création de package afin de prendre en charge des règles de normalisation supplémentaires.
+・ **21361**: TVSDK transmet désormais le système publicitaire et l’identifiant créatif de la réponse VAST en tant que paramètres de requête dans la demande de package créatif afin de prendre en charge des règles de normalisation supplémentaires.
 
 **Problèmes résolus dans la version 2.4.10**
 
@@ -1272,19 +1271,19 @@ Les problèmes suivants ont été corrigés dans la version 2.4.10 de Browser TV
 
 **Fonctionnalités de lecture principale :**
 
-・ **21060**: Erreur de codec non valide générée avec les flux HLS qui contiennent une discontinuité et les boîtes BMFF ISO s’exécutent à la fin de la diffusion.
+・ **21060**: erreur de codec non valide générée avec les flux HLS qui contiennent une discontinuité et les boîtes BMFF ISO s’exécutent à la fin de la diffusion.
 
-・ **21045**: La lecture automatique ne fonctionne pas sur iOS une fois la première lecture vidéo de la liste de lecture terminée.
+・ **21045**: la lecture automatique ne fonctionne pas sur iOS une fois la première lecture vidéo de la liste de lecture terminée.
 
-・ **20975**: Le débit d’image est renvoyé en tant que NaN par le fournisseur QoS sur le navigateur Chrome.
+・ **20975**: le débit d’image est renvoyé en tant que NaN par le fournisseur QoS sur le navigateur Chrome.
 
-・ **20823**: Erreur de codec non prise en charge générée lors de la rencontre de segments sans données.
+・ **20823**: erreur de codec non prise en charge générée lors de la rencontre de segments sans données.
 
-・ **20769**: Le SDK commence désormais par le débit binaire actuel à la recherche au lieu de basculer immédiatement en fonction de la stratégie ABR.
+・ **20769**: le SDK commence désormais par le débit en cours à la recherche au lieu de basculer immédiatement en fonction de la stratégie ABR.
 
-・ **20031**: En mode portrait sur IE11 (Windows 8.1), l’écran vidéo devient petit. Fonctionnalité de protection du contenu :
+・ **20031**: lorsque le mode portrait est activé sur IE11 (Windows 8.1), l’écran vidéo devient petit. Fonctionnalité de protection du contenu :
 
-・ **19316**: Ignorez les segments qui ne parviennent pas à décrypter en cas de flux HLS AES-128.
+・ **19316**: ignorez les segments qui ne parviennent pas à décrypter en cas de flux HLS AES-128.
 
 **Problèmes résolus dans la version 2.4.9**
 
@@ -1292,43 +1291,43 @@ Les problèmes suivants ont été corrigés dans la version 2.4.9 de Browser TVS
 
 **Fonctionnalités de lecture principale :**
 
-・ **13407**: Les flux DASH peuvent se bloquer si Firefox cesse d’envoyer l’événement &quot;ontimeupdate&quot; pendant la lecture.
+・ **13407**: les flux DASH peuvent se bloquer si Firefox cesse d’envoyer l’événement &quot;ontimeupdate&quot; pendant la lecture.
 
-・ **16380**: Lors de la lecture de contenu audio-vidéo composite de segments dont les heures de début ne correspondent pas via MSE, l’erreur de synchronisation audio entre les représentations s’accumule sur les commutateurs ABR, ce qui entraîne finalement une erreur (problème Chromium #663686).
+・ **16380**: lors de la lecture de contenu audio-vidéo composite de segments dont les heures de début ne correspondent pas via MSE, l’erreur de synchronisation audio entre les représentations s’accumule sur les commutateurs ABR, ce qui entraîne en fin de compte une erreur (problème Chromium #663686).
 
-・ **17985**: Lors de la lecture d’un flux ISO-BMFF particulier sur le navigateur Firefox, la lecture se bloque (problème Firefox #1342913). Ce problème a été corrigé depuis Firefox v53.
+・ **17985**: lors de la lecture d’un flux ISO-BMFF particulier sur le navigateur Firefox, la lecture se bloque (problème Firefox #1342913). Ce problème a été corrigé depuis Firefox v53.
 
-・ **19141**: RéférenceError non interceptée (en promesse) : La largeur n’est pas définie.
+・ **19141**: Non intercepté (en promesse) ReferenceError : la largeur n’est pas définie.
 
-・ **18997, 19299**: Problème de scintillement vidéo à la limite du segment. Cela se produisait car le SDK ne calculait pas correctement le décalage temporel de la dernière composition de l’échantillon.
+・ **18997, 1929**: problème de scintillement vidéo à la limite du segment. Cela se produisait car le SDK ne calculait pas correctement le décalage temporel de la dernière composition de l’échantillon.
 
-・ **19780**: La lecture ne démarre pas pour le contenu HLS et la publicité HLS dans Firefox v53 (problème Firefox #354653).
+・ **19780**: la lecture ne démarre pas pour le contenu HLS et la publicité HLS dans Firefox v53 (problème Firefox #354653).
 
-・ **20046**: Date/heure du programme est reçue en tant que clé au lieu de la valeur lorsqu’elle est reçue en tant qu’objet de métadonnées minutées.
+・ **20046**: Date/heure du programme est reçue en tant que clé au lieu de la valeur lorsqu’elle est reçue en tant qu’objet de métadonnées minuté.
 
 ・ **20047**: useDefaultResizeHandler renvoie une erreur avec le Flash de secours.
 
-・ **20179**: Flash de secours ne fonctionnant pas avec le Flash Player v25.0.0.171.
+・ **20179**: Flash de la reprise ne fonctionne pas avec le Flash Player v25.0.0.171.
 
 ・ **20293**: Firefox arrête la mise en mémoire tampon des données de certains flux HLS menant à un blocage.
 
-・ **20626**: Le lecteur renvoie une erreur de décodage multimédia sur Chrome en raison d’une gestion incorrecte des exemples vidéo sans durée.
+・ **20626**: le lecteur renvoie une erreur de décodage multimédia sur Chrome en raison d’une gestion incorrecte des exemples vidéo sans durée.
 
-・ **20078**: La lecture se bloque sur l’erreur de navigateur &quot;QuotaExceeded&quot;.
+・ **20078**: blocage de lecture sur l’erreur de navigateur &quot;QuotaExceeded&quot;.
 
-・ **18639**: Dans HLS Live Stream 608 CC, le texte semble parfois mal orthographié.
+・ **18639**: dans le flux HLS Live 608 CC, le texte semble parfois mal orthographié.
 
-・ **20028**: Le paramètre de taille ClosedCaptions ne modifie pas la taille de police.
+・ **20028**: le paramètre de taille ClosedCaptions ne modifie pas la taille de police.
 
-・ **20613**: Les boîtes de sous-titres codées se chevauchent, ce qui les rend illisibles.
+・ **20613**: les zones de sous-titres codés se chevauchent, ce qui les rend illisibles.
 
 **Fonctionnalités de l’Ad Insertion principal :**
 
-・ **20043**: Appels de suivi d’impression et de publicité manquants avec plusieurs publicités et redirections tierces.
+・ **20043**: appels d’impression de publicité et de suivi des publicités manquants avec plusieurs publicités et redirections tierces.
 
-・ **20044**: Lors de l’utilisation d’un reconditionnement créatif, toutes les publicités de la coupure publicitaire doivent être reconditionnées avec succès. Dans le cas contraire, la coupure publicitaire est complètement ignorée.
+・ **2044**: lors de l’utilisation d’un reconditionnement créatif, toutes les publicités de la coupure publicitaire doivent être reconditionnées avec succès. Dans le cas contraire, la coupure publicitaire est complètement ignorée.
 
-・ **20097**: La lecture de la publicité est ignorée et le contenu principal reprend immédiatement au lieu d’attendre le délai d’attente de 20 secondes si le manifeste de publicité n’est pas disponible.
+・ **20097**: la lecture de la publicité est ignorée et le contenu principal reprend immédiatement au lieu d’attendre le délai d’attente de 20 secondes si le manifeste de publicité n’est pas disponible.
 
 **Problèmes résolus dans la mise à jour de la version 2.4.8 (build 6002)**
 
@@ -1336,7 +1335,7 @@ Les problèmes suivants ont été corrigés dans la mise à jour de Browser TVSD
 
 ・ **14126 :** La lecture peut bloquer Firefox (problème #1316024) en raison d’un vide interne dans la mémoire tampon source MSE. Tentative de recherche pour reprendre la lecture
 
-・ **19608 :** Correctif pour honorer la valeur de décalage temporel de la réponse VMAP d’Auditude.
+・ **19608 :** Correctif pour honorer la valeur de décalage temporel de la réponse VMAP Auditude.
 
 ・ **19635 :** Correction du blocage vidéo dans Internet Explorer 11 sous Windows 10.
 
@@ -1356,75 +1355,75 @@ Les problèmes suivants ont été corrigés dans la mise à jour de Browser TVSD
 
 Les problèmes suivants ont été corrigés dans la version 2.4.8 de Browser TVSDK :
 
-・ **10075**: Lorsque vous effectuez une recherche en amont de la chronologie, l’événement de fin de lecture n’a pas été reçu dans Firefox et Chrome et l’événement de recherche n’a pas été reçu dans Firefox.
+・ **10075**: lorsque vous effectuez une recherche en amont de la chronologie, l’événement de fin de lecture n’a pas été reçu dans Firefox et Chrome et l’événement de recherche n’a pas été reçu dans Firefox.
 
 ・ **15775**: Lire l’événement complete non reçu sur Windows 8.1 Internet Explorer.
 
-・ **17306**: Pour les flux SSAI, la lecture est prise en charge. Le suivi de la publicité groupée n’est pas pris en charge.
+・ **17306**: pour les flux SSAI, la lecture est prise en charge. Le suivi de la publicité groupée n’est pas pris en charge.
 
-・ **19142**: Parfois, le retour en arrière entraîne le maintien ininterrompu de l’état de mise en mémoire tampon du lecteur vidéo.
+・ **19142**: parfois le retour en arrière entraîne le maintien ininterrompu de l’état de mise en mémoire tampon du lecteur vidéo.
 
-・ **19218**: Les marqueurs d’annonce ne sont pas disponibles via la structure de l’interface utilisateur.
+・ **19218**: les marqueurs d’annonce ne sont pas disponibles via la structure de l’interface utilisateur.
 
-・ **19219**: La lecture des publicités uniquement ne fonctionne pas via la structure de l’interface utilisateur.
+・ **19219**: la lecture des publicités ne fonctionne pas uniquement via la structure de l’interface utilisateur.
 
-・ **19222**: La clé AES-128 est demandée une fois pour une liste de lecture et les requêtes suivantes sont diffusées à partir du cache. Auparavant, il était demandé pour chaque segment.
+・ **1922**: la clé AES-128 est demandée une fois pour une liste de lecture et les demandes suivantes sont diffusées à partir du cache. Auparavant, il était demandé pour chaque segment.
 
-・ **19597**: &quot;Uncaught TypeError: Impossible de lire la propriété &quot;log&quot; d’undefined&quot; s’affichait avec les versions de Chrome Canary.
+・ **19597**: &quot;Uncaught TypeError: Cannot read property &#39;log&#39; of undefined&quot; (erreur de type non interceptée : impossible de lire la propriété &quot;log&quot; d’indéfinie) a été visualisé avec les versions de canari Chrome.
 
-・ **19605**: adRequestDomain n’était pas disponible en mode Flash de secours.
+・ **1960**: adRequestDomain n’était pas disponible en mode Flash de secours.
 
-・ **19608**: Les publicités VMAP n’étaient pas insérées pour les flux HLS Live. Le SDK prend désormais en compte les marqueurs de repère et ne dépend pas des valeurs de décalage temporel dans les réponses VMAP.
+・ **19608**: les publicités VMAP n’étaient pas insérées pour les flux HLS Live. Le SDK prend désormais en compte les marqueurs de repère et ne dépend pas des valeurs de décalage temporel dans les réponses VMAP.
 
-・ **19637**: La lecture des publicités entraîne uniquement une erreur de script à la fin de la publicité.
+・ **1963**: la lecture des publicités entraîne uniquement une erreur de script à la fin de la publicité.
 
-・ **19732**: Les demandes de liste de lecture CRS échouaient avec une erreur 404. Les demandes 1401 et 1403 du Browser TVSDK sont désormais mises à jour pour prendre en charge ce problème.
+・ **19732**: les demandes de liste de lecture CRS échouaient avec une erreur 404. Les demandes 1401 et 1403 du Browser TVSDK sont désormais mises à jour pour prendre en charge ce problème.
 
-・ **19762**: acquireLicense était auparavant appelé avant setAuthenticationToken car une licence valide était renvoyée, quelle que soit la validité du jeton. Ce problème a été corrigé maintenant et acquireLicense n’est appelé qu’après la réponse setAuthenticationToken .
+・ **19762**: acquisitionLicense utilisée pour être appelée avant setAuthenticationToken en en raison de laquelle une licence valide a été renvoyée, quelle que soit la validité du jeton. Ce problème a été corrigé maintenant et acquireLicense n’est appelé qu’après la réponse setAuthenticationToken .
 
 **Problèmes résolus dans la version 2.4.7**
 
 Les problèmes suivants ont été corrigés dans la version 2.4.7 :
 
-・ **8397**: Les flux HLS Live générés par Adobe Medium Server peuvent ne pas être lus si les segments ne commencent pas par un cadre de clé.
+・ **8397**: les flux HLS Live générés par l’Adobe Media Server peuvent ne pas être lus si les segments ne commencent pas par un cadre de clé.
 
-・ **13606**: Plusieurs problèmes liés à la recherche ont été corrigés pour le flux HLS sur le navigateur Chrome.
+・ **13606**: plusieurs problèmes liés à la recherche ont été corrigés pour le flux HLS sur le navigateur Chrome.
 
-・ **14807**: Dans le navigateur Chrome, si la recherche ou la pause est déclenchée immédiatement après la fonction play(), la lecture peut s’arrêter avec l’erreur DOMException : La requête play() a été interrompue par un appel ...(numéro Chromium 593273).
+・ **14807**: sur le navigateur Chrome, si la recherche ou la mise en pause est déclenchée immédiatement après la fonction play(), la lecture peut s’arrêter avec l’erreur DOMException : la requête play() a été interrompue par un appel...(Problème Chromium# 593273).
 
-・ **19085**: Les paramètres MediaPlayer tels que volume, abrControlParameters et ccStyle ne sont pas définis sur Valeurs par défaut lors de la réinitialisation du lecteur.
+・ **19085**: les paramètres MediaPlayer tels que volume, abrControlParameters et ccStyle ne sont pas définis sur Valeurs par défaut lors de la réinitialisation du lecteur.
 
 **Problèmes résolus dans la version 2.4.6**
 
 Le problème suivant a été corrigé dans la version 2.4.6 :
 
-・ **18093**: TimedMetadata pour la balise en regard de la balise abonnée est renvoyé lorsque vous utilisez la version 24 du Flash Player en mode de secours par Flash.
+・ **18093**: les métadonnées de la balise en regard de la balise abonnée sont renvoyées lorsque vous utilisez la version 24 du Flash Player en mode de secours par Flash.
 
 **Problèmes résolus dans la version 2.4.4**
 
 Les problèmes suivants ont été corrigés dans la version 2.4.4 :
 
-・ **8711**: Avec MSE, 608/708 légendes sont conservées par défaut.
+・ **8711**: avec MSE, 608/708 légendes sont conservées par défaut.
 
-・ **13934**: Les paramètres ABR pour les publicités ne s’appliquent pas lors de la lecture de flux HLS Live.
+・ **13934**: les paramètres ABR pour les publicités ne s’appliquent pas lors de la lecture avec des flux HLS Live.
 
-・ **14079**: La longévité des diffusions HLS Live avec une fenêtre de faible capacité virtuelle (DVR) peut échouer, car la lecture peut être en retard en raison de problèmes de latence réseau. Cliquez sur le point d’activation pour reprendre la lecture.
+・ **14079**: la longévité des diffusions HLS Live avec une faible fenêtre de réalité virtuelle peut échouer, car la lecture peut être en retard en raison de problèmes de latence du réseau. Cliquez sur le point d’activation pour reprendre la lecture.
 
-・ **15037**: Les exemples fournis avec la structure de l’interface utilisateur du lecteur ne fonctionnent pas sur Microsoft Internet Explorer 10 sous Windows 7.
+・ **15037**: les exemples fournis avec la structure de l’interface utilisateur du lecteur ne fonctionnent pas sur Microsoft Internet Explorer 10 sous Windows 7.
 
-・ **15913**: Pour les flux VOD HLS, dans Chrome, le flux ne se lance pas si la réponse du manifeste est 304 et n’est pas modifiée. Ce problème est résolu depuis Chrome v55 (problème Chromium 633696).
+・ **15913**: pour les flux VOD HLS, dans Chrome, le flux ne se lance pas si la réponse du manifeste est 304 et n’est pas modifiée. Ce problème est résolu depuis Chrome v55 (problème Chromium 633696).
 
-・ **16103**: Sur Android Chrome, dans des conditions de bande passante faible, la lecture peut bloquer avec l’erreur Type non interceptée : Impossible de lire la propriété &quot;programDateTime&quot; d’erreur non définie.
+・ **16103**: sur Android Chrome, dans des conditions de bande passante faible, la lecture peut bloquer avec la propriété Uncaught TypeError: Cannot read property ’programDateTime’ of undefined error.
 
-・ **16265**: Pour les flux VOD HLS et Live, la recherche entre les discontinuités ne fonctionne pas.
+・ **16265**: pour les flux VOD HLS et Live, la recherche entre discontinuités ne fonctionne pas.
 
-・ **16709**: La reprise du flux HLS Live avec PDT et le marqueur de discontinuité peut entraîner le blocage du lecteur dans la mise en mémoire tampon.
+・ **16709**: la reprise du flux HLS Live avec PDT et le marqueur de discontinuité peuvent entraîner un blocage du lecteur dans la mise en mémoire tampon.
 
 ## Problèmes connus et limites {#known-issues-and-limitations}
 
 Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-dessous.
 
-**Tableau 16 : Fonctions de lecture principales**
+**Tableau 16 : Fonctionnalités de lecture principales**
 
 <table> 
  <tbody> 
@@ -1439,8 +1438,8 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
   <tr> 
    <td>VOD + En direct</td> 
    <td>Lecture générale (Lecture, Pause, Recherche)</td> 
-   <td><p>・ Les formats multimédias autres que HLS ne sont pas pris en charge.</p> <p>8799 : Le Flash de secours ne prend pas en charge le contenu mixte. Il est donc nécessaire de s’assurer que le contenu, les publicités et les autres URL ne génèrent pas de contenu mixte (contenu sécurisé et non sécurisé ensemble).</p> <p>・ 19271 : La lecture d’aperçus multiples via l’interface utilisateur n’est pas prise en charge en mode de secours par Flash.</p> <p>・ Le Flash de secours ne fonctionne pas sur Microsoft Internet Explorer 8 et 9 sous Windows 7, car ces versions ne sont pas prises en charge par le SDK.</p> <p>・ 20262 : Le Flash de secours ajoute des paramètres personnalisés à la liste d’informations de ciblage. L’ordre de priorité des paramètres personnalisés est également différent en cas de Flash et de MSE.</p> <p>・ 20653 : La reprise du Flash Browser TVSDK ne fonctionne pas sur Win10 avec la mise à jour Creators.</p> <p>・ Flash de secours fonctionne avec Flash Player version 23 et ultérieure.</p> <p>・ 20087 - Chrome 59 bêta avec</p> <p>Flash 25.0.0.171</p> <p>Version bêta (par défaut), la lecture HLS ne fonctionne pas en mode Flash de secours. Ça marche bien sur Canary.</p> </td> 
-   <td><p>・ 12563 : Les flux de hachage avec le codec audio mp4a.40.02 ne sont pas lus sur Firefox en raison d’une chaîne de codec audio non prise en charge dans MPD. Le codec audio mp4a.40.2 est pris en charge.</p> <p>15029 : Lors du passage d’une vidéo à l’autre dans l’interface utilisateur-Framework, le bouton de lecture/pause n’est pas mis à jour en conséquence.</p> <p>・ 16034 : sous Windows 8.1 IE, l’appel de reset() entraîne une erreur de type MIME inconnu. Rechargez le média pour reprendre la lecture.</p> <p>・ 18235 : Certains problèmes de recherche sont observés avec les flux publicitaires DASH avec Ads.</p> <p>・ 18727 : L’API d’erreur n’est pas prise en charge pour MSE</p> <p>18750 : Les événements de changement d’état peuvent être désordonnés dans certains cas pour le SDK et l’interface utilisateur, et dans l’interface utilisateur, les événements IDLE et Initialisation de StatusChange peuvent être manquants pour les écouteurs d’événements ajoutés une fois la ressource chargée.</p> <p>・ 18889 : Si MediaPlayer est à l’état ERROR, l’objet view n’est pas renvoyé.</p> <p>・ 19039 : Si AdobePSDK. MediaPlayer. La fonction searchToLocal() est utilisée avec une valeur supérieure à EOF, puis la lecture commence à partir du début dans le cas de MSE.</p> <p>・ 19049 : Aucun état d’erreur n’est signalé pour le Flash Player sur Chrome, IE, Firefox lorsque la vidéo est bloquée pendant la lecture.</p> <p>・ 17205 : La lecture vidéo se bloque sur la lecture d’un flux non muet pendant quelques heures, tandis que la lecture audio continue (numéro Chromium 664033).</p> <p>・ 12308 : L’attribut timeStampOffset peut être appliqué aux diffusions DASH avec composition_time_offset spécifié sur le navigateur Chrome, ce qui entraîne une heure de décodage négative. Par conséquent, l’erreur MEDIA_ERR_ SRC_NOT_ SUPPORTED (problème Chromium #398141).</p> <p>・ 14126 : La lecture peut bloquer Firefox (numéro 1316024) en raison d’un écart interne dans la mémoire tampon source MSE. Essayez de rechercher pour reprendre la lecture.</p> <p>・ 1915 : MS Edge et IE 11 (Win 8.1 et 10) ne définissent pas la valeur Origin sur null lors de la redirection CORS et échoue, car l’en-tête n’est pas nul, ce qui entraîne une erreur de lecture.</p> <p>・ 19861 : problème lié au comportement d’ajout sur la mémoire tampon source pour les médias déjà lus. Chrome rejette le fragment ajouté, y compris moov, provoquant ainsi une erreur de décodage. (Problème Chromium #735335)</p> <p>19921 : La lecture bloque certains contenus HLS, même si leur mise en mémoire tampon a réussi (problème Chromium #713540)</p> <p>・ 2044 : la recherche vers la fin de la plage mise en mémoire tampon sur IE et Edge peut entraîner le blocage de la lecture.</p> <p>・ 20511 : Parfois, le rejet de la recherche peut être observé pour les flux HLS avec ou sans publicité.</p> <p>・ 20743 : Sous Windows 10 Chrome, le flux HLS Live est lu quelques secondes avant la lecture preroll MP4.</p> <p>・ 21043 : La dimension vidéo peut ne pas être correcte au chargement initial en raison d’un manque de métadonnées.</p> <p>・ 21115 : Le geste de l’utilisateur Android est nécessaire pour démarrer la lecture si la publicité preroll est disponible pour les vidéos dans une liste de lecture.</p> <p>・ HLS Live ne prend pas en charge le roulement de l’horodatage.</p> <p>・ Le son AAC-SSR n’est pas pris en charge.</p> <p>Les codecs audio AC3 et l’AC3 amélioré ne sont pas pris en charge.</p> <p>・ Pour les diffusions dont l’horodatage est incohérent mais sans marqueurs de discontinuité</p> <p>・ La lecture peut avoir des problèmes et une recherche incorrecte en raison des sauts.</p> <p>・ La durée du contenu et la durée de lecture peuvent ne pas correspondre.</p> <p>・ Les discontinuités entre les représentations et les rendus doivent correspondre à d’autres facteurs peut entraîner des problèmes de synchronisation et de blocage.</p> <p>・ Les sous-titres et WebVTT peuvent ne pas apparaître près de la fin de flux.</p> <p>・ Les modifications du codec audio ne sont pas prises en charge dans les sauts d’horodatage.</p> <p>・ L’insertion de publicités n’est pas prise en charge.</p> <p>・ Le mode de transfert rapide peut entraîner une boucle de lecture sur Win 8.1 IE 11 (problème MS #12446268).</p> <p>DASH :</p> <p>・ Pour les flux en direct : le profil en direct avec le type dynamique est pris en charge.</p> <p>・ Pour les flux VoD : le profil en direct avec le type statique est pris en charge.</p> <p>Pour les flux VoD : le profil à la demande n’est pas certifié pour les flux de production publicitaires.</p> </td> 
+   <td><p>・ Les formats multimédias autres que HLS ne sont pas pris en charge.</p> <p>8799 : Le Flash de secours ne prend pas en charge le contenu mixte. Il est donc nécessaire de s’assurer que le contenu, l’annonce et les autres URL ne génèrent pas de contenu mixte (contenu sécurisé et non sécurisé ensemble).</p> <p>・ 19271 : la lecture multi-view via l’interface utilisateur n’est pas prise en charge en mode de secours par Flash.</p> <p>・ Le Flash de secours ne fonctionne pas sur Microsoft Internet Explorer 8 et 9 sous Windows 7, car ces versions ne sont pas prises en charge par le SDK.</p> <p>・ 20262 : le Flash de secours ajoute des paramètres personnalisés à la liste d’informations de ciblage. L’ordre de priorité des paramètres personnalisés est également différent en cas de Flash et de MSE.</p> <p>・ 20653 : La reprise du Flash Browser TVSDK ne fonctionne pas sur Win10 avec la mise à jour Creators.</p> <p>・ Flash de secours fonctionne avec Flash Player version 23 et ultérieure.</p> <p>・ 20087 - Chrome 59 bêta avec</p> <p>Flash 25.0.0.171</p> <p>Version bêta (par défaut), la lecture HLS ne fonctionne pas en mode Flash de secours. Ça marche bien sur Canary.</p> </td> 
+   <td><p>・ 12563 : Les flux de mémoire avec codec audio mp4a.40.02 ne sont pas lus sur Firefox en raison d’une chaîne de codec audio non prise en charge dans MPD. Le codec audio mp4a.40.2 est pris en charge.</p> <p>15029 : Lors du passage d’une vidéo à l’autre dans multiView dans l’interface utilisateur-Framework, le bouton de lecture/pause n’est pas mis à jour en conséquence.</p> <p>・ 16034 : sous Windows 8.1 IE, l’appel de reset() entraîne une erreur de type MIME inconnu. Rechargez le média pour reprendre la lecture.</p> <p>・ 18235 : certains problèmes de recherche sont observés avec les flux de vod DASH avec des publicités.</p> <p>・ 18727 : L’API d’erreur n’est pas prise en charge pour MSE</p> <p>18750 : les événements de changement d’état peuvent être dans l’ordre dans certains cas pour le SDK et la structure de l’interface utilisateur. Dans le framework de l’interface utilisateur, les événements IDLE et Initialisation de l’étatChange peuvent être manquants pour les écouteurs d’événement ajoutés après le chargement de la ressource.</p> <p>・ 18889 : Si MediaPlayer est à l’état ERROR, l’objet view n’est pas renvoyé.</p> <p>・ 19039 : si AdobePSDK. MediaPlayer. La fonction searchToLocal() est utilisée avec une valeur supérieure à EOF, puis la lecture commence à partir du début dans le cas de MSE.</p> <p>・ 19049 : aucun état d’erreur n’est signalé pour le Flash Player sur Chrome, IE, Firefox lorsque la vidéo est bloquée pendant la lecture.</p> <p>・ 17205 : La lecture vidéo se bloque sur la lecture d’un flux non muet pendant quelques heures tandis que la lecture audio continue (numéro Chromium 664033).</p> <p>・ 12308 : les flux DASH avec composition_time_offset spécifié peuvent avoir timeStampOffset appliqué sur le navigateur Chrome, ce qui entraîne une heure de décodage négative et donc MEDIA_ERR_SRC_NOT_ Erreur PRISE en charge (problème Chromium #398141).</p> <p>・ 14126 : la lecture peut bloquer Firefox (numéro 1316024) en raison d’un écart interne dans la mémoire tampon source MSE. Essayez de rechercher pour reprendre la lecture.</p> <p>・ 19115 : MS Edge et IE 11 (Win 8.1 et 10) ne définit pas Origin sur null lors de la redirection CORS et échoue, car l’en-tête n’est pas nul, ce qui entraîne une erreur de lecture.</p> <p>・ 19861 : problème lié au comportement d’ajout sur la mémoire tampon source pour les médias déjà lus. Chrome rejette le fragment ajouté, y compris moov, provoquant ainsi une erreur de décodage. (Problème Chromium #735335)</p> <p>19921 : la lecture bloque certains contenus HLS même si leur mise en mémoire tampon a réussi (problème Chromium #713540)</p> <p>・ 2044 : la recherche vers la fin de la plage mise en mémoire tampon sur IE et Edge peut entraîner le blocage de la lecture.</p> <p>・ 20511 : Parfois, le rejet de la recherche peut être observé pour les flux HLS avec ou sans publicité.</p> <p>・ 20743 : sous Windows 10 Chrome, le flux HLS Live est lu pendant quelques secondes avant la lecture preroll MP4.</p> <p>・ 21043 : La dimension vidéo peut ne pas être correcte au chargement initial en raison d’un manque de métadonnées.</p> <p>・ 21115 : Android Le geste de l’utilisateur est nécessaire pour démarrer la lecture si la publicité preroll est disponible pour les vidéos dans une liste de lecture.</p> <p>・ HLS Live ne prend pas en charge le roulement de l’horodatage.</p> <p>・ Le son AAC-SSR n’est pas pris en charge.</p> <p>Les codecs audio AC3 et l’AC3 amélioré ne sont pas pris en charge.</p> <p>・ Pour les diffusions dont l’horodatage est incohérent mais sans marqueurs de discontinuité</p> <p>・ La lecture peut avoir des problèmes et une recherche incorrecte en raison des sauts.</p> <p>・ La durée du contenu et la durée de lecture peuvent ne pas correspondre.</p> <p>・ Les discontinuités entre les représentations et les rendus doivent correspondre à d’autres facteurs peut entraîner des problèmes de synchronisation et de blocage.</p> <p>・ Les sous-titres et WebVTT peuvent ne pas apparaître près de la fin de flux.</p> <p>・ Les modifications du codec audio ne sont pas prises en charge dans les sauts d’horodatage.</p> <p>・ L’insertion de publicités n’est pas prise en charge.</p> <p>・ Le mode de transfert rapide peut entraîner une boucle de lecture sur Win 8.1 IE 11 (problème MS #12446268).</p> <p>DASH :</p> <p>・ Pour les flux en direct : le profil en direct avec le type dynamique est pris en charge.</p> <p>・ Pour les flux VoD : le profil en direct avec le type statique est pris en charge.</p> <p>Pour les flux VoD : le profil à la demande n’est pas certifié pour les flux de production publicitaires.</p> </td> 
    <td><p>・ Les diffusions DASH Live et DASH Video on Demand ne sont pas prises en charge.</p> <p>・ La lecture vidéo PIP (Image dans l’Image) n’est pas prise en charge sur iOS en mode plein écran.</p> <p>Sur l’extension Safari (Video Tag) moins manifeste sans en-tête de type de contenu correct, ne fonctionnent pas.</p> </td> 
    <td><p>・ applicationID dans l’application d’expéditeur doit être identique à celui généré lors de l’enregistrement de l’URL du récepteur en tant qu’application de récepteur personnalisée.</p> <p>・ Le lecteur de référence est certifié pour les processus DASH. La structure de l’interface utilisateur n’est pas certifiée.</p> <p>Pour obtenir la liste des codecs multimédias pris en charge, reportez-vous à la section <a href="https://developers.google.com/cast/docs/media"><em>here</em></a>.</p> </td> 
   </tr> 
@@ -1448,15 +1447,15 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>FER VOD</td> 
    <td>Lecture générale (Lecture, Pause, Recherche)</td> 
    <td> </td> 
-   <td>18098 : Certains problèmes de recherche sont observés avec le flux HLS LBA FER.</td> 
+   <td>18098 : Certains problèmes de recherche sont observés avec le flux de flux HLS LBA FER.</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + En direct</td> 
    <td>Débit adaptatif</td> 
-   <td><p>・ 20079 : Réécriture de la mémoire tampon lors de la recherche dans la plage mise en mémoire tampon.</p> <p>20080 : Le comportement de l’ABR de Flash est cohérent avec MSE.</p> </td> 
-   <td><p>・ La variante Version de secours audio seule dans un flux ABR est ignorée en raison des limitations liées à la mémoire tampon.</p> <p>・ 12289 : Les paramètres de contrôle ABR ne s’appliquent pas à l’audio en cas de flux HLS/DASH non muxés.</p> </td> 
+   <td><p>・ 20079 : Réécriture de la mémoire tampon à la recherche dans une plage mise en mémoire tampon.</p> <p>20080 : le comportement de l’ABR de Flash est cohérent avec MSE.</p> </td> 
+   <td><p>・ La variante Version de secours audio seule dans un flux ABR est ignorée en raison des limitations liées à la mémoire tampon.</p> <p>・ 12289 : Les paramètres de contrôle ABR ne s'appliquent pas à l'audio en cas de flux HLS/DASH non muxés.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1472,14 +1471,14 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>WebVTT</td> 
    <td> </td> 
-   <td><p>・ 5206 : Les balises de région dans le fichier WebVTT sont ignorées par le lecteur lors de l’affichage des sous-titres.</p> <p>・ DASH : Les fichiers VTT fragmentés/segmentés ne sont pas pris en charge.</p> </td> 
+   <td><p>・ 5206 : les balises de région dans le fichier WebVTT sont ignorées par le lecteur lors de l’affichage des sous-titres.</p> <p>・ DASH : les fichiers VTT fragmentés/segmentés ne sont pas pris en charge.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + En direct</td> 
    <td>Basculement du manifeste</td> 
-   <td>21056 : Avec Flash Fallback, le basculement ne se produit pas pour le flux en direct si le flux Principal renvoie une erreur 404 pendant la lecture.</td> 
+   <td>21056 : Avec Flash Fallback, le basculement ne se produit pas pour le flux en direct si le flux principal renvoie une erreur 404 pendant la lecture.</td> 
    <td>Le basculement du manifeste s’applique uniquement au contenu et non aux publicités.</td> 
    <td>Le basculement de liste de lecture manquant fonctionne uniquement sur Safari pour le code d’erreur HTTP 404.</td> 
    <td> </td> 
@@ -1488,15 +1487,15 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Basculement avancé</td> 
    <td> </td> 
-   <td><p>・ Le basculement de segment ne prend pas en charge le saut de segments indisponibles et la poursuite de la lecture.</p> <p>20533 : Les segments manquants dans une liste de lecture doivent être traités comme une interruption et la lecture doit reprendre à partir du prochain segment disponible.</p> <p>21267 : Le changement de diffusion en raison d’un échec peut entraîner le téléchargement d’anciens segments.</p> </td> 
+   <td><p>・ Le basculement de segment ne prend pas en charge le saut de segments indisponibles et la poursuite de la lecture.</p> <p>2053 : les segments manquants dans une liste de lecture doivent être traités comme une discontinuité et la lecture doit reprendre à partir du prochain segment disponible.</p> <p>21267 : le changement de diffusion en raison d’un basculement peut entraîner le téléchargement d’anciens segments.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD + En direct</td> 
    <td>Notifications QoS et du lecteur</td> 
-   <td>21129 : La fréquence d’image n’est pas disponible en cas de secours par Flash.</td> 
-   <td><p>・ 11170 :</p> <p>Timed_Event n’est pas disponible pour Browser TVSDK avec MSE, contrairement à Browser TVSDK avec Flash Fallback.</p> <p>21129 : Le débit d’image n’est pas calculé pour les flux en direct.</p> </td> 
+   <td>21129 : La fréquence d'image n'est pas disponible en cas de secours par Flash.</td> 
+   <td><p>• 11170:</p> <p>Timed_Event n’est pas disponible pour Browser TVSDK avec MSE, contrairement à Browser TVSDK avec Flash Fallback.</p> <p>21129 : Le taux d'image n'est pas calculé pour les flux en direct.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1505,7 +1504,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>Prise en charge des en-têtes de cookie</td> 
    <td> </td> 
    <td> </td> 
-   <td><p>L’indicateur withCredentials et les en-têtes de cookie ne sont pas pris en charge sur Safari.</p> <p>21051 : Pour autoriser les cookies dans Safari, activez le paramètre "Cookies et données du site web" depuis Préférences &gt; Confidentialité.</p> </td> 
+   <td><p>L’indicateur withCredentials et les en-têtes de cookie ne sont pas pris en charge sur Safari.</p> <p>21051 : Pour autoriser les cookies dans Safari, activez le paramètre "Cookies et données de site web" dans Préférences &gt; Confidentialité.</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -1520,7 +1519,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Audio de liaison différée</td> 
    <td> </td> 
-   <td><p>・ L’insertion de publicités n’est pas prise en charge avec les flux LBA HLS Live.</p> <p>・ 17273 : Les flux LBA HLS VOD passent au rendu par défaut en cas de basculement et ne peuvent pas être rétablis sur le dernier sélectionné.</p> <p>・ 20251 : La diffusion HLS Live LBA peut bloquer la recherche.</p> <p>・ 20497 : Le lecteur reste en état de mise en mémoire tampon si les diffusions HLS LBA non muxées ne comportent pas d’images audio ou vidéo à proximité de la fin de la diffusion.</p> </td> 
+   <td><p>・ L’insertion de publicités n’est pas prise en charge avec les flux LBA HLS Live.</p> <p>・ 17273 : les flux LBA HLS VOD passent au rendu par défaut en cas de basculement et ne peuvent pas être rétablis sur la dernière sélection.</p> <p>・ 20251 : la diffusion HLS Live LBA peut bloquer la recherche.</p> <p>・ 20497 : Le lecteur reste en état de mise en mémoire tampon si les diffusions HLS LBA non muxées ont des images audio ou vidéo manquantes à la fin de la diffusion.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1528,7 +1527,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Redirection 302</td> 
    <td> </td> 
-   <td><p>15787 : 302</p> <p>l’optimisation de la redirection n’est pas prise en charge sur les navigateurs Windows Edge et IE, car ils ne prennent pas en charge la propriété responseURL dans l’objet XMLHttpRequest .</p> </td> 
+   <td><p>15787: 302</p> <p>l’optimisation de la redirection n’est pas prise en charge sur les navigateurs Windows Edge et IE, car ils ne prennent pas en charge la propriété responseURL dans l’objet XMLHttpRequest .</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1551,15 +1550,15 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD</td> 
    <td>Lecture au décalage</td> 
    <td><p>Le démarrage de la lecture à une valeur de décalage spécifique n’est pas pris en charge dans le contenu MP4.</p> </td> 
-   <td>20492 : Les publicités mid-roll précédant le décalage sont lues avant que le contenu ne reprend à partir de la valeur de décalage.</td> 
+   <td>20492 : les publicités mid-roll précédant le décalage sont lues avant que le contenu ne reprend de la valeur de décalage.</td> 
    <td>La lecture avec décalage n’est pas prise en charge dans iOS.</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>Lecture de la carte</td> 
-   <td>Lisser Trickplay ne fonctionne pas pour les diffusions sans rendu iFrame.</td> 
-   <td><p>・ Les adaptations de la lecture de la marque ne sont pas prises en charge sur Firefox et Internet Explorer et le mode de ruse inverse n’est donc pas disponible sur ces navigateurs.</p> <p>・ La lecture de texte n’est pas disponible lors de la lecture de contenu avec des publicités.</p> <p>・ 10435 : Pendant la lecture DASH, la vidéo se bloque lors de la lecture de l’astuce de transfert sur Internet Explorer (Windows 8.1).</p> <p>par intermittence. Cela se produit puisque nous utilisons la propriété playbackRate des éléments vidéo sans l’adaptation de lecture de l’astuce.</p> <p>14182 : Parfois, lors d’un retour en arrière sur le navigateur Chrome, l’événement de recherche peut ne pas être reçu et par conséquent, le mode de ruse ne fonctionnera pas.</p> <p>・ 14942 : Les taux de lecture peuvent être définis sur Chrome pour Android même en cas de flux de lecture autres qu’un tour, mais le paramètre ne sera pas appliqué et la lecture se poursuivra à un rythme normal.</p> <p>・ 17308 : La recherche ne fonctionne pas en mode Trickplay.</p> <p>・ 17309 : Dans le navigateur Chrome, le mode de l’envers ne peut pas être maintenu pendant plus de 2 secondes.</p> <p>19272 : Il se peut que la lecture de la copie de la marque ne se récupère pas de la mise en mémoire tampon sur le navigateur Windows 10 Edge dans le cas des flux DASH.</p> </td> 
+   <td>La lecture en continu ne fonctionne pas pour les diffusions qui n’ont aucun rendu iFrame.</td> 
+   <td><p>・ Les adaptations de la lecture de la marque ne sont pas prises en charge sur Firefox et Internet Explorer et le mode de ruse inverse n’est donc pas disponible sur ces navigateurs.</p> <p>・ La lecture de texte n’est pas disponible lors de la lecture de contenu avec des publicités.</p> <p>・ 10435 : pendant la lecture DASH, la vidéo se bloque lors de la lecture de l’astuce avant sur Internet Explorer (Windows 8.1)</p> <p>par intermittence. Cela se produit puisque nous utilisons la propriété playbackRate des éléments vidéo sans l’adaptation de lecture de l’astuce.</p> <p>14182 : Parfois, lors du retour en arrière sur le navigateur Chrome, l’événement de recherche peut ne pas être reçu et par conséquent, le mode de ruse ne fonctionne pas.</p> <p>・ 14942 : les taux de lecture peuvent être définis sur Chrome pour Android même en cas de flux de lecture autres que les tours, mais le paramètre ne sera pas appliqué et la lecture continuera à un rythme normal.</p> <p>・ 17308 : La recherche ne fonctionne pas en mode Trickplay.</p> <p>・ 17309 : sur le navigateur Chrome, le mode de l’envers ne peut pas être maintenu pendant plus de 2 secondes.</p> <p>19272 : il se peut que la lecture de la marque ne récupère pas de la mise en mémoire tampon sur le navigateur Windows 10 Edge dans le cas des flux DASH.</p> </td> 
    <td>Le mode Rembobiner n’est pas pris en charge.</td> 
    <td> </td> 
   </tr> 
@@ -1567,8 +1566,8 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Analyse d’ID3</td> 
    <td>20346 : L’octet de codage de texte des images ID3 doit également être renvoyé par le SDK.</td> 
-   <td><p>Les balises ID3 disponibles dans les flux de transfert de données audio (ADTS) sont ignorées par le SDK.</p> <p>・ 12378 : Les métadonnées minutées ID3 sont analysées à différents moments sur le Flash et le navigateur avec prise en charge de MSE. Par conséquent, le comportement d’affichage sur la chronologie du lecteur de référence est également différent.</p> <p>・ 19247 : L’analyse d’ID3 n’est pas prise en charge sur la structure de l’interface utilisateur.</p> </td> 
-   <td><p>・ 20323 : La balise PRIV ID3 utilisée pour signaler l’horodatage du premier exemple de segment AEM n’est pas analysée par Safari (numéro Safari #32422733)</p> <p>・ 20350 : Sur certains appareils (y compris MAC OS X 10.1, iPad10), Safari ne fournit pas d’événement de changement de repère en mode ruse. Par conséquent, les images ID3 ne sont pas reçues. (Problème Safari #32450526)</p> </td> 
+   <td><p>Les balises ID3 disponibles dans les flux de transfert de données audio (ADTS) sont ignorées par le SDK.</p> <p>・ 12378 : les métadonnées minutées ID3 sont analysées à différents moments sur le Flash et le navigateur avec prise en charge de MSE. Par conséquent, le comportement d’affichage sur la chronologie du lecteur de référence est également différent.</p> <p>・ 19247 : l’analyse ID3 n’est pas prise en charge dans l’interface utilisateur.</p> </td> 
+   <td><p>・ 20323 : la balise PRIV ID3 utilisée pour signaler l’horodatage du premier exemple de segment n’est pas analysé par Safari (numéro Safari #32422733)</p> <p>・ 20350 : sur certains appareils (y compris MAC OS X 10.1, iPad10), Safari ne fournit pas d’événement de changement de repère en mode de ruse et par conséquent, les images ID3 ne sont pas reçues. (Problème Safari #32450526)</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -1599,21 +1598,21 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>AES-128</td> 
    <td> </td> 
    <td>La plage d’octets n’est pas prise en charge avec le contenu chiffré AES-128.</td> 
-   <td>12324 : La lecture des flux chiffrés HLS AES-128 échoue sur Safari si la balise IV n’est pas spécifiée.</td> 
+   <td>12324 : La lecture des diffusions cryptées HLS AES-128 échoue sur Safari si la balise IV n’est pas spécifiée.</td> 
    <td> </td> 
   </tr> 
   <tr> 
    <td>VOD</td> 
    <td>DRM</td> 
    <td> </td> 
-   <td><p>・ 12660 : Le lecteur HTML5 renvoie une erreur interne au serveur pour le contenu du tiret chiffré PlayReady expiré.</p> <p>・ 16720 : Le contenu chiffré DASH DRM ne fonctionnera pas si l’attribut de début dans la balise de point est manquant.</p> <p>・ 18589 : La lecture n’est pas prise en charge pour les diffusions VoD multipériodes de mémoire tampon protégées avec Xlink.</p> <p>・ 18653 : La lecture du contenu multi-période Widevine avec plusieurs clés s’arrête à la première période et ne peut pas passer à la période suivante.</p> <p>・ 18656 : Diffusion multi-période prête à l’emploi, chiffrée avec différentes clés, sans lecture.</p> <p>Playready 2.0 pour le tiret n’est pas certifiée.</p> <p> </p> <p> </p> </td> 
-   <td>12602 : Les métadonnées DRM HLS Fairplay sont régulièrement actualisées par le lecteur HTML5 sur Safari.</td> 
+   <td><p>・ 12660 : le lecteur HTML5 renvoie une erreur interne au serveur pour les contenus de hachage chiffrés PlayReady expirés.</p> <p>・ 16720 : le contenu chiffré DASH DRM ne fonctionnera pas si l’attribut start dans la balise period est manquant.</p> <p>・ 18589 : la lecture n’est pas prise en charge pour les flux multipériodes Dash VoD protégés par DRM avec Xlink.</p> <p>・ 18653 : la lecture du contenu multi-période de Widevine avec plusieurs clés s’arrête à la première période et ne peut pas passer à la période suivante.</p> <p>・ 18656 : Diffusion multi-périodes prête à la lecture, cryptée avec différentes clés, sans lecture.</p> <p>Playready 2.0 pour le tiret n’est pas certifiée.</p> <p> </p> <p> </p> </td> 
+   <td>12602 : les métadonnées DRM HLS Fairplay sont régulièrement actualisées par le lecteur HTML5 sur Safari.</td> 
    <td><p>Le contenu DRM d’appareil à grande vitesse DASH conditionné via Bento4 peut être lu. Le contenu conditionné via Offline Packager et Shaka packager ne s’exécute pas. DASH PlayReady DRM n’est pas pris en charge.</p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Tableau 19 : Principales fonctionnalités de l’Ad Insertion (CSAI)**
+**Tableau 19 : Fonctionnalités principales de l’Ad Insertion**
 
 <table> 
  <tbody> 
@@ -1629,7 +1628,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Pré/Mid/Post</td> 
    <td> </td> 
-   <td><p>・ Les publicités preroll avec du contenu HLS en direct sont lues en mode double lecteur.</p> <p>・ Les publicités DASH avec contenu HLS et les publicités HLS avec contenu DASH ne sont pas prises en charge.</p> <p>・ 19002 : Dans HTML5 Player avec MSE adBreak. insertType ne renvoie pas la valeur correcte pour décrire le type d’insertion correct, c’est-à-dire le client inséré et ou le serveur inséré.</p> <p>7794 : Sur les appareils mobiles (iOS, Android avec Chrome 33 ou version inférieure ou Navigateur natif) où la barre de contrôle par défaut est visible en mode Plein écran, la barre de recherche et les boutons de transfert rapide sont disponibles lors de la lecture des publicités.</p> <p>・ 11048 : Le passage de la publicité au contenu HLS Live n’est pas aisé dans le cas des extensions de source multimédia.</p> <p>・ 16083 : Sur Android 4.4 Chrome v52, il arrive que la publicité HLS avec du contenu HLS entraîne une erreur de décodage de pipeline après la lecture bloquée.</p> <p>・ 16097 : Les erreurs rencontrées lors de la coupure publicitaire ne sont pas gérées, ce qui peut entraîner l’arrêt de la lecture de la diffusion principale.</p> <p>・ 18095 : Les publicités MP4 ne sont pas prises en charge avec le contenu en direct HLS.</p> <p>19120 : Plusieurs recherches sur des publicités HLS avec du contenu HLS peuvent entraîner l’arrêt de la lecture de la diffusion.</p> <p>・ 19131 : La superposition de la mémoire tampon peut s’afficher lors du passage d’une coupure publicitaire preroll au contenu.</p> <p>・ 20296 : Dans le cas de diffusions HLS Live, la recherche dans la fenêtre de l’enregistreur numérique suivie de la recherche sur les parcours intermédiaires résolus peut entraîner un blocage de lecture.</p> <p>・ 20298 : Diffusions HLS Live avec des rouleaux moyens bloquent dès que la première publicité mid-roll sort de la fenêtre de l’enregistreur de contenu numérique.</p> <p>・ 20317 : Les diffusions HLS Live peuvent se bloquer lors du passage à la publicité suivante ou de la publicité vers le contenu si la coupure publicitaire contient plusieurs publicités.</p> 
+   <td><p>・ Les publicités preroll avec du contenu HLS en direct sont lues en mode double lecteur.</p> <p>・ Les publicités DASH avec contenu HLS et les publicités HLS avec contenu DASH ne sont pas prises en charge.</p> <p>・ 19002 : Dans HTML5 Player avec MSE adBreak. insertType ne renvoie pas la valeur correcte pour décrire le type d’insertion correct, c’est-à-dire le client inséré et ou le serveur inséré.</p> <p>7794 : sur les appareils mobiles (iOS, Android avec Chrome 33 ou version inférieure ou Navigateur natif) où la barre de contrôle par défaut est visible en mode Plein écran, la barre de recherche et les boutons de transfert rapide sont disponibles lors de la lecture des publicités.</p> <p>・ 11048 : le passage de la publicité au contenu HLS Live n’est pas fluide dans le cas des extensions de source de média.</p> <p>・ 16083 : sur Android 4.4 Chrome v52, il arrive que la publicité HLS avec du contenu HLS entraîne une erreur de décodage de pipeline après la lecture bloquée.</p> <p>・ 16097 : Les erreurs rencontrées lors de la coupure publicitaire ne sont pas gérées, ce qui peut entraîner l’arrêt de la lecture de la diffusion principale.</p> <p>・ 18095 : les publicités MP4 ne sont pas prises en charge avec le contenu HLS en direct.</p> <p>19120 : Plusieurs recherches sur des annonces HLS avec du contenu HLS peuvent entraîner l’arrêt de la lecture de la diffusion.</p> <p>・ 19131 : la superposition de la mémoire tampon peut apparaître lors du passage de la coupure publicitaire preroll au contenu.</p> <p>・ 20296 : dans le cas de diffusions HLS Live, la recherche en amont dans la fenêtre de l’enregistreur de contenu, suivie de la recherche sur les parcours intermédiaires résolus, peut entraîner un blocage de lecture.</p> <p>・ 20298 : Diffusions HLS Live avec des rouleaux moyens bloquent dès que la première publicité mid-roll sort de la fenêtre de l’enregistreur numérique.</p> <p>・ 20317 : les flux HLS Live peuvent bloquer lors du passage à la publicité suivante ou de la publicité vers le contenu si la coupure publicitaire contient plusieurs publicités.</p> 
     <ul> 
      <li>Les publicités dans la fenêtre de l’enregistreur numérique des diffusions HLS Live ne sont pas résolues.</li> 
     </ul> </td> 
@@ -1664,7 +1663,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Creative Repackaging</td> 
    <td> </td> 
-   <td>21464 : La réponse publicitaire est complètement ignorée si le reconditionnement créatif échoue pour l’une des publicités de la coupure publicitaire.</td> 
+   <td>21464 : La réponse de la publicité est complètement ignorée si le reconditionnement créatif échoue pour l’une des publicités de la coupure publicitaire.</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1687,7 +1686,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD</td> 
    <td>Publicité uniquement</td> 
    <td> </td> 
-   <td>20056 : La propriété de la technologie du lecteur n’est pas pertinente, car elle est basée sur le contenu principal, qui est vide dans le cas de la lecture de la publicité uniquement.</td> 
+   <td>20056 : La propriété de la technologie du lecteur n’est pas pertinente, car elle est basée sur le contenu principal, qui est vide dans le cas de la lecture de publicité seule.</td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1695,7 +1694,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td>VOD + En direct</td> 
    <td>Stratégie de publicité personnalisée</td> 
    <td> </td> 
-   <td><p>・ Les comportements publicitaires ne sont pas pris en charge avec les publicités MP4 et le contenu MP4.</p> <p>・ 13973 : Comportements de publicité personnalisés : la stratégie de SKIP ne génère pas d’événement complete lorsqu’elle est utilisée avec MSE.</p> <p>・ 14939 : Les stratégies de comportement de publicité personnalisées ignorent et ignorent la coupure publicitaire ne fonctionnent pas pour le contenu DASH.</p> <p>・ 17131 : La première image de la publicité est visible, puis le contenu reprend en cas de stratégie de coupure publicitaire par SKIP.</p> </td> 
+   <td><p>・ Les comportements publicitaires ne sont pas pris en charge avec les publicités MP4 et le contenu MP4.</p> <p>・ 13973 : Comportements de publicité personnalisés - La stratégie de SKIP ne génère pas d’événement complete lorsqu’elle est utilisée avec MSE.</p> <p>・ 14939 : Les stratégies de comportement de publicité personnalisées ignorent et ignorent la coupure publicitaire ne fonctionnent pas pour le contenu DASH.</p> <p>・ 17131 : La première image de la publicité est visible, puis le contenu reprend en cas de stratégie de coupure publicitaire par SKIP.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1711,7 +1710,7 @@ Les limites et les problèmes connus du SDK du navigateur sont mentionnés ci-de
    <td> </td> 
    <td>VPAID 2.0</td> 
    <td> </td> 
-   <td><p>・ Les comportements publicitaires ne sont pas pris en charge pour les publicités VPAID.</p> <p>・ 15032 : Les publicités VPAID en combinaison avec des publicités MP4 ou HLS dans une coupure publicitaire ne sont pas prises en charge.</p> <p>・ 19001 : Sur Android et iOS, lorsque la publicité VPAID est lue avec le format MP4 comme contenu principal, les deux pistes audio principales sont audibles, l’une du contenu principal et l’autre de la publicité.</p> <p>・ 20762 : Les publicités VPAID ne sont pas prises en charge avec le mode "Image dans l’Image" (PIP).</p> <p>・ 21172 : L’événement Lecture terminée n’est pas reçu pour le contenu VOD HLS avec publicités VPAID.</p> <p>・ 21173 : onAdBreakCompleteEvent n’est pas reçu pour le contenu VOD HLS et les publicités VPAID post-roll.</p> </td> 
+   <td><p>・ Les comportements publicitaires ne sont pas pris en charge pour les publicités VPAID.</p> <p>・ 15032 : les publicités VPAID en combinaison avec les publicités MP4 ou HLS en coupure publicitaire ne sont pas prises en charge.</p> <p>・ 19001 : sur Android et iOS, lorsque la publicité VPAID est lue avec le contenu MP4 comme contenu principal, deux pistes audio sont audibles, l’une du contenu principal et l’autre de la publicité.</p> <p>・ 20762 : les publicités VPAID ne sont pas prises en charge avec le mode "Image dans l’Image" (PIP).</p> <p>・ 21172 : L’événement Lire terminée n’est pas reçu pour le contenu VOD HLS avec publicités VPAID.</p> <p>・ 21173 : onAdBreakCompleteEvent n’est pas reçu pour le contenu VOD HLS et les publicités VPAID post-roll.</p> </td> 
    <td>Le lecteur bascule entre le mode normal et le mode plein écran lors du basculement entre la publicité VPAID et le contenu principal.</td> 
    <td> </td> 
    <td> </td> 

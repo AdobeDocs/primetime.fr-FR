@@ -1,33 +1,31 @@
 ---
 description: Votre application doit utiliser les objets PTTimedMetadata appropriés aux moments appropriés.
-title: Stocker les objets de métadonnées minutés à mesure qu’ils sont distribués
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Stocker les objets de métadonnées minutés lors de leur distribution
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
-
-# Stocker les objets de métadonnées minutés au fur et à mesure de leur distribution {#store-timed-metadata-objects-as-they-are-dispatched}
+# Stocker les objets de métadonnées minutés lors de leur distribution {#store-timed-metadata-objects-as-they-are-dispatched}
 
 Votre application doit utiliser les objets PTTimedMetadata appropriés aux moments appropriés.
 
-Lors de l’analyse du contenu, qui se produit avant la lecture, TVSDK identifie les balises abonnées et avertit votre application de ces balises. L’heure associée à chaque `PTTimedMetadata` correspond à l’heure absolue du plan de montage chronologique de lecture.
+Pendant l’analyse du contenu, qui se produit avant la lecture, TVSDK identifie les balises abonnées et informe votre application de ces balises. L’heure associée à chaque `PTTimedMetadata` correspond à l’heure absolue de la chronologie de lecture.
 
-Votre demande doit remplir les tâches suivantes :
+Votre application doit effectuer les tâches suivantes :
 
-1. Assurez le suivi de l’heure de lecture actuelle.
-1. Correspond à l’heure de lecture actuelle aux objets `PTTimedMetadata` distribués.
+1. Effectuez le suivi de la durée de lecture actuelle.
+1. Correspondance de la durée de lecture actuelle avec le délai distribué `PTTimedMetadata` objets.
 
-1. Utilisez `PTTimedMetadata` où l’heure de début est égale à l’heure de lecture actuelle.
+1. Utilisez la variable `PTTimedMetadata` où l’heure de début est égale à l’heure de lecture actuelle.
 
    >[!NOTE]
    >
-   >Le code ci-dessous suppose qu&#39;il n&#39;y a qu&#39;une seule instance `PTTimedMetadata` à la fois. S’il existe plusieurs instances, l’application doit les enregistrer correctement dans un dictionnaire. Une méthode consiste à créer un tableau à un moment donné et à stocker toutes les instances de ce tableau.
+   >Le code ci-dessous suppose qu’il n’y en a qu’un seul. `PTTimedMetadata` instance à la fois. S’il existe plusieurs instances, l’application doit les enregistrer correctement dans un dictionnaire. Une méthode consiste à créer un tableau à un moment donné et à stocker toutes les instances de ce tableau.
 
-   L&#39;exemple suivant montre comment enregistrer des objets `PTTimedMetadata` dans une balise `NSMutableDictionary (timedMetadataCollection)` en fonction de l&#39;heure de début de chaque `timedMetadata`.
+   L’exemple suivant montre comment enregistrer `PTTimedMetadata` dans un objet `NSMutableDictionary (timedMetadataCollection)` en fonction de l’heure de début de chaque `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +50,9 @@ Votre demande doit remplir les tâches suivantes :
    }
    ```
 
-## Analyse des balises d’ID3 Nielsen {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## Analyse des balises ID3 Nielsen {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Pour extraire la balise ID3 à des fins d’analyse, utilisez la méthode `onMediaPlayerSubscribedTagIdentified` suivante :
+Pour extraire la balise ID3 à des fins d’analyse, utilisez ce qui suit sur la page `onMediaPlayerSubscribedTagIdentified` method :
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 

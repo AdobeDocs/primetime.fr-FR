@@ -1,27 +1,25 @@
 ---
-description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
-title: Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir de la classe QOSProvider .
+title: Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils{#read-qos-playback-buffering-and-device-statistics}
 
-# Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS{#read-qos-playback-buffering-and-device-statistics}
+Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir de la classe QOSProvider .
 
-Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
+La variable `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les taux d’images, les données temporelles, etc.
 
-La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+Il fournit également des informations sur l’appareil, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK, l’identifiant de l’appareil et la taille/densité d’écran.
 
-Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK, l’ID du périphérique du fabricant et la taille/densité d’écran.
+1. Instanciation d’un lecteur multimédia
+1. Créez un `QOSProvider` et joignez-la au lecteur multimédia.
 
-1. Instanciez un lecteur multimédia.
-1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
-
-   Le constructeur `QOSProvider` prend en compte le contexte du lecteur afin de pouvoir récupérer des informations spécifiques au périphérique.
+   La variable `QOSProvider` le constructeur utilise un contexte du lecteur afin de pouvoir récupérer des informations spécifiques à l’appareil.
 
    ```java
    // Create Media Player. 
@@ -31,7 +29,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur qui récupère régulièrement les nouvelles valeurs QoS de la variable `QOSProvider`. Par exemple :
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
@@ -61,7 +59,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
    }; 
    ```
 
-1. (Facultatif) Lisez les informations spécifiques au périphérique.
+1. (Facultatif) Lisez les informations spécifiques à l’appareil.
 
    ```java
    // Show device information 
@@ -82,4 +80,3 @@ Il fournit également des informations sur le périphérique, telles que le fabr
      deviceInfo.getWidthPixels() + "x" + deviceInfo.getHeightPixels() +  
      " (" + orientation + ")"); 
    ```
-

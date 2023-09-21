@@ -1,18 +1,16 @@
 ---
-title: Intégration du client
-description: Intégration du client
+title: Intégration client
+description: Intégration client
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
+# Intégration client{#client-integration}
 
-# Intégration du client{#client-integration}
+Afin d’orienter le client vers l’individualisation par rapport au serveur d’individualisation On Premise (par opposition au serveur d’individualisation globale hébergé par Adobe), le client doit utiliser les métadonnées DRM créées précédemment. Le fait qu’un client non personnalisé effectue une acquisition de licence ou initialise DRM à l’aide des métadonnées spéciales entraîne la connexion du client à l’URL personnalisée du serveur d’individualisation.
 
-Afin d&#39;orienter le client vers l&#39;individualisation par rapport au serveur d&#39;individualisation sur site (par opposition au serveur d&#39;individualisation globale hébergé par l&#39;Adobe), le client doit utiliser les métadonnées DRM précédemment créées. Si un client non individualisé procède à l’acquisition d’une licence ou initialise DRM, à l’aide des métadonnées spéciales, le client se connecte à l’URL personnalisée du serveur d’individualisation.
-
-Un exemple de fragment de code est inclus dans le dossier [!DNL client_sample].
+Un exemple de fragment de code est inclus dans la variable [!DNL client_sample] dossier.

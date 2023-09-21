@@ -1,22 +1,20 @@
 ---
-description: TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
-title: Mise en oeuvre de la gestion des interruptions de service
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
+title: Mise en oeuvre de la gestion des blackout
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Mise en oeuvre de la gestion des blackout {#implement-blackout-handling}
 
-# Mise en oeuvre de la gestion des interruptions de service {#implement-blackout-handling}
+TVSDK fournit des API et un exemple de code pour gérer les périodes de blackout.
 
-TVSDK fournit des API et un exemple de code pour la gestion des périodes d’interruption de service.
+Pour mettre en oeuvre la gestion des blackout et fournir un autre contenu pendant le blackout :
 
-Pour mettre en oeuvre la gestion des interruptions de service et fournir un autre contenu pendant la coupure de service :
-
-1. Configurez votre application pour vous abonner à des balises d’arrêt dans un manifeste de flux en direct.
+1. Configurez votre application pour vous abonner à des balises de blackout dans un manifeste de diffusion en direct.
 
    ```
    - (void) createMediaPlayer:(PTMediaPlayerItem *)item 
@@ -27,7 +25,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Ajoutez un écouteur de notification pour `PTTimedMetadataChangedNotification`.
+1. Ajout d’un écouteur de notification pour `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,9 +35,9 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Mettez en oeuvre une méthode d’écouteur pour les objets `PTTimedMetadata` au premier plan.
+1. Mise en oeuvre d’une méthode d’écouteur pour `PTTimedMetadata` au premier plan.
 
-   Par exemple :
+   Par exemple :
 
    ```
    - (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
@@ -61,7 +59,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Gérez les objets `TimedMetadata` avec des mises à jour constantes pendant la lecture.
+1. Handle `TimedMetadata` avec des mises à jour constantes pendant la lecture.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +80,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Ajoutez le gestionnaire `PTTimedMetadata` pour passer à un autre contenu et revenir au contenu principal comme indiqué par l&#39;objet `PTTimedMetadata` et son temps de lecture.
+1. Ajoutez la variable `PTTimedMetadata` pour basculer vers un autre contenu et revenir au contenu principal, comme indiqué par le `PTTimedMetadata` et son temps de lecture.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +195,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Implémentez une méthode d’écouteur pour les objets `PTTimedMetadata` en arrière-plan.
+1. Mise en oeuvre d’une méthode d’écouteur pour `PTTimedMetadata` en arrière-plan.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -218,7 +216,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Implémentez une méthode d’écouteur pour les erreurs d’arrière-plan.
+1. Mettez en oeuvre une méthode d’écouteur pour les erreurs d’arrière-plan.
 
    ```
    - (void) onBackgroundManifestError:(NSNotification *)notification 
@@ -227,7 +225,7 @@ Pour mettre en oeuvre la gestion des interruptions de service et fournir un autr
    }
    ```
 
-1. Si la plage d’interruption se trouve sur le DVR dans le flux de lecture, mettez à jour les plages impossibles à rechercher.
+1. Si la plage d’interruption se trouve sur le répertoire de stockage global de documents (DVR) dans le flux de lecture, mettez à jour les plages impossibles à rechercher.
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  

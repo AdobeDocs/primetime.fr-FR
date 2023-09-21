@@ -1,20 +1,18 @@
 ---
-description: Vous pouvez spécifier la mise en forme des sous-titres.
+description: Vous pouvez spécifier le formatage des sous-titres.
 title: Exemples de formatage des légendes
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
+# Exemples : formatage des légendes{#examples-caption-formatting}
 
-# Exemples : Formatage des légendes{#examples-caption-formatting}
+Vous pouvez spécifier le formatage des sous-titres.
 
-Vous pouvez spécifier la mise en forme des sous-titres.
-
-## Exemple 1 : Spécifier explicitement les valeurs de format {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Exemple 1 : spécification explicite de valeurs de format {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```js
 // Set CC style. 
@@ -34,5 +32,4 @@ var tf = new AdobePSDK.TextFormat(
 
 >[!IMPORTANT]
 >
->Le SDK du navigateur ne prend pas en charge l’opacité des bords de police, des couleurs de fond ou des remplissages.
-
+>Le TVSDK du navigateur ne prend pas en charge l’opacité des bords de police, de la couleur de fond ou du fond.

@@ -1,14 +1,12 @@
 ---
 description: Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’utilisateur effectue une recherche sur une coupure publicitaire. Vous pouvez personnaliser le comportement pour ignorer une coupure publicitaire si le temps écoulé depuis la fin d’une coupure précédente se situe dans un certain nombre de minutes.
 title: Ignorer les coupures publicitaires pour une période
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # Ignorer les coupures publicitaires pour une période {#skip-ad-breaks-for-a-period-of-time}
 
@@ -18,25 +16,25 @@ Par défaut, TVSDK force la lecture d’une coupure publicitaire lorsque l’uti
 >
 >Si vous devez effectuer une recherche interne pour pardonner une publicité, il peut y avoir une légère pause pendant la lecture.
 
-Pour remplacer le comportement de coupure publicitaire par défaut de TVSDK, vous pouvez étendre le sélecteur de stratégie publicitaire par défaut. Il existe quatre stratégies de coupure publicitaire :
+Pour remplacer le comportement de coupure publicitaire par défaut de TVSDK, vous pouvez étendre le sélecteur de stratégie de publicité par défaut. Quatre stratégies de coupure publicitaire sont disponibles :
 
 * LECTURE
-* IGNORER
+* SKIP
 
-   >[!NOTE]
-   >
-   >La stratégie de coupure publicitaire SKIP peut ne pas fonctionner comme prévu pour les flux en direct lorsqu’une publicité est présente au point de diffusion. Par exemple, dans le cas d’une coupure publicitaire preroll, SKIP entraîne une recherche jusqu’à la fin de la coupure publicitaire, qui peut être supérieure au point de production. Dans ce cas, TVSDK peut rechercher le milieu d’une publicité.
+  >[!NOTE]
+  >
+  >La stratégie de coupure publicitaire de SKIP peut ne pas fonctionner comme prévu pour les diffusions en direct lorsqu’une publicité est présente au point d’entrée. Par exemple, pour un preroll, le SKIP entraîne une recherche jusqu’à la fin de la coupure publicitaire, qui peut être supérieure au point d’activation. Dans ce cas, TVSDK peut rechercher le milieu d’une publicité.
 
 * REMOVE_AFTER
 * SUPPRIMER
 
-   >[!NOTE]
-   >
-   >La stratégie de coupure publicitaire `REMOVE` est censée être abandonnée. L&#39;Adobe vous recommande d&#39;utiliser la stratégie de coupure publicitaire `SKIP` au lieu de `REMOVE`.
+  >[!NOTE]
+  >
+  >La variable `REMOVE` la stratégie de coupure publicitaire doit être abandonnée. Adobe recommande d’utiliser la variable `SKIP` stratégie de coupure publicitaire au lieu de `REMOVE`.
 
-L’exemple suivant d’un sélecteur de stratégie d’annonce personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur ait assisté à une coupure publicitaire.
+L’exemple suivant d’un sélecteur de stratégie de publicité personnalisé ignore les publicités au cours des cinq prochaines minutes (heure du mur) après qu’un utilisateur a visionné une coupure publicitaire.
 
-1. Lorsque l&#39;utilisateur termine de regarder une coupure publicitaire, enregistrez l&#39;heure système actuelle.
+1. Lorsque l’utilisateur termine de regarder une coupure publicitaire, enregistrez l’heure actuelle du système.
 
    ```java
    @Override 

@@ -2,15 +2,13 @@
 title: Utilisation de Policy Manager
 description: Utilisation de Policy Manager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
 # Utilisation de Policy Manager {#using-policy-manager}
 
-Grâce à Policy Manager, vous pouvez créer et gérer des stratégies. Avant d&#39;exécuter Policy Manager, vous pouvez éventuellement définir des valeurs pour les propriétés de Policy Manager dans le fichier de configuration. Le fichier de configuration spécifie les informations qui seront appliquées à toutes les stratégies. Toutes les propriétés de Policy Manager peuvent également être spécifiées sur la ligne de commande.
+À l’aide du Gestionnaire de stratégies, vous pouvez créer et gérer des stratégies. Avant d’exécuter Policy Manager, vous pouvez éventuellement définir des valeurs pour les propriétés Policy Manager dans le fichier de configuration. Le fichier de configuration spécifie les informations qui seront appliquées à toutes les stratégies. Toutes les propriétés du Gestionnaire de stratégies peuvent également être spécifiées sur la ligne de commande.

@@ -1,24 +1,22 @@
 ---
 title: Configuration du suivi des publicités
 description: Configuration du suivi des publicités
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
+# Configuration du suivi des publicités {#ser-up-ad-tracking}
 
-# Configurer le suivi des publicités {#ser-up-ad-tracking}
-
-La plupart des annonceurs ont besoin d’informations sur le moment, la durée et le succès de l’affichage de leurs publicités. L’Ad Insertion Primetime prend en charge le suivi des publicités côté client, côté serveur et hybride afin de vous permettre de collecter plus facilement ces informations.
+La plupart des annonceurs ont besoin d’informations sur le moment, la durée et le degré de succès de l’affichage de leurs publicités. Primetime Ad Insertion prend en charge le suivi des publicités hybride, côté client et côté serveur afin de garantir une certaine souplesse lors de la collecte de ces informations.
 
 ## Suivi des publicités côté client avec VMAP/JSON {#client-side-ad-tracking-vmap-json}
 
-Dans le suivi des publicités côté client, le serveur envoie au client une structure JSON, VMAP ou in-manifest spécifiant les événements de suivi et les URL, ainsi que la liste de lecture assemblée.
+Dans le cadre du suivi des publicités côté client, le serveur envoie au client une structure JSON, VMAP ou in-manifest spécifiant les événements de suivi et les URL, ainsi que la liste de lecture groupée aux publicités.
 
-Pour activer le suivi des publicités côté client, spécifiez les paramètres suivants dans l&#39;[API du Bootstrap](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
+Pour activer le suivi des publicités côté client, spécifiez les paramètres suivants dans la variable [API BOOTSTRAP](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
 
 * `pttrackingmode=simple`
 
@@ -26,7 +24,7 @@ Pour activer le suivi des publicités côté client, spécifiez les paramètres 
 
 >[!NOTE]
 >
->Si vous définissez `pttrackingmode=simple`, la demande initiale d’API d’amorçage renvoie une réponse JSON, plutôt qu’un document HLS ou DASH.
+>La définition de la variable `pttrackingmode=simple` entraîne le renvoi d’une réponse JSON à la demande d’API de bootstrap initiale, plutôt qu’un document HLS ou DASH.
 
 <!-- **Daniel to check. The specified file in this statement does not exist.** 
 More information about `pttrackingmode`, `pttrackingversion` formats, can be found in [API Reference: Manifest server query parameters](manifest-server-query-parameters.md). -->
@@ -35,13 +33,13 @@ More information about `pttrackingmode`, `pttrackingversion` formats, can be fou
 
 ## Suivi des publicités côté serveur {#server-side-ad-tracking}
 
-Grâce à cette méthode, les données de suivi des publicités sont entièrement calculées côté serveur. Cela s’avère utile lorsque la mise à jour de l’application cliente n’est pas possible. Cependant, le suivi des publicités côté serveur peut ne pas correspondre à l’activité de lecture côté client. Par exemple, le serveur considère qu’une publicité est lue après la diffusion des segments, même si l’utilisateur final ne vue pas la totalité de la publicité.
+Grâce à cette méthode, les données de suivi des publicités sont entièrement calculées côté serveur. Cela s’avère utile lorsque la mise à jour de l’application cliente n’est pas possible. Cependant, le suivi des publicités côté serveur peut ne pas correspondre à l’activité de lecture côté client. Par exemple, le serveur considère qu’une publicité doit être lue une fois les segments distribués, même si l’utilisateur final ne voit pas l’intégralité de la publicité.
 
-Pour activer le suivi des publicités côté serveur, spécifiez le paramètre suivant dans l’[API du Bootstrap](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
+Pour activer le suivi des publicités côté serveur, spécifiez le paramètre suivant dans la variable [API BOOTSTRAP](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
 
 `pttrackingmode=sstm`
 
-Voir les sections `pttrackingmode` de l&#39;[API du Bootstrap](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
+Voir `pttrackingmode` sections de [API BOOTSTRAP](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
 
 Toutes les balises de suivi des publicités sont envoyées avec les en-têtes de requête HTTP suivants :
 
@@ -49,9 +47,9 @@ Toutes les balises de suivi des publicités sont envoyées avec les en-têtes de
 * `User-Agent`
 * `X-Device-User-Agent`
 
-Ces valeurs contiennent l’agent utilisateur/lecteur et l’adresse IP du client.
+Ces valeurs contiennent l’adresse IP du client/agent utilisateur du lecteur et l’adresse IP du client.
 
 ## Suivi des publicités hybrides {#hybrid-ad-tracking}
 
-Cette approche est similaire au suivi côté serveur, mais l’application cliente demande également des sidecars à l’Ad Insertion Primetime pour obtenir des informations de suivi détaillées. Le suivi des publicités hybrides peut fournir des publicités non linéaires, telles que des incrustations et des compagnons, à l’application cliente, tout en continuant à compter sur l’Ad Insertion Primetime pour envoyer des URL de suivi des publicités individuelles.
-Pour activer le suivi des publicités hybrides, reportez-vous au paramètre `pttrackingmode` de l&#39;[API du Bootstrap](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).
+Cette approche est semblable au suivi côté serveur, mais l’application client demande également des sidecars de l’Ad Insertion Primetime pour obtenir des informations de suivi détaillées. Le suivi des publicités hybrides peut diffuser des publicités non linéaires telles que des superpositions et des compagnons vers l’application cliente, tout en comptant sur l’Ad Insertion Primetime pour envoyer des URL de suivi des publicités individuelles.
+Pour activer le suivi des publicités hybrides, voir `pttrackingmode` du paramètre [API BOOTSTRAP](/help/primetime-ad-insertion/technical-reference/bootstrap-api.md).

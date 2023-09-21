@@ -1,13 +1,12 @@
 ---
 title: Transmet temporaire promouvant
 description: Transmet temporaire promouvant
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 0%
 
 ---
-
 
 # Transmet temporaire promouvant {#promotional-temp-pass}
 
@@ -68,8 +67,8 @@ En fonction de l’identifiant de l’appareil et des informations fournies par 
 
 Pour faciliter la mise en oeuvre de l’application du programmeur, les **les informations de métadonnées utilisateur sont exposées ;** sur la vignette temporaire promotionnelle, avec les clés correspondantes (pour activer les clés, contactez tve-support@adobe.com) :
 
-* **restes_resources**: le nombre de ressources restantes que l’utilisateur actuel est autorisé à consommer ;
-* **used_assets**: la liste des ressources que l’utilisateur actuel a déjà consommées ;
+* **restes_resources**: nombre de ressources restantes que l’utilisateur actuel est autorisé à consommer
+* **used_assets**: liste des ressources que l’utilisateur actuel a déjà consommées.
 * **expiration_date**: date d’expiration de l’utilisateur actuel
 
 ### Comment le temps de visionnage est-il calculé ? {#compute-viewing-time}
@@ -78,7 +77,7 @@ La durée de validité d’une transmission temporaire n’est pas corrélée au
 
 ### Authentification et autorisation {#authn-authz}
 
-Pour les flux de transfert temporaire promotionnel, l’authentification et l’autorisation ne communiquent pas avec un MVPD réel, **toutes les demandes d’autorisation réussiront** tant que toutes ces conditions sont remplies :
+Pour les flux de transmission temporaire promotionnelle, l’authentification et l’autorisation ne communiquent pas avec un MVPD réel, **toutes les demandes d’autorisation réussiront** tant que toutes ces conditions sont remplies :
 
 * jetons d’autorisation valides pour les ressources spécifiées
 * nombre de **used_assets** est inférieur à la limite définie par le programmeur
@@ -88,7 +87,7 @@ Pour les flux de transfert temporaire promotionnel, l’authentification et l’
 
 Lorsqu’une demande de contrôle en amont ou de préautorisation est effectuée pour un MVPD de transmission temporaire promotionnelle, la réponse de contrôle en amont correspondante renvoyée contiendra la liste complète des ressources de la demande de contrôle en amont comme contrôle en amont réussi.
 
-La logique derrière cela est la suivante : les conditions d’autorisation de transmission temporaire promotionnelle sont basées sur la limite de temps et de nombre de ressources plutôt que sur des ressources spécifiques. Plus précisément, tant que la contrainte temporelle est respectée et tant que la limite de ressources n’est pas dépassée, les ressources appelées sont autorisées.
+La logique sous-jacente à cela est la suivante : les conditions d’autorisation de transmission temporaire de conversion reposent sur la limite de temps et de nombre de ressources plutôt que sur des ressources spécifiques. Plus précisément, tant que la contrainte temporelle est respectée et tant que la limite de ressources n’est pas dépassée, les ressources appelées sont autorisées.
 
 ### SSO {#sso}
 
@@ -102,13 +101,13 @@ Tous les jetons d’un appareil sont supprimés lors de la déconnexion. Par con
 
 ![Diagramme de flux de transmission temporaire promu](assets/promo-temp-pass-flow.png)
 
-*Figure : Flux de transfert temporaire promu*
+*Figure : Flux de transmission de la température promotionnelle*
 
 ## Mise en oeuvre de la transmission temporaire de conversion {#impl-promo-tempass}
 
 La transmission temporaire promotionnelle requiert les fonctionnalités côté client suivantes :
 
-* **les informations d’identification de l’utilisateur, par exemple la propagation de l’adresse électronique ;** (envoi de l’adresse électronique de l’utilisateur sur les flux d’authentification et d’autorisation). L’authentification Adobe Primetime requiert le courrier électronique pour lier les jetons d’authentification et d’autorisation (comme pour le `device_ID`, obligatoire pour tous les appels).
+* **Informations d’identifiant utilisateur, par exemple propagation de l’adresse électronique** (envoi de l’adresse électronique de l’utilisateur sur les flux d’authentification et d’autorisation). L’authentification Adobe Primetime requiert le courrier électronique pour lier les jetons d’authentification et d’autorisation (comme pour le `device_ID`, obligatoire pour tous les appels).
 * **Authentification forcée** - permettant au programmeur de forcer un flux d’authentification lorsque l’utilisateur est déjà authentifié. Cette fonctionnalité est nécessaire pour forcer l’actualisation des métadonnées utilisateur (clé de métadonnées utilisateur). **used_assets** contient le nombre de ressources disponibles) à chaque démarrage de l’application. Comme l’utilisateur peut se connecter à plusieurs appareils, les métadonnées utilisateur présentes sur l’appareil au démarrage de l’application ne sont pas fiables. Nous devons les mettre à jour afin de refléter l’état actuel de cet utilisateur spécifique (identifié par son adresse électronique).
 
 
@@ -121,7 +120,7 @@ La transmission temporaire promotionnelle requiert les fonctionnalités côté c
 >[!IMPORTANT]
 >Adobe ne stocke aucune information d’identification personnelle (PII). Par conséquent, le programmeur doit définir un hachage sur les informations fournies par l’utilisateur unique sur les API d’authentification Primetime.
 
-**Hachage des informations d’identification de l’utilisateur**
+**Hachage des informations d’identifiant utilisateur**
 
 Adobe recommande d’utiliser la variable **SHA-2** la famille ou son **SHA-256**, **SHA-512** sur les données avant leur envoi à Adobe.
 
@@ -148,7 +147,7 @@ $ curl -X DELETE -H "Authorization:Bearer H4j7cF3GtJX81BrsgDa10GwSizVz" "https:/
 | Clients d’authentification Adobe Primetime | Transmet temporaire promouvant | Outil Réinitialiser | Prend en charge le code de réponse dédié / l’erreur client |
 |:--------------------------------------:|:---------------------:|:----------:|:-----------------------------------------------:|
 | Activateur d’accès JS | OUI | OUI | OUI (à partir de la version 3.0.0) |
-| iOS client natif | OUI | OUI | OUI (à partir de la version 1.10) |
+| IOS client natif | OUI | OUI | OUI (à partir de la version 1.10) |
 | Android du client natif | OUI | OUI | OUI |
 | API sans client | OUI | OUI | NON |
 

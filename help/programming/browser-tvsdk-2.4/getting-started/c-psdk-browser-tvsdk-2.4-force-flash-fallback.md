@@ -1,20 +1,18 @@
 ---
-description: L’indicateur forcefFlash de la liste source force le Flash de secours pour une URL. Pour cette URL, vous pouvez utiliser le Flash Player d’Adobe pour lire le contenu.
-title: Obligation de la reprise du Flash à l'aide de la liste de la source du média
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’indicateur forcefFlash dans la liste source force le Flash de secours pour une URL. Pour cette URL, vous pouvez utiliser le Flash Player Adobe pour lire le contenu.
+title: Forcer le Flash de secours à l’aide de la liste source du média
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Forcer le Flash de secours à l’aide de la liste source du média{#forcing-the-flash-fallback-using-the-media-source-list}
 
-# Obligation de la reprise du Flash à l’aide de la liste de la source du média {#forcing-the-flash-fallback-using-the-media-source-list}
+L’indicateur forcefFlash dans la liste source force le Flash de secours pour une URL. Pour cette URL, vous pouvez utiliser le Flash Player Adobe pour lire le contenu.
 
-L’indicateur forcefFlash de la liste source force le Flash de secours pour une URL. Pour cette URL, vous pouvez utiliser le Flash Player d’Adobe pour lire le contenu.
-
-Dans la liste source du média (par exemple dans le fichier `sources.js`), vous pouvez définir `forceflash` sur `true`. Par exemple :
+Dans la liste des sources du média (par exemple, dans la fonction `sources.js` ), vous pouvez définir `forceflash` to `true`. Par exemple :
 
 ```js
 { 
@@ -31,4 +29,3 @@ Dans la liste source du média (par exemple dans le fichier `sources.js`), vous 
         "forceflash" : true
 },
 ```
-

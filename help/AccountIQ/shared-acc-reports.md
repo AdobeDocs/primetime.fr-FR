@@ -1,8 +1,7 @@
 ---
 title: Rapports sur les comptes partagés
 description: Rapports sur les comptes partagés
-exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Rapports sur les comptes partagés {#shared-accounts-reports}
 
-Les rapports Comptes partagés répartissent les mesures, telles que le nombre d’appareils et les types d’appareils, en fonction de la plage de probabilité de partage sélectionnée, par exemple. **Supérieur à la probabilité modérée** et **Supérieur à une faible probabilité** pour le segment actuel.
+Les rapports Comptes partagés répartissent les mesures, telles que le nombre d’appareils et les types d’appareils, selon la plage de probabilité de partage sélectionnée, par exemple. **Supérieur à la probabilité modérée** et **Supérieur à une faible probabilité** pour le segment actuel.
 
 Ces plages peuvent ensuite servir de seuils définis par l’utilisateur et les graphiques sont mis à jour en fonction des seuils sélectionnés.
 
@@ -41,7 +40,7 @@ La ligne rouge indique la plage du seuil et peut être ajustée dans le graphiqu
 
 ### Comptes supérieurs au seuil dans le segment actuel{#threshold-selector}
 
-Ce panneau vous permet de sélectionner une plage parmi les suivantes comme seuil pour les comptes abonnés (selon leurs probabilités de partage) :
+Ce panneau vous permet de sélectionner une plage parmi les suivantes comme seuil pour les comptes abonnés (en fonction de leurs probabilités de partage) :
 
 * Comptes **sur très faible** partage **probabilité**
 
@@ -57,7 +56,7 @@ Une fois que vous avez sélectionné le seuil, le panneau affiche le pourcentage
 
 ## Segment - Lire les requêtes sur le total {#play-request-out-total}
 
-Le graphique en anneau indique le pourcentage (et le nombre) de demandes de lecture effectuées par les abonnés dans le segment ; et vous permet de comparer les demandes de lecture effectuées par des abonnés qui ne se trouvent pas dans le segment défini.
+Le graphique en anneau indique le pourcentage (et le nombre) des demandes de lecture effectuées par les abonnés dans le segment et vous permet de comparer les demandes de lecture effectuées par les abonnés qui ne se trouvent pas dans le segment défini.
 
 ![](assets/play-req-outof-total.png)
 
@@ -81,7 +80,7 @@ Vous pouvez effectuer un zoom avant pour réduire et afficher les détails d’u
 
 <!--![](assets/zip-code-period.gif)-->
 
-## Segment : période/compte géographique {#geo-span-period-account}
+## Segment - Intervalle géographique / Période / Compte {#geo-span-period-account}
 
 Ce graphique à barres trace le nombre de comptes abonnés par rapport à différentes plages géographiques de kilomètres. La plage est basée sur la distance maximale entre les emplacements à partir desquels un abonné a diffusé en continu pendant la période.
 

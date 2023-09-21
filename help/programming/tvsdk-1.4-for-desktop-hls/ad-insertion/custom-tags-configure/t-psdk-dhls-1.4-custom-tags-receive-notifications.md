@@ -1,32 +1,30 @@
 ---
-description: Pour recevoir des notifications concernant les balises dans le manifeste, enregistrez le ou les écouteurs de événement appropriés.
-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour recevoir des notifications sur des balises dans le manifeste, enregistrez le ou les écouteurs d’événement appropriés.
+title: Ajout d’écouteurs pour les notifications de métadonnées minutées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
+# Ajout d’écouteurs pour les notifications de métadonnées minutées{#add-listeners-for-timed-metadata-notifications}
 
-# Ajouter des écouteurs pour les notifications de métadonnées minutées{#add-listeners-for-timed-metadata-notifications}
+Pour recevoir des notifications sur des balises dans le manifeste, enregistrez le ou les écouteurs d’événement appropriés.
 
-Pour recevoir des notifications concernant les balises dans le manifeste, enregistrez le ou les écouteurs de événement appropriés.
+Vous pouvez surveiller les métadonnées minutées en écoutant les événements suivants, qui notifient votre application de l’activité associée :
 
-Vous pouvez surveiller les métadonnées minutées en écoutant les événements suivants, qui avertissent votre application de l’activité associée :
+* `MediaPlayerItemEvent.ITEM_CREATED`: la liste initiale de `TimedMetadata` est disponible après la `MediaPlayerItem` est créée.
 
-* `MediaPlayerItemEvent.ITEM_CREATED`: La liste initiale des  `TimedMetadata` objets est disponible une fois  `MediaPlayerItem` créée.
+  Cet événement avertit votre application lorsque cela se produit.
 
-   Ce événement avertit votre application lorsque cela se produit.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: pour les flux en direct/linéaires où la liste de lecture/manifeste s’actualise régulièrement, d’autres balises personnalisées peuvent apparaître dans la liste de lecture/manifeste mise à jour, donc des balises supplémentaires `TimedMetadata` peut être ajouté à la variable `MediaPlayerItem.timedMetadata` .
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: Pour les flux en direct/linéaires où le manifeste/la liste de lecture est régulièrement actualisé, d’autres balises personnalisées peuvent apparaître dans la liste de lecture/le manifeste mis à jour, de sorte que  `TimedMetadata` des objets supplémentaires peuvent être ajoutés à la  `MediaPlayerItem.timedMetadata` propriété.
+  Cet événement avertit votre application lorsque cela se produit.
 
-   Ce événement avertit votre application lorsque cela se produit.
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: chaque fois qu’une nouvelle `TimedMetadata` est créé, cet événement est distribué par MediaPlayer.
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Chaque fois qu’un nouvel  `TimedMetadata` objet est créé, ce événement est distribué par MediaPlayer.
-
-   Ce événement n&#39;est pas distribué pour l&#39;objet `TimedMetadata` créé pendant la phase d&#39;initialisation.
+  Cet événement n’est pas distribué pour la variable `TimedMetadata` créé lors de la phase d’initialisation.
 
 1. Mettez en oeuvre les écouteurs appropriés.
 
@@ -47,7 +45,7 @@ Vous pouvez surveiller les métadonnées minutées en écoutant les événements
    }
    ```
 
-1. Enregistrez les écouteurs de événement.
+1. Enregistrez les écouteurs d’événement.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
@@ -56,4 +54,4 @@ Vous pouvez surveiller les métadonnées minutées en écoutant les événements
                            onTimedMetadataAvailable);
    ```
 
-Les métadonnées ID3 sont distribuées via le même `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Cela ne doit toutefois pas prêter à confusion, car vous pouvez utiliser la propriété `type` d’un objet TimedMetadata pour différencier TAG et ID3. Pour plus d’informations sur les balises ID3, voir [balises ID3](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
+Les métadonnées ID3 sont distribuées via le même `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Cela ne doit toutefois pas prêter à confusion, car vous pouvez utiliser un objet TimedMetadata de `type` pour différencier TAG et ID3. Pour plus d’informations sur les balises ID3, voir [Balises ID3](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).

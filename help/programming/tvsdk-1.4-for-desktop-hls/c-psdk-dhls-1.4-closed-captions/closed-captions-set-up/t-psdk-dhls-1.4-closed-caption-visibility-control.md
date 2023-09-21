@@ -1,43 +1,41 @@
 ---
-description: Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
+description: Vous pouvez contrôler la visibilité des sous-titres non intégrés. Lorsque la visibilité est activée, le suivi actuellement sélectionné s’affiche. Si vous modifiez le suivi actuel, le paramètre de visibilité reste le même.
 title: Contrôler la visibilité des sous-titres
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
+# Contrôler la visibilité des sous-titres{#control-closed-caption-visibility}
 
-# Contrôler la visibilité de la légende fermée{#control-closed-caption-visibility}
-
-Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibilité est activée, la piste sélectionnée s’affiche. Si vous modifiez la piste actuelle, le paramètre de visibilité reste le même.
+Vous pouvez contrôler la visibilité des sous-titres non intégrés. Lorsque la visibilité est activée, le suivi actuellement sélectionné s’affiche. Si vous modifiez le suivi actuel, le paramètre de visibilité reste le même.
 
 >[!TIP]
 >
->Si le texte de sous-titrage s’affiche lorsque le lecteur passe en mode de recherche, le texte ne s’affiche plus une fois la recherche terminée. Au lieu de cela, après quelques secondes, TVSDK affiche le texte de sous-titrage suivant dans la vidéo après la position de fin de la recherche.
+>Si le texte des sous-titres est affiché lorsque le lecteur passe en mode de recherche, le texte ne s’affiche plus une fois la recherche terminée. Au lieu de cela, au bout de quelques secondes, TVSDK affiche le texte de sous-titrage suivant dans la vidéo après la position de fin de la recherche.
 
 >[!NOTE]
 >
->Les valeurs de visibilité des sous-titres fermés sont définies dans `ClosedCaptionsVisibility`.
+>Les valeurs de visibilité des sous-titres sont définies dans `ClosedCaptionsVisibility`.
 >
->
-```
+>```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
 >```
+>
 
-1. Attendez que `MediaPlayer` ait au moins l’état PRÉPARÉ (voir [Attendre un état valide](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Pour obtenir le paramètre de visibilité actuel pour les légendes fermées, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
+1. Attendez que la variable `MediaPlayer` pour disposer au moins de l’état PRÉPARÉ (voir [Attente d’un état valide](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Pour obtenir le paramètre de visibilité actuel pour les sous-titres fermés, utilisez la méthode getter dans `MediaPlayer`, qui renvoie une valeur de visibilité.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Pour modifier la visibilité des légendes fermées, utilisez la méthode setter, en transmettant une valeur de visibilité de `ClosedCaptionsVisibility`.
+1. Pour modifier la visibilité des sous-titres, utilisez la méthode setter , en transmettant une valeur de visibilité de `ClosedCaptionsVisibility`.
 
-   Par exemple :
+   Par exemple :
 
    ```
    public function set ccVisibility(value:String):void
@@ -52,7 +50,7 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
                    prompt="CC"/>
    ```
 
-1. Définissez un tableau liable de pistes de sous-titrage fermées.
+1. Définissez un tableau associable de suivis de sous-titres fermés.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
@@ -146,4 +144,3 @@ Vous pouvez contrôler la visibilité des sous-titres fermés. Lorsque la visibi
        ccTracksList.selectedIndex = selectedIndex; 
    } 
    ```
-

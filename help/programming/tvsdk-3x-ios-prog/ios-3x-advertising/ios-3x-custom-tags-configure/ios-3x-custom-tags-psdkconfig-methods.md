@@ -1,36 +1,34 @@
 ---
-description: Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe PTSDKConfig.
-title: Config des méthodes de classe pour les balises
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez configurer globalement les noms de balises personnalisés dans TVSDK avec la classe PTSDKConfig .
+title: Méthodes de classe de configuration pour les balises
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
+# Méthodes de classe de configuration pour les balises {#config-class-methods-for-tags}
 
-# Configurez les méthodes de classe pour les balises {#config-class-methods-for-tags}
+Vous pouvez configurer globalement les noms de balises personnalisés dans TVSDK avec la classe PTSDKConfig .
 
-Vous pouvez configurer les noms de balises personnalisées dans TVSDK globalement avec la classe PTSDKConfig.
+TVSDK applique automatiquement la configuration globale à tout flux multimédia qui ne spécifie aucune configuration spécifique au flux.
 
-TVSDK applique automatiquement la configuration globale à tout flux média qui ne spécifie pas de configuration spécifique au flux.
+`PTSDKConfig` expose ces méthodes pour gérer les balises personnalisées :
 
-`PTSDKConfig` expose les méthodes suivantes pour gérer les balises personnalisées :
-
-| **S’abonner à des balises personnalisées spécifiques** |  |
+| **Abonnement à des balises personnalisées spécifiques** |  |
 |---|---|
 | `subscribedTags` | Récupère la liste actuelle des balises abonnées. |
 | `setSubscribedTags` | Définit la liste des balises abonnées qui seront exposées à l’application. |
-| **Personnaliser les balises publicitaires utilisées par le détecteur d&#39;opportunités par défaut** |
+| **Personnaliser les balises d’annonce utilisées par le détecteur d’opportunités par défaut** |
 | `adTags` | Récupère la liste actuelle des balises publicitaires. |
-| `setAdTags` | Définit la liste des balises publicitaires qui seront utilisées par le générateur d’opportunités par défaut. |
+| `setAdTags` | Définit la liste des balises d’annonce qui seront utilisées par le générateur d’opportunités par défaut. |
 
 
-Souvenez-vous des points suivants :
+Gardez à l’esprit les éléments suivants :
 
-* Les méthodes setter n’autorisent pas le paramètre de balises à contenir des valeurs nulles.
-* Le nom de la balise personnalisée doit contenir le préfixe #.
+* Les méthodes setter ne permettent pas au paramètre tags de contenir des valeurs null.
+* Le nom de la balise personnalisée doit contenir le préfixe # .
 
-   Par exemple, #EXT-X-ASSET est un nom de balise personnalisé correct, mais EXT-X-ASSET est incorrect.
-* Vous ne pouvez pas modifier la configuration après le chargement du flux média.
+  Par exemple, #EXT-X-ASSET est un nom de balise personnalisé correct, mais EXT-X-ASSET est incorrect.
+* Vous ne pouvez pas modifier la configuration une fois le flux multimédia chargé.

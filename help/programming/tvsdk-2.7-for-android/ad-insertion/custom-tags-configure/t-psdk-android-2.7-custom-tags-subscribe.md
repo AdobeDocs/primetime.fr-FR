@@ -1,28 +1,26 @@
 ---
 description: TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
-title: S’abonner à des balises personnalisées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Abonnement à des balises personnalisées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
-# S’abonner à des balises personnalisées {#subscribe-to-custom-tags}
+# Abonnement à des balises personnalisées {#subscribe-to-custom-tags}
 
 TVSDK prépare les objets TimedMetadata pour les balises abonnées chaque fois que ces objets sont rencontrés dans le manifeste de contenu.
 
-Avant les débuts de lecture, vous devez vous abonner aux balises . Pour être averti des balises personnalisées dans les manifestes HLS :
+Avant de commencer la lecture, vous devez vous abonner aux balises . Pour être averti des balises personnalisées dans les manifestes HLS :
 
-1. Définissez les noms des balises publicitaires personnalisées globalement en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` dans `MediaPlayerItemConfig`.
+1. Définissez globalement les noms des balises d’annonces personnalisées en transmettant un tableau contenant les balises personnalisées à `setSubscribedTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Vous devez inclure le préfixe `#` lorsque vous utilisez des flux HLS.
+   >Vous devez inclure la variable `#` préfixe lors de l’utilisation des flux HLS.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    String[] array = new String[3]; 
@@ -31,4 +29,3 @@ Avant les débuts de lecture, vous devez vous abonner aux balises . Pour être a
    array[2] = "#EXT-OATCLS-SCTE35"; 
    MediaPlayerItemConfig.setSubscribedTags(array);
    ```
-

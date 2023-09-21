@@ -1,22 +1,20 @@
 ---
-description: Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel du périphérique.
-title: Configuration minimale requise pour StageVideo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sur les appareils qui prennent en charge l’accélération GPU (matériel), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel de l’appareil.
+title: Exigences minimales de StageVideo
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
+# Exigences minimales de StageVideo{#stagevideo-minimum-requirements}
 
-# Configuration minimale requise pour StageVideo{#stagevideo-minimum-requirements}
-
-Sur les périphériques qui prennent en charge l’accélération GPU (matérielle), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel du périphérique.
+Sur les appareils qui prennent en charge l’accélération GPU (matériel), vous pouvez utiliser un objet flash.media.StageVideo pour traiter la vidéo directement sur le matériel de l’appareil.
 
 <!--<a id="section_64DDAA8DB215493E8A7CA6636819D350"></a>-->
 
-Une combinaison de différents facteurs détermine quand et comment utiliser `StageVideo`. Le tableau suivant présente un instantané de certaines des exigences et restrictions associées à l’utilisation de StageVideo. Ces exigences et restrictions peuvent faire l&#39;objet de modifications.
+Une combinaison de différents facteurs détermine à quel moment et comment vous pouvez utiliser `StageVideo`. Le tableau suivant présente un aperçu de certaines des exigences et restrictions associées à l’utilisation de StageVideo. Ces exigences et restrictions peuvent faire l’objet de modifications.
 
 <table id="table_882F4462A5AE47E28A60A39D112164A7"> 
  <thead> 
@@ -27,7 +25,7 @@ Une combinaison de différents facteurs détermine quand et comment utiliser `St
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> lecteur de Flash </td> 
+   <td colname="col1"> lecteur Flash </td> 
    <td colname="col2"> 
     <ul id="ul_s42_lm2_jp"> 
      <li id="li_308FA9EC206B437A9EE04C29F9480B73">Au moins Flash 10.1 ou version ultérieure </li> 
@@ -35,18 +33,17 @@ Une combinaison de différents facteurs détermine quand et comment utiliser `St
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">Navigateurs et paramètres <span class="codeph"> wmode</span> </td> 
-   <td colname="col2"> <p><b>Sur le Flash 15</b>, définissez  <span class="codeph"> wmode=</span> opaqueso pour que vous puissiez utiliser des incrustations HTML. </p> <p>Actuellement, les navigateurs suivants ne prennent pas en charge l’accélération matérielle : 
+   <td colname="col1">Navigateurs et <span class="codeph"> wmode</span> paramètres </td> 
+   <td colname="col2"> <p><b>Le Flash 15</b>, définit <span class="codeph"> wmode=opaque</span> vous pouvez donc utiliser des incrustations de HTML. </p> <p>Les navigateurs suivants ne prennent actuellement pas en charge l’accélération matérielle : 
      <ul id="ul_frv_ykf_jp"> 
       <li id="li_3D407A61FEE042A9B85A6EFACA6D7719">Mozilla Firefox sous Microsoft Windows </li> 
-      <li id="li_39B85AC352564DA8B86EA826638F1F4B">Google Chrome avant 26 et toute version de Chrome sous Windows XP et Vista </li> 
-      <li id="li_0042BA6070C849E6B7C4B4BF4333F712">Microsoft Internet Explorer (toutes les versions) </li> 
-     </ul>D'autres combinaisons navigateur/système d'exploitation peuvent empêcher l'accès à l'accélération matérielle. Dans ces scénarios, <span class="codeph"> StageVideo</span> revient au logiciel avec un impact négatif sur les performances. </p> <p><b>Le Flash 14 et les versions antérieures</b>, si le navigateur ne prend pas en charge l’accélération matérielle, le lecteur de Flash peut effectuer le rendu directement sur le GPU, mais définir  <span class="codeph"> wmode=</span> directpour activer ce rendu. <p>Conseil :  Les pilotes GPU plus anciens que 2009 pourraient avoir besoin d'être mis à jour car ces pilotes pourraient ne pas bénéficier de la prise en charge de l'accélération matérielle. </p> </p> </td> 
+      <li id="li_39B85AC352564DA8B86EA826638F1F4B">Google Chrome avant la version 26 et toute version de Chrome sous Windows XP et Vista </li> 
+      <li id="li_0042BA6070C849E6B7C4B4BF4333F712">Microsoft Internet Explorer (toutes versions) </li> 
+     </ul>D’autres combinaisons navigateur/système d’exploitation peuvent empêcher l’accès à l’accélération matérielle. Dans ces scénarios, <span class="codeph"> StageVideo</span> revient aux logiciels avec un impact négatif sur les performances. </p> <p><b>Flash 14 et versions antérieures</b>, si le navigateur ne prend pas en charge l’accélération matérielle, le lecteur de Flash peut effectuer le rendu directement sur le processeur graphique, mais définissez <span class="codeph"> wmode=direct</span> pour activer ce rendu. <p>Conseil : Il se peut que les pilotes GPU qui ont plus de 2009 doivent être mis à jour, car ils peuvent ne pas prendre en charge l’accélération matérielle. </p> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Objet NetStream </td> 
-   <td colname="col2">Le événement <span class="codeph"> StageVideoEvent.RENDER_STATE</span> n’est pas distribué, sauf si vous associez un objet <span class="codeph"> NetStream</span> à l’objet <span class="codeph"> StageVideo</span>. </td> 
+   <td colname="col1"> Objet Netstream </td> 
+   <td colname="col2">La variable <span class="codeph"> StageVideoEvent.RENDER_STATE</span> n’est pas distribué, sauf si vous joignez une <span class="codeph"> NetStream</span> vers l’objet <span class="codeph"> StageVideo</span> . </td> 
   </tr> 
  </tbody> 
 </table>
-

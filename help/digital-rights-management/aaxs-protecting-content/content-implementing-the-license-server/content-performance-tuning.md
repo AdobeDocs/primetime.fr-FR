@@ -1,26 +1,23 @@
 ---
-title: Réglage des performances
-description: Réglage des performances
+title: Optimisation des performances
+description: Optimisation des performances
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
+# Optimisation des performances{#performance-tuning}
 
-# Réglage des performances{#performance-tuning}
-
-Suivez les conseils suivants pour améliorer les performances :
+Suivez les conseils ci-dessous pour améliorer les performances :
 
 * L’utilisation d’un HSM réseau peut être beaucoup plus lente que l’utilisation d’un HSM directement connecté.
-* Pour améliorer les performances, vous pouvez éventuellement activer la prise en charge native des opérations de cryptographie en déployant les bibliothèques spécifiques à la plate-forme situées dans le dossier &quot;thirdparty/cryptoj&quot; du SDK. Pour activer la prise en charge native, ajoutez la bibliothèque de votre plate-forme (jsafe.dll pour Windows ou libjsafe.so pour Linux) au chemin d’accès.
+* Pour améliorer les performances, vous pouvez éventuellement activer la prise en charge native des opérations cryptographiques en déployant les bibliothèques spécifiques à la plateforme situées dans le dossier &quot;thirdparty/cryptoj&quot; du SDK. Pour activer la prise en charge native, ajoutez la bibliothèque pour votre plateforme (jsafe.dll pour Windows ou libjsafe.so pour Linux) au chemin d’accès.
 
-   >[!NOTE]
-   >
-   >Si vous exécutez plusieurs applications Web dans la même instance Tomcat et que `jsafe.dll` se trouve sur le chemin d’accès, seule la première application Web chargée peut charger la bibliothèque `jsafe.dll`. Par conséquent, seule la première application Web bénéficie du support natif. Dans de tels cas, pour améliorer les performances de toutes les applications Web, placez `cryptoj.jar`en dehors du fichier WAR. Par exemple, dans le répertoire `<tomcat_installation_folder>/lib`.
+  >[!NOTE]
+  >
+  >Si vous exécutez plusieurs applications web dans la même instance Tomcat et que vous disposez de `jsafe.dll` sur le chemin d’accès, seule la première application web chargée peut charger la variable `jsafe.dll` bibliothèque . Par conséquent, seule la première application web bénéficie de la prise en charge native. Dans ce cas, pour améliorer les performances de toutes les applications web, placez `cryptoj.jar`en dehors du fichier WAR. Par exemple, dans la variable `<tomcat_installation_folder>/lib` répertoire .
 
-* Un système d&#39;exploitation 64 bits, tel que la version 64 bits de Red Hat® ou de Windows, offre de bien meilleures performances par rapport à un système d&#39;exploitation 32 bits.
-
+* Un système d’exploitation 64 bits, tel que la version 64 bits de Red Hat® ou Windows, offre de meilleures performances par rapport à un système d’exploitation 32 bits.

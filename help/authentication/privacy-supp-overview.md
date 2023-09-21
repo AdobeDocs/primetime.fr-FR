@@ -1,15 +1,14 @@
 ---
-title: Présentation de la prise en charge de la confidentialité
-description: Présentation de la prise en charge de la confidentialité
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Présentation de la confidentialité
+description: Présentation de la confidentialité
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-
-# Présentation de la prise en charge de la confidentialité {#priv-supp-overview}
+# Présentation de la confidentialité {#priv-supp-overview}
 
 >[!NOTE]
 >
@@ -21,7 +20,7 @@ ht-degree: 0%
 
 **CCPA**- Le CCPA (California Consumer Privacy Act) est une loi qui accorde aux résidents de Californie de nouveaux droits concernant leurs informations personnelles et impose des responsabilités en matière de protection des données à certaines entités qui exercent des activités en Californie. Le CCPA utilise certains concepts déjà connus en vertu du RGPD, tels que le droit d’accéder et de supprimer des informations personnelles. Cependant, il existe d’autres domaines où la CCPA diffère du RGPD.
 
-En tant que client d’authentification Primetime, vous pouvez soumettre des demandes individuelles en vertu du RGPD ou du CCPA pour accéder et supprimer des données client, soit par l’intermédiaire de la variable [Interface utilisateur du Privacy Service](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) ou en appelant la fonction [API Privacy Service](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md).
+En tant que client d’authentification Primetime, vous pouvez soumettre des demandes individuelles en vertu du RGPD ou du CCPA pour accéder et supprimer des données client, soit par l’intermédiaire de la variable [Interface utilisateur du Privacy Service](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) ou en appelant la fonction [API PRIVACY SERVICE](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md).
 
 <!--
 

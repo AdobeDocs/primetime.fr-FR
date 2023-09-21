@@ -1,25 +1,23 @@
 ---
-description: Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte de sous-titrage.
-title: Définition des styles de sous-titrage
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte sous-titrage.
+title: Définition des styles de sous-titres fermés
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# Définition des styles de sous-titres fermés{#set-closed-caption-styles}
 
-# Définir les styles de sous-titrage{#set-closed-caption-styles}
+Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte sous-titrage.
 
-Vous pouvez définir le format, tel que la police, la taille, la couleur, le bord et l’opacité du texte de sous-titrage.
+1. Attendez que la variable `MediaPlayer` soit au moins à l’état PRÉPARÉ .
 
-1. Attendez que `MediaPlayer` soit au moins à l’état PRÉPARÉ.
+   Pour plus d’informations sur les états, voir [Attente d’un état valide](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
+1. Créez un `TextFormat` instance.
 
-   Pour plus d’informations sur les états, voir [Attendre un état valide](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
-1. Créez une instance `TextFormat`.
-
-   Vous pouvez fournir tous les paramètres de style de sous-titrage ou les définir ultérieurement.
+   Vous pouvez désormais fournir tous les paramètres de style de sous-titres ou les définir ultérieurement.
 
    ```js
    new TextFormat( 
@@ -37,19 +35,19 @@ Vous pouvez définir le format, tel que la police, la taille, la couleur, le bor
        safeArea) → {AdobePSDK.TextFormat}
    ```
 
-1. (Facultatif) Obtenez les paramètres actuels du style de sous-titrage avec `MediaPlayer.ccStyle`.
+1. (Facultatif) Obtenez les paramètres actuels de style de sous-titres avec `MediaPlayer.ccStyle`.
 
-   La valeur renvoyée est une instance de l&#39;interface `TextFormat`.
+   La valeur renvoyée est une instance de la variable `TextFormat` .
 
-   Si aucun style n’a été précédemment défini, il renvoie un objet TextFormat avec des valeurs par défaut pour chaque attribut :
+   Si aucun style n’a été précédemment défini, elle renvoie un objet TextFormat avec les valeurs par défaut pour chaque attribut :
 
    ```js
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. Pour modifier les paramètres de style, utilisez `MediaPlayer.ccStyle`, en transmettant une instance de l&#39;interface `TextFormat`.
+1. Pour modifier les paramètres de style, utilisez `MediaPlayer.ccStyle`, en transmettant une instance de la fonction `TextFormat` .
 
-   Vous pouvez utiliser cette méthode même si le flux média actuel ne comporte pas de sous-titres fermés.
+   Vous pouvez utiliser cette méthode même si le flux multimédia actuel ne comporte pas de sous-titres non intégrés.
 
    ```js
    ccStyle :AdobePSDK.TextFormat 
@@ -57,5 +55,4 @@ Vous pouvez définir le format, tel que la police, la taille, la couleur, le bor
 
    >[!TIP]
    >
-   >La définition du style de sous-titrage est asynchrone. Il peut donc s’écouler quelques secondes avant que les modifications ne s’affichent à l’écran.
-
+   >La définition du style de sous-titrage codé est asynchrone. Les modifications peuvent donc prendre quelques secondes pour s’afficher à l’écran.

@@ -1,18 +1,16 @@
 ---
-title: DRM Primetime sur le client
-description: DRM Primetime sur le client
+title: Primetime DRM sur le client
+description: Primetime DRM sur le client
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# Primetime DRM sur le client{#primetime-drm-on-the-client}
 
-# DRM Primetime sur le client{#primetime-drm-on-the-client}
+Une application Primetime TVSDK qui lit du contenu protégé doit d’abord appeler les API Primetime DRM pour lancer le processus de consommation de licence et de lecture de contenu protégé. Dans ce processus, Primetime DRM sur le client construit une demande de licence à partir des métadonnées du contenu protégé, puis l’envoie au serveur de licences Primetime DRM.
 
-Une application TVSDK Primetime qui lit du contenu protégé doit d’abord appeler les API DRM de Primetime pour lancer le flux de travail en vue de la consommation de licences et de la lecture de contenu protégé. Dans ce flux de travaux, Primetime DRM sur le client construit une demande de licence à partir des métadonnées du contenu protégé, puis l’envoie au serveur de licences DRM Primetime.
-
-Avant d’émettre la demande de licence, le client peut éventuellement effectuer l’authentification/l’autorisation nécessaires (selon les règles de votre entreprise).
+Avant d’émettre la demande de licence, le client peut éventuellement effectuer l’authentification/autorisation nécessaire (en fonction de vos règles métier).

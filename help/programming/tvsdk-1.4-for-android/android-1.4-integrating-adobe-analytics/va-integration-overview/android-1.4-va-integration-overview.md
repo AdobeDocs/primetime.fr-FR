@@ -1,30 +1,27 @@
 ---
-description: Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
+description: Vous pouvez effectuer le suivi de l’utilisation de la vidéo en intégrant TVSDK à Adobe Analytics.
 title: Analyses vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
-
 # Analyses vidéo{#video-analytics}
 
-Vous pouvez suivre l’utilisation des vidéos en intégrant TVSDK à Adobe Analytics.
+Vous pouvez effectuer le suivi de l’utilisation de la vidéo en intégrant TVSDK à Adobe Analytics.
 
-Le suivi vidéo dans TVSDK utilise le service **Adobe Analytics Video Essentials**, qui fournit des mesures d’engagement vidéo, telles que les vues vidéo, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d&#39;informations sur ce service, contactez votre représentant d&#39;Adobe.
+Le suivi vidéo dans TVSDK utilise la méthode **Principes fondamentaux des vidéos Adobe Analytics** service qui fournit des mesures d’engagement vidéo, telles que les affichages de vidéos, les vidéos terminées, les impressions publicitaires, le temps passé sur la vidéo, etc. Pour plus d’informations sur ce service, contactez votre représentant Adobe.
 
 La procédure suivante résume les étapes d’activation du suivi vidéo dans votre lecteur :
 
 1. Initialisez et/ou configurez les composants de suivi vidéo suivants :
 
-   Sous Android, les composants suivants font partie de TVSDK :
+   Sur Android, les composants suivants font partie de TVSDK :
 
    * Fichier de configuration JSON
-   * Objet de métadonnées des analyses vidéo
+   * Objet de métadonnées Video Analytics
    * Objet de métadonnées global
 
-1. Configurez le rapports d’analyses vidéo côté serveur à l’aide des outils d’administration Adobe Analytics.
-
+1. Configurez les rapports d’analyse vidéo côté serveur à l’aide des outils d’administration Adobe Analytics.

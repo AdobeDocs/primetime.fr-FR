@@ -1,45 +1,43 @@
 ---
-description: L’activation instantanée signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canal, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur début regarder.
+description: L’activation de l’instantané signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canaux, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur commence à regarder.
 title: Instant activé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
+# Instant activé {#instant-on}
 
-# Instant le {#instant-on}
+L’activation de l’instantané signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canaux, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur commence à regarder.
 
-L’activation instantanée signifie qu’un ou plusieurs canaux sont préchargés. Lorsque les utilisateurs sélectionnent un canal ou changent de canal, le contenu est lu immédiatement. La mise en mémoire tampon est terminée au moment où l’utilisateur début regarder.
+Sans Instant On, TVSDK initialise le média à lire, mais ne commence pas à mettre en mémoire tampon le flux jusqu’à ce que l’application appelle `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. Instant On, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’éléments du lecteur multimédia), et TVSDK commence immédiatement à mettre en mémoire tampon les diffusions. Lorsqu’un utilisateur modifie le canal et que la diffusion a été mise en mémoire tampon correctement, l’appel `play` sur le nouveau canal, la lecture démarre immédiatement.
 
-Sans Instant On, TVSDK initialise le média à lire mais ne début pas la mise en mémoire tampon du flux tant que l’application n’appelle pas `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. Avec Instant On, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’élément du lecteur multimédia) et les débuts TVSDK mettent immédiatement les flux en mémoire tampon. Lorsqu’un utilisateur modifie le canal et que le flux est mis en mémoire tampon correctement, il appelle `play` sur le nouveau début de lecture immédiatement.
-
-Bien qu’il n’existe aucune limite au nombre d’instances `MediaPlayer` et `MediaPlayerItemLoader` que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme davantage de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource média dans le lecteur de médias](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
+Bien qu’il n’existe aucune limite au nombre de `MediaPlayer` et `MediaPlayerItemLoader` les instances que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme plus de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d’informations sur `MediaPlayerItemLoader`, voir [Chargement d’une ressource multimédia dans le lecteur multimédia](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->TVSDK ne prend pas en charge un seul `QoSProvider` pour fonctionner avec `itemLoader` et `MediaPlayer`. Si le client utilise Instant On, l’application doit gérer deux instances QoS et gérer les deux instances pour les informations.
+>TVSDK ne prend pas en charge une seule `QoSProvider` pour travailler avec les deux `itemLoader` et `MediaPlayer`. Si le client utilise Instant On, l’application doit gérer deux instances QoS et gérer les deux instances pour obtenir les informations.
 
-Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
+Pour plus d’informations sur `MediaPlayerItemLoader`, voir [Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
-## Ajouter une instance du fournisseur QoS à mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
+## Ajout d’une instance de fournisseur QoS à mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* Création et association d’un fournisseur QoS à une instance `mediaPlayerItemLoader`
+* Création et association d’un fournisseur QoS à un `mediaPlayerItemLoader` instance
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   Une fois la lecture début, utilisez `_qosProvider` pour obtenir `timeToLoad` et `timeToPrepare` QoSdata. Les autres mesures de QoS peuvent être récupérées à l&#39;aide de la balise `QoSProvider` jointe à `mediaPlayer`.
+  Une fois la lecture lancée, utilisez la méthode `_qosProvider` pour obtenir `timeToLoad` et `timeToPrepare` QoSdata. Les autres mesures QoS peuvent être récupérées à l’aide de la variable `QoSProvider` joint au `mediaPlayer`.
 
-   Pour plus d&#39;informations sur `MediaPlayerItemLoader`, voir [Chargement d&#39;une ressource multimédia à l&#39;aide de MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
+  Pour plus d’informations sur `MediaPlayerItemLoader`, voir [Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
 ## Configuration de la mise en mémoire tampon pour Instant On {#section_4FE346B7BE434BA8A2203896D6E52146}
 
@@ -47,18 +45,18 @@ TVSDK fournit des méthodes et des états pour vous permettre d’utiliser Insta
 
 >[!NOTE]
 >
->Adobe recommande d&#39;utiliser `MediaPlayerItemLoader` pour InstantOn. Pour utiliser `MediaPlayerItemLoader`, plutôt que `MediaPlayer`, voir media-resource-load-using-mediaplayeritemloader .
+>Adobe recommande d’utiliser `MediaPlayerItemLoader` pour InstantOn. Pour utiliser `MediaPlayerItemLoader`, plutôt que `MediaPlayer`, voir media-resource-load-using-media-playeritemloader .
 
-1. Vérifiez que la ressource est chargée et que le lecteur est prêt à la lire.
-1. Avant d&#39;appeler `play`, appelez `prepareBuffer` pour chaque instance `MediaPlayer`.
+1. Vérifiez que la ressource a été chargée et que le lecteur est prêt à la lire.
+1. Avant d’appeler `play`, appel `prepareBuffer` pour chaque `MediaPlayer` instance.
 
    >[!NOTE]
    >
-   >`prepareBuffer` active la mise en mémoire tampon des débuts Instant On et TVSDK immédiatement et distribue le  `BUFFERING_COMPLETED` événement lorsque la mémoire tampon est pleine.
+   >`prepareBuffer` active Instant On, et TVSDK commence immédiatement la mise en mémoire tampon et distribue la variable `BUFFERING_COMPLETED` lorsque la mémoire tampon est pleine.
 
    >[!TIP]
    >
-   >Par défaut, `prepareBuffer` et `prepareToPlay` configurent le flux média pour qu’il soit lu en début dès le début. Pour début à une autre position, passez la position (en millisecondes) à `prepareToPlay`.
+   >Par défaut, `prepareBuffer` et `prepareToPlay` configurez le flux multimédia pour qu’il commence à être lu à partir du début. Pour commencer à une autre position, transmettez la position (en millisecondes) à `prepareToPlay`.
 
    ```
    @Override 
@@ -78,9 +76,8 @@ TVSDK fournit des méthodes et des états pour vous permettre d’utiliser Insta
    }
    ```
 
-1. Lorsque vous recevez le événement `BUFFERING_COMPLETE`, début de lecture de l’élément ou affichage des commentaires visuels pour indiquer que le contenu est complètement mis en mémoire tampon.
+1. Lorsque vous recevez la variable `BUFFERING_COMPLETE` , commencez à lire l’élément ou affichez un commentaire visuel pour indiquer que le contenu est entièrement mis en mémoire tampon.
 
    >[!NOTE]
    >
    >Si vous appelez `play`, la lecture doit commencer immédiatement.
-

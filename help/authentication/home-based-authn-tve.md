@@ -1,13 +1,12 @@
 ---
 title: Authentification basée sur la maison pour TV partout
 description: Authentification basée sur la maison pour TV partout
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1676'
 ht-degree: 0%
 
 ---
-
 
 # Authentification basée sur la maison pour TV partout
 
@@ -15,15 +14,15 @@ ht-degree: 0%
 >
 >Le contenu de cette page est fourni à titre d’information uniquement. L’utilisation de cette API nécessite une licence actuelle de Adobe. Aucune utilisation non autorisée n’est autorisée.
 
-## Qu’est-ce que l’authentification par domicile ? {#whatis-home-based-authn}
+## Qu’est-ce que l’authentification basée sur l’accueil ? {#whatis-home-based-authn}
 
 L’authentification basée sur la page d’accueil (adaptatif) est une fonctionnalité TV partout qui permet aux abonnés de la télévision payante d’afficher le contenu TV en ligne sans entrer d’informations d’identification MVPD lorsqu’ils sont à la maison, améliorant ainsi considérablement l’expérience utilisateur du flux d’authentification.
 
-Définition de l’authentification basée sur l’accueil par l’Open Authentication Technology Committee (OATC) : &quot;L’authentification automatique à la maison est le processus par lequel un MVPD/OVD utilise les caractéristiques du réseau domestique (ou les identifiants automatiquement accessibles entre les appareils sur le réseau domestique) pour authentifier quel compte d’abonné est associé à ce réseau domestique afin que les utilisateurs n’aient pas à saisir manuellement les informations d’identification lors de l’établissement d’une session TVE pour accéder au contenu protégé TVE.&quot;
+Définition de l’authentification par domicile par l’Open Authentication Technology Committee (OATC) : &quot;L’authentification automatique à la maison est le processus par lequel un MVPD/OVD utilise les caractéristiques du réseau domestique (ou les identifiants automatiquement accessibles entre les appareils sur le réseau domestique) pour authentifier quel compte d’abonné est associé à ce réseau domestique afin que les utilisateurs n’aient pas besoin de saisir manuellement les informations d’identification lors de l’établissement d’une session TVE pour accéder au contenu protégé.&quot;
 
 
 
-Pour plus d’informations sur l’adaptateur de bus hôte et les normes du secteur, reportez-vous à la section [Cas d’utilisation et exigences du service ATC](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} documentation et **Consignes d’expérience utilisateur OATC pour l’adaptateur de bus hôte**.
+Pour plus d’informations sur l’adaptateur de bus hôte et les normes du secteur, consultez la section [Cas d’utilisation et exigences du service ATC](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} documentation et **Consignes d’expérience utilisateur OATC pour l’adaptateur de bus hôte**.
 
 >[!NOTE]
 >
@@ -39,11 +38,11 @@ Une fois que l’adaptateur de bus hôte a été activé par l’un des 5 princi
 
 ![](assets/authn-conv-pre-post.png)
 
-En outre, vous trouverez ci-dessous le taux de conversion de connexion pour un canal intégré à différents MVPD : ceux qui ont activé l’adaptateur de bus hôte pour celui-ci et ceux qui ne l’ont pas. Le taux de conversion pour les personnes qui ont un adaptateur de bus hôte est nettement plus élevé que celles qui n’ont pas d’adaptateur de bus hôte.
+En outre, vous trouverez ci-dessous le taux de conversion de connexion d’un canal intégré à différents MVPD : ceux qui ont activé l’adaptateur de bus hôte pour celui-ci et ceux qui n’ont pas d’adaptateur de bus hôte. Le taux de conversion pour les personnes qui ont un adaptateur de bus hôte est nettement plus élevé que celles qui n’ont pas d’adaptateur de bus hôte.
 
 ![](assets/hba-vs-non-hba.png)
 
-Six mois après l’activation de l’adaptateur de bus hôte pour la plupart des canaux intégrés à ce MVPD, nous avons remarqué une augmentation de 82 % des utilisateurs uniques (le nombre d’utilisateurs accédant aux canaux TV partout par le biais de ce MVPD a presque doublé).
+Six mois après l’activation de l’adaptateur pour la plupart des canaux intégrés à ce MVPD, nous avons remarqué une augmentation de 82 % des utilisateurs uniques (le nombre d’utilisateurs accédant aux canaux TV partout par le biais de ce MVPD a presque doublé).
 
 2 w3En revanche, comme vous pouvez le voir dans le graphique ci-dessous, d’autres MVPD qui n’avaient pas activé l’adaptateur de bus hôte ont uniquement enregistré une augmentation de 26 % des utilisateurs uniques au cours des 6 derniers mois.
 
@@ -61,9 +60,9 @@ Fonctionnalités d’authentification Primetime prenant en charge l’adaptateur
 
 * Possibilité de définir différents TTL d’authentification pour les authentifications des adaptateurs de bus hôte par rapport aux non-adaptateurs de l’hôte (nécessite également la prise en charge de MVPD)
 * Possibilité de sélectionner automatiquement un MVPD (ignorer le sélecteur MVPD) si l’authentification a expiré. Cela s’avère utile surtout lorsque les TTL des adaptateurs de bus hôte sont petits.
-* Possibilité d’exposer aux programmeurs si l’authentification était ou non un adaptateur de bus hôte (nécessite également la prise en charge MVPD)
+* Possibilité d’exposer aux programmeurs si l’authentification était ou non adaptatif (nécessite également la prise en charge MVPD)
 
-### Expérience utilisateur de l’adaptateur de bus hôte sur les plateformes d’authentification Primetime {#hba-user-exp}
+### Expérience utilisateur du adaptateur de bus hôte sur les plateformes d’authentification Primetime {#hba-user-exp}
 
 Les tableaux suivants fournissent des informations sur l’expérience utilisateur des plateformes prises en charge lorsque l’adaptateur de bus hôte est activé et lorsque l’adaptateur de bus hôte n’est pas activé :
 
@@ -89,7 +88,7 @@ Les tableaux suivants fournissent des informations sur l’expérience utilisate
 Dans le flux de l’adaptateur de bus hôte pour les MVPD intégrés au protocole d’authentification OAuth 2.0, le MVPD émet un jeton d’actualisation et l’Adobe émet un jeton d’authentification de l’adaptateur de bus hôte :
 
 * Le jeton d’actualisation a un délai d’activation (TTL) déterminé par les besoins de l’entreprise du MVPD.
-* Jeton d’authentification de l’adaptateur de bus hôte (TTL) **doit être inférieur ou égal à** le jeton d’actualisation TTL.
+* Jeton d’authentification de l’adaptateur de bus hôte TTL **doit être inférieur ou égal à** le jeton d’actualisation TTL.
 
 
 *Description du flux d’authentification de l’adaptateur de bus hôte pour le protocole OAuth 2.0*
@@ -117,7 +116,7 @@ Description du flux d’authentification de l’adaptateur de bus hôte pour le 
 * **Protocole OAuth :**
    * Pour activer l’adaptateur de bus hôte, voir [Guide de l’utilisateur du tableau de bord Primetime TVE](/help/authentication/tve-dashboard-user-guide.md)
 * **Protocole SAML :** L’authentification basée sur l’accueil est activée côté MVPD. Aucune action n’est requise par le programmeur ou l’Adobe.
-Pour plus d’informations sur les MVPD qui prennent en charge l’authentification basée sur l’accueil, voir [État des adaptateurs de bus hôte pour les distributeurs multicanaux de programmes audiovisuels](/help/authentication/hba-status-mvpds.md).
+Pour plus d’informations sur les MVPD qui prennent en charge l’authentification basée sur l’accueil, voir [État de l’adaptateur de bus hôte pour les MVPD](/help/authentication/hba-status-mvpds.md).
 
 ## FAQ {#faqs}
 
@@ -151,13 +150,10 @@ Pour plus d’informations sur les MVPD qui prennent en charge l’authentificat
 
 * [Recommendations d’accès instantané (adaptateur de bus hôte)](http://www.ctamtve.com/instantaccess){target=_blank} - par CTAM
 * [Exemple de mise en oeuvre de l’adaptateur de bus hôte sur l’application de programmation](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/HBA_Flow_Sample.pdf?dc=201604222139-1346){target=_blank} - par Adobe
-   <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
+  <!--* [Home Based Authentication User Experience Guidelines for TV Everywhere](http://oatc.us/Standards/DownloadRecommendedPractices.aspx){target=_blank} - by OATC-->
 * [Cas d’utilisation et exigences d’authentification basés sur l’accueil](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/Defining%20TVE%20Home-Based%20Authentication%20(HBA)%20%20Use%20Cases%20and%20Requirements%20Recommended%20Practice%20Version%201_0%20FINAL%20DRAFT%20FOR%20BOARD%20APPROVAL.pdf){target=_blank} par OATC
 * [Infos sur l’authentification basée sur l’accueil](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} - par Adobe
 * [Authentification à l’aide du protocole OAuth 2.0](/help/authentication/authn-oauth2-protocol.md)
 * [Authentification avec des MVPD SAML](/help/authentication/authn-usecase.md)
 * [Guide de l’utilisateur du tableau de bord Primetime TVE](/help/authentication/tve-dashboard-user-guide.md)
 * [Métadonnées utilisateur hba_status](/help/authentication/user-metadata-feature.md#obtaining)
-
-
-

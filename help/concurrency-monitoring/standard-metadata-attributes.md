@@ -75,9 +75,9 @@ Les champs de métadonnées standard peuvent être utilisés pour définir des s
 * Vous pouvez limiter le nombre de valeurs distinctes pour un champ donné. Voici quelques exemples :
    * pas plus de X appareils distincts : `HAVING DISTINCT COUNT(deviceId) <= 2`
    * pas plus de X codes postaux distincts : `HAVING DISTINCT COUNT(zipcode) <= 3`
-* Vous pouvez limiter le nombre de principaux diffusions par valeur de champ. Voici quelques exemples :
-   * pas plus de X diffusions principales pour un seul type d’appareil : `GROUP BY deviceType HAVING COUNT(streamId) <= 3`
-   * pas plus de X diffusions principales pour les flux de contenu en direct : `SELECT COUNT(streamId) AS streamCount WHERE contentType='live' HAVING streamCount <= 3`
+* Vous pouvez limiter le nombre de diffusions actives par valeur de champ. Voici quelques exemples :
+   * pas plus de X diffusions actives pour un seul type d’appareil : `GROUP BY deviceType HAVING COUNT(streamId) <= 3`
+   * pas plus de X diffusions actives pour les flux de contenu en direct : `SELECT COUNT(streamId) AS streamCount WHERE contentType='live' HAVING streamCount <= 3`
 
 Contactez l’équipe de surveillance de la simultanéité par [création d’un ticket dans Zendesk](mailto:tve-support@adobe.com) et indiquent les stratégies que vous souhaitez avoir mises en oeuvre.
 

@@ -1,30 +1,28 @@
 ---
-description: La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
-title: Statistiques sur la qualité des services
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
+title: Statistiques de qualité du service
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
+# Statistiques de qualité du service {#quality-of-service-statistics}
 
-# Statistiques sur la qualité du service {#quality-of-service-statistics}
-
-La qualité de service (QoS) offre une vue détaillée sur les performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les périphériques.
+La qualité de service (QoS) offre une vue détaillée des performances du moteur vidéo. TVSDK fournit des statistiques détaillées sur la lecture, la mise en mémoire tampon et les appareils.
 
 TVSDK fournit également des informations sur les ressources téléchargées suivantes :
 
-* Fichiers de liste de lecture/manifestes
+* Lecture/fichiers manifestes
 * Fragments de fichier
-* Suivi des informations relatives aux fichiers
+* Informations de tracking des fichiers
 
 ## Suivi au niveau du fragment à l’aide des informations de chargement {#track-at-the-fragment-level-using-load-information}
 
-Vous pouvez lire des informations sur la qualité du service (QoS) à propos des ressources téléchargées, telles que des fragments et des pistes, à partir de la classe LoadInformation.
+Vous pouvez lire des informations sur la qualité du service (QoS) relatives aux ressources téléchargées, telles que les fragments et les traces, à partir de la classe LoadInformation .
 
-1. Mettez en oeuvre l’écouteur de événement de rappel `onLoadInformationAvailable`.
+1. Mettez en oeuvre le `onLoadInformationAvailable` écouteur d’événement de rappel.
 
    ```
    private function onLoadInformationAvailable(event:LoadInformationEvent):void { 
@@ -33,14 +31,14 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
    }
    ```
 
-1. Enregistrez l’écouteur de événement, que TVSDK appelle chaque fois qu’un fragment est téléchargé.
+1. Enregistrez l’écouteur d’événement, que TVSDK appelle chaque fois qu’un fragment est téléchargé.
 
    ```
    player.addEventListener(LoadInformationEvent.LOAD_INFORMATION_AVAILABLE,  
                                     onLoadInformationAvailable);
    ```
 
-1. Lisez les données présentant un intérêt à partir du `LoadInformation` transmis au rappel.
+1. Lisez les données présentant un intérêt dans la `LoadInformation` qui est transmis au rappel.
 
    <table id="table_75E61A2EB25E435DB631166A7FF64757"> 
    <thead> 
@@ -52,63 +50,63 @@ Vous pouvez lire des informations sur la qualité du service (QoS) à propos des
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> downloadDuration </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
-      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes avant le premier octet et 4 secondes de plus pour télécharger l’intégralité du fragment. </p> </td> 
+      <td colname="col2"> <p>Durée du téléchargement en millisecondes. </p> <p>TVSDK ne fait pas la distinction entre le temps nécessaire au client pour se connecter au serveur et le temps nécessaire pour télécharger le fragment complet. Par exemple, si le téléchargement d’un segment de 10 Mo prend 8 secondes, TVSDK fournit ces informations, mais ne vous indique pas qu’il a fallu 4 secondes jusqu’au premier octet et 4 secondes supplémentaires pour télécharger l’intégralité du fragment. </p> </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
+      <td colname="col01"> <span class="codeph"> mediaDuration </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
       <td colname="col2"> Durée du média des fragments téléchargés en millisecondes. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> taille  </span> </td> 
+      <td colname="col01"> <span class="codeph"> size </span> </td> 
       <td colname="col1"> <p>Nombre </p> </td> 
       <td colname="col2"> Taille de la ressource téléchargée en octets. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackIndex  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackIndex </span> </td> 
       <td colname="col1"> <p>int </p> </td> 
-      <td colname="col2"> L'index de la voie correspondante, s'il est connu ; sinon, 0. </td> 
+      <td colname="col2"> Index de la piste correspondante, s’il est connu ; dans le cas contraire, 0. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackName  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackName </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
-      <td colname="col2"> Le nom de la voie correspondante, s'il est connu ; sinon, nul. </td> 
+      <td colname="col2"> Nom de la piste correspondante, s’il est connu ; dans le cas contraire, nul. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> trackType  </span> </td> 
+      <td colname="col01"> <span class="codeph"> trackType </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
-      <td colname="col2"> le type de la voie correspondante, s'il est connu ; sinon, nul. </td> 
+      <td colname="col2"> Le type de la piste correspondante, s’il est connu ; dans le cas contraire, nul. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> type  </span> </td> 
+      <td colname="col01"> <span class="codeph"> type </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
-      <td colname="col2"> Contenu téléchargé par TVSDK. L'un des éléments suivants : 
+      <td colname="col2"> Téléchargement de TVSDK. L’une des options suivantes : 
       <ul id="ul_FA02F42D109344F4866073908CA4E835"> 
-      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST - Liste de lecture/manifeste </li> 
+      <li id="li_0E2D3EBCAB58477FB5EA526C54FACFFB">MANIFEST - Une liste de lecture/un manifeste </li> 
       <li id="li_D7894C2F0CB64C909C6398288EA5683A">FRAGMENT - Un fragment </li> 
-      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK : fragment associé à une piste spécifique </li> 
-      </ul> Il peut parfois être impossible de détecter le type de ressource. Si cela se produit, le fichier est renvoyé. </td> 
+      <li id="li_4D4FEDB7704C411B80891B5028B0C20E">TRACK : fragment associé à un suivi spécifique. </li> 
+      </ul> Il peut arriver qu’il ne soit pas possible de détecter le type de ressource. Si cela se produit, le fichier est renvoyé. </td> 
    </tr> 
    <tr> 
-      <td colname="col01"> <span class="codeph"> url  </span> </td> 
+      <td colname="col01"> <span class="codeph"> url </span> </td> 
       <td colname="col1"> <p>Chaîne </p> </td> 
-      <td colname="col2"> URL pointant vers la ressource téléchargée. </td> 
+      <td colname="col2"> URL qui pointe vers la ressource téléchargée. </td> 
    </tr> 
    </tbody> 
    </table>
 
-## Lire les statistiques de lecture, de mise en mémoire tampon et de périphérique de QOS {#read-qos-playback-buffering-and-device-statistics}
+## Lecture de QOS, mise en mémoire tampon et statistiques sur les appareils {#read-qos-playback-buffering-and-device-statistics}
 
-Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et de périphérique à partir de la classe QOSProvider.
+Vous pouvez lire les statistiques de lecture, de mise en mémoire tampon et d’appareil à partir de la classe QOSProvider .
 
-La classe `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les débits d&#39;images, les données temporelles, etc.
+La variable `QOSProvider` fournit diverses statistiques, notamment des informations sur la mise en mémoire tampon, les débits, les taux d’images, les données temporelles, etc.
 
-Il fournit également des informations sur le périphérique, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK et la taille/densité d’écran.
+Il fournit également des informations sur l’appareil, telles que le fabricant, le modèle, le système d’exploitation, la version du SDK et la taille/densité d’écran.
 
-1. Instanciez un lecteur multimédia.
-1. Créez un objet `QOSProvider` et joignez-le au lecteur de médias.
+1. Instanciation d’un lecteur multimédia
+1. Créez un `QOSProvider` et joignez-la au lecteur multimédia.
 
    ```
    // Create Media Player. 
@@ -118,7 +116,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
 
 1. (Facultatif) Lisez les statistiques de lecture.
 
-   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur, qui récupère périodiquement les nouvelles valeurs QoS du `QOSProvider`. Par exemple :
+   Une solution pour lire les statistiques de lecture consiste à disposer d’un minuteur qui récupère régulièrement les nouvelles valeurs QoS de la variable `QOSProvider`. Par exemple :
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
@@ -140,7 +138,7 @@ Il fournit également des informations sur le périphérique, telles que le fabr
    }
    ```
 
-1. (Facultatif) Lisez les informations spécifiques au périphérique.
+1. (Facultatif) Lisez les informations spécifiques à l’appareil.
 
    ```
    // Show device information 

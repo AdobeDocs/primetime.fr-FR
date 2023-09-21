@@ -1,46 +1,44 @@
 ---
-description: TVSDK traite les erreurs de plage de temps en fonction du problème spécifique, soit en fusionnant, soit en réordonnant les plages de temps mal définies.
+description: TVSDK gère les erreurs de période en fonction du problème spécifique, soit en fusionnant, soit en réorganisant les périodes mal définies.
 title: Gestion des erreurs de suppression et de remplacement des publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
 
-
 # Gestion des erreurs de suppression et de remplacement des publicités{#ad-deletion-and-replacement-error-handling}
 
-TVSDK traite les erreurs de plage de temps en fonction du problème spécifique, soit en fusionnant, soit en réordonnant les plages de temps mal définies.
+TVSDK gère les erreurs de période en fonction du problème spécifique, soit en fusionnant, soit en réorganisant les périodes mal définies.
 
-TVSDK corrige les erreurs `timeRanges` en fusionnant et réordonnant par défaut. Tout d’abord, il trie les plages de temps définies par le client selon l’*heure de début*. En fonction de cet ordre de tri, il fusionne ensuite des plages adjacentes et les joint s’il existe des sous-ensembles et des intersections entre les plages.
+TVSDK traite des `timeRanges` en procédant à la fusion et à la réorganisation par défaut. Tout d’abord, elle trie les plages de temps définies par le client en fonction de la variable *begin* temps. Selon cet ordre de tri, il fusionne ensuite les plages adjacentes et les relie si elles comportent des sous-ensembles et des intersections.
 
-TVSDK traite les erreurs de plage de temps comme suit :
+TVSDK gère les erreurs de période comme suit :
 
 * En panne : TVSDK réorganise les plages de temps.
-* Sous-ensemble - TVSDK fusionne les sous-ensembles de plages de temps.
-* Intersect - TVSDK fusionne les plages de temps qui se croisent.
-* Conflit de remplacements de plages - TVSDK choisit la durée de remplacement à partir du premier `timeRange` apparaissant dans le groupe en conflit.
+* Sous-ensemble : TVSDK fusionne les sous-ensembles de périodes.
+* Intersect : TVSDK fusionne les plages intersectes.
+* Conflit Remplacer les plages : TVSDK choisit la durée de remplacement à partir du premier affichage. `timeRange` dans le groupe en conflit.
 
-TVSDK traite les conflits en mode de signalisation avec les métadonnées publicitaires comme suit :
+TVSDK gère les conflits en mode de signalisation avec les métadonnées publicitaires comme suit :
 
-* Si le mode de signalisation de la publicité est en conflit avec les métadonnées de la plage de temps, les métadonnées de la plage de temps ont toujours la priorité. Par exemple, si le mode de signalisation de la publicité est défini en tant que carte du serveur ou indices de manifeste et qu’il existe également des plages de temps MARK dans les métadonnées de la publicité, le comportement obtenu est que les plages sont marquées et qu’aucune publicité n’est insérée.
-* Dans le cas des plages REPLACE, si le mode de signalisation est défini comme carte serveur ou comme indices manifestes, les plages sont remplacées comme spécifié dans les plages REPLACE et il n&#39;y a pas d&#39;insertion publicitaire par le biais du mappage serveur ou des indices manifestes. Voir [Mode de signalisation publicitaire](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
+* Si le mode de signalisation de la publicité est en conflit avec les métadonnées de période, les métadonnées de période ont toujours la priorité. Par exemple, si le mode de signalisation de la publicité est défini comme carte du serveur ou comme indicateurs de manifeste, et qu’il existe également des plages de temps MARK dans les métadonnées de publicité, le comportement obtenu est que les plages sont marquées et qu’aucune publicité n’est insérée.
+* Pour les plages REPLACE, si le mode de signalisation est défini comme carte du serveur ou comme indices manifestes, les plages sont remplacées comme spécifié dans les plages REPLACE et il n’y a pas d’insertion de publicités par le biais de la carte du serveur ou des indices manifestes. Voir [Mode de signalisation publicitaire](../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md).
 
-Lorsque le serveur ne renvoie pas un `AdBreaks` valide :
+Lorsque le serveur ne retourne pas valide `AdBreaks`:
 
-* TVSDK génère et traite un `NOPTimelineOperation` pour le `AdBreak` vide. Aucune publicité n’est lue.
+* TVSDK génère et traite un `NOPTimelineOperation` pour le champ vide `AdBreak`. Aucune publicité n’est lue.
 
-Pour les plages de temps avec les flux en direct :
+Pour les périodes avec des flux en direct :
 
-* Bien que cette fonction de suppression/remplacement de publicités C3 soit destinée à être prise en charge uniquement pour VOD, les plages de temps sont également traitées pour les flux en direct si elles sont spécifiées dans les métadonnées de la publicité.
+* Bien que cette fonctionnalité de suppression/remplacement de publicité C3 soit destinée à être prise en charge uniquement pour VOD, les plages de temps sont également traitées pour les diffusions en direct si elles sont spécifiées dans les métadonnées de publicité.
 
-## Exemples d&#39;erreurs de période {#time-range-error-examples}
+## Exemples d’erreurs de période {#time-range-error-examples}
 
-TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
+TVSDK répond à des spécifications de période erronées en fusionnant ou en remplaçant les périodes selon les besoins.
 
-Dans l’exemple suivant, quatre plages de temps DELETE croisées sont définies. TVSDK fusionne les quatre plages de temps en une, de sorte que la plage de suppression réelle se situe entre 0 et 50 s.
+Dans l’exemple suivant, quatre plages horaires de DELETE se recoupent sont définies. TVSDK fusionne les quatre périodes en une, de sorte que la plage de suppression réelle soit comprise entre 0 et 50 s.
 
 ```
 "time-ranges": {
@@ -61,7 +59,7 @@ Dans l’exemple suivant, quatre plages de temps DELETE croisées sont définies
 }
 ```
 
-Dans l&#39;exemple suivant, quatre plages de temps REPLACE sont définies avec des plages de temps conflictuelles. Dans ce cas, TVSDK remplace 0-50 par 25 annonces. Elle correspond à la première durée de remplacement dans l’ordre de tri, car il y a des conflits dans les plages suivantes.
+Dans l’exemple suivant, quatre périodes de remplacement sont définies avec des périodes conflictuelles. Dans ce cas, TVSDK remplace 0-50 par 25 s de publicités. Cela correspond à la première durée de remplacement dans l’ordre de tri, car des conflits se produisent dans les plages suivantes.
 
 ```
 "time-ranges": {

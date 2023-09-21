@@ -1,10 +1,9 @@
 ---
-description: TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
+description: TVSDK répond à des spécifications de période erronées en fusionnant ou en remplaçant les périodes selon les besoins.
 title: Exemples d’erreurs de période
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,9 +11,9 @@ ht-degree: 0%
 
 # Exemples d’erreurs de période{#time-range-error-examples}
 
-TVSDK répond à des spécifications de plage de temps erronées en fusionnant ou en remplaçant les plages de temps selon les besoins.
+TVSDK répond à des spécifications de période erronées en fusionnant ou en remplaçant les périodes selon les besoins.
 
-Dans l’exemple suivant, quatre plages de temps DELETE croisées sont définies. TVSDK fusionne les quatre plages de temps en une, de sorte que la plage de suppression réelle se situe entre 0 et 50 s.
+Dans l’exemple suivant, quatre plages horaires de DELETE se recoupent sont définies. TVSDK fusionne les quatre périodes en une, de sorte que la plage de suppression réelle soit comprise entre 0 et 50 s.
 
 ```
 "time-ranges": {
@@ -35,7 +34,7 @@ Dans l’exemple suivant, quatre plages de temps DELETE croisées sont définies
 }
 ```
 
-Dans l&#39;exemple suivant, quatre plages de temps REPLACE sont définies avec des plages de temps conflictuelles. Dans ce cas, TVSDK remplace 0-50 par 25 annonces. Elle correspond à la première durée de remplacement dans l’ordre de tri, car il y a des conflits dans les plages suivantes.
+Dans l’exemple suivant, quatre périodes de remplacement sont définies avec des périodes conflictuelles. Dans ce cas, TVSDK remplace 0-50 par 25 s de publicités. Cela correspond à la première durée de remplacement dans l’ordre de tri, car des conflits se produisent dans les plages suivantes.
 
 ```
 "time-ranges": {

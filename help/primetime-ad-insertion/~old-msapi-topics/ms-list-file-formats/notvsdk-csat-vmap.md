@@ -1,7 +1,6 @@
 ---
-description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion
+description: Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête pttrackingversion.
 title: Format VMAP pour les URL de suivi
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '138'
@@ -12,11 +11,11 @@ ht-degree: 0%
 
 # Format VMAP pour les URL de suivi {#vmap-format-for-tracking-urls}
 
-Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête `pttrackingversion`
+Si le client demande des informations de suivi, le serveur de manifeste renvoie un fichier formaté. Son format et son contenu dépendent de la valeur du paramètre de requête . `pttrackingversion`
 
 ## Format VMAP unique {#vmap}
 
-Le fichier VMAP que le serveur de manifeste envoie si `pttrackingversion=vmap` a le format de l&#39;exemple suivant, qui provient d&#39;un bloc VMAP type. Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier VMAP.
+Le fichier VMAP envoyé par le serveur de manifeste si `pttrackingversion=vmap` a le format de l’exemple suivant, qui provient d’un bloc VMAP type. Il a été raccourci pour éviter toute répétition inutile, afin que la structure soit plus claire. Des points de suspension (trois points séparés par des espaces) indiquent l’absence d’informations dans certaines URL et entre certains blocs de code. Les URL non raccourcies apparaissent sur plusieurs lignes, bien qu’elles apparaissent sur une seule ligne dans le fichier VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

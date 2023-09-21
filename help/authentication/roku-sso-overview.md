@@ -1,13 +1,12 @@
 ---
 title: Présentation de Roku SSO
 description: À propos de Roku SSO
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
 
 ---
-
 
 # Présentation de Roku SSO {#overview}
 
@@ -39,25 +38,29 @@ Pour plus d’informations sur le format des en-têtes nécessaires, contactez v
 
 ### Problèmes possibles {#possible-issues}
 
-Les programmeurs doivent vérifier que leurs mises en oeuvre actuelles basées sur l’API REST sans client d’Adobe n’entravent pas l’authentification unique de la plateforme de Roku. Voir ci-dessous une liste des problèmes possibles et comment les résoudre.
+Les programmeurs doivent vérifier que leurs mises en oeuvre actuelles basées sur l’API REST sans client d’Adobe n’entravent pas l’authentification unique de la plateforme de Roku. Voir ci-dessous une liste des problèmes possibles et comment ils doivent être résolus.
 
-| Problème | Cause possible | Solutions possibles | |-|-|-| |Aucun en-tête SSO Roku envoyé à l’Adobe|En utilisant HTTP au lieu de HTTPS pour les appels aux domaines d’authentification Adobe Primetime|Utiliser HTTPS| |Le logo MVPD ne s’affiche pas/n’est pas mis à jour pour les jetons SSO|L’interface utilisateur repose sur le stockage local|Les applications doivent mettre à jour l’interface utilisateur (et le stockage local, si nécessaire) après avoir vérifié l’authentification| |Déconnexion déclenchée sans AuthZ|La conception de l’application|L’application doit être mise à jour pour ne jamais se déconnecter en arrière-plan|
+| Problème | Cause possible | Solutions possibles |
+|-|-|-|
+| Aucun en-tête SSO Roku envoyé à Adobe | Utilisation de HTTP au lieu de HTTPS pour les appels aux domaines d’authentification Adobe Primetime | Utiliser HTTPS |
+| Logo MVPD non affiché/non mis à jour pour les jetons SSO | L’interface utilisateur repose sur le stockage local. | Les applications doivent mettre à jour l’interface utilisateur (et le stockage local, si nécessaire) après vérification de l’authentification. |
+| Déconnexion déclenchée sans AuthZ | Conception de l’application | L’application doit être mise à jour pour ne jamais se déconnecter en arrière-plan. |
 
 ## FAQ {#faq}
 
 * **Comment fonctionnera l’authentification unique ?**
 
-   SSO fonctionnera dans toutes les applications de programmeur optimisées par l’authentification Adobe Primetime sur tous les appareils Roku associés au même utilisateur Roku.
+  SSO fonctionnera dans toutes les applications de programmeur optimisées par l’authentification Adobe Primetime sur tous les appareils Roku associés au même utilisateur Roku.
 Tous les MVPD ne permettront pas l’authentification unique Roku.
 
 * **Y aura-t-il une modification des TTL d’authentification ?**
 
-   Le premier jeton d’authentification valide sera utilisé pour effectuer une authentification unique. Dans ce cas, toutes les autres applications qui seront authentifiées via SSO utiliseront le même TTL jusqu’à son expiration. Ainsi, lorsque vous naviguez d’une application à l’autre, la deuxième application partage la durée de vie de la première application qui s’authentifie.
+  Le premier jeton d’authentification valide sera utilisé pour effectuer une authentification unique. Dans ce cas, toutes les autres applications qui seront authentifiées via SSO utiliseront le même TTL jusqu’à son expiration. Ainsi, lorsque vous naviguez d’une application à l’autre, la deuxième application partage la durée de vie de la première application qui s’authentifie.
 
 * **Les autres fonctionnalités d’Adobe fonctionneront-elles comme auparavant ?**
 
-   Toutes les fonctionnalités d’authentification Primetime fonctionneront comme auparavant.
+  Toutes les fonctionnalités d’authentification Primetime fonctionneront comme auparavant.
 
 * **Existe-t-il un processus d’opt-in/opt-out du programmeur bénéficiant d’SSO sur la plateforme Roku ?**
 
-   Il s’agit d’un changement de configuration dans le tableau de bord TVE d’Adobe. Chaque programmeur peut activer/désactiver l’authentification unique sur la plateforme Roku pour des intégrations spécifiques.
+  Il s’agit d’un changement de configuration dans le tableau de bord TVE d’Adobe. Chaque programmeur peut activer/désactiver l’authentification unique sur la plateforme Roku pour des intégrations spécifiques.

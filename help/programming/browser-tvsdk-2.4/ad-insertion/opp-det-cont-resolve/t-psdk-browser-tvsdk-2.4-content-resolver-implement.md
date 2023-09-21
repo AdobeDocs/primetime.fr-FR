@@ -1,30 +1,28 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Mise en oeuvre d’un résolveur de contenu personnalisé{#implement-a-custom-content-resolver}
+# Mise en oeuvre d’un outil de résolution de contenu personnalisé{#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque le navigateur TVSDK détecte une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité en utilisant la méthode `canResolve`. Le premier qui renvoie true est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de la notification du SDK du navigateur une fois le processus terminé.
+Lorsque Browser TVSDK détecte une nouvelle opportunité, il effectue une itération via les programmes de résolution de contenu enregistrés à la recherche d’une opportunité capable de résoudre cette opportunité à l’aide de la fonction `canResolve` . La première qui renvoie true (vrai) est sélectionnée pour résoudre l’opportunité. Si aucun résolveur de contenu n’est capable, cette opportunité est ignorée. Comme le processus de résolution de contenu est généralement asynchrone, le résolveur de contenu est chargé d’informer le navigateur TVSDK une fois le processus terminé.
 
-Rappelez-vous des informations suivantes :
+Gardez à l’esprit les informations suivantes :
 
-* Le résolveur de contenu appelle `client.process` pour spécifier l’opération de chronologie que TVSDK doit exécuter.
+* Les appels du programme de résolution de contenu `client.process` pour spécifier l’opération de chronologie que TVSDK doit exécuter.
 
-   L’opération est généralement un emplacement de coupure publicitaire.
+  L’opération est généralement un emplacement de coupure publicitaire.
 
-* Le résolveur de contenu appelle `client.notifyCompleted` si le processus de résolution a réussi ou `client.notifyFailed` si le processus a échoué.
+* Les appels du programme de résolution de contenu `client.notifyCompleted` si le processus de résolution a réussi ou `client.notifyFailed` si le processus échoue.
 
-1. Créez un résolveur d&#39;opportunités personnalisé.
+1. Créez un programme de résolution d’opportunités personnalisé.
 
    ```js
    /** 
@@ -81,9 +79,9 @@ Rappelez-vous des informations suivantes :
    }; 
    ```
 
-1. Créez la fabrique de contenu personnalisée qui utilise le résolveur de contenu personnalisé.
+1. Créez la fabrique de contenu personnalisée, qui utilise le résolveur de contenu personnalisé.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    /** 
@@ -106,9 +104,9 @@ Rappelez-vous des informations suivantes :
    }; 
    ```
 
-1. Enregistrez la fabrique de contenu personnalisée pour que le flux média soit lu.
+1. Enregistrez la fabrique de contenu personnalisée pour que le flux multimédia soit lu.
 
-   Dans le lecteur UI Framework, vous pouvez spécifier une fabrique de contenu personnalisée comme suit :
+   Dans le lecteur de structure de l’interface utilisateur, vous pouvez spécifier la fabrique de contenu personnalisée comme suit :
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -132,4 +130,3 @@ Rappelez-vous des informations suivantes :
    
    }); 
    ```
-

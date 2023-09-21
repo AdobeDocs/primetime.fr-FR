@@ -1,81 +1,79 @@
 ---
-description: Vous pouvez activer FairPlay pour Safari lorsque vous travaillez avec Primetime DRM Cloud, optimisé par ExpressPlay.
-title: Activer FairPlay pour Safari HLS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez activer FairPlay pour Safari lorsque vous utilisez Primetime DRM Cloud, optimisé par ExpressPlay.
+title: Activation de FairPlay pour Safari HLS
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Activation de FairPlay pour Safari HLS {#enable-fairplay-for-safari-hls}
 
-# Activer FairPlay pour Safari HLS {#enable-fairplay-for-safari-hls}
-
-Vous pouvez activer FairPlay pour Safari lorsque vous travaillez avec Primetime DRM Cloud, optimisé par ExpressPlay.
+Vous pouvez activer FairPlay pour Safari lorsque vous utilisez Primetime DRM Cloud, optimisé par ExpressPlay.
 
 Vérifiez que vous disposez des éléments suivants :
 
-* Exemple d’application fonctionnel qui peut lire la vidéo HLS.
+* Exemple d’application fonctionnel pouvant lire la vidéo HLS.
 
-   L’exemple d’application doit être capable de lire du contenu protégé par FairPlay avec les licences gérées via Primetime DRM optimisées par ExpressPlay.
+  L’exemple d’application doit pouvoir lire du contenu protégé par FairPlay avec les licences gérées via Primetime DRM optimisées par ExpressPlay.
 * Exemple de contenu HLS (un manifeste M3U8) fourni avec la protection FairPlay.
 
-Pour utiliser pleinement les informations ici, découvrez les Workflows multiDRM en commençant par la sous-section [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) dans le guide des Workflows multiDRM. Lisez d&#39;abord cette documentation sur la configuration de vos droits et de votre serveur clé, et les informations ci-dessous seront beaucoup plus utiles.
+Pour tirer pleinement parti des informations présentées ici, découvrez les processus multi-DRM commençant par la sous-section . [Serveur de référence : exemple de serveur de droits ExpressPlay (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) dans le guide Workflows multi-DRM . Lisez d’abord cette documentation sur la configuration de vos droits et de votre serveur clé. Les informations ci-dessous seront beaucoup plus utiles.
 Vous avez besoin des éléments suivants :
 
-* Votre *production* Authentificateur client d&#39;ExpressPlay
-* La même clé de contenu et `iv` avec laquelle votre contenu a été compressé.
-* Emplacement de votre certificat de clé publique FairPlay.
+* Votre *production* Authentificateur client à partir d’ExpressPlay
+* la même clé de contenu et `iv` avec lequel votre contenu a été mis en package.
+* L’emplacement de votre certificat de clé publique FairPlay.
 
-Pour modifier votre application FairPlay / Safari :
+Pour modifier votre application FairPlay/Safari :
 
-1. Définissez l’emplacement de votre certificat de clé publique FairPlay qui a été utilisé dans la demande de serveur de licences FairPlay.
+1. Définissez l’emplacement de votre certificat de clé publique FairPlay utilisé dans la demande de serveur de licences FairPlay.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. Effectuez une demande manuelle de licence FairPlay *token* à ExpressPlay pour obtenir une URL de jeton de licence.
+1. Effectuer une licence FairPlay manuelle *token* demande à ExpressPlay d’obtenir une URL de jeton de licence.
 
-       Vous pouvez exécuter cette étape de l’une des manières suivantes :
+       Vous pouvez effectuer cette étape de l’une des manières suivantes :
    
-   * Utilisez votre propre authentificateur de client de production ExpressPlay.
-   * Utilisez la même clé de contenu et `iv` dans cette requête qui a été utilisée pour regrouper le contenu à lire.
+   * Utilisez votre propre authentificateur client de production ExpressPlay.
+   * Utilisez la même clé de contenu et `iv` dans cette requête qui a été utilisée pour regrouper le contenu que vous souhaitez lire.
 
-      Exécutez la commande suivante à partir du shell et substituez votre authentificateur de client ExpressPlay pour obtenir l’URL du jeton de licence pour l’exemple de contenu :
+     Exécutez la commande suivante à partir du shell et remplacez votre authentificateur client ExpressPlay pour obtenir l’URL du jeton de licence de l’exemple de contenu :
 
-      ```
-      curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
-           customerAuthenticator=<ExpressPlay customer authenticator identifier>& 
-           errorFormat=json& 
-           contentKey=<your content key>& 
-           iv=<your iv here>"
-      ```
+     ```
+     curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
+          customerAuthenticator=<ExpressPlay customer authenticator identifier>& 
+          errorFormat=json& 
+          contentKey=<your content key>& 
+          iv=<your iv here>"
+     ```
 
-      La réponse avec l’URL du jeton de licence ressemblera à ceci :
+     La réponse avec l’URL du jeton de licence se présente comme suit :
 
-      ```
-      https://fp.service.expressplay.com:80/hms/fp/rights/? 
-           ExpressPlayToken=<base64-encoded ExpressPlay token>
-      ```
+     ```
+     https://fp.service.expressplay.com:80/hms/fp/rights/? 
+          ExpressPlayToken=<base64-encoded ExpressPlay token>
+     ```
 
 1. Définissez une variable avec l’URL du jeton de licence d’ExpressPlay.
 
-   Par exemple :
+   Par exemple :
 
    ```js
    var myServerProcessSPCPath = 'https://fp.service.expressplay.com:80/hms/fp/rights/? 
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. Avant que votre application puisse lire le contenu protégé, remplacez le modèle d’URL du contenu `skd://` par `https://`.
+1. Avant que votre application puisse lire du contenu protégé, modifiez le modèle d’URL du contenu depuis `skd://` to `https://`.
 
    Vous devez ajouter ce changement de schéma d’URL dans votre application, avant l’appel au serveur de licences qui permet la lecture.
 
-   Les protocoles doivent être modifiés car l&#39;ID de contenu, qui permet d&#39;accéder à la clé de contenu dans le système de gestion des clés, est inclus dans le manifeste M3U8 avec le protocole `skd://`. Lorsque le lecteur est prêt à obtenir la licence pour lire le contenu protégé, il doit d&#39;abord changer de protocole pour communiquer avec le serveur de licences ExpressPlay. Dans l’exemple ci-dessous, `myServerProcessSPCPath` est modifié pour contenir le modèle d’URL correct pour la demande de serveur de licences :
+   Les protocoles doivent être modifiés, car l’ID de contenu, qui permet d’accéder à la clé de contenu dans le système de gestion des clés, est inclus dans le manifeste M3U8 avec la variable `skd://` protocole . Lorsque le lecteur est prêt à obtenir la licence pour lire le contenu protégé, il doit d’abord changer de protocole pour communiquer avec le serveur de licences ExpressPlay. Dans l’exemple ci-dessous, la variable `myServerProcessSPCPath` est modifié pour contenir le modèle d’URL correct pour la demande de serveur de licences :
 
    ```js
    extractContentId(initData) {  
@@ -88,4 +86,3 @@ Pour modifier votre application FairPlay / Safari :
        console.log("severProcessSPCPAth = " + serverProcessSPCPath); return link.hostname;  
    }
    ```
-

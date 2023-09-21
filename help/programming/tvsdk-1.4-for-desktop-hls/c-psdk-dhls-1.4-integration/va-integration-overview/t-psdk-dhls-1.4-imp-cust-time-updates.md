@@ -1,18 +1,16 @@
 ---
-description: Dans certaines implémentations d’analyse, l’application cliente peut souhaiter fournir une position de curseur de lecture différente de celle rapportée par la valeur localeTime de TVSDK. Par exemple, lors de la lecture d’un flux LINEAR, chaque curseur de lecture du programme peut être fourni par rapport à son heure de début.
-title: Mise en oeuvre de mises à jour de temps personnalisées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Dans certaines mises en oeuvre d’analyse, l’application client peut souhaiter fournir une position de curseur de lecture différente de celle signalée par la valeur localTime de TVSDK. Par exemple, lors d’une lecture de flux LINEAR, le curseur de lecture de chaque programme peut être fourni par rapport à son heure de début.
+title: Mise en oeuvre de mises à jour d’heure personnalisées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre de mises à jour d’heure personnalisées{#implement-custom-time-updates}
 
-# Mettre en oeuvre des mises à jour de temps personnalisées{#implement-custom-time-updates}
-
-Dans certaines implémentations d’analyse, l’application cliente peut souhaiter fournir une position de curseur de lecture différente de celle rapportée par la valeur localeTime de TVSDK. Par exemple, lors de la lecture d’un flux LINEAR, chaque curseur de lecture du programme peut être fourni par rapport à son heure de début.
+Dans certaines mises en oeuvre d’analyse, l’application client peut souhaiter fournir une position de curseur de lecture différente de celle signalée par la valeur localTime de TVSDK. Par exemple, lors d’une lecture de flux LINEAR, le curseur de lecture de chaque programme peut être fourni par rapport à son heure de début.
 
 >[!TIP]
 >
@@ -32,4 +30,3 @@ Dans certaines implémentations d’analyse, l’application cliente peut souhai
    >[!IMPORTANT]
    >
    >Les valeurs de ce fragment de code ne sont que des exemples. Vous devez utiliser des valeurs différentes pour la position personnalisée du curseur de lecture.
-

@@ -35,7 +35,7 @@ La présentation ci-dessous vise à valider le modèle par rapport à certains c
 
 ### 1. Un client. Une application. Une seule politique. Un flux {#onetenant-oneapp-onepolicy-onestream}
 
-Nous commencerons avec un seul client, associé à une seule application et à une seule stratégie. Supposons que la politique stipule qu’il peut y avoir au plus un principal flux pour n’importe quel utilisateur (le dernier flux est autorisé à être lu).
+Nous commencerons avec un seul client, associé à une seule application et à une seule stratégie. Supposons que la stratégie indique qu’il peut y avoir au plus un flux actif pour n’importe quel utilisateur (le dernier flux est autorisé à être lu).
 
 Une fois qu’un flux est démarré, l’activité ne comprend que ce flux et il est autorisé à le lire.
 
@@ -52,7 +52,7 @@ La limite est dépassée, car la stratégie indique qu’un seul flux est autori
 
 >[!NOTE]
 >
->Les diagrammes représentent la vue système sur l’activité de l’utilisateur. Pour les tentatives d’initialisation du flux, la décision d’accès sera incluse dans la réponse. Pour les flux principaux, la décision est renvoyée sur la réponse de pulsation.
+>Les diagrammes représentent la vue système sur l’activité de l’utilisateur. Pour les tentatives d’initialisation du flux, la décision d’accès sera incluse dans la réponse. Pour les flux actifs, la décision est renvoyée sur la réponse de pulsation.
 
 ### 3. Deux locataires. Deux applications. Une seule politique. Deux ruisseaux. {#twotenant-twoapp-onepolicy-twostreams}
 
@@ -68,7 +68,7 @@ Maintenant, supposons que le deuxième client déploie une nouvelle application 
 
 ![Deux locataires. Trois applications. Deux politiques. Deux ruisseaux.](assets/twotenant-policies-streams-threeapps.png)
 
-En ce moment, les principaux courants **s3** et **s4** sont toutes les deux autorisées. Pour **s3**, lorsque la stratégie **P1** est évalué, le système ne comptera que **s3** as **activité pertinente** (**s4** n’est en aucun cas lié à la stratégie ; **P1**), il n’y a donc pas de violation.
+En ce moment, les flux actifs **s3** et **s4** sont toutes les deux autorisées. Pour **s3**, lorsque la stratégie **P1** est évalué, le système ne comptera que **s3** as **activité pertinente** (**s4** n’est en aucun cas lié à la stratégie ; **P1**), il n’y a donc pas de violation.
 
 Stratégie **P2** s’applique aux deux diffusions et inclut les deux **s3** et **s4** comme activité pertinente. Comme cette activité se trouve dans les limites de deux diffusions, les deux diffusions sont autorisées.
 

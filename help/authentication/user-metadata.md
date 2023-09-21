@@ -1,10 +1,9 @@
 ---
 title: Métadonnées utilisateur
 description: Métadonnées utilisateur
-exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 895438e2b915f8745d685dfc76340b18eccd48bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---

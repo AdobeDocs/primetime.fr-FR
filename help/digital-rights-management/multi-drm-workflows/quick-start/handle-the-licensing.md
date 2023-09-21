@@ -1,33 +1,30 @@
 ---
-description: La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
-title: Licence
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’octroi de licences est le principal mécanisme par lequel les utilisateurs sont autorisés ou refusés à lire un contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+title: Licences
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
+# Licences{#licensing}
 
-# Licence {#licensing}
+L’octroi de licences est le principal mécanisme par lequel les utilisateurs sont autorisés ou refusés à lire un contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
 
-La licence est le Principal mécanisme par lequel les utilisateurs sont autorisés ou privés de la possibilité de lire un élément de contenu vidéo protégé. Un utilisateur légitime (autorisé) peut se voir attribuer une licence (clé) pour déchiffrer et lire un élément spécifique du contenu chiffré de son fournisseur de contenu.
+Avant de pouvoir lire du contenu protégé par DRM sur l’appareil d’un utilisateur final, votre application ou page web doit acquérir un jeton à partir d’un serveur de droit ou de storefront que vous, le client, utilisez. Adobe fournit un exemple de serveur de référence à cet effet : [Serveur de référence : exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Avant que votre application ou page Web sur un périphérique d’utilisateur final puisse lire du contenu protégé par DRM, il doit acquérir un jeton d’un serveur de droits ou de stockage que vous, le client, utilisez. Adobe fournit un exemple de serveur de référence à cet effet : [Serveur de référence : Exemple de serveur de droits ExpressPlay (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
-
-Votre serveur de droits ou de stockage demandera un jeton de licence au serveur ExpressPlay approprié, uniquement après avoir vérifié auprès de vos propres systèmes dorsaux pour déterminer si l&#39;utilisateur spécifique est autorisé à regarder le contenu demandé. La réponse renvoyée par la demande de jeton de licence est soit une URL prête à l’emploi pour le serveur de licences, soit la réponse contient l’URL dans une structure JSON, selon la solution DRM que vous utilisez.
+Votre serveur de droit ou de storefront demande un jeton de licence au serveur ExpressPlay approprié, uniquement après avoir vérifié auprès de vos propres systèmes back-end pour déterminer si l’utilisateur spécifique est autorisé à regarder le contenu demandé. La réponse renvoyée par la demande de jeton de licence est soit une URL prête à l’emploi pour le serveur de licences, soit la réponse contient l’URL dans une structure JSON, selon la solution DRM que vous utilisez.
 
 >[!NOTE]
 >
 >La demande de jeton de licence ne peut pas être effectuée à partir du client lui-même :
->1. Les droits doivent être contrôlés dans un environnement de confiance ; et
->1. L&#39;authentificateur de client doit être tenu secret.
+>1. les droits doivent être vérifiés dans un environnement de confiance ; et
+>1. L’authentificateur client doit être gardé secret.
 
+1. Effectuez la demande de jeton de licence.
 
-1. Demande de jeton de licence.
-
-   Dans le cas d’un scénario à début rapide, dans lequel vous souhaitez simplement vous assurer que les différents composants impliqués fonctionnent ensemble, vous pouvez utiliser [!DNL curl] pour effectuer votre demande de jeton de licence (au lieu d’obtenir une application en cours d’exécution et de tester les appels à partir de là). Par exemple :
+   Pour un scénario de démarrage rapide, dans lequel vous souhaitez simplement vous assurer que les différents composants impliqués fonctionnent ensemble, vous pouvez utiliser quelque chose comme [!DNL curl] pour effectuer votre demande de jeton de licence (plutôt que d’obtenir une application active et en cours d’exécution et de tester à partir de là). Par exemple :
 
    * Widevine :
 
@@ -66,9 +63,9 @@ Votre serveur de droits ou de stockage demandera un jeton de licence au serveur 
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   Notez que la réponse Widevine est une chaîne URL prête à l&#39;emploi.
+   Notez que la réponse de Widevine est une chaîne d’URL &quot;prête à l’emploi&quot;.
 
-   * PlayReady :
+   * PlayReady:
 
    ```
    curl "https://pr-gen.test.expressplay.com/hms/pr/token?customerAuthenticator= 
@@ -144,4 +141,4 @@ Votre serveur de droits ou de stockage demandera un jeton de licence au serveur 
    O1PqRkx59Q2q1s2cFNrqfml8Y3RQ
    ```
 
-   Notez que la réponse FairPlay est une chaîne URL prête à l’emploi.
+   Notez que la réponse FairPlay est une chaîne d’URL &quot;prête à l’emploi&quot;.

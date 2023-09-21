@@ -3,8 +3,7 @@ title: Notes de mise à jour de TVSDK 3.15 pour Android
 description: Les notes de mise à jour de TVSDK 3.15 pour Android décrivent les nouveautés ou les modifications, les problèmes résolus et connus et les problèmes d’appareil dans TVSDK Android 3.15
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5516'
 ht-degree: 0%
@@ -23,7 +22,6 @@ Le lecteur de référence Android est inclus avec Android TVSDK dans le réperto
 >
 >1. Téléchargez VideoHeartbeat.jar depuis [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (Bibliothèque VideoHeartbeat pour Android v2.0.0)
 >1. Extrayez VideoHeartbeat.jar dans le dossier libs/ .
-
 
 TVSDK pour Android offre de nombreuses améliorations de performances par rapport aux versions précédentes. Il offre une expérience d’affichage de haute qualité et comprend toutes les fonctionnalités de la version 1.4, à l’exception de la prise en charge de plusieurs CDN.
 
@@ -69,15 +67,15 @@ Cette version était axée sur la résolution des principaux problèmes des clie
 
 * **Diffusion sécurisée via HTTPS** - Android TVSDK 3.9 a introduit les fonctionnalités de diffusion sécurisées via HTTPS pour diffuser du contenu en toute sécurité avec une échelle et des performances inégalées.
 
-   Pour activer la diffusion sécurisée via HTTPS, une nouvelle API a été introduite dans `NetworkConfiguration` classe .
+  Pour activer la diffusion sécurisée via HTTPS, une nouvelle API a été introduite dans `NetworkConfiguration` classe .
 
-   `public void setForceHTTPS (boolean value)`
+  `public void setForceHTTPS (boolean value)`
 
-   `public boolean getIsForceHTTPS()`
+  `public boolean getIsForceHTTPS()`
 
 **Android TVSDK 3.8**
 
-* **Prise en charge de la fonction Pré-défilement avec la fonction Ad-Break partielle** - Grâce à cette amélioration, TVSDK 3.8 prend en charge les publicités preroll avec la fonctionnalité de coupure publicitaire partielle (PABI).
+* **Prise en charge de la fonction de prédéploiement avec coupure publicitaire partielle** - Grâce à cette amélioration, TVSDK 3.8 prend en charge les publicités preroll avec la fonctionnalité de coupure publicitaire partielle (PABI).
 
 La publicité preroll, si elle est disponible, est lue, puis le contenu est lu à partir du point d’exécution qui imite l’expérience de la télévision en direct.
 
@@ -85,7 +83,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
 * Pour le contenu du test de version large, une nouvelle API `setMediaDrmCallback` dans la classe DRMManager est exposée pour remplacer l’implémentation par défaut de l’interface MediaDrmCallback .
 
-   `public static void setMediaDrmCallback(MediaDrmCallback callback)`
+  `public static void setMediaDrmCallback(MediaDrmCallback callback)`
 
 * Correction d’une erreur AppCrash pour le non-traitement. `MediaPlayerEvent.ITEM_UPDATED` en couche C++ (Android 64 bits).
 
@@ -97,7 +95,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
 * **Résolution de publicités juste à temps** - TVSDK 3.5 supprime la prise en charge des publicités lues de la chronologie.
 
-* **Prise en charge activée de la lecture hors ligne** - Avec la lecture hors ligne, les utilisateurs peuvent désormais télécharger du contenu vidéo sur leurs appareils et le regarder lorsqu’ils ne sont pas connectés. Pour plus d’informations, reportez-vous à la section &quot;[Lecture hors ligne avec Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf).&quot;
+* **Prise en charge activée de la lecture hors ligne** - Avec la lecture hors ligne, les utilisateurs peuvent désormais télécharger du contenu vidéo sur leurs appareils et le regarder lorsqu’ils ne sont pas connectés. Pour plus d’informations, voir &quot;[Lecture hors ligne avec Android](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_3.5.pdf).&quot;
 
 **Version 3.4**
 
@@ -138,7 +136,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 
    * `int getAdRequestTimeout()`
 
-* **Activation de la lecture des diffusions avec le codec audio AC3/EAC3**
+* **Lecture activée des diffusions avec le codec audio AC3/EAC3**
 
    * `void alwaysUseAC3OnSupportedDevices(boolean val)` in `MediaPlayer` class
 
@@ -153,7 +151,7 @@ La publicité preroll, si elle est disponible, est lue, puis le contenu est lu �
 * **TVSDK 3.0 prend en charge les flux de codage vidéo haute efficacité (HEVC).**
 
 * **Juste à temps - Résolution des publicités plus proches des marqueurs publicitaires**
-La résolution différée des publicités résout désormais chaque coupure publicitaire indépendamment. Auparavant, la résolution des publicités était une approche en deux étapes : les pré-roulements ont été résolus avant le début de la lecture et tous les créneaux horaires mid/post-roll combinés après le démarrage de la lecture. Grâce à cette fonctionnalité améliorée, chaque coupure publicitaire est désormais résolue à un moment spécifique avant le point de repère publicitaire.
+La résolution différée des publicités résout désormais chaque coupure publicitaire indépendamment. Auparavant, la résolution de la publicité était une approche en deux étapes : les preroll étaient résolus avant le début de la lecture et tous les créneaux mid/post-roll combinés après le démarrage de la lecture. Grâce à cette fonctionnalité améliorée, chaque coupure publicitaire est désormais résolue à un moment spécifique avant le point de repère publicitaire.
 
 >[!NOTE]
 >
@@ -165,13 +163,13 @@ Modes de signal `SERVER_MAP` et `MANIFEST_CUES` sont prises en charge.
 
 Pour plus d’informations, voir [Guide du programmeur Android TVSDK 3.0](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) lors des modifications des API et des événements.
 
-* **Mise à jour `targetSdkVersion` vers la dernière version**
+* **Mis à jour `targetSdkVersion` vers la dernière version**
 
-Mise à jour `targetSdkVersion` de 19 à 27 pour un bon fonctionnement.
+Mis à jour `targetSdkVersion` de 19 à 27 pour un bon fonctionnement.
 
 * **Placement.Type getPlacementType() est désormais une méthode sur l’interface TimelineMarker**
 
-   Cette méthode renvoie un type d’emplacement de Placement.Type.PRE_ROLL, Placement.Type.MID_ROLL ou Placement.Type.POST_ROLL. Si une coupure publicitaire n’est pas résolue, la méthode getDuration() de l’interface TimelineMarker renvoie 0.
+  Cette méthode renvoie un type d’emplacement de Placement.Type.PRE_ROLL, Placement.Type.MID_ROLL ou Placement.Type.POST_ROLL. Si une coupure publicitaire n’est pas résolue, la méthode getDuration() de l’interface TimelineMarker renvoie 0.
 
 **Version 2.5.6.**
 
@@ -179,7 +177,7 @@ Mise à jour `targetSdkVersion` de 19 à 27 pour un bon fonctionnement.
 
 * **Activation de l’audio en arrière-plan**
 
-   Pour activer la lecture audio lorsque l’application passe du premier plan à l’arrière-plan, l’application doit appeler `enableAudioPlaybackInBackground` API de MediaPlayer avec la valeur true en tant qu’argument lorsque le lecteur est à l’état PRÉPARÉ.
+  Pour activer la lecture audio lorsque l’application passe du premier plan à l’arrière-plan, l’application doit appeler `enableAudioPlaybackInBackground` API de MediaPlayer avec la valeur true en tant qu’argument lorsque le lecteur est à l’état PRÉPARÉ.
 
 * **alwaysUseAudioOutputLatency(valeur booléenne) dans la classe MediaPlayer**
 
@@ -194,8 +192,8 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 
 * **Insertion de coupure publicitaire partielle**
 
-   Expérience de type télévision consistant à se joindre au milieu d’une publicité sans déclencher le suivi pour la publicité visionnée partiellement.\
-   Exemple : L’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Cette coupure intervient 10 secondes dans la seconde publicité.
+  Expérience de type télévision consistant à se joindre au milieu d’une publicité sans déclencher le suivi pour la publicité visionnée partiellement.\
+  Exemple : l’utilisateur se joint au milieu (à 40 secondes) d’une coupure publicitaire de 90 secondes composée de trois publicités de 30 secondes. Cette coupure intervient 10 secondes dans la seconde publicité.
 
    * La deuxième publicité est lue pendant la durée restante (20 secondes), suivie de la troisième publicité.
 
@@ -203,11 +201,11 @@ TVSDK annule désormais le téléchargement du segment en cours, si nécessaire,
 
 * **Chargement sécurisé des publicités par HTTPS**
 
-   Adobe Primetime offre une option pour demander le premier appel au serveur de publicités en temps réel et à CRS sur https.
+  Adobe Primetime offre une option pour demander le premier appel au serveur de publicités en temps réel et à CRS sur https.
 
 * **Ajout d’AdSystem et d’un ID créatif aux requêtes CRS**
 
-   Maintenant, incluez `AdSystem` et `CreativeId` comme nouveaux paramètres dans les requêtes 1401 et 1403.
+  Maintenant, incluez `AdSystem` et `CreativeId` comme nouveaux paramètres dans les requêtes 1401 et 1403.
 
 * **API setEncodeUrlForTracking dans la classe NetworkConfiguration supprimée** car les caractères dangereux d’une URL doivent être codés.
 
@@ -217,30 +215,30 @@ Android TVSDK v2.5.4 propose les mises à jour et modifications suivantes de l�
 
 * Modifications de la valeur par défaut pour `WebViewDebbuging`
 
-   `WebViewDebbuging` est définie sur `Fals`e par défaut. Pour l’activer, appelez `setWebContentsDebuggingEnabled(true)` dans l’application.
+  `WebViewDebbuging` est définie sur `Fals`e par défaut. Pour l’activer, appelez `setWebContentsDebuggingEnabled(true)` dans l’application.
 
 * **Mise à niveau de la version OpenSSL et Curl**
 
-   Mise à jour de libcurl vers la version 7.57.0 et OpenSSL vers la version 1.0.2k.
+  Mise à jour de libcurl vers la version 7.57.0 et OpenSSL vers la version 1.0.2k.
 
 * Accès au niveau de l’application pour l’objet de réponse VAST
 
-   Introduction d’une nouvelle API `NetworkAdInfo::getVastXml()` qui donne accès à l’objet de réponse VAST à l’application.
+  Introduction d’une nouvelle API `NetworkAdInfo::getVastXml()` qui donne accès à l’objet de réponse VAST à l’application.
 
 **Version 2.5.3**
 
 Android TVSDK v2.5.3 propose les mises à jour et modifications suivantes de l’API.
 
-* Tous les clients TVSDK qui utilisent CRS sont encouragés à mettre à niveau leurs applications avec TVSDK 2.5.3.85 ou version ultérieure sur Android. Il s’agira d’un remplacement direct de la mise en oeuvre de l’application existante. Après la mise à niveau de TVSDK, recherchez les demandes d’URL créatives CRS dans un outil proxy (par exemple : Charles) et confirmez que le nom d’hôte et la version du chemin d’accès se reflètent comme dans l’exemple de structure d’URL ci-dessous.
+* Tous les clients TVSDK qui utilisent CRS sont encouragés à mettre à niveau leurs applications avec TVSDK 2.5.3.85 ou version ultérieure sur Android. Il s’agira d’un remplacement direct de la mise en oeuvre de l’application existante. Après la mise à niveau de TVSDK, recherchez les demandes d’URL créatives CRS dans un outil de proxy (ex : Charles) et vérifiez que le nom et la version de l’hôte dans le chemin d’accès se reflètent comme dans l’exemple de structure d’URL ci-dessous.
 
-   `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
+  `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
-* Agent utilisateur TVSDK personnalisable : nous avons ajouté de nouvelles API pour personnaliser les agents utilisateur.
+* Agent utilisateur de TVSDK personnalisable : nous avons ajouté de nouvelles API pour personnaliser les agents utilisateurs.
 
    * `setCustomUserAgent(String value)`
    * `getCustomUserAgent()`
 
-* Partagez des cookies entre l’application Android et TVSDK : Android TVSDK prend désormais en charge l’accès aux cookies entre la couche JAVA (stockée dans CookieStore de l’application Android) et la couche C++ TVSDK. Désormais, il est possible de définir et/ou modifier les cookies dans la couche C++ native, car ils seront exposés au magasin de cookies Java.
+* Partager des cookies entre l’application Android et TVSDK : Android TVSDK prend désormais en charge l’accès aux cookies entre la couche JAVA (stockée dans CookieStore de l’application Android) et la couche C++ TVSDK. Désormais, il est possible de définir et/ou de modifier les cookies dans la couche C++ native, car ils seront exposés au magasin de cookies Java.
 
 * Modifications des API :
 
@@ -250,13 +248,13 @@ Android TVSDK v2.5.3 propose les mises à jour et modifications suivantes de l�
 
    * Une nouvelle API est ajoutée à `NetworkConfiguration::set/ getEncodedUrlForTracking` pour forcer le codage des caractères dangereux.
 
-   * Une nouvelle API est ajoutée à `NetworkConfiguration::getNetworkDownVerificationUrl()` pour définir une URL de vérification réseau en cas de basculement.
+   * Une nouvelle API est ajoutée à `NetworkConfiguration::getNetworkDownVerificationUrl()` pour définir une URL de vérification du réseau en cas de basculement.
 
    * Une nouvelle propriété est ajoutée à `TextFormat::treatSpaceAsAlphaNum` qui définissent si l’espace doit être traité comme alphanumérique lors de l’affichage des légendes.
 
 * Changements dans `SizeAvailableEvent`. Auparavant, `getHeight()` et `getWidth()` méthodes de `SizeAvailableEvent` dans la version 2.5.2, utilisé pour renvoyer la hauteur et la largeur d’image, qui ont été renvoyées par le format multimédia. Désormais, elle renvoie respectivement la hauteur et la largeur de sortie renvoyées par le décodeur.
 
-* Changements du comportement de la mise en mémoire tampon : Le comportement de la mise en mémoire tampon est modifié. Le développeur de l’application reste au responsable de ce qu’il souhaite faire en cas de mémoire tampon vide. La version 2.5.3 utilise la taille de la mémoire tampon de lecture en cas de vide de la mémoire tampon.
+* Changements du comportement de mise en mémoire tampon : le comportement de mise en mémoire tampon est modifié. Le développeur de l’application reste au responsable de ce qu’il souhaite faire en cas de mémoire tampon vide. La version 2.5.3 utilise la taille de la mémoire tampon de lecture en cas de vide de la mémoire tampon.
 
 **Version 2.5.2**
 
@@ -266,7 +264,7 @@ Android TVSDK v2.5.2 propose des correctifs de bogues importants et quelques mod
 
 Nouvelles fonctionnalités importantes publiées dans Android 2.5.1.
 
-* **Améliorations des performances -** La nouvelle architecture TVSDK 2.5.1 apporte un certain nombre d’améliorations de performances. Sur la base des statistiques d’une étude d’évaluation tierce, la nouvelle architecture offre une réduction de 5 fois le temps de démarrage et de 3,8 fois moins d’images perdues que la moyenne du secteur :
+* **Améliorations des performances -** La nouvelle architecture TVSDK 2.5.1 apporte un certain nombre d’améliorations de performances. Sur la base des statistiques d’une étude d’évaluation tierce, la nouvelle architecture offre une réduction de 5 fois le temps de démarrage et de 3,8 fois moins d’images perdues par rapport à la moyenne du secteur :
 
 * **Instant on pour VOD et live -** Lorsque vous activez l’instantané, TVSDK s’initialise et met en mémoire tampon le média avant le début de la lecture. Comme vous pouvez lancer plusieurs instances MediaPlayerItemLoader simultanément en arrière-plan, vous pouvez mettre en mémoire tampon plusieurs flux. Lorsqu’un utilisateur modifie le canal et que la diffusion a été mise en mémoire tampon correctement, la lecture du nouveau canal commence immédiatement. TVSDK 2.5.1 prend également en charge Instant On pour **live** flux également. Les diffusions en direct sont mises en mémoire tampon à nouveau lorsque la fenêtre active se déplace.
 
@@ -274,7 +272,7 @@ Nouvelles fonctionnalités importantes publiées dans Android 2.5.1.
 
 * **Téléchargement de segment partiel/sous-segmentation -** TVSDK réduit davantage la taille de chaque fragment afin de lancer la lecture dès que possible. Le fragment ts doit disposer d’un cadre clé toutes les deux secondes.
 
-* **Résolution publicitaire différée -** TVSDK n’attend pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues. Ceci s’applique aux flux VOD utilisés avec l’interface de ligne de commande. Les opérations telles que la recherche et le transfert rapide ne sont pas autorisées tant que la résolution de la publicité n’est pas terminée. Pour les diffusions en direct, cette fonctionnalité ne peut pas être activée pour la résolution de publicités au cours d’un événement en direct.
+* **Résolution publicitaire différée -** TVSDK n’attend pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues. Ceci s’applique aux flux VOD utilisés avec l’interface de ligne de commande. Les opérations telles que la recherche et le transfert rapide ne sont pas autorisées tant que la résolution de la publicité n’est pas terminée. Pour les diffusions en direct, cette fonctionnalité ne peut pas être activée pour la résolution de publicités pendant un événement en direct.
 
 * **Connexions réseau persistantes -** Cette fonctionnalité permet à TVSDK de créer et de stocker une liste interne de connexions réseau persistantes. Ces connexions sont réutilisées pour plusieurs requêtes, plutôt que d’ouvrir une nouvelle connexion pour chaque requête réseau, puis de la détruire par la suite. Cela augmente l’efficacité et réduit la latence du code de mise en réseau, ce qui entraîne des performances de lecture plus rapides.
 Lorsque TVSDK ouvre une connexion, il demande au serveur de saisir *keep-alive* connexion. Certains serveurs peuvent ne pas prendre en charge ce type de connexion, auquel cas TVSDK revient à établir une connexion pour chaque demande. En outre, même si les connexions persistantes sont activées par défaut, TVSDK dispose désormais d’une option de configuration qui permet aux applications de désactiver les connexions persistantes si nécessaire.
@@ -287,13 +285,13 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur de saisir *keep-alive* 
 
 * **Lecture de contenu MP4 -** Il n’est pas nécessaire de recoder les extraits MP4 courts pour qu’ils soient lus dans TVSDK.
 
-   >[!NOTE]
-   >
-   >Le changement ABR, la lecture de l’astuce, l’insertion de publicités, la liaison audio tardive et la sous-segmentation ne sont pas pris en charge pour la lecture MP4.
+  >[!NOTE]
+  >
+  >Le changement ABR, la lecture de l’astuce, l’insertion de publicités, la liaison audio tardive et la sous-segmentation ne sont pas pris en charge pour la lecture MP4.
 
 * **Lecture de la copie avec débit adaptatif (ABR) -** Cette fonctionnalité permet à TVSDK de basculer entre les diffusions iFrame en mode de lecture de l’astuce. Vous pouvez utiliser des profils non iFrame pour effectuer des opérations de lecture à des vitesses inférieures.
 
-* **Jeu de astuces lisser -** Ces améliorations améliorent l’expérience utilisateur :
+* **Lissage de la pièce -** Ces améliorations améliorent l’expérience utilisateur :
 
    * Sélection de débit et de débit d’image adaptatifs lors de la lecture de la astuce, en fonction de la bande passante et du profil de mémoire tampon
 
@@ -307,10 +305,9 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur de saisir *keep-alive* 
 
    * **Intégration de la facturation directe -** Cela envoie les mesures de facturation au serveur principal Adobe Analytics, qui est certifié par Adobe Primetime pour les diffusions utilisées par le client.
 
-   TVSDK collecte automatiquement les mesures, en conformité avec le contrat de vente client, afin de générer des rapports d’utilisation périodiques requis à des fins de facturation. Pour chaque événement de démarrage de flux, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour la collecte de données drm (selon la durée du flux facturable) à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client, ni ne les inclut dans celles-ci. Sur demande, ce rapport sur l’utilisation de la facturation est envoyé régulièrement aux clients. Il s’agit de la première phase de la fonctionnalité de facturation prenant uniquement en charge la facturation de l’utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
+  TVSDK collecte automatiquement les mesures, en conformité avec le contrat de vente client, afin de générer des rapports d’utilisation périodiques requis à des fins de facturation. Pour chaque événement de démarrage de flux, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour la collecte de données drm (selon la durée du flux facturable) à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère ni n’est inclus dans les suites de rapports Adobe Analytics ou dans les appels au serveur du client. Sur demande, ce rapport sur l’utilisation de la facturation est envoyé régulièrement aux clients. Il s’agit de la première phase de la fonctionnalité de facturation prenant uniquement en charge la facturation de l’utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation. Cette fonction est activée par défaut. Pour désactiver cette fonction, reportez-vous à l’exemple du lecteur de référence.
 
    * **Amélioration de la prise en charge du basculement -** Des stratégies supplémentaires ont été mises en oeuvre pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs d’hôtes, des fichiers de liste de lecture et des segments.
-
 
 * **Publicité**
 
@@ -324,20 +321,20 @@ Lorsque TVSDK ouvre une connexion, il demande au serveur de saisir *keep-alive* 
 
 * **SizeAvaliableEventListener**
 
-   * `getHeight()` et `getWidth()` méthodes de `SizeAvailableEvent` renverra désormais la sortie en hauteur et en largeur, respectivement. Le format d’affichage peut être calculé comme suit :
+   * `getHeight()` et `getWidth()` méthodes de `SizeAvailableEvent` renverra désormais respectivement la hauteur et la largeur. Le format d’affichage peut être calculé comme suit :
 
-      ```java
-      SizeAvailableEvent e;
-      DAR = e.getWidth()/ e.getHeight();
-      ```
+     ```java
+     SizeAvailableEvent e;
+     DAR = e.getWidth()/ e.getHeight();
+     ```
 
-      Le rapport d’aspect du stockage en termes de largeur de l’image et de hauteur de l’image peut également être utilisé pour calculer la largeur de l’image et la hauteur de l’image :
+     Le rapport d’aspect du stockage en termes de largeur de l’image et de hauteur de l’image peut également être utilisé pour calculer la largeur de l’image et la hauteur de l’image :
 
-      ```java
-      SAR = e.getSarWidth()/e.getSarHeight();
-      frameHeight = e.getHeight();
-      frameWidth = e.getWidth()/SAR;
-      ```
+     ```java
+     SAR = e.getSarWidth()/e.getSarHeight();
+     frameHeight = e.getHeight();
+     frameWidth = e.getWidth()/SAR;
+     ```
 
 * **Cookies**
 
@@ -377,7 +374,7 @@ Dans les tableaux de fonctionnalités ci-dessous, un &quot;Y&quot; indique que l
 | Lecture avec décalage | VOD + En direct | Y |
 | Lecture de la carte | VOD + En direct | Y |
 | Mouvement lent dans la lecture de la vidéo | VOD + En direct | Non pris en charge |
-| Lecture lisser de la marque (avec ABR) | VOD + En direct | Y |
+| Lecture de la case à cocher lissée (avec ABR) | VOD + En direct | Y |
 | Analyse d’ID3 | VOD + En direct | Y |
 | Blackout des publicités | VOD + En direct | Non pris en charge |
 | Instant activé | VOD + En direct | Non pris en charge |
@@ -504,7 +501,7 @@ Cette section présente un résumé du problème résolu dans la version TVSDK 3
 
 * ZD#33740 - TVSDK renvoie un avertissement inutile juste après la création d’un objet MediaPlayer et l’appel de replaceCurrentResource()
 
-   * Amélioration de la correction précédente en appelant Restaurer uniquement lorsque le lecteur est à l’état Suspendu
+   * Amélioration de la correction précédente en appelant Restaurer uniquement lorsque le lecteur est en état suspendu
 
 * ZD#36442 - Chaque nouvelle lecture déconnecte la session de débogage à distance, ce qui rend impossible le débogage.
 
@@ -520,7 +517,7 @@ Cette section présente un résumé du problème résolu dans la version TVSDK 3
 
 **Android TVSDK 2.5.6**
 
-* ZD #34992 - La langue est vide dans le sous-titrage codé.
+* ZD #34992 - La langue est vide dans le libellé codé.
 
    * Correction d’un cas où TVSDK n’analysait pas #EXT-X-MEDIA:TYPE=CLOSED-CAPTIONS du manifeste principal pour obtenir les détails du suivi de la légende.
 
@@ -532,7 +529,7 @@ Cette section présente un résumé du problème résolu dans la version TVSDK 3
 
    * Correction du cas où TVSDK effectuait des appels répétitifs même lorsque tous les profils étaient en panne (erreur 404).
 
-* ZD #31533 - Lecture audio sur Android après l’envoi de l’application en arrière-plan.
+* ZD #31533 - Lecture audio sur Android une fois l’application envoyée en arrière-plan.
 
    * Ajout `enableAudioPlaybackInBackground` API de MediaPlayer qui doit être appelée avec &quot;True&quot; en tant qu’argument (lorsque le lecteur est à l’état PRÉPARÉ) pour activer la lecture du contenu audio lorsque l’application est en arrière-plan.
 
@@ -546,7 +543,7 @@ Cette section présente un résumé du problème résolu dans la version TVSDK 3
 
    * Amélioration de la correction précédente en gérant le cas dans l’analyse XML où le problème était reproductible lorsque &quot;espace&quot; est avant le signe &quot;égal&quot; comme &lt;vast version=&quot;2.0&quot;>
 
-* ZD #29296 - Android : Ajoutez AdSystem et Creative ID aux requêtes CRS.
+* ZD #29296 - Android : ajoutez AdSystem et Creative ID aux demandes CRS.
 
    * Incluez désormais &quot;AdSystem&quot; et &quot;CreativeId&quot; comme nouveaux paramètres dans les requêtes 1401 et 1403.
 
@@ -568,7 +565,7 @@ Cette section présente un résumé du problème résolu dans la version TVSDK 3
 
 * ZD #33619 - Transfert rapide d’un contenu de liste de lecture en augmentation bloqué à l’état de mise en mémoire tampon près d’un point de vie.
 
-   * Traitement du cas lors du passage du point de vie en mode de lecture de l’astuce
+   * Traitement du cas lors du passage du point de vie en mode de lecture par astuces
 
 * ZD #34151 - Objets TimedMetadata dans l’ordre.
 
@@ -602,77 +599,77 @@ WebViewDebbuging est défini sur False par défaut. Pour activer le débogage, d
 
 * ZenDesk#33011 - La chronologie de la publicité n’est pas résolue en cas d’échec de la requête CRS.
 
-   Lorsqu’une requête CRS envoyée à une publicité échoue, la chronologie est résolue et les publicités restantes sont lues.
+  Lorsqu’une requête CRS envoyée à une publicité échoue, la chronologie est résolue et les publicités restantes sont lues.
 
 * ZenDesk#34528 - La résolution vidéo n’est pas mise à niveau au-delà de 640x360 sur le dongle de troisième génération de FireTV.
 
-   La résolution vidéo bascule en tant que débit binaire.
+  La résolution vidéo bascule en tant que débit binaire.
 
 * ZenDesk#33192 - AudioTrack possède un nom null lorsque track est récupéré via AudioUpdatedEventListener::onAudioUpdated.
 
-   Dans certains scénarios sur une étiquette FireTV, l’événement onAudioUpdate était déclenché lorsqu’il n’y avait aucune mise à jour audio réelle. Ce problème a été corrigé maintenant.
+  Dans certains scénarios sur une étiquette FireTV, l’événement onAudioUpdate était déclenché lorsqu’il n’y avait aucune mise à jour audio réelle. Ce problème a été corrigé maintenant.
 
 **Android TVSDK 2.5.3**
 
 * Zendesk#32216 - L’abonnement à la balise personnalisée TimedMetadata ne fonctionne pas.
 
-   Nous renvoyons les données ID3 sous la forme d’un tableau d’octets (pour prendre en charge les données APIC ou génériques) au client, alors que dans la version 1.4, nous renvoyons une chaîne. Le tableau d’octets ne gère pas le caractère terminé nul lui-même. Par conséquent, il présentait un caractère spécial au client. Ce problème est maintenant résolu.
+  Nous renvoyons les données ID3 sous la forme d’un tableau d’octets (pour prendre en charge les données APIC ou génériques) au client, alors que dans la version 1.4, nous renvoyons une chaîne. Le tableau d’octets ne gère pas le caractère terminé nul lui-même. Par conséquent, il présentait un caractère spécial au client. Ce problème est maintenant résolu.
 * Zendesk#32670 - Le lecteur ne tombe pas sur la liste de lecture redondante
 
-   Cela fonctionne correctement maintenant et setNetworkDownVerificationUrl fonctionne comme prévu.
+  Cela fonctionne correctement maintenant et setNetworkDownVerificationUrl fonctionne comme prévu.
 * Zendesk#32369 - La légende fermée affiche différentes couleurs d’ordures ou d’artefact.
 
-   Correction d’un problème lié aux problèmes CC dans le dernier build.
-* Zendesk#25590 - Amélioration : Boutique de cookies TVSDK ( C++ vers JAVA )
+  Correction d’un problème lié aux problèmes CC dans le dernier build.
+* Zendesk#25590 - Amélioration : magasin de cookies TVSDK ( C++ vers JAVA )
 
-   Android TVSDK prend désormais en charge l’accès aux cookies entre la couche JAVA (stockée dans CookieStore de l’application Android) et la couche C++ TVSDK.
+  Android TVSDK prend désormais en charge l’accès aux cookies entre la couche JAVA (stockée dans CookieStore de l’application Android) et la couche C++ TVSDK.
 * Zendesk#32252 - TVSDK_Android_2.5.2.12 ne semble pas avoir le correctif pour PTPLAY-20269
 
-   Ce problème a été corrigé et intégré à la branche 2.5.2.
-* Zendesk#31806 - Baguettes d&#39;Auditude lors de la PRÉPARATION
+  Ce problème a été corrigé et intégré à la branche 2.5.2.
+* Zendesk#31806 - Baguettes Auditude lors de la PRÉPARATION
 
-   Le lecteur était bloqué dans l’état Préparation car le fichier xml de réponse avait une balise vide. Le problème est maintenant résolu.
+  Le lecteur était bloqué dans l’état Préparation car le fichier xml de réponse avait une balise vide. Maintenant, le problème est résolu.
 * Zendesk#31727 - Les caractères de sous-titres non intégrés TVSDK 2.5 sont ignorés ou mal orthographiés.
 
-   Le problème est résolu et nous ne perdons aucun caractère pour l’orthographe.
+  Le problème est résolu et nous ne perdons aucun caractère pour l’orthographe.
 * Zendesk#31485 - DrmManager dans 2.5
 
-   Un problème s’est produit lors de la création de DrmManager via un nouveau DrmManager (contexte contextuel). Mise en oeuvre de la classe DRMService qui fournissait DRMManager.
+  Un problème s’est produit lors de la création de DrmManager via un nouveau DrmManager (contexte contextuel). Mise en oeuvre de la classe DRMService qui fournissait DRMManager.
 * Flux de résolution Zendesk#32794-1080P non lu sur Android
 
-   Nous avons modifié les méthodes SizeAvailableEvent et auparavant, getHeight() et getWidth() de SizeAvailableEvent dans la version 2.5 utilisées pour renvoyer la hauteur et la largeur d’image, qui étaient renvoyées par le format multimédia. Elle renvoie désormais la hauteur de sortie et la largeur de sortie respectivement renvoyées par le décodeur.
+  Nous avons modifié les méthodes SizeAvailableEvent et auparavant, getHeight() et getWidth() de SizeAvailableEvent dans la version 2.5 utilisées pour renvoyer la hauteur et la largeur d’image, qui étaient renvoyées par le format multimédia. Elle renvoie désormais la hauteur de sortie et la largeur de sortie respectivement renvoyées par le décodeur.
 * Le Flash Player Zendesk #19359 se bloque en raison de la position de l’attribut #EXT-X-FAXS-CM dans le manifeste de niveau défini.
 
-   La balise #EXT-X-FAXS-CM doit toujours apparaître sur la liste de lecture supérieure avant que chaque débit ou segment n’apparaisse dans la liste de lecture.
+  La balise #EXT-X-FAXS-CM doit toujours apparaître sur la liste de lecture supérieure avant que chaque débit ou segment n’apparaisse dans la liste de lecture.
 
 **Android TVSDK 2.5.2**
 
 * Zendesk#17305 Artefacts dans des sous-titres non opaques en arrière-plan.
 
-   La propriété setTextSpaceAsAlphaNum dans TextFormat est exposée. Par défaut, la propriété est False. Définissez la propriété sur True dans un client pour résoudre le problème d’espace sombre.
+  La propriété setTextSpaceAsAlphaNum dans TextFormat est exposée. Par défaut, la propriété est False. Définissez la propriété sur True dans un client pour résoudre le problème d’espace sombre.
 
 * L&#39;affichage Zendesk#25097 CC contient des artefacts visuels avec les paramètres CC.
 
-   La propriété setTextSpaceAsAlphaNum dans TextFormat est exposée. Par défaut, la propriété est False. Définissez la propriété sur True dans un client pour résoudre le problème d’espace sombre.
+  La propriété setTextSpaceAsAlphaNum dans TextFormat est exposée. Par défaut, la propriété est False. Définissez la propriété sur True dans un client pour résoudre le problème d’espace sombre.
 
 * Zendesk #31620 La chaîne de l’agent utilisateur sortant du lecteur TVSDK est tronquée.
 
-   La chaîne de l’agent utilisateur ne sera plus tronquée après 128 caractères.
+  La chaîne de l’agent utilisateur ne sera plus tronquée après 128 caractères.
 
-   La chaîne de version Adobe Primetime est ajoutée à l’agent utilisateur système.
+  La chaîne de version Adobe Primetime est ajoutée à l’agent utilisateur système.
 
 * Zendesk #30809 L’événement SEEK_END manquant empêche l’application de passer à un état de lecture.
 * La couleur &quot;cyan&quot; du sous-titrage codé Zendesk #30415 est désormais une nuance plus sombre de bleu (turquoise), par rapport aux versions précédentes de TVSDK Primetime.
 
-   La couleur passe de DarkCyan à Cyan.
+  La couleur est changée de DarkCyan en Cyan.
 
 * Zendesk #30727 Les publicités VOD ne sont pas téléchargées/résolues.
 
-   Dans VMAP XML s’il existe une balise VAST vide sans balise de fermeture explicite (&lt;/vast>&quot;) et sans caractère de saut de ligne après, le code XML VMAP n’est pas correctement analysé et les publicités peuvent ne pas être lues.
+  Dans VMAP XML s’il existe une balise VAST vide sans balise de fermeture explicite (&lt;/vast>&quot;) et sans caractère de saut de ligne après, le code XML VMAP n’est pas correctement analysé et les publicités peuvent ne pas être lues.
 
 **Android TVSDK 2.5.1**
 
-* Crash spécifique à l’appareil (Samsung Galaxy Tab 4) ; VOD DRM LBA avec Auditude et cliquez sur les publicités.
+* Blocage spécifique à l’appareil (Samsung Galaxy Tab 4) ; VOD DRM LBA avec Auditude et clic sur les publicités.
 * VHL - Des appels de pulsation incorrects sont envoyés lors du démarrage du contenu à partir d’un décalage.
 * Lors de la lecture des publicités VPAID, les appels de pulsation VHL pour l’événement:type:la publicité de lecture est manquante.
 * Après être passé à l’état COMPLETE, le lecteur revient à l’état LECTURE avec SKIP adBreakPolicy pour les publicités preroll.
@@ -751,7 +748,7 @@ Cette version présente les problèmes suivants :
 * La lecture peut être bloquée lorsque la recherche porte sur les contenus audio de liaison tardive.
 * Par intermittence, les sous-titres webVTT peuvent devenir désynchronisés pour le contenu LIVE.
 * Par intermittence, la lecture rapide de quelques images peut être vue après la sortie d’une coupure publicitaire.
-* Parfois, une erreur 303 est générée pour les coupures publicitaires de l’outil Tripple Wrapper, même si des publicités sont lues.
+* Parfois, une erreur 303 est générée pour les coupures publicitaires Tripple Wrapper, même si des publicités sont lues.
 
 **Android TVSDK 2.5.2**
 
@@ -777,5 +774,5 @@ Cette version de TVSDK présente les problèmes suivants :
 * [Javadoc Android TVSDK pour référence API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [Document API TVSDK Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Chaque classe Java possède une classe C++ correspondante et la documentation C++ contient plus de documents explicatifs que les Javadocs. Reportez-vous donc à la documentation C++ pour une compréhension plus approfondie de l’API Java.
 * [Guide de migration de TVSDK 1.4 vers 2.5 pour Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)
-* Pour gérer les scénarios d’activation/de désactivation d’écran, reportez-vous à la section `Application_Changes_for_Screen_On_Off.pdf` inclus dans la version.
+* Pour gérer les scénarios d’activation/de désactivation d’écran, voir `Application_Changes_for_Screen_On_Off.pdf` inclus dans la version.
 * Consultez la documentation d’aide complète à l’adresse [Formation et assistance pour Adobe Primetime](https://helpx.adobe.com/support/primetime.html) page.

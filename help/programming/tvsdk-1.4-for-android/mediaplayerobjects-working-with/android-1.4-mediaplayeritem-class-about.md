@@ -1,26 +1,23 @@
 ---
-description: L’objet MediaPlayer représente votre lecteur multimédia. Un MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
-title: A propos de la classe MediaPlayerItem
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’objet MediaPlayer représente votre lecteur multimédia. Un élément MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
+title: À propos de la classe MediaPlayerItem
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
 
 ---
 
+# À propos de la classe MediaPlayerItem{#about-the-mediaplayeritem-class}
 
-# A propos de la classe MediaPlayerItem{#about-the-mediaplayeritem-class}
+L’objet MediaPlayer représente votre lecteur multimédia. Un élément MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
 
-L’objet MediaPlayer représente votre lecteur multimédia. Un MediaPlayerItem représente l’audio ou la vidéo sur votre lecteur.
+Une fois la ressource multimédia chargée, TVSDK crée une instance de `MediaPlayerItem` pour fournir un accès à cette ressource.
 
-Une fois qu’une ressource multimédia a été chargée, TVSDK crée une instance de la classe `MediaPlayerItem` afin de fournir l’accès à cette ressource.
+La variable `MediaResource` représente une requête émise par la couche d’application à la variable `MediaPlayer` pour charger le contenu.
 
-`MediaResource` représente une requête émise par la couche d&#39;application à l&#39;instance `MediaPlayer` pour charger le contenu.
-
-`MediaPlayer` résout la ressource média, charge le fichier manifeste associé et analyse le manifeste. Il s&#39;agit de la partie asynchrone du processus de chargement des ressources. L&#39;instance `MediaPlayerItem` est générée après la résolution de la ressource, et cette instance est une version résolue d&#39;une `MediaResource`. TVSDK permet d’accéder à l’instance `MediaPlayerItem` nouvellement créée par `MediaPlayer.CurrentItem`
+La variable `MediaPlayer` résout la ressource multimédia, charge le fichier de manifeste associé et analyse le manifeste. Il s’agit de la partie asynchrone du processus de chargement des ressources. La variable `MediaPlayerItem` est générée une fois la ressource résolue, et cette instance est une version résolue d’une `MediaResource`. TVSDK permet d’accéder au `MediaPlayerItem` instance par `MediaPlayer.CurrentItem`
 
 >[!TIP]
 >
->Vous devez attendre que la ressource soit chargée correctement avant d&#39;accéder à l&#39;élément du lecteur multimédia.
-
+>Vous devez attendre que la ressource soit chargée avant d’accéder à l’élément du lecteur multimédia.

@@ -1,13 +1,12 @@
 ---
 title: Présentation pour les programmeurs
 description: Présentation pour les programmeurs
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
 
 ---
-
 
 # Présentation Des Programmeurs {#programmers-overview}
 
@@ -33,7 +32,7 @@ L’authentification Adobe Primetime pour TV Everywhere permet de arbitrer en to
 
 ![](assets/user-ent-mediatedby-authn.png)
 
-*Figure : Droits utilisateur médiatisés par l’authentification Adobe Primetime*
+*Figure : Droit des utilisateurs avec authentification Adobe Primetime*
 
 L’authentification Adobe Primetime joue le rôle de proxy dans les échanges avec les distributeurs multicanaux participants, de sorte que vous puissiez présenter à vos visionneuses une interface intersite cohérente. L’authentification Adobe Primetime vous permet également de fournir aux visionneuses l’authentification et l’autorisation de connexion unique (SSO). L’authentification et l’autorisation sont suivies pour tous les services participants, de sorte qu’un abonné n’ait pas à se reconnecter après sa première authentification sur son propre système.
 
@@ -44,7 +43,7 @@ L’authentification Adobe Primetime joue le rôle de proxy dans les échanges a
 
 L’application de visionnage de contenu du programmeur interagit avec l’authentification Adobe Primetime à l’aide du composant client Access Enabler ou des services web RESTful de l’API sans client (pour les appareils non compatibles avec le web tels que les téléviseurs intelligents, les consoles de jeux, les décodeurs, etc.). L’activateur d’accès s’exécute sur le système de l’utilisateur, où il facilite tous les workflows de droits.  Le composant Accéder à l’activateur est téléchargé depuis son site d’hébergement à l’Adobe lorsque les clients accèdent à votre site et demandent du contenu protégé.  Les serveurs d’authentification Adobe Primetime hébergent les services web RESTful utilisés dans la solution sans client.
 
-L’authentification Adobe Primetime gère les processus de droits réels tout en fournissant des primitives que vous utilisez pour :
+L’authentification Adobe Primetime gère les workflows de droits réels tout en fournissant des primitives que vous utilisez pour :
 
 * Définissez votre identité. (Le programmeur est le &quot;demandeur&quot; dans le flux de droits d’authentification Adobe Primetime.)
 * Authentifiez un utilisateur avec un MVPD particulier.  (Le MVPD est le &quot;fournisseur d’identité&quot; ou &quot;IdP&quot; dans le flux de droits d’authentification Adobe Primetime.)
@@ -60,7 +59,7 @@ L’objectif de l’authentification Adobe Primetime est de créer une méthode 
 
 ## Présentation des jetons {#understanding-tokens}
 
-La solution de droits d’authentification Adobe Primetime se concentre sur la génération de données spécifiques créées à la fin des workflows d’authentification et d’autorisation. Ces données sont appelées jetons. Les jetons ont une durée de vie limitée ; une fois qu’ils expirent, les jetons doivent être réémis en réinitialisant les workflows d’authentification et d’autorisation.
+La solution de droits d’authentification Adobe Primetime se concentre sur la génération de données spécifiques créées à la fin des workflows d’authentification et d’autorisation. Ces données sont appelées jetons. Les jetons ont une durée de vie limitée. Lorsqu’ils expirent, les jetons doivent être réémis par le réinitialisation des workflows d’authentification et d’autorisation.
 
 Pour plus d’informations sur les jetons, reportez-vous aux sections suivantes :
 
@@ -73,32 +72,32 @@ Pour plus d’informations sur les jetons, reportez-vous aux sections suivantes 
 
 Trois types de jetons sont émis lors des workflows d’authentification et d’autorisation. Les jetons AuthN et AuthZ sont de &quot;longue durée&quot;, ce qui assure la continuité de l’expérience de visionnage de l’utilisateur. Le jeton multimédia est un jeton de courte durée qui fournit une assistance pour les bonnes pratiques du secteur afin de prévenir la fraude par le biais de l’extraction de flux. Les programmeurs spécifient les valeurs de durée de vie (TTL) pour chaque type de jeton en fonction des accords conclus avec les MVPD. Les programmeurs décident d’une valeur TTL qui convient le mieux à votre entreprise et à vos clients.
 
-* **Jeton AuthN** (&quot;De longue durée&quot;) : Lors d’une authentification réussie, l’authentification Adobe Primetime crée un jeton AuthN associé à l’appareil demandeur et un identifiant unique global (GUID).
+* **Jeton AuthN** (&quot;Longue durée&quot;) : Une fois l’authentification réussie, l’authentification Adobe Primetime crée un jeton AuthN associé à l’appareil demandeur et un identifiant unique global (GUID).
    * L’authentification Adobe Primetime envoie le jeton AuthN à l’activateur d’accès, qui le met en cache de manière sécurisée sur le système du client.  Bien que le jeton AuthN soit présent et non expiré, il est disponible pour toutes les applications qui utilisent l’authentification Adobe Primetime. L’activateur d’accès utilise le jeton AuthN pour le flux d’autorisation.
    * À tout moment, un seul jeton AuthN est mis en cache. Chaque fois qu’un nouveau jeton AuthN est émis et qu’un ancien existe déjà, l’authentification Adobe Primetime remplace le jeton mis en cache.
-* **Jeton AuthZ** (&quot;De longue durée&quot;) : Une fois l’autorisation effectuée, l’authentification Adobe Primetime crée un jeton AuthZ associé à l’appareil demandeur et à une ressource protégée spécifique.  La ressource protégée est identifiée par un identifiant de ressource unique.
+* **Jeton AuthZ** (&quot;Longue durée&quot;) : une fois l’autorisation effectuée, l’authentification Adobe Primetime crée un jeton AuthZ associé à l’appareil demandeur et une ressource protégée spécifique.  La ressource protégée est identifiée par un identifiant de ressource unique.
    * L’authentification Adobe Primetime envoie le jeton AuthZ à l’activateur d’accès, qui le met en cache de manière sécurisée sur le système local. L’activateur d’accès utilise ensuite le jeton AuthZ pour créer le jeton de média de courte durée utilisé pour l’accès réel à l’affichage.
    * A tout moment, un seul jeton AuthZ par ressource est mis en cache. L’authentification Adobe Primetime peut mettre en cache plusieurs jetons AuthZ, à condition qu’ils soient associés à différentes ressources. Chaque fois qu’un nouveau jeton AuthZ est émis et qu’un ancien existe déjà pour la même ressource, l’authentification Adobe Primetime remplace le jeton mis en cache.
-* **Jeton de média** (&quot;De courte durée&quot;) : Access Enabler utilise le jeton AuthZ pour générer une courte durée (par défaut : 7 minutes) Jeton de média. Il s’agit du moment où une requête de lecture réussie est considérée comme ayant eu lieu.
+* **Jeton de média** (&quot;De courte durée&quot;) : Access Enabler utilise le jeton AuthZ pour générer un jeton multimédia de courte durée (par défaut : 7 minutes). Il s’agit du moment où une requête de lecture réussie est considérée comme ayant eu lieu.
    * Avant de permettre l’accès à la ressource protégée, votre serveur multimédia doit utiliser un composant d’authentification Adobe Primetime, le vérificateur de jeton multimédia, pour valider le jeton multimédia.
-   * Comme le jeton multimédia n’est pas lié à l’appareil, sa durée de vie est beaucoup plus courte (par défaut : 7 minutes) par rapport aux jetons AuthN et AuthZ de longue durée.
+   * Comme le jeton multimédia n’est pas lié à l’appareil, sa durée de vie est nettement plus courte (par défaut : 7 minutes) que celle des jetons AuthN et AuthZ de longue durée.
    * Le jeton multimédia de courte durée est limité à une utilisation unique et n’est jamais mis en cache. Elle est récupérée à partir du serveur d’authentification Adobe Primetime chaque fois qu’une API d’autorisation est appelée.
 
 ### Stockage des jetons {#token-storage}
 
 Access Enabler stocke les jetons de longue durée (AuthN et AuthZ) dans des emplacements spécifiques à son environnement :
 
-* **Flash 10.1** (ou supérieur) : Les jetons de longue durée sont stockés sous la forme d’objets partagés locaux.
-* **HTML5**: Les jetons de longue durée sont conservés en toute sécurité dans le magasin local du navigateur HTML5.
-* **iOS**: Les jetons de longue durée sont stockés sur un tableau de bord persistant, où ils sont accessibles par d’autres applications clientes d’authentification Adobe Primetime.
-* **Android**: Les jetons de longue durée sont stockés dans un fichier de base de données partagé, où ils sont accessibles par d’autres applications clientes d’authentification Adobe Primetime.
-* **Appareils API sans client**: Les jetons sont stockés sur les serveurs d’authentification Primetime.
+* **Flash 10.1** (ou supérieur) : les jetons de longue durée sont stockés sous la forme d’objets partagés locaux.
+* **HTML5**: les jetons de longue durée sont conservés en toute sécurité dans le magasin local du navigateur HTML5.
+* **iOS**: les jetons de longue durée sont stockés sur un tableau de bord persistant, où ils sont accessibles par d’autres applications clientes d’authentification Adobe Primetime.
+* **Android**: les jetons de longue durée sont stockés dans un fichier de base de données partagé, où ils sont accessibles par d’autres applications clientes d’authentification Adobe Primetime.
+* **Appareils API sans client**: les jetons sont stockés sur les serveurs d’authentification Primetime.
 
 ### Sécurité des jetons {#token-security}
 
 Le serveur d’authentification Adobe Primetime signe numériquement tous les jetons de longue durée à l’aide de l’identifiant de l’appareil (dérivé des caractéristiques matérielles de l’appareil). La signature numérique diffère de la manière dont elle est générée, protégée et validée selon l’environnement :
 
-* **Flash 10.1** (ou version ultérieure) : l’identifiant de l’appareil repose sur les informations d’identification de l’appareil, un certificat unique émis par le serveur Adobe Individualization. Cette sécurité équivaut à la technologie DRM de FAXS. Cette validation côté serveur compare l’identifiant unique de l’appareil dans le jeton avec les informations d’identification de l’appareil (communication sécurisée entre l’authentification Flash Player et Adobe Primetime). Les informations d’identification du périphérique identifient également la version du client FAXS et la version de Flash Player (ou AIR) à laquelle il a été émis. La liaison de l’appareil est plus forte qu’avec HTML5. Par conséquent, la durée de vie (TTL) des jetons est généralement plus longue avec Flash.
+* **Flash 10.1** (ou version ultérieure) : l’identifiant de l’appareil repose sur les informations d’identification de l’appareil, un certificat unique émis par le serveur Adobe Individualization. Cette sécurité équivaut à la technologie DRM de FAXS. Cette validation côté serveur compare l’identifiant unique de l’appareil dans le jeton avec les informations d’identification de l’appareil (communication sécurisée entre l’authentification Flash Player et Adobe Primetime). Les informations d’identification de l’appareil identifient également la version du client FAXS et la version de Flash Player (ou AIR) à laquelle il a été émis. La liaison de l’appareil est plus forte qu’avec HTML5. Par conséquent, la durée de vie (TTL) des jetons est généralement plus longue avec Flash.
 * **HTML5** - L’appareil est personnalisé côté client. Il utilise les caractéristiques disponibles par le biais de JavaScript pour produire un ID de pseudo-appareil qui inclut les versions du navigateur et du système d’exploitation, une adresse IP et un GUID de cookie du navigateur (identifiant unique global). Cet identifiant d’appareil de jeton est comparé à l’identifiant pseudo-appareil actuel de l’appareil. L’adresse IP pouvant changer lors d’une utilisation normale, même au cours d’une même session, l’authentification Adobe Primetime stocke les jetons HTML5 à deux emplacements : localStorage et sessionStorage. Si l’IP change et que le jeton sessionStorage est toujours valide, la session est conservée. Avec HTML5, la liaison de l’appareil n’est pas aussi forte. Par conséquent, la durée de vie des jetons est généralement plus courte que celle des Flashs.
 * **Clients natifs** (iOS et Android) - Les jetons de longue durée contiennent des informations d’individualisation des identifiants d’appareil natifs et sont donc liés à l’appareil demandeur. Les demandes d’authentification et d’autorisation sont envoyées via HTTPS et les informations d’identification de l’appareil sont numériquement signées par la bibliothèque Access Enabler avant de les envoyer aux serveurs principaux. Côté serveur, les informations d’identifiant de l’appareil sont validées par rapport à sa signature numérique associée.
 * **Clients API sans client** - La solution d’API sans client dispose de son ensemble de protocoles de sécurité qui impliquent la signature numérique de tous les appels d’API. Les jetons générés pendant les flux de droits sont stockés de manière sécurisée sur les serveurs d’authentification Adobe Primetime.
@@ -133,7 +132,7 @@ L’organigramme suivant présente le processus global de confirmation des droit
 
 Les étapes suivantes présentent un exemple du flux d’authentification Adobe Primetime.  Il s’agit de la partie du processus de droit dans laquelle un programmeur détermine si l’utilisateur est un client valide d’un MVPD.  Dans ce scénario, l’utilisateur est un abonné valide à un MVPD.  L’utilisateur tente d’afficher du contenu protégé à l’aide d’une application de Flash du programmeur :
 
-1. L’utilisateur accède à la page web du programmeur, qui charge l’application de Flash du programmeur et les composants Access Enabler de l’authentification Adobe Primetime sur la machine de l’utilisateur. L’application de Flash utilise Access Enabler pour définir l’identification du programmeur avec l’authentification Adobe Primetime, et l’authentification Adobe Primetime prime l’activation d’accès avec des données de configuration et d’état pour ce programmeur (le &quot;demandeur&quot;). L’activateur d’accès doit recevoir ces données du serveur avant d’effectuer tout autre appel API. Note technique : le programmeur définit son identité avec le `setRequestor()` méthode; pour plus d’informations, voir [Guide d’intégration de programmeur](/help/authentication/programmer-integration-guide-overview.md).
+1. L’utilisateur accède à la page web du programmeur, qui charge l’application de Flash du programmeur et les composants Access Enabler de l’authentification Adobe Primetime sur la machine de l’utilisateur. L’application de Flash utilise Access Enabler pour définir l’identification du programmeur avec l’authentification Adobe Primetime, et l’authentification Adobe Primetime prime l’activation d’accès avec des données de configuration et d’état pour ce programmeur (le &quot;demandeur&quot;). L’activateur d’accès doit recevoir ces données du serveur avant d’effectuer tout autre appel API. Remarque technique : le programmeur a défini son identité avec le `setRequestor()` ; pour plus d’informations, voir [Guide d’intégration de programmeur](/help/authentication/programmer-integration-guide-overview.md).
 1. Lorsque l’utilisateur tente d’afficher le contenu protégé du programmeur, l’application du programmeur présente à l’utilisateur une liste de MVPD, à partir de laquelle l’utilisateur sélectionne un fournisseur.
 1. L’utilisateur est redirigé vers un serveur d’authentification Adobe Primetime, où un [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) La requête pour le MVPD sélectionné par l’utilisateur est créée. Cette requête est envoyée en tant que requête d’authentification au nom du programmeur au MVPD. Selon le système du MVPD, le navigateur de l’utilisateur est alors redirigé vers le site du MVPD pour se connecter ou un iFrame de connexion est créé dans l’application du programmeur.
 1. Dans les deux cas (redirection ou iFrame), le MVPD accepte la demande et affiche sa page de connexion.
@@ -159,13 +158,13 @@ Les étapes suivantes se poursuivent à partir de la [Étapes d’authentificati
 
 La première étape de l’utilisation de l’authentification Adobe Primetime consiste à s’enregistrer auprès d’un Adobe ou auprès d’un partenaire autorisé par l’authentification Adobe Primetime.
 
-Lorsque vous vous inscrivez, vous fournissez la liste des domaines à partir desquels vous allez communiquer avec l’authentification Adobe Primetime. Par exemple, les domaines Turner Broadcasting System incluent tbs.com et tnt.tv en tant que domaines enregistrés pour l’authentification Adobe Primetime. Chacun de ces sites de contenu a accès à l’authentification Adobe Primetime et se voit attribuer son propre ID de demandeur (par exemple, &quot;SOC&quot; et &quot;TNT&quot;). Si vous décidez d’ajouter d’autres sites, vous devez informer l’Adobe des noms de domaine supplémentaires afin de les placer dans la liste des domaines autorisés et de leur attribuer des identifiants de demandeur supplémentaires.
+Lorsque vous vous inscrivez, vous fournissez une liste des domaines à partir desquels vous allez communiquer avec l’authentification Adobe Primetime. Par exemple, les domaines Turner Broadcasting System incluent tbs.com et tnt.tv en tant que domaines enregistrés pour l’authentification Adobe Primetime. Chacun de ces sites de contenu a accès à l’authentification Adobe Primetime et se voit attribuer son propre ID de demandeur (par exemple, &quot;SOC&quot; et &quot;TNT&quot;). Si vous décidez d’ajouter d’autres sites, vous devez informer l’Adobe des noms de domaine supplémentaires afin de les placer dans la liste des domaines autorisés et de leur attribuer des identifiants de demandeur supplémentaires.
 
 >[!WARNING]
 >
->Pendant que vous testez votre intégration, assurez-vous que votre serveur de test se trouve sur un domaine enregistré que vous avez l’intention d’utiliser en production. Les requêtes, même les requêtes de test, provenant de domaines non placés sur la liste autorisée sont ignorées. Par exemple, si vous avez demandé que domain.com soit utilisé en production, assurez-vous de déployer votre intégration de test sous domain.com, test.domaine.com et staging.domaine.com.
+>Pendant que vous testez votre intégration, assurez-vous que votre serveur de test se trouve sur un domaine enregistré que vous avez l’intention d’utiliser en production. Les requêtes, même les requêtes de test, provenant de domaines non placés sur liste blanche sont ignorées. Par exemple, si vous avez demandé domain.com à être utilisé en production, assurez-vous de déployer votre intégration de test sous domain.com, test.domain.com et staging.domain.com.
 >
->Les requêtes qui contiennent le nom d’utilisateur et / ou le mot de passe dans l’URL sont ignorées même si des domaines sont placés sur la liste autorisée. Exemple : `//username@registered-domain/`
+>Les requêtes qui contiennent le nom d’utilisateur et / ou le mot de passe dans l’URL sont ignorées même si les domaines sont placés sur liste blanche. Exemple : `//username@registered-domain/`
 
 L’identifiant du demandeur identifie de manière unique le client du programmeur dans toutes les communications avec le composant client Access Enabler de l’authentification Adobe Primetime. Toutes les données statiques d’authentification Adobe Primetime associées au programmeur sont associées à cet identifiant.
 
@@ -217,14 +216,13 @@ La communication entre Access Enabler et votre application web de page ou de lec
 >* L’autorisation utilise un échange de services web back-channel (serveur à serveur) entre l’authentification Adobe Primetime (le SP) et un MVPD (le IdP).
 
 
-
 #### 2b. Fournir Une Interface Utilisateur De Droit {#entitlement-ui}
 
 Vous fournissez votre propre interface utilisateur pour permettre à l’utilisateur d’accéder à votre contenu. Certains éléments, tels que le processus de connexion réel, sont fournis par le MVPD et certains éléments sont éventuellement disponibles dans le cadre de l’authentification Adobe Primetime. Au minimum, vous procédez comme suit :
 
 * **Mise en oeuvre d’une interface de sélection MVPD qui permet à un nouvel utilisateur d’identifier son MVPD et de se connecter pour la première fois**. Pour le développement, Access Enabler fournit une interface utilisateur de base qui donne au client le choix des MVPD et lance le processus de connexion. Pour la production, vous devez mettre en oeuvre votre propre boîte de dialogue Sélecteur MVPD . Certains MVPD redirigent vers leur propre site pour se connecter et d’autres requièrent l’affichage de leurs pages de connexion dans un iFrame. Vous devez mettre en oeuvre un rappel qui crée cet iFrame pour gérer les cas où le MVPD de l’utilisateur affiche sa page de connexion dans un iFrame.
-* **Identification du contenu protégé**. Le contenu protégé nécessite une autorisation d’accès. Votre interface doit indiquer quel contenu est protégé et quel contenu a été autorisé.  L’état d’autorisation est souvent indiqué avec les icônes &quot;déverrouillé&quot; et &quot;verrouillé&quot;.
-* **Afficher qu’un utilisateur est authentifié**. Vous devez indiquer l’état d’authentification d’un utilisateur comme faisant partie de tout moyen utilisé pour identifier le contenu protégé. Vous pouvez interroger Access Enabler pour déterminer si le client a déjà été authentifié.
+* **Identification du contenu protégé**. Le contenu protégé nécessite une autorisation d’accès. Votre interface doit indiquer le contenu protégé et le contenu autorisé.  L’état d’autorisation est souvent indiqué avec les icônes &quot;déverrouillé&quot; et &quot;verrouillé&quot;.
+* **Afficher qu’un utilisateur est authentifié**. Vous devez indiquer l’état d’authentification d’un utilisateur comme faisant partie de tous les moyens que vous utilisez pour identifier le contenu protégé. Vous pouvez interroger Access Enabler pour déterminer si le client a déjà été authentifié.
 
 #### 2c. Intégration du vérificateur de jeton multimédia {#int-media-token-ver}
 
@@ -256,7 +254,7 @@ Voici les différentes manières dont l’ID utilisateur est représenté dans l
 
 **En conclusion**
 
-* L’identifiant utilisateur MVPD est un identifiant unique persistant, mais généralement non garanti, qui est **généré à partir des MVPD et transmis à l’Adobe lors d’une authentification réussie.**. Il est généralement cohérent sur tous les réseaux, à quelques exceptions près.
+* L’identifiant utilisateur MVPD est un identifiant unique persistant, mais généralement non garanti, qui est **généré à partir des MVPD et transmis à Adobe lors d’une authentification réussie**. Il est généralement cohérent sur tous les réseaux, à quelques exceptions près.
 * L’identifiant utilisateur MVPD ne contient pas de PII et il ne s’agit PAS d’un numéro de compte. Il n’est pas nécessaire d’être exposé sous une forme chiffrée, car nous avons validé avec tous les MVPD qu’aucune PII n’est envoyée.
 
 

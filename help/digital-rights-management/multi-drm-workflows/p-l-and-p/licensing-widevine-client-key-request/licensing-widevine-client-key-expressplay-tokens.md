@@ -1,20 +1,18 @@
 ---
-description: Vous pouvez générer des jetons Expressplay pour leur contenu chiffré en envoyant des demandes de jeton au serveur de jetons Expressplay approprié.
+description: Vous pouvez générer des jetons Expressplay pour leur contenu chiffré en envoyant des requêtes de jeton au serveur de jeton Expressplay approprié.
 title: Jetons Expressplay
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
 # Jetons Expressplay {#expressplay-tokens}
 
-Vous pouvez générer des jetons Expressplay pour leur contenu chiffré en envoyant des demandes de jeton au serveur de jetons Expressplay approprié.
+Vous pouvez générer des jetons Expressplay pour leur contenu chiffré en envoyant des requêtes de jeton au serveur de jeton Expressplay approprié.
 
-Voici un exemple :
+Voici un exemple d’URL :
 
 ```
 https://wv-gen.service.expressplay.com/hms/wv/
@@ -25,7 +23,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-L’ID d’enregistrement de clé de chiffrement de contenu ou le CEKSID attribué au paramètre `kid` et la clé de chiffrement de contenu ou le CEK attribué au paramètre `contentKey` doivent correspondre à l’ID d’enregistrement de clé de chiffrement de contenu et à la clé de chiffrement de contenu utilisés pour le pack. Le texte suivant est un exemple de réponse du serveur de jetons :
+ID de stockage de la clé de chiffrement du contenu ou CEKSID attribué à la variable `kid` et la clé de chiffrement du contenu ou le CEK attribué à la variable `contentKey` doit correspondre à l’ID de stockage de la clé de chiffrement du contenu et à la clé de chiffrement du contenu utilisés pour le package. Le texte suivant est un exemple de réponse du serveur de jetons :
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +32,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-Vous pouvez alors
+Vous pouvez alors :
 
 * utiliser l’URL et la requête renvoyées comme URL du serveur de licences, ou
-* retirez la requête de l’URL et transmettez l’ExpressPlayToken séparément en tant qu’en-tête de POST HTTP.
+* Supprimez la requête de l’URL et transmettez séparément le jeton ExpressPlayToken en tant qu’en-tête de POST HTTP.

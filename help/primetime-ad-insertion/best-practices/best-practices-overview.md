@@ -1,22 +1,20 @@
 ---
-title: Meilleures pratiques
-description: Meilleures pratiques
+title: Bonnes pratiques
+description: Bonnes pratiques
 copied-description: true
-exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-# Meilleures pratiques {#best-practices}
+# Bonnes pratiques {#best-practices}
 
-Pour obtenir des performances optimales et une durée de début optimale pour vos flux vidéo, reportez-vous aux bonnes pratiques suivantes pour analyser et optimiser vos workflows d’annonces et de contenu.
+Pour des performances optimales et une durée de démarrage optimale de vos diffusions vidéo, reportez-vous aux bonnes pratiques suivantes pour analyser et optimiser vos workflows de contenu et de publicités.
 
-+ [Optimiser les temps de début vidéo](optimize-video-startup-time.md)
++ [Optimisation des heures de démarrage de la vidéo](optimize-video-startup-time.md)
 + [Analyse des performances](analyze-performance.md)
 + [Mise en cache HTTP](caching.md)
-+ [Optimiser les itinéraires et les protocoles](optimize-routes-protocols.md)
-+ [Appliquer les contraintes de résolution des publicités](apply-ad-resolution-constraints.md)
++ [Optimisation des itinéraires et des protocoles](optimize-routes-protocols.md)
++ [Application de contraintes de résolution d’annonce](apply-ad-resolution-constraints.md)

@@ -1,30 +1,28 @@
 ---
-description: Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par défaut.
-title: Mise en oeuvre d’un outil personnalisé de résolution de contenu/d’opportunités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez mettre en oeuvre vos programmes de résolution en fonction des programmes de résolution par défaut.
+title: Mise en oeuvre d’un outil de résolution de contenu/opportunité personnalisé
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre d’un outil de résolution de contenu/opportunité personnalisé {#implement-a-custom-opportunity-content-resolver}
 
-# Implémenter un outil de résolution de contenu/opportunité personnalisé {#implement-a-custom-opportunity-content-resolver}
-
-Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par défaut.
+Vous pouvez mettre en oeuvre vos programmes de résolution en fonction des programmes de résolution par défaut.
 
 <!--<a id="fig_CC41E2A66BDB4115821F33737B46A09B"></a>-->
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Développez un outil de résolution d&#39;annonces personnalisé en étendant la classe abstraite `PTContentResolver`.
+1. Développez un outil de résolution de publicités personnalisé en étendant la variable `PTContentResolver` classe abstraite.
 
-   `PTContentResolver` est une interface qui doit être implémentée par une classe de résolveur de contenu. Une classe abstraite portant le même nom est également disponible et traite automatiquement la configuration (en obtenant le délégué).
+   `PTContentResolver` est une interface qui doit être implémentée par une classe de résolveur de contenu. Une classe abstraite du même nom est également disponible et gère automatiquement la configuration (récupération du délégué).
 
    >[!TIP]
    >
-   >`PTContentResolver` est exposée à travers la  `PTDefaultMediaPlayerClientFactory` classe. Les clients peuvent enregistrer un nouveau résolveur de contenu en étendant la classe abstraite `PTContentResolver`. Par défaut, et à moins d&#39;être spécifiquement supprimé, un `PTDefaultAdContentResolver` est enregistré dans le `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` est exposé à l’aide de la fonction `PTDefaultMediaPlayerClientFactory` classe . Les clients peuvent enregistrer un nouveau résolveur de contenu en étendant la variable `PTContentResolver` classe abstraite. Par défaut, et, sauf suppression spécifique, une `PTDefaultAdContentResolver` est enregistré dans la variable `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,29 +50,30 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
    @end
    ```
 
-1. Implémentez `shouldResolveOpportunity` et renvoyez `YES` s&#39;il doit gérer le `PTPlacementOpportunity` reçu.
-1. Implémentez `resolvePlacementOpportunity`, qui début le chargement du contenu ou des publicités alternatif.
-1. Une fois les publicités chargées, préparez un `PTTimeline` contenant les informations sur le contenu à insérer.
+1. Mise en oeuvre `shouldResolveOpportunity` et revenir `YES` si elle doit gérer la réception `PTPlacementOpportunity`.
+1. Mise en oeuvre `resolvePlacementOpportunity`, qui commence à charger le ou les publicités de remplacement.
+1. Une fois les publicités chargées, préparez une `PTTimeline` avec les informations sur le contenu à insérer.
 
-       Voici quelques informations utiles sur les calendriers :
+       Voici quelques informations utiles sur les chronologies :
    
-   * Il peut y avoir plusieurs `PTAdBreak`s de types pre-roll, mid-roll et post-roll.
+   * Il peut exister plusieurs `PTAdBreak`s de types preroll, mid-roll et post-roll.
 
-      * Un `PTAdBreak` comporte les éléments suivants :
+      * A `PTAdBreak` possède les éléments suivants :
 
-         * `CMTimeRange` avec l&#39;heure et la durée de début de la coupure.
+         * A `CMTimeRange` avec l’heure de début et la durée de la coupure.
 
-            Il s’agit de la propriété range de `PTAdBreak`.
+           Défini comme propriété range de `PTAdBreak`.
 
-         * `NSArray` de  `PTAd`s.
+         * `NSArray` de `PTAd`s.
 
-            Il s’agit de la propriété ads de `PTAdBreak`.
-   * Un `PTAd` représente la publicité et chaque `PTAd` possède les éléments suivants :
+           Défini comme propriété ads de `PTAdBreak`.
 
-      * `PTAdHLSAsset` est défini comme la Principale propriété de l&#39;actif de la publicité.
-      * Vous pouvez créer plusieurs instances `PTAdAsset` en tant que publicités ou bannières cliquables.
+   * A `PTAd` représente la publicité, et chaque `PTAd` possède les éléments suivants :
 
-   Par exemple :
+      * A `PTAdHLSAsset` défini comme propriété principale de la publicité.
+      * Peut-être plusieurs `PTAdAsset` d’instances comme des annonces cliquables ou des bannières publicitaires.
+
+   Par exemple :
 
    ```
    NSMutableArray *ptBreaks = [[[NSMutableArray alloc] init] autorelease]; 
@@ -103,8 +102,8 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Appelez `didFinishResolvingPlacementOpportunity`, qui fournit `PTTimeline`.
-1. Enregistrez votre outil de résolution de contenu/publicités personnalisé dans la fabrique de lecteur de médias par défaut en appelant `registerContentResolver`.
+1. Appeler `didFinishResolvingPlacementOpportunity`, qui fournit la variable `PTTimeline`.
+1. Enregistrez votre programme de résolution de contenu/publicités personnalisé dans la fabrique de lecteurs multimédia par défaut en appelant `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
@@ -117,11 +116,11 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
    [[PTDefaultMediaPlayerFactory defaultFactory] registerContentResolver:[contentResolver autorelease]];
    ```
 
-1. Si vous avez mis en oeuvre un résolveur d’opportunités personnalisé, enregistrez-le dans la fabrique de lecteur de médias par défaut.
+1. Si vous avez mis en oeuvre un programme de résolution d’opportunités personnalisé, enregistrez-le dans la fabrique de lecteurs multimédia par défaut.
 
    >[!TIP]
    >
-   >Vous n&#39;avez pas besoin d&#39;enregistrer un résolveur d&#39;opportunités personnalisé pour enregistrer un résolveur de contenu/publicités personnalisé.
+   >Vous n’avez pas besoin d’enregistrer un résolveur d’opportunités personnalisé pour enregistrer un résolveur de contenu/publicités personnalisé.
 
    ```
    //Remove default opportunity resolver 
@@ -138,4 +137,4 @@ Vous pouvez mettre en oeuvre vos résolveurs en fonction des résolveurs par dé
 Lorsque le lecteur charge le contenu et qu’il est déterminé qu’il est de type VOD ou LIVE, l’un des événements suivants se produit :
 
 * Si le contenu est VOD, le programme de résolution de contenu personnalisé est utilisé pour obtenir la chronologie publicitaire de la vidéo entière.
-* Si le contenu est LIVE, le programme de résolution de contenu personnalisé est appelé chaque fois qu’une opportunité de placement (indice) est détectée dans le contenu.
+* Si le contenu est LIVE, le programme de résolution de contenu personnalisé est appelé chaque fois qu’une opportunité d’emplacement (point de repère) est détectée dans le contenu.

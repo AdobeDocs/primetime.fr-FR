@@ -1,7 +1,7 @@
 ---
 title: Affichage des rapports de partage de compte pour plusieurs programmeurs et canaux
 description: Affichage des rapports de partage de compte pour plusieurs programmeurs et canaux
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Pour afficher les statistiques de partage de compte d&#39;abonné pour plusieurs
 
 * [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *Figure : Rapport Tableau de bord pour plusieurs programmeurs*
+  *Figure : Rapport Tableau de bord pour plusieurs programmeurs*
 
 * [Utilisation générale](/help/AccountIQ/general-usage-reports.md)
 

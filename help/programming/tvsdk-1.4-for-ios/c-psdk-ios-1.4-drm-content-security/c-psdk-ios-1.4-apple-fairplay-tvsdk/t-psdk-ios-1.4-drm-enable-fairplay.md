@@ -1,7 +1,6 @@
 ---
-description: Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPlay, qui est la solution DRM d’Apple, dans vos applications TVSDK.
-title: Activation d’Apple FairPlay dans les applications TVSDK
-translation-type: tm+mt
+description: Vous pouvez mettre en oeuvre Apple FairPlay Streaming, qui est une solution DRM Apple, dans vos applications TVSDK.
+title: Activer Apple FairPlay dans les applications TVSDK
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '172'
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Activer Apple FairPlay dans les applications TVSDK{#enable-apple-fairplay-in-tvsdk-applications}
 
-Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPlay, qui est la solution DRM d’Apple, dans vos applications TVSDK.
+Vous pouvez mettre en oeuvre Apple FairPlay Streaming, qui est une solution DRM Apple, dans vos applications TVSDK.
 
 1. Créez votre chargeur de ressources client FairPlay en implémentant `PTAVAssetResourceLoaderDelegate`.
 
@@ -20,15 +19,15 @@ Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPl
 
    >[!NOTE]
    >
-   >Assurez-vous de suivre les instructions du *Guide du Programme de diffusion en flux continu FairPlay* ( *FairPlayStreaming_PG.pdf*), qui est inclus dans le [SDK du serveur FairPlay pour le développement d’une application compatible FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
+   >Veillez à suivre les instructions de la section *Guide du programme de diffusion en continu FairPlay* ( *FairPlayStreaming_PG.pdf*), qui est inclus dans [SDK du serveur FairPlay pour le développement d’une application tenant compte de FPS](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)).
 
-   La méthode `resourceLoader:shouldWaitForLoadingOfRequestedResource` est équivalente à celle de `AVAssetResourceLoaderDelegate`.
+   La variable `resourceLoader:shouldWaitForLoadingOfRequestedResource` équivaut à ce qui se trouve dans `AVAssetResourceLoaderDelegate`.
 
    >[!IMPORTANT]
    >
-   >Dans le scénario du serveur de licences ExpressPlay, pour lire le contenu, modifiez le modèle d’URL dans l’URL de demande de licence de serveur ExpressPlay FairPlay de `skd://` à `https://` (ou `https://`).
+   >Dans le scénario du serveur de licences ExpressPlay , pour lire le contenu, modifiez le modèle d’URL dans l’URL de demande de licence de serveur ExpressPlay à partir de `skd://` to `https://` (ou `https://`).
 
-1. Enregistrez le chargeur de ressources client *FairPlay* avec `registerPTAVAssetResourceLoader`.
+1. Enregistrez le *FairPlay* Customer Resource Loader avec `registerPTAVAssetResourceLoader`.
 
    ```
    PTFairPlayResourceLoader *resourceLoader =  
@@ -37,4 +36,4 @@ Vous pouvez mettre en oeuvre le module de diffusion en flux continu Apple FairPl
      registerPTAVAssetResourceLoader:resourceLoader];
    ```
 
-Si vous écrivez votre propre serveur de licences FairPlay ou si vous utilisez un serveur de licences FairPlay tiers, consultez le fournisseur de votre serveur de licences pour déterminer l’URL, la mise en forme et d’autres exigences de votre serveur de licences.
+Si vous avez écrit votre propre serveur de licences FairPlay ou si vous utilisez un serveur de licences FairPlay tiers, consultez le fournisseur de votre serveur de licences pour déterminer l’URL, le formatage et toute autre exigence de votre serveur de licences.

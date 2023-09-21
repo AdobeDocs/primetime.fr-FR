@@ -1,25 +1,22 @@
 ---
-title: Options de création de package
-description: Options de création de package
+title: Options de groupement
+description: Options de groupement
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
 
 ---
 
+# Options de groupement{#packaging-options}
 
-# Options de création de package{#packaging-options}
+De nombreuses options sont disponibles pour le contenu de l&#39;emballage. Vous pouvez spécifier les options de la variable `DRMParameters` et implémentez les classes qui peuvent s’afficher dans l’interface. Avec ces classes, vous pouvez définir des paramètres de signature et de clé et indiquer s’il faut chiffrer le contenu audio, le contenu vidéo ou les données de script. Pour découvrir comment ces fonctionnalités sont implémentées dans l’implémentation de référence, consultez les descriptions des options de ligne de commande Media Packager décrites dans la section *Utilisation des implémentations de référence DRM Adobe Primetime*. Ces options sont basées sur l’API Java et sont donc disponibles pour une utilisation par programmation.
 
-Vous disposez de nombreuses options pour le contenu d’emballage. Vous pouvez spécifier les options dans l&#39;interface `DRMParameters` et implémenter les classes qui peuvent l&#39;interface. Ces classes permettent de définir des paramètres de signature et de clé, ainsi que d’indiquer s’il faut chiffrer du contenu audio, du contenu vidéo ou des données de script. Pour voir comment ces solutions sont implémentées dans l’implémentation des références, voir les descriptions des options de ligne de commande Media Packager décrites dans *Utilisation des implémentations de référence DRM d’Adobe Primetime*. Ces options sont basées sur l’API Java et sont donc disponibles pour la programmation.
-
-Les options d’emballage incluent :
+Les options de conditionnement incluent :
 
 * Options de chiffrement (audio, vidéo, chiffrement partiel).
-* URL du serveur de licences utilisée par le client comme URL de base pour toutes les requêtes envoyées au serveur de licences
+* URL du serveur de licences utilisée par le client comme URL de base pour toutes les demandes envoyées au serveur de licences
 * Certificat de transport du serveur de licences
 * Certificat du serveur de licences, utilisé pour chiffrer le CEK
-* Informations d’identification de Packager pour la signature des métadonnées
-
+* Informations d’identification de Packager pour la signature de métadonnées

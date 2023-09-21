@@ -31,8 +31,8 @@ Pour accéder au produit Rapports d’utilisation de surveillance de la simultan
 
 | Nom | Description |
 |:---|:---|
-| principaux utilisateurs | nombre de comptes d’utilisateurs distincts ayant lancé au moins une session de diffusion en continu au cours de l’intervalle, ventilés par granularité temporelle |
-| principales sessions | nombre de sessions en continu ayant signalé une activité au cours de l’intervalle (il n’inclut pas les tentatives ayant échoué, les sessions ayant reçu une réponse de refus pour l’appel d’initialisation). |
+| active-users | nombre de comptes d’utilisateurs distincts ayant lancé au moins une session de diffusion en continu au cours de l’intervalle, ventilés par granularité temporelle |
+| active-sessions | nombre de sessions en continu ayant signalé une activité au cours de l’intervalle (il n’inclut pas les tentatives ayant échoué, les sessions ayant reçu une réponse de refus pour l’appel d’initialisation). |
 | started-sessions | nombre de sessions en continu démarrées dans l’intervalle |
 | completed-sessions | nombre de sessions en continu terminées au cours de l’intervalle (explicitement ou en raison du délai d’expiration) |
 | failed-tries | nombre de tentatives d’initialisation de session qui ont reçu une réponse de refus |
@@ -86,5 +86,5 @@ Le principal objectif de ce rapport est de vous aider à comprendre l’impact d
 | month | Mois de l’année (1-12) |
 | day | Jour du mois (1-31) |
 | niveau d’accès simultané | Représente n’importe quel **activité de flux qui a été approuvée lors de la phase d’initialisation de la session** pour un utilisateur afin de pouvoir observer combien de flux simultanés **ouvert** par un utilisateur et pour comprendre l’impact de l’application d’une certaine limite de simultanéité |
-| niveau d’activité | Représente n’importe quel **activité de diffusion (quel que soit son état : démarrée, principale, arrêtée, rejetée)** pour un utilisateur afin de pouvoir observer combien de flux simultanés un utilisateur a tenté d’ouvrir et de comprendre l’impact de l’application d’une certaine limite de simultanéité |
+| niveau d’activité | Représente n’importe quel **activité de diffusion (quel que soit son état : démarrée, active, arrêtée, rejetée)** pour un utilisateur afin de pouvoir observer combien de flux simultanés un utilisateur a tenté d’ouvrir et de comprendre l’impact de l’application d’une certaine limite de simultanéité |
 | mvpd | MVPD fourni lors de la gestion des sessions |

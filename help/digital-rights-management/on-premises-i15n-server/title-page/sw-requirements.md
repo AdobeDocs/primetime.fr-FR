@@ -2,26 +2,24 @@
 title: Configuration logicielle requise
 description: Configuration logicielle requise
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
-
 # Configuration logicielle requise {#software-requirements}
 
 * Tomcat 6
 * JDK 1.8
 
-## Diffusion de code / Contenu du package{#code-delivery-package-contents}
+## Diffusion du code / Contenu du package{#code-delivery-package-contents}
 
-Le package Adobe Primetime DRM On Premises Individualization Server contient les éléments suivants :
+Le package Adobe Primetime DRM On Premise Individualization Server contient les éléments suivants :
 
-* [!DNL flashaccess.war] - Le serveur d&#39;individualisation
-* [!DNL flashaccess-kgs.war] - Serveur de génération de clés en option
+* [!DNL flashaccess.war] - Le serveur d’individualisation
+* [!DNL flashaccess-kgs.war] - Serveur de génération de clés optionnel
 * [!DNL /shared] - Contient :
 
    * [!DNL adobe-flashaccess-certs.jar]
@@ -32,22 +30,22 @@ Le package Adobe Primetime DRM On Premises Individualization Server contient les
    * [!DNL libjsafe.so] (Linux)
    * [!DNL jsafe.dll] (Windows)
 
-* [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe d&#39;identification du serveur
-* [!DNL ROOT] - contient un  [!DNL crossdomain.xml] fichier
+* [!DNL adobe-flashaccess-i15n-setup.jar] - Utilitaire de chiffrement des mots de passe des informations d’identification du serveur
+* [!DNL ROOT] - contient une [!DNL crossdomain.xml] fichier
 
-* Fichiers cache ECI - Prétéléchargés
-* [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d&#39;un serveur de licences pour la prise en charge des individualisations sur site
-* [!DNL CreateMetadata.jar] - Utilitaire de création de métadonnées DRM sur site
-* [!DNL client_sample/] - Un dossier avec un extrait de code client
+* Fichiers cache de l’IFC - Prétéléchargés
+* [!DNL addIndivCert.py] - Script de mise à jour de la racine de confiance d’un serveur de licences pour prendre en charge les individualisations On Premise
+* [!DNL CreateMetadata.jar] - Utilitaire de création de métadonnées DRM On Premise
+* [!DNL client_sample/] - Dossier contenant un extrait de code client
 * Notes de mise à jour - Pour tout ajout de dernière minute à la documentation
 
-## Obtention des certificats du serveur d’individualisation{#obtain-individualization-server-certificates}
+## Obtention de certificats de serveur d’individualisation{#obtain-individualization-server-certificates}
 
-Pour utiliser le serveur d’individualisation sur site, vous devez d’abord obtenir deux informations d’identification numériques (certificats) :
+Pour utiliser le serveur d’individualisation On Premise, vous devez d’abord obtenir deux informations d’identification numériques (certificats) :
 
-* *Informations d&#39;identification*  de transport d&#39;individualisation - émises par l&#39;Adobe
-* *Informations d&#39;identification*  d&#39;autorité de certification d&#39;individualisation - émises par Symantec (VeriSign)
+* *Informations d’identification de transport d’individualisation* - émis par l’Adobe
+* *Informations d’identification de l’autorité de certification de l’individualisation* - émis par Symantec (VeriSign)
 
-Pour obtenir ces certificats, envoyez une demande via un ticket Zendesk à : [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+Pour obtenir ces certificats, soumettez une demande via un ticket Zendesk à : [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
 Notez que ces informations d’identification s’ajoutent aux informations d’identification requises pour l’exploitation d’un serveur de licences DRM Primetime.

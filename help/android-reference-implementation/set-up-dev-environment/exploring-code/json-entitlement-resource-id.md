@@ -1,18 +1,16 @@
 ---
-title: Objet JSON pour l'ID de ressource de droits
-description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne de texte simple.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Objet JSON pour l’ID de ressource de droit
+description: Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droit est une chaîne de texte simple.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# Objet JSON pour l’ID de ressource de droit {#json-object-for-entitlement-resource-id}
 
-# Objet JSON pour l&#39;ID de ressource de droits {#json-object-for-entitlement-resource-id}
-
-Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne de texte simple. Dans ce cas, l’ID de ressource est la chaîne &quot;resource&quot;.
+Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droit est une chaîne de texte simple. Dans ce cas, l’ID de ressource est la chaîne &quot;resource&quot;.
 
 ```
 "metadata" : { 
@@ -22,7 +20,7 @@ Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ress
 }
 ```
 
-Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droits est une chaîne mRSS codée en HTML.
+Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ressource de droit est une chaîne mRSS codée en HTML.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 
@@ -37,7 +35,7 @@ Le bloc de code suivant fournit un exemple d’objet JSON lorsque l’ID de ress
 </rss>
 ```
 
-La chaîne mRSS suivante est utilisée comme identifiant de ressource.
+La chaîne mRSS suivante est utilisée comme ID de ressource.
 
 ```
 "metadata" : { 

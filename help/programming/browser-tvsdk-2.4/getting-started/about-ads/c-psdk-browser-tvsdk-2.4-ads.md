@@ -1,20 +1,18 @@
 ---
-description: Lors de la lecture du contenu, le navigateur TVSDK peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource.
+description: Lorsque le contenu est en cours de lecture, le TVSDK du navigateur peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource .
 title: Publicités
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
 
 ---
 
+# Présentation {#ads-overview}
 
-# Aperçu {#ads-overview}
+Lorsque le contenu est en cours de lecture, le TVSDK du navigateur peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource .
 
-Lors de la lecture du contenu, le navigateur TVSDK peut afficher des publicités et transmettre des informations sur les publicités lors de la création de l’objet MediaResource.
-
-Vous pouvez éventuellement appeler la fonction `prepareToPlay` après avoir reçu `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Vous pouvez éventuellement appeler la fonction `prepareToPlay` fonction après réception `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -39,7 +37,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
 var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
 ```
 
-Le kit TVSDK du navigateur fournit également les événements suivants spécifiques aux annonces que vous pouvez utiliser dans vos gestionnaires de événements pour empêcher le transfert rapide du contenu en cours de lecture des publicités :
+Le navigateur TVSDK fournit également les événements spécifiques aux publicités suivants que vous pouvez utiliser dans vos gestionnaires d’événements pour empêcher le contenu de se déplacer rapidement lorsque des publicités sont lues :
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
@@ -68,4 +66,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Pour plus d’informations sur les `AuditudeSettings` requises, voir [Métadonnées d’insertion d’annonce](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
+Pour plus d’informations sur les `AuditudeSettings`, voir [Métadonnées d’insertion publicitaire](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).

@@ -1,20 +1,18 @@
 ---
-description: Cette section traite de la grammaire de l'entrée de configuration, met l'accent sur les options d'entrée valides et non valides et explique comment les champs facultatifs omis sont interprétés.
-title: Grammaire RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cette section décrit la grammaire de l’entrée de configuration, met l’accent sur les options de saisie valides et non valides et explique comment les champs facultatifs omis sont interprétés.
+title: RBOP Grammar
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
+# RBOP Grammar {#rbop-grammar}
 
-# Grammaire RBOP {#rbop-grammar}
+Cette section décrit la grammaire de l’entrée de configuration, met l’accent sur les options de saisie valides et non valides et explique comment les champs facultatifs omis sont interprétés.
 
-Cette section traite de la grammaire de l&#39;entrée de configuration, met l&#39;accent sur les options d&#39;entrée valides et non valides et explique comment les champs facultatifs omis sont interprétés.
-
-La grammaire de la protection de sortie basée sur la résolution est définie comme une séquence de règles, où chaque règle peut avoir plusieurs formulaires valides :
+La grammaire de protection de sortie basée sur la résolution est définie comme une séquence de règles, où chaque règle peut avoir plusieurs formulaires valides :
 
 ```
 Rule ::=       
@@ -32,9 +30,9 @@ AnotherRule ::=
 >
 >Pour améliorer la lisibilité de la grammaire, les propriétés suivantes ne sont pas reflétées dans la grammaire mais conservent la valeur true :
 
-1. L’ordre des paires définies dans les objets n’est pas fixe ; par conséquent, toute permutation des paires est valide.
+1. L’ordre des paires défini dans les objets n’est pas fixe. Par conséquent, toute permutation des paires est valide.
 
-   Par exemple, si nous avons défini un objet de ce type :
+   Par exemple, si nous avons défini un objet comme suit :
 
    ```
    {  
@@ -44,7 +42,7 @@ AnotherRule ::=
    }
    ```
 
-   ensuite, la structure suivante serait également considérée comme valide : =
+   la structure suivante serait également considérée comme valide : =
 
    ```
    {  
@@ -54,9 +52,9 @@ AnotherRule ::=
    }
    ```
 
-1. Pour chaque paire d’un objet, on suppose qu’il n’existe qu’une seule instance de cette paire dans une instance donnée d’un objet donné.
+1. Pour chaque paire au sein d’un objet, on suppose qu’il n’existe qu’une seule instance de cette paire dans une instance donnée d’un objet donné.
 
-   Par exemple, si nous avons défini un objet de ce type :
+   Par exemple, si nous avons défini un objet comme suit :
 
    ```
    {  
@@ -66,7 +64,7 @@ AnotherRule ::=
    }
    ```
 
-   l’instance suivante serait alors non valide, car il existe deux paires `foo` au sein du même objet :
+   l’instance suivante serait alors invalide, car il existe deux `foo` paires au sein du même objet :
 
    ```
    { 
@@ -76,7 +74,7 @@ AnotherRule ::=
    } 
    ```
 
-   De même, il comporte deux objets tels que :
+   De même, deux objets tels que :
 
    ```
    {  
@@ -98,13 +96,13 @@ AnotherRule ::=
 
    est valide, puisqu’il s’agit d’instances indépendantes du même objet.
 
-1. Pour les définitions où une ou plusieurs chaînes peuvent être sélectionnées, traitez les chaînes comme un ensemble, dans lequel les entrées de duplicata sont traitées comme une seule entrée. Par exemple, `["foo", "bar", "foo", "baz"]` équivaut à `["foo", "bar", "baz"]`
+1. Pour les définitions dans lesquelles une ou plusieurs chaînes peuvent être sélectionnées, traitez les chaînes comme un ensemble, dans lequel les entrées en double sont traitées comme une seule entrée. Par exemple : `["foo", "bar", "foo", "baz"]` équivaut à `["foo", "bar", "baz"]`
 
-1. Pour définir des nombres, un espace est utilisé entre les règles (par exemple, `Digit Digits`), mais aucun espace de ce type ne doit être utilisé lors de l&#39;application de la règle.
+1. Pour définir des nombres, un espace est utilisé entre les règles (par exemple, `Digit Digits`), mais aucun espace de ce type ne doit être utilisé lors de l’application de la règle.
 
-   Par exemple, si nous exprimons le nombre *cent vingt-trois* par règle NonZeroInteger, il doit être exprimé sous la forme `123` plutôt que `1 2 3`, même si la règle contient un espace entre NonZeroDigit et Chiffres.
+   Par exemple, si nous exprimons le nombre *cent vingt trois* Selon la règle NonZeroInteger , elle doit être exprimée comme `123` plutôt que `1 2 3`, même si la règle contient un espace entre NonZeroDigit et Digits.
 
-1. Certaines règles autorisent plusieurs formulaires. Dans ce cas, les différents formulaires sont séparés par le caractère `'|'`.
+1. Certaines des règles autorisent plusieurs formulaires. Dans ce cas, les différents formulaires sont séparés par le `'|'` caractère.
 
    Par exemple, cette règle :
 
@@ -112,9 +110,9 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   signifie qu’une instance de `Foo` peut être remplacée par &quot;A&quot;, &quot;B&quot; ou &quot;C&quot;. Cela ne doit pas être confondu avec un formulaire qui s’étend sur plusieurs lignes ; c&#39;est une fonctionnalité qui permet de rendre les formulaires plus longs plus lisibles.
+   signifie qu’une instance de `Foo` peut être remplacé par &quot;A&quot;, &quot;B&quot; ou &quot;C&quot;. Cela ne doit pas être confondu avec un formulaire qui s’étend sur plusieurs lignes ; c’est une fonctionnalité qui rend les formulaires plus longs plus lisibles.
 
-## La grammaire {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
+## La Grammar {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
 ```
 PixelBasedOPConfig ::= 
@@ -233,29 +231,29 @@ NonZeroDigit ::=
     | 9
 ```
 
-## Sémantique : Configurations légales mais non valides {#section_709BE240FF0041D4A1B0A0A7544E4966}
+## Sémantique : configurations juridiques mais non valides {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-La rubrique *Exemple de configuration de protection de sortie* présentait une configuration valide ainsi que sa signification sémantique. La section précédente de *cette* rubrique présentait les règles de grammaire pour les configurations. Bien que la grammaire aide à assurer l&#39;exactitude syntaxique, il existe des configurations syntaxiquement légales qui ne sont pas sémantiquement correctes (c&#39;est-à-dire qu&#39;elles ne sont pas logiques). Cette section présente les configurations *syntaxiquement* légales, mais *sémantiquement* incorrectes. N&#39;oubliez pas que les exemples de cette section ont été réduits à la structure minimale nécessaire pour illustrer le scénario en discussion.
+La variable *Exemple de configuration de protection de sortie* La rubrique présentait une configuration valide ainsi que sa signification sémantique. La section précédente de *this* La rubrique présentait les règles de grammaire pour les configurations. Bien que la grammaire permette d&#39;assurer l&#39;exactitude syntaxique, il existe des configurations syntaxiquement légales qui ne sont pas sémantiquement correctes (c&#39;est-à-dire qu&#39;elles ne sont pas logiques). Cette section présente les configurations qui *syntaxique* légal, mais *sémantique* incorrect. Gardez à l’esprit que les exemples de cette section ont été réduits à la structure minimale nécessaire pour illustrer le scénario en cours de discussion.
 
-* Il n&#39;est pas valide de définir plusieurs contraintes de pixels avec le même nombre de pixels.
+* Il n’est pas valide de définir des contraintes de plusieurs pixels avec le même nombre de pixels.
 
-   ```
-   {  
-     "pixelConstraints":  
-       [  
-         { "pixelCount": 720 }  
-       ]  
-    }  
-   ```
+  ```
+  {  
+    "pixelConstraints":  
+      [  
+        { "pixelCount": 720 }  
+      ]  
+   }  
+  ```
 
 * Le nombre de pixels ne doit pas dépasser la résolution maximale spécifiée.
 
-   ```
-   { 
-     "maxPixel": 720, 
-     "pixelConstraints": 
-       [ 
-         {"pixelCount": 1080} 
-       ] 
-   } 
-   ```
+  ```
+  { 
+    "maxPixel": 720, 
+    "pixelConstraints": 
+      [ 
+        {"pixelCount": 1080} 
+      ] 
+  } 
+  ```

@@ -1,22 +1,20 @@
 ---
-title: Création d’une stratégie DRM à l’aide de l’API Java
-description: Création d’une stratégie DRM à l’aide de l’API Java
+title: Création d’une stratégie DRM avec l’API Java
+description: Création d’une stratégie DRM avec l’API Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
-# Création d’une stratégie DRM à l’aide de l’API Java {#creating-a-drm-policy-with-the-java-api}
+# Création d’une stratégie DRM avec l’API Java {#creating-a-drm-policy-with-the-java-api}
 
 Pour créer une stratégie DRM avec l’API Java :
 
 1. Configurez votre environnement de développement et incluez dans votre projet tous les fichiers JAR répertoriés dans [Configurez votre environnement de développement.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Créez un objet `com.adobe.flashaccess.sdk.policy.Policy` et spécifiez ses propriétés, notamment les droits, la durée de mise en cache des licences et la date de fin de la stratégie DRM.
+1. Créez un `com.adobe.flashaccess.sdk.policy.Policy` et spécifiez ses propriétés, notamment les droits, la durée de mise en cache des licences et la date de fin de la stratégie DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -51,7 +49,7 @@ Pour créer une stratégie DRM avec l’API Java :
    } 
    ```
 
-1. Sérialisez l’objet DRM `Policy` et stockez-le dans un fichier ou une base de données.
+1. Sérialisation du DRM `Policy` et stockez-la dans un fichier ou une base de données.
 
    ```java
    // Serialize the DRM policy  
@@ -65,4 +63,4 @@ Pour créer une stratégie DRM avec l’API Java :
    out.close(); 
    ```
 
-Voir [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] dans le répertoire Reference Implementation Command Line Tools [!DNL samples] pour connaître la source complète de cet exemple de code.
+Voir [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] dans les outils de ligne de commande de mise en oeuvre de référence [!DNL samples] pour la source complète de cet exemple de code.

@@ -1,14 +1,12 @@
 ---
 description: Ces classes vous permettent de personnaliser la journalisation.
 title: Classes de journalisation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
-
 
 # Classes de journalisation {#logging-classes}
 
@@ -24,7 +22,7 @@ Ces classes vous permettent de personnaliser la journalisation.
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogEntry.html" format="html" scope="external"> PTLogEntry</a> </td> 
-   <td colname="2" rowsep="0"> Classe qui définit un journal d'entrée et contient des informations sur un message de journal. </td> 
+   <td colname="2" rowsep="0"> Classe qui définit un journal d’entrée et contient des informations sur un message de journal. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
@@ -32,7 +30,7 @@ Ces classes vous permettent de personnaliser la journalisation.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocole. Méthodes requises pour implémenter une journalisation personnalisée pour TVSDK. </td> 
+   <td colname="2"> Protocole . Méthodes requises pour mettre en oeuvre un journal personnalisé pour TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>

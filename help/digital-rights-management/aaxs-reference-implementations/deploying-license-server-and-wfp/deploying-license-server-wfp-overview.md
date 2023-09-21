@@ -1,22 +1,20 @@
 ---
-title: Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle
-description: Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle
+title: Présentation du déploiement du serveur de licences et du module de dossiers de contrôle
+description: Présentation du déploiement du serveur de licences et du module de dossiers de contrôle
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
+# Présentation du déploiement du serveur de licences et du module de dossiers de contrôle {#deploying-the-license-server-and-watched-folder-packager-overview}
 
-# Présentation du déploiement du serveur de licences et du gestionnaire de dossiers de contrôle {#deploying-the-license-server-and-watched-folder-packager-overview}
+Copiez les fichiers WAR du serveur de licences dans Tomcat [!DNL webapps] répertoire . Si vous avez déjà déployé le fichier WAR, vous devrez peut-être supprimer manuellement les répertoires WAR décompressés ( [!DNL flashaccess], [!DNL edcws], et [!DNL flashaccess-packager] chez Tomcat [!DNL webapps] ). Pour empêcher Tomcat de décompresser des fichiers WAR, modifiez la variable [!DNL server.xml] dans le répertoire conf de Tomcat et définissez la variable `unpackWARs` Attribuer à `false`.
 
-Copiez les fichiers WAR du serveur de licences dans le répertoire [!DNL webapps] de Tomcat. Si vous avez déjà déployé le fichier WAR, vous devrez peut-être supprimer manuellement les répertoires WAR non compressés ( [!DNL flashaccess], [!DNL edcws] et [!DNL flashaccess-packager] dans le répertoire [!DNL webapps] de Tomcat). Pour empêcher Tomcat de décompresser les fichiers WAR, modifiez le fichier [!DNL server.xml] dans le répertoire conf de Tomcat et définissez l&#39;attribut `unpackWARs` sur `false`.
+Le fichier de propriétés ( [!DNL flashaccess-refimpl.properties]) doit se trouver sur le chemin d’accès aux classes pour que le serveur charge les propriétés. Copiez ce fichier dans un répertoire et mettez à jour le fichier avec les valeurs appropriées. Modifiez la variable [!DNL catalina.properties] dans le fichier Tomcat [!DNL conf] et ajoutez le répertoire contenant [!DNL flashaccess-refimpl.properties] à la fonction `shared.loader` . La variable [!DNL log4j.xml] pour configurer la journalisation, doit également se trouver sur le chemin d’accès aux classes (voir [!DNL resources\log4j.xml] par exemple).
 
-Le fichier de propriétés ( [!DNL flashaccess-refimpl.properties]) doit se trouver sur le chemin de classe pour que le serveur puisse charger les propriétés. Copiez ce fichier dans un répertoire et mettez à jour le fichier avec les valeurs appropriées. Modifiez le fichier [!DNL catalina.properties] dans le répertoire [!DNL conf] de Tomcat et ajoutez le répertoire contenant [!DNL flashaccess-refimpl.properties] à la propriété `shared.loader`. Le fichier [!DNL log4j.xml] pour configurer la journalisation doit également se trouver sur le chemin de classe (voir [!DNL resources\log4j.xml] pour un exemple).
+Le serveur d’implémentation de référence utilise plusieurs fichiers de certificat, fichiers de stratégie et autres ressources. Ces fichiers sont tous situés dans un seul dossier de ressources. Par défaut, le dossier de ressources est [!DNL C:\flashaccess-server-resources], mais cet emplacement peut être modifié dans [!DNL flashaccess-refimpl.properties]. Veillez à copier toutes les ressources requises vers cet emplacement avant de démarrer le serveur.
 
-Le serveur d’implémentation de référence utilise plusieurs fichiers de certificat, fichiers de stratégie et autres ressources. Ces fichiers se trouvent tous dans un dossier de ressources unique. Par défaut, le dossier de ressources est [!DNL C:\flashaccess-server-resources], mais cet emplacement peut être modifié dans [!DNL flashaccess-refimpl.properties]. Veillez à copier toutes les ressources requises à cet emplacement avant de démarrer le serveur.
-
-Pour début Tomcat et le serveur de licences, exécutez `catalina.bat start` à partir du répertoire [!DNL bin] de Tomcat.
+Pour démarrer Tomcat et le serveur de licences, exécutez `catalina.bat start` de Tomcat [!DNL bin] répertoire .

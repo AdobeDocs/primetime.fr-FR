@@ -2,19 +2,17 @@
 title: Mise en oeuvre de l’enregistrement de domaine anonyme
 description: Mise en oeuvre de l’enregistrement de domaine anonyme
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre de l’enregistrement de domaine anonyme{#implement-anonymous-domain-registration}
 
-# Mettre en oeuvre l&#39;enregistrement de domaine anonyme{#implement-anonymous-domain-registration}
-
-1. Créez une stratégie DRM qui spécifie que l&#39;enregistrement de domaine est requis.
-1. Spécifiez l’URL du serveur de domaine en tant que :
+1. Créez une stratégie DRM qui spécifie que l’enregistrement de domaine est requis.
+1. Spécifiez l’URL du serveur de domaine comme suit :
 
    ```
    https://[host:port]/flashaccess/domainserver/domainname/
@@ -22,7 +20,7 @@ ht-degree: 0%
 
 1. Rendre l’authentification anonyme obligatoire.
 
-   Dans votre fichier [!DNL .properties], définissez :
+   Dans votre [!DNL .properties] fichier, définissez :
 
    ```
    policy.domain.anonymous=true 

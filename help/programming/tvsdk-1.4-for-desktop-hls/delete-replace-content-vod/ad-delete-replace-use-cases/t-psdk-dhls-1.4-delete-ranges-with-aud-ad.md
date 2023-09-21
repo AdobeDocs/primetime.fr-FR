@@ -1,20 +1,18 @@
 ---
-description: Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
-title: Supprimer des plages avec l’annonce de prise de décision et Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Supprimez les périodes entre le début et la fin dans l’heure locale de la chronologie.
+title: Suppression de plages avec l’annonce de prise de décision publicitaire Primetime
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Suppression de plages avec l’annonce de prise de décision publicitaire Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Supprimer des plages avec Primetime et prise de décision et {#delete-ranges-with-primetime-ad-decisioning-ad}
+Supprimez les périodes entre le début et la fin dans l’heure locale de la chronologie.
 
-Supprimez les plages de temps entre le début et la fin dans localTime de la chronologie.
-
-Supprimez des plages avec une publicité Expression.
+Supprimez les plages avec une publicité Expression.
 
 ```
 {   
@@ -66,4 +64,3 @@ Supprimez des plages avec une publicité Expression.
     "id": "vod_003"
 }
 ```
-

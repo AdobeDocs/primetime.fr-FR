@@ -1,19 +1,17 @@
 ---
-title: Publicité Ajoutée
-description: Publicité Ajoutée
+title: Ajouter de la publicité
+description: Ajouter de la publicité
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# Ajouter de la publicité {#add-advertising}
 
-# Publicité d&#39;Ajoute {#add-advertising}
+Vous pouvez ajouter une fonctionnalité de publicité au lecteur en créant une `AdsManager` ou en utilisant la fabrique de manager.
 
-Vous pouvez ajouter des fonctionnalités de publicité au lecteur en créant une `AdsManager` ou en utilisant la fabrique de gestionnaires.
-
-* Pour créer un `AdsManager` :
-* Pour utiliser un `ManagerFactory` pour activer ou désactiver des publicités
+* Pour créer une `AdsManager`:
+* Pour utiliser une `ManagerFactory` pour activer ou désactiver des publicités

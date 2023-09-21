@@ -1,64 +1,62 @@
 ---
-description: Depuis le moment où l’instance MediaPlayer est créée jusqu’au moment où elle est terminée, cette instance se transition d’un état à l’autre.
+description: À partir du moment où l’instance MediaPlayer est créée et jusqu’au moment où elle est arrêtée, cette instance passe d’un état à l’autre.
 title: Cycle de vie et états de l’objet MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
 
-
 # Cycle de vie et états de l’objet MediaPlayer{#life-cycle-and-states-of-the-mediaplayer-object}
 
-Depuis le moment où l’instance MediaPlayer est créée jusqu’au moment où elle est terminée, cette instance se transition d’un état à l’autre.
+À partir du moment où l’instance MediaPlayer est créée et jusqu’au moment où elle est arrêtée, cette instance passe d’un état à l’autre.
 
-Voici quelques exemples :
+Voici les états possibles :
 
-* **IDLE** :  `MediaPlayerStatus.IDLE`
+* **IDLE**: `MediaPlayerStatus.IDLE`
 
-* **INITIALISATION** :  `MediaPlayerStatus.INITIALIZING`
+* **INITIALISATION**: `MediaPlayerStatus.INITIALIZING`
 
-* **INITIALISÉ** :  `MediaPlayerStatus.INITIALIZED`
+* **INITIALIZED**: `MediaPlayerStatus.INITIALIZED`
 
-* **PRÉPARATION** :  `MediaPlayerStatus.PREPARING`
+* **PRÉPARATION**: `MediaPlayerStatus.PREPARING`
 
-* **PRÉPARÉ** :  `MediaPlayerStatus.PREPARED`
+* **PRÉPARÉ**: `MediaPlayerStatus.PREPARED`
 
-* **LECTURE** :  `MediaPlayerStatus.PLAYING`
+* **LECTURE**: `MediaPlayerStatus.PLAYING`
 
-* **EN PAUSE** :  `MediaPlayerStatus.PAUSED`
+* **PAUSED**: `MediaPlayerStatus.PAUSED`
 
-* **RECHERCHE** :  `MediaPlayerStatus.SEEKING`
+* **RECHERCHE**: `MediaPlayerStatus.SEEKING`
 
-* **TERMINÉ** :  `MediaPlayerStatus.COMPLETE`
+* **TERMINER**: `MediaPlayerStatus.COMPLETE`
 
-* **ERREUR** :  `MediaPlayerStatus.ERROR`
+* **ERROR**: `MediaPlayerStatus.ERROR`
 
-* **PUBLIÉ** :  `MediaPlayerStatus.RELEASED`
+* **PUBLIÉ**: `MediaPlayerStatus.RELEASED`
 
 La liste complète des états est définie dans `MediaPlayerStatus`.
 
-Il est utile de connaître l’état du lecteur car certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple, `play` ne peut pas être appelé pendant l&#39;état IDLE. Elle doit être appelée après avoir atteint l’état PRÉPARÉ. L’état ERROR modifie également ce qui peut se passer ensuite.
+Connaître l’état du lecteur est utile, car certaines opérations ne sont autorisées que lorsque le lecteur se trouve dans un état particulier. Par exemple : `play` ne peut pas être appelé alors qu’il est à l’état IDLE. Il doit être appelé après avoir atteint l’état PRÉPARÉ . L’état ERROR modifie également ce qui peut se produire ensuite.
 
-Lorsqu’une ressource multimédia est chargée et lue, le lecteur se transition de la manière suivante :
+Lorsqu’une ressource multimédia est chargée et lue, le lecteur évolue comme suit :
 
 1. L’état initial est IDLE.
-1. Votre application appelle `MediaPlayer.replaceCurrentResource`, ce qui déplace le lecteur à l’état INITIALISATION.
-1. Si le navigateur TVSDK charge correctement la ressource, l’état devient INITIALISÉ.
-1. Votre application appelle `MediaPlayer.prepareToPlay` et l&#39;état devient PRÉPARATION.
-1. Le navigateur TVSDK prépare le flux média et début la résolution et l’insertion de publicités (si activé).
+1. Vos appels d’application `MediaPlayer.replaceCurrentResource`, qui déplace le lecteur à l’état INITIALISATION .
+1. Si le Browser TVSDK charge correctement la ressource, l’état devient INITIALIZED.
+1. Vos appels d’application `MediaPlayer.prepareToPlay`et l’état devient PRÉPARATION.
+1. Le navigateur TVSDK prépare le flux multimédia et lance la résolution de la publicité et l’insertion de publicités (s’il est activé).
 
-   Une fois cette étape terminée, les publicités sont insérées dans la chronologie ou la procédure publicitaire a échoué et l&#39;état du lecteur devient PRÉPARÉ.
-1. Lorsque votre application lit et interrompt le média, l’état passe de LECTURE à PAUSED.
+   Une fois cette étape terminée, les publicités sont insérées dans la chronologie ou la procédure de publicité a échoué, et l’état du lecteur passe à PRÉPARÉ.
+1. Lorsque votre application est lue et met le média en pause, l’état se déplace entre LECTURE et PAUSE.
 
    >[!TIP]
    >
-   >Lors de la lecture ou de la mise en pause, lorsque vous quittez la lecture, arrêtez le périphérique ou changez d’application, l’état est SUSPENDU et les ressources sont libérées. Pour continuer, restaurez le lecteur multimédia.
+   >Lors de la lecture ou de la mise en pause, lorsque vous quittez la lecture, arrêtez l’appareil ou changez d’application, l’état devient SUSPENDU et les ressources sont publiées. Pour continuer, restaurez le lecteur multimédia.
 
-1. Lorsque le lecteur atteint la fin du flux, l’état devient COMPLET.
-1. Lorsque votre application relâche le lecteur multimédia, l’état devient RELÂCHÉ.
+1. Lorsque le lecteur atteint la fin de la diffusion, l’état devient TERMINÉ.
+1. Lorsque votre application relâche le lecteur multimédia, l’état devient LIBÉRÉ.
 1. Si une erreur se produit pendant le processus, l’état devient ERROR.
 
 Voici une illustration du cycle de vie d’une instance MediaPlayer :
@@ -67,9 +65,9 @@ Voici une illustration du cycle de vie d’une instance MediaPlayer :
 
 ![](assets/player-state-transitions-diagram-android_1.2_web.png)
 
-Vous pouvez utiliser l’état pour fournir des commentaires à l’utilisateur sur le processus (par exemple, un analyseur en attendant le changement d’état suivant) ou pour suivre les étapes suivantes de lecture du média, par exemple attendre l’état approprié avant d’appeler la méthode suivante.
+Vous pouvez utiliser l’état pour fournir des commentaires à l’utilisateur sur le processus (par exemple, un compteur en attendant le changement d’état suivant) ou pour prendre les prochaines étapes de lecture du média, comme attendre l’état approprié avant d’appeler la méthode suivante.
 
-Par exemple :
+Par exemple :
 
 ```js
 function onStateChanged(state) { 
@@ -82,4 +80,3 @@ function onStateChanged(state) {
     } 
 } 
 ```
-

@@ -1,20 +1,18 @@
 ---
-description: La création de packages de contenu est le processus de préparation de contenu vidéo en vue d’une lecture sur le Web. La création de package comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents périphériques et navigateurs.
-title: Assemblage de votre contenu
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’assemblage de contenu est le processus de préparation du contenu vidéo en vue de la lecture sur le Web. Le groupement comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents appareils et navigateurs.
+title: Mettre en package votre contenu
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
 
 ---
 
+# Mettre en package votre contenu {#package-your-content}
 
-# compresser votre contenu {#package-your-content}
+L’assemblage de contenu est le processus de préparation du contenu vidéo en vue de la lecture sur le Web. Le groupement comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents appareils et navigateurs.
 
-La création de packages de contenu est le processus de préparation de contenu vidéo en vue d’une lecture sur le Web. La création de package comprend la transformation de la vidéo brute en fichiers manifestes et, éventuellement, le chiffrement du contenu à l’aide de différentes solutions DRM pour différents périphériques et navigateurs.
-
-Pour préparer votre contenu, vous pouvez utiliser Adobe Offline Packager ou d&#39;autres outils tels que le Packager Bento4 d&#39;ExpressPlay. Les Packagers préparent la vidéo pour la lecture (par exemple, fragmentation du fichier d’origine et placement de celui-ci dans un manifeste) et protègent la vidéo avec la solution DRM que vous avez choisie (PlayReady, Widevine, FairPlay, Access, etc.).:
+Pour préparer votre contenu, vous pouvez utiliser Adobe Offline Packager ou d’autres outils tels que le package Bento4 ExpressPlay. Les packages préparent la vidéo pour la lecture (par exemple, la fragmentation du fichier d’origine et sa mise dans un manifeste) et protègent la vidéo avec la solution DRM que vous avez choisie (PlayReady, Widevine, FairPlay, Access, etc.).:
 
 * [Adobe Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)
 * [Packagers ExpressPlay](https://www.expressplay.com/developer/packaging-tools/)
@@ -23,17 +21,17 @@ Pour préparer votre contenu, vous pouvez utiliser Adobe Offline Packager ou d&#
 
 ![](assets/pkg_lic_play_web.png)
 
-1. Empaquetez ou obtenez du contenu à utiliser pour tester votre configuration.
+1. Empaqueter ou obtenir un autre contenu à utiliser pour tester votre configuration.
 
-   L’un des points essentiels à retenir pour le pack est que l’ID de clé (ID de contenu) que vous utilisez dans cette étape du pack est le même que celui que vous devez fournir dans votre demande de jeton de licence ultérieure. L&#39;ID de clé est le seul élément qui identifie votre CEK (qui peut être stocké dans votre propre base de données de gestion des clés, ou stocké à l&#39;aide du [service d&#39;Enregistrement clé d&#39;ExpressPlay](https://www.expressplay.com/developer/key-storage/).
+   L’un des points essentiels à retenir pour le package est que l’ID de clé (ID de contenu) que vous utilisez dans cette étape de package est le même que celui que vous devez fournir dans votre demande de jeton de licence suivante. L’identifiant de clé est le seul élément qui identifie votre CEK (qui peut être stocké dans votre propre base de données de gestion des clés ou stocké à l’aide de [Service de stockage clé ExpressPlay](https://www.expressplay.com/developer/key-storage/).
 
    >[!NOTE]
    >
-   >Pour ceux qui connaissent bien l&#39;Accès aux Adobes, c&#39;est une différence importante dans le fonctionnement des différentes solutions. Dans Access, la clé de licence est incorporée dans les métadonnées DRM et transmise à l’aide du contenu protégé. Dans les systèmes Multi-DRM décrits ici, la licence réelle n&#39;est pas transmise, mais stockée en toute sécurité et obtenue via l&#39;ID de clé.
+   >Pour ceux qui connaissent bien Adobe Access, il s’agit d’une différence importante dans le fonctionnement des différentes solutions. Dans Access, la clé de licence est incorporée dans les métadonnées DRM et transmise avec le contenu protégé. Dans les systèmes multi-DRM décrits ici, la licence réelle n’est pas transmise, mais stockée en toute sécurité et obtenue via l’identifiant de clé.
 
 <!--<a id="example_52AF76B730174B79B6088280FCDF126D"></a>-->
 
-Voici un exemple d&#39;emballage utilisant Adobe Offline Packager for Widevine. L’outil Packager utilise un fichier de configuration (par exemple, [!DNL widevine.xml]) qui ressemble à ce qui suit :
+Voici un exemple de package utilisant Adobe Offline Packager pour Windows. Le Packager utilise un fichier de configuration (par exemple, [!DNL widevine.xml]), qui ressemble à ceci :
 
 ```
 <config> 
@@ -51,21 +49,21 @@ Voici un exemple d&#39;emballage utilisant Adobe Offline Packager for Widevine. 
 </config>
 ```
 
-* `in_path` - Cette entrée indique l&#39;emplacement de la vidéo source sur votre machine d&#39;emballage locale.
-* `out_type` - Cette entrée décrit le type de sortie emballée, dans ce cas DASH (pour la protection Widevine au format HTML5).
-* `out_path` - L&#39;emplacement sur la machine locale où vous voulez que votre sortie aille.
-* `drm_sys` - La solution DRM que vous incluez dans votre pack. Il s&#39;agira soit de `widevine`, `fairplay`, soit de `playready`.
+* `in_path` - Cette entrée indique l’emplacement de la vidéo source sur votre machine locale d’emballage.
+* `out_type` - Cette entrée décrit le type de la sortie empaquetée, dans ce cas, DASH (pour la protection Windows sur HTML5).
+* `out_path` - Emplacement sur l’ordinateur local sur lequel vous souhaitez que la sortie s’effectue.
+* `drm_sys` - La solution DRM que vous proposez. Cela sera soit `widevine`, `fairplay`, ou `playready`.
 
-* `frag_dur` et  `target_dur` sont des entrées de durée spécifiques à DASH relatives à la lecture vidéo.
+* `frag_dur` et `target_dur` sont des entrées de durée spécifiques à DASH relatives à la lecture vidéo.
 
-* `key_file_path` - Il s’agit de l’emplacement du fichier de licence sur votre machine de conditionnement qui sert de clé de chiffrement de contenu (CEK). Il s’agit d’une chaîne hexadécimale codée en base 64 et codée sur 16 octets.
-* `widevine_content_id` - Il s&#39;agit de &quot;boilerplate&quot; de Widevine ; c&#39;est toujours  `2a`. (Ne confondez pas ceci avec le `widevine_key_id`.)
+* `key_file_path` - Il s’agit de l’emplacement du fichier de licence sur votre ordinateur de package qui sert de clé de chiffrement de contenu (CEK). Il s’agit d’une chaîne hexadécimale de 16 octets codée en base 64.
+* `widevine_content_id` - Ceci est &quot;standard&quot; de Widevine ; il est toujours `2a`. (Ne confondez pas cela avec la variable `widevine_key_id`.)
 
-* `widevine_provider` - Pour nos besoins, toujours régler sur  `intertrust`.
+* `widevine_provider` - À nos fins, définissez toujours cette variable sur `intertrust`.
 
-* `widevine_key_id` - Identificateur de la licence que vous avez spécifiée dans l&#39; `key_file_path` entrée. En d’autres termes, cette méthode identifie la clé que vous utilisez pour chiffrer le contenu. Cet identifiant est une chaîne HEX de 16 octets que vous créez vous-même.
+* `widevine_key_id` - Il s’agit de l’identifiant de la licence que vous avez spécifiée dans la variable `key_file_path` entrée . En d’autres termes, ceci identifie la clé que vous utilisez pour chiffrer le contenu. Cet identifiant est une chaîne HEX de 16 octets que vous créez vous-même.
 
-Comme indiqué dans la [documentation de Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf), &quot;Il est recommandé de créer un fichier de configuration contenant les options courantes que vous souhaitez utiliser pour générer les sorties. Ensuite, créez la sortie en fournissant des options spécifiques sous forme d&#39;argument de ligne de commande.&quot; Dans ce cas, notre fichier de configuration est assez complet. Vous pouvez donc créer votre sortie comme suit :
+Comme indiqué dans la variable [Documentation sur Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf), &quot;Il est recommandé de créer un fichier de configuration contenant les options courantes que vous souhaitez utiliser pour générer les sorties. Créez ensuite la sortie en fournissant des options spécifiques sous forme d’argument de ligne de commande.&quot; Dans ce cas, notre fichier de configuration est assez complet. Vous pouvez donc créer votre sortie comme suit :
 
 ```
 java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/ 
@@ -73,5 +71,4 @@ java -jar OfflinePackager.jar -conf_path widevine.xml -out_path test_dash/
 
 >[!NOTE]
 >
->Les paramètres de ligne de commande ont priorité sur les paramètres de fichier de configuration. Dans cet exemple, tout ce qui est nécessaire se trouve dans le fichier de configuration, mais nous avons remplacé le chemin de sortie spécifié dans le fichier de configuration par `-out_path test_dash/`.
-
+>Les paramètres de ligne de commande ont la priorité sur les paramètres du fichier de configuration. Dans cet exemple, tout ce qui est nécessaire se trouve dans le fichier de configuration, mais nous avons remplacé le chemin de sortie spécifié dans le fichier de configuration par `-out_path test_dash/`.

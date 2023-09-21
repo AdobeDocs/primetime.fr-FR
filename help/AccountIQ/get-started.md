@@ -1,13 +1,12 @@
 ---
 title: Intégration et prise en main de Account IQ
-description: 'Intégration, conditions préalables et prise en main de Account IQ. '
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+description: Intégration, conditions préalables et prise en main de Account IQ.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # Intégration et prise en main de Account IQ {#onboard}
 
@@ -29,7 +28,7 @@ Account IQ est compatible avec les versions les plus récentes des navigateurs s
 
    Les utilisateurs administrateurs de votre entreprise peuvent créer des utilisateurs et leur accorder l’accès au tableau de bord et aux rapports du compte IQ. Pour accorder aux utilisateurs de l’organisation l’accès au compte IQ, les administrateurs de l’organisation doivent :
 
-   1. Connectez-vous à [Adobe Admin Console](https://adminconsole.adobe.com/).
+   1. Connexion à [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 
       ![](assets/admin-console.png)
@@ -52,6 +51,4 @@ Account IQ est compatible avec les versions les plus récentes des navigateurs s
 
 >[!IMPORTANT]
 >
->Si vos utilisateurs ne peuvent pas accéder au tableau de bord du compte IQ, contactez l’assistance Adobe pour vous assurer que l’ID de votre organisation est placé sur la liste autorisée dans le compte IQ.
-
-
+>Si vos utilisateurs ne peuvent pas accéder au tableau de bord du compte IQ, contactez l’assistance Adobe pour vous assurer que l’ID de votre organisation est autorisé dans le compte IQ.

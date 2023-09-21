@@ -1,20 +1,18 @@
 ---
 description: Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
-title: Affiche l'heure actuelle et la durée restante
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Afficher l’heure actuelle et l’heure restante
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
-
-# Affiche l&#39;heure actuelle et l&#39;heure restante {#display-the-current-time-and-remaining-time}
+# Afficher l’heure actuelle et l’heure restante {#display-the-current-time-and-remaining-time}
 
 Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cours de lecture.
 
-1. Pour mettre en oeuvre un affichage qui affiche la durée actuelle et restante du contenu principal, utilisez l’exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche l’heure actuelle et restante du contenu actif, utilisez l’exemple de code suivant :
 
    ```
    // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -67,7 +65,7 @@ Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cour
    } 
    ```
 
-1. Pour mettre en oeuvre un affichage qui montre la progression d&#39;une publicité et le temps restant, utilisez l&#39;exemple de code suivant :
+1. Pour mettre en oeuvre un affichage qui affiche la progression d’une publicité et le temps restant, utilisez l’exemple de code suivant :
 
    ```
    double adBreakDurationLeft; 
@@ -102,4 +100,3 @@ Vous pouvez afficher l’heure actuelle et l’heure restante du contenu en cour
    ```
 
 <!--<a id="example_D2FC658F27FC42A0B3E1AEC99B36788B"></a>-->
-

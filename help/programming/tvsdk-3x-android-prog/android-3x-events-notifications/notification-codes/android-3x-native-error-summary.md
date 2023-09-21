@@ -2,8 +2,7 @@
 title: Détails de la notification NATIVE_ERROR
 description: Détails de la notification NATIVE_ERROR
 copied-description: true
-exl-id: 08121879-d5a6-4224-b08d-9e66fe4d185a
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -28,7 +27,7 @@ Lorsque TVSDK gère une erreur native, il renvoie certaines ou toutes les valeur
      <ul id="ul_1F33D523DDFE4CE8B4F0DC279FF7E4F8"> 
       <li id="li_07A2D9BEE6364935A61EF3BD4AB6DE27">Erreurs DRM (codes 3300 à 3367). Ils sont identiques aux codes d’erreur de Flash Player équivalents. </li> 
       <li id="li_433BA22DE3504AEEB623598BB4F939FA">Erreurs de lecture vidéo (-1 à 89) </li> 
-      <li id="li_B347CB151DB94DE0A1DDEB1B33D2DABA">Erreurs de cryptographie (300 à 307) </li> 
+      <li id="li_B347CB151DB94DE0A1DDEB1B33D2DABA">Erreurs de chiffrement (300 à 307) </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
@@ -48,7 +47,7 @@ Lorsque TVSDK gère une erreur native, il renvoie certaines ou toutes les valeur
    <td colname="col2"><span class="codeph"> com.adobe.mediacore.PSDKErrorCode</span> comme chaîne (par exemple, <span class="codeph"> kECNetworkError</span>). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> AVERTISSEMENT</span> </td> 
+   <td colname="col1"><span class="codeph"> Avertissement</span> </td> 
    <td colname="col2"> Description de l’avertissement. </td> 
   </tr> 
   <tr> 
@@ -101,7 +100,7 @@ Lorsque TVSDK gère une erreur native, il renvoie certaines ou toutes les valeur
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> URL</span> </td> 
-   <td colname="col2"> URL du fichier en cours de téléchargement. </td> 
+   <td colname="col2"> URL du fichier téléchargé. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> MANIFEST_ERROR</span> </td> 
@@ -146,7 +145,7 @@ Lorsque TVSDK gère une erreur native, il renvoie certaines ou toutes les valeur
  </tbody> 
 </table>
 
-## NATIVE_ERROR : Valeurs DRM {#section_D240082B93D34902A18C3923C1C717B3}
+## NATIVE_ERROR : valeurs DRM {#section_D240082B93D34902A18C3923C1C717B3}
 
 L’interface de codage vidéo du moteur vidéo Adobe renvoie ces notifications DRM dans la variable `NATIVE_ERROR` objet de métadonnées.
 
@@ -173,7 +172,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
      <li id="li_348FC0F38B11417994119B61C9244076">Ce que le logiciel du distributeur doit faire : 
       <ul id="ul_7AFD45CF92454BA4927783FAA628FBC4"> 
        <li id="li_0D9CCE61612643648C12DCDDD252E52A">Si vous utilisez Google Chrome et que vous êtes en mode Incognito et que votre version de Flash Player est inférieure à 11.6, cette erreur peut se produire. <p>Nous recommandons au lecteur de vérifier le numéro de version du navigateur et de conseiller à l’utilisateur de quitter le mode Incognito. </p> </li> 
-       <li id="li_1DC6B755BD0840D48BEC92568FD330BA">Demandez à nouveau la licence. <p>Si la requête aboutit, vous n’avez pas besoin de vous connecter ou de réaffecter. Si la requête échoue, enregistrez le contenu à l’origine de l’erreur. <span class="codeph"> subErrorId</span> contient une erreur de ligne, le cas échéant. </p> </li> 
+       <li id="li_1DC6B755BD0840D48BEC92568FD330BA">Demandez à nouveau la licence. <p>Si la requête aboutit, il n’est pas nécessaire de la consigner ou de la réaffecter. Si la requête échoue, enregistrez le contenu qui a provoqué l’erreur. <span class="codeph"> subErrorId</span> contient une erreur de ligne, le cas échéant. </p> </li> 
       </ul> </li> 
      <li id="li_060B5D60C9BB419CBFA7B062FBCF2632">Ce que le distributeur doit faire : 
       <ul id="ul_FADB29DBF0DA4A0E8E54134AEB7DCD8A"> 
@@ -228,7 +227,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
    <td colname="col2"><span class="codeph"> AAXS_ClientUpdateRequire</span> </td> 
    <td colname="col3"> Utilisez une version plus récente de TVSDK pour Android. <p>Le client actuel ne peut pas terminer l’action demandée, mais un client mis à jour peut être en mesure de terminer la requête. </p> <p>Cela peut avoir plusieurs causes : 
      <ul id="ul_2EC4D42D5273439FA1AFDA1A2578B3D6"> 
-      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">Un domaine partagé qui n’est pas disponible sur ce client a été utilisé. C’est probablement le cas lorsque la lecture fonctionne sur Chrome, mais pas sur tout autre navigateur et vice versa. <p> <p>Conseil : Chrome utilise une clé PHDS/PHLS différente de celle des autres navigateurs. Pour plus d’informations, voir <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
+      <li id="li_FCA926F5FAED4E7190BE855545AB6ACF">Un domaine partagé non disponible sur ce client a été utilisé. C’est probablement le cas lorsque la lecture fonctionne sur Chrome, mais pas sur tout autre navigateur et vice versa. <p> <p>Conseil : Chrome utilise une clé PHDS/PHLS différente de celle utilisée par les autres navigateurs. Pour plus d’informations, voir <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </p> </li> 
       <li id="li_3B633FB699234DCEA136E9BE3CC3386D">L’application tente d’ajouter plusieurs DRMSessions lors de l’exécution sur une version d’iOS antérieure à 5.0. </li> 
       <li id="li_F7ED993AF0B941A7A27216B4D587A999">Les métadonnées ont une version 3 ou supérieure lorsque seule la version 2 est prise en charge. </li> 
      </ul> </p> 
@@ -295,9 +294,9 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3313 </td> 
    <td colname="col2"><span class="codeph"> AAXS_WriteMicrosafeFailed </span> </td> 
-   <td colname="col3"> <p>Ce problème se produit lorsque le système ne peut pas écrire dans le système de fichiers. <span class="codeph"> subErrorId</span> contient une erreur client ou une erreur de ligne. </p> <p>Sous Microsoft Windows, l’erreur 3313 peut être générée par le Principal lecteur Flash du module externe X ou NPAPI lorsque le contenu chiffré comporte un identifiant de licence ou un identifiant de stratégie trop long. Cela est dû à la longueur maximale du chemin sous Windows. (Le module externe Pepper ne rencontre pas ce problème.) </p> <p>Voir watson 3549660 </p> 
+   <td colname="col3"> <p>Ce problème se produit lorsque le système ne peut pas écrire dans le système de fichiers. <span class="codeph"> subErrorId</span> contient une erreur client ou une erreur de ligne. </p> <p>Sous Microsoft Windows, l’erreur 3313 peut être générée par le lecteur Flash de module externe Active X ou NPAPI lorsque le contenu chiffré comporte un ID de licence ou un ID de stratégie trop long. Cela est dû à la longueur maximale du chemin sous Windows. (Le module externe Pepper ne rencontre pas ce problème.) </p> <p>Voir watson 3549660 </p> 
     <ul id="ul_DFD527D1E1224A439766DF7BED878E3B"> 
-     <li id="li_FAF8FD98A4E8478CA7A92F770676ADFC">Le logiciel du distributeur doit inviter l’utilisateur à confirmer que son répertoire utilisateur n’est pas verrouillé, ni sur un volume complet ou verrouillé. </li> 
+     <li id="li_FAF8FD98A4E8478CA7A92F770676ADFC">Le logiciel du distributeur doit inviter l’utilisateur à confirmer que son répertoire utilisateur n’est pas verrouillé, ni sur un volume plein ou verrouillé. </li> 
      <li id="li_6D1136EA750A459BBECEEE5F73F527BB">Si le distributeur utilise AIR, plutôt que Flash, le problème peut être dû à une limitation de la longueur du chemin. <p>Les distributeurs doivent raccourcir le nom de leur application AIR à quelque chose de raisonnable. En outre, publiez à nouveau le contenu avec un raccourci <span class="codeph"> licenseID</span> et un <span class="codeph"> policyID</span>. </p> </li> 
     </ul> </td> 
   </tr> 
@@ -365,9 +364,9 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3322 </td> 
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed </span> </td> 
-   <td colname="col3"> <p>Le périphérique ne semble pas correspondre à la configuration qui était présente lors de l’initialisation. subErrorId contient une erreur de ligne ou spécifique au client. </p> <p>Le logiciel du distributeur doit effectuer l’une des tâches suivantes : 
+   <td colname="col3"> <p>L’appareil ne semble pas correspondre à la configuration qui était présente lors de l’initialisation. subErrorId contient une erreur de ligne ou spécifique au client. </p> <p>Le logiciel du distributeur doit effectuer l’une des tâches suivantes : 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Si l’appareil n’utilise pas Flash Player et qu’il utilise AIR, iOS, etc., appelez <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Si le problème se produit sur iOS dans une phase de développement, demandez au développeur de confirmer si le problème est observé lors du basculement entre des versions téléchargées à partir de systèmes de distribution préversion tiers (par exemple, HockeyApp) et une version locale à partir de Xcode. Les attributs d’une installation précédente ne sont pas entièrement remplacés lors du changement entre un build distribué à partir de HockeyApp et un build à partir de Xcode. Cette situation peut déclencher l’erreur 3322. </p> <p>Pour résoudre ce problème, le développeur doit supprimer l’ancienne version de l’appareil avant d’installer la nouvelle version. </p> </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Si l’appareil n’utilise pas Flash Player et utilise AIR, iOS, etc., appelez <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Si le problème se produit sur iOS dans une phase de développement, demandez au développeur de confirmer si le problème est observé lors du basculement entre des versions téléchargées à partir de systèmes de distribution préversion tiers (par exemple, HockeyApp) et une version locale à partir de Xcode. Les attributs d’une installation précédente ne sont pas entièrement remplacés lors du changement entre un build distribué à partir de HockeyApp et un build à partir de Xcode. Cette situation peut déclencher l’erreur 3322. </p> <p>Pour résoudre ce problème, le développeur doit supprimer l’ancienne version de l’appareil avant d’installer la nouvelle version. </p> </li> 
       <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Si l’appareil utilise Flash Player et qu’il est inutilisable à partir de codes d’erreur 3322 ou 3346, consultez les instructions d’Adobe sur la façon de réinitialiser par programmation votre magasin de licences DRM sur <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> Erreur DRM 3322/3346/3368 dans Chrome (problèmes liés à la barre d’informations)</a>. </li> 
      </ul> </p> <p>Cette erreur ne devrait pas se produire fréquemment. Dans les environnements d’entreprise qui utilisent des profils en itinérance, si un utilisateur visualisait du contenu protégé par DRM, l’erreur 3322 de risque se produisait lorsque l’utilisateur se connectait à partir de différentes machines. Si possible, le distributeur doit essayer d’obtenir cette information de l’utilisateur. </p> <p>Si l’erreur se produit fréquemment, réaffectez-vous à l’Adobe. Vous devez indiquer à Adobe si la réinitialisation du magasin de licences a résolu (ou non) le problème et indiquer à l’Adobe sur quels navigateurs l’erreur s’est produite. </p> <p>Pour plus d’informations, voir les articles suivants : 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
@@ -399,7 +398,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
       <li id="li_2939674D0F854ADEB67E45FD216288A2"><a href="https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessRootCA.crl</a> </li> 
       <li id="li_96386E00BE9D4CB99D100057A5F7C6DD">crl3.adobe.com/AdobeSystemsIncorporated FlashAccessRuntime/LatestCRL.crl</li> 
-    </ul> </p> <p>Si les règles de pare-feu sont ouvertes et qu’il n’y a actuellement aucune erreur 3324, un problème de réseau temporaire s’est produit. Vérifiez les journaux du serveur du client, qui se trouvent probablement dans la variable <span class="codeph"> /tomcat/logs/</span> pour déterminer si une erreur s’est produite lorsque le serveur de licences a tenté de récupérer les listes de révocation des certificats. <p>Important : Une erreur peut se produire lorsqu’un grand nombre de clients (ou une rafale) signale une erreur 3324 à un problème réseau temporaire lors du renouvellement d’un fichier CRL. Lorsque le problème de réseau a été résolu, les 3324 problèmes ont également été résolus. </p> </p> <p>Si les 4 fichiers CRL existent dans la variable <span class="filepath"> tomcat/temp/</span> et que les clients obtiennent toujours les codes d’erreur 3324, des problèmes d’accès aux fichiers peuvent se produire avec les fichiers CRL. Pour résoudre ce problème, vous pouvez consulter les journaux et purger les fichiers CRL existants. </p> <p>S’il n’y a aucun problème de serveur, invitez l’utilisateur à le réinitialiser, comme décrit dans la section 3322. </p> </td> 
+    </ul> </p> <p>Si les règles de pare-feu sont ouvertes et qu’il n’y a actuellement aucune erreur 3324, un problème de réseau temporaire s’est produit. Vérifiez les journaux du serveur du client, qui se trouvent probablement dans la variable <span class="codeph"> /tomcat/logs/</span> pour déterminer si une erreur s’est produite lorsque le serveur de licences a tenté de récupérer les listes de révocation des certificats. <p>Important : Une erreur peut se produire lorsqu’un grand nombre de clients (ou une rafale) signale une erreur 3324 à un problème réseau temporaire lors du renouvellement d’un fichier CRL. Lorsque le problème de réseau a été résolu, les 3324 problèmes ont également été résolus. </p> </p> <p>Si les 4 fichiers CRL sont présents dans la variable <span class="filepath"> tomcat/temp/</span> et que les clients obtiennent toujours les codes d’erreur 3324, des problèmes d’accès aux fichiers peuvent se produire avec les fichiers CRL. Pour résoudre ce problème, vous pouvez consulter les journaux et purger les fichiers CRL existants. </p> <p>En l’absence de problème de serveur, invitez l’utilisateur à le réinitialiser, comme décrit dans la section 3322. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>Erreurs de corruption du magasin de serveurs</b> </td> 
@@ -433,7 +432,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3328 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ServerErrorBeforeAgain </span> </td> 
-   <td colname="col3"> <p>Il s’agit d’une erreur côté serveur dans laquelle le serveur n’a pas pu terminer la demande du client. Cette erreur peut se produire lorsque, par exemple, le serveur est occupé, HTTP/500, que le serveur ne dispose pas de la clé nécessaire pour déchiffrer la requête, etc. </p> <p>Sur le client, il n’existe aucun moyen de déterminer ce qui s’est mal passé. Le client doit consulter les journaux du serveur d’accès aux Adobes, généralement appelés <span class="codeph"> AdobeFlashAccess.log</span>, afin de déterminer ce qui s’est mal passé. Il existe toujours une trace de pile descriptive dans le journal pour indiquer le problème. <span class="codeph"> subErrorId</span> contient une erreur de ligne ou spécifique au serveur. </p> <p>Le distributeur doit consulter les journaux du serveur pour identifier le serveur qui envoie cette erreur. Pour les erreurs 3328 comportant un code de sous-erreur 101, le serveur ne peut pas déchiffrer la requête. Le client doit vérifier que les certificats du serveur de licences/de transport installés sur le serveur de licences correspondent aux certificats utilisés lors du conditionnement. </p> <p>En outre, si les clients utilisent l’implémentation de référence, ils doivent s’assurer qu’il n’y a pas de fautes de frappe dans la variable <span class="codeph"> flashaccess-refimpl.properties</span> où les certificats Principaux et supplémentaires sont spécifiés. </p> </td> 
+   <td colname="col3"> <p>Il s’agit d’une erreur côté serveur dans laquelle le serveur n’a pas pu terminer la demande du client. Cette erreur peut se produire lorsque, par exemple, le serveur est occupé, HTTP/500, que le serveur ne dispose pas de la clé nécessaire pour déchiffrer la requête, etc. </p> <p>Sur le client, il n’existe aucun moyen de déterminer ce qui s’est mal passé. Le client doit consulter les journaux du serveur d’accès aux Adobes, généralement appelés <span class="codeph"> AdobeFlashAccess.log</span>, afin de déterminer ce qui s’est mal passé. Il existe toujours une trace de pile descriptive dans le journal pour indiquer le problème. <span class="codeph"> subErrorId</span> contient une erreur de ligne ou spécifique au serveur. </p> <p>Le distributeur doit consulter les journaux du serveur pour identifier le serveur qui envoie cette erreur. Pour les erreurs 3328 comportant un code de sous-erreur 101, le serveur ne peut pas déchiffrer la requête. Le client doit vérifier que les certificats du serveur de licences/de transport installés sur le serveur de licences correspondent aux certificats utilisés lors du conditionnement. </p> <p>En outre, si les clients utilisent l’implémentation de référence, ils doivent s’assurer qu’il n’y a pas de fautes de frappe dans la variable <span class="codeph"> flashaccess-refimpl.properties</span> où les certificats principaux et supplémentaires sont spécifiés. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3329 </td> 
@@ -494,7 +493,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
    <td colname="col3"> Effectuez la mise à niveau vers la dernière version de TVSDK pour Android. <p>Cela se produit si le contenu ou le serveur est configuré pour refuser la lecture à une version spécifique du Flash ou des exécutions AIR. </p> 
     <ul id="ul_B0732D941256483CABBDD30C9BF43249"> 
      <li id="li_72782B1D638F48C0B87084689FB9C798">Si l’utilisateur se trouve sur un système d’exploitation sur lequel le Flash peut être mis à niveau, le logiciel du distributeur doit inviter l’utilisateur à mettre à niveau le Flash et réessayer. Sinon, il conseille à l’utilisateur d’utiliser une autre machine. </li> 
-     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Si l’erreur 337 est suspectée, identifiez si elle se produit pour un contenu spécifique et recompressez ce contenu. Si le contenu est correctement compressé, voir Diagnostic des incohérences entre les stratégies et les licences </li> 
+     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Si l’erreur 337 est suspectée, identifiez si elle se produit pour un contenu spécifique et recompressez ce contenu. Si le contenu est correctement compressé, voir Diagnostic des divergences entre les stratégies et les licences </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -573,10 +572,10 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3347 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InsuffisanteDeviceCapabilites </span> </td> 
-   <td colname="col3"> <p>La Principale signification de cette erreur est que la licence présente une contrainte que le certificat DRM du client indique qu’elle ne peut pas satisfaire. Les "fonctionnalités matérielles" suivantes sont définies lorsque le certificat DRM du client est émis : 
+   <td colname="col3"> <p>La principale signification de cette erreur est que la licence présente une contrainte que le certificat DRM du client indique qu’elle ne peut pas satisfaire. Les "fonctionnalités matérielles" suivantes sont définies lorsque le certificat DRM du client est émis : 
      <ul id="ul_1EB6F1469C244CF0BA52C212495C053D"> 
-      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>Bus non accessible aux utilisateurs</b>. If <b>true</b>, les médias décryptés ne traversent jamais un bus ou la mémoire principale dans laquelle une application peut y accéder. <p>If <b>false</b>, l’application peut avoir accès au contenu après le décryptage. </p> </li> 
-      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>La racine matérielle de la confiance</b>. If <b>true</b>, tous les logiciels chargés au moment du démarrage sur l’appareil ont été validés par rapport à une clé ou un condensé qui n’est disponible que dans le matériel. <p>Ces deux contraintes sont vérifiées côté client lorsque la licence est ouverte par rapport au certificat DRM du client et que l’échec est immédiat. Ces contraintes peuvent également être vérifiées côté serveur avant d’émettre la licence. </p> </li> 
+      <li id="li_646043CE045C4DE2BBC939E1F4963DFE"><b>Bus non accessible pour les utilisateurs</b>. If <b>true</b>, les médias décryptés ne traversent jamais un bus ou la mémoire principale dans laquelle une application peut y accéder. <p>If <b>false</b>, l’application peut avoir accès au contenu après le décryptage. </p> </li> 
+      <li id="li_02AAECAF4D35447BA10554541B46DE67"><b>La racine matérielle de la confiance</b>. If <b>true</b>, tous les logiciels chargés au moment du démarrage sur l’appareil ont été validés par rapport à une clé ou un condensé disponible uniquement sur le matériel. <p>Ces deux contraintes sont vérifiées côté client lorsque la licence est ouverte par rapport au certificat DRM du client et que l’échec est immédiat. Ces contraintes peuvent également être vérifiées côté serveur avant l’émission de la licence. </p> </li> 
      </ul> </p> <p>La signification secondaire de cette erreur est que la licence a le jeu de stratégies "Jailbreak Enforcement" et qu’un jailbreak a été détecté sur l’appareil. Cette vérification est effectuée régulièrement du côté client et ne peut pas être vérifiée du côté serveur. </p> <p>Les distributeurs peuvent mettre à jour les stratégies et supprimer les restrictions. Pour les stratégies de fonctionnalités de périphérique, exécutez la commande de mise à jour de stratégie avec l’événement <span class="codeph"> -devCapabilitiesV1</span> sans argument. Pour l’application de la jailbreak, définissez <span class="codeph"> policy.enforceJailbreak=false</span>. </p> </td> 
   </tr> 
   <tr> 
@@ -667,7 +666,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3365 </td> 
    <td colname="col2"><span class="codeph"> AAXS_IncognitoModeNotAllowed </span> </td> 
-   <td colname="col3"> <p>Cette combinaison de navigateur/plate-forme n’autorise pas la lecture protégée par DRM en mode Incognito. </p> <p>Le logiciel du distributeur doit conseiller à l'utilisateur de quitter le mode Incognito ou d'utiliser un autre navigateur. Pour plus d’informations, voir <a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> Cause et résolution de l’erreur DRM 3365</a>. </p> </td> 
+   <td colname="col3"> <p>Cette combinaison de navigateur/plate-forme n’autorise pas la lecture protégée par DRM en mode Incognito. </p> <p>Le logiciel du distributeur doit conseiller à l'utilisateur de quitter le mode Incognito ou d'utiliser un autre navigateur. Pour plus d’informations, voir <a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> Erreur DRM 3365 provoquée et résolution</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3366 </td> 
@@ -692,11 +691,11 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3370 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentIdSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>L’utilisateur a désactivé la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>Conseil : Cette erreur s’affichait avec les versions 13.0.0.x ou ultérieures de Pepper. </p> <p>Le logiciel du distributeur doit guider l’utilisateur pour activer la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>L’équipe d’exploitation du distributeur doit guider l’utilisateur pour activer la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>Pour plus d’informations, voir <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
+   <td colname="col3"> <p>L’utilisateur a désactivé la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>Conseil : Cette erreur s’affichait avec les versions 13.0.0.x de Pepper ou ultérieures. </p> <p>Le logiciel du distributeur doit guider l’utilisateur pour activer la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>L’équipe d’exploitation du distributeur doit guider l’utilisateur pour activer la variable <span class="uicontrol"> Autoriser les identifiants pour le contenu protégé</span> . </p> <p>Pour plus d’informations, voir <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3371 </td> 
-   <td colname="col2"><span class="codeph"> AAXS_NoOPConstraintInPixel</span><span class="codeph"> Contraintes</span> </td> 
+   <td colname="col2"><span class="codeph"> AAXS_NoOPConstraintInPixel</span><span class="codeph"> Contrainte</span> </td> 
    <td colname="col3"> <p>Résolution incorrecte basée sur les contraintes de protection de sortie de la licence. </p> <p>Le logiciel du distributeur doit afficher un message d’erreur. Demandez à l’utilisateur de signaler le problème au distributeur avec un titre de contenu. </p> <p>Le distributeur doit reconditionner le contenu avec une politique valide. </p> </td> 
   </tr> 
   <tr> 
@@ -707,7 +706,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
   <tr> 
    <td colname="col1"> 3373 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MinorErr_DisplayResolutionLargeThanConsouche</span> </td> 
-   <td colname="col3"> <p>La résolution du contenu est supérieure à celle spécifiée par la contrainte principale de protection de sortie. </p> <p>Si l’équipe d’exploitation du distributeur détecte cette erreur dans ses logs, il doit examiner la politique de protection de la sortie basée sur la résolution et, si nécessaire, reconditionner le contenu. </p> </td> 
+   <td colname="col3"> <p>La résolution du contenu est supérieure à celle spécifiée par la contrainte de protection de sortie actuellement active. </p> <p>Si l’équipe d’exploitation du distributeur détecte cette erreur dans ses logs, il doit examiner la politique de protection de la sortie basée sur la résolution et, si nécessaire, reconditionner le contenu. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3374 </td> 
@@ -717,7 +716,7 @@ Lorsque vous signalez des erreurs DRM à Adobe, veillez à inclure la variable `
  </tbody> 
 </table>
 
-## NATIVE_ERROR : Valeurs de lecture vidéo {#section_7079501250C2487499639F92EC774525}
+## NATIVE_ERROR : valeurs de lecture vidéo {#section_7079501250C2487499639F92EC774525}
 
 L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vidéo dans la variable `NATIVE_ERROR` objet de métadonnées.
 
@@ -753,7 +752,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 3 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
-   <td colname="col3"> Le décodeur a échoué au moment de l’exécution. </td> 
+   <td colname="col3"> Le décodeur a échoué à l’exécution. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 4 </td> 
@@ -788,7 +787,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 10 </td> 
    <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
-   <td colname="col3"> Fonctionnalité non implémentée. </td> 
+   <td colname="col3"> Fonction non implémentée. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
@@ -813,7 +812,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 15 </td> 
    <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
-   <td colname="col3"> La configuration n’est pas prise en charge. </td> 
+   <td colname="col3"> Configuration non prise en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
@@ -873,7 +872,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 27 </td> 
    <td colname="col2"><span class="codeph"> COMPONENT_CREATION_FAILURE</span> </td> 
-   <td colname="col3"> Un composant essentiel n’a pas pu être créé. </td> 
+   <td colname="col3"> Impossible de créer un composant essentiel. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 28 </td> 
@@ -893,7 +892,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 31 </td> 
    <td colname="col2"><span class="codeph"> CODEC_NOT_SUPPORTED</span> </td> 
-   <td colname="col3"> Codec non pris en charge. </td> 
+   <td colname="col3"> Code non pris en charge. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 32 </td> 
@@ -913,7 +912,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 35 </td> 
    <td colname="col2"><span class="codeph"> VIDEO_PROFILE_NOT_SUPPORTED</span> </td> 
-   <td colname="col3"> Profil vidéo non pris en charge. </td> 
+   <td colname="col3"> Profil vidéo non pris en charge </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 36 </td> 
@@ -988,7 +987,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 50 </td> 
    <td colname="col2"><span class="codeph"> LIVE_WINDOW_MOVED_BACKWARD</span> </td> 
-   <td colname="col3"> La fenêtre active ne doit être redirigée que vers l’avant. Si ce n’est pas le cas, cet avertissement s’affiche et la fenêtre n’est pas lue. Pour cette raison, il peut y avoir des sauts (ou une interruption longue) dans la lecture. </td> 
+   <td colname="col3"> La fenêtre active ne doit être redirigée que vers l’avant. Si ce n’est pas le cas, cet avertissement s’affiche et la fenêtre n’est pas lue. Pour cette raison, il peut y avoir des sauts (ou une longue pause/arrêt) dans la lecture. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 51 </td> 
@@ -1010,7 +1009,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
    <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
    <td colname="col3">Le lecteur multimédia ne peut pas charger les segments, car il a atteint la fin de la fenêtre active. Le chargement des segments reprend lorsque le serveur ajoute de nouveaux médias à la fenêtre active. Cet état est généralement atteint si : 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
-     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">Le <span class="codeph"> bufferTime</span> est trop élevé (égal ou supérieur à la durée de la fenêtre active). </li> 
+     <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">La variable <span class="codeph"> bufferTime</span> est trop élevé (égal ou supérieur à la durée de la fenêtre active). </li> 
      <li id="li_25CE97115ED64E44AA89977FB5F0DCF7">Une combinaison d’une ou de plusieurs API d’insertion/suppression a remplacé plus de médias qu’elle n’en a ajouté. </li> 
      <li id="li_1B14716B2157492AB1859306D1250523">La période suivante est une période d’activation avec un remplacement de média en attente (en raison de l’appel API InsertBy). </li> 
     </ul> </td> 
@@ -1203,7 +1202,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Une erreur s’est produite lors de la lecture du média dans <i>play</i> mode . Le mode de lecture de la marque est terminé et le flux est interrompu. Appeler <span class="codeph"> Play()</span> pour lire le média en mode normal. </td> 
+   <td colname="col3">Une erreur s’est produite lors de la lecture du média dans <i>play de l'astuce</i> mode . Le mode de lecture de la marque est terminé et le flux est interrompu. Appeler <span class="codeph"> Play()</span> pour lire le média en mode normal. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
@@ -1213,7 +1212,7 @@ L’interface Codeur vidéo de l’AVE renvoie ces notifications de lecture vid�
  </tbody> 
 </table>
 
-## NATIVE_ERROR : Valeurs de chiffrement {#section_39365E545CAC49B9A4D4678657BB2155}
+## NATIVE_ERROR : valeurs de chiffrement {#section_39365E545CAC49B9A4D4678657BB2155}
 
 Le module de cryptage du moteur vidéo Adobe renvoie ces notifications dans la variable `NATIVE_ERROR` objet de métadonnées.
 
@@ -1223,6 +1222,6 @@ Le module de cryptage du moteur vidéo Adobe renvoie ces notifications dans la v
 | 301 | `CRYPTO_ERROR_CORRUPTED_DATA` | Les données sont corrompues. |
 | 302 | `CRYPTO_ERROR_BUFFER_TOO_SMALL` | Mémoire tampon trop petite. |
 | 303 | `CRYPTO_ERROR_BAD_CERTIFICATE` | Certificat incorrect. |
-| 304 | `CRYPTO_ERROR_DIGEST_UPDATE` | Mise à jour du condensé. |
+| 304 | `CRYPTO_ERROR_DIGEST_UPDATE` | Mise à jour du résumé. |
 | 305 | `CRYPTO_ERROR_DIGEST_FINISH` | Finit le condensé. |
 | 306 | `CRYPTO_ERROR_BAD_PARAMETER` | Paramètre incorrect. |

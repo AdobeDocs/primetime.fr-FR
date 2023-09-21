@@ -1,13 +1,12 @@
 ---
 title: Intégration des données côté serveur d’authentification Primetime dans Adobe Analytics
 description: Intégration des données côté serveur d’authentification Primetime dans Adobe Analytics
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 4%
 
 ---
-
 
 # Intégration des données côté serveur d’authentification Primetime dans Adobe Analytics
 
@@ -37,7 +36,7 @@ Il n’est pas prévu de remplacer une implémentation côté client si elle exi
 | Échec de la connexion | Nombre de flux de déconnexion ayant échoué |
 | Préautorisation demandée | Nombre de flux de préautorisation lancés |
 | Préautorisation OK | Nombre d’événements de préautorisation réussis avec les ressources préautorisées |
-| Autorisation refusée | Nombre d’événements de préautorisation avec les ressources qui se sont vu refuser la préautorisation |
+| Autorisation refusée | Nombre d’événements de préautorisation avec les ressources refusées |
 | Échec de la préautorisation | Nombre d’événements de préautorisation ayant échoué |
 
 | Nom Adobe Analytics | Description |
@@ -49,16 +48,16 @@ Il n’est pas prévu de remplacer une implémentation côté client si elle exi
 | Version du SDK | Version du SDK client d’authentification Adobe Primetime |
 | ID de ressource | Titre réel de la ressource impliquée dans la requête d’autorisation (extrait de la charge utile MRSS en tant qu’élément/titre s’il est fourni). |
 | Type d’erreur AuthZ | Raison des échecs, comme indiqué par l’authentification Adobe Primetime <br/> Voici les valeurs les plus courantes <br/> **noAuthZ** = le MVPD a répondu que l’utilisateur n’a pas le canal dans son package<br/> **network** = nous n’avons pas pu atteindre le MVPD (le MVPD a un problème au moment de l’appel et n’a pas répondu)<br/> **norefreshtoken** = ceci est strictement pour les implémentations OAuth et cela peut se produire si l’utilisateur a modifié son mot de passe ou si le MVPD l’a refusé pour une raison quelconque. Cela entraîne généralement une nouvelle authentification.<br/> **discordance** = si la requête est effectuée à partir d’un appareil différent de celui qui avait le jeton d’authentification. Cela peut se produire si les utilisateurs tentent de tromper le système, mais que la plupart d’entre eux se sont produits dans le contexte de notre ancien SDK JavaScript où l’identifiant de l’appareil utilisait l’adresse IP dans le cadre du calcul. Si un utilisateur regardait TVE à la maison puis au travail, cette erreur serait déclenchée et il devrait s’authentifier à nouveau.<br/> **non valide** = requête non valide, paramètres manquants ou non valides<br/>  **authzNone** = Les programmeurs peuvent refuser des autorisations pour une combinaison channelMVPD spécifique. Cela est déclenché par une API principale à laquelle les programmeurs ont accès.<br/> **fraude** = c&#39;est un mécanisme de protection de notre côté. Si l’utilisateur échoue à l’autorisation, puis le demande à nouveau un certain nombre de fois dans un court intervalle (secondes), nous refusons directement l’appel. Cela se produit généralement lorsqu’un programmeur a un bogue dans son implémentation qui demande constamment l’autorisation en cas d’échec. |
-| Type de jeton | Lorsque des jetons sont créés en raison de AuthZ All et AuthN All, nous devons connaître les causes d’une mesure de dégradation.<br/> Ils sont :<br/> &quot;normal&quot; = cas normal<br/> &quot;authnall&quot; = Lorsque AuthN All est activé<br/> &quot;authzall&quot; = Lorsque AuthZ All est activé<br/>  &quot;hba&quot; = Lorsque l’adaptateur est activé |
+| Type de jeton | Lorsque des jetons sont créés en raison de AuthZ All et AuthN All, nous devons connaître les causes d’une mesure de dégradation.<br/> Ils sont :<br/> &quot;normal&quot; = cas normal<br/> &quot;authnall&quot; = Lorsque AuthN All est activé<br/> &quot;authzall&quot; = Lorsque AuthZ All est activé<br/>  &quot;hba&quot; = Lorsque l’adaptateur de bus hôte est activé |
 | Type d’appareil sans client | Plateforme d’appareil (alternative), actuellement utilisée pour les clients sans client.<br/> Les valeurs peuvent être les suivantes :<br/> S/O : l’événement ne provient pas d’un SDK sans client<br/> Inconnu : depuis le paramètre deviceType d’un **API sans client** est facultatif, il existe des appels qui ne contiennent aucune valeur.<br/> Toute autre valeur envoyée via la variable **API sans client**. Par exemple, xbox, appletv et roku. |
 | Identifiant utilisateur MVPD | Remplace l’identifiant visiteur basé sur les cookies |
 
 
 ## Détails {#details-int-authn-analyt}
 
-* Les mesures seront insérées, événement par événement, dans la suite de rapports spécifique via l’API d’insertion de données d’Adobe Analytics.
+* Les mesures seront insérées, événement par événement, dans la suite de rapports spécifique via l’API d’insertion de données Adobe Analytics.
 * L&#39;insertion sera groupée et envoyée toutes les 30 minutes. En conséquence, le rapport doit être horodaté.
-* Chaque client disposera d’une ou de plusieurs suites de rapports. Un identifiant demandeur (canal) ne sera mappé qu’à une seule suite de rapports. Plusieurs ID de demandeur ne peuvent correspondre qu’à une seule suite de rapports.
+* Chaque client disposera d’une ou de plusieurs suites de rapports. Un identifiant du demandeur (canal) ne sera mappé qu’à une seule suite de rapports. Plusieurs ID de demandeur ne peuvent correspondre qu’à une seule suite de rapports.
 * Des données historiques peuvent être fournies, mais une attention particulière doit être accordée en raison de problèmes de trafic/performances.
 * La variable de visiteur unique est définie sur l’identifiant utilisateur MVPD.
 * Le mappage des événements et des eVars n’est pas configurable.
@@ -79,7 +78,6 @@ Le rapport doit être horodaté, car les événements seront envoyés par lots.
 >Tous doivent être définis avec :
 >
 >* Compteur (sans sous-relations)
-
 
 | Événement | Événement Adobe Analytics |
 |---------------------------------------|-----------------------|
@@ -109,10 +107,9 @@ Le rapport doit être horodaté, car les événements seront envoyés par lots.
 >[!NOTE]
 >Tous doivent être définis avec :
 >
->* Attribution : Le plus récent (dernier)
->* Expire après : Accès
->* Type : Chaîne de texte
-
+>* Attribution : le plus récent (dernier)
+>* Expire après : accès
+>* Type : chaîne de texte
 
 | Propriété | eVar |
 |-----------------------------------|--------------------------------|

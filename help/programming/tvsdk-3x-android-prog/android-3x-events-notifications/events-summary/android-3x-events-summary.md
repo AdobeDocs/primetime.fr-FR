@@ -1,8 +1,7 @@
 ---
 description: Votre application peut surveiller l’activité de votre lecteur et la modification de son état en écoutant les événements distribués par TVSDK.
 title: Résumé des événements du lecteur Primetime
-exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -19,11 +18,11 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 >[!TIP]
 >
->Les codes d’événement sont les constantes de l’énumération `MediaPlayerEvent`.
+>Les codes d’événement sont les constantes de la variable `MediaPlayerEvent` enum.
 
 `AdBreakCompletedEventListener`
 
-* **** Signification : la lecture de la coupure publicitaire est terminée.
+* **Signification** La lecture de la coupure publicitaire est terminée.
 
 * **Rappel à implémenter** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
@@ -31,7 +30,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdBreakSkippedEventListener`
 
-* **** Signification : une coupure publicitaire a été ignorée pendant la lecture.
+* **Signification** Une coupure publicitaire a été ignorée pendant la lecture.
 
 * **Rappel à implémenter** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
@@ -39,7 +38,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdBreakStartedEventListener`
 
-* **** Signification : la lecture de la coupure publicitaire a commencé.
+* **Signification** La lecture de la coupure publicitaire a commencé.
 
 * **Rappel à implémenter** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
@@ -47,14 +46,14 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdClickedEventListener`
 
-* **** Signification : un utilisateur a cliqué sur une publicité pendant la lecture.
+* **Signification** Un utilisateur a cliqué sur une publicité pendant la lecture.
 
 * **Rappel à implémenter** `onAdClicked(AdClickEvent event)`
 * **Code d’événement** `AD_CLICK`
 
 `AdCompletedEventListener`
 
-* **** Signification : la lecture de la publicité est terminée.
+* **Signification** La lecture de la publicité est terminée.
 
 * **Rappel à implémenter** `onAdCompleted(AdPlaybackEvent event)`
 
@@ -62,7 +61,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdProgressEventListener`
 
-* **** Signification de la progression des rapports lors de la lecture.
+* **Signification** Progression des rapports lors de la lecture.
 
 * **Rappel à implémenter** `onAdProgress(AdPlaybackEvent event)`
 
@@ -70,7 +69,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdResolutionCompleteEventListener`
 
-* **** La résolution des publicités de Primetime est terminée. Cet événement s’applique uniquement au contenu VOD.
+* **Signification** La résolution des publicités Primetime est terminée. Cet événement s’applique uniquement au contenu VOD.
 
 * **Rappel à implémenter** `onAdResolutionComplete()`
 
@@ -78,7 +77,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AdStartedEventListener`{#section_A4339C48F82640A8AF4AF09CB3B33188}
 
-* **** Signification : la lecture de la publicité a commencé.
+* **Signification** La lecture de la publicité a commencé.
 
 * **Rappel à implémenter** `onAdStarted(AdPlaybackEvent event)`
 
@@ -86,7 +85,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `AudioUpdatedEventListener`
 
-* **** Signification : une nouvelle piste audio a été détectée.
+* **Signification** Une nouvelle piste audio a été détectée.
 
 * **Rappel à implémenter** `onAudioUpdated(MediaPlayerItemEvent event)`
 
@@ -94,7 +93,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `BufferingBeginEventListener`
 
-* **** Signification : le lecteur a commencé la mise en mémoire tampon.
+* **Signification** Le lecteur a commencé la mise en mémoire tampon.
 
 * **Rappel à implémenter** `onBufferingBegin(BufferEvent event)`
 
@@ -102,7 +101,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `BufferingEndEventListener`
 
-* **** En d’autres termes, le lecteur a cessé la mise en mémoire tampon.
+* **Signification** Le lecteur a arrêté la mise en mémoire tampon.
 
 * **Rappel à implémenter** `onBufferingEnd(BufferEvent event)`
 
@@ -110,7 +109,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `BufferPreparedEventListener`
 
-* **** En d’autres termes, la mémoire tampon est préparée.
+* **Signification** La mémoire tampon est préparée.
 
 * **Rappel à implémenter** `onBufferPrepared()`
 
@@ -118,7 +117,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `CaptionsUpdatedEventListener`
 
-* **** Signification : un nouveau suivi de sous-titres a été détecté.
+* **Signification** Un nouveau suivi de légende a été détecté.
 
 * **Rappel à implémenter** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
@@ -126,7 +125,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `DRMMetadataInfoEventListener`
 
-* **** Signification : de nouvelles métadonnées DRM ont été détectées dans le flux multimédia.
+* **Signification** Une nouvelle métadonnée DRM a été détectée dans le flux multimédia.
 
 * **Rappel à implémenter** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
@@ -134,7 +133,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `ItemCreatedEventListener`
 
-* **** Signification : un nouvel élément du lecteur multimédia a été créé.
+* **Signification** Un nouvel élément du lecteur multimédia a été créé.
 
 * **Rappel à implémenter** `onItemCreated(MediaPlayerItemEvent event)`
 
@@ -142,7 +141,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `ItemLoadCompleteEventListener`
 
-* **** Signification : de nouvelles informations de chargement ont été créées pour l’élément actif.
+* **Signification** De nouvelles informations de chargement ont été créées pour l’élément actif.
 
 * **Rappel à implémenter** `onLoadComplete(MediaPlayerItemEvent event)`
 
@@ -150,7 +149,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `LoadInformationEventListener`
 
-* **** Signification : un nouveau segment a été chargé.
+* **Signification** Un nouveau segment a été chargé.
 
 * **Rappel à implémenter** `onLoadInformation(LoadInformationEvent event)`
 
@@ -158,7 +157,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `MainManifestUpdatedEventListener`
 
-* **** Signification : le manifeste principal ou la liste de lecture a été mis à jour.
+* **Signification** Le manifeste principal ou la liste de lecture a été mis à jour.
 
 * **Rappel à implémenter** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
@@ -166,7 +165,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `NotificationEventListener`
 
-* **** Signification : l’opération a échoué.
+* **Signification** L’opération a échoué.
 
 * **Rappel à implémenter** `onNotification(NotificationEvent event)`
 
@@ -174,7 +173,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `PlaybackRangeUpdatedEventListener`
 
-* **** Signification : la plage de lecture a été mise à jour.
+* **Signification** La plage de lecture a été mise à jour.
 
 * **Rappel à implémenter** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
@@ -182,7 +181,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `PlaybackRatePlayingEventListener`
 
-* **** En d’autres termes, un nouveau taux de lecture est visible à l’écran.
+* **Signification** Un nouveau taux de lecture est visible à l’écran.
 
 * **Rappel à implémenter** `onRatePlaying(PlaybackRateEvent event)`
 
@@ -190,7 +189,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `PlaybackRateSelectedEventListener`
 
-* **** Signification : l’attribut rate de MediaPlayer a été défini.
+* **Signification** L’attribut rate de MediaPlayer a été défini.
 
 * **Rappel à implémenter** `onRateSelected(PlaybackRateEvent event)`
 
@@ -198,7 +197,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `PlayStartEventListener`
 
-* **** Signification : la lecture a commencé.
+* **Signification** La lecture a commencé.
 
 * **Rappel à implémenter** `onPlayStart()`
 
@@ -206,7 +205,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `ProfileChangeEventListener`
 
-* **** Signification : le profil actuel de MediaPlayer a changé.
+* **Signification** Le profil actuel de MediaPlayer a changé.
 
 * **Rappel à implémenter** `onProfileChanged(ProfileEvent event)`
 
@@ -214,7 +213,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `ReservationReachedEventListener`
 
-* **** Signification de la lecture a atteint une réservation de chronologie.
+* **Signification** La lecture a atteint une réservation de chronologie.
 
 * **Rappel à implémenter** `onReservationReached(ReservationEvent event)`
 
@@ -222,7 +221,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `SeekBeginEventListener`
 
-* **** L’opération SigniingSeek a démarré.
+* **Signification** L’opération de recherche a commencé.
 
 * **Rappel à implémenter** `onSeekBegin(SeekEvent event)`
 
@@ -230,7 +229,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `SeekEndEventListener`
 
-* **** Signification : l’opération de recherche est terminée.
+* **Signification** L’opération de recherche est terminée.
 
 * **Rappel à implémenter** `onSeekEnd(SeekEvent event)`
 
@@ -238,7 +237,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `SeekPositionAdjustedEventListener`
 
-* **** Signification : la position de la recherche a été ajustée en raison de règles de lecture internes ou de règles commerciales externes.
+* **Signification** La position de la recherche a été ajustée en raison de règles de lecture internes ou de règles commerciales externes.
 
 * **Rappel à implémenter** `onPositionAdjusted(SeekEvent event)`
 
@@ -246,7 +245,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `SizeAvailableEventListener`
 
-* **** Signification : la taille du média est disponible.
+* **Signification** La taille du média est disponible.
 
 * **Rappel à implémenter** `onSizeAvailable(SizeAvailableEvent event)`
 
@@ -254,7 +253,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `StatusChangeEventListener`
 
-* **** Signification : l’état MediaPlayer a changé.
+* **Signification** L’état de MediaPlayer a changé.
 
 * **Rappel à implémenter** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
@@ -262,7 +261,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `TimeChangeEventListener`
 
-* **** Signification : le curseur de lecture a changé.
+* **Signification** Le curseur de lecture a changé.
 
 * **Rappel à implémenter** `onTimeChanged(TimeChangeEvent event)`
 
@@ -270,7 +269,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `TimedEventEventListener`
 
-* **** Signification : l’opération est terminée avec le temps nécessaire à l’opération.
+* **Signification** L’opération est terminée avec le temps nécessaire pour l’opération.
 
 * **Rappel à implémenter** `onTimedEvent(TimedEventEvent event)`
 
@@ -278,7 +277,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `TimelineMetadataAddedInBackgroundEventListener`
 
-* **** Signification : de nouvelles métadonnées minutées ont été ajoutées à un élément en arrière-plan.
+* **Signification** De nouvelles métadonnées minutées ont été ajoutées à un élément en arrière-plan.
 
 * **Rappel à implémenter** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -286,7 +285,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `TimedMetadataEventListener`
 
-* **** Signification : de nouvelles métadonnées minutées ont été détectées dans le flux multimédia.
+* **Signification** Une nouvelle métadonnée minutée a été détectée dans le flux multimédia.
 
 * **Rappel à implémenter** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -294,7 +293,7 @@ TVSDK vous avertit lorsque des événements, auxquels votre application doit ré
 
 `TimelineUpdatedEventListener`
 
-* **** Signification : la chronologie a été modifiée. Il est possible que des publicités aient été ajoutées ou supprimées de la chronologie.
+* **Signification** La chronologie a été modifiée. Il est possible que des publicités aient été ajoutées ou supprimées de la chronologie.
 
 * **Rappel à implémenter** `onTimelineUpdated(TimelineEvent event)`
 

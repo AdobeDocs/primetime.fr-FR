@@ -1,35 +1,33 @@
 ---
-description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
-title: Optimisation de la redirection HTTP 302
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer plus efficacement la charge.
+title: Optimisation des redirections HTTP 302
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Optimisation des redirections HTTP 302 {#http-redirect-optimization}
 
-# Optimisation de la redirection HTTP 302 {#http-redirect-optimization}
+L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer plus efficacement la charge.
 
-L’optimisation de la redirection 302 réduit le nombre de 302 réponses de redirection, ce qui permet à votre application d’équilibrer la charge de manière plus efficace.
-
-Si une requête de manifeste principale est redirigée et que l’optimisation de la version 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources à partir de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires. Cette fonction est activée par défaut et vous pouvez modifier ce paramètre.
+Si une requête de manifeste principale est redirigée et que l’optimisation 302 est activée dans votre lecteur, les requêtes suivantes effectuées pour les ressources de ce manifeste utiliseront l’emplacement de domaine final, ce qui évite 302 réponses supplémentaires. Cette fonction est activée par défaut et vous pouvez la modifier.
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité est uniquement prise en charge dans les navigateurs certifiés qui prennent en charge la propriété `responseURL` dans l&#39;objet `XMLHttpRequest`.
+>Cette fonctionnalité est prise en charge uniquement dans les navigateurs certifiés qui prennent en charge la fonction `responseURL` dans la propriété `XMLHttpRequest` .
 
-Pour les Flashs de secours, tenez compte des informations suivantes :
+Pour le Flash de secours, prenez note des informations suivantes :
 
 * Les utilisateurs finaux doivent avoir installé Adobe Flash Player version 23 ou ultérieure.
 * Si l’intégrité du flux est désactivée, la redirection 302 est prise en charge uniquement sur les navigateurs certifiés.
 
-## Désactivation de l&#39;optimisation de la redirection 302 {#disabling-redirect-optimization}
+## Désactivation de l’optimisation de la redirection 302 {#disabling-redirect-optimization}
 
-Vous pouvez utiliser la propriété useRedirectUrl pour activer la redirection 302 (true) ou la désactivation (false).
+Vous pouvez utiliser la propriété useRedirectUrl pour activer la redirection 302 (true) ou désactiver (false).
 
-Par exemple :
+Par exemple :
 
 ```js
 var networkConfiguration = new AdobePSDK.NetworkConfiguration(); 

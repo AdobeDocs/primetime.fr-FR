@@ -1,20 +1,18 @@
 ---
-title: Enregistrement du domaine du groupe de périphériques
-description: Enregistrement du domaine du groupe de périphériques
+title: Enregistrement de domaine de groupe de périphériques
+description: Enregistrement de domaine de groupe de périphériques
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
+# Enregistrement de domaine de groupe de périphériques{#device-group-domain-registration}
 
-# Enregistrement du domaine du groupe de périphériques{#device-group-domain-registration}
+Au lieu de lier une licence à un appareil spécifique, Adobe Access 3.0 et versions ultérieures prend en charge la liaison de licences à un domaine d’appareil. Plusieurs périphériques peuvent rejoindre un domaine et recevoir des jetons de domaine. Une fois qu’un appareil du domaine a acquis une licence, celle-ci peut être transférée à tout autre appareil du domaine, et ces appareils peuvent lire le contenu sans acquérir de licence directement à partir du serveur de licences.
 
-Au lieu de lier une licence à un périphérique spécifique, Adobe Access 3.0 et les versions ultérieures prennent en charge la liaison de licences à un domaine de périphérique. Plusieurs périphériques peuvent rejoindre un domaine et recevoir des jetons de domaine. Une fois qu’un périphérique du domaine a acquis une licence, celle-ci peut être transférée à tout autre périphérique du domaine, et ces périphériques peuvent lire le contenu sans acquérir de licence directement auprès du serveur de licences.
+Pour prendre en charge les licences liées aux domaines, la stratégie doit spécifier le serveur de domaine avec lequel le client doit s’enregistrer. La stratégie spécifie également les exigences d’authentification du serveur de domaine (que l’accès anonyme soit autorisé ou que le serveur nécessite une authentification personnalisée ou un nom d’utilisateur/mot de passe).
 
-Pour prendre en charge les licences liées aux domaines, la stratégie doit spécifier le serveur de domaine avec lequel le client doit s’enregistrer. La stratégie spécifie également les exigences d’authentification pour le serveur de domaine (que l’accès anonyme soit autorisé ou que le serveur nécessite un nom d’utilisateur/mot de passe ou une authentification personnalisée).
-
-L&#39;enregistrement des domaines et les licences liées aux domaines sont pris en charge par les clients Adobe Access version 3.0 et ultérieure. Si un client plus âgé ou un client Adobe Access 3.0 dans un Flash Player demande une licence pour le contenu qui prend en charge l&#39;enregistrement de domaine, le serveur de licences peut émettre une licence en utilisant une autre stratégie qui prend en charge la liaison à un périphérique spécifique.
+L’enregistrement de domaine et les licences liées aux domaines sont pris en charge par les clients Adobe Access versions 3.0 et ultérieures. Si un client plus âgé ou un client Adobe Access 3.0 dans Flash Player demande une licence pour du contenu prenant en charge l’enregistrement de domaine, le serveur de licences peut émettre une licence à l’aide d’une autre stratégie prenant en charge la liaison à un appareil spécifique.

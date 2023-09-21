@@ -1,42 +1,39 @@
 ---
 description: Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de notification appropriés.
-title: Ajouter des écouteurs pour les notifications de métadonnées minutées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ajout d’écouteurs pour les notifications de métadonnées minutées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# Ajouter les écouteurs pour les notifications de métadonnées minutées {#add-listeners-for-timed-metadata-notifications}
+# Ajout d’écouteurs pour les notifications de métadonnées minutées {#add-listeners-for-timed-metadata-notifications}
 
 Pour recevoir des notifications sur les balises dans le manifeste, implémentez le ou les écouteurs de notification appropriés.
 
-Vous pouvez surveiller les métadonnées minutées en écoutant les événements suivants, qui avertissent votre application de l’activité associée :
+Vous pouvez surveiller les métadonnées minutées en écoutant les événements suivants, qui notifient votre application de l’activité associée :
 
-* `PTTimedMetadataChangedNotification`: Chaque fois qu’une balise d’abonnement unique est identifiée lors de l’analyse du contenu, TVSDK prépare un nouvel  `PTTimedMetadata` objet et envoie cette notification.
+* `PTTimedMetadataChangedNotification`: à chaque fois qu’une balise d’abonnement unique est identifiée lors de l’analyse du contenu, TVSDK prépare une nouvelle `PTTimedMetadata` et envoie cette notification.
 
-   L’objet contient le nom de la balise à laquelle vous vous êtes abonné, l’heure locale de lecture à laquelle cette balise apparaîtra, ainsi que d’autres données.
+  L’objet contient le nom de la balise à laquelle vous vous êtes abonné, l’heure locale de la lecture à laquelle cette balise apparaîtra, ainsi que d’autres données.
 
-* `PTMediaPlayerTimeChangeNotification` : Pour les flux en direct/linéaires où le manifeste/la liste de lecture est régulièrement actualisé, d’autres balises personnalisées peuvent apparaître dans la liste de lecture/le manifeste mis à jour, de sorte que  `TimedMetadata` des objets supplémentaires peuvent être ajoutés à la  `MediaPlayerItem.timedMetadata` propriété.
+* `PTMediaPlayerTimeChangeNotification` : pour les flux en direct/linéaires où la liste de lecture/manifeste s’actualise régulièrement, d’autres balises personnalisées peuvent apparaître dans la liste de lecture/manifeste mise à jour, donc des balises supplémentaires `TimedMetadata` peut être ajouté à la variable `MediaPlayerItem.timedMetadata` .
 
-   Ce événement avertit votre application lorsque cela se produit.
+  Cet événement avertit votre application lorsque cela se produit.
 
-   Récupérez les métadonnées minutées de l’une des manières suivantes.
+  Récupérez les métadonnées minutées de l’une des manières suivantes.
 
-   * Définissez votre application pour qu’elle s’ajoute en tant que processus d’écoute à la notification `PTTimedMetadataChangedNotification` et récupérez l’objet à l’aide de `PTTimedMetadataKey`.
+   * Définissez votre application pour qu’elle s’ajoute en tant qu’écouteur à la variable `PTTimedMetadataChangedNotification` notification et récupération de l’objet à l’aide de `PTTimedMetadataKey`.
 
-      ```
-      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
-        name:PTTimedMetadataChangedNotification object:self.player.currentItem]; 
-      
-      - (void) onTimedMetadataChanged:(NSNotification *) notification { 
-          NSDictionary *timedMetadataUserInfo = [[NSDictionary alloc]initWithDictionary: notification.userInfo]; 
-          PTTimedMetadata *newTimedMetadata = [timedMetadataUserInfo objectForKey: PTTimedMetadataKey]; 
-      }
-      ```
+     ```
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
+       name:PTTimedMetadataChangedNotification object:self.player.currentItem]; 
+     
+     - (void) onTimedMetadataChanged:(NSNotification *) notification { 
+         NSDictionary *timedMetadataUserInfo = [[NSDictionary alloc]initWithDictionary: notification.userInfo]; 
+         PTTimedMetadata *newTimedMetadata = [timedMetadataUserInfo objectForKey: PTTimedMetadataKey]; 
+     }
+     ```
 
-   * Accédez à la propriété `timedMetadataCollection` de `PTMediaPlayerItem`, qui comprend tous les objets `PTTimedMetadata` qui ont été notifiés jusqu&#39;à présent.
-
+   * Accédez au `timedMetadataCollection` de `PTMediaPlayerItem`, qui comprend tous les `PTTimedMetadata` des objets qui ont été notifiés jusqu’à présent.

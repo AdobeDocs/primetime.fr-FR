@@ -1,57 +1,55 @@
 ---
-description: L’interface de MediaPlayer encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
+description: L’interface MediaPlayer englobe les fonctionnalités et le comportement d’un lecteur multimédia.
 title: Configuration de MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-
 # Configuration de MediaPlayer {#set-up-the-mediaplayer}
 
-TVSDK fournit des outils pour la création d’une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
+TVSDK fournit des outils pour créer une application de lecteur vidéo avancée (votre lecteur Primetime), que vous pouvez intégrer à d’autres composants Primetime.
 
-Utilisez les outils de votre plate-forme pour créer un lecteur et le connecter à la vue du lecteur multimédia dans TVSDK, qui permet de lire et de gérer des vidéos. Par exemple, TVSDK fournit des méthodes de lecture et de pause. Vous pouvez créer des boutons d&#39;interface utilisateur sur votre plate-forme et définir les boutons pour appeler ces méthodes TVSDK. L&#39;interface MediaPlayer encapsule les fonctionnalités et le comportement d&#39;un lecteur multimédia.
+Utilisez les outils de votre plateforme pour créer un lecteur et le connecter à la vue du lecteur multimédia dans TVSDK, qui dispose de méthodes de lecture et de gestion des vidéos. Par exemple, TVSDK fournit des méthodes de lecture et de pause. Vous pouvez créer des boutons d’interface utilisateur sur votre plateforme et définir les boutons pour appeler ces méthodes TVSDK. L’interface MediaPlayer encapsule les fonctionnalités et le comportement d’un lecteur multimédia.
 
-TVSDK fournit une implémentation unique de l’interface `MediaPlayer` : la classe DefaultMediaPlayer. Si vous avez besoin de la fonctionnalité de lecture vidéo, instanciez `DefaultMediaPlayer`.
+TVSDK fournit une mise en oeuvre unique de `MediaPlayer` interface : classe DefaultMediaPlayer . Lorsque vous avez besoin de la fonctionnalité de lecture vidéo, instanciez `DefaultMediaPlayer`.
 
 >[!NOTE]
 >
->N&#39;interagissez avec l&#39;instance `DefaultMediaPlayer` qu&#39;avec les méthodes exposées par l&#39;interface `MediaPlayer`.
+>Interagissez avec le `DefaultMediaPlayer` uniquement avec les méthodes exposées par la fonction `MediaPlayer` .
 
-1. Instanciez un `MediaPlayerContext` à l’aide de l’instance `authorizedFeatures` chargée par l’application (voir [Charger votre jeton signé](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)).
+1. Instanciation d’une `MediaPlayerContext` en utilisant l’application chargée `authorizedFeatures` instance (voir [Chargement de votre jeton signé](../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)).
 
    ```
    var context:MediaPlayerContext =  
        new MediaPlayerContext(authorizedFeatures)
    ```
 
-1. Instanciez un `MediaPlayer` à l’aide de la méthode public create factory, en transmettant un objet de contexte `MediaPlayerContext` :
+1. Instanciation d’une `MediaPlayer` à l’aide de la méthode public create factory, transmission d’une `MediaPlayerContext` objet context :
 
    ```
    public static function create(context:Context):MediaPlayer
    ```
 
-   Cette opération renvoie une interface générique `MediaPlayer`. 1. Instanciez un `MediaPlayerView` et spécifiez l’instance StageVideo à utiliser :
+   Cela renvoie un générique `MediaPlayer` . 1. Instanciation d’une `MediaPlayerView` et spécifiez l’instance StageVideo à utiliser :
 
    ```
    var view:MediaPlayerView =  
        MediaPlayerView.create(stage.stageVideos[0] )
    ```
 
-1. Associez l’instance `MediaPlayerView` à la nouvelle vue créée :
+1. Associez la variable `MediaPlayerView` avec la vue nouvellement créée :
 
    ```
    mediaPlayer.view = view;
    ```
 
-1. Placez l&#39;instance `MediaPlayerView` sur l&#39;écran du périphérique :
+1. Placez le `MediaPlayerView` sur l’écran de l’appareil :
 
    ```
    container.addChild(view)
    ```
 
-L&#39;instance `MediaPlayer` est désormais disponible et correctement configurée pour afficher le contenu vidéo sur l&#39;écran du périphérique.
+La variable `MediaPlayer` est maintenant disponible et correctement configurée pour afficher le contenu vidéo sur l’écran de l’appareil.

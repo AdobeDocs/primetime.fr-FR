@@ -3,8 +3,7 @@ title: Notes de mise à jour de TVSDK 2.4.1 pour Android
 description: Les notes de mise à jour de TVSDK 2.4.1 pour Android décrivent les nouvelles fonctionnalités et les fonctionnalités prises en charge, ainsi que les problèmes et limitations connus de TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Vous trouverez la documentation suivante :
 
 ・ Aide du système d’aide en ligne TVSDK 2.4 pour Android
 
-・ [Javadocs TVSDK 2.4 pour l’API Java Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
+・ [Javadocs TVSDK 2.4 pour API Java Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/index.html)
 
 Les Javadocs constituent l’autorité ultime, car ils sont générés automatiquement directement à partir du code source TVSDK.
 
@@ -49,9 +48,9 @@ Voici les principales nouvelles fonctionnalités de la version 2.4.1 :
 
    * **Lecture vidéo** (lecture, pause, recherche) avec contrôle du lecteur pour les flux en direct, linéaires et VOD.
    * **Sous-titrage codé.** TVSDK peut afficher 608/708 sous-titres avec une sélection de polices, de tailles de police, de couleurs et d’arrière-plan. Il peut également prendre en charge les vidéos avec des sous-titres de cumul et passer d’un suivi de langue à l’autre s’ils sont disponibles.
-   * **Mode de lecture des tropiques** prend en charge les flux HLS rapides en avant et en arrière qui utilisent des I-Frames. Toutes les commandes de lecture vidéo fonctionnent sur le contenu. Le mouvement lent (avant) est disponible pour le mode de lecture vidéo externe avec des taux compris entre 0 et 1.
+   * **Mode de lecture des tropiques** prend en charge les flux HLS rapides en avant et en arrière qui utilisent des I-Frames. Toutes les commandes de lecture vidéo fonctionnent sur le contenu. Le mouvement lent (vers l’avant) est disponible pour le mode de lecture vidéo externe avec des taux compris entre 0 et 1.
    * **Débit adaptatif (ABR)** permet au lecteur de sélectionner dynamiquement la ou les versions multiples d’un même flux de contenu à lire, en fonction du réseau et d’autres conditions. Vous pouvez définir des paramètres dynamiquement ou dans le fichier de manifeste pour effectuer une sélection parmi des stratégies de sélection agressives, modérées et conservatrices.
-   * **Périodes** Activez un seul fichier TS pour contenir plusieurs segments TS.
+   * **Plages d’octets** Activez un seul fichier TS pour contenir plusieurs segments TS.
    * **Autres rendus audio** Permet au lecteur de basculer entre les pistes audio disponibles.
    * **Prise en charge d’ID3.** TVSDK peut lire des flux audio et vidéo HLS contenant des métadonnées audio ID3, telles que le nom de l’artiste, le titre et l’album.
    * **Basculement. **TVSDK utilise des stratégies pour poursuivre la lecture ininterrompue, en dépit des échecs des serveurs d’hôtes, des fichiers de liste de lecture et des segments.
@@ -74,8 +73,8 @@ Voici les principales nouvelles fonctionnalités de la version 2.4.1 :
 
    * **Suivi des publicités insérées côté serveur.** TVSDK peut effectuer le suivi des publicités insérées par le service d’insertion de publicités Adobe Cloud. Il prend en charge les publicités linéaires aux formats VAST2, VAST3 et VMAP pour les diffusions VOD et live/linear.
    * **Balises HLS personnalisées.** TVSDK utilise son `MediaPlayerConfig` pour activer la notification de l’application du lecteur lorsque des balises HLS personnalisées apparaissent dans le flux.
-   * **Insertion de publicités côté client.** La bibliothèque d’insertion de publicités Auditude fonctionne avec les serveurs Adobe Auditude pour résoudre les publicités en vue d’une insertion dynamique dans du contenu dynamique, linéaire et VOD, aux positions preroll, mid-roll ou post-roll.
-   * **Résolveurs de publicités personnalisés.** Le `ContentResolver, OpportunityGenerator,` et `MediaPlayerClientFactory` Les interfaces vous permettent de mettre en oeuvre un résolveur de contenu alternatif/publicité personnalisé et d’enregistrer un détecteur d’opportunités personnalisé pour travailler avec TVSDK. Le `TestAdResolver` et `AuditudeResolver` Les classes fournissent des exemples C++ d’implémentation d’un résolveur de contenu. Vous trouverez un exemple JavaScript à l’adresse `samples/jspsdk/testapp/psdk.js`.
+   * **Insertion de publicités côté client.** La bibliothèque d’insertion de publicités Auditude fonctionne avec les serveurs Adobe Auditude pour résoudre les publicités en vue de les insérer dynamiquement dans le contenu en direct, linéaire et VOD, aux positions preroll, mid-roll ou post-roll.
+   * **Résolveurs de publicités personnalisés.** La variable `ContentResolver, OpportunityGenerator,` et `MediaPlayerClientFactory` Les interfaces vous permettent de mettre en oeuvre un résolveur de contenu alternatif/publicité personnalisé et d’enregistrer un détecteur d’opportunités personnalisé pour travailler avec TVSDK. La variable `TestAdResolver` et `AuditudeResolver` Les classes fournissent des exemples C++ d’implémentation d’un résolveur de contenu. Vous trouverez un exemple JavaScript à l’adresse `samples/jspsdk/testapp/psdk.js`.
    * **Comportement cohérent de la publicité.** Utilisez la variable `AdPolicySelector` pour permettre un comportement cohérent sur tous les lecteurs pour des opérations telles que la recherche et le jeu vidéo lorsque des publicités sont présentes dans le contenu. Si vous n’implémentez pas le vôtre, TVSDK utilise `DefaultAdPolicySelector`.
    * **Supprimez/remplacez des publicités C3.** Utilisez l’API TVSDK appropriée pour supprimer des plages de contenu personnalisées et insérer dynamiquement de nouvelles publicités sans préparation supplémentaire. Cela s’avère pratique lorsque le contenu en direct/linéaire est diffusé, puis rendu disponible immédiatement à la demande sans nettoyage.
 
@@ -87,7 +86,7 @@ Voici les principales nouvelles fonctionnalités de la version 2.4 :
 
    * **Sous-segmentation** - TVSDK réduit davantage la taille de chaque fragment afin de démarrer la lecture dès que possible.
    * **Téléchargements de publicités parallèles** - TVSDK récupère les publicités en parallèle de la lecture du contenu avant d’atteindre les coupures publicitaires, ce qui permet une lecture transparente des publicités et du contenu.
-   * **Lazy ad resolution** - Avec cette fonctionnalité, nous n’attendons pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues.
+   * **Résolution de publicités différée** - Avec cette fonctionnalité, nous n’attendons pas la résolution des publicités non preroll avant de commencer la lecture, ce qui réduit le temps de démarrage. Les API telles que la recherche et le jeu vidéo ne sont toujours pas autorisées tant que toutes les publicités ne sont pas résolues.
 
 * **Lecture du contenu MP4**
 
@@ -105,7 +104,7 @@ Cette fonctionnalité associe les restrictions de lecture à des résolutions sp
 
 Cette fonctionnalité permet à TVSDK de basculer entre les diffusions iFrame en mode de lecture de l’astuce. Vous pouvez utiliser des profils non iFrame pour effectuer des opérations de lecture à des vitesses inférieures.
 
-* **Jeu de tour lisser**
+* **Lissage de la astuce**
 
 Ces améliorations améliorent l’expérience utilisateur :
 
@@ -119,7 +118,7 @@ La nouvelle logique ABR repose sur la longueur de la mémoire tampon, le taux de
 
 * **Facturation**
 
-TVSDK collecte automatiquement les mesures, en conformité avec le contrat de vente client, afin de générer des rapports d’utilisation périodiques requis à des fins de facturation. Pour chaque événement de démarrage de flux, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour la collecte de données drm (selon la durée du flux facturable) à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère pas avec les suites de rapports Adobe Analytics ou les appels au serveur du client, ni ne les inclut dans celles-ci. Sur demande, ce rapport sur l’utilisation de la facturation est envoyé régulièrement aux clients. Il s’agit de la première phase de la fonctionnalité de facturation prenant uniquement en charge la facturation de l’utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation.
+TVSDK collecte automatiquement les mesures, en conformité avec le contrat de vente client, afin de générer des rapports d’utilisation périodiques requis à des fins de facturation. Pour chaque événement de démarrage de flux, TVSDK utilise l’API d’insertion de données d’Adobe Analytics pour envoyer des mesures de facturation telles que le type de contenu, les indicateurs activés pour l’insertion de publicités et les indicateurs activés pour la collecte de données drm (selon la durée du flux facturable) à la suite de rapports détenue par Adobe Analytics Primetime. Cela n’interfère ni n’est inclus dans les suites de rapports Adobe Analytics ou dans les appels au serveur du client. Sur demande, ce rapport sur l’utilisation de la facturation est envoyé régulièrement aux clients. Il s’agit de la première phase de la fonctionnalité de facturation prenant uniquement en charge la facturation de l’utilisation. Il peut être configuré en fonction du contrat de vente à l’aide des API décrites dans la documentation.
 
 ## Fonctionnalités prises en charge {#supported-features}
 
@@ -129,7 +128,7 @@ TVSDK pour Android 2.4 prend en charge plusieurs fonctionnalités que vous pouve
 >
 >Dans les tableaux de la matrice des fonctionnalités ci-dessous, un √ signifie que la fonctionnalité est prise en charge dans la version actuelle.
 
-### Fonctions de lecture principales {#core-playback-features}
+### Fonctionnalités de lecture principales {#core-playback-features}
 
 | **Fonctionnalité** | **Type de contenu** | **HLS** | **DASH** |
 |---|---|---|---|
@@ -181,7 +180,7 @@ TVSDK pour Android 2.4 prend en charge plusieurs fonctionnalités que vous pouve
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Lecture lisser de la marque (avec ABR)</td> 
+   <td>Lecture de la case à cocher lissée (avec ABR)</td> 
    <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 
@@ -227,7 +226,7 @@ TVSDK pour Android 2.4 prend en charge plusieurs fonctionnalités que vous pouve
    <td>Non pris en charge</td> 
   </tr>
   <tr>
-   <td>Intégrité des diffusions </td> 
+   <td>Intégrité des flux </td> 
    <td>VOD + En direct</td> 
    <td>√</td> 
    <td>Non pris en charge</td> 

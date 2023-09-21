@@ -2,26 +2,24 @@
 title: Présentation
 description: Présentation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
-
 # Présentation{#overview}
 
-Pour délivrer des licences à des clients, vous devez déployer un serveur de licences d’accès aux Adobes. Le serveur de licences utilise le SDK Adobe® Access™ pour effectuer les tâches suivantes :
+Pour accorder des licences aux clients, vous devez déployer un serveur de licences d’accès Adobe. Le serveur de licences utilise le SDK Adobe® Access™ pour effectuer les tâches suivantes :
 
-* Traitez les demandes d’authentification si l’authentification par nom d’utilisateur/mot de passe est prise en charge.
-* Traiter les demandes de licence
-* Traiter les demandes d&#39;obtention de version de serveur : tous les serveurs doivent mettre en oeuvre la prise en charge de ce type de demande.
-* Traiter les demandes d&#39;enregistrement de domaine : uniquement nécessaire si vous implémentez un serveur de domaine.
-* Traiter les demandes de désenregistrement de domaine : uniquement nécessaire si vous implémentez un serveur de domaine.
-* Synchronisation des processus : uniquement nécessaire si les licences spécifient les exigences de synchronisation.
+* Traitement des demandes d’authentification, si l’authentification par nom d’utilisateur/mot de passe est prise en charge.
+* Traitement des demandes de licence
+* Requêtes Process Get Server Version : tous les serveurs doivent mettre en oeuvre la prise en charge de ce type de requête.
+* Traitement des demandes d’enregistrement de domaine : elles ne sont nécessaires que si vous implémentez un serveur de domaine.
+* Traitement des demandes de désinscription de domaine : elles ne sont nécessaires que si vous implémentez un serveur de domaine.
+* Synchronisation des processus : nécessaire uniquement si les licences spécifient les exigences de synchronisation.
 
-En outre, le serveur doit fournir une logique métier pour authentifier les utilisateurs, déterminer si les utilisateurs sont autorisés à vue du contenu et éventuellement suivre l’utilisation des licences.
+En outre, le serveur doit fournir une logique métier pour authentifier les utilisateurs, déterminer si les utilisateurs sont autorisés à afficher le contenu et éventuellement suivre l’utilisation de la licence.
 
-Pour plus d’informations sur l’API Java abordée dans ce chapitre, voir *Adobe Access API Reference*.
+Pour plus d’informations sur l’API Java discutée dans ce chapitre, voir *Référence de l’API Adobe Access*.

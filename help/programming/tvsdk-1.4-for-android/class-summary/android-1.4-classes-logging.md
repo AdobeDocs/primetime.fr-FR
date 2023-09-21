@@ -1,14 +1,12 @@
 ---
 description: Ces classes vous permettent de personnaliser la journalisation.
 title: Classes de journalisation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
-
 
 # Classes de journalisation{#logging-classes}
 
@@ -26,7 +24,7 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Journal</a> </span></td> 
-   <td colname="2"> Classe. Fournit un accès au système de journalisation. </td> 
+   <td colname="2"> Classe. Permet d’accéder au système de journalisation. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" rowsep="0"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/LogEntry.html" format="html" scope="external"> LogEntry</a> </span></td> 
@@ -37,8 +35,8 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
    <td colname="2"> Interface. Active la journalisation personnalisée. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Journaliste</a> </span></td> 
-   <td colname="2">Interface. Méthodes requises pour implémenter une journalisation personnalisée pour l'expression <code>primetime-sdk-name</code>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Enregistreur</a> </span></td> 
+   <td colname="2">Interface. Méthodes requises pour implémenter un journal personnalisé pour la variable <code>primetime-sdk-name</code> Expression. </td> 
   </tr> 
  </tbody>
 </table>

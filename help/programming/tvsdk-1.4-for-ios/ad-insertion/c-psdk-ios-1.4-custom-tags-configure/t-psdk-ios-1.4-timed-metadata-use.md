@@ -1,26 +1,24 @@
 ---
-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
-title: Utiliser des métadonnées minutées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de début.
+title: Utilisation de métadonnées minutées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Utilisation de métadonnées minutées{#use-timed-metadata}
 
-# Utiliser des métadonnées minutées{#use-timed-metadata}
+Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de début.
 
-Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
+Pour les utiliser `PTTimedMetadata` pendant la lecture, utilisez le dictionnaire enregistré de [Stocker les objets de métadonnées minutées lors de leur distribution](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-Pour utiliser ces objets `PTTimedMetadata` enregistrés au cours de la lecture, utilisez le dictionnaire enregistré de [Stocker les objets de métadonnées minutées au fur et à mesure de leur distribution](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
-
-1. Extrayez et mettez à jour le temps de lecture actuel à partir de cette notification et recherchez tous les objets `PTTimedMetadata` dont les débuts correspondent au temps de lecture actuel.
+1. Extrayez et mettez à jour la durée de lecture actuelle à partir de cette notification et recherchez l’ensemble des `PTTimedMetadata` avec les heures de début correspondant à l’heure de lecture actuelle.
 
    Vous pouvez utiliser ces objets pour effectuer diverses actions.
 
-   Par exemple :
+   Par exemple :
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -57,4 +55,4 @@ Pour utiliser ces objets `PTTimedMetadata` enregistrés au cours de la lecture, 
    }
    ```
 
-1. Éliminez régulièrement les instances `PTTimedMetadata` obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
+1. Périodique de vidage `PTTimedMetadata` des instances de la liste pour empêcher la mémoire de croître en continu.

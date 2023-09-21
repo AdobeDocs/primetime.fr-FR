@@ -1,20 +1,18 @@
 ---
-description: Le téléchargement de fichiers vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
+description: Le téléchargement vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
 title: Téléchargements parallèles
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-
 # Téléchargements parallèles {#parallel-downloads}
 
-Le téléchargement de fichiers vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
+Le téléchargement vidéo et audio en parallèle, plutôt que dans une série, réduit les délais de démarrage.
 
-Les téléchargements parallèles permettent de lire des fichiers vidéo à la demande (VOD), d’optimiser l’utilisation de la bande passante disponible à partir d’un serveur, de réduire la probabilité de se retrouver dans des situations de mémoire tampon en cours d’exécution et de réduire le délai entre le téléchargement et la lecture.
+Les téléchargements parallèles permettent de lire des fichiers VOD (video on Demand), optimisent l’utilisation de la bande passante disponible sur un serveur, réduisent la probabilité de se mettre dans des situations de mémoire tampon en cours d’exécution et réduisent le délai entre le téléchargement et la lecture.
 
 <!-- 
 
@@ -27,7 +25,7 @@ Sans téléchargements parallèles, TVSDK émet une requête pour le segment vid
 
 >[!NOTE]
 >
->Cette fonctionnalité s’applique uniquement au contenu dans lequel l’audio et la vidéo sont codés dans différents fichiers (contenu non muxé) et ne s’applique pas au contenu MP4, qui est toujours muxed. Le contenu HLS est souvent non muxé, en particulier avec des fichiers audio alternatifs.
+>Cette fonctionnalité s’applique uniquement au contenu dont le contenu audio et vidéo est codé dans différents fichiers (contenu non muxé) et ne s’applique pas au contenu MP4, qui est toujours muxé. Le contenu HLS est souvent non muxé, en particulier avec du contenu audio alternatif.
 
 <!-- 
 
@@ -36,11 +34,11 @@ See comment above (DASH use case removed).
   This feature applies only to content where the audio and video are encoded into different files (unmuxed content) and does not apply to MP4 content, which is always muxed. Most DASH content is unmuxed, and HLS content is often unmuxed, especially with alternate audio. 
 -->
 
-La connexion HTTP peut connaître des retards aux étapes suivantes :
+La connexion HTTP peut entraîner des retards aux étapes suivantes :
 
 * Lors de l’établissement de la connexion TCP/IP au serveur
 
-   Bien que le client et le serveur aient accepté de communiquer, aucune communication HTTP n&#39;a encore été effectuée. Ce type de délai dépend de l’infrastructure entre le client et le serveur. Ce processus nécessite de trouver un chemin d&#39;accès via Internet entre le client et le serveur et de s&#39;assurer que tous les périphériques, tels que les routeurs et les pare-feu, sur l&#39;itinéraire acceptent le transfert de données.
-* Lors de l’envoi d’une demande HTTP pour un segment ou un manifeste sur la connexion TCP/IP.
+  Bien que le client et le serveur aient accepté de communiquer, aucune communication HTTP n’a encore été effectuée. Ce type de délai dépend de l’infrastructure entre le client et le serveur. Ce processus nécessite de trouver un chemin d’accès Internet entre le client et le serveur et de s’assurer que tous les appareils, tels que les routeurs et les pare-feu, sur l’itinéraire acceptent le transfert de données.
+* Lors de l’envoi d’une requête HTTP pour un segment ou un manifeste via la connexion TCP/IP.
 
-   Le serveur reçoit la demande, la traite et les débuts lui retransmettent les données. Le degré de retard dépend de la charge et de la complexité du logiciel sur le serveur et, dans une certaine mesure, de la vitesse de connexion de transfert lorsque le client envoie la demande.
+  Le serveur reçoit la demande, la traite et commence à renvoyer les données au client. Le degré de délai dépend de la charge et de la complexité du logiciel sur le serveur, ainsi que de la vitesse de connexion de chargement lorsque le client envoie la demande.

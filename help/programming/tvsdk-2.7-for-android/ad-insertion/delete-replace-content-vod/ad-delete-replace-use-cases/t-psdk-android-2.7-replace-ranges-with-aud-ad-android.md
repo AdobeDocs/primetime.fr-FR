@@ -1,24 +1,22 @@
 ---
 description: Vous pouvez insérer des publicités dans du contenu VOD.
-title: Remplacer des plages de temps par une publicité
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Remplacement de périodes par une publicité
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
-# Remplacez les plages de temps par une publicité {#replace-time-ranges-with-an-ad}
+# Remplacement de périodes par une publicité {#replace-time-ranges-with-an-ad}
 
 Vous pouvez insérer des publicités dans du contenu VOD.
 
-Le `TimeRanges` entre `begin` et `end` dans `localTime` est supprimé du plan de montage chronologique. Ces plages sont remplacées par `AdBreak` de `begin` à `begin+replaceDuration`. Si `replacement-duration` n&#39;existe pas en tant que paramètre, le serveur effectue la détermination sur le `Adbreak` renvoyé.
+La variable `TimeRanges` entre le `begin` et `end` in `localTime` sont supprimées de la chronologie. Ces plages sont remplacées par une `AdBreak` de `begin` to `begin+replaceDuration`. Si la variable `replacement-duration` n’existe pas en tant que paramètre, le serveur effectue la détermination sur le renvoyé `Adbreak`.
 
 >[!TIP]
 >
->Vous devez toujours fournir un `replacement-duration` pour les plages personnalisées. Si aucune publicité n&#39;est destinée à remplacer cette plage personnalisée, indiquez une valeur `replacement-duration` de 0.
+>Vous devez toujours fournir un `replacement-duration` pour les plages personnalisées. Si aucune publicité n’est destinée à remplacer cette plage personnalisée, indiquez un `replacement-duration` de 0.
 
 1. Pour remplacer les plages par Primetime et les annonces de prise de décision :
 
@@ -80,4 +78,3 @@ Le `TimeRanges` entre `begin` et `end` dans `localTime` est supprimé du plan de
        "id": "vod_003"
    }
    ```
-

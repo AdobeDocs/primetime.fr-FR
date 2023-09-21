@@ -1,13 +1,12 @@
 ---
 title: Présentation des MVPD
 description: Présentation des MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
 
 ---
-
 
 # Présentation des MVPD {#mvpd-overview}
 
@@ -29,7 +28,7 @@ Il peut être simple de coordonner l’authentification et l’autorisation des 
 
 
 
-Ligne inférieure : L’authentification Adobe Primetime permet de arbitrer en toute sécurité les transactions de droits entre les programmeurs et les MVPD, ce qui facilite l’accès des observateurs au contenu des abonnements. En d’autres termes, l’authentification Adobe Primetime permet aux bons clients d’accéder facilement et rapidement au contenu approprié.
+Bas de ligne : l’authentification Adobe Primetime permet de arbitrer en toute sécurité les transactions de droits entre les programmeurs et les MVPD, ce qui facilite l’accès de la visionneuse au contenu de l’abonnement. En d’autres termes, l’authentification Adobe Primetime permet aux bons clients d’accéder facilement et rapidement au contenu approprié.
 
 
 Avec l’authentification Adobe Primetime, les MVPD reçoivent :
@@ -51,7 +50,7 @@ Le Flash Player est-il requis ? L’authentification Adobe Primetime pour TV Eve
 Quels appareils l’authentification Adobe Primetime prend-elle en charge ? L’authentification Adobe Primetime est prise en charge par pratiquement tous les appareils dotés du kit web HTML5 pour l’affichage dans le navigateur. En outre, l’authentification Adobe Primetime continue à déployer des kits de développement logiciel (SDK) natifs pour diverses plateformes spécifiques aux appareils, notamment iOS, Android™, Xbox360 (obsolète) et Adobe Air® (obsolète). Plus récemment, l’authentification Adobe Primetime a sorti une solution sans client pour les appareils qui ne peuvent pas afficher les pages du navigateur (par exemple, les téléviseurs &quot;intelligents&quot;, les décodeurs et les consoles de jeu).  La possibilité de rendre des pages de navigateur est une exigence pour l’authentification des utilisateurs avec des MVPD.
 
 
-L’authentification Adobe Primetime prend-elle en charge les nouvelles normes pour TV partout ? L’authentification Adobe Primetime est conforme à la spécification OLCA (Online Content Access) de CableLabs, qui fournit des exigences techniques et une architecture pour la diffusion de vidéo à un client de télévision payante à partir de sources en ligne. Adobe a participé au projet conjoint de tests d&#39;interaction de CableLabs en juin 2011 et a passé le processus de test pour une mise en oeuvre par un fournisseur de services. L’authentification Adobe Primetime est vérifiée (complète et testée) par rapport aux spécifications OLCA pour l’authentification. Le composant d’autorisation est terminé, mais la vérification des tests attend actuellement la sortie de l’environnement de test de CableLabs. Adobe est également un membre principal de l&#39;OATC (Open Authentication Technical Consortium) et participe à plusieurs projets de rédaction de spécifications de ces sous-comités dans le cadre de cet organisme.
+L’authentification Adobe Primetime prend-elle en charge les nouvelles normes pour TV partout ? L’authentification Adobe Primetime est conforme à la spécification OLCA (Online Content Access) de CableLabs, qui fournit des exigences techniques et une architecture pour la diffusion de vidéo à un client de télévision payante à partir de sources en ligne. Adobe a participé au projet conjoint de test d&#39;interaction de CableLabs en juin 2011 et a passé le processus de test pour une mise en oeuvre par un fournisseur de services. L’authentification Adobe Primetime est vérifiée (complète et testée) par rapport aux spécifications OLCA pour l’authentification. Le composant d’autorisation est terminé, mais la vérification des tests attend actuellement la sortie de l’environnement de test de CableLabs. Adobe est également un membre actif de l’OATC (Open Authentication Technical Consortium) et participe à plusieurs projets de rédaction de spécifications de ces sous-comités dans le cadre de cet organisme.
 
 
 
@@ -71,17 +70,18 @@ L’authentification Adobe Primetime est un service hébergé qui permet une int
 L’authentification Adobe Primetime est proposée via le modèle Software as a Service (SaaS) et permet une communication plus sécurisée entre les utilisateurs finaux, les MVPD et les programmeurs, afin de valider les droits sur le contenu. Les composants principaux du service sont les suivants :
 
 Côté serveur : serveur d’authentification Adobe Primetime hébergé. Il s’agit d’un serveur d’applications qui interagit dans la communication back channel (serveur à serveur) avec les systèmes d’authentification des MVPD.
-Côté client : Activateur d’accès côté client : l’activateur d’accès est un petit fichier chargé dans une page web ou une application de lecteur du programmeur. Il fournit des API de droits à l’application d’affichage de contenu du programmeur et communique avec le serveur d’authentification Adobe Primetime.
+Côté client : l’activateur d’accès côté client : l’activateur d’accès est un petit fichier chargé dans la page web ou l’application de lecteur d’un programmeur. Il fournit des API de droits à l’application d’affichage de contenu du programmeur et communique avec le serveur d’authentification Adobe Primetime.
 Services web sans client (pour les appareils non compatibles avec le web) : services web RESTful qui fournissent des API de droits pour les appareils tels que les téléviseurs intelligents, les consoles de jeux et les décodeurs.
 
 >[!NOTE]
 >
 >En tant que MVPD, vos services web doivent être en mesure de reconnaître les demandes d’authentification et d’autorisation provenant de l’authentification Adobe Primetime et de répondre avec les données requises dans le format attendu.
+>
 
-L’authentification Adobe Primetime vous permet de fournir aux clients une gestion fédérée des identités, également appelée authentification et autorisation de connexion unique (SSO). Avec l’authentification Adobe Primetime, les abonnés n’ont pas besoin de se reconnecter après leur première authentification, tant que cette authentification est autorisée par le MVPD à persister. (En règle générale, 30 jours.) Pour ce faire, l’authentification Adobe Primetime fournit un domaine commun pour les jetons d’authentification de nos clients. Ces informations d’état d’authentification sont disponibles pour tous les sites participants qui sont intégrés à un MVPD donné.
+L’authentification Adobe Primetime vous permet de fournir aux clients une gestion fédérée des identités, également appelée authentification et autorisation de connexion unique (SSO). Avec l’authentification Adobe Primetime, il n’est pas nécessaire que les abonnés se connectent à nouveau après leur première authentification, tant que cette authentification est autorisée par le MVPD à persister. (En règle générale, 30 jours.) Pour ce faire, l’authentification Adobe Primetime fournit un domaine commun pour les jetons d’authentification de nos clients. Ces informations d’état d’authentification sont disponibles pour tous les sites participants qui sont intégrés à un MVPD donné.
 
 
-Actuellement, la plupart des intégrations d’authentification Adobe Primetime avec les MVPD utilisent le protocole SAML, l’une des normes d’authentification Principales. L’authentification Adobe Primetime agit en tant que fournisseur de service proxy dans l’architecture SAML et conserve la réponse de l’authentification SAML en tant que jeton sécurisé dans le domaine commun de l’Adobe. L’authentification Adobe Primetime est compatible avec SAML 2.0. Cependant, bien que l’authentification Adobe Primetime soit généralement utilisée avec les solutions SAML SSO à ce stade, l’architecture de l’authentification Adobe Primetime n’est liée à aucun protocole spécifique. Par conséquent, la prise en charge de nouveaux protocoles, tels que ceux basés sur OAuth 2.0 ou les protocoles personnalisés, peut être ajoutée au fil du temps.
+Actuellement, la plupart des intégrations d’authentification Adobe Primetime avec les MVPD utilisent le protocole SAML, l’une des principales normes d’authentification. L’authentification Adobe Primetime agit en tant que fournisseur de service proxy dans l’architecture SAML et conserve la réponse de l’authentification SAML en tant que jeton sécurisé dans le domaine commun de l’Adobe. L’authentification Adobe Primetime est compatible avec SAML 2.0. Cependant, bien que l’authentification Adobe Primetime soit généralement utilisée avec les solutions SAML SSO à ce stade, l’architecture de l’authentification Adobe Primetime n’est liée à aucun protocole spécifique. Par conséquent, la prise en charge de nouveaux protocoles, tels que ceux basés sur OAuth 2.0 ou les protocoles personnalisés, peut être ajoutée au fil du temps.
 
 
 Adobe travaille avec l’équipe technique d’un MVPD pour configurer l’authentification Adobe Primetime afin de répondre aux besoins de toutes les intégrations existantes. L’intégration est gratuite pour les MVPD, en supposant une intégration &quot;standard&quot; et des exigences de prise en charge minimales (documentation et prise en charge de base des emails). Si un MVPD nécessite une assistance importante ou un calendrier réaffecté, des frais d’assistance peuvent être facturés, ou le fournisseur peut vouloir travailler avec un tiers familiarisé avec notre solution telle que Synacor.
@@ -104,7 +104,7 @@ Le diagramme suivant illustre la relation entre le MVPD et le programmeur avec c
 Vous trouverez ci-dessous un aperçu de certains des principaux composants de l’écosystème d’authentification Adobe Primetime. Il s’agit notamment :
 
 * [Accès aux services Web sans client](#ae)
-* [Serveur principal hébergé par l’Adobe](#backend)
+* [Serveur principal hébergé par Adobe](#backend)
 * [Jetons](#tokens)
 
 ### Accès à Activateur/Services Web sans client {#ae}
@@ -164,7 +164,7 @@ L’organigramme suivant présente le processus global de confirmation des droit
 
 Les étapes suivantes présentent un exemple du flux d’authentification Adobe Primetime.  Il s’agit de la partie du processus de droit dans laquelle un programmeur détermine si l’utilisateur est un client valide d’un MVPD.  Dans ce scénario, l’utilisateur est un abonné valide à un MVPD.  L’utilisateur tente d’afficher du contenu protégé à l’aide d’une application de Flash du programmeur :
 
-1. L’utilisateur accède à la page web du programmeur, qui charge l’application de Flash du programmeur et les composants Access Enabler de l’authentification Adobe Primetime sur la machine de l’utilisateur. L’application de Flash utilise Access Enabler pour définir l’identification du programmeur avec l’authentification Adobe Primetime, et l’authentification Adobe Primetime prime l’activation d’accès avec des données de configuration et d’état pour ce programmeur (le &quot;demandeur&quot;). L’activateur d’accès doit recevoir ces données du serveur avant d’effectuer tout autre appel API.  Note technique : le programmeur définit son identité avec le `setRequestor()` méthode; pour plus d’informations, voir [Guide d’intégration de programmeur](/help/authentication/programmer-integration-guide-overview.md).
+1. L’utilisateur accède à la page web du programmeur, qui charge l’application de Flash du programmeur et les composants Access Enabler de l’authentification Adobe Primetime sur la machine de l’utilisateur. L’application de Flash utilise Access Enabler pour définir l’identification du programmeur avec l’authentification Adobe Primetime, et l’authentification Adobe Primetime prime l’activation d’accès avec des données de configuration et d’état pour ce programmeur (le &quot;demandeur&quot;). L’activateur d’accès doit recevoir ces données du serveur avant d’effectuer tout autre appel API.  Remarque technique : le programmeur a défini son identité avec le `setRequestor()` ; pour plus d’informations, voir [Guide d’intégration de programmeur](/help/authentication/programmer-integration-guide-overview.md).
 1. Lorsque l’utilisateur tente d’afficher le contenu protégé du programmeur, l’application du programmeur présente à l’utilisateur une liste de MVPD, à partir de laquelle l’utilisateur sélectionne un fournisseur.
 1. L’utilisateur est redirigé vers un serveur d’authentification Adobe Primetime, où est créée une requête SAML chiffrée pour le MVPD sélectionné par l’utilisateur. Cette requête est envoyée en tant que requête d’authentification au nom du programmeur au MVPD. Selon le système du MVPD, le navigateur de l’utilisateur est alors redirigé vers le site du MVPD pour se connecter ou un iFrame de connexion est créé dans l’application du programmeur.
 1. Dans les deux cas (redirection ou iFrame), le MVPD accepte la demande et affiche sa page de connexion.

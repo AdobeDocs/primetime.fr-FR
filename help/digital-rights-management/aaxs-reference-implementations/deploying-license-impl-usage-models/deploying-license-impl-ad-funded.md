@@ -1,16 +1,14 @@
 ---
-title: Publicités financées
-description: Publicités financées
+title: Publicité financée
+description: Publicité financée
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '25'
 ht-degree: 0%
 
 ---
 
-
-# {#ad-funded} financé par la publicité
+# Publicité financée {#ad-funded}
 
 Le contenu est monétisé en incluant la publicité dans l’expérience. Avec ce modèle, le contenu peut être distribué sans nécessiter d’authentification de l’utilisateur.

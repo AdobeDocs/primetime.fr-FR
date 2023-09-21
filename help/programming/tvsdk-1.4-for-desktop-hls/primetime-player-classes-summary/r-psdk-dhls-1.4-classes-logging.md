@@ -1,14 +1,12 @@
 ---
 description: Ces classes vous permettent de personnaliser la journalisation.
 title: Classes de journalisation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
-
 
 # Classes de journalisation{#logging-classes}
 
@@ -26,23 +24,23 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> BaseLogger</a></span> </td> 
-   <td colname="2"> Classe. Classe d'implémentation de base de l'interface de journalisation. </td> 
+   <td colname="2"> Classe. Classe d’implémentation de base de l’interface de journalisation. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Classe. La journalisation par défaut envoie tous les messages entrants à suivre. </td> 
+   <td colname="2"> Classe. L’enregistreur par défaut envoie tous les messages entrants à suivre. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Journal</a></span> </td> 
-   <td colname="2"> Classe. Fournit un accès au système de journalisation. </td> 
+   <td colname="2"> Classe. Permet d’accéder au système de journalisation. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a></span> </td> 
    <td colname="2"> Classe. Fabrique de journalisation par défaut.</td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Journaliste</a></span> </td> 
-   <td colname="2">Interface. Méthodes requises pour implémenter une journalisation personnalisée pour l’expression. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Enregistreur</a></span> </td> 
+   <td colname="2">Interface. Méthodes requises pour implémenter un journal personnalisé pour l’expression. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/NullLogger.html" format="html" scope="external"> NullLogger</a></span> </td> 
@@ -50,4 +48,3 @@ Package : [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/a
   </tr> 
  </tbody> 
 </table>
-

@@ -1,8 +1,7 @@
 ---
 title: Activation des Services de droits Primetime pour un programmeur sur Xbox 360 et XboxOne sans client
 description: Activation des Services de droits Primetime pour un programmeur sur Xbox 360 et XboxOne sans client
-exl-id: ff7254de-9ea4-4c27-a186-d1c2eea12222
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%

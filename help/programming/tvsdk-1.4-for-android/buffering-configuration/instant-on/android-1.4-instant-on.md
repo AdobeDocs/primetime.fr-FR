@@ -1,37 +1,35 @@
 ---
-description: Le terme "instantané" désigne le préchargement d’un ou de plusieurs canaux afin qu’un utilisateur qui sélectionne un canal ou change de canal voit le contenu s’afficher immédiatement. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur début regarder.
-title: Instant le
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Le terme "instantané" fait référence au préchargement d’un ou de plusieurs canaux de sorte qu’un utilisateur qui sélectionne un canal ou qui change de canal voit la lecture immédiate du contenu. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur commence à regarder.
+title: Instant on
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
+# Instant on {#instant-on}
 
-# Instant sur {#instant-on}
+Le terme &quot;instantané&quot; fait référence au préchargement d’un ou de plusieurs canaux de sorte qu’un utilisateur qui sélectionne un canal ou qui change de canal voit la lecture immédiate du contenu. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur commence à regarder.
 
-Le terme &quot;instantané&quot; désigne le préchargement d’un ou de plusieurs canaux afin qu’un utilisateur qui sélectionne un canal ou change de canal voit le contenu s’afficher immédiatement. La mise en mémoire tampon est déjà effectuée au moment où l’utilisateur début regarder.
+Sans instantanément, TVSDK initialise le média à lire, mais ne commence pas à mettre en mémoire tampon le flux jusqu’à ce que l’application appelle `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. À l’instant présent, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’éléments du lecteur multimédia), et TVSDK commence immédiatement à mettre en mémoire tampon les diffusions.
 
-Sans instantané, TVSDK initialise le média à lire, mais ne début pas la mise en mémoire tampon du flux tant que l’application n’appelle pas `play`. L’utilisateur ne voit aucun contenu tant que la mise en mémoire tampon n’est pas terminée. Instantanément, vous pouvez lancer plusieurs instances de lecteur multimédia (ou de chargeur d’élément du lecteur multimédia) et les débuts TVSDK mettent immédiatement les flux en mémoire tampon.
+Lorsqu’un utilisateur modifie le canal et que la diffusion a été mise en mémoire tampon correctement, l’appel `play` sur le nouveau canal, la lecture démarre immédiatement.
 
-Lorsqu’un utilisateur modifie le canal et que le flux est mis en mémoire tampon correctement, il appelle `play` sur le nouveau début de lecture immédiatement.
-
-Bien qu’il n’existe aucune limite au nombre d’instances `MediaPlayer` que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme davantage de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d’informations sur ces instances, voir [Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+Bien qu’il n’existe aucune limite au nombre de `MediaPlayer` les instances que TVSDK peut exécuter, l’exécution d’un plus grand nombre d’instances consomme plus de ressources. Les performances de l’application peuvent être affectées par le nombre d’instances en cours d’exécution. Pour plus d’informations sur ces instances, voir [Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
 
 ## Configuration de la mise en mémoire tampon pour la lecture instantanée {#configure-buffering-for-instant-on-playback}
 
-Dès qu’il est activé, les utilisateurs peuvent changer de canal et de début de lecture immédiatement sans délai d’attente. Lorsque vous activez l’instantané, TVSDK met en mémoire tampon un ou plusieurs canaux avant le début de la lecture.
+Dès qu’ils sont activés, les utilisateurs peuvent changer de canal et la lecture démarre immédiatement sans délai d’attente. Lorsque vous activez l’instantané, TVSDK met en mémoire tampon une ou plusieurs chaînes avant le début de la lecture.
 
-1. Vérifiez que la ressource est chargée et prête à être lue en vérifiant que l&#39;état est PRÉPARÉ.
-1. Avant d&#39;appeler `play`, appelez `prepareBuffer` pour chaque instance `MediaPlayer`.
+1. Vérifiez que la ressource a été chargée et qu’elle est prête à être lue en vérifiant que l’état est PRÉPARÉ.
+1. Avant d’appeler `play`, appel `prepareBuffer` pour chaque `MediaPlayer` instance.
 
-   Cela active l&#39;instantané, ce qui signifie que TVSDK début la mise en mémoire tampon sans réellement lire la ressource média. TVSDK distribue le événement `BUFFERING_COMPLETED` lorsque la mémoire tampon est pleine.
+   Cela permet d’activer instantanément, ce qui signifie que TVSDK commence la mise en mémoire tampon sans réellement lire la ressource multimédia. TVSDK distribue la variable `BUFFERING_COMPLETED` lorsque la mémoire tampon est pleine.
 
    >[!NOTE]
    >
-   >Par défaut, `prepareBuffer` et `prepareToPlay` configurent le flux média pour qu’il soit lu en début dès le début. Pour début à une autre position, transmettez la position (en millisecondes) dans `prepareToPlay`.
+   >Par défaut, `prepareBuffer` et `prepareToPlay` configurez le flux multimédia pour qu’il commence à être lu à partir du début. Pour commencer à une autre position, transmettez la position (en millisecondes) dans `prepareToPlay`.
 
    ```java
    @Override 
@@ -54,7 +52,7 @@ Dès qu’il est activé, les utilisateurs peuvent changer de canal et de début
    }
    ```
 
-1. Lorsque vous recevez le événement `BUFFERING_COMPLETE`, début de lecture de l’élément ou affichage des commentaires visuels pour indiquer que le contenu est complètement mis en mémoire tampon.
+1. Lorsque vous recevez la variable `BUFFERING_COMPLETE` , commencez à lire l’élément ou affichez un commentaire visuel pour indiquer que le contenu est entièrement mis en mémoire tampon.
 
    Si vous appelez `play`, la lecture doit commencer immédiatement.
 

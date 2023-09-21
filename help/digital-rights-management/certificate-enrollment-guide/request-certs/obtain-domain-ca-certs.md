@@ -1,28 +1,26 @@
 ---
-title: Obtention des certificats d’autorité de certification de domaine
-description: Obtention des certificats d’autorité de certification de domaine
+title: Obtention de certificats d’autorité de certification de domaine
+description: Obtention de certificats d’autorité de certification de domaine
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Obtention de certificats d’autorité de certification de domaine{#obtain-domain-ca-certificates}
 
-# Obtention des certificats d&#39;autorité de certification de domaine{#obtain-domain-ca-certificates}
+Contrairement au certificat du serveur de licences, de Packager ou de transport, le certificat de l’autorité de certification du domaine n’est pas émis par Adobe. Vous pouvez obtenir ce certificat auprès d’une autorité de certification ou générer un certificat autosigné à utiliser à cette fin.
 
-Contrairement au certificat License Server, Packager ou Transport, le certificat d&#39;autorité de certification de domaine n&#39;est pas émis par Adobe. Vous pouvez obtenir ce certificat auprès d’une autorité de certification ou générer un certificat autosigné à utiliser à cette fin.
+Le certificat d’autorité de certification du domaine doit utiliser une clé 1 024 bits et contenir les attributs standard requis dans un certificat d’autorité de certification :
 
-Le certificat d’autorité de certification de domaine doit utiliser une clé 1024 bits et contenir les attributs standard requis dans un certificat d’autorité de certification :
-
-* Extension de contraintes de base avec l&#39;indicateur CA défini sur true
-* Extension d&#39;utilisation de clés indiquant que la signature de certificat est autorisée
+* Extension de contraintes de base avec l’indicateur CA défini sur true
+* L’extension d’utilisation de clé spécifiant la signature de certificat est autorisée
 
 Par exemple, avec OpenSSL, un certificat d’autorité de certification auto-signé peut être généré comme suit :
 
-1. Créez un fichier appelé [!DNL ca-extensions.txt] contenant :
+1. Créez un fichier appelé [!DNL ca-extensions.txt] contain :
 
    ```
    keyUsage=critical,keyCertSign  
@@ -36,7 +34,7 @@ Par exemple, avec OpenSSL, un certificat d’autorité de certification auto-sig
    openssl genrsa -des3 -out domain-ca.key 1024 
    ```
 
-1. Générer une CSR :
+1. Générer une demande de signature de certificat :
 
    ```
    openssl req -new -key domain-ca.key -out domain-ca.csr 
@@ -49,16 +47,15 @@ Par exemple, avec OpenSSL, un certificat d’autorité de certification auto-sig
      -out domain-ca.cer -extfile ca-extensions.txt 
    ```
 
-1. Générer un mot de passe :
+1. Générer le mot de passe :
 
    ```
    openssl rand -base64 8 
    ```
 
-1. Générer PFX :
+1. Generate PFX :
 
    ```
    openssl pkcs12 -export -inkey domain-ca.key \ 
    -in domain-ca.cer -out domain-ca.pfx
    ```
-

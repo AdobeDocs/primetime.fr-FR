@@ -2,19 +2,17 @@
 title: Analyse des performances
 description: Analyse des performances
 copied-description: true
-exl-id: bef14bc2-30dc-44e5-bdfe-8b79f3af2cec
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
-# Analyser les performances {#analyze-performnce}
+# Analyse des performances {#analyze-performnce}
 
-La console Ad Insertion Primetime offre des tableaux de bord pour analyser les demandes et les performances publicitaires de sessions ou flux individuels. Pour plus d’informations, voir [Surveillance des performances](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/performance-monitoring.md) et [Rapports et facturation](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/reporting-and-billing.md).
+La console Ad Insertion Primetime propose des tableaux de bord pour analyser les requêtes et les performances publicitaires de sessions ou flux individuels. Pour plus d’informations, voir [Suivi des performances](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/performance-monitoring.md) et [Reporting et facturation](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/reporting-and-billing.md).
 
-## Analyser les minutages individuels d&#39;une requête {#analyze-timings}
+## Analyse des minutages individuels d’une requête {#analyze-timings}
 
-Les minutages de résolution de CDN et de publicité peuvent être inspectés à l’aide d’en-têtes envoyés avec chaque requête.  Pour plus d’informations, voir [Débogage des en-têtes](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).
+Les délais pour la résolution du réseau de diffusion de contenu et de la publicité peuvent être vérifiés à l’aide d’en-têtes envoyés avec chaque demande.  Pour plus d’informations, voir [Débogage des en-têtes](/help/primetime-ad-insertion/performance-monitoring-debugging-reporting/debugging-headers.md).

@@ -1,13 +1,12 @@
 ---
 title: Autorisation de contrôle en amont MVPD
 description: Autorisation de contrôle en amont MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
-
 
 # Autorisation de contrôle en amont MVPD
 
@@ -44,18 +43,18 @@ La réponse d’authentification SAML de l’IdP doit inclure une instruction At
 </saml:AttributeStatement>
 ```
 
-L’exemple ci-dessus présente une liste contenant deux ressources préautorisées : &quot;MMOD&quot; et &quot;Jeux Olympiques 2012&quot;.
+L&#39;exemple ci-dessus présente une liste contenant deux ressources préautorisées : &quot;MMOD&quot; et &quot;Jeux Olympiques 2012&quot;.
 
 Cela permet d’atteindre le meilleur scénario, et aucun appel réseau ne sera effectué lorsque le programmeur appelle checkPreauthorizedResources(), puisque tout est déjà sur le client.
 
 ## Contrôle en amont multicanal dans AuthZ {#preflight-multich-authz}
 
-Cette implémentation de contrôle en amont est également compatible OLCA (Cablelabs).  La spécification Authentication and Authorization Interface 1.0 (sections 7.5.3 et 7.5.4) décrit les méthodes de demande d’informations d’autorisation auprès d’un MVPD à l’aide d’assertions SAML ou de XACML. Il s’agit de la méthode recommandée pour interroger l’état d’autorisation pour les MVPD qui ne prennent pas en charge cette fonctionnalité dans le cadre du flux d’authentification. L’authentification Adobe Primetime émet un appel réseau unique au MVPD pour récupérer la liste des ressources autorisées.
+Cette mise en oeuvre de contrôle en amont est également compatible OLCA (Cablelabs).  La spécification Authentication and Authorization Interface 1.0 (sections 7.5.3 et 7.5.4) décrit les méthodes de demande d’informations d’autorisation auprès d’un MVPD à l’aide d’assertions SAML ou de XACML. Il s’agit de la méthode recommandée pour interroger l’état d’autorisation pour les MVPD qui ne prennent pas en charge cette fonctionnalité dans le cadre du flux d’authentification. L’authentification Adobe Primetime émet un appel réseau unique au MVPD pour récupérer la liste des ressources autorisées.
 
 
 L’authentification Adobe Primetime reçoit la liste des ressources de l’application du programmeur. L’intégration MVPD de l’authentification Adobe Primetime peut alors effectuer un appel AuthZ comprenant toutes ces ressources, puis analyser la réponse et extraire les décisions de demande/refus multiples.  Le flux du contrôle en amont avec le scénario AuthZ multicanal fonctionne comme suit :
 
-1. L’application du programmeur envoie une liste de ressources séparées par des virgules via l’API cliente de contrôle en amont, par exemple : &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
+1. L’application du programmeur envoie une liste de ressources séparée par des virgules via l’API cliente de contrôle en amont, par exemple : &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
 1. L’appel de requête MVPD preflight AuthZ contient plusieurs ressources et possède la structure suivante :
 
 ```XML
@@ -125,7 +124,7 @@ Le tableau suivant répertorie les MVPD qui prennent en charge l’autorisation 
 
 | Approche de contrôle en amont | MVPD | Remarques |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ multicanal | Composer AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Verizon OSN Bell Optimum AlticeOne |  |
+| AuthZ multicanal | Composer AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Verizon OSN Bell Optimum AlticeOne |                                                                    |
 | Liaison de canaux dans les métadonnées utilisateur | Suddenlink HTC | Toutes les intégrations directes de Synacor peuvent également prendre en charge cette approche. |
 | Branchement et jointure | Tous les autres ne sont pas répertoriés ci-dessus | Le nombre maximum de ressources coché par défaut est de 5. |
 

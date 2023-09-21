@@ -1,40 +1,38 @@
 ---
-title: Spécifications d’Adobe Primetime
-seo-title: Spécifications d’Adobe Primetime
-description: Spécifications d’Adobe Primetime
-seo-description: Spécifications d’Adobe Primetime
+title: Spécifications Adobe Primetime
+seo-title: Adobe Primetime Specifications
+description: Spécifications Adobe Primetime
+seo-description: Adobe Primetime Specifications
 topic-tags: Adobe Primetime Specifications
-translation-type: tm+mt
-source-git-commit: 0bd926b510cd23268b6374ef81a09efcc5d1371a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
+# Spécifications Adobe Primetime
 
-# Spécifications d’Adobe Primetime
+Adobe Primetime apporte la télévision à chaque écran connecté à l’IP. Il offre aux programmeurs et aux opérateurs des capacités modulaires pour diffuser, protéger, analyser et monétiser des vidéos sur différents postes de travail et appareils. Ces expériences s’appuient sur un certain nombre de technologies de diffusion en continu utilisées pour diffuser du contenu et de la publicité aux lecteurs vidéo Primetime.
 
-Adobe Primetime apporte la TV à chaque écran connecté à IP. Il offre aux programmeurs et aux opérateurs des capacités modulaires pour diffuser, protéger, analyser et monétiser des vidéos sur des ordinateurs de bureau et des périphériques. Ces expériences optimisent un certain nombre de technologies de diffusion en continu utilisées pour diffuser du contenu et de la publicité aux lecteurs vidéo Primetime.
+La spécification d’insertion de programme numérique Adobe Primetime, version 1.2, définit les signaux utilisés pour insérer du contenu publicitaire et alternatif dans les flux Primetime. Cette spécification définit le signal utilisé pour RTMP, HDS et HLS.
 
-La version 1.2 de Adobe Primetime Digital Programme Insertion Specification (Spécifications d’insertion de  numériques de) définit le signal utilisé pour insérer de la publicité et du contenu alternatif dans les flux Primetime. Cette spécification définit le signal utilisé pour RTMP, HDS et HLS.
+## Spécification de l’insertion de programmes numériques Adobe Primetime (version 1.2) {#digital-program-insertion-specification}
 
-## Spécifications d&#39;insertion de Programme numérique Adobe Primetime (version 1.2) {#digital-program-insertion-specification}
+La spécification d’insertion de programme numérique Adobe Primetime, version 1.2, définit les signaux utilisés pour insérer de la publicité et du contenu alternatif dans les flux RTMP, HDS et HLS compatibles avec Primetime.
 
-La version 1.2 de Adobe Primetime Digital Programme Insertion Specification (Spécification d’insertion de  numérique) définit le signal utilisé pour insérer de la publicité et du contenu alternatif dans les flux RTMP, HDS et HLS compatibles avec Primetime.
+[Téléchargement de la spécification d’insertion de programmes numériques Primetime](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
-[Téléchargement de la spécification d&#39;insertion de Programme numérique Primetime](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+## Profil de diffusion en continu HTTP Adobe Primetime (avril 2014) {#http-live-streaming-profile}
 
-## profil de diffusion en flux continu HTTP en Adobe Primetime (avril 2014) {#http-live-streaming-profile}
+Le profil HTTP Live Streaming (PT-HLS) Adobe Primetime est un ensemble d’extensions du protocole HTTP Live Streaming (HLS) qui permettent des cas d’utilisation vidéo de qualité supérieure, tels que le contenu protégé par accès à l’Adobe, le contenu publicitaire et la signalisation publicitaire.
 
-Le Profil Adobe Primetime HTTP Live Streaming (PT-HLS) est un ensemble d’extensions du protocole HTTP Live Streaming (HLS) qui permettent d’utiliser des vidéos haut de gamme, telles que le contenu protégé d’accès aux Adobes, le contenu publicitaire et la signalisation publicitaire.
+[Téléchargement des spécifications du profil HTTP Live Streaming Adobe Primetime](assets/PrimetimeHLS_April2014.pdf)
 
-[Téléchargement des spécifications du profil de diffusion en flux continu HTTP Adobe Primetime](assets/PrimetimeHLS_April2014.pdf)
-
-## Directives d&#39;interopérabilité Adobe Primetime Dynamic Adaptive Streaming over HTTP (DASH) (janvier 2016) {#dynamic-adaptive-streaming-http}
+## Instructions d’interopérabilité de Dynamic Adaptive Streaming over HTTP (DASH) Adobe Primetime (janvier 2016) {#dynamic-adaptive-streaming-http}
 
 Ce document décrit les exigences de création de contenu DASH compatible avec Adobe Primetime.
 
-[Téléchargez les instructions d&#39;interopérabilité Adobe Primetime Dynamic Adaptive Streaming over HTTP (DASH)](assets/PrimetimeDASH_Jan2016.pdf)
+[Téléchargez les instructions d’interopérabilité de Dynamic Adaptive Streaming over HTTP (DASH) d’Adobe Primetime](assets/PrimetimeDASH_Jan2016.pdf)
 
-L&#39;Adobe prend sérieusement en compte les commentaires de la communauté afin d&#39;améliorer les spécifications technologiques de Primetime. Veuillez communiquer à l&#39;Adobe à l&#39;adresse primetime@adobe.com toute information non claire ou potentiellement erronée contenue dans la spécification. Toutes les soumissions par courrier électronique sont soumises aux [Conditions d&#39;utilisation](https://www.adobe.com/legal/terms.html).
+Adobe prend sérieusement en compte les commentaires de la communauté afin d’améliorer les spécifications de technologie Primetime. Partagez toute information non claire ou potentiellement erronée dans la spécification pour l’Adobe à l’adresse primetime@adobe.com. Toutes les soumissions par courrier électronique seront soumises au [Conditions d’utilisation](https://www.adobe.com/legal/terms.html).

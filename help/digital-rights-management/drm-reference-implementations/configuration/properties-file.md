@@ -2,19 +2,17 @@
 title: Fichier de propriétés du serveur de licences
 description: Fichier de propriétés du serveur de licences
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
-
 # Fichier de propriétés du serveur de licences{#license-server-properties-file}
 
-Le serveur de licences référence les propriétés définies dans le fichier [!DNL flashaccess-refimpl.properties]. Vous pouvez vous reporter directement à ce fichier pour obtenir des informations détaillées sur des valeurs spécifiques et pour obtenir des informations sur l’utilisation de chaque propriété. Un exemple fonctionnel complet est fourni dans le répertoire [!DNL resources] de l&#39;implémentation de référence ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources/).`).
+Le serveur de licences référence les propriétés définies dans la variable [!DNL flashaccess-refimpl.properties] fichier . Vous pouvez vous référer directement à ce fichier pour plus d’informations sur des valeurs spécifiques et pour plus d’informations sur l’utilisation de chaque propriété. Un exemple fonctionnel complet est fourni dans la section [!DNL resources] répertoire de l’implémentation de référence ( `([DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources/).`).
 
-**Informations d&#39;identification**  : le fichier de propriétés contient des paramètres pour l&#39;emplacement des informations d&#39;identification que l&#39;Adobe vous envoie. Vous pouvez spécifier ces informations d’identification dans un fichier [!DNL .pfx] avec un mot de passe ou fournir un alias et un mot de passe pour les informations d’identification stockées sur un HSM. Vous devez au moins configurer les propriétés liées aux informations d&#39;identification de transport et aux informations d&#39;identification du serveur de licences. Spécifiez l’emplacement de vos fichiers d’informations d’identification par rapport au répertoire que vous spécifiez dans la propriété `config.resourcesDirectory`.
+**Informations d’identification** - Le fichier de propriétés comprend des paramètres pour l’emplacement des informations d’identification qui vous Adobe des problèmes. Vous pouvez spécifier ces informations d’identification dans une [!DNL .pfx] avec un mot de passe ou fournissez un alias et un mot de passe pour les informations d’identification stockées sur un HSM. Vous devez au moins configurer les propriétés liées aux informations d’identification de transport et aux informations d’identification du serveur de licences. Spécifiez l’emplacement de vos fichiers d’informations d’identification par rapport au répertoire que vous spécifiez dans la variable `config.resourcesDirectory` .
 
-**Flash Media Rights Management Server**  - Le  `flashaccess-refimpl.properties` fichier comprend également plusieurs propriétés liées au contenu d’assemblage. Ces propriétés sont utilisées uniquement pour la conversion des métadonnées de Flash Media Rights Management Server 1.x. Après avoir modifié les valeurs de ce fichier de propriétés, pour que les modifications prennent effet, redémarrez le serveur de licences.
+**Flash Media Rights Management Server** - La variable `flashaccess-refimpl.properties` comprend également plusieurs propriétés liées au contenu de package. Ces propriétés sont utilisées uniquement pour la conversion des métadonnées du serveur de Rights Management de médias Flash 1.x. Après avoir modifié les valeurs de ce fichier de propriétés, pour que les modifications prennent effet, redémarrez le serveur de licences.

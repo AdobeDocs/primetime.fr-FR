@@ -1,20 +1,18 @@
 ---
-description: Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur de vidéo d’Adobe (AVE).
+description: Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur vidéo d’Adobe (AVE).
 title: Suivi des avertissements AVE dans votre lecteur
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Suivi des avertissements AVE dans votre lecteur{#track-ave-warnings-in-your-player}
 
-Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur de vidéo d’Adobe (AVE).
+Grâce à NotificationEvent, vous pouvez effectuer le suivi des avertissements transmis à partir du moteur vidéo d’Adobe (AVE).
 
-Votre application de lecteur peut effectuer le suivi des avertissements de lecture et des erreurs générés par AVE, tels que les événements de basculement ou de panne réseau, qui n’interrompent pas la lecture et ne nécessitent pas nécessairement d’action de votre application. Bien que certaines erreurs AVE soient traitées par TVSDK, `NotificationEvent` sert de mécanisme général de transmission à la couche d&#39;application pour les avertissements AVE. Après avoir reçu des avertissements AVE, vous pouvez choisir d’effectuer certaines actions, telles que l’arrêt proactif de la lecture, l’activation d’un plan d’urgence, la consignation des messages, etc.
+Votre application de lecteur peut effectuer le suivi des avertissements et erreurs de lecture générés par AVE, tels que les événements de basculement ou de panne du réseau qui n’arrêtent pas la lecture et ne nécessitent pas nécessairement d’action de la part de votre application. Bien que certaines erreurs AVE soient traitées par TVSDK, `NotificationEvent` sert de mécanisme de transmission général à la couche de l’application pour les avertissements AVE. Après avoir reçu les avertissements AVE, vous pouvez choisir d’effectuer certaines actions, comme arrêter la lecture de manière proactive, activer un plan d’urgence, consigner les messages, etc.
 
 Utilisez les éléments d’API suivants pour effectuer le suivi des avertissements AVE dans votre lecteur :
 
@@ -76,9 +74,9 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Ajoutez un écouteur de événement à votre lecteur pour intercepter les avertissements AVE.
+Ajoutez un écouteur d’événement à votre lecteur pour capturer les avertissements AVE.
 
-Par exemple :
+Par exemple :
 
 ```
 var _player:DefaultMediaPlayer = new DefaultMediaPlayer(context); 
@@ -99,7 +97,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Voici un exemple d’avertissements AVE qui ont été suivis à l’aide de `NotificationEvent` :
+Voici un exemple d’avertissements AVE qui ont été suivis à l’aide de `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 

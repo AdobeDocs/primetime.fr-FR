@@ -1,18 +1,16 @@
 ---
-description: La classe d'utilitaire TimeRangeCollection abstrait la notion d'une collection ordonnée de spécifications TimeRange et fournit des services pour se traduire en instance de métadonnées.
-title: TimeRangeCollection, classe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La classe d’utilitaire TimeRangeCollection abstrait la notion d’une collection ordonnée de spécifications TimeRange et fournit des services pour se traduire en instance de métadonnées.
+title: Classe TimeRangeCollection
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
+# Classe TimeRangeCollection{#timerangecollection-class}
 
-# TimeRangeCollection, classe{#timerangecollection-class}
-
-La classe d&#39;utilitaire TimeRangeCollection abstrait la notion d&#39;une collection ordonnée de spécifications TimeRange et fournit des services pour se traduire en instance de métadonnées.
+La classe d’utilitaire TimeRangeCollection abstrait la notion d’une collection ordonnée de spécifications TimeRange et fournit des services pour se traduire en instance de métadonnées.
 
 <!--<a id="section_D87AA7BC628D458DAB12D5247AD34B41"></a>-->
 
@@ -32,4 +30,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Le paramètre `type`, qui est le premier paramètre de position dans la signature des méthodes du constructeur, est une instance de la énumération `TimeRangeCollection#Type`. Il fait partie de la classe `TimeRangeCollection`. Les valeurs actuellement définies par cette énumération sont `MARK_RANGES`, `DELETE_RANGES` et `REPLACE_RANGES`. Vous pouvez créer des objets `TimeRangeCollection` en utilisant ces trois types.
+La variable `type` , qui est le premier paramètre de position dans la signature des méthodes du constructeur, est une instance de la propriété `TimeRangeCollection#Type` énumération. Cela fait partie de la `TimeRangeCollection` classe . Les valeurs actuellement définies par cette énumération sont `MARK_RANGES`, `DELETE_RANGES`, et `REPLACE_RANGES`. Vous pouvez créer `TimeRangeCollection` en utilisant ces trois types d’objets.

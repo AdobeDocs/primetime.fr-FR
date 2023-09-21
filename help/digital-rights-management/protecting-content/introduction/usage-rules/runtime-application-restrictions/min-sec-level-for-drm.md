@@ -1,20 +1,18 @@
 ---
-title: Niveau de sécurité minimal pour la gestion des droits numériques et les runtimes
-description: Niveau de sécurité minimal pour la gestion des droits numériques et les runtimes
+title: Niveau de sécurité minimal pour DRM et Runtime
+description: Niveau de sécurité minimal pour DRM et Runtime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
 
 ---
 
-
-# Niveau de sécurité minimal pour DRM et runtimes{#minimum-security-level-for-drm-and-runtimes}
+# Niveau de sécurité minimal pour DRM et Runtime{#minimum-security-level-for-drm-and-runtimes}
 
 Le niveau de sécurité minimum spécifie le niveau de sécurité requis pour accéder au contenu. Vous spécifiez des niveaux de sécurité individuels pour chaque composant.
 
-Le niveau de sécurité par défaut des modules DRM/Runtime est de 10000.
+Le niveau de sécurité par défaut des modules DRM/Runtime est 10000.
 
-Exemple de cas d’utilisation : Certains types de contenu (vidéo HD, par exemple) peuvent nécessiter un niveau de sécurité plus élevé que d’autres types.
+Exemple de cas d’utilisation : certains types de contenu (vidéo HD, par exemple) peuvent nécessiter un niveau de sécurité plus élevé que les autres types.

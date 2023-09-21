@@ -1,23 +1,21 @@
 ---
 description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 title: Utilisation des cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
-
-# Utilisation de cookies {#work-with-cookies}
+# Utilisation des cookies {#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
-Voici un exemple de demande au serveur clé avec une certaine authentification :
+Voici un exemple de requête au serveur clé avec une authentification :
 
-1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique que ce client est autorisé à vue du contenu.
-1. En fonction des attentes du serveur de licences, votre application génère un jeton d’authentification.
+1. Votre client se connecte à votre site web dans un navigateur et son login indique que ce client est autorisé à afficher le contenu.
+1. Selon les attentes du serveur de licences, votre application génère un jeton d’authentification.
 
    Cette valeur est transmise à TVSDK.
 1. TVSDK définit cette valeur dans l’en-tête du cookie.
@@ -29,7 +27,7 @@ Pour utiliser des cookies :
 
 1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre cookieStore.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    CookieManager cookieManager=new CookieManager(); 
@@ -43,17 +41,17 @@ Pour utiliser des cookies :
 
    >[!TIP]
    >
-   >Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
+   >Lorsque la redirection 302 est activée, la requête de publicité peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
-   TVSDK requête ce `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
+   TVSDK interroge cette `cookieManager` au moment de l’exécution, vérifie si des cookies sont associés à l’URL et utilise automatiquement ces cookies.
 
-   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas l’API `networkConfiguration.setCookieHeaders` car la mise à jour aura lieu dans la banque de cookies JAVA.
+   Si les cookies doivent être mis à jour dans l’application au cours de la lecture, n’utilisez pas `networkConfiguration.setCookieHeaders` API lors de la mise à jour se produit dans le magasin de cookies JAVA.
 
-   `networkConfiguration.setCookieHeaders` L’API définit les cookies sur le CookieStore C++ de TVSDK.
+   `networkConfiguration.setCookieHeaders` L’API définit les cookies sur le cookieStore C++ de TVSDK.
 
-   Lorsque vous utilisez des cookies JAVA et les partagez entre Application et TVSDK, utilisez JAVA CookieStore pour gérer les cookies uniquement.
+   Lors de l’utilisation de cookies JAVA et de leur partage entre l’application et TVSDK, utilisez JAVA CookieStore pour gérer les cookies uniquement.
 
-   Avant d’initialiser la lecture, définissez les cookies sur le magasin de cookies à l’aide du Gestionnaire de cookies, comme indiqué ci-dessus.
+   Avant d’initialiser la lecture, définissez les cookies sur CookieStore à l’aide du gestionnaire de cookies comme indiqué ci-dessus.
 
    Le cookie stocké dans CookieStore sera automatiquement récupéré par TVSDK.
 
@@ -65,10 +63,10 @@ Pour utiliser des cookies :
 
    >[!NOTE]
    >
-   >Après avoir défini sur false ce &#39;setReadSetCookieHeader&#39;, définissez les cookies pour les requêtes de clés à l’aide du gestionnaire de cookies JAVA.
+   >Après avoir défini &quot;setReadSetCookieHeader&quot; sur false, définissez les cookies pour les demandes de clés à l’aide du gestionnaire de cookies JAVA.
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-Cette API de rappel est déclenchée chaque fois qu’il y a une mise à jour des cookies C++ (cookies provenant de la réponse http). L’application doit écouter ce rappel et peut mettre à jour son magasin de cookies JAVA en conséquence afin que ses appels réseau dans JAVA puissent utiliser les cookies comme suit :
+Cette API de rappel est déclenchée chaque fois qu’il y a une mise à jour des cookies C++ (cookies issus de la réponse http). L’application doit écouter ce rappel et peut mettre à jour son JAVA CookieStore en conséquence afin que ses appels réseau dans JAVA puissent utiliser les cookies comme ci-dessous :
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {

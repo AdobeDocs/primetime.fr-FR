@@ -1,20 +1,18 @@
 ---
-description: Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une activité.
-title: Séparer le processus publicitaire cliquable
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez mettre en oeuvre plusieurs fragments pour une activité.
+title: Séparez le processus de publicité cliquable
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Séparez le processus de publicité cliquable {#separate-the-clickable-ad-process}
 
-# Séparer le processus d&#39;annonce cliquable {#separate-the-clickable-ad-process}
+Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez mettre en oeuvre plusieurs fragments pour une activité.
 
-Vous devez séparer la logique de l’interface utilisateur de votre lecteur du processus qui gère les clics publicitaires. Pour ce faire, vous pouvez implémenter plusieurs fragments pour une activité.
-
-1. Implémentez un fragment pour contenir le `MediaPlayer`.
+1. Mettez en oeuvre un fragment pour contenir le `MediaPlayer`.
 
    Ce fragment doit appeler `notifyClick()` et sera responsable de la lecture vidéo.
 
@@ -28,9 +26,9 @@ Vous devez séparer la logique de l’interface utilisateur de votre lecteur du 
    } 
    ```
 
-1. Implémentez un autre fragment pour afficher un élément d’interface utilisateur qui indique qu’une publicité peut faire l’objet d’un clic, surveiller cet élément d’interface et communiquer les clics de l’utilisateur au fragment qui contient le `MediaPlayer`.
+1. Mettez en oeuvre un autre fragment pour afficher un élément d’interface utilisateur qui indique qu’une publicité peut être cliquée, surveiller cet élément d’interface utilisateur et communiquer les clics de l’utilisateur au fragment qui contient le `MediaPlayer`.
 
-   Ce fragment doit déclarer une interface pour la communication des fragments. Le fragment capture l’implémentation de l’interface au cours de sa méthode de cycle de vie `onAttach()` et peut appeler les méthodes de l’interface pour communiquer avec l’activité.
+   Ce fragment doit déclarer une interface pour la communication du fragment. Le fragment capture l’implémentation de l’interface au cours de sa `onAttach()` méthode de cycle de vie et peut appeler les méthodes d’interface pour communiquer avec l’activité.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 

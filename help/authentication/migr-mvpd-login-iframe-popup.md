@@ -1,13 +1,12 @@
 ---
 title: Comment migrer la page de connexion MVPD de l’iFrame à la fenêtre contextuelle
 description: Comment migrer la page de connexion MVPD de l’iFrame à la fenêtre contextuelle
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
-
 
 # Comment migrer la page de connexion MVPD d’iFrame vers la fenêtre contextuelle {#migr-mvpd-login-iframe-popup}
 
@@ -48,7 +47,7 @@ Les exemples de code précédents présentaient une page de HTML contenant la va
 </body>
 ```
 
-Voici la variable associée **JavaScript** code :
+Voici le **JavaScript** code :
 
 ```JavaScript
 /*
@@ -229,7 +228,6 @@ function checkClosed() {
 >[!IMPORTANT]
 >
 >* L’exemple de code contient une variable codée en dur pour l’ID de demandeur utilisé - &#39;REF&#39; qui doit être remplacée par un ID de demandeur de programmeur réel.
->* L’exemple de code ne s’exécute correctement qu’à partir d’un domaine placé sur la liste autorisée associé à l’ID de demandeur utilisé.
+>* L’exemple de code ne s’exécute correctement qu’à partir d’un domaine whitelisté associé à l’ID de demandeur utilisé.
 >* L’ensemble du code pouvant être téléchargé, le code présenté dans cette note technique a été tronqué. Pour obtenir un exemple complet, reportez-vous à la section **Exemple d’iFrame JS ou de fenêtre contextuelle**.
 >* Les bibliothèques JavaScript externes ont été liées à partir de [Services hébergés Google](https://developers.google.com/speed/libraries/).
-

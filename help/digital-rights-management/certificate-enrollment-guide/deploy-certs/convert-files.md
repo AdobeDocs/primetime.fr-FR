@@ -2,16 +2,14 @@
 title: Conversion de fichiers
 description: Conversion de fichiers
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
-
-# Convertir les fichiers{#convert-files}
+# Conversion de fichiers{#convert-files}
 
 En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur génère les fichiers PKCS#12 (pfx) et PEM/DER en saisissant les commandes suivantes à partir d’une fenêtre de commande :
 
@@ -26,7 +24,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Ce PEM temporaire contient votre certificat et les certificats des autorités de certification intermédiaires. Utilisez ces certificats pour générer le fichier PFX.
+   >Ce modèle PEM temporaire contient votre certificat et les certificats des autorités de certification intermédiaires. Utilisez ces certificats pour générer le fichier PFX.
 
 1. Convertissez le fichier PEM temporaire en fichier PFX.
 
@@ -47,7 +45,7 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Bien que non requis, l’Adobe recommande d’utiliser des mots de passe différents pour la clé privée (private_key_password) et le PFX (pfx_password).
+   >Bien que cela ne soit pas obligatoire, Adobe recommande d’utiliser des mots de passe différents pour la clé privée (private_key_password) et le PFX (pfx_password).
 
    Ce fichier PEM final contient uniquement votre certificat.
 
@@ -61,5 +59,4 @@ En utilisant un utilitaire tel qu’OpenSSL et la clé privée, le demandeur gé
 
    >[!NOTE]
    >
-   >Les fichiers DER ne sont requis que pour HTTP Dynamic Streaming packager.
-
+   >Les fichiers DER sont requis uniquement pour le HTTP Dynamic Streaming packager.

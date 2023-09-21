@@ -1,13 +1,12 @@
 ---
 title: Notes de mise à jour d’Authentication iOS/tvOS 3.7.0
 description: Notes de mise à jour d’Authentication iOS/tvOS 3.7.0
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Notes de mise à jour d’Authentication iOS/tvOS 3.7.0 {#ios-tvos-sdk-370-release-notes}
 
@@ -19,7 +18,7 @@ Cette page décrit les nouvelles fonctionnalités, les modifications et les prob
 
 ## Numéro de build {#build-no-ios-tvos-sdk-370}
 
-Authentification Adobe Primetime : iOS/tvOS 3.7.0
+Authentification Adobe Primetime : iOS / tvOS 3.7.0
 
 Date de publication : 09/03/2021
 

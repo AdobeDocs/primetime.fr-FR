@@ -1,26 +1,24 @@
 ---
-description: L’utilisation de MediaPlayerItemLoader permet d’obtenir des informations sur un flux média sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de mise en mémoire tampon afin que la lecture puisse commencer sans délai.
-title: Chargement d'une ressource multimédia à l'aide de MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: L’utilisation de MediaPlayerItemLoader vous permet d’obtenir des informations sur un flux multimédia sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de pré-mise en mémoire tampon afin que la lecture puisse commencer sans délai.
+title: Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
-# Charger une ressource multimédia à l&#39;aide de MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
+L’utilisation de MediaPlayerItemLoader vous permet d’obtenir des informations sur un flux multimédia sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de pré-mise en mémoire tampon afin que la lecture puisse commencer sans délai.
 
-L’utilisation de MediaPlayerItemLoader permet d’obtenir des informations sur un flux média sans instancier une instance MediaPlayer. Cela s’avère particulièrement utile dans les flux de mise en mémoire tampon afin que la lecture puisse commencer sans délai.
-
-La classe `MediaPlayerItemLoader` permet d&#39;échanger une ressource média pour l&#39;actuelle `MediaPlayerItem` sans attacher une vue à une instance `MediaPlayer`, ce qui affecterait des ressources matérielles de décodage vidéo. Des étapes supplémentaires sont nécessaires pour le contenu protégé par DRM, mais ce manuel ne les décrit pas.
+La variable `MediaPlayerItemLoader` vous aide à échanger une ressource multimédia pour la classe actuelle ; `MediaPlayerItem` sans associer une vue à une `MediaPlayer` qui allouerait les ressources matérielles de décodage vidéo. Des étapes supplémentaires sont nécessaires pour le contenu protégé par DRM, mais ce manuel ne les décrit pas.
 
 >[!IMPORTANT]
 >
->TVSDK ne prend pas en charge un seul `QoSProvider` pour fonctionner avec `itemLoader` et `MediaPlayer`. Si votre application utilise Instant On, elle doit gérer deux instances `QoS` et gérer les deux instances pour les informations. Voir [Instant-on](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md) pour plus d&#39;informations.
+>TVSDK ne prend pas en charge une seule `QoSProvider` pour travailler avec les deux `itemLoader` et `MediaPlayer`. Si votre application utilise Instant On, l’application doit gérer deux `QoS` et gérez les deux instances pour les informations. Voir [Instant](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md) pour plus d’informations.
 
-1. Créez une instance de `MediaPlayerItemLoader`.
+1. Création d’une instance de `MediaPlayerItemLoader`.
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -50,9 +48,9 @@ La classe `MediaPlayerItemLoader` permet d&#39;échanger une ressource média po
 
    >[!TIP]
    >
-   >Créez une instance distincte de `MediaPlayerItemLoader` pour chaque ressource. N&#39;utilisez pas une instance `MediaPlayerItemLoader` pour charger plusieurs ressources.
+   >Création d’une instance distincte de `MediaPlayerItemLoader` pour chaque ressource. N’en utilisez pas un `MediaPlayerItemLoader` pour charger plusieurs ressources.
 
-1. Implémentez la classe `ItemLoaderListener` pour recevoir des notifications de l&#39;instance `MediaPlayerItemLoader`.
+1. Mettez en oeuvre le `ItemLoaderListener` pour recevoir des notifications de la `MediaPlayerItemLoader` instance.
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -77,13 +75,13 @@ La classe `MediaPlayerItemLoader` permet d&#39;échanger une ressource média po
    }
    ```
 
-   Dans le rappel `onLoadComplete()`, effectuez l&#39;une des opérations suivantes :
+   Dans le `onLoadComplete()` effectuez l’une des opérations suivantes :
 
-   * Assurez-vous que tout ce qui peut avoir une incidence sur la mise en mémoire tampon, par exemple, la sélection de pistes WebVTT ou audio, est terminé et appelez `prepareBuffer()` pour profiter de l&#39;instant présent.
-   * Joignez l’élément à l’instance `MediaPlayer` en utilisant `replaceCurrentItem()`.
+   * Assurez-vous que tout élément susceptible d’affecter la mise en mémoire tampon, par exemple la sélection de pistes WebVTT ou audio, est terminé et appelez `prepareBuffer()` pour profiter de l&#39;instant présent.
+   * Joindre l’élément au `MediaPlayer` en utilisant `replaceCurrentItem()`.
 
-   Si vous appelez `prepareBuffer()`, vous recevez le événement BUFFER_PREPARED dans votre gestionnaire `onBufferPrepared` une fois la préparation terminée.
-1. Appelez `load` sur l&#39;instance `MediaPlayerItemLoader` et transmettez la ressource à charger, et éventuellement l&#39;ID de contenu, ainsi qu&#39;une instance `MediaPlayerItemConfig`.
+   Si vous appelez `prepareBuffer()`, vous recevez l’événement BUFFER_PREPARED dans votre `onBufferPrepared` gestionnaire une fois la préparation terminée.
+1. Appeler `load` sur le `MediaPlayerItemLoader` et transmettez la ressource à charger, et éventuellement l’identifiant de contenu, et un `MediaPlayerItemConfig` instance.
 
    ```java
    loader = createLoader(); 
@@ -91,18 +89,19 @@ La classe `MediaPlayerItemLoader` permet d&#39;échanger une ressource média po
    loader.load(res, 233, getConfig());
    ```
 
-1. Pour mettre en mémoire tampon à partir d&#39;un point autre que le début du flux, appelez `prepareBuffer()` avec la position (en millisecondes) à laquelle la mise en mémoire tampon du début doit être effectuée.
-1. Utilisez les méthodes `replaceCurrentItem()` et `play()` de `MediaPlayer` pour début la lecture à partir de ce point.
-1. Attendez l&#39;état inactif et appelez `replaceCurrentItem`.
+1. Pour mettre en mémoire tampon à partir d’un point autre que le début de la diffusion, appelez `prepareBuffer()` avec la position (en millisecondes) à laquelle la mise en mémoire tampon doit commencer.
+1. Utilisez la variable `replaceCurrentItem()` et `play()` méthodes de `MediaPlayer` pour commencer à jouer à partir de ce point.
+1. Attente de l’état inactif et appel `replaceCurrentItem`.
 1. Lire l’élément.
 
-   * Si l&#39;élément est chargé mais pas mis en mémoire tampon :
+   * Si l’élément est chargé mais pas mis en mémoire tampon :
 
       1. Attendez l’état initialisé.
-      1. Appelez `prepareToPlay()`.
-      1. Attendez l’état PRÉPARÉ.
-      1. Appelez `play()`.
-   * Si l&#39;élément est mis en mémoire tampon :
+      1. Appeler `prepareToPlay()`.
+      1. Attendez l’état PRÉPARÉ .
+      1. Appeler `play()`.
 
-      1. Attendez le événement préparé pour la mémoire tampon.
-      1. Appelez `play()`.
+   * Si l’élément est mis en mémoire tampon :
+
+      1. Attendez l’événement préparé pour la mémoire tampon.
+      1. Appeler `play()`.

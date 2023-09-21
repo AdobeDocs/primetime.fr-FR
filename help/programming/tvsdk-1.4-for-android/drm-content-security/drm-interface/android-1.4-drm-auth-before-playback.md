@@ -1,29 +1,27 @@
 ---
-description: Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux média, effectuez l’authentification avant de commencer la lecture.
+description: Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux multimédia, effectuez l’authentification avant de commencer la lecture.
 title: Authentification DRM avant lecture
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Authentification DRM avant lecture {#drm-authentication-before-playback}
 
-Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux média, effectuez l’authentification avant de commencer la lecture.
+Lorsque les métadonnées DRM d’une vidéo sont distinctes du flux multimédia, effectuez l’authentification avant de commencer la lecture.
 
-Un fichier vidéo peut être associé à un fichier de métadonnées DRM. Par exemple :
+Une ressource vidéo peut être associée à un fichier de métadonnées DRM. Par exemple :
 
-* &quot;url&quot; : &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot; : &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du fichier de métadonnées DRM, l’analyser et vérifier si l’authentification DRM est nécessaire.
+Dans ce cas, utilisez `DRMHelper` pour télécharger le contenu du fichier de métadonnées DRM, l’analyser et vérifier si l’authentification DRM est nécessaire.
 
-1. Utilisez `loadDRMMetadata` pour charger le contenu de l’URL de métadonnées et analyser les octets téléchargés dans `DRMMetadata`.
+1. Utilisation `loadDRMMetadata` pour charger le contenu de l’URL de métadonnées et analyser les octets téléchargés dans une `DRMMetadata`.
 
-   Comme toute autre opération réseau, cette méthode est asynchrone, créant ainsi son propre thread.
+   Comme toute autre opération réseau, cette méthode est asynchrone et crée son propre thread.
 
    ```java
    public static void loadDRMMetadata( 
@@ -32,14 +30,14 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
        final DRMLoadMetadataListener loadMetadataListener); 
    ```
 
-   Par exemple :
+   Par exemple :
 
    ```java
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
-1. L’opération étant asynchrone, il est conseillé de sensibiliser l’utilisateur à ce problème. Sinon, il se demandera pourquoi sa lecture ne commence pas. Par exemple, affichez une roue dentée pendant que les métadonnées DRM sont téléchargées et analysées.
-1. Mettez en oeuvre les rappels dans `DRMLoadMetadataListener`. `loadDRMMetadata` appelle ces gestionnaires de événement (distribue ces événements).
+1. Comme l’opération est asynchrone, il est préférable d’en informer l’utilisateur. Sinon, il se demandera pourquoi sa lecture ne commence pas. Par exemple, affichez une roue dentée pendant le téléchargement et l’analyse des métadonnées DRM.
+1. Mettez en oeuvre les rappels dans la variable `DRMLoadMetadataListener`. La variable `loadDRMMetadata` appelle ces gestionnaires d’événements (répartit ces événements).
 
    ```java
    public interface  
@@ -59,16 +57,16 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
    ```
 
    * `onLoadMetadataUrlStart` détecte le début du chargement de l’URL de métadonnées.
-   * `onLoadMetadataUrlComplete` détecte la fin du chargement de l’URL de métadonnées.
+   * `onLoadMetadataUrlComplete` détecte lorsque le chargement de l’URL de métadonnées est terminé.
    * `onLoadMetadataUrlError` indique que le chargement des métadonnées a échoué.
 
-1. Une fois le chargement terminé, inspectez l&#39;objet `DRMMetadata` pour vérifier si l&#39;authentification DRM est nécessaire.
+1. Une fois le chargement terminé, examinez la variable `DRMMetadata` pour déterminer si l’authentification DRM est nécessaire.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
    ```
 
-   Par exemple :
+   Par exemple :
 
    ```java
    @Override 
@@ -84,7 +82,7 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
    ```
 
 1. Si l’authentification n’est pas nécessaire, commencez la lecture.
-1. Si une authentification est nécessaire, effectuez l’authentification en acquérant la licence.
+1. Si une authentification est nécessaire, effectuez l’authentification en acquérant la licence .
 
    ```java
    /** 
@@ -106,7 +104,7 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
         final DRMAuthenticationListener authenticationListener);
    ```
 
-   Cet exemple, pour simplifier, code explicitement le nom et le mot de passe de l’utilisateur.
+   Cet exemple, pour plus de simplicité, code explicitement le nom et le mot de passe de l’utilisateur.
 
    ```java
    DRMHelper.performDrmAuthentication(drmManager, drmMetadata, DRM_USERNAME, DRM_PASSWORD,  
@@ -132,7 +130,7 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
    }); 
    ```
 
-1. Cela implique également la communication réseau, d’où l’existence d’une opération asynchrone. Utilisez un écouteur de événement pour vérifier l’état de l’authentification.
+1. Cela implique également la communication réseau. Il s’agit donc également d’une opération asynchrone. Utilisez un écouteur d’événement pour vérifier l’état d’authentification.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -166,8 +164,7 @@ Dans ce cas, utilisez les méthodes `DRMHelper` pour télécharger le contenu du
    } 
    ```
 
-1. Si l’authentification est réussie, lecture du début.
-1. Si l’authentification échoue, avertissez l’utilisateur et ne début pas la lecture.
+1. Si l’authentification est réussie, démarrez la lecture.
+1. Si l’authentification échoue, informez l’utilisateur et ne démarrez pas la lecture.
 
-Votre application doit gérer toutes les erreurs d’authentification. Echec de l’authentification avant la lecture place TVSDK dans un état d’erreur. En d’autres termes, il change son état en ERROR, une erreur est générée contenant le code d’erreur de la bibliothèque DRM et la lecture s’arrête. Votre application doit résoudre le problème, réinitialiser le lecteur et recharger la ressource.
-
+Votre application doit gérer toutes les erreurs d’authentification. Échec de l’authentification avant de lire TVSDK dans un état d’erreur. En d’autres termes, il change son état en ERROR, une erreur est générée contenant le code d’erreur de la bibliothèque DRM et la lecture s’arrête. Votre application doit résoudre le problème, réinitialiser le lecteur et recharger la ressource.

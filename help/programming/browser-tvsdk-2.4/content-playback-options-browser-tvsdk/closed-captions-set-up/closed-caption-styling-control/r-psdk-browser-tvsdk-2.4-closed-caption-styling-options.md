@@ -1,18 +1,16 @@
 ---
-description: Vous pouvez spécifier plusieurs options de style de légende et ces options remplacent les options de style dans les légendes d’origine.
-title: Options de style de sous-titrage
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez spécifier plusieurs options de style de légende. Ces options remplacent les options de style des légendes d’origine.
+title: Options de style de sous-titres codés
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Options de style de sous-titres codés{#closed-caption-styling-options}
 
-# Options de style de sous-titrage{#closed-caption-styling-options}
-
-Vous pouvez spécifier plusieurs options de style de légende et ces options remplacent les options de style dans les légendes d’origine.
+Vous pouvez spécifier plusieurs options de style de légende. Ces options remplacent les options de style des légendes d’origine.
 
 ```js
 new TextFormat( 
@@ -32,7 +30,7 @@ new TextFormat(
 
 >[!TIP]
 >
->Dans les options qui définissent les valeurs par défaut (par exemple, `DEFAULT`), cette valeur fait référence à ce que le paramètre était lorsque la légende a été initialement spécifiée.
+>Dans les options qui définissent des valeurs par défaut (par exemple, `DEFAULT`), cette valeur fait référence au paramètre défini lors de la spécification initiale de la légende.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -44,38 +42,37 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Police </td> 
-   <td colname="2"> <p>Type de police. </p> <p>Ne peut être définie que sur une valeur définie par la énumération <span class="codeph"> TextFormat.Font </span> et représente, par exemple, un espacement monoespace avec ou sans sérifs. </p> <p>Conseil :  Les polices disponibles sur un périphérique peuvent varier et des substitutions sont utilisées si nécessaire. Le monoespace avec empattements est généralement utilisé comme substitut, bien que cette substitution puisse être propre au système. </p> </td> 
+   <td colname="2"> <p>Type de police. </p> <p>Peut uniquement être définie sur une valeur définie par la variable <span class="codeph"> TextFormat.Font </span> énumération et représente, par exemple, un espacement fixe avec ou sans sérifs. </p> <p>Conseil : Les polices disponibles sur un appareil peuvent varier et des substitutions sont utilisées si nécessaire. Le monoespace avec des sérifs est généralement utilisé comme substitut, bien que cette substitution puisse être spécifique au système. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Taille </td> 
-   <td colname="2"> <p>La taille de la légende. </p> <p> Peut uniquement être définie sur une valeur définie par la énumération <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>La taille de la légende. </p> <p> Peut uniquement être définie sur une valeur définie par la variable <span class="codeph"> TextFormat.Size </span> enumeration : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MOYEN  </span> - Taille standard </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRAND  </span> - Environ 30 % plus grand que moyen </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PETITE  </span> - Environ 30 % inférieure à moyenne </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PAR DÉFAUT  </span> - Taille par défaut de la légende ; identique à medium </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Taille standard </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRAND </span> - Environ 30 % plus grand que moyen </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PETIT </span> - Environ 30 % plus petit que moyen </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PAR DÉFAUT </span> - Taille par défaut de la légende, identique à moyenne </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Couleur de police </td> 
-   <td colname="2"> <p>Couleur de la police. </p> <p>Peut uniquement être définie sur une valeur définie par la énumération <span class="codeph"> TextFormat.Color </span>. </p> </td> 
+   <td colname="1"> Police couleur </td> 
+   <td colname="2"> <p>Couleur de police. </p> <p>Peut uniquement être définie sur une valeur définie par la variable <span class="codeph"> TextFormat.Color </span> énumération. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Couleur d’arrière-plan </td> 
-   <td colname="2"> <p>Couleur de la cellule de l’arrière-plan. </p> <p>Peut uniquement être définie sur des valeurs disponibles pour la couleur de la police. </p> </td> 
+   <td colname="2"> <p>Couleur de la cellule de caractère d’arrière-plan. </p> <p>Peut uniquement être défini sur les valeurs disponibles pour la couleur de police. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacité des polices </td> 
-   <td colname="2"> <p>Opacité du texte. </p> <p>Exprimé en pourcentage de 0 (entièrement transparent) à 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY  </span> pour la police est 100. </p> </td> 
+   <td colname="2"> <p>Opacité du texte. </p> <p>Exprimé sous la forme d’un pourcentage compris entre 0 (totalement transparent) et 100 (entièrement opaque). <span class="codeph"> DEFAULT_OPACITY </span> pour la police est 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Entrée inférieure </td> 
-   <td colname="2"> <p>Distance verticale par rapport au bas de la fenêtre de sous-titrage pour les légendes à éviter. </p> <p>Exprimé sous forme de pourcentage de la hauteur de la fenêtre de légende (par exemple, "20 %") ou d’un nombre de pixels (par exemple, "20"). </p> </td> 
+   <td colname="1"> Inset inférieur </td> 
+   <td colname="2"> <p>Distance verticale depuis le bas de la fenêtre des légendes à éviter. </p> <p>Exprimé sous la forme d’un pourcentage de la hauteur de la fenêtre de légende (par exemple, "20 %") ou d’un nombre de pixels (par exemple, "20"). </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Zone sécurisée </td> 
-   <td colname="2"> <p>Zone située autour du bord de l’écran, entre 0 % et 25 %, dans laquelle les légendes n’apparaissent pas. </p> <p>Par défaut, la zone de sécurité pour 608/708 est de 12 % et la zone de sécurité pour WebVTT est de 0 %. Ce paramètre permet à votre application de remplacer cette valeur par défaut. Si deux valeurs sont fournies, par exemple, la chaîne "10 %,20 %", la première valeur est la zone horizontale sécurisée et la seconde, la zone verticale sécurisée. Si une valeur est fournie, par exemple, la chaîne "15%", les axes vertical et horizontal utilisent tous deux la zone de sécurité spécifiée. </p> </td> 
+   <td colname="2"> <p>Zone autour du bord de l’écran entre 0 % et 25 % où les sous-titres n’apparaissent pas. </p> <p>Par défaut, la zone sécurisée pour 608/708 est de 12 % et celle pour WebVTT de 0 %. Ce paramètre permet à votre application de remplacer cette valeur par défaut. Si deux valeurs sont fournies, par exemple, la chaîne "10 %,20 %", la première valeur est la zone horizontale sécurisée et la seconde est la zone verticale sécurisée. Si une valeur est fournie, par exemple, la chaîne "15 %", les axes vertical et horizontal utilisent tous deux la zone de sécurité spécifiée. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

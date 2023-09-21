@@ -1,21 +1,19 @@
 ---
-title: Sécurité de la couche réseau
-description: Sécurité de la couche réseau
+title: Sécurité des couches réseau
+description: Sécurité des couches réseau
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
+# Sécurité des couches réseau{#network-layer-security}
 
-# Sécurité de la couche réseau{#network-layer-security}
+Les vulnérabilités de la sécurité réseau sont parmi les premières menaces qui pèsent sur un serveur d’applications utilisant Internet ou un intranet. Cette section décrit le processus de renforcement des hôtes sur le réseau contre ces vulnérabilités. Il traite de la segmentation du réseau, du renforcement de la pile TCP/IP (Transmission Control Protocol/Internet Protocol) et de l’utilisation de pare-feu pour la protection des hôtes.
 
-Les vulnérabilités de la sécurité réseau sont parmi les premières menaces qui pèsent sur tout serveur d’applications orienté Internet ou intranet. Cette section décrit le processus de renforcement des hôtes sur le réseau contre ces vulnérabilités. Il traite de la segmentation du réseau, du renforcement de la pile TCP/IP (Transmission Control Protocol/Internet Protocol) et de l&#39;utilisation de pare-feu pour la protection de l&#39;hôte.
-
-Ce tableau décrit des techniques courantes qui réduisent les vulnérabilités de sécurité réseau.
+Ce tableau décrit les techniques courantes qui réduisent les vulnérabilités de la sécurité réseau.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-djf-lhz-n4"> 
  <thead class="- topic/thead "> 
@@ -26,22 +24,21 @@ Ce tableau décrit des techniques courantes qui réduisent les vulnérabilités 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zones démilitarisées </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentation doit exister à au moins deux niveaux avec le serveur d’applications utilisé pour exécuter Adobe Access placé derrière le pare-feu interne. Séparez le réseau externe de la zone démilitarisée qui contient les serveurs Web, lesquels doivent à leur tour être séparés du réseau interne. Utilisez des pare-feu pour implémenter les couches de séparation. Classez et contrôlez le trafic passant par chaque couche réseau pour vous assurer que seul le minimum absolu de données requises est autorisé. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Zones démilitarisées (DMZ) </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La segmentation doit exister à au moins deux niveaux avec le serveur d’applications utilisé pour exécuter Adobe Access placé derrière le pare-feu interne. Séparez le réseau externe de la DMZ qui contient les serveurs web, qui doivent à leur tour être séparés du réseau interne. Utilisez des pare-feu pour implémenter les couches de séparation. Classez et contrôlez le trafic qui traverse chaque couche réseau pour vous assurer que seul le minimum absolu des données requises est autorisé. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Adresses IP privées </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez la traduction d’adresses réseau (NAT) avec des adresses IP privées RFC 1918 sur les serveurs d’applications d’accès aux Adobes. Attribuez des adresses IP privées (10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16) pour rendre plus difficile pour un attaquant d'acheminer le trafic vers et depuis un hôte interne NAT par Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez la traduction d’adresses réseau (NAT) avec les adresses IP privées RFC 1918 sur les serveurs d’applications Adobe Access. Attribuez des adresses IP privées (10.0.0.0/8, 172.16.0.0/12 et 192.168.0.0/16) afin qu’il soit plus difficile pour un attaquant d’acheminer le trafic depuis et vers un hôte interne NAT via Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Pare-feu </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">pare-feu </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilisez les critères suivants pour sélectionner une solution de pare-feu : </p> <p class="- topic/p "> 
      <ul class="- topic/ul " id="ul-wjf-lhz-n4"> 
-      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Mettez en oeuvre des pare-feu qui prennent en charge les serveurs proxy et/ou l'inspection avec état au lieu de solutions de filtrage de paquets simples. </p> </li> 
-      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Utilisez un pare-feu qui prend en charge un paradigme de sécurité dans lequel vous pouvez refuser tous les services sauf ceux explicitement autorisés. </p> </li> 
-      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implémentez une solution de pare-feu à double hébergement ou à hébergement multiple. Cette architecture offre un niveau de sécurité optimal et permet d'empêcher les utilisateurs non autorisés de contourner la sécurité du pare-feu. </p> </li> 
+      <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Mettez en oeuvre des pare-feu qui prennent en charge les serveurs proxy et/ou l’inspection avec état au lieu de solutions simples de filtrage de paquets. </p> </li> 
+      <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Utilisez un pare-feu qui prend en charge un paradigme de sécurité dans lequel vous pouvez refuser tous les services, à l’exception de ceux autorisés explicitement. </p> </li> 
+      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Mettez en oeuvre une solution de pare-feu à double hébergement ou à hébergement multiple. Cette architecture offre un niveau de sécurité optimal et permet d’empêcher les utilisateurs non autorisés de contourner le pare-feu. </p> </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

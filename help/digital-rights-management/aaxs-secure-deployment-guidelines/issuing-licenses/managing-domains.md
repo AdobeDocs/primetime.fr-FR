@@ -2,20 +2,17 @@
 title: Gestion des domaines
 description: Gestion des domaines
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
 # Gestion des domaines{#managing-domains}
 
-Pour empêcher les utilisateurs de sauvegarder et de restaurer leurs fichiers afin de contourner le désenregistrement des domaines, il est recommandé de mettre en oeuvre l’une des méthodes suivantes pour la gestion des domaines :
+Pour empêcher les utilisateurs de sauvegarder et de restaurer leurs fichiers afin de contourner le désenregistrement de domaine, il est recommandé de mettre en oeuvre l’une des approches suivantes pour la gestion des domaines :
 
-* Limitez la durée de validité des informations d’identification de domaine. Les clients devront contacter le serveur de domaine pour réacquérir les informations d’identification de domaine à leur expiration. Le serveur de domaine peut alors s&#39;assurer que l&#39;ordinateur est toujours autorisé à être membre du domaine.
-* Survolez les clés de domaine chaque fois qu’un utilisateur désenregistre. Le serveur de licences ne doit délivrer que des licences aux clients disposant de la dernière clé de domaine. Cela suppose que le serveur de licences peut coordonner ses activités avec le serveur de domaines pour savoir quelle clé est la plus récente. Le roulement des clés de domaine implique la création d’une nouvelle paire de clés pour le domaine. Lorsque vous placez le pointeur de la souris sur les clés d&#39;un domaine particulier, veillez à incrémenter la version de clé dans `generateDomainCredential`. Pour plus d&#39;informations sur l&#39;implémentation d&#39;un roulement de clés, voir *RefImplDomainReqHandler* dans la section Mise en oeuvre des références.
-* Si le serveur de domaine est identique au serveur de licences, le serveur peut utiliser le compteur de restauration pour détecter la sauvegarde et la restauration. Voir *Traitement des demandes d’accès aux Adobes *dans *Utilisation du SDK d’accès aux Adobes pour la protection du contenu.*
-
+* Limitez la durée de validité des informations d’identification de domaine. Les clients devront contacter le serveur de domaine pour acquérir à nouveau les informations d’identification de domaine lorsqu’elles arrivent à expiration. Le serveur de domaine peut alors s’assurer que la machine est toujours autorisée à être membre du domaine.
+* Survolez les clés de domaine chaque fois qu’un utilisateur se désinscrit. Le serveur de licences ne doit émettre que des licences pour les clients disposant de la dernière clé de domaine. Cela suppose que le serveur de licences puisse se coordonner avec le serveur de domaine pour savoir quelle clé est la plus récente. Le fait de survoler les clés de domaine implique de générer une nouvelle paire de clés pour le domaine. Lorsque vous passez le curseur sur les clés d’un domaine particulier, veillez à incrémenter la version clé dans `generateDomainCredential`. Pour plus d’informations sur l’implémentation d’un roulement de clés, voir *RefImplDomainReqHandler* dans la mise en oeuvre de référence.
+* Si le serveur de domaine est le même que le serveur de licences, le serveur peut utiliser le compteur de restauration pour détecter la sauvegarde et la restauration. Voir *Traitement des demandes d’accès aux Adobes *dans *Utilisation du SDK Adobe Access pour la protection du contenu.*

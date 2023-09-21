@@ -1,8 +1,7 @@
 ---
 title: Affichage des rapports de partage de compte pour plusieurs MVPD
 description: Comment afficher les rapports de partage pour plusieurs MVPD.
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Pour afficher les statistiques de partage de compte d’abonné pour plusieurs M
 
 * [Tableau de bord](/help/AccountIQ/dashboard.md) (le tableau de bord donne un aperçu des graphiques sélectionnés à partir de différentes pages de rapports).
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *Figure : Rapport de tableau de bord pour plusieurs MVPD*
+  *Figure : Rapport Tableau de bord pour plusieurs MVPD*
 
 * [Utilisation générale](/help/AccountIQ/general-usage-reports.md)
 

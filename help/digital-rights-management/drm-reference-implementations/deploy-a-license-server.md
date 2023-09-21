@@ -2,50 +2,47 @@
 title: Déploiement du serveur de licences
 description: Déploiement du serveur de licences
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# Déploiement du serveur de licences{#deploy-the-license-server}
 
-# Déployer le serveur de licences{#deploy-the-license-server}
+1. Copiez les fichiers war d’implémentation de référence dans la `webapps` sur votre serveur Tomcat.
 
-1. Copiez vos fichiers de guerre d&#39;implémentation de référence dans le répertoire `webapps` de votre serveur Tomcat.
+   Pour utiliser le serveur de licence de mise en oeuvre de référence tel quel, vous pouvez simplement copier le fichier WAR du serveur de licences ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) à la variable `webapps` sur votre serveur Tomcat.
 
-   Pour utiliser le serveur de licences d’implémentation de référence tel quel, vous pouvez simplement copier le fichier WAR du serveur de licences ( `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\\flashaccess.war`) dans le répertoire `webapps` de votre serveur Tomcat.
-
-   Si vous personnalisez le serveur de licences d’implémentation de référence, copiez les fichiers de guerre de serveur que vous avez créés à partir de `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` dans le répertoire `webapps`.
+   Si vous personnalisez le serveur de licence de mise en oeuvre de référence, copiez les fichiers war du serveur à partir desquels vous avez créé `DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl-build\wars` à la fonction `webapps` répertoire .
 
    >[!NOTE]
    >
-   >Si vous avez déjà déployé des fichiers WAR de serveur de licences, vous devrez peut-être supprimer les répertoires WAR décompressés dans le répertoire [!DNL webapps] du serveur Tomcat :
+   >Si vous avez déjà déployé des fichiers WAR du serveur de licences, vous devrez peut-être supprimer les répertoires WAR décompressés dans la variable [!DNL webapps] sur le serveur Tomcat :
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
 
-
    >[!NOTE]
    >
-   >Ne déployez pas [!DNL edsws.war], sauf si vous avez besoin d’une compatibilité descendante avec le contenu FMRMS (Flash Media Rights Management) v1.5. (Il s&#39;agit d&#39;une exigence très rare.)
+   >Ne pas déployer [!DNL edsws.war] sauf si vous avez besoin d’une compatibilité descendante avec le contenu FMRMS (Flash Media Rights Management) v1.5. (C’est une exigence très rare.)
    >
-   >Si vous préférez empêcher Tomcat de décompresser les fichiers WAR, modifiez `server.xml` dans le répertoire `conf` et définissez `unpackWARs` sur `false`.
+   >Si vous préférez empêcher Tomcat de décompresser les fichiers WAR, modifiez `server.xml` dans le `conf` répertoire et définition `unpackWARs` to `false`.
 
-1. Copiez tout le contenu du répertoire `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` dans votre répertoire [!DNL tomcat].
+1. Copiez l’intégralité du contenu de la fonction `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\resources\` dans votre [!DNL tomcat] répertoire .
 
-   Le répertoire [!DNL resources] comprend :
+   La variable [!DNL resources] comprend :
 
-   * [!DNL flashaccesstools.properties] - Fichier de propriétés du serveur de licences.
+   * [!DNL flashaccesstools.properties] - Le fichier de propriétés du serveur de licences.
    * [!DNL log4j.xml] - Configuration de la journalisation du serveur de licences
    * [!DNL *.pol] - Exemples de fichiers de stratégie DRM.
 
-   De plus, vous pouvez également choisir de copier les fichiers de certification d&#39;Adobe à cet emplacement.
+   Vous pouvez également choisir de copier les fichiers de certification d’Adobe vers cet emplacement.
 
-1. Modifiez les paramètres du serveur de licences dans [!DNL flashaccesstools.properties] pour refléter la configuration de votre serveur.
+1. Modification des paramètres du serveur de licences dans [!DNL flashaccesstools.properties] pour refléter la configuration de votre serveur.
 
-   Au minimum, définissez des valeurs pour les propriétés suivantes :
+   Définissez au minimum les valeurs des propriétés suivantes :
 
    * `config.resourcesDirectory`
    * `HandlerConfiguration.ServerTransportCredential`
@@ -58,25 +55,25 @@ ht-degree: 0%
    * `V2KeyParameters.KeyOptions.AsymmetricKeyOptions.Certificate`
    * V2KeyParameters.LicenseServerTransportCertificate
 
-1. Modifiez le fichier `catalina.properties` dans votre répertoire Tomcat `conf` ; ajoutez l&#39;emplacement de votre répertoire [!DNL resources] (ou l&#39;emplacement de remplacement où vous avez stocké votre fichier de propriétés et d&#39;autres fichiers de ressources) à la propriété `shared.loader`.
+1. Modifiez la variable `catalina.properties` fichier dans votre Tomcat `conf` , ajoutez l’emplacement de votre [!DNL resources] le répertoire (ou l’autre emplacement où vous avez stocké votre fichier de propriétés et d’autres fichiers de ressources) vers la propriété `shared.loader` .
 
-   Par exemple, si `flashaccess-refimpl.properties` se trouve dans [ !DNL [Tomcat home]\resources\] :
+   Par exemple, si vous avez `flashaccess-refimpl.properties` situé dans [!DNL [Accueil de Tomcat]\resources\]:
 
    ```
    shared.loader=..\resources
    ```
 
-   `flashaccess-refimpl.properties` est placé sur le chemin de classe.
-1. Assurez-vous que vos autres fichiers de ressources ( [!DNL log4j.xml], fichiers de stratégie, certifications) se trouvent dans le répertoire [!DNL resources] ou se trouvent dans le chemin de classe et leur emplacement spécifié dans [!DNL flashaccess-refimpl.properties].
+   Cet emplacement `flashaccess-refimpl.properties` sur le chemin d’accès aux classes.
+1. Assurez-vous que vos autres fichiers de ressources ( [!DNL log4j.xml], les fichiers de stratégie, les certifications) se trouvent dans la variable [!DNL resources] ou se trouvent dans le chemin d’accès aux classes et leur emplacement spécifiés dans [!DNL flashaccess-refimpl.properties].
 
-   Il est probable que vous souhaitiez exécuter initialement `log4j` en mode de débogage. Dans [!DNL log4j.xml], définissez `debug` sur true :
+   Il est probable que vous souhaitiez exécuter initialement `log4j` en mode debug . Dans [!DNL log4j.xml], définit `debug` à true :
 
    ```
    <log4j:configuration xmlns:log4j="https://jakarta.apache.org/log4j/"<b>debug="true"</b>>
    ...
    ```
 
-1. Dans le répertoire Tomcat [!DNL bin], début votre serveur.
+1. Du Tomcat [!DNL bin] , démarrez votre serveur.
 
    Sous Linux :
 

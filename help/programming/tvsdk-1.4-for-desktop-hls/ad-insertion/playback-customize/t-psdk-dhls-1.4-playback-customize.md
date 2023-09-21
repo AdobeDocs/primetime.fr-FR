@@ -1,33 +1,31 @@
 ---
-description: Vous pouvez personnaliser ou remplacer les comportements publicitaires.
+description: Vous pouvez personnaliser ou remplacer les comportements de publicité.
 title: Configuration de la lecture personnalisée
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
 # Configuration de la lecture personnalisée{#set-up-customized-playback}
 
-Vous pouvez personnaliser ou remplacer les comportements publicitaires.
+Vous pouvez personnaliser ou remplacer les comportements de publicité.
 
-Avant de pouvoir personnaliser ou remplacer des comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec .
-Pour personnaliser les comportements publicitaires, effectuez l’une des opérations suivantes :
+Avant de pouvoir personnaliser ou remplacer les comportements publicitaires, enregistrez l’instance de stratégie publicitaire avec .
+Pour personnaliser les comportements d’annonce, effectuez l’une des opérations suivantes :
 
-* Implémentez l&#39;interface `AdPolicySelector` et toutes ses méthodes.
+* Mettez en oeuvre le `AdPolicySelector` et toutes ses méthodes.
 
-   Cette option est recommandée si vous devez remplacer **tous** les comportements publicitaires par défaut.
+  Cette option est recommandée si vous devez remplacer **all** les comportements publicitaires par défaut.
 
-* Étendez la classe `DefaultAdPolicySelector` et fournissez des implémentations uniquement pour les comportements qui nécessitent une personnalisation.
+* Étendre le `DefaultAdPolicySelector` et ne fournissent des implémentations que pour les comportements qui nécessitent une personnalisation.
 
-   Cette option est recommandée si vous ne devez remplacer que **certains** des comportements par défaut.
+  Cette option est recommandée si vous devez remplacer uniquement **some** des comportements par défaut.
 
 Pour les deux options, effectuez les tâches suivantes :
 
-1. Mettez en oeuvre votre propre sélecteur de stratégies d’annonces personnalisées.
+1. Mettez en oeuvre votre propre sélecteur de stratégie de publicité personnalisée.
 
    ```
    public class CustomAdPolicySelector implements AdPolicySelector { 
@@ -35,7 +33,7 @@ Pour les deux options, effectuez les tâches suivantes :
    }
    ```
 
-1. Etendez la fabrique de contenu pour utiliser le sélecteur de stratégie d’annonce personnalisée.
+1. Étendez la fabrique de contenu pour utiliser le sélecteur de stratégie d’annonce personnalisée.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -55,7 +53,7 @@ Pour les deux options, effectuez les tâches suivantes :
    factory->retrieveAdPolicySelector(item, &defaultAdPolicySelector);
    ```
 
-1. Enregistrez la nouvelle fabrique de contenu à utiliser par TVSDK dans le processus publicitaire.
+1. Enregistrez la nouvelle fabrique de contenu à utiliser par TVSDK dans le workflow publicitaire.
 
    ```
    PSDKConfig.advertisingFactory = new CustomContentFactory();
@@ -63,4 +61,4 @@ Pour les deux options, effectuez les tâches suivantes :
 
    >[!TIP]
    >
-   >Si la fabrique de contenu personnalisée a été enregistrée pour un flux spécifique via la classe `MediaPlayerItemConfig`, elle sera effacée lorsque l&#39;instance `MediaPlayer` sera délocalisée. Votre application doit l’enregistrer chaque fois qu’une nouvelle session de lecture est créée.
+   >Si la fabrique de contenu personnalisée a été enregistrée pour un flux spécifique via la variable `MediaPlayerItemConfig` , elle sera effacée lorsque la variable `MediaPlayer` instance est désaffectée. Votre application doit l’enregistrer chaque fois qu’une nouvelle session de lecture est créée.

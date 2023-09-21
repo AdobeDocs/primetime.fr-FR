@@ -1,20 +1,18 @@
 ---
-description: Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
-title: Pause et reprise de la lecture
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Lorsqu’un utilisateur clique sur une publicité, votre application doit suspendre la lecture du contenu vidéo principal.
+title: Suspension et reprise de la lecture
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
+# Suspension et reprise de la lecture {#pause-and-resume-playback}
 
-# Pause et reprise de la lecture {#pause-and-resume-playback}
+Lorsqu’un utilisateur clique sur une publicité, votre application doit suspendre la lecture du contenu vidéo principal.
 
-Lorsqu’un utilisateur clique sur une publicité, votre application doit interrompre la lecture du contenu vidéo principal.
-
-Remplacez `onPause` et `onResume` de l&#39;Activité Android.
+Remplacer la variable `onPause` et `onResume` depuis l’activité Android.
 
 ```java
 @Override 
@@ -45,4 +43,3 @@ public void onPause() {
  
 abandonAudioFocus(); 
 ```
-

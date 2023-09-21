@@ -1,18 +1,16 @@
 ---
-title: Présentation du SDK d’accès aux Adobes
-description: Présentation du SDK d’accès aux Adobes
+title: Présentation du SDK Adobe Access
+description: Présentation du SDK Adobe Access
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Présentation du SDK Adobe Access {#an-overview-of-adobe-access-sdk}
 
-# Présentation du SDK d&#39;accès aux Adobes {#an-overview-of-adobe-access-sdk}
+Le SDK Adobe® Access™ est une plateforme de gestion des droits numériques qui permet de protéger et de diffuser en toute sécurité du contenu vidéo et audio pour la lecture sur des appareils consommateurs tels que les ordinateurs personnels. Adobe Access est une plateforme flexible qui permet aux propriétaires de contenu de protéger leur contenu et de contrôler la distribution. Les propriétaires de contenu peuvent protéger et gérer leurs droits en créant des licences pour chaque fichier multimédia numérique, en s’assurant qu’un large éventail de contenus de haute qualité est mis à la disposition des consommateurs.
 
-Adobe® Access™ SDK est une plate-forme de gestion des droits numériques qui permet de protéger et de diffuser en toute sécurité du contenu vidéo et audio pour la lecture sur des périphériques grand public tels que les ordinateurs personnels. Adobe Access est une plate-forme flexible qui permet aux propriétaires de contenu de protéger leur contenu et de contrôler la distribution. Les propriétaires de contenu peuvent protéger et gérer leurs droits en créant des licences pour chaque fichier multimédia numérique, en s&#39;assurant qu&#39;un large éventail de contenus de la plus haute qualité soit mis à la disposition des consommateurs.
-
-Adobe Access prend en charge un large éventail de modèles d&#39;entreprise, y compris la vidéo sur demande, la location et la vente électronique. Vous pouvez diffuser du contenu protégé par l&#39;accès aux Adobes en flux continu via le logiciel de Flash Media Server d&#39;Adobe, en proposant un téléchargement progressif via HTTP à l&#39;aide de la technologie de HTTP Dynamic Streaming de l&#39;Adobe, ou en permettant des téléchargements vers une bibliothèque de contenu pour une lecture locale, à la convenance du consommateur.
+Adobe Access prend en charge un large éventail de modèles commerciaux, notamment des vidéos à la demande, des loyers et des ventes électroniques. Vous pouvez diffuser du contenu protégé par accès à l’Adobe par le biais d’un logiciel de Flash Media Server d’Adobe, proposer un téléchargement progressif via HTTP à l’aide de la technologie de HTTP Dynamic Streaming d’Adobe, ou autoriser les téléchargements vers une bibliothèque de contenu pour une lecture locale à la convenance du consommateur.

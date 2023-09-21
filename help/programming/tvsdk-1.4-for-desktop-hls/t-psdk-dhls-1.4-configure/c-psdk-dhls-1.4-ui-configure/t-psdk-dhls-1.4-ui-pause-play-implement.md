@@ -1,33 +1,31 @@
 ---
-description: Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
+description: Vous pouvez ajouter un comportement TVSDK pour suspendre et lire des boutons.
 title: Lecture et mise en pause d’une vidéo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
+# Lecture et mise en pause d’une vidéo{#play-and-pause-a-video}
 
-# Lecture et mise en pause d’une vidéo {#play-and-pause-a-video}
+Vous pouvez ajouter un comportement TVSDK pour suspendre et lire des boutons.
 
-Vous pouvez ajouter un comportement TVSDK pour mettre en pause et lire des boutons.
-
-1. Créez un bouton Pause/Lecture qui effectue les opérations suivantes.
-   1. Attendez que votre lecteur soit au moins en état PRÉPARÉ.
-   1. Pour début la lecture, appelez la méthode de lecture TVSDK :
+1. Créez un bouton de pause/lecture qui effectue les opérations suivantes.
+   1. Attendez que votre lecteur soit au moins en état PRÉPARÉ .
+   1. Pour démarrer la lecture, appelez la méthode de lecture TVSDK :
 
       ```
       function play():void;
       ```
 
-   1. Pour mettre la lecture en pause, appelez la méthode de mise en pause TVSDK :
+   1. Pour mettre la lecture en pause, appelez la méthode pause TVSDK :
 
       ```
       function pause():void;
       ```
 
-1. Utilisez le rappel du événement `MediaPlayerStatusChangeEvent.STATUS_CHANGED` pour rechercher les erreurs ou pour prendre d&#39;autres mesures appropriées.
+1. Utilisez le rappel pour la variable `MediaPlayerStatusChangeEvent.STATUS_CHANGED` pour rechercher des erreurs ou pour prendre d’autres mesures appropriées.
 
-   TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur le changement d’état dans le rappel, y compris le nouveau statut, tel que PAUSED ou PLAYING.
+   TVSDK appelle ce rappel lorsque la méthode pause ou play est appelée. TVSDK transmet des informations sur le changement d’état dans le rappel, y compris sur le nouvel état, comme PAUSED ou PLAYING.

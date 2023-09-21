@@ -1,44 +1,42 @@
 ---
-description: Cet exemple montre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans le plan de montage chronologique de lecture.
-title: Placez des marqueurs publicitaires personnalisés sur le plan de montage chronologique.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cet exemple illustre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans la chronologie de lecture.
+title: Placement de marqueurs publicitaires personnalisés sur la chronologie
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
+# Placement de marqueurs publicitaires personnalisés sur la chronologie {#place-custom-ad-markers-on-the-timeline}
 
-# Placez des marqueurs publicitaires personnalisés sur la chronologie {#place-custom-ad-markers-on-the-timeline}
+Cet exemple illustre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans la chronologie de lecture.
 
-Cet exemple montre la méthode recommandée pour inclure des marqueurs publicitaires personnalisés dans le plan de montage chronologique de lecture.
+1. Traduisez les informations de positionnement des publicités hors-bande dans une liste ou un tableau de `RepaceTimeRange` classe .
+1. Création d’une instance de `CustomRangeMetadata` et utilisez ses `setTimeRangeList` avec la liste/le tableau comme argument pour définir sa liste de périodes.
+1. Utilisez `setType` pour définir le type sur `MARK_RANGE`.
+1. Utilisez la variable `MediaPlayerItemConfig.setCustomRangeMetadata` avec la méthode `CustomRangeMetadata` comme argument pour définir les métadonnées de plage personnalisées.
+1. Utilisez la variable `MediaPlayer.replaceCurrentResource` avec la méthode `MediaPlayerItemConfig` comme argument pour définir la nouvelle ressource sur la ressource active.
+1. Attendez un événement `STATE_CHANGED` , qui indique que le lecteur se trouve dans la variable `PREPARED` état.
+1. Commencez la lecture vidéo en appelant `MediaPlayer.play`.
 
-1. Traduisez les informations de positionnement publicitaire out-of-band dans une liste/un tableau de classe `RepaceTimeRange`.
-1. Créez une instance de la classe `CustomRangeMetadata` et utilisez sa méthode `setTimeRangeList` avec la liste/le tableau comme argument pour définir sa liste de plage de temps.
-1. Utilisez sa méthode `setType` pour définir le type sur `MARK_RANGE`.
-1. Utilisez la méthode `MediaPlayerItemConfig.setCustomRangeMetadata` avec l&#39;instance `CustomRangeMetadata` comme argument pour définir les métadonnées de plage personnalisée.
-1. Utilisez la méthode `MediaPlayer.replaceCurrentResource` avec l&#39;instance `MediaPlayerItemConfig` comme argument pour définir la nouvelle ressource comme ressource active.
-1. Attendez un événement `STATE_CHANGED` qui indique que le lecteur est à l’état `PREPARED`.
-1. Début de la lecture vidéo en appelant `MediaPlayer.play`.
+Voici le résultat des tâches effectuées dans cet exemple :
 
-Voici le résultat de l’exécution des tâches dans cet exemple :
+* Si une `ReplaceTimeRange` chevauche une autre sur la chronologie de lecture, par exemple, la position de début d’une `ReplaceTimeRange` est antérieur à une position de fin déjà placée, TVSDK ajuste silencieusement le début de l’offense. `ReplaceTimeRange` pour éviter le conflit.
 
-* Si un `ReplaceTimeRange` chevauche un autre élément du plan de montage chronologique de lecture, par exemple, la position de début d’un `ReplaceTimeRange` est antérieure à la position de fin déjà placée, TVSDK ajuste en silence le début du `ReplaceTimeRange` incriminé pour éviter le conflit.
+  Cela modifie le `ReplaceTimeRange` plus court que spécifié initialement. Si l’ajustement conduit à une durée de zéro, TVSDK supprime silencieusement l’offense `ReplaceTimeRange`.
 
-   Ceci raccourcit le `ReplaceTimeRange` ajusté par rapport à celui spécifié initialement. Si l’ajustement conduit à une durée de zéro, TVSDK supprime en silence l’élément `ReplaceTimeRange` incriminé.
-
-* TVSDK recherche des plages horaires adjacentes pour les coupures publicitaires personnalisées et les regroupe en sauts publicitaires distincts.
+* TVSDK recherche des plages horaires adjacentes pour les coupures publicitaires personnalisées et les regroupe dans des coupures publicitaires distinctes.
 
 Les plages temporelles qui ne sont adjacentes à aucune autre plage temporelle sont traduites en coupures publicitaires contenant une seule publicité.
 
-* Si l’application tente de charger une ressource multimédia dont la configuration contient `CustomRangeMetadata` qui ne peut être utilisée que dans les marqueurs publicitaires personnalisés contextuels, TVSDK renvoie une exception si la ressource sous-jacente n’est pas de type VOD.
+* Si l’application tente de charger une ressource multimédia dont la configuration contient `CustomRangeMetadata` pouvant être utilisé uniquement dans les marqueurs d’annonce personnalisés contextuels, TVSDK renvoie une exception si la ressource sous-jacente n’est pas de type VOD.
 
-* Lorsqu’il s’agit de marques publicitaires personnalisées, TVSDK désactive d’autres mécanismes de résolution de publicités (par exemple, la prise de décision publicitaire Adobe Primetime).
+* Lorsque vous gérez des marqueurs publicitaires personnalisés, TVSDK désactive d’autres mécanismes de résolution des publicités (par exemple, Adobe Primetime et la prise de décision).
 
-   Vous pouvez utiliser n’importe quel module de résolution de publicités TVSDK ou le mécanisme de balisage publicitaire personnalisé. Lorsque vous utilisez des marqueurs publicitaires personnalisés, le contenu de la publicité est considéré comme résolu et est placé sur le plan de montage chronologique.
+  Vous pouvez utiliser n’importe quel module de résolveur de publicités TVSDK ou le mécanisme de marqueurs de publicités personnalisés. Lorsque vous utilisez des marqueurs de publicité personnalisés, le contenu de la publicité est considéré comme résolu et placé dans la chronologie.
 
-Le fragment de code suivant place trois plages de temps sur le plan de montage chronologique en tant que marqueurs publicitaires personnalisés.
+Le fragment de code suivant place trois plages de temps sur la chronologie en tant que marqueurs d’annonce personnalisés.
 
 ```java
 // Assume that the 3 time ranges are obtained through external means 

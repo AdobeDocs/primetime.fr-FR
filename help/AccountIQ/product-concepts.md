@@ -1,8 +1,7 @@
 ---
 title: Glossaire du compte IQ
 description: Glossaire de terminologies de produit.
-exl-id: 2ee54442-9538-4c30-b999-265310b3935f
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 0%
@@ -72,7 +71,7 @@ Distance entre les points les plus éloignés d’un ensemble d’emplacements.
 
 ## Granularité {#granularity-def}
 
-En ce qui concerne la période, la taille de la période ; une semaine ou un mois, par exemple.
+En référence à une période, la taille de la période, telle qu’une semaine ou un mois.
 
 ## Index moyen du secteur industriel {#industry-avg-index-def}
 
@@ -108,7 +107,7 @@ Un appareil à grande mobilité. Par exemple, téléphone mobile et tablette.
 
 ## MVPD {#mvpd-def}
 
-MVPD, également appelé Distributeur, est un agrégateur, revendeur et distributeur de contenu vidéo de Media Company.
+MVPD, également connu sous le nom de Distributeur, est un agrégateur, un revendeur et un distributeur de contenu vidéo de Media Company.
 
 ## Opération {#operation-def}
 

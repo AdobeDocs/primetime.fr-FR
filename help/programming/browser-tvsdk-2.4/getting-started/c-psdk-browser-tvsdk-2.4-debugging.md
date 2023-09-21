@@ -1,16 +1,13 @@
 ---
-description: La journalisation du navigateur TVSDK est activée par défaut. Il fournit également la prise en charge des API pour activer ou désactiver la journalisation à partir du SDK. Utilisez l’API AdobePSDK.LogManager.enableLogging pour activer ou désactiver les journaux.
-title: Débogage et consignation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La journalisation du SDK du navigateur est activée par défaut. Il fournit également la prise en charge de l’API pour activer ou désactiver la journalisation du SDK. Utilisez l’API AdobePSDK.LogManager.enableLogging pour activer ou désactiver les journaux.
+title: Débogage et journalisation
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
+# Débogage et journalisation{#debugging-and-logging}
 
-# Débogage et consignation{#debugging-and-logging}
-
-La journalisation du navigateur TVSDK est activée par défaut. Il fournit également la prise en charge des API pour activer ou désactiver la journalisation à partir du SDK. Utilisez l’API AdobePSDK.LogManager.enableLogging pour activer ou désactiver les journaux.
-
+La journalisation du SDK du navigateur est activée par défaut. Il fournit également la prise en charge de l’API pour activer ou désactiver la journalisation du SDK. Utilisez l’API AdobePSDK.LogManager.enableLogging pour activer ou désactiver les journaux.

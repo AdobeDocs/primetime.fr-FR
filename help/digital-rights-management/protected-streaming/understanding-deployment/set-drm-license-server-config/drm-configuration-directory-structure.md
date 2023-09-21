@@ -1,19 +1,17 @@
 ---
-title: Structure d'annuaire de configuration
-description: Structure d'annuaire de configuration
+title: Structure du répertoire de configuration
+description: Structure du répertoire de configuration
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
 
 ---
 
-
 # Structure du répertoire de configuration{#configuration-directory-structure}
 
-Les répertoires de configuration ont la structure suivante :
+Les répertoires de configuration présentent la structure suivante :
 
 ```
 <i class="+ topic ph hi-d="" i "="">
@@ -38,4 +36,3 @@ Les répertoires de configuration ont la structure suivante :
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

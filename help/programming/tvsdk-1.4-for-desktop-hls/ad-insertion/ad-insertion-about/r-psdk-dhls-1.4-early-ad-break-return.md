@@ -1,44 +1,42 @@
 ---
-description: Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
-title: Mise en oeuvre d’un retour anticipé de coupures publicitaires
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Pour l’insertion de publicités en continu, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
+title: Mise en oeuvre d’un retour de coupure publicitaire anticipée
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
+# Mise en oeuvre d’un retour de coupure publicitaire anticipée{#implementing-an-early-ad-break-return}
 
-# Implémentation d’un retour de coupure publicitaire anticipée {#implementing-an-early-ad-break-return}
-
-Pour l’insertion de publicités en flux continu en direct, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
+Pour l’insertion de publicités en continu, vous devrez peut-être quitter une coupure publicitaire avant que toutes les publicités de la coupure ne soient lues jusqu’à la fin.
 
 >[!NOTE]
 >
->Vous devez vous abonner aux marqueurs d’annonce de début/fin ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` et `#EXT-X-CUE`).
+>Vous devez vous abonner aux marqueurs d’annonce sortants/intégrés ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, et `#EXT-X-CUE`).
 
-Voici quelques éléments à prendre en compte :
+Voici quelques conditions à prendre en compte :
 
-* Marques d’analyse telles que `EXT-X-CUE-IN` (ou balise de marqueur équivalente) qui apparaissent dans les flux linéaires ou FER.
+* Marqueurs d’analyse tels que `EXT-X-CUE-IN` (ou balise de marqueur équivalente) qui apparaissent dans les flux linéaires ou FER.
 
-   Enregistrez les marqueurs comme étant le marqueur du point de retour anticipé. Lecture de `adBreaks` uniquement jusqu’à ce que cette position de marqueur soit définie au cours de la lecture, ce qui remplace la durée de `adBreak` marquée par le marqueur `EXE-X-CUE-OUT` de début.
+  Enregistrez les marqueurs comme étant le marqueur du point de retour anticipé de la publicité. Lecture seule `adBreaks` jusqu’à cette position du marqueur pendant la lecture, qui remplace la durée de la variable `adBreak` marqué par le début `EXE-X-CUE-OUT` marqueur.
 
-* Si deux marqueurs `EXT-X-CUE-IN` existent pour le même marqueur `EXT-X-CUE-OUT`, le premier marqueur `EXT-X-CUE-IN` qui apparaît est celui qui compte.
+* Si deux `EXT-X-CUE-IN` Il existe des marqueurs pour le même `EXT-X-CUE-OUT` marqueur, le premier `EXT-X-CUE-IN` qui apparaît est celui qui compte.
 
-* Si le marqueur `EXE-X-CUE-IN` apparaît dans le plan de montage chronologique sans un marqueur `EXT-X-CUE-OUT` de début, le marqueur `EXE-X-CUE-IN` est ignoré.
+* Si la variable `EXE-X-CUE-IN` apparaît dans la chronologie sans balise `EXT-X-CUE-OUT` , le marqueur `EXE-X-CUE-IN` est ignoré.
 
-   Dans un flux en direct, si le marqueur `EXT-X-CUE-OUT` de début vient de sortir de la fenêtre, TVSDK ne lui répondra pas.
+  Dans une diffusion en direct, si la variable `EXT-X-CUE-OUT` Le marqueur vient de sortir de la fenêtre, TVSDK n’y répondra pas.
 
-* En cas de retour anticipé d’une coupure publicitaire, `adBreak` est lu jusqu’à ce que le curseur de lecture revienne à la position d’origine lorsque la coupure publicitaire était censée se terminer et reprend la lecture du contenu principal à partir de cette position.
+* En cas de retour anticipé d’une coupure publicitaire, la variable `adBreak` est lu jusqu’à ce que le curseur de lecture revienne à la position d’origine lorsque la coupure publicitaire était censée se terminer et reprend la lecture du contenu principal à partir de cette position.
 
 ## SpliceOut et SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` et les  `SpliceIn` marqueurs marquent le début et la fin de la coupure publicitaire. La durée du type `SpliceOut` du marqueur `EXE-X-CUE` peut être égale à zéro et le type `SpliceIn` du marqueur `EXE-X-CUE` marque la fin de la coupure publicitaire. Elles apparaissent dans une balise et diffèrent par type.
+`SpliceOut` et `SpliceIn` les marqueurs indiquent le début et la fin de la coupure publicitaire. La durée de la variable `SpliceOut` type de `EXE-X-CUE` Le marqueur peut être égal à zéro et la variable `SpliceIn` type de `EXE-X-CUE` marque la fin de la coupure publicitaire. Elles apparaissent dans une balise et diffèrent par type.
 
 **Un marqueur avec différents types**
 
-Par exemple, voici un marqueur de différents types :
+Par exemple, voici un marqueur avec différents types :
 
 ```
 #EXTM3U#EXT-X-TARGETDURATION:10
@@ -65,11 +63,11 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-Dans l’exemple d’un marqueur avec différents types, si la durée du type `SpliceOut` est égale à zéro, les balises `SpliceOut` et `SpliceIn` doivent fonctionner ensemble pour chaque coupure publicitaire. Actuellement, un marqueur `SpliceOut` avec une durée non nulle et qui n’a pas besoin d’apparier des marqueurs `SpliceIn` est plus typique.
+Dans le marqueur avec différents types, par exemple, si la durée de la variable `SpliceOut` est égal à zéro, la variable `SpliceOut` et `SpliceIn` doit travailler ensemble pour chaque coupure publicitaire. Actuellement, une `SpliceOut` marqueur avec une durée non nulle et n’a pas besoin de couplage `SpliceIn` les marqueurs sont plus typiques.
 
 **Deux marqueurs distincts**
 
-Le scénario le plus courant est un marqueur `SpliceOut` avec une durée non nulle et qui n&#39;a pas besoin des marqueurs `SpliceIn` d&#39;appariement. Ici, un marqueur d’appariement `SpliceIn` marque la fin de la coupure publicitaire pendant la lecture de la coupure publicitaire, mais la coupure publicitaire est coupée en deux à la position du marqueur `SpliceIn`, et les principaux débuts de contenu jouent à cette position.
+Le scénario le plus courant est un scénario `SpliceOut` marqueur de durée non nulle qui n’a pas besoin de l’association `SpliceIn` marqueurs. Ici, un couplage `SpliceIn` Le marqueur marque la fin de la coupure publicitaire lors de la lecture de la coupure publicitaire, mais la coupure publicitaire est coupée court au niveau de `SpliceIn` position du marqueur et la lecture du contenu principal commence à cette position.
 
 Par exemple, il existe deux marqueurs distincts :
 
@@ -87,4 +85,3 @@ Par exemple, il existe deux marqueurs distincts :
 #EXTINF:6.006000,no-desc
 /live/hls/nbc-fer/QualityLevels(2200000)/Fragments(video=14332589330665811,format=m3u8-aapl-v4)
 ```
-

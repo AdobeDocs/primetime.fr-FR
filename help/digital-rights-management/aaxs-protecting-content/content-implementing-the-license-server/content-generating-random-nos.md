@@ -1,16 +1,14 @@
 ---
-title: Génération de nombres aléatoires
-description: Génération de nombres aléatoires
+title: Générer des nombres aléatoires
+description: Générer des nombres aléatoires
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
+# Générer des nombres aléatoires{#generating-random-numbers}
 
-# Génération de nombres aléatoires{#generating-random-numbers}
-
-Des générateurs de nombres aléatoires matériels peuvent être utilisés sur les serveurs Linux pour s&#39;assurer que l&#39;entropie est suffisante. Si l&#39;ordinateur ne parvient pas à générer suffisamment d&#39;entropie, les opérations d&#39;accès à l&#39;Adobe qui nécessitent une source de hasard se bloquent en attendant les données de `/dev/random`.
+Des générateurs de nombres aléatoires matériels peuvent être utilisés sur les serveurs Linux pour s’assurer qu’une entropie suffisante est générée. Si la machine ne parvient pas à générer suffisamment d’entropie, les opérations d’accès à l’Adobe nécessitant une source aléatoire se bloquent en attendant les données provenant de `/dev/random`.

@@ -1,18 +1,16 @@
 ---
-description: TVSDK peut configurer plusieurs informations de placement initiales.
-title: Informations de placement initiales multiples
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK peut configurer plusieurs informations de référencement initiales.
+title: Informations de référencement initiales multiples
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%
 
 ---
 
+# Informations de référencement initiales multiples{#multiple-initial-placementinformations}
 
-# Informations de positionnement multiples initiales {#multiple-initial-placementinformations}
-
-TVSDK peut configurer plusieurs informations de placement initiales.
+TVSDK peut configurer plusieurs informations de référencement initiales.
 
 ```java
 ArrayList<PlacementInformation> placementInformations = new ArrayList<PlacementInformation>(); 
@@ -48,4 +46,3 @@ else if (customRangeHelper.hasRanges() == CustomRangeHelper.REPLACE_RANGE) {
 } 
 return  placementInformations;
 ```
-

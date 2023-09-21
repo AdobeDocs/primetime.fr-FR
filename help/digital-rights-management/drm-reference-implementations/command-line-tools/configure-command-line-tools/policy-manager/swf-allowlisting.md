@@ -1,23 +1,21 @@
 ---
-title: Application SWF permettant la mise en vente
-description: Application SWF permettant la mise en vente
+title: Listes autorisées des applications SWF
+description: Listes autorisées des applications SWF
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
+# Listes autorisées des applications SWF {#swf-application-allowlisting}
 
-# Application SWF permettant l&#39;inscription {#swf-application-allowlisting}
+Pour mettre en liste autorisée une application de SWF, vous pouvez suivre l’une des deux stratégies suivantes :
 
-Pour liste autorisée d’une application SWF, vous pouvez suivre l’une des deux stratégies suivantes :
+* Vous pouvez spécifier une URL pour un SWF. Il s’agit d’une approche très flexible, en particulier dans un environnement de développement dans lequel vous reconstruisez régulièrement votre SWF.
+* Vous pouvez spécifier un HACHAGE SWF. Il s’agit d’une valeur de condensé cryptographique de votre SWF. Cette approche est moins flexible (mais beaucoup plus stricte), puisque le SWF HASH change lorsque l’application change et est recréée. Dans ce cas, tout le contenu lié au HASH précédent ne sera pas lu sur le nouveau lecteur et devra être recompilé. La variable [!DNL PolicyManager.jar] calcule automatiquement le hachage si vous spécifiez une [!DNL .swf] fichier .
 
-* Vous pouvez spécifier une URL pour un fichier SWF. Il s&#39;agit d&#39;une approche très flexible, particulièrement dans un environnement de développement dans lequel vous reconstruisez régulièrement votre fonds de développement.
-* Vous pouvez spécifier un HASH SWF. Il s’agit de la valeur digest cryptographique de votre fichier SWF. Cette approche est moins flexible (mais beaucoup plus stricte), puisque le SWF HASH changera lorsque l&#39;application sera modifiée et reconstruite. Dans ce cas, tout le contenu lié au HASH précédent ne pourra pas jouer sur le nouveau lecteur et devra être reconditionné. L&#39;outil [!DNL PolicyManager.jar] calcule automatiquement le hachage si vous spécifiez un fichier [!DNL .swf].
+  D’un autre côté, si vous utilisez Primetime DRM via Flash/Adobe Media Server (FMS/AMS), vous pouvez indiquer le chemin d’accès à votre ou vos SWF, et FMS/AMS hachera automatiquement les SWF pour que vous puissiez les insérer dans la stratégie DRM utilisée pour regrouper le contenu diffusé par FMS/AMS.
 
-   D’autre part, si vous utilisez Primetime DRM via Flash/Adobes Medium Server (FMS/AMS), vous pouvez indiquer le chemin d’accès à vos fichiers SWF particuliers et FMS/AMS hachera automatiquement les fichiers SWF à insérer dans la stratégie DRM utilisée pour regrouper le contenu diffusé par FMS/AMS.
-
-Voir `policy.allowedSWFApplication.n` dans *Propriétés de configuration* pour plus de détails.
+Voir `policy.allowedSWFApplication.n` in *Propriétés de configuration* pour plus d’informations.

@@ -1,26 +1,24 @@
 ---
-description: Cette version inclut des lecteurs et prend en charge un large éventail de navigateurs.
-title: Conditions requises
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cette version comprend des lecteurs et prend en charge un large éventail de navigateurs.
+title: Conditions
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# Présentation {#requirements-overview}
 
-# Aperçu {#requirements-overview}
+Le SDK du navigateur nécessite des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
 
-Le navigateur TVSDK requiert des propriétés spécifiques pour le contenu multimédia, le contenu manifeste et les versions logicielles.
+La version Browser TVSDK comprend les lecteurs suivants :
 
-La version de Browser TVSDK inclut les lecteurs suivants :
-
-* `Primetime.js` pour HLS sur ordinateur et mobile
+* `Primetime.js` pour HLS sur bureau et mobile
 
 Les lecteurs incluent les API de référence suivantes :
 
-* `Primetime.js` SDK du navigateur
+* `Primetime.js` Browser TVSDK
 * API JavaScript pour la lecture principale
 * Lecteur de démonstration de référence
 
@@ -33,41 +31,45 @@ Les lecteurs incluent les API de référence suivantes :
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 8.1
 
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 10
 
       * Edge+
-   * Apple OS X
+
+   * APPLE OS X
 
       * Safari 8+
       * Chrome 33+
       * Firefox 38+
 
-
-
-
-* **Configurations Web mobiles**
+* **Configurations web mobiles**
 
    * Android 4.4
 
       * Navigateur natif
       * Chrome 33+
+
    * Android 5.0
 
       * Navigateur natif
       * Chrome 33+
+
    * Android 6.0
 
       * Chrome 33+
-   * Apple iOS 8
+
+   * APPLE IOS 8
 
       * Safari 8+
       * Chrome 33+
-   * Apple iOS 9
+
+   * APPLE IOS 9
 
       * Safari 8+
       * Chrome 33+

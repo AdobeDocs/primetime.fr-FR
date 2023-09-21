@@ -1,7 +1,7 @@
 ---
 title: Présentation des environnements Adobe
 description: Présentation des environnements Adobe
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Adobe comporte deux environnements : **Préqualification** et **Version**.
 
 Chaque environnement comporte deux profils : **staging** et **production**.
 
-* Le profil d’évaluation se connecte au serveur d’évaluation MVPD.
+* Le profil d’évaluation se connecte au serveur d’évaluation MVPD
 * Le profil de production se connecte au profil de production des MVPD.
 
 La raison d’avoir les deux profils est que, sur le profil d’évaluation, nous préparons de nouveaux partenaires à entrer en ligne, et ils aimeraient tester le système avec le prochain build (pré-qualification) ou avec la version (plus stable).

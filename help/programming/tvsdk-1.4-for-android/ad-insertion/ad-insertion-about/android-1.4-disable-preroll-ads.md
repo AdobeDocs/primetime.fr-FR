@@ -2,18 +2,16 @@
 title: Désactiver les publicités preroll
 description: Désactiver les publicités preroll
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
-
 # Désactiver les publicités preroll{#disable-pre-roll-ads}
 
-Pour désactiver le pré-roulement, modifiez les générateurs d&#39;opportunités par défaut afin de ne pas effectuer l&#39;appel de pré-roulement. Les générateurs d&#39;opportunités par défaut sont les suivants :
+Pour désactiver le preroll, modifiez les générateurs d’opportunités par défaut afin de ne pas effectuer l’appel preroll. Les générateurs d’opportunités par défaut sont les suivants :
 
 ```
 @inheritDoc 
@@ -26,7 +24,7 @@ return result;
 }
 ```
 
-Pour désactiver le prédéploiement sur les flux en direct, modifiez ce qui précède afin d’inclure uniquement SpliceOutOpportunityGenerator :
+Pour désactiver le preroll sur les diffusions en direct, modifiez la règle ci-dessus pour inclure uniquement SpliceOutOpportunityGenerator :
 
 ```
 @inheritDoc 
@@ -39,4 +37,3 @@ result.push(new SpliceOutOpportunityGenerator());
 return result; 
 }
 ```
-

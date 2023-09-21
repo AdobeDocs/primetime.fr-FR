@@ -1,18 +1,16 @@
 ---
-title: Délai d’expiration pour les jetons d’authentification
-description: Délai d’expiration pour les jetons d’authentification
+title: Timeout des jetons d’authentification
+description: Timeout des jetons d’authentification
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Timeout des jetons d’authentification{#timeout-for-authentication-tokens}
 
-# Délai d’expiration pour les jetons d’authentification{#timeout-for-authentication-tokens}
+Tous les jetons d’authentification générés par le SDK Adobe Access ont un délai d’expiration pour protéger la sécurité de l’application. L’expiration du jeton d’authentification est spécifiée à l’aide du SDK Adobe Access lors du traitement d’une demande d’authentification. Une fois l’expiration passée, le jeton d’authentification n’est plus valide et l’utilisateur doit se réauthentifier auprès du serveur de licences.
 
-Tous les jetons d’authentification générés par le SDK d’accès à l’Adobe ont un délai d’expiration pour protéger la sécurité de l’application. L’expiration du jeton d’authentification est spécifiée, utilisez le SDK d’accès à l’Adobe lors du traitement d’une demande d’authentification. Une fois l’expiration passée, le jeton d’authentification n’est plus valide et l’utilisateur doit se réauthentifier auprès du serveur de licences.
-
-Pour en savoir plus sur les demandes d&#39;authentification, voir AuthenticationHandler dans le *Adobe Access API Reference*.
+Pour en savoir plus sur les demandes d’authentification, voir AuthenticationHandler dans la section *Référence de l’API Adobe Access*.

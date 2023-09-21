@@ -1,24 +1,22 @@
 ---
 description: Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 title: Mise en oeuvre d’un outil de résolution de contenu personnalisé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
-
 
 # Mise en oeuvre d’un outil de résolution de contenu personnalisé {#implement-a-custom-content-resolver}
 
 Vous pouvez mettre en oeuvre vos propres résolveurs de contenu en fonction des résolveurs par défaut.
 
-Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à travers les résolveurs de contenu enregistrés à la recherche d&#39;une opportunité capable de résoudre cette opportunité. Le premier qui renvoie `true` est sélectionné pour résoudre l&#39;opportunité. Si aucun outil de résolution de contenu n’est capable, cette opportunité est ignorée. Le processus de résolution du contenu étant généralement asynchrone, le résolveur de contenu est responsable de l’avertissement de TVSDK une fois le processus terminé.
+Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération via les résolveurs de contenu enregistrés à la recherche d’un résolveur capable de résoudre cette opportunité. La première qui renvoie `true` est sélectionné pour résoudre l’opportunité. Si aucun résolveur de contenu n’est capable, cette opportunité est ignorée. Comme le processus de résolution de contenu est généralement asynchrone, le résolveur de contenu est chargé d’informer TVSDK une fois le processus terminé.
 
-1. Mettez en oeuvre votre propre `ContentFactory` personnalisé en étendant l&#39;interface `ContentFactory` et en remplaçant `retrieveResolvers`.
+1. Mettez en oeuvre votre propre personnalisation `ContentFactory`, en étendant la variable `ContentFactory` interface et remplacement `retrieveResolvers`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    class MyContentFactory extends ContentFactory { 
@@ -51,9 +49,9 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
    } 
    ```
 
-1. Enregistrez le `ContentFactory` dans le `MediaPlayer`.
+1. Enregistrez le `ContentFactory` à la fonction `MediaPlayer`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    //Register the custom content factory with the media player 
@@ -68,9 +66,9 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
    itemLoader.load(resource, id, config);
    ```
 
-1. Transmettez un objet `AdvertisingMetadata` à TVSDK comme suit :
-   1. Créez un objet `AdvertisingMetadata`.
-   1. Enregistrez l&#39;objet `AdvertisingMetadata` dans `MediaPlayerItemConfig`.
+1. Transmettre `AdvertisingMetadata` vers TVSDK comme suit :
+   1. Créez un `AdvertisingMetadata` .
+   1. Enregistrez le `AdvertisingMetadata` vers `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +79,8 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Créez une classe de résolution d&#39;annonces personnalisée qui étend la classe `ContentResolver`.
-   1. Dans le résolveur d’annonces personnalisé, remplacez `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup` :
+1. Créez une classe de résolveur d’annonces personnalisée qui étend la variable `ContentResolver` classe .
+   1. Dans le programme de résolution de publicités personnalisé, remplacez `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +89,7 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
       void doCleanup();
       ```
 
-      Vous obtenez votre `advertisingMetadata` de l&#39;élément transmis dans `doConfigure` :
+      Vous obtenez votre `advertisingMetadata` de l’élément transmis `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +98,9 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Pour chaque opportunité de placement, créez un `List<TimelineOperation>`.
+   1. Pour chaque opportunité d’emplacement, créez une `List<TimelineOperation>`.
 
-      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement` :
+      Cet exemple `TimelineOperation` fournit une structure pour `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement( 
@@ -115,28 +113,28 @@ Lorsque TVSDK génère une nouvelle opportunité, il effectue une itération à 
 
    1. Une fois les publicités résolues, appelez l’une des fonctions suivantes :
 
-      * Si la résolution de la publicité réussit, appelez `process(List<TimelineOperation> proposals)` et `notifyCompleted(Opportunity opportunity)` sur le `ContentResolverClient`
+      * Si la résolution de publicité réussit, appelez `process(List<TimelineOperation> proposals)` et `notifyCompleted(Opportunity opportunity)` sur le `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
-      * Si la résolution de la publicité échoue, appelez `notifyResolveError` sur la `ContentResolverClient`
+      * Si la résolution de la publicité échoue, appelez `notifyResolveError` sur le `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         Par exemple :
+        Par exemple :
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-Cet exemple de résolveur d&#39;annonces personnalisé résout une opportunité et sert une publicité simple :
+Cet exemple de résolveur de publicités personnalisées résout une opportunité et diffuse une publicité simple :
 
 ```java
 public class CustomContentResolver extends ContentResolver { 
@@ -169,4 +167,3 @@ public class CustomContentResolver extends ContentResolver {
     protected void doCleanup() {} 
 } 
 ```
-

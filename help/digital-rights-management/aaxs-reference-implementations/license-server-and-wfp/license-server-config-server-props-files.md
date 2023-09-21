@@ -2,27 +2,25 @@
 title: Fichiers de propriétés du serveur
 description: Fichiers de propriétés du serveur
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%
 
 ---
 
-
 # Fichiers de propriétés du serveur {#server-properties-files}
 
-Le serveur requiert deux fichiers de configuration, un pour le serveur de licences et un autre pour le gestionnaire de packages. Les deux fichiers doivent être placés sur le chemin de classe. Les fichiers de propriétés contiennent l’emplacement des informations d’identification émises par l’Adobe. Ces informations d’identification peuvent être spécifiées sous la forme d’un fichier .pfx et d’un mot de passe ou en fournissant un alias et un mot de passe pour les informations d’identification stockées sur un HSM.
+Le serveur nécessite deux fichiers de configuration, un pour le serveur de licences et un autre pour le service de package. Les deux fichiers doivent être placés sur le chemin d’accès aux classes. Les fichiers de propriétés contiennent l’emplacement des informations d’identification émises par Adobe. Ces informations d’identification peuvent être spécifiées sous la forme d’un fichier .pfx et d’un mot de passe ou en fournissant un alias et un mot de passe pour les informations d’identification stockées sur un HSM.
 
-Consultez les fichiers de propriétés pour plus d&#39;informations sur les valeurs spécifiques et l&#39;utilisation de chaque paramètre. Des exemples de fichiers de propriétés se trouvent dans le répertoire &quot;resources&quot; de l&#39;implémentation de référence (Référence Implementation\Server\resources).
+Reportez-vous aux fichiers de propriétés pour plus d’informations sur les valeurs spécifiques et l’utilisation de chaque paramètre. Vous trouverez des exemples de fichiers de propriétés dans le répertoire &quot;resources&quot; de l’implémentation de référence (Reference Implementation\Server\resources).
 
-Pour garantir la sécurité du mot de passe de vos informations d’identification, un outil est fourni (ScrambleUtil.class) pour chiffrer le mot de passe avant qu’il ne soit entré dans le fichier flashaccess-refimpl.properties ou flashaccess-refimpl-packager.properties.
+Pour garantir la sécurité du mot de passe de vos informations d’identification, un outil est fourni (ScrambleUtil.class) pour chiffrer le mot de passe avant qu’il ne soit entré dans le fichier flashaccess-refimpl.properties ou flashaccess-refimpl-packager.properties .
 
 Pour préparer correctement le mot de passe de vos informations d’identification :
 
 1. Accédez à [!DNL Reference Implementation\Server\refimpl\scrambler].
-1. Dans l&#39;invite de commande, saisissez la commande suivante :
+1. A partir de l&#39;invite de commande, saisissez la commande :
 
    ```
    java -classpath  
@@ -37,6 +35,6 @@ Pour préparer correctement le mot de passe de vos informations d’identificati
 
 >[!NOTE]
 >
->L’exemple précédent utilise un point-virgule (;) comme séparateur. Pour les plates-formes autres que Microsoft Windows, utilisez un deux-points (:) comme délimiteur.
+>L’exemple précédent utilise un point-virgule (;) comme délimiteur. Pour les plateformes autres que Microsoft Windows, utilisez un deux-points (:) comme délimiteur.
 
-L&#39;utilitaire génère le mot de passe chiffré que vous devez copier dans le fichier [!DNL .properties].
+L’utilitaire génère le mot de passe chiffré que vous devez copier dans la variable [!DNL .properties] fichier .

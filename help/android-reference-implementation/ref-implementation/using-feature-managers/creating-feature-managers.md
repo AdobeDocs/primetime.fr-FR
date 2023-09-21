@@ -1,32 +1,30 @@
 ---
-description: Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées via MediaPlayer.
-title: Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au lecteur Media
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Les fonctionnalités TVSDK sont pilotées par la configuration et mises en oeuvre via MediaPlayer.
+title: Création de gestionnaires de fonctionnalités en transmettant des informations de configuration au lecteur multimédia
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
+# Création de gestionnaires de fonctionnalités en transmettant des informations de configuration au lecteur multimédia {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
-# Création de gestionnaires de fonctionnalités en transmettant les informations de configuration au MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
+Les fonctionnalités TVSDK sont pilotées par la configuration et mises en oeuvre via MediaPlayer.
 
-Les fonctionnalités TVSDK sont pilotées par la configuration et implémentées via MediaPlayer.
+* La configuration est la liste des paramètres spécifiques de la fonctionnalité, tels que le débit initial du contrôle ABR et la visibilité par défaut du sous-titrage.
 
-* La configuration est la liste de paramètres spécifiques pour la fonction, tels que le débit binaire initial du contrôle ABR et la visibilité par défaut du sous-titrage.
+  Les gestionnaires de fonctionnalités doivent obtenir les configurations afin de déterminer le comportement de la fonctionnalité.
 
-   Les gestionnaires de fonctionnalités doivent obtenir les configurations afin de déterminer le comportement des fonctionnalités.
-
-   Dans l’implémentation de la référence Primetime, la configuration est stockée dans des préférences partagées, mais vous pouvez stocker la configuration de n’importe quelle façon qui convient à votre environnement.
+  Dans l’implémentation de référence Primetime, la configuration est stockée dans les préférences partagées, mais vous pouvez stocker la configuration de la manière qui convient le mieux à votre environnement.
 
 * `MediaPlayer` est l’objet du lecteur multimédia TVSDK qui contient la ressource vidéo.
 
-   Les gestionnaires de fonctionnalités enregistrent les écouteurs de événement TVSDK sur cet objet lecteur, récupèrent les données de la session de lecture et déclenchent les fonctionnalités TVSDK à la session de lecture.
+  Les gestionnaires de fonctionnalités enregistrent les écouteurs d’événement TVSDK sur cet objet de lecteur, récupèrent les données de la session de lecture et déclenchent les fonctionnalités TVSDK dans la session de lecture.
 
-Chaque fonction possède une interface de configuration correspondante. Par exemple, `CCManager` utilise `ICCConfig` pour récupérer la configuration. `ICCConfig` contient les méthodes permettant d’obtenir les informations de configuration relatives au sous-titrage uniquement.
+Chaque fonction possède une interface de configuration correspondante. Par exemple : `CCManager` uses `ICCConfig` pour récupérer la configuration. `ICCConfig` contient des méthodes pour obtenir les informations de configuration relatives au sous-titrage codé uniquement.
 
-L’exemple suivant montre le fichier [!DNL ICCConfig.java], configuré pour recevoir des informations sur la visibilité de la légende fermée, le style et le bord de la police à partir de `MediaPlayer` :
+L’exemple suivant illustre la variable [!DNL ICCConfig.java] fichier, configuré pour recevoir des informations sur la visibilité de la légende fermée, le style et le bord de la police à partir de `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,11 +62,11 @@ L’exemple suivant montre le fichier [!DNL ICCConfig.java], configuré pour rec
 }
 ```
 
-Une application qui utilise une fonction TVSDK peut créer son gestionnaire de fonctionnalités avec un fournisseur de configuration et un objet `MediaPlayer`. Par exemple :
+Une application qui utilise une fonctionnalité TVSDK peut créer son gestionnaire de fonctionnalités avec un fournisseur de configuration et un `MediaPlayer` . Par exemple :
 
 ```java
 // This application needs to use the advertising workflow feature 
 AdsManager adsManager = new AdsManagerOn();
 ```
 
-Documentation de l’API de configuration de Feature Manager : [Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)
+Documentation de l’API de configuration du gestionnaire de fonctionnalités : [Javadoc](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/package-summary.html)

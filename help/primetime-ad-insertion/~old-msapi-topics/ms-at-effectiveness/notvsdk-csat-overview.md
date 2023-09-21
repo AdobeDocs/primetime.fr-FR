@@ -1,40 +1,39 @@
 ---
-description: Les éditeurs peuvent créer des lecteurs vidéo compatibles HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces avec le serveur de manifeste pour les cas de flux en direct et de vidéo à la demande (VOD) sont légèrement différentes.
+description: Les éditeurs peuvent créer des lecteurs vidéo compatibles avec HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces au serveur de manifeste pour les cas de diffusion en direct et de vidéo à la demande (VOD) sont légèrement différentes.
 title: Présentation du suivi côté client non TVSDK
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '727'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
 # Présentation du suivi côté client non TVSDK {#overview-of-non-tvsdk-client-side-tracking}
 
-Les éditeurs peuvent créer des lecteurs vidéo compatibles HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces avec le serveur de manifeste pour les cas de flux en direct et de vidéo à la demande (VOD) sont légèrement différentes.
+Les éditeurs peuvent créer des lecteurs vidéo compatibles avec HLS qui fonctionnent avec les workflows de suivi des publicités côté client du serveur de manifeste Primetime. Les interfaces au serveur de manifeste pour les cas de diffusion en direct et de vidéo à la demande (VOD) sont légèrement différentes.
 
 Le serveur de manifeste fournit une API permettant aux lecteurs personnalisés de demander les URL suivantes, qu’ils peuvent utiliser pour signaler les événements de suivi des publicités :
 
 * Impression publicitaire
-* quartile publicitaire
-* Progression de la publicité
+* Quartile publicitaire
+* Progression de la capsule publicitaire
 * Progression de la capsule de contenu
 
-L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise respecte la configuration minimale requise. Voir [Configuration requise pour le lecteur vidéo](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md) pour plus de détails.
+L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise respecte la configuration minimale requise. Voir [Configuration requise du lecteur vidéo](/help/primetime-ad-insertion/~old-msapi-topics/ms-player-req.md) pour plus d’informations.
 
-## Processus de suivi côté client {#section_cst_flow}
+## Workflow de suivi côté client {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
-1. Le lecteur obtient une URL de serveur de manifeste de l’éditeur.
-1. Le lecteur ajoute des paramètres de requête spécifiques à ses exigences d’insertion publicitaire et envoie une requête de GET HTTP à l’URL du Bootstrap qui en résulte. L’URL du Bootstrap présente la syntaxe suivante :
+1. Le lecteur obtient une URL de serveur de manifeste auprès de l’éditeur.
+1. Le lecteur ajoute des paramètres de requête spécifiques à ses exigences d’insertion de publicités et envoie une requête de GET HTTP à l’URL du Bootstrap qui en résulte. L’URL du Bootstrap présente la syntaxe suivante :
 
    ```URL
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
    ```
 
-   Par exemple :
+   Par exemple :
 
    ```URL
    https://manifest.auditude.com/auditude/variant/
@@ -42,9 +41,9 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   L&#39;URL comprend les éléments décrits dans [Envoyer une commande au serveur de manifeste](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-sending-cmd.md).
+   L’URL comprend les éléments décrits à la section [Envoi d’une commande au serveur de manifeste](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
-1. Le serveur de manifeste établit une session pour ce lecteur et génère un ID de session unique. Il crée une nouvelle URL de liste de lecture M3U8 de variante, qu’il renvoie au lecteur en tant que réponse JSON. La syntaxe JSON est la suivante :
+1. Le serveur de manifeste établit une session pour ce lecteur et génère un ID de session unique. Il crée une URL de liste de lecture M3U8 de variante, qu’il renvoie au lecteur en tant que réponse JSON. La syntaxe JSON est la suivante :
 
    ```JSON
    {
@@ -54,13 +53,13 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
    }
    ```
 
-   Par exemple :
+   Par exemple :
 
    ```JSON
    https://pcor3.manifest.auditude.com/auditude/variant/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3B0ZGVtb3MuY29tL3ZpZGVvcy90b3NoZHVuZW5jcnlwdGVkL2hscy90ZXN0Mi5tM3U4.3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Le lecteur utilise l&#39;URL de la réponse JSON pour demander la nouvelle liste de lecture principale de variante M3U8 au serveur de manifeste.
+1. Le lecteur utilise l’URL de la réponse JSON pour demander la nouvelle variante de la liste de lecture principale M3U8 au serveur de manifeste .
 
 1. Le serveur de manifeste renvoie une nouvelle variante M3U8 contenant des URL de liste de lecture au niveau du flux avec une syntaxe similaire à celle-ci :
 
@@ -69,7 +68,7 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
      {rendition}/{groupID}/{urlSafeBase64(bit rate stream URL)}.m3u8?u={Ad Request Id}&z={Ad Zone Id}&{Any other query parameters}
    ```
 
-   Par exemple :
+   Par exemple :
 
    ```URL
    #EXTM3U
@@ -93,13 +92,13 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Le lecteur sélectionne l’URL de manifeste au niveau du flux et à débit unique appropriée pour lire le contenu assemblé par l’annonce. Par exemple :
+1. Le lecteur sélectionne l’URL de manifeste au niveau du flux et du débit unique appropriée pour lire le contenu assemblé par l’annonce. Par exemple :
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2
    ```
 
-1. Le serveur de manifeste renvoie un manifeste de niveau flux contenant des liens vers le contenu et les liens de segments TS publicitaires. Par exemple :
+1. Le serveur de manifeste renvoie un manifeste au niveau du flux contenant des liens vers le contenu et des liens de segment TS de publicité. Par exemple :
 
    ```
       #EXTM3U
@@ -124,36 +123,35 @@ L’API du serveur de manifeste suppose que tout lecteur vidéo qui l’utilise 
 
    >[!NOTE]
    >
-   >Le lecteur sélectionne l’URL de la liste de lecture au niveau du flux pour obtenir le flux de contenu. Le serveur de manifeste récupère la liste de lecture d’origine sur le réseau de diffusion de contenu. Certains encodeurs peuvent injecter des détails supplémentaires dans l&#39;attribut de titre `#EXTINF`, par exemple :
+   >Le lecteur sélectionne l’URL de la liste de lecture au niveau du flux pour obtenir le flux de contenu. Le serveur de manifeste récupère la liste de lecture d’origine du CDN. Certains encodeurs peuvent injecter des détails supplémentaires dans la variable `#EXTINF` attribut title, par exemple :
    >
-   >
-   ```
+   >```
    >#EXTINF:6.006,LTC=2017-08-23T13:25:47+00:00
    >```
 
-   Puisque le serveur de manifeste ne peut pas déduire la signification des attributs non standard pour les modifier pour la liste de lecture à assemblage publicitaire, le serveur de manifeste supprime tous les attributs supplémentaires au-delà des informations de durée contenues dans cette balise. Pour plus d&#39;informations, consultez l&#39;entrée [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) dans la spécification HLS.
+   Comme le serveur de manifeste ne peut pas déduire la signification des attributs non standard pour les modifier pour la liste de lecture groupée aux publicités, le serveur de manifeste supprime tous les attributs supplémentaires au-delà des informations de durée dans cette balise. Voir [EXTINF](https://tools.ietf.org/html/rfc8216#section-4.3.2.1) entrée dans la spécification HLS pour plus de détails.
 
-1. Pour demander des informations de suivi, le lecteur ajoute le paramètre de requête `pttrackingposition` avec toute valeur alphanumérique à l’URL de la liste de lecture au niveau du flux pour le débit sélectionné. Par exemple :
+1. Pour demander des informations de suivi, le lecteur ajoute le paramètre de requête `pttrackingposition` avec toute valeur alphanumérique à l’URL de liste de lecture au niveau du flux pour le débit sélectionné. Par exemple :
 
    ```URL
    https://pcor3.manifest.auditude.com/auditude/vod/7LTc86_kMUDFcCjoH9X7K_2auwb_gnWM/500/f958bef8-9158-43cc-80b9-4b15417b7895/aHR0cDovL3d3dy5wdGRlbW9zLmNvbS92aWRlb3MvdG9zaGR1bmVuY3J5cHRlZC9obHMvNTAwL3RvY181MDAubTN1OA.m3u8?u=9a2893fd893cab27da24059ff034b78d
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. Le serveur de manifeste renvoie le fichier playlist rempli avec un objet [JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) contenant les données de suivi publicitaire pour le fichier m3u8 de niveau flux actuellement demandé.
+1. Le serveur de manifeste renvoie le fichier de liste de lecture renseigné avec un  [JSON](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) ou [VMAP](/help/primetime-ad-insertion/~old-msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) contenant les données de suivi des publicités pour le fichier m3u8 de niveau flux actuellement demandé.
 
    >[!NOTE]
    >
-   >Le serveur de manifeste ne génère des objets de suivi d’annonce que si des publicités ont été insérées dans la liste de lecture de niveau flux actuellement demandée. Si le lecteur lit une liste de lecture qui ne contient pas de publicités insérées, le serveur de manifeste renvoie un état HTTP 201 pour la demande de liste de lecture du suivi des publicités. Si le lecteur effectue la demande de suivi des publicités pour un flux en cours de lecture, le serveur de manifeste renvoie un état HTTP 500. Par exemple, si la demande de lecture actuelle est de 500.m3u8, le serveur de manifeste renvoie un JSON|VMAP dans le 500.m3u8 pour la demande de suivi des publicités. Cependant, si le lecteur change ensuite de flux pour lire le fichier 800.m3u8, les informations de suivi des publicités dans le fichier 500.m3u8 ne sont plus valides, ce qui entraîne une erreur 404.
+   >Le serveur de manifeste ne génère des objets de suivi des publicités que si des publicités ont été insérées dans la liste de lecture de niveau flux actuellement demandée. Si le lecteur lit une liste de lecture qui ne contient pas de publicités insérées, le serveur de manifeste renvoie un état HTTP 201 pour la demande de liste de lecture de suivi des publicités. Si le lecteur effectue la demande de suivi des publicités pour un flux qu’il ne lit pas, le serveur de manifeste renvoie un état HTTP 500. Par exemple, si la requête de lecture actuelle est de 500.m3u8, le serveur de manifeste renvoie un JSON|VMAP dans le 500.m3u8 pour la requête de suivi des publicités. Cependant, si le lecteur change ensuite de flux pour lire le 800.m3u8, les informations de suivi des publicités dans le 500.m3u8 ne sont plus valides, ce qui entraîne une erreur 404.
 
    >[!NOTE]
    >
-   >Le serveur de manifeste génère l&#39;objet de suivi des publicités en fonction de la valeur `pttrackingversion` de l&#39;URL du Bootstrap. Si `pttrackingversion` est omis ou possède une valeur non valide, le serveur de manifeste renseigne automatiquement les informations de suivi des publicités dans les balises `#EXT-X-MARKER` de chaque liste de lecture de niveau flux demandée. Voir [pour plus de détails](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >Le serveur de manifeste génère l’objet de suivi des publicités en fonction de la variable `pttrackingversion` dans l’URL du Bootstrap. Si la variable `pttrackingversion` est omis ou a une valeur non valide, le serveur de manifeste renseigne automatiquement les informations de suivi des publicités dans la variable `#EXT-X-MARKER` balises dans chaque liste de lecture au niveau du flux demandée. Voir [pour plus d’informations](/help/primetime-ad-insertion/~old-msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
-1. Le lecteur demande chaque URL de suivi de publicité pour chaque événement de suivi de publicité au moment approprié.
+1. Le lecteur demande chaque URL de suivi des publicités pour chaque événement de suivi publicitaire au moment approprié.
 
 >[!NOTE]
 >
->Pour les flux en direct, le lecteur doit répéter les étapes 6 à 10, car l’outil de création de package met constamment à jour la liste de lecture pendant toute la durée du événement en direct.
+>Pour les flux en direct, le lecteur doit répéter les étapes 6 à 10, car le programme de package met constamment à jour la liste de lecture pendant toute la durée de l’événement en direct.
 
-Pendant la lecture de la vidéo, le lecteur doit suivre la position du curseur de lecture et l’utiliser conjointement avec les URL de suivi qu’il a reçues lors de l’insertion de publicités Primetime. Les URL de suivi sont regroupées par décalage temporel depuis le début de la lecture. Pour chaque décalage temporel, il existe une URL pour chaque système publicitaire auquel envoyer les informations de suivi. Les détails supplémentaires du format diffèrent entre la vidéo en direct et la vidéo à la demande.
+Pendant la lecture de la vidéo, le lecteur doit suivre la position du curseur de lecture et utiliser cette position conjointement avec les URL de suivi qu’il a reçues de l’insertion de publicités Primetime. Les URL de tracking sont regroupées par décalage horaire à partir du début de la lecture. Pour chaque décalage horaire, il existe une URL pour chaque système publicitaire auquel envoyer les informations de suivi. Les détails supplémentaires du format diffèrent entre la vidéo en direct et la vidéo à la demande.

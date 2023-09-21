@@ -1,22 +1,20 @@
 ---
-description: Vous pouvez mettre en oeuvre vos propres générateurs d'opportunités en implémentant la classe OpportunityGenerator.
+description: Vous pouvez mettre en oeuvre vos propres générateurs d’opportunités en mettant en oeuvre la classe OpportunityGenerator .
 title: Mise en oeuvre d’un générateur d’opportunités personnalisé
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# Mise en oeuvre d’un générateur d’opportunités personnalisé {#implement-a-custom-opportunity-generator}
 
-# Implémenter un générateur d&#39;opportunités personnalisé {#implement-a-custom-opportunity-generator}
+Vous pouvez mettre en oeuvre vos propres générateurs d’opportunités en mettant en oeuvre la classe OpportunityGenerator .
 
-Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en implémentant la classe OpportunityGenerator.
+1. Mettez en oeuvre votre `ContentFactory` en implémentant la variable `ContentFactory` interface et remplacement `retrieveGenerators`.
 
-1. Mettez en oeuvre votre `ContentFactory` personnalisé en implémentant l&#39;interface `ContentFactory` et en remplaçant `retrieveGenerators`.
-
-   Par exemple :
+   Par exemple :
 
    ```java
    class MyContentFactory extends ContentFactory { 
@@ -30,9 +28,9 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
    }
    ```
 
-1. Enregistrez le `ContentFactory` dans le `MediaPlayer`.
+1. Enregistrez le `ContentFactory` à la fonction `MediaPlayer`.
 
-   Par exemple :
+   Par exemple :
 
    ```java
    // register the custom content factory with media player 
@@ -47,14 +45,14 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
    itemLoader.load(resource, id, config);
    ```
 
-1. Créez une classe de générateur d&#39;opportunités personnalisée qui implémente la classe `OpportunityGenerator`.
+1. Créez une classe de générateur d’opportunités personnalisée qui met en oeuvre le `OpportunityGenerator` classe .
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Dans le générateur d’opportunités personnalisé, remplacez `doConfigure`, `doUpdate` et `doCleanup` :
+   1. Dans le générateur d’opportunités personnalisé, remplacez `doConfigure`, `doUpdate` et `doCleanup`:
 
       ```java
       @Override 
@@ -90,7 +88,7 @@ Vous pouvez mettre en oeuvre vos propres générateurs d&#39;opportunités en im
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Voici un exemple de détecteur d&#39;opportunités de placement personnalisé :
+Voici un exemple de détecteur d’opportunités d’emplacement personnalisé :
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
@@ -150,4 +148,3 @@ public class MyOpportunityGenerator implements OpportunityGenerator {
     protected void cleanup() {} 
 }
 ```
-

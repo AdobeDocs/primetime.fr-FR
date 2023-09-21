@@ -1,13 +1,12 @@
 ---
 title: Notes de mise à jour de l’authentification Adobe Primetime 2.63
 description: Notes de mise à jour de l’authentification Adobe Primetime 2.63
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
-
 
 # Notes de mise à jour de l’authentification Adobe Primetime 2.63 {#pt-authn-263-rn}
 
@@ -44,7 +43,7 @@ Cette fonctionnalité permet aux distributeurs multicanaux de contourner tempora
 
 #### Ajout d’un identifiant proxy dans l’en-tête des appels d’autorisation {#add-proxied-id}
 
-Cette fonction ajoute l’identifiant d’un MVPD de syntaxe proxy dans l’en-tête de l’appel d’autorisation. Cela permet à Synacor de configurer des règles de fonctionnement pour chaque proxy individuel (ex. routage vers différents domaines par MVPD (proxy).
+Cette fonctionnalité ajoute l’identifiant d’un MVPD de syntaxe proxy dans l’en-tête de l’appel d’autorisation. Cela permet à Synacor de configurer des règles de fonctionnement pour chaque proxy individuel (ex. routage vers différents domaines par MVPD (proxy).
 
 
 #### Tableau de bord TVE {#tve-dashboard}
@@ -56,6 +55,3 @@ Dans cette version, nous avons corrigé un problème en raison duquel authN ou a
 
 * Suppression de l’utilisation de `eval` , rendant ainsi le SDK compatible avec la stratégie de sécurité du contenu.
 * Correction d’un problème qui empêchait la fin du flux d’authentification lorsque le stockage local du navigateur était explicitement effacé par une application partenaire.
-
-
-

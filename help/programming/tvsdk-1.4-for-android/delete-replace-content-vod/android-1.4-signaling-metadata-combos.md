@@ -1,32 +1,30 @@
 ---
-description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation publicitaire et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
-title: Effet sur l’insertion et la suppression d’une publicité à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalement des publicités et combinaisons de métadonnées de publicité. Différentes combinaisons de mode de signalement et de métadonnées génèrent des comportements différents.
+title: Effet sur l’insertion et la suppression de publicités à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
 
 ---
 
+# Effet sur l’insertion et la suppression de publicités à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-# Effet sur l’insertion et la suppression d’une publicité à partir du mode de signalisation publicitaire et des combinaisons de métadonnées publicitaires{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
-
-Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalisation publicitaire et combinaisons de métadonnées publicitaires. Différentes combinaisons de mode de signalisation et de métadonnées entraînent des comportements différents.
+Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VOD en utilisant différents modes de signalement des publicités et combinaisons de métadonnées de publicité. Différentes combinaisons de mode de signalement et de métadonnées génèrent des comportements différents.
 
 >[!NOTE]
 >
->En cas de conflit entre les plages de temps et les modes de signalisation publicitaire, TVSDK donne la priorité aux plages de temps.
+>En cas de conflit entre les périodes et les modes de signalisation publicitaire, TVSDK donne la priorité aux périodes.
 
-**Tableau 3 : Comportements de combinaison Mode de signature/Métadonnées**
+**Tableau 3 : Mode de signature/Comportements de combinaison de métadonnées**
 
 <table>  
  <thead> 
   <tr> 
-   <th class="entry"> Mode de signature de publicité </th> 
-   <th class="entry"> Métadonnées de la publicité </th> 
+   <th class="entry"> Mode de signature des publicités </th> 
+   <th class="entry"> Métadonnées de publicité </th> 
    <th class="entry"> Résolveurs créés </th> 
-   <th class="entry"><span class="codeph"> </span> PlacementInformations créées </th> 
+   <th class="entry"><span class="codeph"> PlacementInformations</span> created </th> 
    <th class="entry"> Comportement résultant </th> 
   </tr> 
  </thead>
@@ -51,7 +49,7 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
    <td> Supprimer, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Plages supprimées, Publicités insérées </td> 
@@ -73,19 +71,19 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Publicité personnalisée </td> 
+   <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Mark, Auditude </td> 
-   <td> Publicité personnalisée, Auditude </td> 
+   <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées, aucune publicité insérée </td> 
   </tr> 
   <tr> 
-   <td> <b>Repères de manifeste</b> </td> 
+   <td> <b>Cotes du manifeste</b> </td> 
    <td> </td> 
    <td> </td> 
    <td> </td> 
@@ -126,7 +124,7 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Publicité personnalisée </td> 
+   <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
@@ -175,7 +173,7 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Publicité personnalisée </td> 
+   <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
@@ -224,17 +222,16 @@ Vous pouvez marquer, supprimer et remplacer des plages de temps dans les flux VO
   <tr> 
    <td></td> 
    <td> Marquer </td> 
-   <td> Publicité personnalisée </td> 
+   <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Mark, Auditude </td> 
-   <td> Publicité personnalisée, Auditude </td> 
+   <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Plages marquées </td> 
   </tr> 
  </tbody> 
 </table>
-

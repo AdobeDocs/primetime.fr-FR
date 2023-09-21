@@ -2,18 +2,16 @@
 title: Conditions préalables
 description: Conditions préalables
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-
 # Conditions préalables {#prerequisites}
 
-Pour utiliser le site d&#39;inscription de certificats pour demander des certificats, vous devez connaître les éléments suivants :
+Pour utiliser le site d’inscription de certificats afin de demander des certificats, vous devez connaître les informations suivantes :
 
 * Fonctionnement de l’infrastructure à clé publique
 * Comment générer des paires de clés et sécuriser vos clés privées

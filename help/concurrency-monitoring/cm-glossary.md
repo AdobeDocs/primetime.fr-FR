@@ -19,11 +19,11 @@ ht-degree: 0%
 
 * Le type d’accès demandé par le sujet ; les valeurs possibles pour CM sont ***lancer*** ou ***continue*** une session de diffusion en continu.
 
-## Principal flux {#active-stream-defn}
+## Flux actif {#active-stream-defn}
 
 * Flux qui a reçu au moins 1 événement (pulsation) au cours des 90 dernières secondes.
 
-* ***Remarque :*** Si le dernier événement du flux est de type stop (`?event=stop`), il ne sera pas comptabilisé. Il s’agit d’une optimisation qui permet à un lecteur de fermer explicitement un flux afin qu’il ne soit plus considéré comme &quot;principal&quot;.
+* ***Remarque :*** Si le dernier événement du flux est de type stop (`?event=stop`), il ne sera pas comptabilisé. Il s’agit d’une optimisation qui permet à un lecteur de fermer explicitement un flux afin qu’il ne soit plus considéré comme &quot;actif&quot;.
 
 ## Application {#application-defn}
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 * Agit comme un système de surveillance pour les abonnés, soutenant les programmes multivariés et les programmeurs dans leurs exigences d’application des politiques inter-applications.
 * Reçoit les pulsations qui indiquent l’activité du flux.
 * Agit comme _Point de décision politique_ en évaluant les demandes d’autorisation en fonction de l’activité de l’utilisateur et en fournissant une réponse d’autorisation/de refus.
-* Agit comme _Point d’informations sur la stratégie_ en signalant le nombre de diffusions principales (et les métadonnées de diffusion supplémentaires) pour un abonné.
+* Agit comme _Point d’informations sur la stratégie_ en signalant le nombre de diffusions actives (et les métadonnées de diffusion supplémentaires) pour un abonné.
 
 ## Environnement {#env-defn}
 

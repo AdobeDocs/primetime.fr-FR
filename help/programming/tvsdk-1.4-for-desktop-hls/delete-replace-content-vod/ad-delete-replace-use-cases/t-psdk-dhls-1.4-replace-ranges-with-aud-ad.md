@@ -1,21 +1,19 @@
 ---
-title: Remplacer les plages de temps par une publicité Adobe Primetime pour la prise de décision publicitaire
-description: Remplacer les plages de temps par une publicité Adobe Primetime pour la prise de décision publicitaire
+title: Remplacement des plages de temps par une publicité Adobe Primetime de prise de décision publicitaire
+description: Remplacement des plages de temps par une publicité Adobe Primetime de prise de décision publicitaire
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# Remplacement des plages de temps par une publicité Adobe Primetime de prise de décision publicitaire{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-# Remplacez les plages de temps par une annonce de décision publicitaire Adobe Primetime {#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
+Supprimer `TimeRanges` entre le `begin` et `end` in `localTime` dans la chronologie. Remplacez-le par un AdBreak de `begin` to `begin+replaceDuration`.
 
-Supprimez `TimeRanges` entre `begin` et `end` dans `localTime` du plan de montage chronologique. Remplacez-le par un AdBreak de `begin` à `begin+replaceDuration`.
-
-Remplacez les plages par des annonces de prise de décision et Primetime.
+Remplacez les plages par des publicités de prise de décision publicitaire Primetime.
 
 ```
 {   
@@ -70,4 +68,3 @@ Remplacez les plages par des annonces de prise de décision et Primetime.
     "id": "vod_003"
 }
 ```
-

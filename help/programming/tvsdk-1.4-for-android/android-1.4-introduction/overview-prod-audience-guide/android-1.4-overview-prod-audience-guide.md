@@ -1,24 +1,22 @@
 ---
-description: Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour Android, qui est mis en oeuvre en Java.
+description: Ce guide fournit des informations sur la manière de développer des applications de lecteur vidéo à l’aide de TVSDK pour Android, qui est mis en oeuvre dans Java.
 title: Présentation
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
 
 ---
 
+# Présentation {#overview}
 
-# Aperçu {#overview}
-
-Ce guide explique comment développer des applications de lecteurs vidéo en utilisant TVSDK pour Android, qui est mis en oeuvre en Java.
+Ce guide fournit des informations sur la manière de développer des applications de lecteur vidéo à l’aide de TVSDK pour Android, qui est mis en oeuvre dans Java.
 
 ## Présentation du produit {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK comprend des descriptions d’API et des exemples de code pour vous aider à intégrer des fonctionnalités vidéo avancées, la protection du contenu et les fonctionnalités publicitaires dans votre lecteur. Vous utilisez Java pour créer une interface utilisateur de lecteur vidéo. TVSDK vous permet de connecter cette interface utilisateur à son lecteur multimédia. Cela vous permet de lire des vidéos et des publicités basées sur des manifestes médiatiques. Vous pouvez également utiliser TVSDK pour récupérer des informations sur la vidéo, gérer la sécurité et contrôler et surveiller la lecture.
+TVSDK comprend des descriptions d’API et des exemples de code pour vous aider à intégrer des fonctionnalités vidéo, de protection de contenu et de publicité avancées à votre lecteur. Vous utilisez Java pour créer une interface utilisateur de lecteur vidéo. TVSDK permet de connecter cette interface utilisateur à son lecteur multimédia. Vous pouvez ainsi lire des vidéos et de la publicité en fonction de manifestes multimédia. Vous pouvez également utiliser TVSDK pour récupérer des informations sur la vidéo, gérer la sécurité et contrôler et surveiller la lecture.
 
-Pour connaître la configuration matérielle et logicielle requise pour l’utilisation de TVSDK, voir [Exigences.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
+Pour connaître la configuration matérielle et logicielle requise pour l’utilisation de TVSDK, voir [Conditions requises.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
 
 ## Audience {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
@@ -26,13 +24,12 @@ Ce guide suppose que vous comprenez comment développer des applications et des 
 
 ## À propos de ce guide {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Ce guide fournit des informations qui vous permettent d’incorporer des fonctionnalités TVSDK dans un lecteur vidéo en utilisant Java sur les périphériques Android.
+Ce guide fournit des informations qui vous permettent d’incorporer des fonctionnalités TVSDK dans un lecteur vidéo à l’aide de Java sur les appareils Android.
 
-## Notation des Espaces de nommage dans ce guide {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Notation d’espace de noms dans ce guide {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Le préfixe d’espace de nommage d’API TVSDK `com.adobe.mediacore` est omis pour des raisons de concision.
+>Préfixe d’espace de noms de l’API TVSDK `com.adobe.mediacore` est omis pour des raisons de concision.
 >
->De nombreux éléments d’API sont référencés sans leur indicateur de classe parent si le contexte est clair.
-
+>De nombreux éléments d’API sont référencés sans leur désignateur de classe parent si le contexte est clair.

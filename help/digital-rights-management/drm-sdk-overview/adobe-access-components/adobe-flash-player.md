@@ -2,17 +2,15 @@
 title: Flash Player Adobe
 description: Flash Player Adobe
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
+# Flash Player Adobe {#adobe-flash-player}
 
-# Flash Player d&#39;Adobe {#adobe-flash-player}
+Flash Player est un module complémentaire et un composant d’exécution léger du navigateur qui offre des expériences utilisateur cohérentes et attrayantes, une lecture audio/vidéo étonnante et une portée omniprésente. Flash Player offre une lecture de haute qualité du contenu vidéo téléchargé ou en flux continu. Pour les éditeurs de contenu, Flash Player fournit les moyens de personnaliser les écrans de lecture entourant le contenu, ce qui permet d’offrir des expériences de valorisation de marque plus approfondies et une monétisation par le biais de la publicité à l’aide de bannières et de superpositions. Pour les consommateurs, Flash Player offre une méthode intuitive et visuellement attrayante d’affichage du contenu vidéo.
 
-Flash Player est un module complémentaire léger du navigateur et un runtime qui offre aux utilisateurs des expériences cohérentes et attrayantes, une lecture audio/vidéo étonnante et une portée omniprésente. Flash Player permet une lecture de haute qualité du contenu vidéo téléchargé ou en flux continu. Pour les éditeurs de contenu, le Flash Player permet de personnaliser les écrans de lecture entourant le contenu, ce qui permet d’approfondir les expériences de personnalisation de l’image de marque et de les monétiser par le biais de la publicité à l’aide de bannières et d’incrustations. Pour les consommateurs, le Flash Player offre un moyen intuitif et visuellement attrayant de vue du contenu vidéo.
-
-Pour plus d&#39;informations sur le Flash Player, visitez : [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
+Pour plus d’informations sur le Flash Player, rendez-vous sur : [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)

@@ -1,37 +1,35 @@
 ---
-title: Créer une liste CRL d’autorité de certification d’individualisation
-description: Créer une liste CRL d’autorité de certification d’individualisation
+title: Création d’une liste CRL d’autorité de certification d’individualisation
+description: Création d’une liste CRL d’autorité de certification d’individualisation
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# Création d’une liste CRL d’autorité de certification d’individualisation{#create-individualization-ca-crl}
 
-# Créer une liste CRL d’autorité de certification d’individualisation{#create-individualization-ca-crl}
-
-Ce point de distribution CRL (Certificate Revocation Liste) est inclus dans chaque certificat d&#39;ordinateur émis par le serveur d&#39;individualisation. Lors de la validation du certificat de l’ordinateur sur le serveur de licences, cette liste de révocation des certificats est téléchargée à partir du point de distribution indiqué dans le certificat (ou lue à partir du cache si le certificat a déjà été téléchargé) et vérifiée pour s’assurer que le certificat n’a pas été révoqué.
+Ce point de distribution Liste de révocation des certificats (CRL) est inclus dans chaque certificat de machine émis par le serveur d’individualisation. Lors de la validation du certificat de la machine sur le serveur de licences, cette CRL sera téléchargée à partir du point de distribution indiqué dans le certificat (ou lue à partir du cache si elle a déjà été téléchargée) et vérifiée pour vérifier que le certificat n’a pas été révoqué.
 
 >[!NOTE]
 >
->Pour définir l’URL du point de distribution CRL, vous devez définir le champ [!DNL AdobeInitial.properties] `cert.machine.crldp`. Ce point de distribution est *non* vérifié par Primetime DRM pour vérifier sa validité. Vous devez vérifier que cette URL est valide. Les erreurs résultant d’une URL non valide ne seront pas apparentes tant que les erreurs de validation ne seront pas affichées à partir du serveur de licences.
+>Pour définir l’URL du point de distribution CRL, vous devez définir la variable [!DNL AdobeInitial.properties] `cert.machine.crldp` champ . Ce point de distribution est *not* vérifié par Primetime DRM pour en connaître la validité. Vous devez vérifier que cette URL est valide. Les erreurs résultant d’une URL non valide ne seront visibles que lorsque les erreurs de validation apparaîtront du serveur de licences.
 
-Les exemples d’instructions fournis ci-dessous sont simplifiés et permettent d’utiliser OpenSSL pour créer des listes CRL que votre serveur de licences peut utiliser. Adobe vous conseille d’effectuer ces étapes de manière sécurisée et avec un environnement, une fois qu’un jeu d’informations d’identification d’autorité de certification d’individualisation de la production a été obtenu.
+Les exemples d’instructions présentés ci-dessous sont simplifiés et concernent l’utilisation d’OpenSSL pour créer des listes CRL que votre serveur de licences peut utiliser. Adobe vous recommande d’effectuer ces étapes de manière sécurisée et dans un environnement sécurisé, une fois que des informations d’identification d’autorité de certification de l’individualisation de production ont été obtenues.
 
-1. Remplacez le répertoire de travail par le répertoire [!DNL create_crl] inclus dans cette distribution.
-1. Copiez votre autorité de certification d’individualisation [!DNL pfx] dans le même répertoire [!DNL create_crl].
+1. Modifiez le répertoire de travail en [!DNL create_crl] répertoire inclus dans cette distribution.
+1. Copie de votre autorité de certification de l’individualisation [!DNL pfx] à la même [!DNL create_crl] répertoire .
 
-   Les étapes suivantes supposent que la variable d’autorité de certification d’individualisation est nommée [!DNL i15n.pfx]. Effectuez les ajustements appropriés à votre configuration.
-1. Extrayez la clé privée du fichier d’autorité de certification d’individualisation [!DNL pfx].
+   Les étapes suivantes supposent que la variable Pfx de l’autorité de certification de l’individualisation est nommée [!DNL i15n.pfx]. Ajustez en fonction de votre configuration.
+1. Extraire l’autorité de certification de l’individualisation [!DNL pfx] clé privée du fichier.
 
    ```
    openssl pkcs12 -ini15n.pfx -nocerts -out i15n_priv.pem
    ```
 
-1. Convertissez la clé privée au format [!DNL pksc8].
+1. Convertir la clé privée en [!DNL pksc8] format.
 
    ```
    openssl pkcs8 -topk8 -in i15n_priv.pem -inform pem -out i15n_pk8.pem -outform pem -nocrypt
@@ -44,9 +42,9 @@ Les exemples d’instructions fournis ci-dessous sont simplifiés et permettent 
      -out onprem-individualization -ca.crl
    ```
 
-   Cet exemple crée une liste CRL avec une période de validité de 1 mois par défaut. Utilisez les options `-crldays` et `-crlhours` pour remplacer les valeurs par défaut.
+   Cet exemple crée une CRL avec une période de validité d’un mois par défaut. Utilisez la variable `-crldays` et `-crlhours` pour remplacer les valeurs par défaut.
 
-   La génération d&#39;une liste CRL utilise les fichiers [!DNL index] et [!DNL crlnumber] pointés dans votre [!DNL openssl.conf]. Par défaut, l&#39;emplacement [!DNL demoCA] du répertoire de travail est utilisé. Les exemples de fichiers [!DNL index] et [!DNL crlnumber] sont inclus dans le répertoire [!DNL demoCA] fourni.
+   La génération d’une CRL utilise la variable [!DNL index] et [!DNL crlnumber] pointé vers dans votre [!DNL openssl.conf]. Par défaut, la variable [!DNL demoCA] L’emplacement du répertoire de travail est utilisé. Exemple [!DNL index] et [!DNL crlnumber] Les fichiers sont inclus dans les [!DNL demoCA] répertoire .
 
-1. Déployez le fichier CRL généré à l’étape précédente vers un emplacement approprié accessible par le serveur de licences (par exemple : individualization server [!DNL ROOT]).
-1. Redémarrez le serveur de licences une fois que la liste de révocation des certificats est en place.
+1. Déployez le fichier CRL généré à l’étape précédente vers un emplacement approprié accessible par le serveur de licences (par exemple : serveur d’individualisation [!DNL ROOT]).
+1. Redémarrez le serveur de licences, une fois la liste de révocation des certificats mise en place.

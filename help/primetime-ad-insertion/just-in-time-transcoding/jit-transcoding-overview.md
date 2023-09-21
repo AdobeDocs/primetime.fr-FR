@@ -2,9 +2,7 @@
 title: Transcodage juste à temps
 description: Transcodage juste à temps
 copied-description: true
-exl-id: 9577e1d5-1462-49d6-9d24-94e74dc9c019
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -13,15 +11,15 @@ ht-degree: 0%
 
 # Transcodage juste à temps {#just-in-time-transcoding}
 
-L’Ad Insertion Primetime dispose d’un transcodage et d’un pack juste-à-temps pour garantir que les éléments créatifs publicitaires incompatibles peuvent être correctement lus dans les flux de contenu. Il peut également injecter des paquets ID3 dans des fragments publicitaires qui peuvent être utilisés dans le suivi des publicités côté client.
-Voici un flux de travaux type :
+Primetime Ad Insertion comprend un transcodage et un package juste à temps pour s’assurer que les créatifs publicitaires incompatibles peuvent être lus correctement dans les flux de contenu. Il peut également injecter des paquets ID3 dans des fragments de publicité qui peuvent être utilisés dans le suivi des publicités côté client.
+Un workflow type est le suivant :
 
-1. L’Ad Insertion Adobe Primetime récupère les publicités/éléments créatifs du serveur d’annonces du client.
+1. Adobe Primetime Ad Insertion récupère les publicités/éléments créatifs du serveur de publicités du client.
 
-1. Si le format créatif d’une publicité est nativement compatible avec le flux de contenu, la création est insérée dans le manifeste.
+1. Si le format créatif d’une publicité est compatible en mode natif avec le flux de contenu, le contenu créatif est inséré dans le manifeste.
 
-1. Si le format créatif d’une publicité n’est pas compatible nativement (par exemple, .mp4, .mov, .webm), l’Ad Insertion Primetime recherche une version précodée de la publicité à partir d’un réseau de diffusion de contenu spécifié. Si une publicité est trouvée, elle est insérée ; sinon, la publicité est mise en file d’attente pour transcoder.
+1. Si le format créatif d’une publicité n’est pas compatible en mode natif (par exemple, .mp4, .mov, .webm), l’Ad Insertion Primetime recherche une version précodée de la publicité à partir d’un réseau de diffusion de contenu spécifié. Si une publicité est trouvée, elle est insérée ; dans le cas contraire, elle est mise en file d’attente pour le transcodage.
 
-1. Une fois que le créatif de la publicité est transcodé, l’Ad Insertion Primetime rassemble toutes les requêtes suivantes pour cette ressource publicitaire dans les manifestes.
+1. Une fois le code de création publicitaire transcodé, l’Ad Insertion Primetime réunira toutes les demandes suivantes pour cette ressource publicitaire dans les manifestes.
 
-L’Ad Insertion Primetime prend en charge le transcodage pour la plupart des formats vidéo et linéaires. Le transcodage publicitaire créatif se produit généralement en moins de trois minutes. Pour plus d&#39;informations, veuillez contacter votre représentant de l&#39;assistance technique de Primetime.
+L’Ad Insertion Primetime prend en charge le transcodage pour la plupart des formats vidéo et linéaire. Le transcodage créatif publicitaire se produit généralement en moins de trois minutes. Pour plus d’informations, contactez votre représentant de l’assistance Primetime.

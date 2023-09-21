@@ -1,35 +1,33 @@
 ---
 description: Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 title: Utilisation des cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
-
-# Utilisation des cookies {#work-with-cookies}
+# Utilisation des cookies{#work-with-cookies}
 
 Vous pouvez utiliser TVSDK pour envoyer des données arbitraires dans des en-têtes de cookie pour la gestion de session, l’accès aux portes, etc.
 
 Voici un exemple avec un certain type d’authentification lors de l’envoi de requêtes au serveur clé :
 
-1. Votre client se connecte à votre site Web dans un navigateur et sa connexion indique qu’il est autorisé à vue du contenu.
-1. Votre application génère un jeton d’authentification, en fonction des exigences du serveur de licences. Transmettez cette valeur à TVSDK.
+1. Votre client se connecte à votre site web dans un navigateur et son identifiant indique qu’il est autorisé à afficher le contenu.
+1. Votre application génère un jeton d’authentification en fonction de ce qui est attendu par le serveur de licences. Transmettez cette valeur à TVSDK.
 1. TVSDK définit cette valeur dans l’en-tête du cookie.
-1. Lorsque TVSDK envoie une requête au serveur de clés pour obtenir une clé pour déchiffrer le contenu, cette requête contient la valeur d’authentification dans l’en-tête du cookie, de sorte que le serveur de clés sache que la requête est valide.
+1. Lorsque TVSDK envoie une requête au serveur clé pour obtenir une clé pour déchiffrer le contenu, cette requête contient la valeur d’authentification dans l’en-tête du cookie, de sorte que le serveur de clé sache que la requête est valide.
 
 Pour utiliser des cookies :
 
-1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à votre `cookieStore`.
+1. Créez un `cookieManager` et ajoutez vos cookies pour les URI à vos `cookieStore`.
 
-   Par exemple :
+   Par exemple :
 
    >[!IMPORTANT]
    >
-   >Lorsque la redirection 302 est activée, la demande d’annonce peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
+   >Lorsque la redirection 302 est activée, la requête de publicité peut être redirigée vers un domaine différent du domaine auquel le cookie appartient.
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -41,9 +39,9 @@ Pour utiliser des cookies :
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   TVSDK requête ce cookieManager au moment de l’exécution, vérifie s’il existe des cookies associés à l’URL et les utilise automatiquement.
+   TVSDK interroge ce cookieManager au moment de l’exécution, vérifie si des cookies sont associés à l’URL et les utilise automatiquement.
 
-   Une autre option consiste à utiliser `cookieHeaders` dans `NetworkConfiguration` pour définir une chaîne d&#39;en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec des requêtes de clé. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la méthode `NetworkConfiguration` `setUseCookieHeadersForAllRequests` :
+   Une autre option consiste à utiliser `cookieHeaders` in `NetworkConfiguration` pour définir une chaîne d’en-tête de cookie arbitraire à utiliser pour les requêtes. Par défaut, cet en-tête de cookie est envoyé uniquement avec les demandes clés. Pour envoyer l’en-tête du cookie avec toutes les requêtes, utilisez la méthode `NetworkConfiguration` method `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

@@ -1,8 +1,7 @@
 ---
 description: Les événements de TVSDK indiquent l’état du lecteur, les erreurs qui se produisent, la fin des actions que vous avez demandées, telles que le démarrage de la lecture d’une vidéo ou les actions qui se produisent implicitement, telles qu’une fin de publicité.
 title: Écoute des événements du lecteur Primetime
-exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -17,23 +16,23 @@ Flash Runtime fournit un mécanisme d’événements générique, que TVSDK util
 
 1. Déterminez les événements que votre application doit écouter.
 
-   * **Événements** requis : Prêtez attention à tous les événements de lecture.
+   * **Événements requis**: écoute tous les événements de lecture.
 
-      >[!IMPORTANT]
-      >
-      >L’événement de lecture `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante de votre lecteur.
+     >[!IMPORTANT]
+     >
+     >Événement de lecture `MediaPlayerStatusChangeEvent.STATUS_CHANGE` fournit l’état du lecteur, y compris les erreurs. L’un des états peut affecter l’étape suivante de votre lecteur.
 
-   * **Autres événements** : Facultatif, selon votre application.
+   * **Autres événements**: facultatif, selon votre application.
 
-      Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les événements `AdBreakPlaybackEvent` et `AdPlaybackEvent`.
+     Par exemple, si vous incorporez de la publicité dans votre lecture, écoutez tous les `AdBreakPlaybackEvent` et `AdPlaybackEvent` événements .
 
 1. Mettez en oeuvre des écouteurs d’événement pour chaque événement.
 
    TVSDK renvoie des valeurs de paramètre à vos rappels d’écouteurs d’événements. Ces valeurs fournissent des informations pertinentes sur l’événement que vous pouvez utiliser dans vos écouteurs pour effectuer les actions appropriées.
 
-   La classe `Event` répertorie toutes les interfaces de rappel. Chaque interface affiche les paramètres renvoyés pour cette interface.
+   La variable `Event` répertorie toutes les interfaces de rappel. Chaque interface affiche les paramètres renvoyés pour cette interface.
 
-   Par exemple :
+   Par exemple :
 
    ```
    public function MediaPlayerStatusChangeEvent(type:String,  
@@ -43,9 +42,9 @@ Flash Runtime fournit un mécanisme d’événements générique, que TVSDK util
                    error:MediaError = null) 
    ```
 
-1. Enregistrez vos écouteurs de rappel avec l’objet `MediaPlayer` à l’aide de `MediaPlayer.addEventListener`.
+1. Enregistrez vos écouteurs de rappel avec l’événement `MediaPlayer` en utilisant `MediaPlayer.addEventListener`.
 
-   `MediaPlayer` étend  `flash.events.IEventDispatcher`, qui fait partie des fichiers principaux du lecteur Flash et inclut les fonctions  `addEventListener` et  `removeEventListener`.
+   `MediaPlayer` étend `flash.events.IEventDispatcher`, qui fait partie des fichiers principaux du lecteur de Flash et inclut les fonctions `addEventListener` et `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 

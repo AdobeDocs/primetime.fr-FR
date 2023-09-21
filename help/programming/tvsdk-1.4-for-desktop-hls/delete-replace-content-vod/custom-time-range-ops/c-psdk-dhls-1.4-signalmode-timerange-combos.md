@@ -1,17 +1,15 @@
 ---
-title: Mode de signalisation et période
-description: Mode de signalisation et période
+title: Mode de signature et période
+description: Mode de signature et période
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
-# Mode de signature et plage de temps {#signaling-mode-and-time-range}
+# Mode de signature et période {#signaling-mode-and-time-range}
 
 <table> 
  <thead> 
@@ -24,7 +22,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Générateur d'opportunité de plage personnalisée  </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -43,7 +41,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode  </span> de signature de ServerMap </td> 
+   <td> <span class="codeph"> ServerMap </span> Mode de signature </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -63,10 +61,10 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique CustomRange) </td> 
+   <td> N/A (mode de signalement personnalisé automatique) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode  </span> de signature de ManifestCue </td> 
+   <td> <span class="codeph"> ManifestCue </span> Mode de signature </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -87,10 +85,10 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique CustomRange) </td> 
+   <td> N/A (mode de signalement personnalisé automatique) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode de  </span> signature de plage personnalisée </td> 
+   <td> <span class="codeph"> CustomRange </span> Mode de signature </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -143,7 +141,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -162,7 +160,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode  </span> de signature de ServerMap </td> 
+   <td> <span class="codeph"> SeverMap </span> Mode de signature </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> 
     <code>
@@ -173,10 +171,10 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/A (automatique <span class="codeph"> CustomRange </span> mode de signalisation) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode  </span> de signature de ManifestCue </td> 
+   <td> <span class="codeph"> ManifestCue </span> Mode de signature </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> 
     <code>
@@ -187,10 +185,10 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> S/O (mode de signalisation automatique <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/A (automatique <span class="codeph"> CustomRange </span> mode de signalisation) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Mode de  </span> signature de plage personnalisée </td> 
+   <td> <span class="codeph"> CustomRange </span> Mode de signature </td> 
    <td> Inprésent (la publicité est désactivée). </td> 
    <td> Aucun </td> 
    <td> Aucun (pris en charge dans <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 

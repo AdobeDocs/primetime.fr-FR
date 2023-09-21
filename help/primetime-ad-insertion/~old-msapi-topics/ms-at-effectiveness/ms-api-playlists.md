@@ -1,7 +1,6 @@
 ---
-description: Le serveur de manifeste renvoie des listes de lecture originales au format M3U8, conformément à la norme de diffusion en flux continu HTTP Live proposée. Il se compose d'un ensemble de flux de transport (TS) de variantes, chacun contenant des rendus du même contenu pour différents débits et formats de bits. L’insertion d’une publicité Adobe Primetime ajoute la balise de directive EXT-X-MARKER, qui doit être interprétée par les lecteurs vidéo clients.
+description: Le serveur de manifeste renvoie les listes de lecture principales au format M3U8, conforme à la norme HTTP Live Streaming proposée. Il se compose d’un ensemble de variantes de flux de transport (TS), chacune contenant des rendus du même contenu pour différents formats et débits en bits. L’insertion de publicités Adobe Primetime ajoute la balise de directive EXT-X-MARKER, à interpréter par les lecteurs vidéo clients.
 title: Directive EXT-X-MARKER
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '748'
@@ -12,63 +11,63 @@ ht-degree: 0%
 
 # Directive EXT-X-MARKER {#ext-x-marker-directive}
 
-Le serveur de manifeste renvoie des listes de lecture originales au format M3U8, conformément à la norme de diffusion en flux continu HTTP Live proposée. Il se compose d&#39;un ensemble de flux de transport (TS) de variantes, chacun contenant des rendus du même contenu pour différents débits et formats de bits. L’insertion d’une publicité Adobe Primetime ajoute la balise de directive EXT-X-MARKER, qui doit être interprétée par les lecteurs vidéo clients.
+Le serveur de manifeste renvoie les listes de lecture principales au format M3U8, conforme à la norme HTTP Live Streaming proposée. Il se compose d’un ensemble de variantes de flux de transport (TS), chacune contenant des rendus du même contenu pour différents formats et débits en bits. L’insertion de publicités Adobe Primetime ajoute la balise de directive EXT-X-MARKER, à interpréter par les lecteurs vidéo clients.
 
-Pour plus d’informations sur la balise EXT-X-MARKER, voir [Adobe Primetime HTTP Live Streaming Profil](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
-
->[!NOTE]
->
->Cette fonctionnalité n&#39;est disponible que si l&#39;URL du serveur de manifeste d&#39;amorçage ne contient pas le paramètre `pttrackingmode`.
+Pour plus d’informations sur la balise EXT-X-MARKER, voir [Profil de diffusion en continu HTTP Adobe Primetime](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
 
 >[!NOTE]
 >
->La balise EXT-X-MARKER est ajoutée aux segments d’annonces et non aux segments de contenu.
+>Cette fonctionnalité n’est disponible que si l’URL du serveur de manifeste de bootstrap ne contient pas le paramètre `pttrackingmode` .
 
-Le brouillon de la norme sur [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) décrit le contenu et le format des listes de diffusion variantes. La balise EXT-X-MARKER indique au client d’appeler un rappel. Il contient les composants suivants :
+>[!NOTE]
+>
+>La balise EXT-X-MARKER est ajoutée aux segments de publicité et non aux segments de contenu.
 
-* **Identificateur** IDUnique (chaîne) pour ce événement de rappel dans le contexte du flux de programme.
+Le projet de norme à [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) décrit le contenu et le format des listes de lecture des variantes. La balise EXT-X-MARKER demande au client d’appeler un rappel. Il contient les composants suivants :
 
-* **** TYPEType (chaîne) du événement de rappel : PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd ou AdBegin
+* **ID** Identifiant unique (chaîne) pour cet événement de rappel dans le contexte du flux de programme.
 
-* **** DURATIONLdurée (en secondes) à partir du début du segment contenant la balise pour laquelle la directive reste valide.
+* **TYPE** Type (chaîne) de l’événement de rappel : PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd ou AdBegin
 
-* **** OFFSETOptional. Décalage (en secondes) relatif au début de la lecture du segment, lorsque le rappel doit être appelé.
+* **DURÉE** Durée (en secondes) à partir du début du segment contenant la balise pour laquelle la directive reste valide.
 
-   * `PodBegin` et  `PrerollPodBegin` contiennent des informations de balise dans l’attribut DATA et sont déclenchées au début du segment. Par conséquent, la balise `OFFSET` n’est pas disponible ici.
+* **OFFSET** Facultatif. Décalage (en secondes) relatif au début de la lecture du segment, lorsque le rappel doit être appelé.
 
-   * `AdBegin` contient des informations de balise dans l’attribut DATA et les balises d’impression sont déclenchées au début de ce segment. Par conséquent, la balise `OFFSET` n&#39;est pas disponible ici non plus.
+   * `PodBegin` et `PrerollPodBegin` contiennent des informations de balise dans l’attribut DATA et sont déclenchées au début du segment. Ainsi, la variable `OFFSET` n’est pas disponible ici.
 
-   * `PodEnd` et  `PrerollPodEnd` contiennent des informations de balise dans l’attribut DATA, mais sont déclenchées à la fin du segment actuel, car ces balises doivent être déclenchées à la fin du dernier segment de la dernière publicité dans la capsule. Dans ce cas, `OFFSET` est défini sur `<duration of segment>` pour spécifier que la balise doit être déclenchée à la fin du segment actuel.
+   * `AdBegin` contient des informations de balise dans l’attribut DATA et les balises d’impression sont déclenchées au début de ce segment. Ainsi, la variable `OFFSET` n’est pas disponible ici non plus.
 
-* **Chaîne codée** DATABase64 entre guillemets de doublon contenant les données à transmettre à l’application lors de l’appel du rappel. Il contient des informations de suivi des publicités conformes aux spécifications VMAP1.0 et VAST3.0.
+   * `PodEnd` et `PrerollPodEnd` contiennent des informations de balise dans l’attribut DATA , mais sont déclenchées à la fin du segment actuel, car ces balises doivent être déclenchées à la fin du dernier segment de la dernière publicité dans la capsule. Dans ce cas, `OFFSET` est défini sur `<duration of segment>` pour indiquer que la balise doit être déclenchée à la fin du segment actuel.
 
-* **** NOMBRE de publicités qui seront assemblées au cours de la coupure publicitaire.
+* **DONNÉES** Chaîne codée en Base64 entre guillemets doubles contenant les données à transmettre à l’application lors de l’appel du rappel. Elle contient des informations de suivi des publicités conformes aux spécifications VMAP1.0 et VAST3.0.
 
-   Applicable uniquement si le composant TYPE est défini sur PodBegin ou PrerollPodBegin.
+* **COUNT** Nombre de publicités qui seront regroupées dans la coupure publicitaire.
 
-* **** BREAKDURTdurée totale (en secondes) de la coupure publicitaire remplie.
+  Applicable uniquement si le composant TYPE est défini sur PodBegin ou PrerollPodBegin.
 
-   Applicable uniquement si le composant TYPE est défini sur PodBegin ou PrerollPodBegin.
+* **VENTILATION** Durée totale (en secondes) de la coupure publicitaire remplie.
+
+  Applicable uniquement si le composant TYPE est défini sur PodBegin ou PrerollPodBegin.
 
 Lors de la création du rappel, interprétez les composants EXT-X-MARKER comme suit :
 
-* Lorsque la balise contient `OFFSET`, déclenchez le rappel au décalage spécifié par rapport au début de la lecture du contenu dans ce segment. Sinon, déclenchez le rappel dès que le contenu de ce segment est en cours de lecture.
-* Utilisez `DURATION` pour suivre la progression du contenu de la publicité et pour demander des URL pour les événements de suivi.
-* Transmettez `ID`, `TYPE` et `DATA` au rappel.
+* Lorsque la balise contient `OFFSET`, déclenche le rappel au décalage spécifié par rapport au début de la lecture du contenu dans ce segment. Sinon, déclenchez le rappel dès que la lecture du contenu de ce segment commence.
+* Utilisation `DURATION` pour suivre la progression du contenu de la publicité et demander des URL pour le suivi des événements.
+* Pass `ID`, `TYPE`, et `DATA` au rappel.
 
-Utilisez les valeurs `PrerollPodBegin` et `PrerollPodEnd` pour `TYPE` pour déterminer le segment TS à lire en premier dans les flux dynamiques/linéaires.
+Utilisez la variable `PrerollPodBegin`, et `PrerollPodEnd` valeurs pour `TYPE` pour décider quel segment TS lire en premier dans les flux linéaire/en direct.
 
 >[!NOTE]
 >
->Les valeurs `PrerollPodBegin` et `PrerollPodEnd` ne sont disponibles que lorsqu’une publicité preroll est insérée dans un flux en direct.
+>La variable `PrerollPodBegin`, et `PrerollPodEnd` ne sont disponibles que lorsqu’une publicité preroll est insérée dans un flux en direct.
 
 Le serveur de manifeste comprend des balises EXT-X-MARKER dans les segments suivants :
 
 * Premier segment de la coupure publicitaire, pour effectuer le suivi du début d’une capsule publicitaire.
-* Premier segment de la publicité, qui permet d’effectuer le suivi du début/de la progression d’une publicité individuelle au sein d’une capsule.
-* Dernier segment de la coupure publicitaire, pour effectuer le suivi de la fin d’une capsule publicitaire.
+* Premier segment de la publicité, pour effectuer le suivi du début/fin/progression d’une publicité individuelle dans une capsule.
+* Dernier segment de la coupure publicitaire pour effectuer le suivi de la fin d’une capsule publicitaire.
 
-Le serveur de manifeste envoie un document XML `VMAP1.0-conformant` pour effectuer le suivi du début et de la fin de chaque coupure publicitaire. Il s’agit d’une version filtrée de la réponse VMAP1.0 réelle renvoyée par le serveur d’annonces et contient principalement les événements de suivi, comme indiqué ici :
+Le serveur de manifeste envoie une `VMAP1.0-conformant` Document XML pour suivre le début et la fin de chaque coupure publicitaire. Il s’agit d’une version filtrée de la réponse VMAP1.0 réelle renvoyée par le serveur de publicités, et qui contient principalement les événements de suivi, comme illustré ici :
 
 ```xml
 <?xml version="1.0"?> 
@@ -93,7 +92,7 @@ Le serveur de manifeste envoie un document XML `VMAP1.0-conformant` pour effectu
 </AdTrackingFragments>
 ```
 
-Pour chaque création d&#39;annonce que le serveur de manifeste insère dans le contenu du programme, il envoie un document XML conforme à VAST3.0 pour effectuer le suivi de cette publicité. Chaque document XML contient un élément `<InLine>` décrivant le créatif publicitaire linéaire inséré, ou un élément `<Wrapper>` dans le cas des publicités wrapper (c’est-à-dire des publicités liées ou redirigées), ainsi que les publicités et extensions complémentaires associées. Si la réponse VAST contient un attribut de séquence, par exemple lorsque la publicité fait partie d’une capsule publicitaire, le document inclut cet attribut. Voici un exemple de document XML conforme à la norme VAST3.0 pour le suivi d&#39;une publicité individuelle :
+Pour chaque publicité créative que le serveur de manifeste insère dans le contenu du programme, il envoie un document XML conforme à VAST3.0 pour effectuer le suivi de cette publicité. Chaque document XML contient une `<InLine>` élément décrivant la publicité linéaire insérée, ou un élément `<Wrapper>` dans le cas des publicités wrapper (c’est-à-dire des publicités liées ou redirigées), ainsi que toute publicité compagnon et extension associée. Si la réponse VAST contient un attribut de séquence, par exemple lorsque la publicité fait partie d’une capsule publicitaire, le document inclut cet attribut. Voici un exemple de document XML conforme à VAST3.0 pour le suivi d’une publicité individuelle :
 
 ```xml
 <?xml version="1.0"?> 

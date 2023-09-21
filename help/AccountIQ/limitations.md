@@ -1,8 +1,7 @@
 ---
 title: Limites et problèmes connus
 description: Problèmes connus dans le produit.
-exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -15,9 +14,9 @@ Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences u
 
 * Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, il n’existe actuellement aucune option pour ajouter des mesures telles que **nombre d’appareils** pour affiner le segment. Cette fonctionnalité sera disponible dans une version ultérieure.
 
-* Lors de l’estimation des scores de partage pour les comptes individuels, Account IQ adopte une approche conservatrice qui permet aux entreprises d’agir sur le partage avec une grande confiance. Cependant, cette approche tend à sous-estimer le montant total du partage lorsqu’il est agrégé sur de nombreux comptes.
+* Lors de l’estimation des scores de partage pour les comptes individuels, Account IQ adopte une approche conservatrice qui permet aux entreprises d’agir sur le partage avec un degré de confiance élevé. Cependant, cette approche tend à sous-estimer le montant total du partage lorsqu’il est agrégé sur de nombreux comptes.
 
-* Le [Score de partage global](/help/AccountIQ/dashboard.md#overall-sharing-score) facteurs actuellement uniquement dans [Niveau de partage](/help/AccountIQ/dashboard.md#sharing-level) et [Utilisation des comptes partagés](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Les futures versions prendront en compte les mesures supplémentaires.
+* La variable [Score de partage global](/help/AccountIQ/dashboard.md#overall-sharing-score) facteurs figurant actuellement uniquement dans [Niveau de partage](/help/AccountIQ/dashboard.md#sharing-level) et [Utilisation des comptes partagés](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Les futures versions prendront en compte les mesures supplémentaires.
 
 * Lors de la définition de cohortes dans le tableau de bord ou les pages de rapports, les sélecteurs des distributeurs multicanaux de programmes audiovisuels et des canaux ne disposent pas du mécanisme de recherche, pour l’instant.
 
@@ -25,7 +24,7 @@ Adobe s’efforce d’offrir des fonctionnalités robustes et des expériences u
 
 * L&#39;option d&#39;export des statistiques de compte est limitée à l&#39;export de 1000 comptes, pour l&#39;instant.
 
-* L’option à sélectionner [Type de segment](#segment-type) lorsque la définition des opérations est limitée à **Nombre fixe de comptes**. Le **Nombre variable de comptes** sera disponible dans une version ultérieure.
+* L’option à sélectionner [Type de segment](#segment-type) lorsque la définition des opérations est limitée à **Nombre fixe de comptes**. La variable **Nombre variable de comptes** sera disponible dans une version ultérieure.
 
 * Les sections Évaluation, Modèles de détection, Segments, Instantanés et Règles du volet de navigation de gauche sont actuellement désactivées et seront disponibles dans une version à venir.
 

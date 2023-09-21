@@ -1,7 +1,6 @@
 ---
 description: Si le client demande des informations de suivi au format JSON, le serveur de manifeste renvoie un fichier dans l’un des formats JSON.
-title: Formats JSON pour le suivi des URL
-translation-type: tm+mt
+title: Formats JSON pour les URL de suivi
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '211'
@@ -10,13 +9,13 @@ ht-degree: 0%
 ---
 
 
-# Formats JSON pour le suivi des URL {#json-formats-for-tracking-urls}
+# Formats JSON pour les URL de suivi {#json-formats-for-tracking-urls}
 
 Si le client demande des informations de suivi au format JSON, le serveur de manifeste renvoie un fichier dans l’un des formats JSON.
 
-## Format JSON pour le suivi de la version 1 {#json_v1}
+## Format JSON pour le suivi version 1 {#json_v1}
 
-Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v1` possède le format général suivant :
+Le fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v1` présente le format général suivant :
 
 ```
 { 
@@ -32,11 +31,11 @@ Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v1` pos
 }, ...]}
 ```
 
-## Format JSON pour le suivi de la version 2 {#json_v2}
+## Format JSON pour le suivi version 2 {#json_v2}
 
-Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v2` a le format de l’exemple suivant, qui provient d’un bloc JSON type.
+Le fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v2` a le format de l’exemple suivant, qui provient d’un bloc JSON type.
 
-Il a été raccourci pour éviter toute répétition inutile, de sorte que la structure soit plus claire. Une ellipse (trois points, séparés par des espaces) indique l’omission d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées s’affichent sur plusieurs lignes, bien qu’elles s’affichent sur une seule ligne dans le fichier JSON.
+Il a été raccourci pour éviter toute répétition inutile, afin que la structure soit plus claire. Des points de suspension (trois points séparés par des espaces) indiquent l’absence d’informations dans certaines URL et entre certains blocs de code. Les URL non abrégées apparaissent sur plusieurs lignes, bien qu’elles apparaissent sur une seule ligne dans le fichier JSON.
 
 ```
 { 
@@ -364,11 +363,11 @@ Il a été raccourci pour éviter toute répétition inutile, de sorte que la st
 
 >[!NOTE]
 >
->La valeur `offset` de l&#39;attribut `scte35` extrait de `ad breaks` peut être négative. En effet, le fichier annexe JSON V2 contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture active. L&#39;attribut `scte35` contient donc également des informations sur ces coupures publicitaires.
+>La variable `offset` de la variable `scte35` de `ad breaks` peut être négatif. Cela est dû au fait que la version secondaire JSON V2 contient des informations sur les coupures publicitaires qui se trouvent partiellement dans la fenêtre de lecture actuelle. Donc, la `scte35` contient également des informations sur ces coupures publicitaires.
 
 ## Format JSON pour le suivi de la version 3 {#json_v3}
 
-Le fichier JSON que le serveur de manifeste envoie si `pttrackingversion=v3` possède le format général suivant :
+Le fichier JSON envoyé par le serveur de manifeste si `pttrackingversion=v3` présente le format général suivant :
 
 ```
 { 

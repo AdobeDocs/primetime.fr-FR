@@ -1,20 +1,18 @@
 ---
-description: Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+description: Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques QoS, tels que la mise en mémoire tampon et la recherche d’événements.
 title: Événements QoS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Événements QoS{#qos-events}
 
-Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques de la qualité de service (QoS), comme la mise en mémoire tampon et la recherche de événements.
+Le navigateur TVSDK distribue des événements de qualité de service (QoS) pour informer votre application des événements susceptibles d’influencer le calcul des statistiques QoS, tels que la mise en mémoire tampon et la recherche d’événements.
 
-Pour être informé de tous les événements liés à la qualité de service, créez une instance de `AdobePSDK.QOSProvider` et joignez l’instance MediaPlayer à cette instance `QOSProvider` :
+Pour être averti de tous les événements liés à QoS, créez une instance de `AdobePSDK.QOSProvider` et joindre l’instance MediaPlayer à celle-ci `QOSProvider` instance :
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
@@ -22,7 +20,7 @@ var qosProvider = new AdobePSDK.QOSProvider();
 qosProvider.attachMediaPlayer(player);
 ```
 
-Configurez un minuteur dans votre application pour vérifier périodiquement la propriété `playbackInformation` de l&#39;instance `qosProvider`. La propriété `playbackInformation` fournit un instantané des statistiques de lecture actuelles. Par exemple :
+Configurez un minuteur dans votre application pour vérifier régulièrement la variable `playbackInformation` de la propriété `qosProvider` instance. La variable `playbackInformation` fournit un instantané des statistiques de lecture actuelles. Par exemple :
 
 ```js
 var startTimer = function () { 
@@ -34,4 +32,3 @@ var startTimer = function () {
 } 
 window.setTimeout(startTimer, 500) 
 ```
-

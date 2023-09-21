@@ -1,35 +1,33 @@
 ---
-description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
+description: Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, y compris FairPlay, PlayReady et Widevine.
 title: Présentation de l’interface DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-
 # Présentation de l’interface DRM{#drm-interface-overview}
 
-Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, notamment FairPlay, PlayReady et Widevine.
+Le navigateur TVSDK fournit une interface DRM que vous pouvez utiliser pour lire du contenu protégé par différentes solutions DRM, y compris FairPlay, PlayReady et Widevine.
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->La prise en charge DRM est disponible pour les flux MPEG-Dash protégés par Microsoft PlayReady (sur Internet Explorer sous Windows 8.1 et Edge) et Widevine (sur Google Chrome). La prise en charge de DRM est disponible pour les flux HLS sur Safari qui sont protégés par FairPlay.
+>La prise en charge de DRM est disponible pour les flux MPEG-Dash protégés par Microsoft PlayReady (sur Internet Explorer sous Windows 8.1 et Edge) et les systèmes DRM Windows (sur Google Chrome). La prise en charge de DRM est disponible pour les flux HLS sur Safari protégés par FairPlay.
 
-L&#39;interface clé du processus DRM est `DRMManager`. Une référence à l&#39;instance `DRMManager` peut être obtenue par l&#39;intermédiaire de l&#39;instance MediaPlayer :
+L’interface clé du processus DRM est la suivante : `DRMManager`. Une référence au `DRMManager` Vous pouvez obtenir l’instance via l’instance MediaPlayer :
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
 
 <!--<a id="section_B7E8AD9A4D4F4BD9BA2A67ABC135D6F9"></a>-->
 
-Voici un flux de travail de haut niveau pour la lecture de contenu protégé par DRM :
+Voici un workflow de haut niveau pour la lecture de contenu protégé par DRM :
 
-1. Pour joindre les données spécifiques au système DRM qui seront utilisées par le navigateur TVSDK dans le processus d’acquisition de licence d’un flux protégé, effectuez l’appel suivant avant d’appeler `mediaPlayer.replaceCurrentResource` :
+1. Pour joindre les données spécifiques au système DRM qui seront utilisées par le SDK du navigateur dans le processus d’acquisition de licences pour un flux protégé, effectuez l’appel suivant avant d’appeler `mediaPlayer.replaceCurrentResource`:
 
    ```js
    var protectionData = { 
@@ -47,7 +45,7 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Si le même contenu doit fonctionner avec différents systèmes DRM dans différents navigateurs, les données de protection peuvent être spécifiées pour plusieurs systèmes DRM.
+1. Si un même contenu doit fonctionner avec différents systèmes DRM dans différents navigateurs, les données de protection peuvent être spécifiées pour plusieurs systèmes DRM.
 
    ```js
    var protectionData = { 
@@ -92,22 +90,22 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Lorsque les données de protection ne sont pas définies, les informations nécessaires, telles que l’URL de licence, sont récupérées dans la zone PSSH pour les systèmes DRM, le cas échéant.
+1. Lorsque les données de protection ne sont pas définies, les informations nécessaires telles que l’URL de licence sont récupérées dans la zone PSSH pour les systèmes DRM, le cas échéant.
 
    >[!TIP]
    >
-   >La spécification des données de protection remplace l’URL de licence spécifiée dans la zone PSSH.
+   >La spécification de données de protection remplace l’URL de licence spécifiée dans la zone PSSH.
 
 1. Par défaut, le type de session de la licence DRM est temporaire, ce qui signifie que la licence n’est pas stockée une fois la session fermée.
 
-   Vous pouvez spécifier un type de session à l&#39;aide d&#39;une API dans `DRMManager`.  Pour une compatibilité ascendante, les types de session sont `temporary`, `persistent-license`, `persistent-usage-record` et `persistent`.
+   Vous pouvez spécifier un type de session à l’aide d’une API dans `DRMManager`.  Pour une compatibilité descendante, les types de session incluent `temporary`, `persistent-license`, `persistent-usage-record`, et `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Lorsque `sessionType` utilisé est `persistent-license` ou `persistent`, la licence DRM peut être renvoyée en appelant `DRMManager.returnLicense`.
+1. Lorsque la variable `sessionType` used is `persistent-license` ou `persistent`, la licence DRM peut être renvoyée en appelant `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
@@ -126,4 +124,3 @@ Voici un flux de travail de haut niveau pour la lecture de contenu protégé par
        drmManager.returnLicense(null, null, null, false, returnLicenseListener, drmLicense.session); 
    }
    ```
-

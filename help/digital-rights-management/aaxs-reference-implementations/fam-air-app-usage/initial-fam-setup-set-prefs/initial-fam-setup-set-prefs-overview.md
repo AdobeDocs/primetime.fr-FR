@@ -1,25 +1,23 @@
 ---
-title: Présentation des préférences
-description: Présentation des préférences
+title: Configuration des préférences - Aperçu
+description: Configuration des préférences - Aperçu
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# Configuration des préférences - Aperçu {#setting-preferences-overview}
 
-# Présentation des préférences de paramétrage {#setting-preferences-overview}
-
-A l’exception de l’URL de Packager Server, toutes les préférences spécifiées ci-dessous sont stockées dans le fichier [!DNL flashaccess-refimpl-packager.properties] du serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Tapez le mot de passe non chiffré dans l’interface utilisateur et il sera chiffré avant d’être stocké dans le fichier.
+À l’exception de l’URL du serveur Packager, toutes les préférences spécifiées ci-dessous sont stockées dans la variable [!DNL flashaccess-refimpl-packager.properties] sur le serveur. Tous les paramètres peuvent être modifiés directement dans le fichier de propriétés ou via l’application AIR. Les mots de passe sont chiffrés lorsqu’ils sont stockés dans le fichier de propriétés du serveur. Saisissez le mot de passe non chiffré dans l’interface utilisateur. Il sera chiffré avant d’être stocké dans le fichier.
 
 >[!NOTE]
 >
->Tous les répertoires et chemins d’accès se rapportent aux répertoires sur le serveur packager, et non sur le client exécutant l’application AIR.
+>Tous les répertoires et chemins d’accès se rapportent aux répertoires du serveur de package, et non au client exécutant l’application AIR.
 
-Toute modification apportée ici prend effet immédiatement une fois les préférences enregistrées. Il n&#39;est pas nécessaire de redémarrer le serveur à moins que le thread de Packager ne se termine en raison de problèmes de configuration.
+Toutes les modifications apportées ici prennent effet immédiatement une fois les préférences enregistrées. Il n’est pas nécessaire de redémarrer le serveur, sauf si le thread de Packager s’est arrêté en raison de problèmes de configuration.
 
 Les descriptions de préférences utilisent les termes suivants :
 
@@ -32,12 +30,12 @@ Les descriptions de préférences utilisent les termes suivants :
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> URL du serveur Packager </td> 
-   <td colname="2" class="- topic/entry "> Emplacement du serveur exécutant <span class="filepath"> flashaccess-packager.war </span>; par exemple, <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="1" class="- topic/entry "> URL du serveur de paquets </td> 
+   <td colname="2" class="- topic/entry "> Emplacement du serveur en cours d’exécution <span class="filepath"> flashaccess-packager.war </span>; par exemple, <span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Répertoire de ressources </td> 
-   <td colname="2" class="- topic/entry "> Répertoire contenant les stratégies, certificats, informations d’identification et toute autre ressource requise pour le serveur de packages </td> 
+   <td colname="2" class="- topic/entry "> Répertoire contenant les stratégies, les certificats, les informations d’identification et toute autre ressource requise pour le serveur de package </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> URL du serveur de licences </td> 
@@ -45,4 +43,3 @@ Les descriptions de préférences utilisent les termes suivants :
   </tr> 
  </tbody> 
 </table>
-

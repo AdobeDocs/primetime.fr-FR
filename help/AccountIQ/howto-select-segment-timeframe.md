@@ -1,8 +1,7 @@
 ---
 title: Définition d’un segment et d’une période
 description: Définition d’un segment et d’une période
-exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Pour sélectionner des MVPD depuis **MVPD dans le segment** option :
 
    >[!NOTE]
    >
-   >**Tous** les MVPD de secteur sont sélectionnés par défaut. À partir de là, vous pouvez sélectionner l’une des options suivantes : **Les 10 meilleurs MVPD en partageant le score**, **Les 10 principaux distributeurs multicanaux de programmes audiovisuels par utilisation**, **Les 10 principaux distributeurs multicanaux de programmes audiovisuels par compte** ou MVPD individuels. Toutefois, pour sélectionner des MVPD individuels, vous devez les désélectionner. **Tous**.
+   >**Tous** les MVPD de secteur sont sélectionnés par défaut. À partir de là, vous pouvez sélectionner l’un des **Les 10 meilleurs MVPD en partageant le score**, **Les 10 principaux distributeurs multicanaux de programmes audiovisuels par utilisation**, **Les 10 principaux distributeurs multicanaux de programmes audiovisuels par compte** ou MVPD individuels. Toutefois, pour sélectionner des MVPD individuels, vous devez les désélectionner. **Tous**.
 
 1. Cliquez ou appuyez sur les MVPD souhaités.
 
@@ -43,7 +42,7 @@ Pour sélectionner des MVPD depuis **MVPD dans le segment** option :
 
 ### Sélection de canaux dans un segment {#select-segment-channels}
 
-Pour sélectionner les canaux de programmeur de votre choix, procédez comme suit : **Canaux dans le segment** option :
+Pour sélectionner les canaux de programmeur de votre choix dans la **Canaux dans le segment** option :
 
 1. Cliquez ou appuyez sur **Canaux dans le segment** de la liste déroulante.
 
@@ -77,7 +76,7 @@ Pour sélectionner les canaux de programmeur de votre choix, procédez comme sui
 
 En plus de modifier votre sélection dans la variable **MVPD dans le segment** et **Canaux dans le segment** sélecteurs de segments, vous pouvez désélectionner les MVPD et canaux sélectionnés précédemment en procédant comme suit :
 
-* En sélectionnant le **Supprimer** Icône (![icône de suppression](assets/remove-icon.png)) sur les noms de ces MVPD et canaux sélectionnés affichés sous le sélecteur de segments.
+* En sélectionnant le **Supprimer** icône (![icône de suppression](assets/remove-icon.png)) sur les noms de ces MVPD et canaux sélectionnés affichés sous le sélecteur de segments.
 
 * Vous pouvez également utiliser **Effacer la sélection** pour supprimer tous les MVPD ou canaux sélectionnés précédemment.
 
@@ -85,11 +84,11 @@ En plus de modifier votre sélection dans la variable **MVPD dans le segment** e
 
 *Figure : MVPD et canaux sélectionnés dans le panneau de segments et de périodes*
 
-## Granularité et sélection de période {#granularity-timeframe}
+## Granularité et sélection d’une période {#granularity-timeframe}
 
 Pour sélectionner une période d’évaluation :
 
-1. Sélectionnez la **Granularité et période** Sélecteur de date.
+1. Sélectionnez la variable **Granularité et période** Sélecteur de date.
 
 1. Sélectionnez **Semaine** ou **Mois** de **Agréger par** pour définir la granularité de votre évaluation.
 

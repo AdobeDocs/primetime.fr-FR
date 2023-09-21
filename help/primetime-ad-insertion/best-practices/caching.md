@@ -2,9 +2,7 @@
 title: Mise en cache
 description: Mise en cache
 copied-description: true
-exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -13,14 +11,14 @@ ht-degree: 0%
 
 # Mise en cache HTTP {#caching}
 
-Par défaut, l’Ad Insertion Primetime respecte les en-têtes de contrôle du cache HTTP lors de la récupération des éléments créatifs publicitaires ainsi que du contenu.  Cela peut réduire considérablement le nombre de demandes réseau que l’Ad Insertion Primetime doit effectuer sur le réseau de diffusion de contenu pour tous les clients.  Pour la mise en cache, l’Adobe recommande les paramètres suivants et implique l’envoi de l’en-tête HTTP `max-age` à partir du CDN.  Contactez votre représentant CDN pour activer ces en-têtes dans vos flux vidéo et publicitaires.
+Par défaut, l’Ad Insertion Primetime respecte les en-têtes de contrôle du cache HTTP lors de la récupération des éléments créatifs publicitaires ainsi que du contenu.  Cela peut réduire considérablement le nombre de requêtes réseau requises par l’Ad Insertion Primetime pour envoyer le réseau de diffusion de contenu à tous les clients.  Pour la mise en cache, Adobe recommande les paramètres suivants et implique l’envoi de l’en-tête HTTP `max-age` de votre réseau de diffusion de contenu.  Contactez votre représentant du réseau de diffusion de contenu pour activer ces en-têtes sur vos diffusions vidéo et vos diffusions publicitaires.
 
 ## Pour le contenu en direct/linéaire {#caching-live-linear-content}
 
-* Manifeste de Principal : 24 heures, ou Cache-Control : max-age=86 400
-* Manifeste multimédia : 1 seconde, ou Cache-Control : max-age=1
+* Manifeste de Principal : 24 heures, ou Cache-Control: max-age=86400
+* Manifeste multimédia : 1 seconde ou Cache-Control: max-age=1
 
 ## Pour le contenu VOD {#caching-vod-content}
 
-* Manifeste de Principal : 24 heures, ou Cache-Control : max-age=86 400
-* Manifeste multimédia : 24 heures, ou Cache-Control : max-age=86 400
+* Manifeste de Principal : 24 heures, ou Cache-Control: max-age=86400
+* Manifeste multimédia : 24 heures, ou Cache-Control: max-age=86400

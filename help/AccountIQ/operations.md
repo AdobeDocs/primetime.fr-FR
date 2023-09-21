@@ -1,8 +1,7 @@
 ---
 title: Opérations sur le compte IQ
 description: Les opérations dans le compte IQ impliquent des actions pour effectuer des automatisations et des opérations en bloc sur les comptes d’abonnés et suivre leurs effets.
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Pour afficher **Opérations** page select **Opérations** option sous **Actions*
 
 *Figure : Liste et détails des opérations existantes dans le compte IQ*
 
-Sur la page Opérations, vous pouvez :
+Sur la page Opérations, vous pouvez effectuer les opérations suivantes :
 
 * Afficher une liste des opérations déjà existantes dans le compte IQ
 
@@ -51,7 +50,7 @@ Sur la page Opérations, vous pouvez :
 
 ## Affichage des rapports d’opération {#operation-reports}
 
-Vous pouvez analyser les impacts d’une opération en consultant son rapport. Pour afficher le rapport d’une opération :
+Vous pouvez analyser les impacts d’une opération en affichant son rapport. Pour afficher le rapport d’une opération :
 
 1. Sélectionnez le nom de l’opération sur la page Opérations principale.
 
@@ -59,15 +58,16 @@ Vous pouvez analyser les impacts d’une opération en consultant son rapport. P
 
    ![](assets/operation-impact-report.png)
 
-   *Figure : Rapport des opérations pour visualiser les impacts des opérations*
+   *Figure : Rapport sur les opérations afin de visualiser l&#39;impact des opérations*
 
    L’axe X représente la période d’évaluation et l’axe Y représente l’impact de l’opération (en termes de nombre de comptes dans un segment pendant la période d’évaluation). Chaque barre est divisée en trois parties.
 
    * Une partie représente le nombre de comptes qui répondent toujours aux critères du segment d’opération.
 
-   * Une autre partie représente le nombre de comptes principaux pour cette période qui se trouvaient à l’origine dans le segment, mais qui ne répondent plus aux critères du segment d’opération.
+   * Une autre partie représente le nombre de comptes actifs pour cette période qui se trouvaient à l’origine dans le segment, mais qui ne répondent plus aux critères du segment d’opération.
 
    * La troisième partie représente les comptes qui n&#39;ont pas été ouverts au cours de cette période.
+
    >[!NOTE]
    >
    >La première barre représente le nombre de comptes qui répondent aux conditions du segment d&#39;opération au début de la période d&#39;évaluation.

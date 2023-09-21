@@ -1,33 +1,31 @@
 ---
-description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
-title: Utiliser des métadonnées minutées
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de début.
+title: Utilisation de métadonnées minutées
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Utilisation de métadonnées minutées {#use-timed-metadata}
 
-# Utiliser des métadonnées minutées {#use-timed-metadata}
+Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure de début.
 
-Vous pouvez utiliser TimedMetadata lorsque l’heure de lecture actuelle correspond à l’heure du début.
+Pour les utiliser `TimedMetadata` pendant la lecture, utilisez l’objet enregistré `ArrayList` de [Stocker les objets de métadonnées minutées lors de leur distribution](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
 
-Pour utiliser ces objets `TimedMetadata` enregistrés au cours de la lecture, utilisez les `ArrayList` enregistrés de [Stocker les objets de métadonnées minutées au fur et à mesure qu&#39;ils sont distribués](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md).
-
-1. Exécutez un minuteur et requête à plusieurs reprises le temps de lecture actuel.
-1. Recherchez tous les objets `TimedMetadata` dont les heures de début correspondent à l’heure de lecture actuelle.
+1. Exécutez un minuteur et effectuez à plusieurs reprises une requête sur la durée de lecture actuelle.
+1. Recherchez l’ensemble des `TimedMetadata` avec les heures de début correspondant à l’heure de lecture actuelle.
 
    Vous pouvez utiliser ces objets pour effectuer diverses actions.
 
    >[!IMPORTANT]
    >
-   >Lorsque vous vérifiez si l’heure de lecture actuelle correspond à un objet `TimedMetadata`, incluez `shouldTriggerSubscribedTagEvent` comme condition.
+   >Lorsque vous vérifiez si l’heure de lecture actuelle correspond à l’une des valeurs `TimedMetadata` objets, inclure `shouldTriggerSubscribedTagEvent` comme condition.
 
-   La chronologie peut changer en raison de divers comportements publicitaires. Par exemple, une ou plusieurs coupures publicitaires peuvent être déplacées de leur position d’origine sur la chronologie, mais `shouldTriggerSubscribedTagEvent` s’assure que l’heure de début de l’objet `TimeMetadata` correspond à l’heure de lecture actuelle.
+   La chronologie peut changer en raison de divers comportements publicitaires. Par exemple, une ou plusieurs coupures publicitaires peuvent être déplacées de leur position d’origine dans la chronologie, mais `shouldTriggerSubscribedTagEvent` s’assure que la variable `TimeMetadata` l’heure de début de l’objet correspond à l’heure de lecture actuelle.
 
-   Par exemple :
+   Par exemple :
 
    ```java
     _playbackClockEventListener = new Clock.ClockEventListener() {
@@ -59,4 +57,4 @@ Pour utiliser ces objets `TimedMetadata` enregistrés au cours de la lecture, ut
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Éliminez régulièrement les instances `TimedMetadata` obsolètes de la liste afin d’éviter que la mémoire ne continue à croître.
+1. Périodique de vidage `TimedMetadata` des instances de la liste pour empêcher la mémoire de croître en continu.

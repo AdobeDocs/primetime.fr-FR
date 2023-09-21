@@ -1,20 +1,18 @@
 ---
-description: Si l’application doit gérer les événements envoyés par le gestionnaire de fonctionnalités, elle doit enregistrer le gestionnaire dans le fichier PlayerFragment.java.
+description: Si l’application doit gérer les événements distribués à partir du gestionnaire de fonctionnalités, elle doit enregistrer le gestionnaire dans le fichier PlayerFragment.java .
 title: Gestion des événements
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-
 # Gestion des événements {#handling-events}
 
-Si l’application doit gérer les événements envoyés par le gestionnaire de fonctionnalités, elle doit enregistrer le gestionnaire dans le fichier PlayerFragment.java.
+Si l’application doit gérer les événements distribués à partir du gestionnaire de fonctionnalités, elle doit enregistrer le gestionnaire dans le fichier PlayerFragment.java .
 
-Par exemple :
+Par exemple :
 
 ```
 private final AdsManager.AdsManagerEventListener adsManagerEventListener =  

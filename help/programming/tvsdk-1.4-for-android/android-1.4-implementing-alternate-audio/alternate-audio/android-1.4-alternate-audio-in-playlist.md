@@ -1,28 +1,26 @@
 ---
-description: La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez souhaiter ajouter différentes langues à votre contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son périphérique pendant la lecture du contenu.
+description: La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez ajouter différentes langues au contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son appareil pendant la lecture du contenu.
 title: Autres pistes audio de la liste de lecture
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Autres pistes audio de la liste de lecture{#alternate-audio-tracks-in-the-playlist}
 
-# Autres pistes audio dans la liste de lecture{#alternate-audio-tracks-in-the-playlist}
+La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez ajouter différentes langues au contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son appareil pendant la lecture du contenu.
 
-La liste de lecture d’une vidéo peut spécifier un nombre illimité de pistes audio alternatives pour le contenu vidéo principal. Par exemple, vous pouvez souhaiter ajouter différentes langues à votre contenu vidéo ou permettre à l’utilisateur de passer d’une piste à l’autre sur son périphérique pendant la lecture du contenu.
-
-Les autres pistes audio, ou les fichiers audio à liaison tardive, permettent aux utilisateurs de basculer entre plusieurs pistes de langue pour les flux vidéo HTTP (direct/linéaire et VOD) et vous n’avez pas à modifier, duplicata ou recompresser la vidéo pour chaque piste audio. Vous pouvez fournir plusieurs pistes de langue pour une ressource vidéo avant ou après le conditionnement initial de la ressource.
+D’autres pistes audio, ou du contenu audio à liaison tardive, permettent aux utilisateurs de basculer entre plusieurs pistes linguistiques pour les flux vidéo HTTP (direct/linéaire et VOD) et vous n’avez pas à modifier, dupliquer ou recompresser la vidéo pour chaque piste audio. Vous pouvez fournir plusieurs pistes de langue pour une ressource vidéo avant ou après le conditionnement initial de la ressource.
 
 >[!TIP]
 >
->Pour que l’audio alternatif soit mélangé à la piste vidéo du média principal, les horodatages de la piste alternative doivent correspondre aux horodatages de l’audio dans la piste principale.
+>Pour que l’audio secondaire soit mélangé avec la piste vidéo du média principal, les horodatages de la piste alternative doivent correspondre aux horodatages de l’audio de la piste principale.
 
-La piste audio principale est incluse dans la collection de pistes audio avec le libellé `default`. Les métadonnées des autres flux audio sont incluses dans la liste de lecture des balises `#EXT-X-MEDIA` avec `TYPE=AUDIO`.
+La piste audio principale est incluse dans la collection de pistes audio avec l’événement `default` libellé. Les métadonnées des autres diffusions audio sont incluses dans la liste de lecture de la variable `#EXT-X-MEDIA` balises avec `TYPE=AUDIO`.
 
-Par exemple, un manifeste M3U8 spécifiant plusieurs flux audio alternatifs peut ressembler à ceci :
+Par exemple, un manifeste M3U8 spécifiant plusieurs diffusions audio secondaires peut ressembler à ceci :
 
 ```
 #EXTM3U
@@ -44,4 +42,3 @@ gear1/prog_index.m3u8
 gear2/prog_index.m3u8
 ...
 ```
-

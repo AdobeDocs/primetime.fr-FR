@@ -1,22 +1,20 @@
 ---
-description: Une publicité peut comporter plusieurs éléments créatifs, dont un est sélectionné pour être lu.
+description: Une publicité peut avoir plusieurs éléments créatifs, dont un est sélectionné pour être lu.
 title: Types MIME valides
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
+# Types MIME valides{#valid-mime-types}
 
-# Types mime valides{#valid-mime-types}
+Une publicité peut avoir plusieurs éléments créatifs, dont un est sélectionné pour être lu.
 
-Une publicité peut comporter plusieurs éléments créatifs, dont un est sélectionné pour être lu.
+Avec les types MIME, vous pouvez spécifier les types de création que les utilisateurs peuvent prioriser. Les types MIME spécifiés par les utilisateurs et les types MIME pris en charge par le Browser TVSDK sont utilisés pour déterminer la création qui sera prioritaire.
 
-Avec les types MIME, vous pouvez spécifier les types créatifs que les utilisateurs peuvent classer par priorité. Les types MIME spécifiés par les utilisateurs et les types MIME pris en charge par le navigateur TVSDK sont utilisés pour déterminer quel créatif sera prioritaire.
-
-Pour définir les types MIME valides dans le navigateur TVSDK :
+Pour définir les types MIME valides dans Browser TVSDK :
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
@@ -24,6 +22,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-où `mimeTypes` est un tableau de chaînes et chaque chaîne représente un type mime.
+where `mimeTypes` est un tableau de chaînes, et chaque chaîne représente un type MIME.
 
-Si plusieurs fichiers multimédias sont renvoyés pour une publicité, la sélection dépend de l&#39;ordre dans lequel les fichiers multimédias apparaissent dans la baie `validMimeTypes`. Les types mime présentant un index inférieur se voient accorder une préférence par rapport à ceux ayant un index supérieur.
+Si plusieurs fichiers multimédias sont renvoyés pour une publicité, la sélection dépend de l’ordre dans lequel les fichiers multimédias apparaissent. `validMimeTypes` tableau. Les types MIME ayant un index inférieur reçoivent une préférence par rapport à ceux ayant un index supérieur.

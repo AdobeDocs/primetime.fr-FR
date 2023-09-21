@@ -1,68 +1,65 @@
 ---
 description: Vous pouvez réinitialiser, réutiliser ou libérer une instance MediaPlayer dont vous n’avez plus besoin.
 title: Réutilisation ou suppression d’une instance MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-
 # Réutilisation ou suppression d’une instance MediaPlayer {#reuse-or-remove-a-mediaplayer-instance}
 
 Vous pouvez réinitialiser, réutiliser ou libérer une instance MediaPlayer dont vous n’avez plus besoin.
 
-## Réinitialiser ou réutiliser une instance MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
+## Réinitialisation ou réutilisation d’une instance MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
 
-Lorsque vous réinitialisez une instance `MediaPlayer`, elle revient à son état IDLE non initialisé tel que défini dans `MediaPlayerStatus`.
+Lorsque vous réinitialisez une `MediaPlayer` l’instance, elle revient à son état IDLE non initialisé tel que défini dans `MediaPlayerStatus`.
 
 Cette opération est utile dans les cas suivants :
 
-* Vous souhaitez réutiliser une instance `MediaPlayer` mais devez charger une nouvelle instance `MediaResource` (contenu vidéo) et remplacer l’instance précédente.
+* Vous souhaitez réutiliser une `MediaPlayer` mais doit charger une nouvelle instance `MediaResource` (contenu vidéo) et remplacez l’instance précédente.
 
-   La réinitialisation vous permet de réutiliser l&#39;instance `MediaPlayer` sans avoir à libérer des ressources, recréer `MediaPlayer` et réaffecter des ressources.
+  La réinitialisation vous permet de réutiliser le `MediaPlayer` sans avoir à libérer des ressources, recréant la variable `MediaPlayer`et réaffecter les ressources.
 
-* Lorsque le `MediaPlayer` est en état ERROR et doit être effacé.
+* Lorsque la variable `MediaPlayer` est à l’état ERROR et doit être effacé.
 
-   >[!IMPORTANT]
-   >
-   >C&#39;est le seul moyen de récupérer de l&#39;état ERROR.
+  >[!IMPORTANT]
+  >
+  >C&#39;est la seule façon de récupérer du statut ERREUR.
 
-   1. Appelez `reset` pour renvoyer l&#39;instance `MediaPlayer` à son état non initialisé :
+   1. Appeler `reset` pour renvoyer la variable `MediaPlayer` à son état non initialisé :
 
       ```java
       void reset() throws MediaPlayerException; 
       ```
 
-   1. Utilisez `MediaPlayer.replaceCurrentResource()` pour charger un autre `MediaResource`.
+   1. Utilisation `MediaPlayer.replaceCurrentResource()` pour charger un autre `MediaResource`.
 
       >[!NOTE]
       >
-      >Pour effacer une erreur, chargez le même `MediaResource`.
+      >Pour effacer une erreur, chargez la même `MediaResource`.
 
-   1. Lorsque vous recevez le rappel de événement `STATUS_CHANGED` avec l’état `PREPARED`, début la lecture.
+   1. Lorsque vous recevez la variable `STATUS_CHANGED` rappel d’événement avec `PREPARED` , démarrez la lecture.
 
 ## Publication d’une instance et de ressources MediaPlayer {#section_13A0914AFF784943ABC343F7EB249C4E}
 
-Vous devez libérer une instance et des ressources `MediaPlayer` lorsque vous n&#39;avez plus besoin de `MediaResource`.
+Vous devez publier une `MediaPlayer` instance et ressources lorsque vous n’avez plus besoin de la fonction `MediaResource`.
 
-Lorsque vous relâchez un objet `MediaPlayer`, les ressources matérielles sous-jacentes associées à cet objet `MediaPlayer` sont cédées.
+Lorsque vous lancez une `MediaPlayer` , les ressources matérielles sous-jacentes associées à cet objet `MediaPlayer` sont désaffectés.
 
-Voici quelques raisons de publier un `MediaPlayer` :
+Voici quelques raisons de publier une `MediaPlayer`:
 
 * Le fait de détenir des ressources inutiles peut affecter les performances.
-* Le fait de laisser un objet `MediaPlayer` instancié inutile peut entraîner une consommation continue de batterie pour les périphériques mobiles.
-* Si plusieurs instances
-Comme le même codec vidéo n’est pas pris en charge sur un périphérique, une erreur de lecture peut se produire pour d’autres applications.
+* Laisser un objet inutile `MediaPlayer` instancié peut entraîner une consommation continue de la batterie pour les appareils mobiles.
+* Si plusieurs instances du même codec vidéo ne sont pas prises en charge sur un appareil, l’échec de lecture peut se produire pour d’autres applications.
 
-* Libérez le `MediaPlayer`.
+* Publiez la `MediaPlayer`.
 
-   ```java
-   void release() throws MediaPlayerException;
-   ```
+  ```java
+  void release() throws MediaPlayerException;
+  ```
 
-   >[!NOTE]
-   >
-   >Une fois l&#39;instance `MediaPlayer` libérée, vous ne pouvez plus l&#39;utiliser. Si une méthode de l&#39;interface `MediaPlayer` est appelée après sa publication, un `MediaPlayerException` est généré.
+  >[!NOTE]
+  >
+  >Après la `MediaPlayer` est publiée, vous ne pouvez plus l’utiliser. Si une méthode de la variable `MediaPlayer` est appelée une fois qu’elle est publiée, une `MediaPlayerException` est généré.

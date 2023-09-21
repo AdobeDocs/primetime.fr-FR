@@ -1,42 +1,39 @@
 ---
 description: Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire.
 title: Chargement d’une ressource multimédia dans MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
-
-# Charger une ressource multimédia dans MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+# Chargement d’une ressource multimédia dans MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
 Chargez une ressource en instanciant directement une ressource MediaResource et en chargeant le contenu vidéo à lire.
 
-1. Définissez l&#39;élément jouable de l&#39;objet `MediaPlayer` avec la nouvelle ressource à lire.
+1. Définissez vos `MediaPlayer` élément lisible de l’objet avec la nouvelle ressource à lire.
 
-   Remplacez l’élément actuellement lisible de l’objet `MediaPlayer` existant en appelant `replaceCurrentResource` et en transmettant une instance `MediaResource` existante.
+   Remplacez votre `MediaPlayer` élément pouvant être lu actuellement en appelant `replaceCurrentResource` et transmettre un `MediaResource` instance.
 
-1. Attendez que le SDK du navigateur TVSDK distribue `AdobePSDK.MediaPlayerStatusChangeEvent` avec `event.status` qui est égal à l’un des éléments suivants :
+1. Attendez que le SDK du navigateur soit distribué. `AdobePSDK.MediaPlayerStatusChangeEvent` avec `event.status` qui est égal à l’un des éléments suivants :
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Grâce à ces événements, l’objet MediaPlayer informe votre application de la réussite du chargement de la ressource multimédia.
+     Grâce à ces événements, l’objet MediaPlayer indique à votre application si la ressource multimédia a bien été chargée.
 
-1. Lorsque l&#39;état du lecteur multimédia devient `MediaPlayerStatus.INITIALIZED`, vous pouvez appeler `MediaPlayer.prepareToPlay`.
+1. Lorsque l’état du lecteur multimédia passe à `MediaPlayerStatus.INITIALIZED`, vous pouvez appeler `MediaPlayer.prepareToPlay`.
 
-   L’état INITIALISÉ indique que le chargement du média a réussi. L&#39;appel de `prepareToPlay` début le processus de résolution de publicité et de placement, le cas échéant.
-1. Lorsque le navigateur TVSDK distribue le événement `MediaPlayerStatus.PREPARED`, le flux média est chargé avec succès (MediaPlayerItem est créé) et est préparé pour la lecture.
+   L’état INITIALIZED (INITIALISÉ) indique que le fichier multimédia a bien été chargé. Appel `prepareToPlay` lance le processus de résolution publicitaire et d’emplacement, le cas échéant.
+1. Lorsque le navigateur TVSDK distribue la variable `MediaPlayerStatus.PREPARED` événement que le flux multimédia a bien chargé (un élément MediaPlayerItem est créé) et est préparé pour la lecture.
 
-En cas d&#39;échec, `MediaPlayer` passe à `MediaPlayerStatus.ERROR`.
+Si un échec se produit, la variable `MediaPlayer` passe à la fonction `MediaPlayerStatus.ERROR`.
 
-Il informe également votre application en distribuant le événement `MediaPlayerStatus.ERROR`.
+Il informe également votre application en distribuant la variable `MediaPlayerStatus.ERROR` .
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
-
 
 L’exemple de code simplifié suivant illustre le processus de chargement d’une ressource multimédia :
 
