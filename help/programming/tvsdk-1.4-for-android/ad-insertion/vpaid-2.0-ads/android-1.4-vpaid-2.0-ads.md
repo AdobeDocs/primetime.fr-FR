@@ -3,7 +3,7 @@ description: La définition de l’interface de diffusion publicitaire du lecteu
 title: Prise en charge des publicités VPAID 2.0
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---

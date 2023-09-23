@@ -3,7 +3,7 @@ description: Vous pouvez définir des valeurs de contrôle ABR uniquement avec A
 title: Configuration des taux de bits adaptatifs à l’aide d’ABRControlParameters
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---

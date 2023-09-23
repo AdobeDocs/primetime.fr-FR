@@ -3,7 +3,7 @@ description: Adobe Offline Packager prend comme entrée du contenu mp4 non chiff
 title: Regroupez votre contenu avec Adobe Offline Packager
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---

@@ -3,7 +3,7 @@ description: Vous pouvez mettre en oeuvre une barre de contrôle avec la prise e
 title: Création d’une barre de contrôle améliorée pour le contrôle DVR
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---

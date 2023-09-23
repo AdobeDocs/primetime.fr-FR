@@ -3,7 +3,7 @@ description: Les événements de TVSDK indiquent l’état du lecteur, les erreu
 title: Écoute des événements du lecteur Primetime
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---

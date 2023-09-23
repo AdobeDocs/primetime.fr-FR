@@ -3,7 +3,7 @@ description: Le comportement de la lecture multimédia est affecté par la reche
 title: Comportement de lecture par défaut et personnalisé avec les publicités
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---

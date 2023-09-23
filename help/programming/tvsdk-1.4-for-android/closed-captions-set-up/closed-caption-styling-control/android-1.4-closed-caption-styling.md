@@ -3,7 +3,7 @@ description: Vous pouvez fournir des informations de style pour les suivis de so
 title: Contrôler le style des sous-titres
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---

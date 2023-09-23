@@ -3,7 +3,7 @@ description: Le code client transmet des données à une API Android.
 title: Processus de demande de clé sur le PSDK Android
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---

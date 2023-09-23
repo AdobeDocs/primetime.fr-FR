@@ -3,7 +3,7 @@ description: Vous pouvez désigner des intervalles de temps dans le contenu VOD 
 title: Marquer des plages
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---

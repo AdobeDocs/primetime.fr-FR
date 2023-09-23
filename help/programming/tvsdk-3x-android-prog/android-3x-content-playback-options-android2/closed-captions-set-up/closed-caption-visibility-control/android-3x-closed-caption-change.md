@@ -3,7 +3,7 @@ description: Cette procédure est un exemple de création d’un bouton qui perm
 title: Autoriser les utilisateurs à modifier le suivi des sous-titres
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---

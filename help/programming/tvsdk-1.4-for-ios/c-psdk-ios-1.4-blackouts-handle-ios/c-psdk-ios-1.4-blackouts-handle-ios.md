@@ -3,7 +3,7 @@ description: TVSDK gère les coupures d’accès dans les diffusions vidéo en d
 title: Gestion des pannes de courant dans les flux en direct
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---

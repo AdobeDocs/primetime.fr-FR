@@ -3,7 +3,7 @@ description: Cette section présente un aperçu conceptuel de la configuration, 
 title: Concepts de la RBOP
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---

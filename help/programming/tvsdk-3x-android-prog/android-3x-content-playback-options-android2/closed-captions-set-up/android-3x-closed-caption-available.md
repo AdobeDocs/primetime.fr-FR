@@ -3,7 +3,7 @@ description: Vous pouvez sélectionner un suivi dans une liste de suivi de sous-
 title: Sélectionner un suivi de légende actuel parmi les pistes disponibles
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '198'
 ht-degree: 0%
 
 ---

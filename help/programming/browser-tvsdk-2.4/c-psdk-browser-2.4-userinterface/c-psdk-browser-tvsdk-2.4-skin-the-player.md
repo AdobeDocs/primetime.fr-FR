@@ -3,7 +3,7 @@ description: Vous pouvez utiliser les informations suivantes pour vous aider à 
 title: Patinage du lecteur
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---

@@ -3,7 +3,7 @@ description: Vous devrez peut-être savoir si le contenu multimédia est en dire
 title: Déterminer si le contenu est actif ou VOD
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '66'
 ht-degree: 0%
 
 ---

@@ -3,7 +3,7 @@ description: Vous pouvez activer FairPlay pour Safari lorsque vous utilisez Prim
 title: Activation de FairPlay pour Safari HLS
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---

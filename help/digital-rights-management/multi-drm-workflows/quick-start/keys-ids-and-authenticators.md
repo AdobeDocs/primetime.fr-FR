@@ -3,7 +3,7 @@ description: Pour mettre en oeuvre DRM, vous avez besoin de certificats et de cl
 title: Clés, identifiants et authentificateurs
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---

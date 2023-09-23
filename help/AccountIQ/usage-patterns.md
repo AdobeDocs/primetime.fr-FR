@@ -3,7 +3,7 @@ title: Modèles d’utilisation
 description: Afficher le comportement de partage de compte pour différentes typologies d’utilisateurs.
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---

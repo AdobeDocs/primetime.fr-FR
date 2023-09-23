@@ -3,7 +3,7 @@ description: Les événements et notifications vous aident à gérer les aspects
 title: Notifications et événements concernant l’état, l’activité, les erreurs et la journalisation du lecteur
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---

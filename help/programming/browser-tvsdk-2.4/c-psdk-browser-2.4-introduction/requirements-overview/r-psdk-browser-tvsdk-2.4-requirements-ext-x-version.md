@@ -3,7 +3,7 @@ description: La version de EXT-X-VERSION dans le fichier .m3u8 affecte les fonct
 title: Exigences pour EXT-X-VERSION
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---

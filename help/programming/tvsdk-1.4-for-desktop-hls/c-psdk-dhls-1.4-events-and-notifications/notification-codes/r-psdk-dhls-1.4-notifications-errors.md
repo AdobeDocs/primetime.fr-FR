@@ -3,8 +3,8 @@ description: Ce tableau fournit des informations détaillées sur les notificati
 title: Codes de notification d’erreur
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '514'
+ht-degree: 4%
 
 ---
 

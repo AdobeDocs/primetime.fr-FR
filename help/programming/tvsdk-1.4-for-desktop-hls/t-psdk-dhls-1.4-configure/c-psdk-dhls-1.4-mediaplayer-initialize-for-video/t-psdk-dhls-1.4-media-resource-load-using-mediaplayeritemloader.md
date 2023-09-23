@@ -3,7 +3,7 @@ description: Une autre façon de résoudre une ressource multimédia consiste à
 title: Chargement d’une ressource multimédia à l’aide de MediaPlayerItemLoader
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---

@@ -3,7 +3,7 @@ description: Vous pouvez enregistrer la position de lecture actuelle dans une vi
 title: Enregistrer la position de la vidéo et reprendre ultérieurement
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---

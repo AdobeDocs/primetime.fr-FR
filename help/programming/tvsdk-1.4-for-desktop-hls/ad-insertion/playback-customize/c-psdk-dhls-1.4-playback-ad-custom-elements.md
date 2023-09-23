@@ -3,7 +3,7 @@ description: TVSDK fournit des classes et des méthodes que vous pouvez utiliser
 title: Éléments d’API pour la lecture de publicité
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---

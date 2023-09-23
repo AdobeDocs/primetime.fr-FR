@@ -3,7 +3,7 @@ description: Les gestionnaires d’événements permettent au TVSDK du navigateu
 title: Mise en oeuvre des écouteurs d’événement et des rappels
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---

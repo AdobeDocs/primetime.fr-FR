@@ -3,7 +3,7 @@ description: Vous pouvez personnaliser ou remplacer les comportements de publici
 title: Configuration de la lecture personnalisée
 source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
