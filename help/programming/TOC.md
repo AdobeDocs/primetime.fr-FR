@@ -1,16 +1,16 @@
 ---
 audience: end-user
-user-guide-title: Aide à la programmation de Primetime
-user-guide-description: Permet d’apprendre à développer des applications et des lecteurs vidéo à l’aide de Java sur les appareils Android et d’Objective-C sur les appareils iOS.
+user-guide-title: Aide à la programmation sur Primetime
+user-guide-description: Ce guide vous apprend à développer des applications et des lecteurs vidéo à l’aide de Java pour les appareils Android et d’Objective-C pour les appareils iOS.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '4342'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# Aide à la programmation de Primetime {#programming}
+# Aide à la programmation sur Primetime {#programming}
 
 + [Présentation de la programmation](home.md)
 + TVSDK 3x pour Android {#tvsdk-3x-android-prog}

@@ -2,17 +2,17 @@
 product: adobe primetime
 feature: Concurrency Monitoring
 audience: end-user
-user-guide-title: Surveillance de la simultanéité Primetime
+user-guide-title: Contrôle de la simultanéité Primetime
 user-guide-description: Découvrez comment définir et appliquer des limites à l’utilisation simultanée dans plusieurs applications.
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# Aide de la surveillance de la simultanéité Primetime {#cm}
+# Contrôle de la simultanéité Primetime help {#cm}
 
 + [Introduction de la surveillance de la simultanéité](cm-home.md)
 + [Glossaire de surveillance de la simultanéité](cm-glossary.md)

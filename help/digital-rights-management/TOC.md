@@ -1,12 +1,12 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Aide sur les Digitaux Rights Management Primetime
-user-guide-description: Permet d’en savoir plus sur divers scénarios utilisateur dans Digital Rights Management (DRM).
+user-guide-title: Aide de Primetime Digital Rights Management
+user-guide-description: Permet d’en apprendre davantage sur divers scénarios de Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
